@@ -1264,6 +1264,237 @@
         "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09546b.htm",
         "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-charbel-makhlouf/"
       }
+    },
+    {
+      "id": "michael-archangel",
+      "name": "San Miguel Arcángel",
+      "feastDay": "09-29",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": null,
+      "region": "middle-east",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "soldiers",
+        "police officers",
+        "paratroopers",
+        "grocers",
+        "mariners",
+        "the sick"
+      ],
+      "tags": [
+        "archangel",
+        "warrior",
+        "protector",
+        "leader"
+      ],
+      "affinities": [
+        "leadership",
+        "courage",
+        "justice",
+        "sports",
+        "community service"
+      ],
+      "quote": "¿Quién como Dios?",
+      "biography": "San Miguel Arcángel es uno de los tres arcángeles nombrados en las Escrituras y es venerado como el príncipe de la milicia celestial — el líder de todos los ángeles en el ejército de Dios. Su nombre, 'Miguel', es un grito de batalla que significa '¿Quién como Dios?'\n\nEn el Libro del Apocalipsis (12:7-9), Miguel lidera a los ángeles en una guerra cósmica contra Satanás y sus seguidores, expulsándolos del cielo. El profeta Daniel (10:13, 12:1) describe a Miguel como 'el gran príncipe' que protege al pueblo de Dios, Israel, un poderoso defensor en tiempos de crisis espiritual.\n\nA lo largo de la tradición católica, Miguel es venerado como el protector de la Iglesia, el guardián de las almas en la hora de la muerte, y quien pesa las almas en la balanza de la justicia divina. La famosa Oración a San Miguel, compuesta por el Papa León XIII en 1886, todavía se reza en parroquias de todo el mundo, pidiendo su defensa 'contra las asechanzas y maldades del demonio'.\n\nSu fiesta, el 29 de septiembre, se comparte con los arcángeles Gabriel y Rafael y se conoce como la fiesta de los Santos Arcángeles — una celebración que se observa desde el siglo V.",
+      "whyConfirmationSaint": "San Miguel es el guerrero espiritual por excelencia. Elegirlo como tu santo de confirmación significa que estás pidiendo el valor para luchar por lo correcto y la fortaleza para enfrentar el mal — incluso cuando no es popular. Si quieres un patrón que nunca retrocedió ante la batalla más difícil imaginable, Miguel es tu santo.",
+      "image": {
+        "filename": "michael-archangel.jpg",
+        "attribution": "Dominio Público"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-michael-the-archangel/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10275b.htm"
+      }
+    },
+    {
+      "id": "gabriel-archangel",
+      "name": "San Gabriel Arcángel",
+      "feastDay": "09-29",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": null,
+      "region": "middle-east",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "communications workers",
+        "messengers",
+        "postal workers",
+        "diplomats",
+        "broadcasters"
+      ],
+      "tags": [
+        "archangel",
+        "messenger",
+        "announcer"
+      ],
+      "affinities": [
+        "music",
+        "technology",
+        "reading",
+        "art"
+      ],
+      "quote": "No temas, María, porque has hallado gracia delante de Dios.",
+      "biography": "San Gabriel Arcángel es el mensajero principal de Dios — el ángel encargado de entregar los anuncios más importantes en la historia de la salvación. Su nombre significa 'Dios es mi fortaleza', y cada vez que aparece en las Escrituras, trae noticias que lo cambian todo.\n\nEl momento más famoso de Gabriel es la Anunciación (Lucas 1:26-38), cuando se apareció a la joven Virgen María en Nazaret y le anunció que concebiría y daría a luz al Hijo de Dios. Sus palabras — 'Dios te salve, llena de gracia, el Señor está contigo' — se convirtieron en una de las oraciones más repetidas en la fe católica.\n\nAntes de eso, Gabriel se apareció al sacerdote Zacarías en el Templo (Lucas 1:11-20) para anunciar el nacimiento milagroso de Juan el Bautista. En el Antiguo Testamento, Gabriel vino al profeta Daniel (Daniel 8:16, 9:21) para explicar visiones sobre el futuro de Israel y la venida del Mesías.\n\nPor su papel como mensajero divino, Gabriel es el santo patrón de todos los que trabajan en comunicaciones — desde trabajadores postales hasta periodistas, diplomáticos y locutores. Nos recuerda que llevar un mensaje fielmente es una de las cosas más poderosas que una persona puede hacer.",
+      "whyConfirmationSaint": "Gabriel es el mensajero de la noticia más grande de Dios. No solo entregó palabras — entregó esperanza que cambió el mundo. Elige a Gabriel como tu santo de confirmación si quieres ser una voz para la verdad y compartir tu fe con valentía, ya sea a través de palabras, música, escritura, o simplemente siendo la persona que lleva buenas noticias a los demás.",
+      "image": {
+        "filename": "gabriel-archangel.jpg",
+        "attribution": "Dominio Público"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gabriel-the-archangel/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06330a.htm"
+      }
+    },
+    {
+      "id": "our-lady-guadalupe",
+      "name": "Nuestra Señora de Guadalupe",
+      "feastDay": "12-12",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": "México",
+      "region": "latin-america",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Americas",
+        "Mexico",
+        "unborn children",
+        "indigenous peoples"
+      ],
+      "tags": [
+        "Blessed Virgin Mary",
+        "apparition",
+        "mother",
+        "protector"
+      ],
+      "affinities": [
+        "family",
+        "prayer",
+        "community service",
+        "art"
+      ],
+      "quote": "¿No estoy yo aquí, que soy tu Madre? ¿No estás bajo mi sombra y protección?",
+      "biography": "En diciembre de 1531, apenas diez años después de la conquista española de México, un humilde hombre indígena llamado Juan Diego caminaba hacia la Misa cerca del cerro del Tepeyac en las afueras de la Ciudad de México cuando la Virgen María se le apareció. Ella le habló en su lengua nativa náhuatl, llamándolo 'Juanito' — un término de cariño — y le pidió que dijera al obispo que construyera una iglesia en ese cerro.\n\nEl obispo, Juan de Zumárraga, no le creyó al principio. María se apareció de nuevo y le dijo a Juan Diego que recogiera rosas de la cima del cerro — rosas que no tenían razón de crecer en diciembre en un cerro árido. Cuando Juan Diego abrió su tilma (manto) ante el obispo para soltar las flores, una imagen de la Virgen María quedó milagrosamente impresa en la tela.\n\nLa imagen muestra a María como una joven mestiza — ni completamente española ni completamente indígena — de pie sobre la luna, rodeada de rayos dorados, con estrellas en su manto. Está embarazada, llevando a Cristo al Nuevo Mundo. La tilma, que debería haberse deteriorado en décadas, ha sobrevivido casi 500 años y cuelga hoy en la Basílica de Nuestra Señora de Guadalupe en la Ciudad de México — el santuario católico más visitado del mundo.\n\nEn los siete años siguientes a la aparición, se estima que nueve millones de indígenas mexicanos se convirtieron al cristianismo. Nuestra Señora de Guadalupe se convirtió en símbolo de unidad, dignidad y del amor de Dios por todos los pueblos.",
+      "whyConfirmationSaint": "Nuestra Señora de Guadalupe mostró que el amor de Dios alcanza a todos — sin importar el origen, la cultura o el estatus. Se apareció como alguien que se parecía a las personas a quienes hablaba, encontrándolos donde estaban. Elígela si te sientes llamado a ser un puente entre comunidades y culturas, o si deseas la protección feroz de una madre en tu camino de fe.",
+      "image": {
+        "filename": "our-lady-guadalupe.jpg",
+        "attribution": "Dominio Público"
+      },
+      "sources": [
+        "Loyola Press",
+        "Hallow"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/our-lady-of-guadalupe/",
+        "Hallow": "https://hallow.com/saints/our-lady-of-guadalupe/"
+      }
+    },
+    {
+      "id": "our-lady-fatima",
+      "name": "Nuestra Señora de Fátima",
+      "feastDay": "05-13",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": "Portugal",
+      "region": "europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Portugal",
+        "peace",
+        "rosary"
+      ],
+      "tags": [
+        "Blessed Virgin Mary",
+        "apparition",
+        "prayer",
+        "peace"
+      ],
+      "affinities": [
+        "prayer",
+        "family",
+        "nature",
+        "philosophy"
+      ],
+      "quote": "Recen el Rosario todos los días para alcanzar la paz del mundo.",
+      "biography": "El 13 de mayo de 1917, en una pequeña aldea rural llamada Fátima en el centro de Portugal, tres niños pastores — Lucía dos Santos (10 años) y sus primos Francisco Marto (9 años) y Jacinta Marto (7 años) — estaban cuidando su rebaño cuando una luz brillante apareció y la Virgen María les habló desde encima de una pequeña encina.\n\nMaría se apareció a los niños seis veces entre mayo y octubre de 1917, siempre el día 13 del mes. Les pidió que rezaran el Rosario diariamente por la paz del mundo, que hicieran sacrificios por los pecadores y que consagraran a Rusia a su Inmaculado Corazón. También les confió tres secretos — profecías que incluían una visión del infierno, una predicción de la Segunda Guerra Mundial y un misterioso tercer secreto asociado más tarde con el intento de asesinato del Papa Juan Pablo II en 1981.\n\nLos niños enfrentaron un intenso escepticismo. Las autoridades locales incluso los encarcelaron brevemente, intentando obligarlos a retractarse. Pero el 13 de octubre de 1917, unas 70,000 personas se reunieron en Fátima y presenciaron el 'Milagro del Sol' — el sol pareció danzar, girar y lanzarse hacia la tierra antes de volver a su lugar. Creyentes y escépticos por igual, incluidos periodistas, reportaron el fenómeno.\n\nFrancisco y Jacinta murieron jóvenes durante la pandemia de gripe de 1918 y fueron canonizados por el Papa Francisco en 2017. Lucía se hizo monja carmelita y vivió hasta 2005, preservando fielmente los mensajes de Fátima. Hoy, el Santuario de Nuestra Señora de Fátima es uno de los sitios de peregrinación más importantes del mundo católico.",
+      "whyConfirmationSaint": "Nuestra Señora de Fátima se apareció a niños — no a obispos, teólogos ni líderes mundiales, sino a tres jóvenes pastores. Mostró que los jóvenes pueden recibir y responder al llamado de Dios de maneras poderosas. Elígela como tu patrona de confirmación si crees en el poder de la oración para cambiar el mundo, y si estás listo para tomar tu fe en serio aunque otros duden de ti.",
+      "image": {
+        "filename": "our-lady-fatima.jpg",
+        "attribution": "Dominio Público"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Hallow"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06023b.htm",
+        "Hallow": "https://hallow.com/saints/our-lady-of-fatima/"
+      }
+    },
+    {
+      "id": "frances-cabrini",
+      "name": "Santa Francisca Javiera Cabrini",
+      "feastDay": "11-13",
+      "birthDate": "1850-07-15",
+      "deathDate": "1917-12-22",
+      "canonizationDate": "1946-07-07",
+      "country": "Italia",
+      "region": "north-america",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "immigrants",
+        "hospital administrators",
+        "orphans"
+      ],
+      "tags": [
+        "founder",
+        "missionary",
+        "educator",
+        "immigrant advocate"
+      ],
+      "affinities": [
+        "community service",
+        "leadership",
+        "adventure",
+        "family"
+      ],
+      "quote": "Todo lo podemos en Aquel que nos fortalece.",
+      "biography": "Francesca Maria Cabrini nació el 15 de julio de 1850 en Sant'Angelo Lodigiano, un pequeño pueblo de Lombardía, Italia. La menor de trece hijos, fue frágil y enfermiza desde su nacimiento — tan pequeña que la partera temió que no sobreviviera la noche. Tuvo mala salud toda su vida, pero logró más de lo que la mayoría de las personas podrían soñar.\n\nDe joven, Cabrini soñaba con ser misionera en China. Se postuló a dos órdenes religiosas y fue rechazada por ambas debido a su frágil salud. Sin desanimarse, fundó su propia orden en 1880 — las Misioneras del Sagrado Corazón de Jesús — y acudió al Papa León XIII para pedirle su bendición para ir a China. El Papa tenía otra idea: 'No al Este, sino al Oeste', le dijo, dirigiéndola a servir a los millones de inmigrantes italianos que llegaban a Estados Unidos.\n\nCabrini llegó a Nueva York en 1889 y encontró a los inmigrantes italianos viviendo en condiciones terribles — viviendas hacinadas, trabajo explotador, sin acceso a educación ni atención médica. Se entregó al trabajo con energía extraordinaria. En los siguientes 28 años, cruzó el Atlántico más de 30 veces y fundó 67 instituciones: hospitales, escuelas, orfanatos y conventos en Estados Unidos, Centroamérica, Sudamérica y Europa.\n\nSe naturalizó ciudadana estadounidense en 1909 y murió en Chicago el 22 de diciembre de 1917. En 1946 se convirtió en la primera ciudadana estadounidense en ser canonizada. El Papa Pío XII la nombró Patrona de los Inmigrantes en 1950.",
+      "whyConfirmationSaint": "A la Madre Cabrini le dijeron que era demasiado frágil y enfermiza para ser misionera — y luego cruzó el océano y construyó un imperio de caridad. Fue rechazada, subestimada y le dijeron 'no' repetidamente, y simplemente siguió adelante. Elígela como tu santa de confirmación si quieres demostrar que la determinación y la fe pueden superar cualquier obstáculo, o si te importa profundamente defender a los marginados y olvidados.",
+      "image": {
+        "filename": "frances-cabrini.jpg",
+        "attribution": "Dominio Público"
+      },
+      "sources": [
+        "Loyola Press",
+        "Ascension Press"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-frances-xavier-cabrini/",
+        "Ascension Press": "https://media.ascensionpress.com/2019/11/13/the-amazing-story-of-st-frances-xavier-cabrini/"
+      }
     }
   ]
 }

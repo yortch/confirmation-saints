@@ -1264,6 +1264,237 @@
         "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09546b.htm",
         "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-charbel-makhlouf/"
       }
+    },
+    {
+      "id": "michael-archangel",
+      "name": "St. Michael the Archangel",
+      "feastDay": "09-29",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": null,
+      "region": "middle-east",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "soldiers",
+        "police officers",
+        "paratroopers",
+        "grocers",
+        "mariners",
+        "the sick"
+      ],
+      "tags": [
+        "archangel",
+        "warrior",
+        "protector",
+        "leader"
+      ],
+      "affinities": [
+        "leadership",
+        "courage",
+        "justice",
+        "sports",
+        "community service"
+      ],
+      "quote": "Who is like God?",
+      "biography": "St. Michael the Archangel is one of the three archangels named in Scripture and is venerated as the prince of the heavenly host — the leader of all angels in God's army. His very name, 'Michael,' is a battle cry meaning 'Who is like God?'\n\nIn the Book of Revelation (12:7-9), Michael leads the angels in a cosmic war against Satan and his followers, casting them out of heaven. The prophet Daniel (10:13, 12:1) describes Michael as 'the great prince' who stands guard over God's people Israel, a powerful defender in times of spiritual crisis.\n\nThroughout Catholic tradition, Michael is revered as the protector of the Church, the guardian of souls at the hour of death, and the one who weighs souls in the balance of divine justice. The famous Prayer to St. Michael, composed by Pope Leo XIII in 1886, is still recited in parishes worldwide, asking for his defense 'against the wickedness and snares of the devil.'\n\nHis feast day, September 29, is shared with the archangels Gabriel and Raphael and is known as Michaelmas — a celebration that has been observed since the fifth century.",
+      "whyConfirmationSaint": "St. Michael is the ultimate spiritual warrior. Choosing him as your confirmation saint means you're asking for the courage to fight for what's right and the strength to stand against evil — even when it's unpopular. If you want a patron who never backed down from the toughest battle imaginable, Michael is your saint.",
+      "image": {
+        "filename": "michael-archangel.jpg",
+        "attribution": "Public Domain"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-michael-the-archangel/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10275b.htm"
+      }
+    },
+    {
+      "id": "gabriel-archangel",
+      "name": "St. Gabriel the Archangel",
+      "feastDay": "09-29",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": null,
+      "region": "middle-east",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "communications workers",
+        "messengers",
+        "postal workers",
+        "diplomats",
+        "broadcasters"
+      ],
+      "tags": [
+        "archangel",
+        "messenger",
+        "announcer"
+      ],
+      "affinities": [
+        "music",
+        "technology",
+        "reading",
+        "art"
+      ],
+      "quote": "Do not be afraid, Mary, for you have found favor with God.",
+      "biography": "St. Gabriel the Archangel is God's chief messenger — the angel entrusted with delivering the most important announcements in salvation history. His name means 'God is my strength,' and every time he appears in Scripture, he brings news that changes everything.\n\nGabriel's most famous moment is the Annunciation (Luke 1:26-38), when he appeared to the young Virgin Mary in Nazareth and announced that she would conceive and bear the Son of God. His words — 'Hail, full of grace, the Lord is with you' — became one of the most repeated prayers in the Catholic faith.\n\nBefore that, Gabriel appeared to the priest Zechariah in the Temple (Luke 1:11-20) to announce the miraculous birth of John the Baptist. In the Old Testament, Gabriel came to the prophet Daniel (Daniel 8:16, 9:21) to explain visions about the future of Israel and the coming of the Messiah.\n\nBecause of his role as the divine messenger, Gabriel is the patron saint of all who work in communications — from postal workers to broadcasters, diplomats to journalists. He reminds us that carrying a message faithfully is one of the most powerful things a person can do.",
+      "whyConfirmationSaint": "Gabriel is the messenger of God's greatest news. He didn't just deliver words — he delivered hope that changed the world. Choose Gabriel as your confirmation saint if you want to be a voice for truth and share your faith boldly, whether through words, music, writing, or simply being the person who brings good news to others.",
+      "image": {
+        "filename": "gabriel-archangel.jpg",
+        "attribution": "Public Domain"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gabriel-the-archangel/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06330a.htm"
+      }
+    },
+    {
+      "id": "our-lady-guadalupe",
+      "name": "Our Lady of Guadalupe",
+      "feastDay": "12-12",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": "Mexico",
+      "region": "latin-america",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Americas",
+        "Mexico",
+        "unborn children",
+        "indigenous peoples"
+      ],
+      "tags": [
+        "Blessed Virgin Mary",
+        "apparition",
+        "mother",
+        "protector"
+      ],
+      "affinities": [
+        "family",
+        "prayer",
+        "community service",
+        "art"
+      ],
+      "quote": "Am I not here, I who am your Mother? Are you not under my shadow and protection?",
+      "biography": "In December 1531, just ten years after the Spanish conquest of Mexico, a humble indigenous man named Juan Diego was walking to Mass near Tepeyac Hill outside Mexico City when the Virgin Mary appeared to him. She spoke to him in his native Nahuatl language, calling him 'Juanito' — a term of endearment — and asked him to tell the bishop to build a church on that hill.\n\nThe bishop, Juan de Zumárraga, didn't believe Juan Diego at first. Mary appeared again and told Juan Diego to gather roses from the hilltop — roses that had no business growing in December on a barren hill. When Juan Diego opened his tilma (cloak) before the bishop to release the flowers, an image of the Virgin Mary was miraculously imprinted on the fabric.\n\nThe image shows Mary as a young mestiza woman — neither fully Spanish nor fully indigenous — standing on the moon, surrounded by golden rays, with stars on her mantle. She is pregnant, carrying Christ to the New World. The tilma, which should have deteriorated within decades, has survived nearly 500 years and hangs today in the Basilica of Our Lady of Guadalupe in Mexico City — the most visited Catholic shrine in the world.\n\nWithin seven years of the apparition, an estimated nine million indigenous Mexicans converted to Christianity. Our Lady of Guadalupe became a symbol of unity, dignity, and God's love for all peoples.",
+      "whyConfirmationSaint": "Our Lady of Guadalupe showed that God's love reaches everyone — regardless of background, culture, or status. She appeared as someone who looked like the people she was speaking to, meeting them where they were. Choose her if you feel called to be a bridge between communities and cultures, or if you want a mother's fierce protection on your faith journey.",
+      "image": {
+        "filename": "our-lady-guadalupe.jpg",
+        "attribution": "Public Domain"
+      },
+      "sources": [
+        "Loyola Press",
+        "Hallow"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/our-lady-of-guadalupe/",
+        "Hallow": "https://hfrancisallow.com/saints/our-lady-of-guadalupe/"
+      }
+    },
+    {
+      "id": "our-lady-fatima",
+      "name": "Our Lady of Fatima",
+      "feastDay": "05-13",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": "Portugal",
+      "region": "europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Portugal",
+        "peace",
+        "rosary"
+      ],
+      "tags": [
+        "Blessed Virgin Mary",
+        "apparition",
+        "prayer",
+        "peace"
+      ],
+      "affinities": [
+        "prayer",
+        "family",
+        "nature",
+        "philosophy"
+      ],
+      "quote": "Pray the Rosary every day to obtain peace for the world.",
+      "biography": "On May 13, 1917, in a small rural village called Fatima in central Portugal, three shepherd children — Lúcia dos Santos (age 10), and her cousins Francisco Marto (age 9) and Jacinta Marto (age 7) — were tending their flock when a brilliant light appeared and the Virgin Mary spoke to them from above a small oak tree.\n\nMary appeared to the children six times between May and October 1917, always on the 13th of the month. She asked them to pray the Rosary daily for peace in the world, to make sacrifices for sinners, and to consecrate Russia to her Immaculate Heart. She also confided three secrets to them — prophecies that included a vision of hell, a prediction of World War II, and a mysterious third secret later associated with the attempted assassination of Pope John Paul II in 1981.\n\nThe children faced intense skepticism. Local authorities even imprisoned them briefly, trying to force them to recant. But on October 13, 1917, an estimated 70,000 people gathered at Fatima and witnessed the 'Miracle of the Sun' — the sun appeared to dance, spin, and plunge toward the earth before returning to its place. Believers and skeptics alike, including journalists, reported the phenomenon.\n\nFrancisco and Jacinta both died young during the 1918 influenza pandemic and were canonized by Pope Francis in 2017. Lúcia became a Carmelite nun and lived until 2005, faithfully preserving the messages of Fatima. Today, the Sanctuary of Our Lady of Fatima is one of the most important pilgrimage sites in the Catholic world.",
+      "whyConfirmationSaint": "Our Lady of Fatima appeared to children — not to bishops, theologians, or world leaders, but to three young shepherds. She showed that young people can receive and respond to God's call in powerful ways. Choose her as your confirmation patron if you believe in the power of prayer to change the world, and if you're ready to take your faith seriously even when others doubt you.",
+      "image": {
+        "filename": "our-lady-fatima.jpg",
+        "attribution": "Public Domain"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Hallow"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06023b.htm",
+        "Hallow": "https://hallow.com/saints/our-lady-of-fatima/"
+      }
+    },
+    {
+      "id": "frances-cabrini",
+      "name": "St. Frances Xavier Cabrini",
+      "feastDay": "11-13",
+      "birthDate": "1850-07-15",
+      "deathDate": "1917-12-22",
+      "canonizationDate": "1946-07-07",
+      "country": "Italy",
+      "region": "north-america",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "immigrants",
+        "hospital administrators",
+        "orphans"
+      ],
+      "tags": [
+        "founder",
+        "missionary",
+        "educator",
+        "immigrant advocate"
+      ],
+      "affinities": [
+        "community service",
+        "leadership",
+        "adventure",
+        "family"
+      ],
+      "quote": "We can do all things through Him who strengthens us.",
+      "biography": "Francesca Maria Cabrini was born on July 15, 1850, in Sant'Angelo Lodigiano, a small town in Lombardy, Italy. The youngest of thirteen children, she was frail and sickly from birth — so small that the midwife feared she wouldn't survive the night. She was plagued by poor health her entire life, yet accomplished more than most people could dream of.\n\nAs a young woman, Cabrini dreamed of being a missionary to China. She applied to two religious orders and was rejected by both because of her fragile health. Undeterred, she founded her own order in 1880 — the Missionary Sisters of the Sacred Heart of Jesus — and went to Pope Leo XIII for his blessing to go to China. The Pope had a different idea: 'Not to the East, but to the West,' he told her, directing her to serve the millions of Italian immigrants pouring into the United States.\n\nCabrini arrived in New York in 1889 and found Italian immigrants living in appalling conditions — crowded tenements, exploitative labor, no access to education or healthcare. She threw herself into the work with extraordinary energy. Over the next 28 years, she crossed the Atlantic more than 30 times and founded 67 institutions: hospitals, schools, orphanages, and convents across the United States, Central America, South America, and Europe.\n\nShe became a naturalized American citizen in 1909 and died in Chicago on December 22, 1917. In 1946, she became the first American citizen to be canonized as a saint. Pope Pius XII named her the Patroness of Immigrants in 1950.",
+      "whyConfirmationSaint": "Mother Cabrini was told she was too frail and sickly to be a missionary — then she crossed the ocean and built an empire of charity. She was rejected, underestimated, and told 'no' repeatedly, and she just kept going. Choose her as your confirmation saint if you want to prove that determination and faith can overcome any obstacle, or if you care deeply about standing up for those who are marginalized and forgotten.",
+      "image": {
+        "filename": "frances-cabrini.jpg",
+        "attribution": "Public Domain"
+      },
+      "sources": [
+        "Loyola Press",
+        "Ascension Press"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-frances-xavier-cabrini/",
+        "Ascension Press": "https://media.ascensionpress.com/2019/11/13/the-amazing-story-of-st-frances-xavier-cabrini/"
+      }
     }
   ]
 }
