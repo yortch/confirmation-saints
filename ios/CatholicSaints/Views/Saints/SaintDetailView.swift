@@ -26,14 +26,7 @@ struct SaintDetailView: View {
     @ViewBuilder
     private var headerSection: some View {
         VStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(colorForSaint(saint).gradient)
-                    .frame(width: 100, height: 100)
-                Text(String(saint.name.prefix(1)))
-                    .font(.system(size: 44, weight: .bold))
-                    .foregroundStyle(.white)
-            }
+            SaintImageView(saint: saint, size: 120)
 
             if let attribution = saint.image?.attribution {
                 Text(attribution)
@@ -218,18 +211,26 @@ struct SaintDetailView: View {
                 Label(String(localized: "Sources"), systemImage: "doc.text.fill")
                     .font(.title3.bold())
                 ForEach(saint.sources, id: \.self) { source in
-                    Text(source)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                    if let urlString = saint.sourceURLs?[source],
+                       let url = URL(string: urlString) {
+                        Link(destination: url) {
+                            HStack {
+                                Text(source)
+                                    .font(.subheadline)
+                                Spacer()
+                                Image(systemName: "arrow.up.right.square")
+                                    .font(.caption)
+                            }
+                            .foregroundStyle(.blue)
+                        }
+                    } else {
+                        Text(source)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
         }
-    }
-
-    private func colorForSaint(_ saint: Saint) -> Color {
-        let colors: [Color] = [.purple, .blue, .indigo, .teal, .pink, .orange, .mint, .cyan]
-        let index = abs(saint.id.hashValue) % colors.count
-        return colors[index]
     }
 }
 

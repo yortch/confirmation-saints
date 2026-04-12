@@ -14,6 +14,7 @@
 		43A34D5759F0A4E886B43C24 /* CategoryBrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F460943826BB854617B5E7 /* CategoryBrowseView.swift */; };
 		4BC6F4D8B59D757D49C0BB5D /* Saint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8786091802F72BA2DA3B1 /* Saint.swift */; };
 		504AAADBE1BC7B296BBB7A2C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2AC66C3B3FDC6F17685422 /* Category.swift */; };
+		52ABB051BF7DBC70491310C2 /* SaintImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0AC5EC99B857DA2B1C579 /* SaintImageView.swift */; };
 		64C3487E8B3E8EAA2CDFB34E /* SharedContent in Resources */ = {isa = PBXBuildFile; fileRef = 16A1A8F4DFE542E75C1AC9CF /* SharedContent */; };
 		64E9F8E2D98FD3088A83A0D0 /* SaintListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD551ABCE820B6F50CF128 /* SaintListView.swift */; };
 		86F702FB839AFBA3FF3E5953 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26203F29FDC228AE96247C0 /* SettingsView.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		16A1A8F4DFE542E75C1AC9CF /* SharedContent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedContent; path = ../SharedContent; sourceTree = SOURCE_ROOT; };
+		2EF0AC5EC99B857DA2B1C579 /* SaintImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintImageView.swift; sourceTree = "<group>"; };
 		4E34B3B2B01D51EE384ADB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B550247717C067DCFBA00A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		658D2564D15C3A8EA7CFB95A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				861EC0C2524D955A969A7A78 /* SaintDetailView.swift */,
+				2EF0AC5EC99B857DA2B1C579 /* SaintImageView.swift */,
 				73AD551ABCE820B6F50CF128 /* SaintListView.swift */,
 				B380AA53877824D89864F0C6 /* SaintRowView.swift */,
 			);
@@ -273,6 +276,7 @@
 				4BC6F4D8B59D757D49C0BB5D /* Saint.swift in Sources */,
 				D578D46AFBC12DC014414EE6 /* SaintDataService.swift in Sources */,
 				FAB4251226D74D156120E1DB /* SaintDetailView.swift in Sources */,
+				52ABB051BF7DBC70491310C2 /* SaintImageView.swift in Sources */,
 				64E9F8E2D98FD3088A83A0D0 /* SaintListView.swift in Sources */,
 				CC551A773B9F2685A6F8E4A4 /* SaintListViewModel.swift in Sources */,
 				A1074935F32F73D70F542C94 /* SaintRowView.swift in Sources */,

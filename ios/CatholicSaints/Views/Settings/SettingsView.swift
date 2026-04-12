@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("appLanguage") private var appLanguage = "en"
+    @AppStorage("appLanguage") private var appLanguage = systemDefaultLanguage
     @AppStorage("hasSeenWelcome") private var hasSeenWelcome = true
 
     var body: some View {

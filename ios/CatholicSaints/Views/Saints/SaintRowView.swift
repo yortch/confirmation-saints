@@ -5,16 +5,8 @@ struct SaintRowView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            // Colored circle with saint's initial
-            ZStack {
-                Circle()
-                    .fill(colorForSaint(saint).gradient)
-                    .frame(width: 50, height: 50)
-                Text(String(saint.name.prefix(1)))
-                    .font(.title2.bold())
-                    .foregroundStyle(.white)
-            }
-            .accessibilityHidden(true)
+            SaintImageView(saint: saint, size: 50)
+                .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(saint.name)
@@ -48,11 +40,5 @@ struct SaintRowView: View {
             }
         }
         .padding(.vertical, 4)
-    }
-
-    private func colorForSaint(_ saint: Saint) -> Color {
-        let colors: [Color] = [.purple, .blue, .indigo, .teal, .pink, .orange, .mint, .cyan]
-        let index = abs(saint.id.hashValue) % colors.count
-        return colors[index]
     }
 }

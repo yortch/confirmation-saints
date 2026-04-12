@@ -22,6 +22,7 @@ struct Saint: Codable, Identifiable, Hashable, Sendable {
     let whyConfirmationSaint: String?
     let image: SaintImage?
     let sources: [String]
+    let sourceURLs: [String: String]?
 
     /// Formatted feast day for display (e.g. "October 1")
     var formattedFeastDay: String {

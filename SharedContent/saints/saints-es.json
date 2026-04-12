@@ -42,8 +42,12 @@
       },
       "sources": [
         "Loyola Press",
-        "Enciclopedia Católica"
-      ]
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-therese-of-lisieux/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/14515a.htm"
+      }
     },
     {
       "id": "dominic-savio",
@@ -82,7 +86,11 @@
       "sources": [
         "Loyola Press",
         "Lifeteen"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-dominic-savio/",
+        "Lifeteen": "https://lifeteen.com/blog/saint-dominic-savio/"
+      }
     },
     {
       "id": "carlo-acutis",
@@ -125,7 +133,12 @@
         "Focus",
         "Hallow",
         "Ascension Press"
-      ]
+      ],
+      "sourceURLs": {
+        "Focus": "https://focus.org/resource/blessed-carlo-acutis/",
+        "Hallow": "https://hallow.com/blog/blessed-carlo-acutis/",
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/who-is-blessed-carlo-acutis"
+      }
     },
     {
       "id": "joan-of-arc",
@@ -166,8 +179,12 @@
       },
       "sources": [
         "Loyola Press",
-        "Enciclopedia Católica"
-      ]
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-joan-of-arc/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08409c.htm"
+      }
     },
     {
       "id": "maria-goretti",
@@ -207,7 +224,11 @@
       "sources": [
         "Loyola Press",
         "Lifeteen"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-maria-goretti/",
+        "Lifeteen": "https://lifeteen.com/blog/saint-maria-goretti/"
+      }
     },
     {
       "id": "chiara-luce-badano",
@@ -248,7 +269,11 @@
       "sources": [
         "Focus",
         "Lifeteen"
-      ]
+      ],
+      "sourceURLs": {
+        "Focus": "https://focus.org/resource/blessed-chiara-luce-badano/",
+        "Lifeteen": "https://lifeteen.com/blog/blessed-chiara-luce-badano/"
+      }
     },
     {
       "id": "jose-sanchez-del-rio",
@@ -288,7 +313,11 @@
       "sources": [
         "Ascension Press",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/the-story-of-jose-sanchez-del-rio",
+        "Hallow": "https://hallow.com/blog/saint-jose-sanchez-del-rio/"
+      }
     },
     {
       "id": "sebastian",
@@ -328,8 +357,12 @@
       },
       "sources": [
         "Loyola Press",
-        "Enciclopedia Católica"
-      ]
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-sebastian/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13668a.htm"
+      }
     },
     {
       "id": "cecilia",
@@ -369,8 +402,12 @@
       },
       "sources": [
         "Loyola Press",
-        "Enciclopedia Católica"
-      ]
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-cecilia/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/03471b.htm"
+      }
     },
     {
       "id": "francis-of-assisi",
@@ -414,7 +451,12 @@
         "Loyola Press",
         "Focus",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-francis-of-assisi/",
+        "Focus": "https://focus.org/resource/st-francis-of-assisi/",
+        "Hallow": "https://hallow.com/blog/saint-francis-of-assisi/"
+      }
     },
     {
       "id": "thomas-aquinas",
@@ -457,7 +499,11 @@
       "sources": [
         "Loyola Press",
         "Ascension Press"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-thomas-aquinas/",
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/who-is-st-thomas-aquinas"
+      }
     },
     {
       "id": "thomas-more",
@@ -500,8 +546,12 @@
       },
       "sources": [
         "Loyola Press",
-        "Enciclopedia Católica"
-      ]
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-thomas-more/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/14689c.htm"
+      }
     },
     {
       "id": "gianna-beretta-molla",
@@ -548,7 +598,11 @@
       "sources": [
         "Loyola Press",
         "Focus"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gianna-beretta-molla/",
+        "Focus": "https://focus.org/resource/st-gianna-beretta-molla/"
+      }
     },
     {
       "id": "louis-martin",
@@ -589,7 +643,11 @@
       "sources": [
         "Loyola Press",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saints-louis-and-zelie-martin/",
+        "Hallow": "https://hallow.com/blog/saints-louis-and-zelie-martin/"
+      }
     },
     {
       "id": "zelie-martin",
@@ -632,7 +690,11 @@
       "sources": [
         "Loyola Press",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saints-louis-and-zelie-martin/",
+        "Hallow": "https://hallow.com/blog/saints-louis-and-zelie-martin/"
+      }
     },
     {
       "id": "mother-teresa",
@@ -673,7 +735,12 @@
         "Loyola Press",
         "Ascension Press",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-teresa-of-calcutta/",
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/who-is-mother-teresa",
+        "Hallow": "https://hallow.com/blog/mother-teresa/"
+      }
     },
     {
       "id": "john-paul-ii",
@@ -719,7 +786,12 @@
         "Loyola Press",
         "Focus",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-john-paul-ii/",
+        "Focus": "https://focus.org/resource/st-john-paul-ii/",
+        "Hallow": "https://hallow.com/blog/saint-john-paul-ii/"
+      }
     },
     {
       "id": "pier-giorgio-frassati",
@@ -764,7 +836,12 @@
         "Focus",
         "Ascension Press",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Focus": "https://focus.org/resource/blessed-pier-giorgio-frassati/",
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/who-is-pier-giorgio-frassati",
+        "Hallow": "https://hallow.com/blog/blessed-pier-giorgio-frassati/"
+      }
     },
     {
       "id": "kateri-tekakwitha",
@@ -807,7 +884,11 @@
       "sources": [
         "Loyola Press",
         "Lifeteen"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-kateri-tekakwitha/",
+        "Lifeteen": "https://lifeteen.com/blog/saint-kateri-tekakwitha/"
+      }
     },
     {
       "id": "augustine-of-hippo",
@@ -849,7 +930,11 @@
       "sources": [
         "Loyola Press",
         "Ascension Press"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-augustine/",
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/who-is-st-augustine"
+      }
     },
     {
       "id": "josephine-bakhita",
@@ -891,7 +976,11 @@
       "sources": [
         "Loyola Press",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-josephine-bakhita/",
+        "Hallow": "https://hallow.com/blog/saint-josephine-bakhita/"
+      }
     },
     {
       "id": "juan-diego",
@@ -930,7 +1019,12 @@
         "Loyola Press",
         "Ascension Press",
         "Hallow"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-juan-diego/",
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/who-is-st-juan-diego",
+        "Hallow": "https://hallow.com/blog/saint-juan-diego/"
+      }
     },
     {
       "id": "pedro-calungsod",
@@ -971,8 +1065,12 @@
       },
       "sources": [
         "Ascension Press",
-        "Enciclopedia Católica"
-      ]
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/who-is-st-pedro-calungsod",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11604a.htm"
+      }
     },
     {
       "id": "rose-of-lima",
@@ -1014,8 +1112,12 @@
       },
       "sources": [
         "Loyola Press",
-        "Enciclopedia Católica"
-      ]
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-rose-of-lima/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13189b.htm"
+      }
     },
     {
       "id": "maximilian-kolbe",
@@ -1061,7 +1163,12 @@
         "Loyola Press",
         "Focus",
         "Ascension Press"
-      ]
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-maximilian-kolbe/",
+        "Focus": "https://focus.org/resource/st-maximilian-kolbe/",
+        "Ascension Press": "https://ascensionpress.com/blogs/ascension-blog/who-is-st-maximilian-kolbe"
+      }
     },
     {
       "id": "monica",
@@ -1105,7 +1212,11 @@
       "sources": [
         "Catholic Encyclopedia",
         "Loyola Press"
-      ]
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10482a.htm",
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-monica/"
+      }
     },
     {
       "id": "charbel-makhlouf",
@@ -1148,7 +1259,11 @@
       "sources": [
         "Catholic Encyclopedia",
         "Loyola Press"
-      ]
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09546b.htm",
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-charbel-makhlouf/"
+      }
     }
   ]
 }

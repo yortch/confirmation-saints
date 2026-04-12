@@ -1,8 +1,16 @@
 import SwiftUI
 
+/// Determines the default app language based on the iOS system locale.
+let systemDefaultLanguage: String = {
+    if Locale.current.language.languageCode?.identifier == "es" {
+        return "es"
+    }
+    return "en"
+}()
+
 @main
 struct CatholicSaintsApp: App {
-    @AppStorage("appLanguage") private var appLanguage = "en"
+    @AppStorage("appLanguage") private var appLanguage = systemDefaultLanguage
     @AppStorage("hasSeenWelcome") private var hasSeenWelcome = false
 
     var body: some Scene {
