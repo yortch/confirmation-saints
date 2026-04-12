@@ -11,7 +11,7 @@ settings:
     MARKETING_VERSION: "0.1.0"
     CURRENT_PROJECT_VERSION: "1"
     GENERATE_INFOPLIST_FILE: true
-    INFOPLIST_KEY_CFBundleDisplayName: "Catholic Saints"
+    INFOPLIST_KEY_CFBundleDisplayName: "Confirmation Saints"
     INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
     INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
     INFOPLIST_KEY_UILaunchScreen_Generation: true
@@ -40,5 +40,5 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jorgebalderas.CatholicSaints
-        PRODUCT_NAME: "Catholic Saints"
+        PRODUCT_NAME: "Confirmation Saints"
         DEVELOPMENT_ASSET_PATHS: "\"CatholicSaints/Resources/Preview Content\""

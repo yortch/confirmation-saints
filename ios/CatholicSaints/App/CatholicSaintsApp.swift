@@ -3,11 +3,17 @@ import SwiftUI
 @main
 struct CatholicSaintsApp: App {
     @AppStorage("appLanguage") private var appLanguage = "en"
+    @AppStorage("hasSeenWelcome") private var hasSeenWelcome = false
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.appLanguage, appLanguage)
+            if hasSeenWelcome {
+                ContentView()
+                    .environment(\.appLanguage, appLanguage)
+            } else {
+                WelcomeView()
+                    .environment(\.appLanguage, appLanguage)
+            }
         }
     }
 }

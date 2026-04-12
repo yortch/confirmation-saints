@@ -35,3 +35,15 @@
 - Category matching is dynamic (computed from saint fields, not pre-indexed)
 - Build verified: `xcrun swiftc -typecheck -swift-version 6` passes clean on all 13 files
 - XcodeGen regen successful with new view directories
+
+### App Rename & Welcome Screen (2026-07-13)
+- App renamed from "Catholic Saints" → "Confirmation Saints" (display name only; folder stays `CatholicSaints/`)
+- Updated `project.yml` (INFOPLIST_KEY_CFBundleDisplayName, PRODUCT_NAME) and README.md
+- Created `Views/Onboarding/WelcomeView.swift` — 4-page TabView onboarding with PageTabViewStyle
+- Uses `@AppStorage("hasSeenWelcome")` flag: shown on first launch, skipped after
+- `CatholicSaintsApp.swift` conditionally renders WelcomeView vs ContentView
+- Settings gets "Show Welcome Screen" button that resets `hasSeenWelcome` to false
+- Purple/gold liturgical gradient theme, SF Symbols (cross, magnifying glass, book, sparkles)
+- All new strings added to Localizable.xcstrings with EN/ES translations
+- Build verified clean with 14 Swift files (added WelcomeView.swift)
+- User preference: prefers "Confirmation Saints" as app name

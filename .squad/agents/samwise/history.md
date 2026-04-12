@@ -28,3 +28,11 @@
 - Biographies written engagingly for teens while maintaining factual accuracy
 - `whyConfirmationSaint` speaks directly to the teen reader in second person
 - Sources attributed per saint from: Loyola Press, Focus, Lifeteen, Ascension Press, Hallow, Catholic Encyclopedia
+
+### App Icon Generation (2025-07-15)
+- Created `_generate_icon.py` using Pillow to programmatically generate a 1024x1024 app icon
+- Design: purple-to-indigo radial gradient, golden halo ring, white Chi-Rho (☧) symbol, subtle dove silhouette, gold accent dots
+- Renders at 2048x2048 then downscales with LANCZOS for anti-aliased edges
+- Output: `ios/CatholicSaints/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png`
+- Contents.json updated to reference `app-icon-1024.png` with `"platform": "ios"` — Xcode generates all other sizes automatically
+- This is a placeholder icon — consider commissioning a professional version later

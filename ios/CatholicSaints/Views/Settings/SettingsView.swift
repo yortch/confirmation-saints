@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("appLanguage") private var appLanguage = "en"
+    @AppStorage("hasSeenWelcome") private var hasSeenWelcome = true
 
     var body: some View {
         NavigationStack {
@@ -41,6 +42,19 @@ struct SettingsView: View {
                     }
                 } header: {
                     Label(String(localized: "App Info"), systemImage: "info.circle")
+                }
+
+                // Welcome Screen Section
+                Section {
+                    Button {
+                        hasSeenWelcome = false
+                    } label: {
+                        Label(String(localized: "Show Welcome Screen"), systemImage: "sparkles")
+                    }
+                } header: {
+                    Label(String(localized: "Onboarding"), systemImage: "hand.wave.fill")
+                } footer: {
+                    Text(String(localized: "Replay the welcome screen to revisit how the app works."))
                 }
 
                 // Content Sources

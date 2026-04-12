@@ -1,17 +1,8 @@
-# Catholic Saints — Confirmation Companion App
+# Confirmation Saints
 
 > *Help confirmation candidates discover and choose their patron saint.*
 
 A SwiftUI iOS app (iPhone + iPad) that helps Catholic confirmation candidates — primarily teenagers, but also adults — explore the lives of the saints and find a meaningful patron for their confirmation journey.
-
-## ✨ Suggested App Names
-
-- **Saints Companion** — simple, warm
-- **My Patron Saint** — personal, direct
-- **Confirm with Saints** — action-oriented
-- **Saint Finder** — utility-focused
-- **Called by Name** — theological depth (confirmation = being called)
-- **Patronus** — memorable, modern feel
 
 ## 🎯 Target Audience
 
