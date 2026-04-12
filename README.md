@@ -32,37 +32,37 @@ A SwiftUI iOS app (iPhone + iPad) that helps Catholic confirmation candidates �
 
 ## 🏗️ Architecture
 
-### Pattern: MVVM with SwiftUI
+### Cross-Platform Repository Structure
+
+This repository is organized for **cross-platform development**. Shared content lives at the root; platform-specific code lives in its own directory.
 
 ```
-CatholicSaints/
-├── App/                    # App entry point
-│   └── CatholicSaintsApp.swift
-├── Models/                 # Data models (Codable structs)
-│   ├── Saint.swift         # Saint model with LocalizedText
-│   └── Category.swift      # Category + Affinity enum
-├── ViewModels/             # Observable view models
-│   └── SaintListViewModel.swift
-├── Views/                  # SwiftUI views
-│   ├── ContentView.swift   # Tab-based navigation
-│   ├── Saints/             # Saint browsing views
-│   ├── Search/             # Search & filter views
-│   └── Info/               # About Confirmation views
-├── Services/               # Data loading
-│   └── SaintDataService.swift
-└── Resources/              # Assets, localization
-    ├── Assets.xcassets
-    └── Localizable.xcstrings
-
-SharedContent/              # Cross-platform JSON (reusable for Android)
-└── Data/
-    ├── saints.json         # All saint data (bilingual)
-    └── categories.json     # Category definitions (bilingual)
+confirmation-saints/
+├── SharedContent/            # Cross-platform content (JSON data, images)
+│   ├── saints/               # Saint data (per-language JSON)
+│   ├── categories/           # Category definitions (per-language JSON)
+│   ├── content/              # Confirmation info (per-language JSON)
+│   └── images/               # Saint images with attribution
+├── ios/                      # iOS app (SwiftUI)
+│   ├── CatholicSaints/       # Swift source
+│   │   ├── App/              # App entry point
+│   │   ├── Models/           # Data models (Codable structs)
+│   │   ├── ViewModels/       # Observable view models
+│   │   ├── Views/            # SwiftUI views
+│   │   ├── Services/         # Data loading
+│   │   └── Resources/        # Assets, localization
+│   ├── CatholicSaints.xcodeproj/
+│   └── project.yml           # XcodeGen spec
+├── android/                  # Future Android app (Kotlin/Compose)
+│   └── README.md
+└── README.md
 ```
+
+### Pattern: MVVM with SwiftUI (iOS)
 
 ### Data Flow
 
-1. **JSON data** lives in `SharedContent/Data/` — platform-agnostic, designed for reuse on Android
+1. **JSON data** lives in `SharedContent/` — platform-agnostic, designed for reuse on Android
 2. **`SaintDataService`** loads and decodes JSON from the app bundle
 3. **`SaintListViewModel`** holds state, exposes filtered results
 4. **SwiftUI views** observe the view model and render
@@ -71,9 +71,9 @@ SharedContent/              # Cross-platform JSON (reusable for Android)
 
 | Content Type | Format | Location |
 |---|---|---|
-| UI strings (labels, buttons) | String Catalog (.xcstrings) | `CatholicSaints/Resources/Localizable.xcstrings` |
-| Saint content (bios, descriptions) | JSON with `LocalizedText` | `SharedContent/Data/saints.json` |
-| Category names | JSON with `LocalizedText` | `SharedContent/Data/categories.json` |
+| UI strings (labels, buttons) | String Catalog (.xcstrings) | `ios/CatholicSaints/Resources/Localizable.xcstrings` |
+| Saint content (bios, descriptions) | JSON with `LocalizedText` | `SharedContent/saints/` |
+| Category names | JSON with `LocalizedText` | `SharedContent/categories/` |
 
 **Why this split?**
 - UI strings use Apple's native String Catalog for easy Xcode editing and pluralization
@@ -84,7 +84,8 @@ SharedContent/              # Cross-platform JSON (reusable for Android)
 - **iOS 17+ deployment target** — Uses modern SwiftUI APIs (NavigationStack, Observable macro)
 - **Swift 6 concurrency** — Sendable types, @MainActor annotations
 - **JSON-first content** — All saint data in JSON for cross-platform reuse
-- **XcodeGen** — Project file generated from `project.yml` (no manual .pbxproj edits)
+- **XcodeGen** — Project file generated from `ios/project.yml` (no manual .pbxproj edits)
+- **Cross-platform ready** — SharedContent/ at repo root shared between iOS and future Android
 
 ## 📖 Content Sources & Attribution
 
@@ -112,6 +113,7 @@ Images are used with attribution. Each saint's `imageAttribution` field credits 
 
 ```bash
 # 1. Generate the Xcode project from project.yml
+cd ios
 xcodegen generate
 
 # 2. Open in Xcode
@@ -123,6 +125,8 @@ open CatholicSaints.xcodeproj
 ### Command-Line Build
 
 ```bash
+cd ios
+
 # Generate project
 xcodegen generate
 
@@ -142,7 +146,7 @@ xcodebuild -project CatholicSaints.xcodeproj \
 
 ## ➕ How to Add a New Saint
 
-1. Open `SharedContent/Data/saints.json`
+1. Open `SharedContent/saints/saints-en.json` (or `saints-es.json` for Spanish)
 2. Add a new saint object following the existing schema:
 
 ```json
@@ -180,12 +184,12 @@ xcodebuild -project CatholicSaints.xcodeproj \
 ## 🌍 How to Add a New Language
 
 ### UI Strings
-1. Open `CatholicSaints/Resources/Localizable.xcstrings` in Xcode
+1. Open `ios/CatholicSaints/Resources/Localizable.xcstrings` in Xcode
 2. Click "+" to add a new language
 3. Translate each string entry
 
 ### Saint Content
-1. Add a new field to `LocalizedText` in `Saint.swift`:
+1. Add a new field to `LocalizedText` in `ios/CatholicSaints/Models/Saint.swift`:
    ```swift
    struct LocalizedText: Codable, Hashable, Sendable {
        let en: String
@@ -194,11 +198,11 @@ xcodebuild -project CatholicSaints.xcodeproj \
    }
    ```
 2. Update the `localized` computed property to handle the new language code
-3. Add the new language translations to every `LocalizedText` object in `saints.json` and `categories.json`
+3. Add the new language translations to every `LocalizedText` object in `SharedContent/saints/` and `SharedContent/categories/`
 
 ## 🗺️ Future Plans
 
-- **Android version** — `SharedContent/` JSON is designed for cross-platform reuse. An Android app (Kotlin/Jetpack Compose) can read the same data files.
+- **Android version** — `SharedContent/` JSON is designed for cross-platform reuse. The `android/` directory is scaffolded and ready for a Kotlin/Jetpack Compose app that reads the same data files.
 - **More saints** — Expand from seed data to a comprehensive database
 - **Favorites** — Let users save saints they're considering
 - **Saint of the Day** — Daily featured saint based on feast day

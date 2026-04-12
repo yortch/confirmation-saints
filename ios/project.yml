@@ -31,7 +31,7 @@ targets:
       - path: CatholicSaints
         excludes:
           - "Resources/Preview Content"
-      - path: SharedContent
+      - path: ../SharedContent
         buildPhase: resources
         type: folder
     resources:
