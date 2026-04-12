@@ -46,96 +46,107 @@ def draw_radial_gradient(img, center, radius, inner_color, outer_color):
             pixels[x, y] = lerp_color(inner_color, outer_color, t)
 
 
+def draw_light_rays(draw, cx, cy, size, color_rgba):
+    """Draw subtle rays of light radiating downward from the dove."""
+    num_rays = 12
+    ray_length = size * 0.95
+    ray_width = max(2, int(size * 0.018))
+    start_y = cy + size * 0.10  # rays start just below dove body
+
+    for i in range(num_rays):
+        # Spread rays in a downward fan (~140 degrees)
+        angle = math.pi * 0.15 + (math.pi * 0.70) * (i / (num_rays - 1))
+        x_end = cx + ray_length * math.cos(angle)
+        y_end = start_y + ray_length * math.sin(angle)
+        # Fade alpha toward edges
+        center_dist = abs(i - (num_rays - 1) / 2) / ((num_rays - 1) / 2)
+        alpha = int(color_rgba[3] * (1.0 - 0.6 * center_dist))
+        ray_color = (color_rgba[0], color_rgba[1], color_rgba[2], alpha)
+        draw.line([(cx, start_y), (x_end, y_end)],
+                  fill=ray_color, width=ray_width)
+
+
 def draw_dove(draw, cx, cy, size, color):
-    """Draw a stylized dove with wings spread upward — Holy Spirit pose."""
-    # Body — a smooth, slightly tapered ellipse
-    body_w = size * 0.30
-    body_h = size * 0.18
-    body_cy = cy + size * 0.05
+    """Draw a traditional Holy Spirit descending dove — frontal, symmetrical."""
+    # Small compact body — an oval centered slightly below middle
+    body_w = size * 0.14
+    body_h = size * 0.20
+    body_top = cy - body_h * 0.3
     draw.ellipse(
-        [cx - body_w, body_cy - body_h, cx + body_w, body_cy + body_h],
+        [cx - body_w, body_top, cx + body_w, body_top + body_h * 2],
         fill=color
     )
 
-    # Head — small circle, top-right of body
-    head_r = size * 0.09
-    head_cx = cx + body_w * 0.55
-    head_cy = body_cy - body_h * 0.8
+    # Head — small circle at the top of the body
+    head_r = size * 0.08
+    head_cy = body_top - head_r * 0.3
     draw.ellipse(
-        [head_cx - head_r, head_cy - head_r,
-         head_cx + head_r, head_cy + head_r],
+        [cx - head_r, head_cy - head_r,
+         cx + head_r, head_cy + head_r],
         fill=color
     )
 
-    # Beak — small triangle pointing right
-    beak_len = size * 0.07
+    # Beak — small downward-pointing triangle (descending pose)
+    beak_len = size * 0.05
     draw.polygon([
-        (head_cx + head_r * 0.7, head_cy - beak_len * 0.3),
-        (head_cx + head_r + beak_len, head_cy),
-        (head_cx + head_r * 0.7, head_cy + beak_len * 0.3),
+        (cx - beak_len * 0.4, head_cy + head_r * 0.6),
+        (cx, head_cy + head_r + beak_len),
+        (cx + beak_len * 0.4, head_cy + head_r * 0.6),
     ], fill=color)
 
-    # Left wing — sweeping upward arc (multiple polygons for smooth curve)
+    # Wings — large, sweeping upward and outward in a wide V/arc
+    # Each wing is a smooth polygon curving from body up and outward
+    wing_attach_y = body_top + body_h * 0.3  # attach near upper body
+
+    # Left wing
     wing_pts_l = [
-        (cx - body_w * 0.1, body_cy - body_h * 0.3),
-        (cx - size * 0.35, cy - size * 0.25),
-        (cx - size * 0.55, cy - size * 0.50),
-        (cx - size * 0.60, cy - size * 0.70),
-        (cx - size * 0.50, cy - size * 0.78),
-        (cx - size * 0.35, cy - size * 0.72),
-        (cx - size * 0.20, cy - size * 0.50),
-        (cx - size * 0.05, cy - size * 0.20),
-        (cx + body_w * 0.05, body_cy - body_h * 0.5),
+        (cx - body_w * 0.5, wing_attach_y),            # inner attach
+        (cx - size * 0.12, wing_attach_y - size * 0.08),
+        (cx - size * 0.28, wing_attach_y - size * 0.22),
+        (cx - size * 0.42, wing_attach_y - size * 0.38),
+        (cx - size * 0.52, wing_attach_y - size * 0.48),  # wingtip area
+        (cx - size * 0.58, wing_attach_y - size * 0.50),
+        (cx - size * 0.62, wing_attach_y - size * 0.48),  # outer tip
+        (cx - size * 0.60, wing_attach_y - size * 0.42),
+        (cx - size * 0.52, wing_attach_y - size * 0.32),
+        (cx - size * 0.40, wing_attach_y - size * 0.20),
+        (cx - size * 0.25, wing_attach_y - size * 0.08),
+        (cx - body_w * 0.8, wing_attach_y + body_h * 0.4),  # lower attach
     ]
     draw.polygon(wing_pts_l, fill=color)
 
-    # Right wing — mirror of left
-    wing_pts_r = [
-        (cx + body_w * 0.1, body_cy - body_h * 0.3),
-        (cx + size * 0.35, cy - size * 0.25),
-        (cx + size * 0.55, cy - size * 0.50),
-        (cx + size * 0.60, cy - size * 0.70),
-        (cx + size * 0.50, cy - size * 0.78),
-        (cx + size * 0.35, cy - size * 0.72),
-        (cx + size * 0.20, cy - size * 0.50),
-        (cx + size * 0.05, cy - size * 0.20),
-        (cx - body_w * 0.05, body_cy - body_h * 0.5),
-    ]
+    # Right wing — perfect mirror
+    wing_pts_r = [(2 * cx - px, py) for px, py in wing_pts_l]
     draw.polygon(wing_pts_r, fill=color)
 
-    # Wing feather details — thin lines at wingtips for definition
-    if len(color) == 4:
-        feather_color = (color[0], color[1], color[2], min(255, color[3] + 30))
-    else:
-        feather_color = color
-    feather_w = max(2, int(size * 0.012))
+    # Wing feather details — 5 long feather lines per wing for definition
+    feather_w = max(2, int(size * 0.010))
+    feather_color = color if len(color) == 3 else (
+        color[0], color[1], color[2], min(255, color[3] + 20))
 
-    # Left wing feathers
-    for i in range(4):
-        t = 0.3 + i * 0.15
-        fx = cx - size * (0.30 + t * 0.30)
-        fy = cy - size * (0.25 + t * 0.40)
-        fx2 = cx - size * (0.15 + t * 0.20)
-        fy2 = cy - size * (0.10 + t * 0.30)
-        draw.line([(fx, fy), (fx2, fy2)], fill=feather_color, width=feather_w)
+    for i in range(5):
+        t = 0.25 + i * 0.15
+        # Left feathers: lines from mid-wing radiating outward
+        start_x = cx - size * (0.08 + t * 0.10)
+        start_y = wing_attach_y - size * (0.02 + t * 0.06)
+        end_x = cx - size * (0.30 + t * 0.28)
+        end_y = wing_attach_y - size * (0.18 + t * 0.26)
+        draw.line([(start_x, start_y), (end_x, end_y)],
+                  fill=feather_color, width=feather_w)
+        # Right feathers — mirror
+        draw.line([(2 * cx - start_x, start_y), (2 * cx - end_x, end_y)],
+                  fill=feather_color, width=feather_w)
 
-    # Right wing feathers
-    for i in range(4):
-        t = 0.3 + i * 0.15
-        fx = cx + size * (0.30 + t * 0.30)
-        fy = cy - size * (0.25 + t * 0.40)
-        fx2 = cx + size * (0.15 + t * 0.20)
-        fy2 = cy - size * (0.10 + t * 0.30)
-        draw.line([(fx, fy), (fx2, fy2)], fill=feather_color, width=feather_w)
-
-    # Tail — fan of feathers extending left-downward
+    # Tail — symmetrical fan of feathers descending below the body
+    tail_cy = body_top + body_h * 2
     tail_pts = [
-        (cx - body_w * 0.7, body_cy),
-        (cx - size * 0.45, body_cy + size * 0.08),
-        (cx - size * 0.50, body_cy + size * 0.20),
-        (cx - size * 0.40, body_cy + size * 0.25),
-        (cx - size * 0.28, body_cy + size * 0.18),
-        (cx - body_w * 0.5, body_cy + body_h * 0.6),
+        (cx - body_w * 0.6, tail_cy - body_h * 0.2),
+        (cx - size * 0.12, tail_cy + size * 0.10),
+        (cx - size * 0.06, tail_cy + size * 0.18),
+        (cx, tail_cy + size * 0.22),  # center tail tip
+        (cx + size * 0.06, tail_cy + size * 0.18),
+        (cx + size * 0.12, tail_cy + size * 0.10),
+        (cx + body_w * 0.6, tail_cy - body_h * 0.2),
     ]
     draw.polygon(tail_pts, fill=color)
 
@@ -214,11 +225,21 @@ def main():
         outline=(218, 175, 62, 60), width=int(RENDER_SIZE * 0.006)
     )
 
+    # --- Light rays radiating from behind the dove ---
+    rays_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
+    rays_draw = ImageDraw.Draw(rays_layer)
+    dove_size = RENDER_SIZE * 0.42
+    dove_cy = CENTER - int(RENDER_SIZE * 0.02)
+    draw_light_rays(rays_draw, CENTER, dove_cy, dove_size,
+                    (255, 235, 160, 45))
+    rays_blur = rays_layer.filter(ImageFilter.GaussianBlur(radius=18))
+    img = Image.alpha_composite(img, rays_blur)
+    img = Image.alpha_composite(img, rays_layer)
+    draw = ImageDraw.Draw(img)
+
     # --- Main dove (white, prominent, centered) ---
     dove_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     dove_draw = ImageDraw.Draw(dove_layer)
-    dove_size = RENDER_SIZE * 0.42
-    dove_cy = CENTER - int(RENDER_SIZE * 0.02)
     draw_dove(dove_draw, CENTER, dove_cy, dove_size, WHITE)
 
     # Slight blur on a copy for soft glow effect, then composite both
