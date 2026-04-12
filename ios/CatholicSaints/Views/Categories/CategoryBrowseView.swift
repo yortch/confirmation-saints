@@ -91,9 +91,6 @@ struct CategorySaintsListView: View {
         }
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: Saint.self) { saint in
-            SaintDetailView(saint: saint)
-        }
     }
 }
 

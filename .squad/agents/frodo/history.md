@@ -47,3 +47,8 @@
 - All new strings added to Localizable.xcstrings with EN/ES translations
 - Build verified clean with 14 Swift files (added WelcomeView.swift)
 - User preference: prefers "Confirmation Saints" as app name
+
+### Category Navigation Bug Fix (2025-07-15)
+- `CategorySaintsListView` had a duplicate `.navigationDestination(for: Saint.self)` that conflicted with the parent `NavigationStack` in `CategoryBrowseView`
+- Fix: removed the inner `.navigationDestination` — the parent's declaration handles all `NavigationLink(value: saint)` resolution
+- Lesson: in SwiftUI, never declare duplicate `.navigationDestination` for the same type at multiple levels of a `NavigationStack` hierarchy — only the outermost one (on/near the `NavigationStack`) should exist
