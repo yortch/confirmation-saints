@@ -52,3 +52,14 @@
 - `CategorySaintsListView` had a duplicate `.navigationDestination(for: Saint.self)` that conflicted with the parent `NavigationStack` in `CategoryBrowseView`
 - Fix: removed the inner `.navigationDestination` — the parent's declaration handles all `NavigationLink(value: saint)` resolution
 - Lesson: in SwiftUI, never declare duplicate `.navigationDestination` for the same type at multiple levels of a `NavigationStack` hierarchy — only the outermost one (on/near the `NavigationStack`) should exist
+
+### UI Improvements: Locale, Links, Images, System Integration (2026-04-12)
+- Default language now derived from `Locale.current.language.languageCode` — `systemDefaultLanguage` global constant used by both `CatholicSaintsApp` and `SettingsView`
+- `@AppStorage` only applies its default when no value previously saved, so existing users keep their manual choice
+- `sourceURLs: [String: String]?` added to `Saint` model — optional, backward compatible with older JSON
+- Sources section now renders `Link` views for sources with URLs, plain `Text` for others
+- Created `SaintImageView` shared component (tries asset catalog → bundle path → fallback initial circle)
+- Both `SaintDetailView` and `SaintRowView` now use `SaintImageView` — removed duplicated `colorForSaint` helpers
+- App icon redesigned: white dove on red background with Pentecost flames (per user directive)
+- **Cross-agent Update:** Samwise populated all 27 saints with `sourceURLs` and standardized source names to English in both language files
+- Build verified: `xcrun swiftc -typecheck` passes clean, XcodeGen regen successful

@@ -97,3 +97,63 @@ The app needs a platform-agnostic, bilingual data format for saint information t
 - iOS app loads only the needed language file at runtime
 - Future Android app uses the same JSON files directly
 - Adding a new saint requires adding to both EN and ES files with matching IDs
+
+---
+
+### Decision: Matching Fields Must Stay English in All Language Files
+**Author:** Samwise (Data/Backend) | **Date:** 2025-07-16 | **Status:** Implemented
+
+#### Context
+Category browsing was broken — almost every category showed "0 saints" because the ViewModel matches category value IDs (English) against saint data fields. The Spanish saint file had translated matching fields (e.g., `patronOf: ["soldados"]` instead of `["soldiers"]`), so no matches were found.
+
+#### Decision
+All **matching fields** — `patronOf`, `affinities`, `tags`, `region`, `lifeState`, `ageCategory`, `gender` — must use **English values** in both `saints-en.json` and `saints-es.json`. Only **display fields** (`name`, `biography`, `whyConfirmationSaint`, `quote`, `country`) should be translated.
+
+This is because the ViewModel uses English category IDs for matching, and we agreed not to change the ViewModel or category IDs.
+
+#### Impact
+- **Samwise (Data):** When adding new saints, always use English for matching fields in both language files.
+- **Frodo (iOS):** No code changes needed — matching logic works as designed.
+- **All:** Birth dates must use 4-digit year format (e.g., `"0256-01-01"` not `"256"`) for `Int(birthDate.prefix(4))` to parse correctly.
+
+---
+
+### Decision: User Directives — System Locale, Clickable Sources, Saint Images, Icon Design
+**Author:** Jorge Balderas (via Copilot) | **Date:** 2026-04-12 | **Status:** Implemented
+
+#### Directives
+1. App language should default to iOS system language (not hardcoded "en"), with manual override in Settings preserved
+2. App icon changed to: white dove on red background (Pentecost theme)
+3. Sources in saint detail view should be clickable links
+4. Include saint pictures where possible and available
+
+#### Implementation
+- **System Locale Default:** `systemDefaultLanguage` global constant checks `Locale.current.language.languageCode` ("es" → Spanish, else English). Used in both app init and settings; `@AppStorage` preserves manual overrides.
+- **Clickable Sources:** Added `sourceURLs: [String: String]?` to `Saint` model. `SaintDetailView.sourcesSection` renders `Link` for sources with URLs, plain text otherwise.
+- **Saint Images:** Created `SaintImageView` reusable component. Fallback chain: asset catalog → `SharedContent/images/` bundle path → colored initial circle.
+- **Icon Design:** White dove on red background with Pentecost flame accents, procedurally generated via `_generate_icon.py`
+
+#### Status
+- ✅ Frodo: iOS implementation complete, builds clean
+- ✅ Samwise: All 27 saints × 2 languages populated with `sourceURLs`, source names standardized to English in ES file
+- ✅ Icon: Generated and integrated into Xcode project
+
+---
+
+### Decision: Source URLs and Standardized Source Names
+**Author:** Samwise (Data/Backend) | **Date:** 2026-04-12 | **Status:** Implemented
+
+#### Context
+Sources in saint detail view should be clickable links (per user directive). Requires URLs and consistent naming across language files.
+
+#### Decision
+- Added `sourceURLs` dictionary to all 27 saints in both `saints-en.json` and `saints-es.json`
+- Each source in the `sources` array has a corresponding URL in `sourceURLs` (keyed by source name)
+- Spanish file source names standardized to English (consistent with matching-fields convention)
+- URLs point to saint-specific pages on Loyola Press, Catholic Encyclopedia (newadvent.org), Focus, Lifeteen, Ascension Press, Hallow
+- `sourceURLs` identical across both language files (URLs are language-independent)
+
+#### Impact
+- iOS UI can render sources as interactive `Link` views
+- No per-language URL mapping needed
+- Standardization ensures data consistency and simplifies cross-platform reuse

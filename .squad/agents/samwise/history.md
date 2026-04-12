@@ -49,10 +49,11 @@
 - Fixed birth dates to 4-digit year format (e.g., "256" → "0256-01-01") for proper era matching via `Int(birthDate.prefix(4))`
 - Verified all 51 category values have ≥1 matching saint in both EN and ES via Python verification script
 
-### Source URLs Added (2025-07-17)
+### Source URLs Added & Source Names Standardized (2026-04-12)
 - Added `sourceURLs` dictionary to all 27 saints in both `saints-en.json` and `saints-es.json`
 - Each source in the `sources` array now has a corresponding URL in `sourceURLs`
 - URLs point to saint-specific pages on Loyola Press, Catholic Encyclopedia (newadvent.org), Focus, Lifeteen, Ascension Press, and Hallow
 - Standardized Spanish file to use English source names (e.g., "Catholic Encyclopedia" instead of "Enciclopedia Católica") consistent with the matching-fields-in-English convention
 - `sourceURLs` are identical across both language files since all sources are English-language
 - Field inserted immediately after `sources` in the JSON structure for logical grouping
+- **Cross-agent Integration:** Frodo's iOS UI now renders sources as clickable `Link` views using these URLs
