@@ -57,3 +57,10 @@
 - `sourceURLs` are identical across both language files since all sources are English-language
 - Field inserted immediately after `sources` in the JSON structure for logical grouping
 - **Cross-agent Integration:** Frodo's iOS UI now renders sources as clickable `Link` views using these URLs
+
+### Dictionary-Based In-App Localization (2026-04-12)
+- Frodo implemented `AppStrings.localized(_:language:)` via LocalizationService dictionary to support in-app language switching
+- Root problem: `String(localized:)` reads iOS system locale; in-app language preference didn't affect UI strings
+- Solution: All new UI strings must be added to BOTH `Localizable.xcstrings` (for tooling/reference) AND the `LocalizationService.swift` translations dictionary
+- Pattern for future work: `AppStrings.localized("Key", language: language)` with `@Environment(\.appLanguage)` binding in views
+- **Impact on Samwise:** None — data layer already supports language switching via JSON files. This affects only UI strings, not saint content.

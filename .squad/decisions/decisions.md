@@ -157,3 +157,22 @@ Sources in saint detail view should be clickable links (per user directive). Req
 - iOS UI can render sources as interactive `Link` views
 - No per-language URL mapping needed
 - Standardization ensures data consistency and simplifies cross-platform reuse
+
+---
+
+### Decision: Dictionary-Based In-App Localization
+**Author:** Frodo (iOS Dev) | **Date:** 2026-04-12 | **Status:** Implemented
+
+#### Context
+`String(localized:)` uses the iOS system locale, not the in-app `appLanguage` setting. When a user switches language in Settings, JSON content updates but all UI strings (tab labels, section headers, button text) stayed in the system language.
+
+#### Decision
+Created `AppStrings.localized(_:language:)` in `LocalizationService.swift` — a dictionary-based approach that maps EN keys to ES translations. All views now use this instead of `String(localized:)`.
+
+**Why dictionary over .lproj bundles:** The .lproj approach requires proper Xcode project localization setup (known localizations in build settings). The dictionary approach is self-contained, guaranteed to work, and easy to maintain alongside the existing `.xcstrings` file.
+
+#### Impact
+- **All agents:** When adding new UI strings, add them to BOTH `Localizable.xcstrings` (for reference/tooling) AND `LocalizationService.swift` translations dictionary.
+- **Samwise:** No data layer impact — saint content was already language-switched via JSON files.
+- **Gandalf:** Pattern is `AppStrings.localized("Key", language: language)` with `@Environment(\.appLanguage) private var language` in each view.
+- **Frodo:** 62 UI string calls migrated in this session.
