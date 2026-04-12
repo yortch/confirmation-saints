@@ -64,3 +64,16 @@
 - Solution: All new UI strings must be added to BOTH `Localizable.xcstrings` (for tooling/reference) AND the `LocalizationService.swift` translations dictionary
 - Pattern for future work: `AppStrings.localized("Key", language: language)` with `@Environment(\.appLanguage)` binding in views
 - **Impact on Samwise:** None — data layer already supports language switching via JSON files. This affects only UI strings, not saint content.
+
+### Five New Saints Added (2026-07-17)
+- Added 5 saints to both `saints-en.json` and `saints-es.json` (27 → 32 total):
+  - **St. Michael the Archangel** (`michael-archangel`): Archangel, warrior, protector. Patron of soldiers, police. Feast 09-29.
+  - **St. Gabriel the Archangel** (`gabriel-archangel`): Archangel, messenger. Patron of communications workers, broadcasters. Feast 09-29.
+  - **Our Lady of Guadalupe** (`our-lady-guadalupe`): Marian apparition, Mexico 1531. Patron of the Americas, unborn children. Feast 12-12.
+  - **Our Lady of Fatima** (`our-lady-fatima`): Marian apparition, Portugal 1917. Patron of peace, rosary. Feast 05-13.
+  - **St. Frances Xavier Cabrini** (`frances-cabrini`): First American citizen canonized. Patron of immigrants. Feast 11-13.
+- Archangels and Marian apparitions use `null` for birthDate, deathDate, canonizationDate (not born/died in human sense)
+- Marian apparitions use `null` for canonizationDate (Mary not canonized through normal process)
+- All matching fields (patronOf, tags, affinities, region) kept in English in both files per established convention
+- Spanish translations include proper Catholic terminology: Arcángel, Nuestra Señora, Dominio Público
+- Each saint has sourceURLs with specific pages from Loyola Press, Catholic Encyclopedia, Hallow, Ascension Press
