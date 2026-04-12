@@ -1,0 +1,106 @@
+{
+  "saints": [
+    {
+      "id": "st-joan-of-arc",
+      "name": {
+        "en": "Saint Joan of Arc",
+        "es": "Santa Juana de Arco"
+      },
+      "feastDay": "May 30",
+      "birthYear": 1412,
+      "deathYear": 1431,
+      "canonizationYear": 1920,
+      "countryOfOrigin": "France",
+      "biography": {
+        "en": "Joan of Arc was a teenage peasant girl from France who, guided by visions of saints, led the French army to several victories during the Hundred Years' War. She was captured, tried for heresy, and burned at the stake at age 19. She was later declared innocent and canonized as a saint.",
+        "es": "Juana de Arco fue una joven campesina de Francia que, guiada por visiones de santos, lideró al ejército francés a varias victorias durante la Guerra de los Cien Años. Fue capturada, juzgada por herejía y quemada en la hoguera a los 19 años. Posteriormente fue declarada inocente y canonizada como santa."
+      },
+      "shortDescription": {
+        "en": "Teenage warrior who led France to victory, patron of soldiers and France",
+        "es": "Guerrera adolescente que lideró a Francia a la victoria, patrona de soldados y Francia"
+      },
+      "patronOf": [
+        { "en": "Soldiers", "es": "Soldados" },
+        { "en": "France", "es": "Francia" },
+        { "en": "Prisoners", "es": "Prisioneros" }
+      ],
+      "affinities": ["military", "leadership"],
+      "categories": ["young-saints", "women", "martyrs"],
+      "isYoungSaint": true,
+      "wasMarried": false,
+      "imageName": null,
+      "imageAttribution": null,
+      "sources": [
+        { "name": "Loyola Press", "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-joan-of-arc/" },
+        { "name": "Catholic News Agency", "url": "https://www.catholicnewsagency.com/saint/st-joan-of-arc-702" }
+      ]
+    },
+    {
+      "id": "st-cecilia",
+      "name": {
+        "en": "Saint Cecilia",
+        "es": "Santa Cecilia"
+      },
+      "feastDay": "November 22",
+      "birthYear": null,
+      "deathYear": 230,
+      "canonizationYear": null,
+      "countryOfOrigin": "Italy",
+      "biography": {
+        "en": "Saint Cecilia is one of the most famous early Roman martyrs. According to tradition, she was a noblewoman who consecrated her virginity to God. She is said to have sung to God in her heart during her wedding, which led to her patronage of musicians. She converted her husband and his brother to Christianity.",
+        "es": "Santa Cecilia es una de las mártires romanas más famosas de los primeros siglos. Según la tradición, fue una mujer noble que consagró su virginidad a Dios. Se dice que cantó a Dios en su corazón durante su boda, lo que llevó a su patronazgo de los músicos. Convirtió a su esposo y al hermano de este al cristianismo."
+      },
+      "shortDescription": {
+        "en": "Early Roman martyr, patron saint of musicians",
+        "es": "Mártir romana de los primeros siglos, patrona de los músicos"
+      },
+      "patronOf": [
+        { "en": "Musicians", "es": "Músicos" },
+        { "en": "Singers", "es": "Cantantes" },
+        { "en": "Poets", "es": "Poetas" }
+      ],
+      "affinities": ["music", "art"],
+      "categories": ["women", "martyrs"],
+      "isYoungSaint": false,
+      "wasMarried": true,
+      "imageName": null,
+      "imageAttribution": null,
+      "sources": [
+        { "name": "Franciscan Media", "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-cecilia/" }
+      ]
+    },
+    {
+      "id": "st-sebastian",
+      "name": {
+        "en": "Saint Sebastian",
+        "es": "San Sebastián"
+      },
+      "feastDay": "January 20",
+      "birthYear": 256,
+      "deathYear": 288,
+      "canonizationYear": null,
+      "countryOfOrigin": "France",
+      "biography": {
+        "en": "Saint Sebastian was a soldier in the Roman army who secretly ministered to persecuted Christians. When his faith was discovered, Emperor Diocletian ordered him shot with arrows. He survived and was nursed back to health, only to confront the emperor again. He was then beaten to death. He is the patron saint of athletes.",
+        "es": "San Sebastián fue un soldado del ejército romano que secretamente ministraba a los cristianos perseguidos. Cuando se descubrió su fe, el emperador Diocleciano ordenó que lo flecharan. Sobrevivió y fue cuidado hasta recuperarse, solo para confrontar al emperador nuevamente. Luego fue golpeado hasta la muerte. Es el santo patrón de los atletas."
+      },
+      "shortDescription": {
+        "en": "Roman soldier and martyr, patron of athletes and soldiers",
+        "es": "Soldado romano y mártir, patrón de atletas y soldados"
+      },
+      "patronOf": [
+        { "en": "Athletes", "es": "Atletas" },
+        { "en": "Soldiers", "es": "Soldados" }
+      ],
+      "affinities": ["sports", "military"],
+      "categories": ["men", "martyrs"],
+      "isYoungSaint": false,
+      "wasMarried": false,
+      "imageName": null,
+      "imageAttribution": null,
+      "sources": [
+        { "name": "Catholic News Agency", "url": "https://www.catholicnewsagency.com/saint/st-sebastian-568" }
+      ]
+    }
+  ]
+}

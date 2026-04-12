@@ -1,0 +1,40 @@
+{
+  "categories": [
+    {
+      "id": "young-saints",
+      "name": { "en": "Young Saints", "es": "Santos Jóvenes" },
+      "systemImage": "sparkles",
+      "description": { "en": "Saints who lived remarkable lives of faith at a young age", "es": "Santos que vivieron vidas de fe extraordinarias a una edad temprana" }
+    },
+    {
+      "id": "women",
+      "name": { "en": "Women Saints", "es": "Santas" },
+      "systemImage": "person.fill",
+      "description": { "en": "Holy women who shaped the Church through their faith and courage", "es": "Mujeres santas que moldearon la Iglesia con su fe y valentía" }
+    },
+    {
+      "id": "men",
+      "name": { "en": "Men Saints", "es": "Santos" },
+      "systemImage": "person.fill",
+      "description": { "en": "Holy men who lived extraordinary lives of faith", "es": "Hombres santos que vivieron vidas extraordinarias de fe" }
+    },
+    {
+      "id": "martyrs",
+      "name": { "en": "Martyrs", "es": "Mártires" },
+      "systemImage": "cross.fill",
+      "description": { "en": "Saints who gave their lives for the faith", "es": "Santos que dieron su vida por la fe" }
+    },
+    {
+      "id": "doctors-of-church",
+      "name": { "en": "Doctors of the Church", "es": "Doctores de la Iglesia" },
+      "systemImage": "book.closed.fill",
+      "description": { "en": "Saints recognized for their significant contributions to theology", "es": "Santos reconocidos por sus contribuciones significativas a la teología" }
+    },
+    {
+      "id": "founders",
+      "name": { "en": "Founders", "es": "Fundadores" },
+      "systemImage": "building.columns.fill",
+      "description": { "en": "Saints who founded religious orders or institutions", "es": "Santos que fundaron órdenes religiosas o instituciones" }
+    }
+  ]
+}
