@@ -42,6 +42,36 @@ Greenfield iOS app for helping confirmation candidates choose a patron saint. Mu
 
 ---
 
+### Decision: UI Integration — Bilingual Data + Complete Views
+**Author:** Frodo (iOS Dev) | **Date:** 2026-04-12 | **Status:** Implemented
+
+#### What Changed
+Integrated Samwise's bilingual saint data (25 saints EN+ES) into the app and built out a complete 5-tab UI.
+
+#### Key Decisions
+1. **Per-Language Loading (not LocalizedText):** Dropped the `LocalizedText` struct in favor of plain `String` model fields. Language switching reloads the entire dataset from the correct file.
+2. **Shared ViewModel Pattern:** Single `SaintListViewModel` created in `ContentView` and passed to all tabs. Avoids duplicate data loading; keeps filtering state consistent.
+3. **Environment-Based Language:** Language preference flows via `@AppStorage("appLanguage")` + custom `EnvironmentValues.appLanguage`. Language changes trigger full data reload.
+4. **Category Browsing via Computed Matching:** Dynamic `SaintListViewModel.saints(forCategoryGroup:valueId:)` matches saints against category criteria. Keeps code simple and data authoritative.
+5. **Purple Accent Theme:** Purple chosen for confirmation (liturgical color) and teen appeal. Gradients for avatars.
+
+#### Files Changed
+- Models: `Saint.swift` (rewritten), `Category.swift` (simplified)
+- Service: `SaintDataService.swift` (bilingual loading)
+- ViewModel: `SaintListViewModel.swift` (new filtering, 13 Swift files total)
+- Views: Rewrote all views — `ContentView`, `SaintsView`, `CategoryBrowseView`, `SearchView`, `ConfirmationInfoView`, `SettingsView`, `SaintDetailView`, `SaintRowView`, `FilterChip`, `FlowLayout`, `Environment+appLanguage`, `LocalizedString`, `SaintAvatarView`
+- Localization: `Localizable.xcstrings` (40+ strings EN/ES)
+
+#### Build Status
+- ✅ Compile clean: `xcrun swiftc -typecheck -swift-version 6` passes on all 13 files
+
+#### Impact on Other Agents
+- **Legolas:** Tests need updating — old `LocalizedText`, `Affinity` enum, `ContentSource` types are gone. New model uses plain strings.
+- **Samwise:** Data contract is stable. Any new saints just need matching fields in both language files.
+- **Gandalf:** Architecture preserved (MVVM). Added Environment key for language.
+
+---
+
 ### Decision: Saint Data Schema Design
 **Author:** Samwise (Data/Backend) | **Date:** 2025-07-15 | **Status:** Implemented
 
