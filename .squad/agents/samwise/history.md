@@ -9,4 +9,22 @@
 
 ## Learnings
 
-(none yet)
+### Data Schema (2025-07-15)
+- Saint data uses per-language JSON files (`saints-en.json`, `saints-es.json`) with matching `id` fields for cross-referencing
+- Schema fields: id, name, feastDay (MM-DD), birthDate, deathDate, canonizationDate (nullable for beatified/pre-congregation), country, region, gender, lifeState, ageCategory, patronOf[], tags[], affinities[], quote (nullable), biography, whyConfirmationSaint, image{filename, attribution}, sources[]
+- Categories use shared `id` values across languages; only `label` and `name` are localized
+- Confirmation content structured as sections[] with heading/body pairs
+- SF Symbols used for category icons (e.g., `shield.fill`, `globe`)
+
+### File Paths
+- `SharedContent/saints/saints-en.json` / `saints-es.json` — 25 saints each
+- `SharedContent/content/confirmation-info-en.json` / `confirmation-info-es.json` — 3 sections each
+- `SharedContent/categories/categories-en.json` / `categories-es.json` — 7 category groups
+- `SharedContent/images/README.md` — image guidelines and naming conventions
+
+### Content Decisions
+- Spanish translations use proper Catholic terminology (Sacramento, Santo Patrón, Fiesta litúrgica)
+- Zélie Martin rendered as "Santa Celia Martin" in Spanish (common Spanish name form)
+- Biographies written engagingly for teens while maintaining factual accuracy
+- `whyConfirmationSaint` speaks directly to the teen reader in second person
+- Sources attributed per saint from: Loyola Press, Focus, Lifeteen, Ascension Press, Hallow, Catholic Encyclopedia
