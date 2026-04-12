@@ -1,39 +1,65 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State private var viewModel = SaintListViewModel()
+    @Bindable var viewModel: SaintListViewModel
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
+                // Active filters bar
+                if viewModel.hasActiveFilters {
+                    activeFiltersBar
+                }
+
                 // Filter chips
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 8) {
+                        // Age category
                         FilterChip(
                             title: String(localized: "Young Saints"),
-                            isActive: viewModel.showYoungSaintsOnly
+                            systemImage: "sparkles",
+                            isActive: viewModel.selectedAgeCategory == "young"
                         ) {
-                            viewModel.showYoungSaintsOnly.toggle()
+                            viewModel.selectedAgeCategory = viewModel.selectedAgeCategory == "young" ? nil : "young"
+                        }
+
+                        // Gender
+                        FilterChip(
+                            title: String(localized: "Female Saints"),
+                            systemImage: "person.fill",
+                            isActive: viewModel.selectedGender == "female"
+                        ) {
+                            viewModel.selectedGender = viewModel.selectedGender == "female" ? nil : "female"
                         }
 
                         FilterChip(
-                            title: String(localized: "Married Saints"),
-                            isActive: viewModel.showMarriedSaintsOnly
+                            title: String(localized: "Male Saints"),
+                            systemImage: "person.fill",
+                            isActive: viewModel.selectedGender == "male"
                         ) {
-                            viewModel.showMarriedSaintsOnly.toggle()
+                            viewModel.selectedGender = viewModel.selectedGender == "male" ? nil : "male"
                         }
 
-                        ForEach(Affinity.allCases, id: \.self) { affinity in
+                        // Life states
+                        ForEach(["married", "religious", "single"], id: \.self) { state in
                             FilterChip(
-                                title: affinity.localizedName,
-                                systemImage: affinity.systemImage,
-                                isActive: viewModel.selectedAffinity == affinity
+                                title: state.capitalized,
+                                systemImage: iconForLifeState(state),
+                                isActive: viewModel.selectedLifeState == state
                             ) {
-                                if viewModel.selectedAffinity == affinity {
-                                    viewModel.selectedAffinity = nil
-                                } else {
-                                    viewModel.selectedAffinity = affinity
-                                }
+                                viewModel.selectedLifeState = viewModel.selectedLifeState == state ? nil : state
+                            }
+                        }
+
+                        // Regions
+                        ForEach(["Europe", "Latin America", "North America", "Africa", "Asia"], id: \.self) { region in
+                            FilterChip(
+                                title: region,
+                                systemImage: "globe",
+                                isActive: viewModel.selectedRegion == region.lowercased()
+                            ) {
+                                let key = region.lowercased()
+                                viewModel.selectedRegion = viewModel.selectedRegion == key ? nil : key
                             }
                         }
                     }
@@ -41,21 +67,53 @@ struct SearchView: View {
                     .padding(.vertical, 8)
                 }
 
-                List(viewModel.filteredSaints) { saint in
-                    NavigationLink(value: saint) {
-                        SaintRowView(saint: saint)
+                // Results
+                Group {
+                    if viewModel.filteredSaints.isEmpty {
+                        ContentUnavailableView.search(text: viewModel.searchText)
+                    } else {
+                        List(viewModel.filteredSaints) { saint in
+                            NavigationLink(value: saint) {
+                                SaintRowView(saint: saint)
+                            }
+                        }
+                        .listStyle(.plain)
                     }
-                }
-                .navigationDestination(for: Saint.self) { saint in
-                    SaintDetailView(saint: saint)
                 }
             }
             .navigationTitle(String(localized: "Find Your Saint"))
             .searchable(text: $viewModel.searchText,
                         prompt: String(localized: "Name, interest, country..."))
-            .onAppear {
-                viewModel.loadData()
+            .navigationDestination(for: Saint.self) { saint in
+                SaintDetailView(saint: saint)
             }
+        }
+    }
+
+    @ViewBuilder
+    private var activeFiltersBar: some View {
+        HStack {
+            Text("\(viewModel.filteredSaints.count) \(String(localized: "results"))")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            Spacer()
+            Button(String(localized: "Clear All")) {
+                viewModel.clearFilters()
+            }
+            .font(.caption.bold())
+            .foregroundStyle(.purple)
+        }
+        .padding(.horizontal)
+        .padding(.vertical, 6)
+        .background(Color(.systemGray6))
+    }
+
+    private func iconForLifeState(_ state: String) -> String {
+        switch state {
+        case "married": return "heart.fill"
+        case "religious": return "cross.fill"
+        case "single": return "person"
+        default: return "person"
         }
     }
 }
@@ -78,7 +136,7 @@ struct FilterChip: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(isActive ? Color.accentColor : Color(.systemGray5))
+            .background(isActive ? Color.purple : Color(.systemGray5))
             .foregroundStyle(isActive ? .white : .primary)
             .clipShape(Capsule())
         }
@@ -86,5 +144,6 @@ struct FilterChip: View {
 }
 
 #Preview {
-    SearchView()
+    SearchView(viewModel: SaintListViewModel())
+        .environment(\.appLanguage, "en")
 }

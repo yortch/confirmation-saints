@@ -1,55 +1,80 @@
 import SwiftUI
 
 struct AboutConfirmationView: View {
+    @Bindable var viewModel: SaintListViewModel
+
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
-                    infoSection(
-                        title: String(localized: "What is Confirmation?"),
-                        content: String(localized: "confirmation_explanation")
-                    )
-
-                    infoSection(
-                        title: String(localized: "Choosing a Patron Saint"),
-                        content: String(localized: "choosing_saint_explanation")
-                    )
-
-                    infoSection(
-                        title: String(localized: "How to Use This App"),
-                        content: String(localized: "app_usage_guide")
-                    )
-
-                    sourcesSection
+                    if viewModel.confirmationSections.isEmpty {
+                        // Fallback if JSON not loaded
+                        ContentUnavailableView(
+                            String(localized: "Content Loading..."),
+                            systemImage: "book.closed.fill"
+                        )
+                    } else {
+                        ForEach(viewModel.confirmationSections) { section in
+                            sectionView(section)
+                        }
+                    }
                 }
                 .padding()
             }
-            .navigationTitle(String(localized: "About"))
+            .navigationTitle(String(localized: "About Confirmation"))
         }
     }
 
     @ViewBuilder
-    private func infoSection(title: String, content: String) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(title)
-                .font(.title2.bold())
-            Text(content)
-                .font(.body)
-        }
-    }
+    private func sectionView(_ section: ConfirmationSection) -> some View {
+        VStack(alignment: .leading, spacing: 16) {
+            // Section title
+            HStack {
+                Image(systemName: iconForSection(section.id))
+                    .font(.title2)
+                    .foregroundStyle(.purple)
+                Text(section.title)
+                    .font(.title2.bold())
+            }
 
-    @ViewBuilder
-    private var sourcesSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(String(localized: "Content Sources"))
-                .font(.title2.bold())
-            Text(String(localized: "sources_attribution"))
-                .font(.body)
+            // Content blocks
+            ForEach(section.content, id: \.heading) { content in
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(content.heading)
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                    Text(content.body)
+                        .font(.body)
+                        .foregroundStyle(.primary.opacity(0.85))
+                }
+            }
+
+            // Sources
+            if !section.sources.isEmpty {
+                HStack(spacing: 4) {
+                    Image(systemName: "doc.text.fill")
+                        .font(.caption2)
+                    Text(section.sources.joined(separator: ", "))
+                        .font(.caption)
+                }
                 .foregroundStyle(.secondary)
+            }
+
+            Divider()
+        }
+    }
+
+    private func iconForSection(_ id: String) -> String {
+        switch id {
+        case "what-is-confirmation": return "flame.fill"
+        case "choosing-your-saint": return "person.crop.circle.badge.checkmark"
+        case "tips-for-finding-your-match": return "lightbulb.fill"
+        default: return "book.fill"
         }
     }
 }
 
 #Preview {
-    AboutConfirmationView()
+    AboutConfirmationView(viewModel: SaintListViewModel())
+        .environment(\.appLanguage, "en")
 }

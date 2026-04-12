@@ -10,10 +10,12 @@
 		1C7569DC6A4E8A788201CAD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E34B3B2B01D51EE384ADB47 /* Assets.xcassets */; };
 		223048B136B4E74C8A598C41 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858C0F6AE1FFA4995D49FE8A /* SearchView.swift */; };
 		2D44E71A9D0627D2F9518348 /* CatholicSaintsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C717D5A1AD4A511CBB642 /* CatholicSaintsApp.swift */; };
+		43A34D5759F0A4E886B43C24 /* CategoryBrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F460943826BB854617B5E7 /* CategoryBrowseView.swift */; };
 		4BC6F4D8B59D757D49C0BB5D /* Saint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8786091802F72BA2DA3B1 /* Saint.swift */; };
 		504AAADBE1BC7B296BBB7A2C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2AC66C3B3FDC6F17685422 /* Category.swift */; };
 		64C3487E8B3E8EAA2CDFB34E /* SharedContent in Resources */ = {isa = PBXBuildFile; fileRef = 16A1A8F4DFE542E75C1AC9CF /* SharedContent */; };
 		64E9F8E2D98FD3088A83A0D0 /* SaintListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD551ABCE820B6F50CF128 /* SaintListView.swift */; };
+		86F702FB839AFBA3FF3E5953 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26203F29FDC228AE96247C0 /* SettingsView.swift */; };
 		8CA2D811B92ACC37936F694A /* AboutConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F87D877510DBE165CE3137B /* AboutConfirmationView.swift */; };
 		A1074935F32F73D70F542C94 /* SaintRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B380AA53877824D89864F0C6 /* SaintRowView.swift */; };
 		A8759E9236849EC73ABB86B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2564D15C3A8EA7CFB95A /* ContentView.swift */; };
@@ -35,6 +37,8 @@
 		858C0F6AE1FFA4995D49FE8A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		861EC0C2524D955A969A7A78 /* SaintDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintDetailView.swift; sourceTree = "<group>"; };
 		9B2AC66C3B3FDC6F17685422 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A5F460943826BB854617B5E7 /* CategoryBrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBrowseView.swift; sourceTree = "<group>"; };
+		B26203F29FDC228AE96247C0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B380AA53877824D89864F0C6 /* SaintRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintRowView.swift; sourceTree = "<group>"; };
 		C1646325B9DC1662D54C68C0 /* SaintDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintDataService.swift; sourceTree = "<group>"; };
 		E7D8786091802F72BA2DA3B1 /* Saint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint.swift; sourceTree = "<group>"; };
@@ -133,6 +137,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B4819CA1C0E0A4D5DF50AD37 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A5F460943826BB854617B5E7 /* CategoryBrowseView.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		BC209D0253E23E03209B2DC8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B26203F29FDC228AE96247C0 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C5F411290C9A106A0E3AE344 /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,9 +172,11 @@
 			isa = PBXGroup;
 			children = (
 				658D2564D15C3A8EA7CFB95A /* ContentView.swift */,
+				B4819CA1C0E0A4D5DF50AD37 /* Categories */,
 				C5F411290C9A106A0E3AE344 /* Info */,
 				7B90363B8766DF0C2A2A1220 /* Saints */,
 				2BB0C218316AC37AD85BD0F3 /* Search */,
+				BC209D0253E23E03209B2DC8 /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +256,7 @@
 			files = (
 				8CA2D811B92ACC37936F694A /* AboutConfirmationView.swift in Sources */,
 				504AAADBE1BC7B296BBB7A2C /* Category.swift in Sources */,
+				43A34D5759F0A4E886B43C24 /* CategoryBrowseView.swift in Sources */,
 				2D44E71A9D0627D2F9518348 /* CatholicSaintsApp.swift in Sources */,
 				A8759E9236849EC73ABB86B2 /* ContentView.swift in Sources */,
 				4BC6F4D8B59D757D49C0BB5D /* Saint.swift in Sources */,
@@ -243,6 +266,7 @@
 				CC551A773B9F2685A6F8E4A4 /* SaintListViewModel.swift in Sources */,
 				A1074935F32F73D70F542C94 /* SaintRowView.swift in Sources */,
 				223048B136B4E74C8A598C41 /* SearchView.swift in Sources */,
+				86F702FB839AFBA3FF3E5953 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

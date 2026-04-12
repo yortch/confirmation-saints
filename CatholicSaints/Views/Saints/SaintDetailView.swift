@@ -5,102 +5,231 @@ struct SaintDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                // Header
+            VStack(alignment: .leading, spacing: 20) {
                 headerSection
-
-                // Biography
+                quoteSection
+                whySection
                 biographySection
-
-                // Patron of
-                if !saint.patronOf.isEmpty {
-                    patronSection
-                }
-
-                // Sources
-                if !saint.sources.isEmpty {
-                    sourcesSection
-                }
+                detailsSection
+                patronSection
+                tagsSection
+                sourcesSection
             }
             .padding()
         }
-        .navigationTitle(saint.name.localized)
+        .navigationTitle(saint.name)
         .navigationBarTitleDisplayMode(.large)
     }
 
+    // MARK: - Header
+
     @ViewBuilder
     private var headerSection: some View {
-        VStack(alignment: .center, spacing: 8) {
-            if let imageName = saint.imageName {
-                Image(imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxHeight: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                if let attribution = saint.imageAttribution {
-                    Text(attribution)
-                        .font(.caption2)
-                        .foregroundStyle(.tertiary)
+        VStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(colorForSaint(saint).gradient)
+                    .frame(width: 100, height: 100)
+                Text(String(saint.name.prefix(1)))
+                    .font(.system(size: 44, weight: .bold))
+                    .foregroundStyle(.white)
+            }
+
+            if let attribution = saint.image?.attribution {
+                Text(attribution)
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+            }
+
+            Text(saint.formattedFeastDay)
+                .font(.title3)
+                .foregroundStyle(.secondary)
+
+            HStack(spacing: 16) {
+                if let country = saint.country {
+                    Label(country, systemImage: "globe")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+                if let lifeState = saint.lifeState {
+                    Label(lifeState.capitalized, systemImage: "person.fill")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                 }
             }
 
-            Text(saint.feastDay)
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-
-            if let country = saint.countryOfOrigin {
-                Text(country)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+            if saint.isYoung {
+                Label(String(localized: "Young Saint"), systemImage: "sparkles")
+                    .font(.subheadline.bold())
+                    .foregroundStyle(.orange)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 4)
+                    .background(.orange.opacity(0.12))
+                    .clipShape(Capsule())
             }
         }
         .frame(maxWidth: .infinity)
     }
 
+    // MARK: - Quote
+
+    @ViewBuilder
+    private var quoteSection: some View {
+        if let quote = saint.quote {
+            VStack(spacing: 8) {
+                Image(systemName: "quote.opening")
+                    .font(.title2)
+                    .foregroundStyle(.purple.opacity(0.6))
+                Text(quote)
+                    .font(.body.italic())
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.primary.opacity(0.85))
+                Text("— \(saint.name)")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(.purple.opacity(0.06))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+    }
+
+    // MARK: - Why This Saint
+
+    @ViewBuilder
+    private var whySection: some View {
+        if let why = saint.whyConfirmationSaint {
+            VStack(alignment: .leading, spacing: 8) {
+                Label(String(localized: "Why Choose This Saint?"), systemImage: "heart.fill")
+                    .font(.title3.bold())
+                    .foregroundStyle(.purple)
+                Text(why)
+                    .font(.body)
+            }
+            .padding()
+            .background(.purple.opacity(0.04))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+    }
+
+    // MARK: - Biography
+
     @ViewBuilder
     private var biographySection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Biography", comment: "Section header for saint biography")
-                .font(.title2.bold())
-            Text(saint.biography.localized)
+            Label(String(localized: "Biography"), systemImage: "book.fill")
+                .font(.title3.bold())
+            Text(saint.biography)
                 .font(.body)
         }
     }
 
+    // MARK: - Details
+
     @ViewBuilder
-    private var patronSection: some View {
+    private var detailsSection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Patron Of", comment: "Section header for patron saint associations")
-                .font(.title2.bold())
-            FlowLayout(spacing: 8) {
-                ForEach(saint.patronOf, id: \.en) { patron in
-                    Text(patron.localized)
-                        .font(.subheadline)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        .background(.tint.opacity(0.1))
-                        .clipShape(Capsule())
+            Label(String(localized: "Details"), systemImage: "info.circle.fill")
+                .font(.title3.bold())
+
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
+                if let birth = saint.birthDate {
+                    detailCard(label: String(localized: "Born"), value: birth, icon: "calendar")
+                }
+                if let death = saint.deathDate {
+                    detailCard(label: String(localized: "Died"), value: death, icon: "calendar.badge.clock")
+                }
+                if let canon = saint.canonizationDate {
+                    detailCard(label: String(localized: "Canonized"), value: canon, icon: "star.fill")
+                }
+                if let region = saint.region {
+                    detailCard(label: String(localized: "Region"), value: region, icon: "map.fill")
                 }
             }
         }
     }
 
     @ViewBuilder
+    private func detailCard(label: String, value: String, icon: String) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Label(label, systemImage: icon)
+                .font(.caption.bold())
+                .foregroundStyle(.secondary)
+            Text(value)
+                .font(.subheadline)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(10)
+        .background(Color(.systemGray6))
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+    }
+
+    // MARK: - Patron Of
+
+    @ViewBuilder
+    private var patronSection: some View {
+        if !saint.patronOf.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                Label(String(localized: "Patron Of"), systemImage: "shield.fill")
+                    .font(.title3.bold())
+                FlowLayout(spacing: 8) {
+                    ForEach(saint.patronOf, id: \.self) { patron in
+                        Text(patron.capitalized)
+                            .font(.subheadline)
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 6)
+                            .background(.purple.opacity(0.1))
+                            .clipShape(Capsule())
+                    }
+                }
+            }
+        }
+    }
+
+    // MARK: - Tags
+
+    @ViewBuilder
+    private var tagsSection: some View {
+        if !saint.affinities.isEmpty || !saint.tags.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                Label(String(localized: "Interests & Tags"), systemImage: "tag.fill")
+                    .font(.title3.bold())
+                FlowLayout(spacing: 8) {
+                    ForEach(saint.affinities + saint.tags, id: \.self) { tag in
+                        Text(tag.capitalized)
+                            .font(.caption)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 5)
+                            .background(.blue.opacity(0.1))
+                            .clipShape(Capsule())
+                    }
+                }
+            }
+        }
+    }
+
+    // MARK: - Sources
+
+    @ViewBuilder
     private var sourcesSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Sources", comment: "Section header for content attribution")
-                .font(.title2.bold())
-            ForEach(saint.sources, id: \.name) { source in
-                if let urlString = source.url, let url = URL(string: urlString) {
-                    Link(source.name, destination: url)
-                        .font(.subheadline)
-                } else {
-                    Text(source.name)
+        if !saint.sources.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                Label(String(localized: "Sources"), systemImage: "doc.text.fill")
+                    .font(.title3.bold())
+                ForEach(saint.sources, id: \.self) { source in
+                    Text(source)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
             }
         }
+    }
+
+    private func colorForSaint(_ saint: Saint) -> Color {
+        let colors: [Color] = [.purple, .blue, .indigo, .teal, .pink, .orange, .mint, .cyan]
+        let index = abs(saint.id.hashValue) % colors.count
+        return colors[index]
     }
 }
 

@@ -31,6 +31,36 @@
         }
       }
     },
+    "About Confirmation" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sobre la Confirmación"
+          }
+        }
+      }
+    },
+    "Explore" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorar"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        }
+      }
+    },
     "Search saints..." : {
       "localizations" : {
         "es" : {
@@ -61,12 +91,32 @@
         }
       }
     },
-    "Married Saints" : {
+    "Young Saint" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Santos Casados"
+            "value" : "Santo Joven"
+          }
+        }
+      }
+    },
+    "Female Saints" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Santas"
+          }
+        }
+      }
+    },
+    "Male Saints" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Santos Varones"
           }
         }
       }
@@ -81,32 +131,162 @@
         }
       }
     },
-    "What is Confirmation?" : {
+    "No Saints Found" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¿Qué es la Confirmación?"
+            "value" : "No se encontraron santos"
           }
         }
       }
     },
-    "Choosing a Patron Saint" : {
+    "Saints data is loading..." : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Eligiendo un Santo Patrón"
+            "value" : "Los datos de los santos se están cargando..."
           }
         }
       }
     },
-    "How to Use This App" : {
+    "No saints match this category." : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cómo Usar Esta App"
+            "value" : "Ningún santo coincide con esta categoría."
+          }
+        }
+      }
+    },
+    "results" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "resultados"
+          }
+        }
+      }
+    },
+    "Clear All" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limpiar todo"
+          }
+        }
+      }
+    },
+    "Content Loading..." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando contenido..."
+          }
+        }
+      }
+    },
+    "Why Choose This Saint?" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Por qué elegir este santo?"
+          }
+        }
+      }
+    },
+    "Biography" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biografía"
+          }
+        }
+      }
+    },
+    "Details" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detalles"
+          }
+        }
+      }
+    },
+    "Born" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nacimiento"
+          }
+        }
+      }
+    },
+    "Died" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fallecimiento"
+          }
+        }
+      }
+    },
+    "Canonized" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Canonización"
+          }
+        }
+      }
+    },
+    "Region" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Región"
+          }
+        }
+      }
+    },
+    "Patron Of" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patrón de"
+          }
+        }
+      }
+    },
+    "Interests & Tags" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intereses y Etiquetas"
+          }
+        }
+      }
+    },
+    "Sources" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fuentes"
           }
         }
       }
@@ -121,199 +301,102 @@
         }
       }
     },
-    "Biography" : {
-      "comment" : "Section header for saint biography",
+    "Language" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Biografía"
+            "value" : "Idioma"
           }
         }
       }
     },
-    "Patron Of" : {
-      "comment" : "Section header for patron saint associations",
+    "Changing the language updates all saint content and app text." : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Patrón de"
+            "value" : "Cambiar el idioma actualiza todo el contenido de los santos y el texto de la app."
           }
         }
       }
     },
-    "Sources" : {
-      "comment" : "Section header for content attribution",
+    "Version" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fuentes"
+            "value" : "Versión"
           }
         }
       }
     },
-    "confirmation_explanation" : {
+    "Saints Included" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Confirmation is one of the seven sacraments of the Catholic Church. It is the sacrament through which the Holy Spirit strengthens the faith of those who have already been baptized. During Confirmation, candidates affirm their faith and receive the gifts of the Holy Spirit to help them live as faithful witnesses of Christ."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La Confirmación es uno de los siete sacramentos de la Iglesia Católica. Es el sacramento mediante el cual el Espíritu Santo fortalece la fe de quienes ya han sido bautizados. Durante la Confirmación, los candidatos afirman su fe y reciben los dones del Espíritu Santo para ayudarles a vivir como testigos fieles de Cristo."
+            "value" : "Santos Incluidos"
           }
         }
       }
     },
-    "choosing_saint_explanation" : {
+    "Languages" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A beautiful tradition in preparing for Confirmation is choosing a patron saint. This saint becomes your spiritual companion — someone whose life inspires you and whose intercession you seek. Choose a saint whose story resonates with you, whose virtues you admire, or whose interests align with yours."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Una hermosa tradición en la preparación para la Confirmación es elegir un santo patrón. Este santo se convierte en tu compañero espiritual — alguien cuya vida te inspira y cuya intercesión buscas. Elige un santo cuya historia resuene contigo, cuyas virtudes admires o cuyos intereses se alineen con los tuyos."
+            "value" : "Idiomas"
           }
         }
       }
     },
-    "app_usage_guide" : {
+    "English, Spanish" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Browse saints in the Saints tab or use Search to filter by interests, age, country, and more. Tap on any saint to read their story. Take your time — finding the right patron saint is a personal and meaningful journey."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Explora los santos en la pestaña Santos o usa Buscar para filtrar por intereses, edad, país y más. Toca cualquier santo para leer su historia. Tómate tu tiempo — encontrar el santo patrón adecuado es un viaje personal y significativo."
+            "value" : "Inglés, Español"
           }
         }
       }
     },
-    "sources_attribution" : {
+    "App Info" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Saint information in this app is sourced from Loyola Press, Catholic News Agency, Franciscan Media, and other trusted Catholic resources. Each saint entry includes specific source attribution. Images are used with attribution where available."
-          }
-        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La información sobre los santos en esta app proviene de Loyola Press, Catholic News Agency, Franciscan Media y otros recursos católicos confiables. Cada entrada de santo incluye la atribución específica de la fuente. Las imágenes se utilizan con atribución cuando están disponibles."
+            "value" : "Información de la App"
           }
         }
       }
     },
-    "sports" : {
+    "Saint information is sourced from trusted Catholic resources. Each saint entry includes specific attribution." : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "deportes"
+            "value" : "La información de los santos proviene de fuentes católicas confiables. Cada entrada incluye atribución específica."
           }
         }
       }
     },
-    "music" : {
+    "saint" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "música"
+            "value" : "santo"
           }
         }
       }
     },
-    "art" : {
+    "saints" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "arte"
-          }
-        }
-      }
-    },
-    "science" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ciencia"
-          }
-        }
-      }
-    },
-    "education" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "educación"
-          }
-        }
-      }
-    },
-    "military" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "militar"
-          }
-        }
-      }
-    },
-    "writing" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "escritura"
-          }
-        }
-      }
-    },
-    "nature" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "naturaleza"
-          }
-        }
-      }
-    },
-    "healing" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "sanación"
-          }
-        }
-      }
-    },
-    "leadership" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "liderazgo"
+            "value" : "santos"
           }
         }
       }
