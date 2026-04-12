@@ -31,12 +31,16 @@
 - Content must attribute sources (Loyola Press, CNA, Franciscan Media, etc.)
 - Teen-friendly affinities: sports, music, art, science, etc.
 
-### Cross-Platform Restructure (2026-07-15)
-- Moved iOS project under `ios/` directory (CatholicSaints/, CatholicSaints.xcodeproj/, project.yml)
-- SharedContent/ stays at repo root as the cross-platform data layer
-- Removed obsolete `SharedContent/Data/` (superseded by `SharedContent/saints/`, `categories/`, `content/`)
-- Created `android/` placeholder for future Kotlin/Compose app
-- Updated `ios/project.yml` to reference `../SharedContent/` 
-- SaintDataService.swift bundle paths unchanged — SharedContent folder reference in bundle still works
-- Build verified with swiftc typecheck after restructure
-- Key file paths updated: `ios/project.yml`, `ios/CatholicSaints/...`
+### App Rename & Welcome Screen (2026-04-12)
+- **Frodo** renamed app: "Catholic Saints" → "Confirmation Saints" (display name only; internal CatholicSaints/ folder unchanged)
+- Updated `ios/project.yml` (INFOPLIST_KEY_CFBundleDisplayName, PRODUCT_NAME) and README.md
+- Created `Views/Onboarding/WelcomeView.swift` — 4-page TabView with first-launch gating (`@AppStorage("hasSeenWelcome")`)
+- New pattern: OnboardingPageView reusable component for consistent page layout
+- All strings added to Localizable.xcstrings with EN/ES translations
+- Settings gets "Show Welcome Screen" button for replay
+- **Samwise** generated app icon: Chi-Rho design with purple-to-indigo gradient, gold halo, dove silhouette, gold accents
+- Icon programmatically generated via `_generate_icon.py` (Pillow), 1024×1024 PNG
+- Asset output: `ios/CatholicSaints/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png`
+- Xcode auto-generates all required icon sizes from 1024×1024 source
+- No architecture changes — follows existing MVVM + @AppStorage pattern
+

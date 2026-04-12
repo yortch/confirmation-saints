@@ -17,12 +17,10 @@
 - **Data layer ready**: 25 EN + 25 ES saints in `SharedContent/Data/saints-en/es.json`
 - Test against: SaintDataService (JSON loading), LocalizedText (bilingual strings), filtering by affinity/category/country
 
-### UI Integration Complete (2026-04-12)
-- **Frodo** delivered 5-tab UI (Saints, Explore, Search, About Confirmation, Settings)
-- **Model rewrite:** Dropped `LocalizedText` struct for per-language file loading
-- **Shared ViewModel:** `SaintListViewModel` keeps filtering state consistent across tabs
-- **Language toggle:** `@AppStorage("appLanguage")` + custom Environment key
-- **Purple theme:** Gradient avatars, SF Symbols, teen-friendly design
-- **Dynamic category matching:** Computed matching (not pre-indexed) simplifies code
-- **13 Swift files:** All compile clean on Swift 6
-- **Impact:** Tests must be rewritten for new model schema (no LocalizedText, plain String fields)
+### Welcome Screen & App Icon (2026-04-12)
+- **Frodo** created `Views/Onboarding/WelcomeView.swift` — 4-page TabView onboarding with first-launch gating
+- New files: `WelcomeView.swift`, modified `SettingsView.swift` (added "Show Welcome Screen" button)
+- **Test coverage needed:** WelcomeView display logic, Settings button toggle, first-launch behavior
+- **Samwise** generated app icon: 1024×1024 PNG with Chi-Rho design, purple gradient, gold accents, dove silhouette
+- Icon integration complete; Xcode auto-generates smaller sizes from 1024×1024 source
+
