@@ -9,4 +9,17 @@
 
 ## Learnings
 
-(none yet)
+### Architecture Foundation (2026-04-12)
+- **Gandalf** established MVVM + SwiftUI with Observable macro (iOS 17+)
+- **XcodeGen** generates `CatholicSaints.xcodeproj` from `project.yml`
+- **Swift 6 concurrency**: All models are Sendable, services are @MainActor
+- **UI localization**: .xcstrings String Catalog for EN/ES UI strings
+- Navigate using NavigationStack (not deprecated NavigationView)
+
+### Data Layer Ready (2026-04-12)
+- **Samwise** created 25 EN + 25 ES saints with full schema compliance
+- Saint data in `SharedContent/Data/saints-en.json` and `saints-es.json`
+- Confirmation content in `SharedContent/content/confirmation-info-en/es.json`
+- Categories in `SharedContent/categories/categories-en/es.json`
+- Affinities field enables teen-focused saint matching (sports, music, art, science, etc.)
+- Images with attribution in `SharedContent/images/`

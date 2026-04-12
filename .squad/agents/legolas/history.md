@@ -9,4 +9,10 @@
 
 ## Learnings
 
-(none yet)
+### Test Foundation Ready (2026-04-12)
+- **Gandalf** established Swift 6 concurrency foundation (Sendable models, @MainActor services)
+- **Architecture**: MVVM with Observable macro — models are data-focused, services handle logic
+- **XcodeGen setup** means .pbxproj regenerates from `project.yml` — never edit .pbxproj directly
+- **Testable models**: Saint, Category, LocalizedText structs follow clean separation
+- **Data layer ready**: 25 EN + 25 ES saints in `SharedContent/Data/saints-en/es.json`
+- Test against: SaintDataService (JSON loading), LocalizedText (bilingual strings), filtering by affinity/category/country
