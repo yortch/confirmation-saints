@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SearchView: View {
     @Bindable var viewModel: SaintListViewModel
+    @Environment(\.appLanguage) private var language
 
     var body: some View {
         NavigationStack {
@@ -16,7 +17,7 @@ struct SearchView: View {
                     HStack(spacing: 8) {
                         // Age category
                         FilterChip(
-                            title: String(localized: "Young Saints"),
+                            title: AppStrings.localized("Young Saints", language: language),
                             systemImage: "sparkles",
                             isActive: viewModel.selectedAgeCategory == "young"
                         ) {
@@ -25,7 +26,7 @@ struct SearchView: View {
 
                         // Gender
                         FilterChip(
-                            title: String(localized: "Female Saints"),
+                            title: AppStrings.localized("Female Saints", language: language),
                             systemImage: "person.fill",
                             isActive: viewModel.selectedGender == "female"
                         ) {
@@ -33,7 +34,7 @@ struct SearchView: View {
                         }
 
                         FilterChip(
-                            title: String(localized: "Male Saints"),
+                            title: AppStrings.localized("Male Saints", language: language),
                             systemImage: "person.fill",
                             isActive: viewModel.selectedGender == "male"
                         ) {
@@ -81,9 +82,9 @@ struct SearchView: View {
                     }
                 }
             }
-            .navigationTitle(String(localized: "Find Your Saint"))
+            .navigationTitle(AppStrings.localized("Find Your Saint", language: language))
             .searchable(text: $viewModel.searchText,
-                        prompt: String(localized: "Name, interest, country..."))
+                        prompt: AppStrings.localized("Name, interest, country...", language: language))
             .navigationDestination(for: Saint.self) { saint in
                 SaintDetailView(saint: saint)
             }
@@ -93,11 +94,11 @@ struct SearchView: View {
     @ViewBuilder
     private var activeFiltersBar: some View {
         HStack {
-            Text("\(viewModel.filteredSaints.count) \(String(localized: "results"))")
+            Text("\(viewModel.filteredSaints.count) \(AppStrings.localized("results", language: language))")
                 .font(.caption)
                 .foregroundStyle(.secondary)
             Spacer()
-            Button(String(localized: "Clear All")) {
+            Button(AppStrings.localized("Clear All", language: language)) {
                 viewModel.clearFilters()
             }
             .font(.caption.bold())

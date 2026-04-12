@@ -1,7 +1,52 @@
 import SwiftUI
 
+// MARK: - Latin Cross View
+
+struct LatinCrossView: View {
+    let size: CGFloat
+    let color: Color
+
+    var body: some View {
+        Canvas { context, canvasSize in
+            let cx = canvasSize.width / 2
+            let armWidth = canvasSize.width * 0.18
+
+            var vertical = Path()
+            vertical.addRoundedRect(
+                in: CGRect(
+                    x: cx - armWidth / 2,
+                    y: 0,
+                    width: armWidth,
+                    height: canvasSize.height
+                ),
+                cornerSize: CGSize(width: armWidth * 0.15, height: armWidth * 0.15)
+            )
+
+            let crossbarY = canvasSize.height * 0.30
+            let horzWidth = canvasSize.width * 0.70
+            var horizontal = Path()
+            horizontal.addRoundedRect(
+                in: CGRect(
+                    x: cx - horzWidth / 2,
+                    y: crossbarY - armWidth / 2,
+                    width: horzWidth,
+                    height: armWidth
+                ),
+                cornerSize: CGSize(width: armWidth * 0.15, height: armWidth * 0.15)
+            )
+
+            context.fill(vertical, with: .color(color))
+            context.fill(horizontal, with: .color(color))
+        }
+        .frame(width: size, height: size)
+    }
+}
+
+// MARK: - Welcome View
+
 struct WelcomeView: View {
     @AppStorage("hasSeenWelcome") private var hasSeenWelcome = false
+    @Environment(\.appLanguage) private var language
     @State private var currentPage = 0
     @State private var animateContent = false
 
@@ -37,7 +82,7 @@ struct WelcomeView: View {
 
                     if currentPage < pageCount - 1 {
                         HStack {
-                            Button(String(localized: "Skip")) {
+                            Button(AppStrings.localized("Skip", language: language)) {
                                 completeOnboarding()
                             }
                             .foregroundStyle(.secondary)
@@ -48,7 +93,7 @@ struct WelcomeView: View {
                                 withAnimation { currentPage += 1 }
                             } label: {
                                 HStack(spacing: 4) {
-                                    Text(String(localized: "Next"))
+                                    Text(AppStrings.localized("Next", language: language))
                                     Image(systemName: "chevron.right")
                                 }
                                 .fontWeight(.semibold)
@@ -88,13 +133,27 @@ struct WelcomeView: View {
     // MARK: - Page 1: Welcome
 
     private var welcomePage: some View {
-        OnboardingPageView(
-            icon: "cross.fill",
-            iconColor: .purple,
-            title: String(localized: "Find Your Confirmation Saint"),
-            subtitle: String(localized: "Choosing a saint for your Confirmation is a beautiful Catholic tradition. This app helps you discover the perfect patron saint for your journey."),
-            animated: animateContent
-        )
+        VStack(spacing: 24) {
+            Spacer()
+
+            LatinCrossView(size: 70, color: .purple)
+                .scaleEffect(animateContent ? 1.0 : 0.5)
+                .opacity(animateContent ? 1.0 : 0.0)
+
+            Text(AppStrings.localized("Find Your Confirmation Saint", language: language))
+                .font(.title.bold())
+                .multilineTextAlignment(.center)
+
+            Text(AppStrings.localized("Choosing a saint for your Confirmation is a beautiful Catholic tradition. This app helps you discover the perfect patron saint for your journey.", language: language))
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+
+            Spacer()
+            Spacer()
+        }
+        .padding()
     }
 
     // MARK: - Page 2: Discover
@@ -108,16 +167,16 @@ struct WelcomeView: View {
                 .foregroundStyle(.purple)
                 .symbolRenderingMode(.hierarchical)
 
-            Text(String(localized: "Explore Saints Your Way"))
+            Text(AppStrings.localized("Explore Saints Your Way", language: language))
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
 
             VStack(alignment: .leading, spacing: 12) {
-                discoverRow(icon: "character.textbox", text: String(localized: "By Name"))
-                discoverRow(icon: "heart.fill", text: String(localized: "By Interest"))
-                discoverRow(icon: "globe.americas.fill", text: String(localized: "By Country"))
-                discoverRow(icon: "calendar", text: String(localized: "By Feast Day"))
-                discoverRow(icon: "person.fill", text: String(localized: "By Life Stage"))
+                discoverRow(icon: "character.textbox", text: AppStrings.localized("By Name", language: language))
+                discoverRow(icon: "heart.fill", text: AppStrings.localized("By Interest", language: language))
+                discoverRow(icon: "globe.americas.fill", text: AppStrings.localized("By Country", language: language))
+                discoverRow(icon: "calendar", text: AppStrings.localized("By Feast Day", language: language))
+                discoverRow(icon: "person.fill", text: AppStrings.localized("By Life Stage", language: language))
             }
             .padding(.horizontal, 40)
 
@@ -144,8 +203,8 @@ struct WelcomeView: View {
         OnboardingPageView(
             icon: "book.circle.fill",
             iconColor: Color(red: 0.8, green: 0.65, blue: 0.2),
-            title: String(localized: "Understand the Tradition"),
-            subtitle: String(localized: "Learn about the Sacrament of Confirmation and why choosing a patron saint is such a meaningful part of your faith journey."),
+            title: AppStrings.localized("Understand the Tradition", language: language),
+            subtitle: AppStrings.localized("Learn about the Sacrament of Confirmation and why choosing a patron saint is such a meaningful part of your faith journey.", language: language),
             animated: animateContent
         )
     }
@@ -161,11 +220,11 @@ struct WelcomeView: View {
                 .foregroundStyle(.purple)
                 .symbolRenderingMode(.hierarchical)
 
-            Text(String(localized: "Ready to Find Your Saint?"))
+            Text(AppStrings.localized("Ready to Find Your Saint?", language: language))
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
 
-            Text(String(localized: "Browse, search, and discover the saint who will walk with you on your Confirmation journey."))
+            Text(AppStrings.localized("Browse, search, and discover the saint who will walk with you on your Confirmation journey.", language: language))
                 .font(.body)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
@@ -174,7 +233,7 @@ struct WelcomeView: View {
             Button {
                 completeOnboarding()
             } label: {
-                Text(String(localized: "Let's Go!"))
+                Text(AppStrings.localized("Let's Go!", language: language))
                     .font(.title3.bold())
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)

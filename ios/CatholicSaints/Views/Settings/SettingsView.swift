@@ -3,45 +3,46 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage("appLanguage") private var appLanguage = systemDefaultLanguage
     @AppStorage("hasSeenWelcome") private var hasSeenWelcome = true
+    @Environment(\.appLanguage) private var language
 
     var body: some View {
         NavigationStack {
             List {
                 // Language Section
                 Section {
-                    Picker(String(localized: "Language"), selection: $appLanguage) {
+                    Picker(AppStrings.localized("Language", language: language), selection: $appLanguage) {
                         Text("English").tag("en")
                         Text("Español").tag("es")
                     }
                     .pickerStyle(.inline)
                 } header: {
-                    Label(String(localized: "Language"), systemImage: "globe")
+                    Label(AppStrings.localized("Language", language: language), systemImage: "globe")
                 } footer: {
-                    Text(String(localized: "Changing the language updates all saint content and app text."))
+                    Text(AppStrings.localized("Changing the language updates all saint content and app text.", language: language))
                 }
 
                 // About Section
                 Section {
                     HStack {
-                        Text(String(localized: "Version"))
+                        Text(AppStrings.localized("Version", language: language))
                         Spacer()
                         Text("0.1.0")
                             .foregroundStyle(.secondary)
                     }
                     HStack {
-                        Text(String(localized: "Saints Included"))
+                        Text(AppStrings.localized("Saints Included", language: language))
                         Spacer()
                         Text("25")
                             .foregroundStyle(.secondary)
                     }
                     HStack {
-                        Text(String(localized: "Languages"))
+                        Text(AppStrings.localized("Languages", language: language))
                         Spacer()
-                        Text(String(localized: "English, Spanish"))
+                        Text(AppStrings.localized("English, Spanish", language: language))
                             .foregroundStyle(.secondary)
                     }
                 } header: {
-                    Label(String(localized: "App Info"), systemImage: "info.circle")
+                    Label(AppStrings.localized("App Info", language: language), systemImage: "info.circle")
                 }
 
                 // Welcome Screen Section
@@ -49,12 +50,12 @@ struct SettingsView: View {
                     Button {
                         hasSeenWelcome = false
                     } label: {
-                        Label(String(localized: "Show Welcome Screen"), systemImage: "sparkles")
+                        Label(AppStrings.localized("Show Welcome Screen", language: language), systemImage: "sparkles")
                     }
                 } header: {
-                    Label(String(localized: "Onboarding"), systemImage: "hand.wave.fill")
+                    Label(AppStrings.localized("Onboarding", language: language), systemImage: "hand.wave.fill")
                 } footer: {
-                    Text(String(localized: "Replay the welcome screen to revisit how the app works."))
+                    Text(AppStrings.localized("Replay the welcome screen to revisit how the app works.", language: language))
                 }
 
                 // Content Sources
@@ -64,12 +65,12 @@ struct SettingsView: View {
                             .font(.subheadline)
                     }
                 } header: {
-                    Label(String(localized: "Content Sources"), systemImage: "book.fill")
+                    Label(AppStrings.localized("Content Sources", language: language), systemImage: "book.fill")
                 } footer: {
-                    Text(String(localized: "Saint information is sourced from trusted Catholic resources. Each saint entry includes specific attribution."))
+                    Text(AppStrings.localized("Saint information is sourced from trusted Catholic resources. Each saint entry includes specific attribution.", language: language))
                 }
             }
-            .navigationTitle(String(localized: "Settings"))
+            .navigationTitle(AppStrings.localized("Settings", language: language))
         }
     }
 

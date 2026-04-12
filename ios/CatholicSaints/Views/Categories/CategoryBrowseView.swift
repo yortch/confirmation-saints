@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CategoryBrowseView: View {
     @Bindable var viewModel: SaintListViewModel
+    @Environment(\.appLanguage) private var language
 
     var body: some View {
         NavigationStack {
@@ -13,10 +14,7 @@ struct CategoryBrowseView: View {
                 }
                 .padding()
             }
-            .navigationTitle(String(localized: "Explore"))
-            .navigationDestination(for: Saint.self) { saint in
-                SaintDetailView(saint: saint)
-            }
+            .navigationTitle(AppStrings.localized("Explore", language: language))
         }
     }
 
@@ -49,7 +47,7 @@ struct CategoryBrowseView: View {
                                     .font(.subheadline.bold())
                                     .foregroundStyle(.primary)
                                     .multilineTextAlignment(.leading)
-                                Text("\(matchCount) \(matchCount == 1 ? String(localized: "saint") : String(localized: "saints"))")
+                                Text("\(matchCount) \(matchCount == 1 ? AppStrings.localized("saint", language: language) : AppStrings.localized("saints", language: language))")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }
@@ -71,18 +69,21 @@ struct CategoryBrowseView: View {
 struct CategorySaintsListView: View {
     let title: String
     let saints: [Saint]
+    @Environment(\.appLanguage) private var language
 
     var body: some View {
         Group {
             if saints.isEmpty {
                 ContentUnavailableView(
-                    String(localized: "No Saints Found"),
+                    AppStrings.localized("No Saints Found", language: language),
                     systemImage: "person.crop.circle.badge.questionmark",
-                    description: Text(String(localized: "No saints match this category."))
+                    description: Text(AppStrings.localized("No saints match this category.", language: language))
                 )
             } else {
                 List(saints) { saint in
-                    NavigationLink(value: saint) {
+                    NavigationLink {
+                        SaintDetailView(saint: saint)
+                    } label: {
                         SaintRowView(saint: saint)
                     }
                 }

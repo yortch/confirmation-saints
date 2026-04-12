@@ -2,15 +2,15 @@ import SwiftUI
 
 struct AboutConfirmationView: View {
     @Bindable var viewModel: SaintListViewModel
+    @Environment(\.appLanguage) private var language
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     if viewModel.confirmationSections.isEmpty {
-                        // Fallback if JSON not loaded
                         ContentUnavailableView(
-                            String(localized: "Content Loading..."),
+                            AppStrings.localized("Content Loading...", language: language),
                             systemImage: "book.closed.fill"
                         )
                     } else {
@@ -21,7 +21,7 @@ struct AboutConfirmationView: View {
                 }
                 .padding()
             }
-            .navigationTitle(String(localized: "About Confirmation"))
+            .navigationTitle(AppStrings.localized("About Confirmation", language: language))
         }
     }
 

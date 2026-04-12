@@ -2,15 +2,16 @@ import SwiftUI
 
 struct SaintListView: View {
     @Bindable var viewModel: SaintListViewModel
+    @Environment(\.appLanguage) private var language
 
     var body: some View {
         NavigationStack {
             Group {
                 if viewModel.saints.isEmpty {
                     ContentUnavailableView(
-                        String(localized: "No Saints Found"),
+                        AppStrings.localized("No Saints Found", language: language),
                         systemImage: "person.crop.circle.badge.questionmark",
-                        description: Text(String(localized: "Saints data is loading..."))
+                        description: Text(AppStrings.localized("Saints data is loading...", language: language))
                     )
                 } else if viewModel.filteredSaints.isEmpty {
                     ContentUnavailableView.search(text: viewModel.searchText)
@@ -23,9 +24,9 @@ struct SaintListView: View {
                     .listStyle(.plain)
                 }
             }
-            .navigationTitle(String(localized: "Saints"))
+            .navigationTitle(AppStrings.localized("Saints", language: language))
             .searchable(text: $viewModel.searchText,
-                        prompt: String(localized: "Search saints..."))
+                        prompt: AppStrings.localized("Search saints...", language: language))
             .navigationDestination(for: Saint.self) { saint in
                 SaintDetailView(saint: saint)
             }

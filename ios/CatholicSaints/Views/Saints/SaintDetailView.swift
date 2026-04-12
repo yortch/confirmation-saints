@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SaintDetailView: View {
     let saint: Saint
+    @Environment(\.appLanguage) private var language
 
     var body: some View {
         ScrollView {
@@ -52,7 +53,7 @@ struct SaintDetailView: View {
             }
 
             if saint.isYoung {
-                Label(String(localized: "Young Saint"), systemImage: "sparkles")
+                Label(AppStrings.localized("Young Saint", language: language), systemImage: "sparkles")
                     .font(.subheadline.bold())
                     .foregroundStyle(.orange)
                     .padding(.horizontal, 12)
@@ -94,7 +95,7 @@ struct SaintDetailView: View {
     private var whySection: some View {
         if let why = saint.whyConfirmationSaint {
             VStack(alignment: .leading, spacing: 8) {
-                Label(String(localized: "Why Choose This Saint?"), systemImage: "heart.fill")
+                Label(AppStrings.localized("Why Choose This Saint?", language: language), systemImage: "heart.fill")
                     .font(.title3.bold())
                     .foregroundStyle(.purple)
                 Text(why)
@@ -111,7 +112,7 @@ struct SaintDetailView: View {
     @ViewBuilder
     private var biographySection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Label(String(localized: "Biography"), systemImage: "book.fill")
+            Label(AppStrings.localized("Biography", language: language), systemImage: "book.fill")
                 .font(.title3.bold())
             Text(saint.biography)
                 .font(.body)
@@ -123,21 +124,21 @@ struct SaintDetailView: View {
     @ViewBuilder
     private var detailsSection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Label(String(localized: "Details"), systemImage: "info.circle.fill")
+            Label(AppStrings.localized("Details", language: language), systemImage: "info.circle.fill")
                 .font(.title3.bold())
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
                 if let birth = saint.birthDate {
-                    detailCard(label: String(localized: "Born"), value: birth, icon: "calendar")
+                    detailCard(label: AppStrings.localized("Born", language: language), value: birth, icon: "calendar")
                 }
                 if let death = saint.deathDate {
-                    detailCard(label: String(localized: "Died"), value: death, icon: "calendar.badge.clock")
+                    detailCard(label: AppStrings.localized("Died", language: language), value: death, icon: "calendar.badge.clock")
                 }
                 if let canon = saint.canonizationDate {
-                    detailCard(label: String(localized: "Canonized"), value: canon, icon: "star.fill")
+                    detailCard(label: AppStrings.localized("Canonized", language: language), value: canon, icon: "star.fill")
                 }
                 if let region = saint.region {
-                    detailCard(label: String(localized: "Region"), value: region, icon: "map.fill")
+                    detailCard(label: AppStrings.localized("Region", language: language), value: region, icon: "map.fill")
                 }
             }
         }
@@ -164,7 +165,7 @@ struct SaintDetailView: View {
     private var patronSection: some View {
         if !saint.patronOf.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
-                Label(String(localized: "Patron Of"), systemImage: "shield.fill")
+                Label(AppStrings.localized("Patron Of", language: language), systemImage: "shield.fill")
                     .font(.title3.bold())
                 FlowLayout(spacing: 8) {
                     ForEach(saint.patronOf, id: \.self) { patron in
@@ -186,7 +187,7 @@ struct SaintDetailView: View {
     private var tagsSection: some View {
         if !saint.affinities.isEmpty || !saint.tags.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
-                Label(String(localized: "Interests & Tags"), systemImage: "tag.fill")
+                Label(AppStrings.localized("Interests & Tags", language: language), systemImage: "tag.fill")
                     .font(.title3.bold())
                 FlowLayout(spacing: 8) {
                     ForEach(saint.affinities + saint.tags, id: \.self) { tag in
@@ -208,7 +209,7 @@ struct SaintDetailView: View {
     private var sourcesSection: some View {
         if !saint.sources.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
-                Label(String(localized: "Sources"), systemImage: "doc.text.fill")
+                Label(AppStrings.localized("Sources", language: language), systemImage: "doc.text.fill")
                     .font(.title3.bold())
                 ForEach(saint.sources, id: \.self) { source in
                     if let urlString = saint.sourceURLs?[source],

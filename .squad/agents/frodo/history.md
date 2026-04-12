@@ -63,3 +63,12 @@
 - App icon redesigned: white dove on red background with Pentecost flames (per user directive)
 - **Cross-agent Update:** Samwise populated all 27 saints with `sourceURLs` and standardized source names to English in both language files
 - Build verified: `xcrun swiftc -typecheck` passes clean, XcodeGen regen successful
+
+### UI Polish & Localization Overhaul (2025-07-16)
+- **Task 1:** Default tab changed to Explore (index 1) via `@State selectedTab = 1` and `TabView(selection:)` with `.tag(0)` through `.tag(4)`
+- **Task 2:** Fixed Explore → Saint navigation — `CategorySaintsListView` now uses closure-based `NavigationLink { SaintDetailView }` instead of value-based `NavigationLink(value: saint)` which conflicted with closure-based links higher in the NavigationStack
+- **Task 3:** Replaced SF Symbol `cross.fill` (medical cross) with custom `LatinCrossView` using Canvas for a true Christian cross on the welcome page
+- **Task 4:** Created `AppStrings.localized(_:language:)` dictionary-based localization service — all `String(localized:)` calls replaced so UI strings respect the in-app language setting, not just the system locale
+- Lesson: `String(localized:)` always uses system locale; for in-app language switching, use a manual translation dictionary or bundle-path approach
+- Lesson: Mixing closure-based and value-based NavigationLinks in the same NavigationStack causes resolution issues on iOS 17+; pick one style per stack
+- Build verified clean with Swift 6, XcodeGen regen successful
