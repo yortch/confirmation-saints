@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Bindable var viewModel: SaintListViewModel
     @AppStorage("appLanguage") private var appLanguage = systemDefaultLanguage
     @AppStorage("hasSeenWelcome") private var hasSeenWelcome = true
     @Environment(\.appLanguage) private var language
@@ -32,7 +33,7 @@ struct SettingsView: View {
                     HStack {
                         Text(AppStrings.localized("Saints Included", language: language))
                         Spacer()
-                        Text("25")
+                        Text("\(viewModel.saints.count)")
                             .foregroundStyle(.secondary)
                     }
                     HStack {
@@ -80,6 +81,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(viewModel: SaintListViewModel())
         .environment(\.appLanguage, "en")
 }

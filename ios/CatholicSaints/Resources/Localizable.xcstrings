@@ -27,6 +27,7 @@
 
     },
     "About" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -37,6 +38,7 @@
       }
     },
     "About Confirmation" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -47,6 +49,7 @@
       }
     },
     "App Info" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -57,6 +60,7 @@
       }
     },
     "Biography" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -67,6 +71,7 @@
       }
     },
     "Born" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -77,6 +82,7 @@
       }
     },
     "Browse, search, and discover the saint who will walk with you on your Confirmation journey." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -87,6 +93,7 @@
       }
     },
     "By Country" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -97,6 +104,7 @@
       }
     },
     "By Feast Day" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -107,6 +115,7 @@
       }
     },
     "By Interest" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -117,6 +126,7 @@
       }
     },
     "By Life Stage" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -127,6 +137,7 @@
       }
     },
     "By Name" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -137,6 +148,7 @@
       }
     },
     "Canonized" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -147,6 +159,7 @@
       }
     },
     "Changing the language updates all saint content and app text." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -157,6 +170,7 @@
       }
     },
     "Choosing a saint for your Confirmation is a beautiful Catholic tradition. This app helps you discover the perfect patron saint for your journey." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -167,6 +181,7 @@
       }
     },
     "Clear All" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -177,6 +192,7 @@
       }
     },
     "Content Loading..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -187,6 +203,7 @@
       }
     },
     "Content Sources" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -197,6 +214,7 @@
       }
     },
     "Details" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -207,6 +225,7 @@
       }
     },
     "Died" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -220,6 +239,7 @@
 
     },
     "English, Spanish" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -233,6 +253,7 @@
 
     },
     "Explore" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -243,6 +264,7 @@
       }
     },
     "Explore Saints Your Way" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -253,6 +275,7 @@
       }
     },
     "Female Saints" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -263,6 +286,7 @@
       }
     },
     "Find Your Confirmation Saint" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -273,6 +297,7 @@
       }
     },
     "Find Your Saint" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -283,6 +308,7 @@
       }
     },
     "Interests & Tags" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -293,6 +319,7 @@
       }
     },
     "Language" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -303,6 +330,7 @@
       }
     },
     "Languages" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -313,6 +341,7 @@
       }
     },
     "Learn about the Sacrament of Confirmation and why choosing a patron saint is such a meaningful part of your faith journey." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -323,6 +352,7 @@
       }
     },
     "Let's Go!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -333,6 +363,7 @@
       }
     },
     "Male Saints" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -343,6 +374,7 @@
       }
     },
     "Name, interest, country..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -353,6 +385,7 @@
       }
     },
     "Next" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -363,6 +396,7 @@
       }
     },
     "No Saints Found" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -373,6 +407,7 @@
       }
     },
     "No saints match this category." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -383,6 +418,7 @@
       }
     },
     "Onboarding" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -393,6 +429,7 @@
       }
     },
     "Patron Of" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -403,6 +440,7 @@
       }
     },
     "Ready to Find Your Saint?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -413,6 +451,7 @@
       }
     },
     "Region" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -423,6 +462,7 @@
       }
     },
     "Replay the welcome screen to revisit how the app works." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -433,6 +473,7 @@
       }
     },
     "results" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -443,6 +484,7 @@
       }
     },
     "saint" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -453,6 +495,7 @@
       }
     },
     "Saint information is sourced from trusted Catholic resources. Each saint entry includes specific attribution." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -463,6 +506,7 @@
       }
     },
     "saints" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -473,6 +517,7 @@
       }
     },
     "Saints" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -483,6 +528,7 @@
       }
     },
     "Saints data is loading..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -493,6 +539,7 @@
       }
     },
     "Saints Included" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -503,6 +550,7 @@
       }
     },
     "Search" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -513,6 +561,7 @@
       }
     },
     "Search saints..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -523,6 +572,7 @@
       }
     },
     "Settings" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -533,6 +583,7 @@
       }
     },
     "Show Welcome Screen" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -543,6 +594,7 @@
       }
     },
     "Skip" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -553,6 +605,7 @@
       }
     },
     "Sources" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -563,6 +616,7 @@
       }
     },
     "Understand the Tradition" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -573,6 +627,7 @@
       }
     },
     "Version" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -583,6 +638,7 @@
       }
     },
     "Why Choose This Saint?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -593,6 +649,7 @@
       }
     },
     "Young Saint" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -603,6 +660,7 @@
       }
     },
     "Young Saints" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {

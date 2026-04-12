@@ -31,7 +31,7 @@ struct ContentView: View {
                 }
                 .tag(3)
 
-            SettingsView()
+            SettingsView(viewModel: viewModel)
                 .tabItem {
                     Label(AppStrings.localized("Settings", language: language), systemImage: "gearshape.fill")
                 }
