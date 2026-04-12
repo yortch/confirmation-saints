@@ -1,0 +1,14 @@
+[
+  {
+    "assignment_id": "init-2026-04-12",
+    "universe": "lord-of-the-rings",
+    "timestamp": "2026-04-12T15:47:00Z",
+    "agents": {
+      "Gandalf": "Lead",
+      "Frodo": "iOS Dev",
+      "Samwise": "Data/Backend",
+      "Legolas": "Tester"
+    },
+    "reason": "Initial team casting for confirmation-saints iOS app"
+  }
+]

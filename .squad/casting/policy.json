@@ -1,0 +1,5 @@
+{
+  "universes": ["lord-of-the-rings"],
+  "max_capacity": 12,
+  "overflow_strategy": "diegetic-expansion"
+}
