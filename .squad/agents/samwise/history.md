@@ -87,3 +87,12 @@
 - Some Wikimedia Commons filenames required searching via the API search endpoint when initial guesses were wrong (19/32 needed correction)
 - The script is reusable: re-running it skips already-downloaded images (checks file exists and >1KB)
 - Xcode project regenerated via xcodegen to include new image assets
+
+### Cross-Agent Sync: Image & URL Updates (2026-04-12T21:12:34Z)
+**From:** Samwise (saint-images) + Frodo (source-urls) completion  
+**Status:** ✅ Merged into decisions.md
+- All 32 saints now have verified public domain images from Wikimedia Commons
+- All 46 broken source URLs replaced with verified alternatives (Franciscan Media, CNA, EWTN, updated Hallow)
+- Saint data integrity maintained across EN/ES files
+- Decision records: "Saint Image Sources from Wikimedia Commons" and "Source URL Replacement Strategy"
+

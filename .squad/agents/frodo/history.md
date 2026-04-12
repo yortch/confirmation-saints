@@ -72,3 +72,22 @@
 - Lesson: `String(localized:)` always uses system locale; for in-app language switching, use a manual translation dictionary or bundle-path approach
 - Lesson: Mixing closure-based and value-based NavigationLinks in the same NavigationStack causes resolution issues on iOS 17+; pick one style per stack
 - Build verified clean with Swift 6, XcodeGen regen successful
+
+
+## Learnings
+
+- **Task 5 (Source URL Fix):** Replaced 46 broken sourceURLs across saints-en.json and saints-es.json. Loyola Press removed /catholic-resources/saints/ pages; Hallow removed /blog/ paths; Ascension Press, Focus, and Lifeteen all returned 404s.
+- Lesson: Loyola Press saint pages are gone entirely — no new URL pattern works. Franciscan Media (franciscanmedia.org/saint-of-the-day/) is the best drop-in replacement for biographical saint content.
+- Lesson: Hallow migrated blog posts to /saints/{name}/ but only for popular saints. Many niche entries were not migrated.
+- Lesson: Catholic News Agency (catholicnewsagency.com/saint/) and EWTN (ewtn.com/catholicism/saints/) are reliable fallbacks with stable URL patterns.
+- Lesson: When fixing URLs in both EN and ES files, match by URL value (not saint name) since the saint names differ by language.
+- Lesson: The EN and ES files can have slightly different broken URLs for the same saint (e.g., Guadalupe had a typo hfrancisallow.com only in EN, while ES had the correct hallow.com domain but still a 404 path).
+
+### Cross-Agent Sync: Image & URL Updates (2026-04-12T21:12:34Z)
+**From:** Samwise (saint-images) + Frodo (source-urls) completion  
+**Status:** ✅ Merged into decisions.md
+- All 32 saints now have verified public domain images from Wikimedia Commons
+- All 46 broken source URLs successfully replaced with verified alternatives
+- Saint data integrity maintained across EN/ES files
+- Decision records: "Saint Image Sources from Wikimedia Commons" and "Source URL Replacement Strategy"
+- UI rendering already supports image display and clickable source links — no code changes needed

@@ -65,6 +65,39 @@ Reorganize repository to separate iOS (ios/), Android (android/), and shared con
 
 ---
 
+### Saint Image Sources from Wikimedia Commons (2026-07-17)
+**Author:** Samwise (Data/Backend)  
+**Status:** Implemented
+
+All 32 saint images sourced from Wikimedia Commons using public domain or Creative Commons licensed artwork. Downloaded at 400px width thumbnails (~2.8MB total) for bundle efficiency. Images stored cross-platform in `SharedContent/images/`. Reproducible script (`_download_saint_images.py`) enables future updates. Attribution standardized to "Public domain, via Wikimedia Commons" across all saints.
+
+**Impact:**
+- Bundle size: ~2.8MB added (JPG format, 400px width)
+- iOS/Android: Cross-platform ready in SharedContent/images/
+- UI: No changes needed (SaintImageView.swift already handles image loading)
+
+**Notes:** Some saints (Carlo Acutis, Chiara Luce Badano) have limited public domain imagery; best available options used.
+
+---
+
+### Source URL Replacement Strategy (2025-07-15)
+**Author:** Frodo (iOS Dev)  
+**Status:** Implemented
+
+Link audit identified 46 broken source URLs across saints-en.json and saints-es.json. Five primary sources had widespread link rot (Loyola Press, Hallow, Ascension Press, Focus, Lifeteen). Replaced with verified alternatives:
+
+1. **Franciscan Media** — Primary replacement (stable saint-of-the-day archive)
+2. **CNA (Catholic News Agency)** — Secondary source for comprehensive coverage
+3. **EWTN** — Tertiary source to avoid duplicate keys
+4. **Hallow (updated paths)** — Migrated from `/blog/` to `/saints/`
+
+**Impact:**
+- All 32 saints retain ≥2 working source URLs
+- No working URLs changed
+- Both EN/ES files updated identically (matched by URL, not saint name)
+
+---
+
 ### User Directives (Captured)
 - **2026-04-12T17:13:10Z:** Jorge Balderas — App name changed to "Confirmation Saints". Update all references.
 - **2026-04-12T16:29Z:** Jorge Balderas — Project scaffolded with cross-platform separation. Expand saint roster to 50-100+. Add "most popular saints" categories by year + all-time.
