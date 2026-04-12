@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "language": "en",
+  "lastUpdated": "2025-07-15",
+  "categories": [
+    {
+      "id": "patronage",
+      "name": "Patron Of",
+      "description": "Find saints by what they are patron of",
+      "icon": "shield.fill",
+      "values": [
+        {"id": "athletes", "label": "Athletes & Sports"},
+        {"id": "students", "label": "Students & Scholars"},
+        {"id": "musicians", "label": "Musicians & Singers"},
+        {"id": "animals", "label": "Animals & Ecology"},
+        {"id": "missionaries", "label": "Missionaries"},
+        {"id": "youth", "label": "Youth & Young Adults"},
+        {"id": "mothers", "label": "Mothers"},
+        {"id": "fathers", "label": "Fathers"},
+        {"id": "families", "label": "Families"},
+        {"id": "doctors", "label": "Physicians & Healers"},
+        {"id": "lawyers", "label": "Lawyers & Politicians"},
+        {"id": "journalists", "label": "Journalists & Writers"},
+        {"id": "soldiers", "label": "Soldiers & Military"},
+        {"id": "prisoners", "label": "Prisoners & Captives"},
+        {"id": "internet", "label": "Internet & Technology"},
+        {"id": "forgiveness", "label": "Forgiveness & Mercy"},
+        {"id": "indigenous", "label": "Indigenous Peoples"},
+        {"id": "trafficking", "label": "Human Trafficking Survivors"}
+      ]
+    },
+    {
+      "id": "interests",
+      "name": "Interests & Affinities",
+      "description": "Find saints who share your interests",
+      "icon": "heart.fill",
+      "values": [
+        {"id": "sports", "label": "Sports & Athletics"},
+        {"id": "music", "label": "Music & Singing"},
+        {"id": "art", "label": "Art & Creativity"},
+        {"id": "technology", "label": "Technology & Gaming"},
+        {"id": "reading", "label": "Reading & Writing"},
+        {"id": "science", "label": "Science & Medicine"},
+        {"id": "nature", "label": "Nature & Animals"},
+        {"id": "hiking", "label": "Hiking & Outdoors"},
+        {"id": "cooking", "label": "Cooking & Hospitality"},
+        {"id": "community-service", "label": "Community Service"},
+        {"id": "leadership", "label": "Leadership & Justice"},
+        {"id": "philosophy", "label": "Philosophy & Big Questions"},
+        {"id": "family", "label": "Family & Relationships"},
+        {"id": "adventure", "label": "Adventure & Travel"}
+      ]
+    },
+    {
+      "id": "age-category",
+      "name": "Age at Notable Events",
+      "description": "Saints grouped by their age",
+      "icon": "person.fill",
+      "values": [
+        {"id": "young", "label": "Young Saints (under 25)"},
+        {"id": "adult", "label": "Adult Saints"}
+      ]
+    },
+    {
+      "id": "region",
+      "name": "Region of Origin",
+      "description": "Find saints from your part of the world",
+      "icon": "globe",
+      "values": [
+        {"id": "europe", "label": "Europe"},
+        {"id": "latin-america", "label": "Latin America"},
+        {"id": "north-america", "label": "North America"},
+        {"id": "africa", "label": "Africa"},
+        {"id": "asia", "label": "Asia"},
+        {"id": "middle-east", "label": "Middle East"}
+      ]
+    },
+    {
+      "id": "life-state",
+      "name": "Life State",
+      "description": "How the saint lived their vocation",
+      "icon": "figure.stand",
+      "values": [
+        {"id": "married", "label": "Married"},
+        {"id": "religious", "label": "Religious (Priest, Nun, Monk)"},
+        {"id": "single", "label": "Single / Lay Person"},
+        {"id": "martyr", "label": "Martyr"}
+      ]
+    },
+    {
+      "id": "era",
+      "name": "Century / Era",
+      "description": "When the saint lived",
+      "icon": "clock.fill",
+      "values": [
+        {"id": "early-church", "label": "Early Church (1st–5th century)"},
+        {"id": "medieval", "label": "Medieval (6th–15th century)"},
+        {"id": "early-modern", "label": "Early Modern (16th–18th century)"},
+        {"id": "modern", "label": "Modern (19th–20th century)"},
+        {"id": "contemporary", "label": "Contemporary (20th–21st century)"}
+      ]
+    },
+    {
+      "id": "gender",
+      "name": "Gender",
+      "description": "Male or female saints",
+      "icon": "person.2.fill",
+      "values": [
+        {"id": "male", "label": "Male Saints"},
+        {"id": "female", "label": "Female Saints"}
+      ]
+    }
+  ]
+}
