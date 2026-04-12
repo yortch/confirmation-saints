@@ -77,3 +77,13 @@
 - All matching fields (patronOf, tags, affinities, region) kept in English in both files per established convention
 - Spanish translations include proper Catholic terminology: Arcángel, Nuestra Señora, Dominio Público
 - Each saint has sourceURLs with specific pages from Loyola Press, Catholic Encyclopedia, Hallow, Ascension Press
+
+
+### Saint Images Downloaded from Wikimedia Commons (2026-07-17)
+- Downloaded 32 public domain saint images from Wikimedia Commons into SharedContent/images/
+- Created _download_saint_images.py -- idempotent script that uses Wikimedia API to resolve thumb URLs at 400px width
+- Images named {saint-id}.jpg matching the saint ID field in JSON files
+- Updated image.attribution to 'Public domain, via Wikimedia Commons' in both saints-en.json and saints-es.json
+- Some Wikimedia Commons filenames required searching via the API search endpoint when initial guesses were wrong (19/32 needed correction)
+- The script is reusable: re-running it skips already-downloaded images (checks file exists and >1KB)
+- Xcode project regenerated via xcodegen to include new image assets
