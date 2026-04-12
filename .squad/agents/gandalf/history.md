@@ -30,3 +30,13 @@
 - Jorge prefers clean architecture with clear separation
 - Content must attribute sources (Loyola Press, CNA, Franciscan Media, etc.)
 - Teen-friendly affinities: sports, music, art, science, etc.
+
+### Cross-Platform Restructure (2026-07-15)
+- Moved iOS project under `ios/` directory (CatholicSaints/, CatholicSaints.xcodeproj/, project.yml)
+- SharedContent/ stays at repo root as the cross-platform data layer
+- Removed obsolete `SharedContent/Data/` (superseded by `SharedContent/saints/`, `categories/`, `content/`)
+- Created `android/` placeholder for future Kotlin/Compose app
+- Updated `ios/project.yml` to reference `../SharedContent/` 
+- SaintDataService.swift bundle paths unchanged — SharedContent folder reference in bundle still works
+- Build verified with swiftc typecheck after restructure
+- Key file paths updated: `ios/project.yml`, `ios/CatholicSaints/...`
