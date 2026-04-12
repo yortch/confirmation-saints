@@ -36,3 +36,15 @@
 - Output: `ios/CatholicSaints/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png`
 - Contents.json updated to reference `app-icon-1024.png` with `"platform": "ios"` — Xcode generates all other sizes automatically
 - This is a placeholder icon — consider commissioning a professional version later
+
+### Category Matching Fix (2025-07-16)
+- Category browsing was broken ("0 saints" for most categories) due to mismatch between category value IDs and saint data
+- Root cause: matching fields (patronOf, affinities, tags, region, lifeState, ageCategory, gender) must use English values in BOTH language files because the ViewModel matches against English category IDs
+- The Spanish file had translated matching fields (e.g., "soldados" instead of "soldiers"), breaking the matching
+- Fix: synced all matching fields from EN→ES; only display fields (name, biography, whyConfirmationSaint, quote) remain translated in ES
+- Added St. Monica (EN+ES): patron of mothers, married women, covers Africa region, early-church era, cooking affinity
+- Added St. Charbel Makhlouf (EN+ES): covers Middle East region gap, modern era, religious life-state
+- Changed lifeState to "martyr" for Joan of Arc, Sebastian, Maximilian Kolbe (covers life-state/martyr category)
+- Added "doctors" to Gianna's patronOf, "cooking" to Rose of Lima's affinities, "adventure" to José Sánchez del Río
+- Fixed birth dates to 4-digit year format (e.g., "256" → "0256-01-01") for proper era matching via `Int(birthDate.prefix(4))`
+- Verified all 51 category values have ≥1 matching saint in both EN and ES via Python verification script

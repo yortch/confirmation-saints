@@ -11,13 +11,28 @@
       "deathDate": "1897-09-30",
       "canonizationDate": "1925-05-17",
       "country": "Francia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "female",
       "lifeState": "religious",
       "ageCategory": "young",
-      "patronOf": ["misioneros", "floristas", "pilotos", "Francia"],
-      "tags": ["joven", "escritora", "mística", "Doctora de la Iglesia"],
-      "affinities": ["lectura", "escritura", "naturaleza", "oración"],
+      "patronOf": [
+        "missionaries",
+        "florists",
+        "pilots",
+        "France"
+      ],
+      "tags": [
+        "young",
+        "writer",
+        "mystic",
+        "Doctor of the Church"
+      ],
+      "affinities": [
+        "reading",
+        "writing",
+        "nature",
+        "prayer"
+      ],
       "quote": "No pierdas ninguna oportunidad de hacer un pequeño sacrificio, aquí con una sonrisa, allí con una palabra amable; siempre haciendo lo correcto y haciéndolo todo por amor.",
       "biography": "Marie Françoise-Thérèse Martin nació en Alençon, Francia, el 2 de enero de 1873. Desde muy pequeña sintió una profunda vocación a la vida religiosa. A los 15 años, tras una apelación especial al Papa León XIII, ingresó en el convento carmelita de Lisieux.\n\nA pesar de su corta vida, Teresa desarrolló un camino espiritual profundo que llamó el 'Caminito' — hacer pequeños actos cotidianos con amor extraordinario. Creía que la santidad no se trataba de gestos grandiosos, sino de ofrecer cada momento a Dios con un corazón amoroso.\n\nTeresa murió de tuberculosis a los 24 años, pero su autobiografía, 'Historia de un alma', se convirtió en uno de los libros espirituales más leídos de la historia. Fue declarada Doctora de la Iglesia en 1997 — una de solo cuatro mujeres en recibir ese honor.",
       "whyConfirmationSaint": "Santa Teresa es perfecta para quien se siente ordinario o invisible. Demostró que no necesitas hacer cosas extraordinarias para ser santo — solo necesitas hacer cosas ordinarias con amor extraordinario. Su 'Caminito' es especialmente cercano para los jóvenes que se preguntan si sus pequeños actos de bondad realmente importan. Sí importan.",
@@ -25,7 +40,10 @@
         "filename": "therese-of-lisieux.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Enciclopedia Católica"]
+      "sources": [
+        "Loyola Press",
+        "Enciclopedia Católica"
+      ]
     },
     {
       "id": "dominic-savio",
@@ -35,13 +53,25 @@
       "deathDate": "1857-03-09",
       "canonizationDate": "1954-06-12",
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["niños del coro", "falsamente acusados", "jóvenes delincuentes"],
-      "tags": ["joven", "estudiante", "pacificador"],
-      "affinities": ["música", "estudio", "servicio comunitario"],
+      "patronOf": [
+        "choirboys",
+        "falsely accused",
+        "juvenile delinquents"
+      ],
+      "tags": [
+        "young",
+        "student",
+        "peacemaker"
+      ],
+      "affinities": [
+        "music",
+        "studying",
+        "community service"
+      ],
       "quote": "No soy capaz de hacer grandes cosas, pero quiero hacer todo, incluso las cosas más pequeñas, para la mayor gloria de Dios.",
       "biography": "Domingo Savio nació el 2 de abril de 1842 en Riva, Italia. En su Primera Comunión a los siete años, hizo cuatro promesas: confesarse y comulgar frecuentemente, santificar las fiestas, hacer de Jesús y María sus mejores amigos, y morir antes que pecar.\n\nA los 12 años se convirtió en alumno de San Juan Bosco, quien reconoció su santidad extraordinaria. Domingo organizó un grupo llamado la Compañía de la Inmaculada Concepción, dedicada a ayudar a sus compañeros y asistir a los maestros. Era conocido por separar peleas y defender a los compañeros que sufrían acoso.\n\nDomingo murió de pleuresía con solo 14 años en 1857. San Juan Bosco escribió su biografía, describiéndolo como un muchacho que encontraba alegría en los deberes cotidianos y en la amistad con Dios. Es uno de los santos no mártires más jóvenes jamás canonizados.",
       "whyConfirmationSaint": "Santo Domingo Savio es un santo de Confirmación increíble para los jóvenes porque ¡él mismo era un adolescente cuando se convirtió en santo! Demuestra que no necesitas esperar a ser mayor para vivir una vida santa. Se enfrentó al acoso escolar, ayudó a sus compañeros y mantuvo firme su fe aunque no fuera popular. Si quieres un santo que entiende lo que es ser joven y fiel, Domingo es tu ejemplo.",
@@ -49,7 +79,10 @@
         "filename": "dominic-savio.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Lifeteen"]
+      "sources": [
+        "Loyola Press",
+        "Lifeteen"
+      ]
     },
     {
       "id": "carlo-acutis",
@@ -59,13 +92,28 @@
       "deathDate": "2006-10-12",
       "canonizationDate": null,
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["internet", "programadores", "juventud"],
-      "tags": ["joven", "moderno", "tecnológico", "Beato"],
-      "affinities": ["tecnología", "computadoras", "videojuegos", "fútbol", "animales"],
+      "patronOf": [
+        "internet",
+        "computer programmers",
+        "youth"
+      ],
+      "tags": [
+        "young",
+        "modern",
+        "tech-savvy",
+        "Blessed"
+      ],
+      "affinities": [
+        "technology",
+        "computers",
+        "video games",
+        "soccer",
+        "animals"
+      ],
       "quote": "La Eucaristía es mi autopista al cielo.",
       "biography": "Carlo Acutis nació el 3 de mayo de 1991 en Londres, de padres italianos, y creció en Milán. Desde muy pequeño mostró un profundo amor por la Eucaristía y comenzó a asistir a Misa diaria a los siete años. También era un genio de la tecnología — aprendió programación por su cuenta siendo niño.\n\nCarlo usó sus habilidades tecnológicas para su fe, creando un sitio web que catalogaba milagros eucarísticos de todo el mundo. A pesar de ser un adolescente normal que amaba el PlayStation, el fútbol y sus mascotas, tenía una vida de oración extraordinaria y ayudaba regularmente a personas sin hogar.\n\nEn octubre de 2006, a Carlo le diagnosticaron una forma agresiva de leucemia. Ofreció su sufrimiento por el Papa y la Iglesia. Murió el 12 de octubre de 2006, con solo 15 años. Fue beatificado en 2020 y su cuerpo fue encontrado notablemente preservado.",
       "whyConfirmationSaint": "Carlo Acutis es el santo patrono de la generación digital. Le encantaban los videojuegos, las computadoras y el fútbol — como a muchos jóvenes hoy — pero amaba a Jesús por encima de todo. Demuestra que puedes ser un adolescente normal Y un santo. Usó la tecnología no solo para divertirse sino para difundir la fe. Si te gusta la tecnología, los videojuegos o las redes sociales, Carlo prueba que puedes usar esos dones para Dios.",
@@ -73,7 +121,11 @@
         "filename": "carlo-acutis.jpg",
         "attribution": "Cortesía de la Causa de Canonización de Carlo Acutis"
       },
-      "sources": ["Focus", "Hallow", "Ascension Press"]
+      "sources": [
+        "Focus",
+        "Hallow",
+        "Ascension Press"
+      ]
     },
     {
       "id": "joan-of-arc",
@@ -83,13 +135,28 @@
       "deathDate": "1431-05-30",
       "canonizationDate": "1920-05-16",
       "country": "Francia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "female",
-      "lifeState": "single",
+      "lifeState": "martyr",
       "ageCategory": "young",
-      "patronOf": ["soldados", "Francia", "prisioneros", "mujeres militares"],
-      "tags": ["joven", "valiente", "líder", "mártir"],
-      "affinities": ["liderazgo", "valentía", "justicia", "militar"],
+      "patronOf": [
+        "soldiers",
+        "France",
+        "prisoners",
+        "women in the military"
+      ],
+      "tags": [
+        "young",
+        "brave",
+        "leader",
+        "martyr"
+      ],
+      "affinities": [
+        "leadership",
+        "courage",
+        "justice",
+        "military"
+      ],
       "quote": "No tengo miedo; nací para esto.",
       "biography": "Juana de Arco nació alrededor de 1412 en Domrémy, Francia, en una familia campesina. A los 13 años comenzó a escuchar voces que identificó como San Miguel Arcángel, Santa Catalina de Alejandría y Santa Margarita de Antioquía, que le decían que ayudara al rey francés a recuperar su reino del dominio inglés.\n\nCon solo 17 años, Juana convenció al príncipe francés Carlos VII de dejarla liderar un ejército. Vistiendo armadura blanca, condujo a las tropas francesas a una victoria impresionante en el Sitio de Orleans en 1429, cambiando el rumbo de la Guerra de los Cien Años. Fue fundamental en la coronación de Carlos VII en Reims.\n\nCapturada por las fuerzas borgoñonas en 1430, Juana fue vendida a los ingleses y sometida a juicio por herejía. A pesar de una defensa valiente, fue quemada en la hoguera el 30 de mayo de 1431, a los 19 años. Su condena fue anulada 25 años después y fue canonizada en 1920.",
       "whyConfirmationSaint": "Juana de Arco es la santa definitiva para quien siente el llamado a defender lo correcto, aunque dé miedo. Era una adolescente que confió en la voz de Dios por encima de las dudas de adultos poderosos. Lideró ejércitos, cambió la historia y nunca retrocedió en su fe — incluso cuando le costó la vida. Elige a Juana si quieres valentía para seguir el plan de Dios sin importar lo que piensen los demás.",
@@ -97,7 +164,10 @@
         "filename": "joan-of-arc.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Enciclopedia Católica"]
+      "sources": [
+        "Loyola Press",
+        "Enciclopedia Católica"
+      ]
     },
     {
       "id": "maria-goretti",
@@ -107,13 +177,26 @@
       "deathDate": "1902-07-06",
       "canonizationDate": "1950-06-24",
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "female",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["juventud", "pureza", "perdón", "víctimas de crímenes"],
-      "tags": ["joven", "mártir", "perdón"],
-      "affinities": ["oración", "perdón", "familia"],
+      "patronOf": [
+        "youth",
+        "purity",
+        "forgiveness",
+        "crime victims"
+      ],
+      "tags": [
+        "young",
+        "martyr",
+        "forgiveness"
+      ],
+      "affinities": [
+        "prayer",
+        "forgiveness",
+        "family"
+      ],
       "quote": "Perdono a Alessandro Serenelli y lo quiero conmigo en el cielo para siempre.",
       "biography": "María Goretti nació el 16 de octubre de 1890 en Corinaldo, Italia, en una familia campesina muy pobre. Tras la muerte de su padre, la familia compartió vivienda con la familia Serenelli. A pesar de la pobreza extrema, la joven María era devota de la oración y ayudaba a su familia.\n\nEl 5 de julio de 1902, cuando María tenía solo 11 años, Alessandro Serenelli, de 20 años, la atacó. María resistió diciéndole que era pecado. Él la apuñaló 14 veces. Fue llevada al hospital, donde sobrevivió 20 horas — durante las cuales perdonó a su atacante, diciendo que lo quería en el cielo con ella.\n\nAlessandro cumplió 27 años de prisión, donde tuvo una visión de María dándole flores. Se convirtió, asistió a su beatificación y pasó el resto de su vida como hermano lego capuchino. María fue canonizada en 1950, con su madre presente — la primera vez que un padre asistió a la canonización de su hijo.",
       "whyConfirmationSaint": "La historia de Santa María Goretti trata del poder increíble del perdón. Con solo 11 años, eligió perdonar a quien más la había herido. Su perdón fue tan poderoso que literalmente cambió la vida de su atacante para siempre. Elige a María como tu santa de Confirmación si quieres ser alguien que perdona incluso cuando es más difícil, y que cree en el poder de la misericordia para transformar vidas.",
@@ -121,7 +204,10 @@
         "filename": "maria-goretti.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Lifeteen"]
+      "sources": [
+        "Loyola Press",
+        "Lifeteen"
+      ]
     },
     {
       "id": "chiara-luce-badano",
@@ -131,13 +217,27 @@
       "deathDate": "1990-10-07",
       "canonizationDate": null,
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "female",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["juventud", "enfermos de cáncer"],
-      "tags": ["joven", "moderna", "alegre", "Beata"],
-      "affinities": ["deportes", "senderismo", "música", "amistad", "natación"],
+      "patronOf": [
+        "youth",
+        "cancer patients"
+      ],
+      "tags": [
+        "young",
+        "modern",
+        "joyful",
+        "Blessed"
+      ],
+      "affinities": [
+        "sports",
+        "hiking",
+        "music",
+        "friendship",
+        "swimming"
+      ],
       "quote": "Si tú lo quieres, Jesús, yo también lo quiero.",
       "biography": "Chiara Badano nació el 29 de octubre de 1971 en Sassello, Italia. Fue una adolescente activa, atlética y sociable que amaba el senderismo, la natación, el tenis y el canto. A los nueve años se unió al Movimiento de los Focolares y tomó su fe en serio mientras vivía una vida adolescente normal.\n\nA los 17 años, mientras jugaba al tenis, un dolor agudo en el hombro resultó ser osteosarcoma — un devastador cáncer de huesos. A pesar del intenso sufrimiento y los tratamientos que le impidieron caminar, Chiara mantuvo una alegría asombrosa. Ofrecía cada momento de dolor a Jesús, diciendo: 'Si tú lo quieres, Jesús, yo también lo quiero.'\n\nChiara planificó su propio funeral, eligiendo canciones específicas y pidiendo ser vestida como novia, llamándolo su 'día de bodas' — el día en que se encontraría con Jesús. Murió el 7 de octubre de 1990, a los 18 años. Chiara Lubich, fundadora de los Focolares, le dio el nombre 'Luce' (Luz) por su alegría radiante. Fue beatificada en 2010.",
       "whyConfirmationSaint": "Chiara Luce Badano era una adolescente totalmente normal — le encantaban los deportes, la música, salir con amigos y divertirse. Pero cuando enfrentó el cáncer a los 17 años, su fe le dio una alegría que asombró a todos. Demuestra que la fe no se trata de ser aburrido o renunciar a lo que amas — se trata de encontrar una alegría más profunda incluso en los momentos más difíciles. Es una santa poderosa para quien enfrenta situaciones complicadas.",
@@ -145,7 +245,10 @@
         "filename": "chiara-luce-badano.jpg",
         "attribution": "Cortesía del Movimiento de los Focolares"
       },
-      "sources": ["Focus", "Lifeteen"]
+      "sources": [
+        "Focus",
+        "Lifeteen"
+      ]
     },
     {
       "id": "jose-sanchez-del-rio",
@@ -155,13 +258,26 @@
       "deathDate": "1928-02-10",
       "canonizationDate": "2016-10-16",
       "country": "México",
-      "region": "América Latina",
+      "region": "Latin America",
       "gender": "male",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["cristianos perseguidos", "juventud mexicana"],
-      "tags": ["joven", "mártir", "valiente", "latinoamericano"],
-      "affinities": ["valentía", "fe", "justicia"],
+      "patronOf": [
+        "persecuted Christians",
+        "Mexican youth"
+      ],
+      "tags": [
+        "young",
+        "martyr",
+        "brave",
+        "Latin American"
+      ],
+      "affinities": [
+        "courage",
+        "faith",
+        "justice",
+        "adventure"
+      ],
       "quote": "¡Viva Cristo Rey!",
       "biography": "José Luis Sánchez del Río nació el 28 de marzo de 1913 en Sahuayo, Michoacán, México. Durante la Guerra Cristera (1926–1929), cuando el gobierno mexicano perseguía severamente a los católicos, el joven José rogó unirse a los cristeros que defendían la libertad religiosa. Inicialmente fue rechazado por ser demasiado joven, pero finalmente le permitieron servir como abanderado.\n\nTras ser capturado por las fuerzas del gobierno, José, de 14 años, fue encarcelado y torturado. Sus captores le cortaron las plantas de los pies y lo obligaron a caminar hasta su propia tumba. Le ofrecieron perdonarle la vida si renunciaba a su fe y gritaba '¡Muera Cristo Rey!'. En cambio, a cada paso, José gritaba '¡Viva Cristo Rey!'.\n\nJosé fue asesinado el 10 de febrero de 1928, a los 14 años. Fue canonizado por el Papa Francisco en 2016, convirtiéndose en uno de los santos más jóvenes de la historia moderna de la Iglesia. Su historia inspiró la película 'Cristiada' (For Greater Glory).",
       "whyConfirmationSaint": "San José Sánchez del Río fue un adolescente que literalmente dio su vida antes que negar a Jesús. Su valentía es increíble — tenía solo 14 años, menor que la mayoría de los candidatos a la Confirmación. Es un santo especial para cualquiera con herencia mexicana, y para quien quiera tener el valor de mantenerse firme en su fe cuando el mundo los presiona a callar sobre lo que creen.",
@@ -169,23 +285,40 @@
         "filename": "jose-sanchez-del-rio.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Ascension Press", "Hallow"]
+      "sources": [
+        "Ascension Press",
+        "Hallow"
+      ]
     },
     {
       "id": "sebastian",
       "name": "San Sebastián",
       "feastDay": "01-20",
-      "birthDate": "256",
+      "birthDate": "0256-01-01",
       "deathDate": "288",
       "canonizationDate": null,
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
-      "lifeState": "single",
+      "lifeState": "martyr",
       "ageCategory": "adult",
-      "patronOf": ["atletas", "soldados", "víctimas de plagas"],
-      "tags": ["mártir", "atleta", "soldado", "Iglesia primitiva"],
-      "affinities": ["deportes", "ejercicio", "militar", "valentía"],
+      "patronOf": [
+        "athletes",
+        "soldiers",
+        "plague victims"
+      ],
+      "tags": [
+        "martyr",
+        "athlete",
+        "soldier",
+        "early Church"
+      ],
+      "affinities": [
+        "sports",
+        "fitness",
+        "military",
+        "courage"
+      ],
       "quote": null,
       "biography": "San Sebastián nació alrededor del año 256 d.C., probablemente en Narbona, Galia (actual Francia), y fue criado en Milán, Italia. Se unió al ejército romano alrededor del 283 d.C., no por gloria militar, sino para apoyar secretamente a los cristianos encarcelados y convertir a soldados y prisioneros a la fe.\n\nSebastián ascendió hasta convertirse en capitán de la Guardia Pretoriana bajo el emperador Diocleciano. Cuando se descubrió su fe cristiana, Diocleciano ordenó su ejecución por arqueros. Atado a un árbol y asaeteado, fue dado por muerto. Pero una viuda cristiana, Santa Irene, lo encontró aún con vida y lo curó.\n\nEn lugar de huir, Sebastián regresó para confrontar a Diocleciano, instándolo a dejar de perseguir a los cristianos. El emperador lo hizo golpear hasta la muerte con garrotes alrededor del 288 d.C. Su valentía frente a la persecución lo convirtió en uno de los santos más populares del arte y la historia cristiana.",
       "whyConfirmationSaint": "San Sebastián es el santo por excelencia para los atletas y cualquiera que ame los deportes. Pero es más que un patrón del atletismo — es un modelo de resiliencia. Sobrevivió a ser asaeteado y volvió directamente a defender su fe. Si eres deportista y quieres un santo que entienda la disciplina, la resistencia y nunca rendirse, Sebastián es tu campeón.",
@@ -193,23 +326,40 @@
         "filename": "sebastian.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Enciclopedia Católica"]
+      "sources": [
+        "Loyola Press",
+        "Enciclopedia Católica"
+      ]
     },
     {
       "id": "cecilia",
       "name": "Santa Cecilia",
       "feastDay": "11-22",
-      "birthDate": null,
+      "birthDate": "0200-01-01",
       "deathDate": "230",
       "canonizationDate": null,
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "female",
       "lifeState": "married",
       "ageCategory": "young",
-      "patronOf": ["músicos", "cantantes", "poetas", "música sacra"],
-      "tags": ["mártir", "música", "Iglesia primitiva"],
-      "affinities": ["música", "canto", "arte", "oración"],
+      "patronOf": [
+        "musicians",
+        "singers",
+        "poets",
+        "Church music"
+      ],
+      "tags": [
+        "martyr",
+        "musician",
+        "early Church"
+      ],
+      "affinities": [
+        "music",
+        "singing",
+        "art",
+        "prayer"
+      ],
       "quote": null,
       "biography": "Santa Cecilia fue una noble romana que vivió en el siglo II o III d.C. Según la tradición, fue criada como cristiana y consagró su virginidad a Dios. Cuando sus padres arreglaron su matrimonio con un noble pagano llamado Valeriano, Cecilia le contó en la noche de bodas sobre su voto y su ángel guardián.\n\nValeriano accedió a respetar su voto si podía ver a su ángel. Cecilia lo envió al Papa Urbano I para ser bautizado. Al regresar, Valeriano vio al ángel, y tanto él como su hermano Tiburcio se convirtieron en fervientes cristianos. Los hermanos fueron finalmente arrestados y martirizados por enterrar los cuerpos de cristianos ejecutados.\n\nLa propia Cecilia fue arrestada por convertir a más de 400 personas. Sus verdugos intentaron sofocarla en su propio baño, y al fallar, la golpearon tres veces en el cuello con una espada. Sobrevivió tres días, durante los cuales distribuyó sus posesiones a los pobres. Es la santa patrona de la música porque, según la tradición, 'cantaba en su corazón al Señor' durante su boda.",
       "whyConfirmationSaint": "Santa Cecilia es la santa de Confirmación perfecta para músicos, cantantes y cualquiera que ame la música. La tradición dice que cantaba a Dios en su corazón incluso en sus momentos más difíciles. Si la música es tu forma de conectar con el mundo, Cecilia muestra cómo también puede ser tu forma de conectar con Dios. Demuestra que tus dones artísticos son también dones espirituales.",
@@ -217,23 +367,42 @@
         "filename": "cecilia.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Enciclopedia Católica"]
+      "sources": [
+        "Loyola Press",
+        "Enciclopedia Católica"
+      ]
     },
     {
       "id": "francis-of-assisi",
       "name": "San Francisco de Asís",
       "feastDay": "10-04",
-      "birthDate": "1181",
+      "birthDate": "1181-01-01",
       "deathDate": "1226-10-03",
       "canonizationDate": "1228-07-16",
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
       "lifeState": "religious",
       "ageCategory": "adult",
-      "patronOf": ["animales", "ecología", "comerciantes", "Italia"],
-      "tags": ["naturaleza", "pobreza", "estigmas", "fundador"],
-      "affinities": ["animales", "naturaleza", "medio ambiente", "sencillez", "poesía"],
+      "patronOf": [
+        "animals",
+        "ecology",
+        "merchants",
+        "Italy"
+      ],
+      "tags": [
+        "nature",
+        "poverty",
+        "stigmata",
+        "founder"
+      ],
+      "affinities": [
+        "animals",
+        "nature",
+        "environment",
+        "simplicity",
+        "poetry"
+      ],
       "quote": "Señor, hazme un instrumento de tu paz. Donde haya odio, que yo siembre amor.",
       "biography": "Giovanni di Pietro di Bernardone — más tarde conocido como Francisco — nació alrededor de 1181 en Asís, Italia, hijo de un rico comerciante de telas. De joven, vivió una vida despreocupada de lujo, fiestas y sueños de gloria militar. Una temporada como prisionero de guerra y una grave enfermedad lo llevaron a reconsiderar su vida.\n\nEn un momento decisivo, Francisco escuchó a Cristo hablarle desde un crucifijo en la capilla en ruinas de San Damián: 'Francisco, reconstruye mi Iglesia.' Lo tomó literalmente al principio, luego entendió el llamado más profundo. Renunció a la riqueza de su familia — quitándose dramáticamente sus ropas finas en la plaza del pueblo — y abrazó la pobreza radical.\n\nFrancisco fundó la Orden Franciscana, que creció rápidamente por toda Europa. Era conocido por su profundo amor a la creación, predicando famosamente a los pájaros y haciéndose amigo de un lobo que aterrorizaba al pueblo de Gubbio. En 1224 recibió los estigmas — las llagas de Cristo — siendo la primera persona registrada en recibirlos. Murió en 1226 y fue canonizado solo dos años después.",
       "whyConfirmationSaint": "San Francisco es uno de los santos más queridos de la historia, y con razón. Renunció a todo — riqueza, estatus, comodidad — para seguir a Jesús radicalmente. Si te importan los animales, el medio ambiente o la sencillez, Francisco es tu santo. Demuestra que la verdadera felicidad no viene de lo que tienes sino de lo que das. El Papa Francisco eligió su nombre por una razón.",
@@ -241,23 +410,43 @@
         "filename": "francis-of-assisi.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Focus", "Hallow"]
+      "sources": [
+        "Loyola Press",
+        "Focus",
+        "Hallow"
+      ]
     },
     {
       "id": "thomas-aquinas",
       "name": "Santo Tomás de Aquino",
       "feastDay": "01-28",
-      "birthDate": "1225",
+      "birthDate": "1225-01-28",
       "deathDate": "1274-03-07",
       "canonizationDate": "1323-07-18",
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
       "lifeState": "religious",
       "ageCategory": "adult",
-      "patronOf": ["estudiantes", "universidades", "filósofos", "teólogos"],
-      "tags": ["intelectual", "Doctor de la Iglesia", "dominico", "escritor"],
-      "affinities": ["estudio", "lectura", "escritura", "filosofía", "ciencia"],
+      "patronOf": [
+        "students",
+        "universities",
+        "philosophers",
+        "theologians"
+      ],
+      "tags": [
+        "intellectual",
+        "Doctor of the Church",
+        "Dominican",
+        "writer"
+      ],
+      "affinities": [
+        "studying",
+        "reading",
+        "writing",
+        "philosophy",
+        "science"
+      ],
       "quote": "Concédeme, Señor Dios mío, una mente para conocerte, un corazón para buscarte, sabiduría para encontrarte.",
       "biography": "Tomás de Aquino nació alrededor de 1225 en Roccasecca, Italia, en una familia noble. Su familia quería que se convirtiera en un poderoso abad benedictino, pero Tomás sintió el llamado a unirse a la recién fundada Orden Dominica — frailes que abrazaban la pobreza y el estudio. Su familia se opuso tanto que lo secuestraron y lo retuvieron en un castillo durante más de un año.\n\nTomás perseveró y se convirtió en el mayor teólogo y filósofo de la historia de la Iglesia. Estudió con San Alberto Magno y escribió la monumental 'Suma Teológica', que organizó sistemáticamente la teología cristiana y sigue siendo fundamental para el pensamiento católico. A pesar de su brillantez, sus compañeros inicialmente lo llamaban 'el Buey Mudo' por su naturaleza callada y robusta.\n\nSan Alberto respondió proféticamente: 'Lo llaman el Buey Mudo, pero sus mugidos en la doctrina resonarán un día por todo el mundo.' Tomás murió en 1274 a los 49 años. Fue nombrado Doctor de la Iglesia y es considerado el mayor teólogo de la Iglesia.",
       "whyConfirmationSaint": "Santo Tomás de Aquino es el santo para pensadores, estudiantes y cualquiera que ame aprender. Demostró que la fe y la razón van de la mano — no tienes que apagar tu cerebro para creer en Dios. Si te encanta hacer preguntas profundas, estudiar o debatir ideas, Tomás es tu patrón. También fue víctima de acoso por ser diferente (lo llamaban 'el Buey Mudo'), así que entiende lo que es no encajar.",
@@ -265,7 +454,10 @@
         "filename": "thomas-aquinas.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Ascension Press"]
+      "sources": [
+        "Loyola Press",
+        "Ascension Press"
+      ]
     },
     {
       "id": "thomas-more",
@@ -275,13 +467,30 @@
       "deathDate": "1535-07-06",
       "canonizationDate": "1935-05-19",
       "country": "Inglaterra",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
       "lifeState": "married",
       "ageCategory": "adult",
-      "patronOf": ["abogados", "políticos", "estadistas", "libertad religiosa"],
-      "tags": ["mártir", "abogado", "político", "intelectual", "casado"],
-      "affinities": ["lectura", "escritura", "derecho", "política", "familia"],
+      "patronOf": [
+        "lawyers",
+        "politicians",
+        "statesmen",
+        "religious freedom"
+      ],
+      "tags": [
+        "martyr",
+        "lawyer",
+        "politician",
+        "intellectual",
+        "married"
+      ],
+      "affinities": [
+        "reading",
+        "writing",
+        "law",
+        "politics",
+        "family"
+      ],
       "quote": "Muero como buen servidor del Rey, pero primero de Dios.",
       "biography": "Tomás Moro nació el 7 de febrero de 1478 en Londres. Brillante abogado, escritor y humanista, se convirtió en uno de los hombres más poderosos de Inglaterra — sirviendo como Lord Canciller del rey Enrique VIII. También fue un esposo y padre devoto que valoraba profundamente su vida familiar.\n\nCuando Enrique VIII rompió con la Iglesia Católica para divorciarse de Catalina de Aragón y casarse con Ana Bolena, declarándose cabeza de la Iglesia de Inglaterra, Tomás Moro no pudo en conciencia apoyar las acciones del Rey. Renunció como Lord Canciller y se negó a firmar el Acta de Supremacía.\n\nMoro fue encarcelado en la Torre de Londres durante más de un año. A pesar de la intensa presión y la posibilidad de libertad si simplemente firmaba el juramento, se negó. Fue juzgado, condenado por traición con testimonios falsos, y decapitado el 6 de julio de 1535. Sus últimas palabras fueron: 'Muero como buen servidor del Rey, pero primero de Dios.'",
       "whyConfirmationSaint": "Santo Tomás Moro es el santo para cualquiera que se preocupe por hacer lo correcto, incluso cuando cuesta todo. Tenía riqueza, poder, fama y una familia que amaba — pero no negociaría su conciencia por nada de eso. En un mundo donde es tentador seguir a la multitud, Tomás Moro demuestra que la integridad importa más que la popularidad. Es especialmente genial para quien se interese en derecho, política o liderazgo.",
@@ -289,7 +498,10 @@
         "filename": "thomas-more.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Enciclopedia Católica"]
+      "sources": [
+        "Loyola Press",
+        "Enciclopedia Católica"
+      ]
     },
     {
       "id": "gianna-beretta-molla",
@@ -299,13 +511,33 @@
       "deathDate": "1962-04-28",
       "canonizationDate": "2004-05-16",
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "female",
       "lifeState": "married",
       "ageCategory": "adult",
-      "patronOf": ["madres", "médicos", "niños por nacer", "madres trabajadoras"],
-      "tags": ["moderna", "casada", "madre", "doctora", "provida"],
-      "affinities": ["medicina", "ciencia", "familia", "esquí", "senderismo", "música"],
+      "patronOf": [
+        "mothers",
+        "physicians",
+        "unborn children",
+        "working mothers",
+        "doctors"
+      ],
+      "tags": [
+        "modern",
+        "married",
+        "mother",
+        "doctor",
+        "pro-life",
+        "science"
+      ],
+      "affinities": [
+        "medicine",
+        "science",
+        "family",
+        "skiing",
+        "hiking",
+        "music"
+      ],
       "quote": "El amor es el sentimiento más hermoso que el Señor ha puesto en el alma de hombres y mujeres.",
       "biography": "Gianna Beretta nació el 4 de octubre de 1922 en Magenta, Italia. Obtuvo títulos en medicina y cirugía, especializándose en pediatría. Era una mujer activa y alegre que amaba el esquí, el senderismo, la pintura y asistir a conciertos y al teatro.\n\nEn 1955 se casó con Pietro Molla y tuvieron tres hijos. En 1961, estando embarazada de su cuarto hijo, a Gianna le diagnosticaron un fibroma en el útero. Los médicos le dieron tres opciones: un aborto, una histerectomía (que terminaría el embarazo), o la extirpación solo del fibroma (arriesgado pero preservando la vida del bebé).\n\nGianna eligió la tercera opción, diciendo a su familia: 'Si deben elegir entre el bebé y yo, no duden: elijan al bebé.' La cirugía fue exitosa, pero surgieron complicaciones durante el parto. Gianna Emanuela nació sana el 21 de abril de 1962, pero Gianna murió una semana después el 28 de abril. Fue canonizada en 2004 con su esposo e hijos presentes.",
       "whyConfirmationSaint": "Santa Gianna es una santa moderna que vivió una vida plena y activa — era doctora, esquiadora, madre y mujer de fe profunda. Demuestra que la santidad no se trata de retirarse del mundo sino de vivir plenamente en él con amor. Es especialmente inspiradora para quien se interese en la medicina o la ciencia, y para quien valore la familia y el sacrificio.",
@@ -313,7 +545,10 @@
         "filename": "gianna-beretta-molla.jpg",
         "attribution": "Cortesía de la Sociedad de Santa Gianna"
       },
-      "sources": ["Loyola Press", "Focus"]
+      "sources": [
+        "Loyola Press",
+        "Focus"
+      ]
     },
     {
       "id": "louis-martin",
@@ -323,13 +558,27 @@
       "deathDate": "1894-07-29",
       "canonizationDate": "2015-10-18",
       "country": "Francia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
       "lifeState": "married",
       "ageCategory": "adult",
-      "patronOf": ["padres", "parejas casadas", "vida familiar"],
-      "tags": ["casado", "padre", "familia", "moderno"],
-      "affinities": ["familia", "pesca", "relojería", "oración"],
+      "patronOf": [
+        "fathers",
+        "married couples",
+        "family life"
+      ],
+      "tags": [
+        "married",
+        "father",
+        "family",
+        "modern"
+      ],
+      "affinities": [
+        "family",
+        "fishing",
+        "watchmaking",
+        "prayer"
+      ],
       "quote": "Dios es lo primero en nuestro hogar.",
       "biography": "Luis Martin nació el 22 de agosto de 1823 en Burdeos, Francia. Se convirtió en un hábil relojero y joyero. Inicialmente quiso ser monje en el monasterio del Gran San Bernardo, pero fue rechazado porque no sabía latín. Lo tomó como una señal de Dios dirigiéndolo hacia otra vocación.\n\nEn 1858, Luis se casó con Celia Guérin, y juntos crearon una de las familias más notables de la historia católica. Las cinco hijas que sobrevivieron entraron a la vida religiosa, incluyendo a Santa Teresa de Lisieux. Luis y Celia pusieron a Dios en el centro de su familia, asistiendo a Misa diaria y practicando la caridad juntos.\n\nTras la muerte de Celia en 1877, Luis se dedicó enteramente a sus hijas. En sus últimos años, sufrió de arterioesclerosis cerebral, soportando el deterioro mental y físico con gran fe. Murió el 29 de julio de 1894. Luis y Celia fueron canonizados juntos por el Papa Francisco en 2015 — la primera pareja casada canonizada junta.",
       "whyConfirmationSaint": "San Luis Martin demuestra que la santidad ocurre en las familias. Fue un padre devoto que crió santos — literalmente. No hizo nada espectacular; simplemente amó a Dios y amó a su familia cada día. Si la familia es importante para ti y quieres un santo que modeló lo que significa ser un padre lleno de fe, Luis es una elección maravillosa.",
@@ -337,7 +586,10 @@
         "filename": "louis-martin.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Hallow"]
+      "sources": [
+        "Loyola Press",
+        "Hallow"
+      ]
     },
     {
       "id": "zelie-martin",
@@ -347,13 +599,29 @@
       "deathDate": "1877-08-28",
       "canonizationDate": "2015-10-18",
       "country": "Francia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "female",
       "lifeState": "married",
       "ageCategory": "adult",
-      "patronOf": ["madres", "parejas casadas", "mujeres trabajadoras"],
-      "tags": ["casada", "madre", "familia", "moderna", "empresaria"],
-      "affinities": ["familia", "manualidades", "encaje", "negocios", "oración"],
+      "patronOf": [
+        "mothers",
+        "married couples",
+        "working women"
+      ],
+      "tags": [
+        "married",
+        "mother",
+        "family",
+        "modern",
+        "businesswoman"
+      ],
+      "affinities": [
+        "family",
+        "crafts",
+        "lacemaking",
+        "business",
+        "prayer"
+      ],
       "quote": "El Señor me ha dado la gracia de no temer a la muerte. Desprecio las diversiones de la vida y anhelo la eternidad.",
       "biography": "Celia Guérin nació el 23 de diciembre de 1831 en Gandelain, Francia. De joven, quiso entrar a la vida religiosa pero fue rechazada por las Hermanas de la Caridad. En su lugar, aprendió el arte del encaje de Point d'Alençon, una artesanía altamente especializada, y construyó un negocio exitoso de elaboración de encajes.\n\nEn 1858 se casó con Luis Martin y tuvieron nueve hijos, cuatro de los cuales murieron en la infancia — un dolor que Celia sobrellevó con profunda fe. Dirigía su negocio desde casa mientras criaba a su familia, convirtiéndola en uno de los primeros ejemplos de una santa madre trabajadora. Las cinco hijas sobrevivientes se hicieron religiosas, incluyendo a Santa Teresa de Lisieux.\n\nA Celia le diagnosticaron cáncer de mama y murió el 28 de agosto de 1877, a los 45 años. Durante su enfermedad mantuvo su fe y confianza en Dios. Ella y Luis fueron canonizados juntos por el Papa Francisco en 2015. Sus cartas revelan a una mujer de profunda espiritualidad, humor y resiliencia.",
       "whyConfirmationSaint": "Santa Celia Martin fue empresaria, madre y santa — todo a la vez. Dirigió un negocio exitoso, crió a cinco futuras religiosas (¡incluyendo una Doctora de la Iglesia!) y enfrentó pérdidas terribles con fe y coraje. Es una santa poderosa para quien quiera equilibrar ambición y fe, y demuestra que las mujeres pueden ser líderes fuertes Y devotas de Dios.",
@@ -361,7 +629,10 @@
         "filename": "zelie-martin.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Hallow"]
+      "sources": [
+        "Loyola Press",
+        "Hallow"
+      ]
     },
     {
       "id": "mother-teresa",
@@ -371,13 +642,26 @@
       "deathDate": "1997-09-05",
       "canonizationDate": "2016-09-04",
       "country": "Albania",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "female",
       "lifeState": "religious",
       "ageCategory": "adult",
-      "patronOf": ["Jornada Mundial de la Juventud", "misioneras de la caridad"],
-      "tags": ["moderna", "misionera", "Premio Nobel", "caridad"],
-      "affinities": ["servicio comunitario", "ayudar a otros", "enfermería", "caridad"],
+      "patronOf": [
+        "World Youth Day",
+        "missionaries of charity"
+      ],
+      "tags": [
+        "modern",
+        "missionary",
+        "Nobel Prize",
+        "charity"
+      ],
+      "affinities": [
+        "community service",
+        "helping others",
+        "nursing",
+        "charity"
+      ],
       "quote": "Si juzgas a las personas, no tienes tiempo de amarlas.",
       "biography": "Anjezë Gonxhe Bojaxhiu nació el 26 de agosto de 1910 en Skopje, entonces parte del Imperio Otomano (actual Macedonia del Norte), en una familia albanesa. A los 18 años dejó su hogar para unirse a las Hermanas de Loreto en Irlanda y fue enviada a la India, donde enseñó en una escuela en Calcuta durante casi 20 años.\n\nEn 1946, durante un viaje en tren, Teresa experimentó lo que llamó 'una llamada dentro de la llamada' — una profunda inspiración de dejar el convento y servir a los más pobres entre los pobres. En 1950 fundó las Misioneras de la Caridad, comenzando con una escuela al aire libre para niños de los barrios marginales. La orden creció hasta operar hospicios, orfanatos y centros para enfermos y moribundos en todo el mundo.\n\nLa Madre Teresa recibió el Premio Nobel de la Paz en 1979. Tras su muerte en 1997, sus cartas privadas revelaron décadas de oscuridad espiritual — un profundo sufrimiento interior donde sentía la ausencia de Dios, pero continuó su obra con dedicación inquebrantable. Fue canonizada por el Papa Francisco en 2016.",
       "whyConfirmationSaint": "La Madre Teresa es la prueba de que una persona puede cambiar el mundo. No tenía dinero, poder político ni redes sociales — solo un compromiso inquebrantable de amar a las personas que nadie más quería amar. Si sientes el llamado a ayudar a otros, especialmente a quienes sufren, la Madre Teresa muestra cómo es la compasión radical. Sus luchas secretas también demuestran que incluso los santos tienen dudas — y siguen adelante de todos modos.",
@@ -385,7 +669,11 @@
         "filename": "mother-teresa.jpg",
         "attribution": "Dominio Público / Creative Commons"
       },
-      "sources": ["Loyola Press", "Ascension Press", "Hallow"]
+      "sources": [
+        "Loyola Press",
+        "Ascension Press",
+        "Hallow"
+      ]
     },
     {
       "id": "john-paul-ii",
@@ -395,13 +683,31 @@
       "deathDate": "2005-04-02",
       "canonizationDate": "2014-04-27",
       "country": "Polonia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
       "lifeState": "religious",
       "ageCategory": "adult",
-      "patronOf": ["Jornada Mundial de la Juventud", "familias", "jóvenes"],
-      "tags": ["moderno", "papa", "intelectual", "atlético", "políglota"],
-      "affinities": ["deportes", "senderismo", "esquí", "teatro", "filosofía", "escritura", "idiomas"],
+      "patronOf": [
+        "World Youth Day",
+        "families",
+        "young people"
+      ],
+      "tags": [
+        "modern",
+        "pope",
+        "intellectual",
+        "athletic",
+        "multilingual"
+      ],
+      "affinities": [
+        "sports",
+        "hiking",
+        "skiing",
+        "theater",
+        "philosophy",
+        "writing",
+        "languages"
+      ],
       "quote": "¡No tengan miedo! ¡Abran de par en par las puertas a Cristo!",
       "biography": "Karol Józef Wojtyła nació el 18 de mayo de 1920 en Wadowice, Polonia. Su infancia estuvo marcada por la pérdida — su madre murió cuando tenía ocho años y su hermano cuando tenía doce. Durante la Segunda Guerra Mundial, trabajó en una cantera y una fábrica química mientras estudiaba secretamente para el sacerdocio bajo la ocupación nazi.\n\nOrdenado en 1946, Karol se convirtió en obispo, luego en cardenal, y en 1978 fue elegido Papa — el primer papa no italiano en 455 años y el primer papa polaco de la historia. Como Juan Pablo II, transformó el papado, viajando a 129 países, estableciendo la Jornada Mundial de la Juventud y desempeñando un papel clave en la caída del comunismo en Europa del Este.\n\nSobrevivió un intento de asesinato en 1981 y famosamente visitó y perdonó a su agresor en prisión. Escribió 14 encíclicas y era conocido por su amor a los jóvenes, los deportes y las artes. Murió el 2 de abril de 2005 y fue canonizado en 2014.",
       "whyConfirmationSaint": "San Juan Pablo II fue el 'Papa de los Jóvenes' — literalmente creó la Jornada Mundial de la Juventud porque amaba a los jóvenes. Fue atleta, actor, filósofo, poeta y líder que cambió el mundo. Enfrentó a los nazis, a los comunistas y la bala de un asesino, y nunca retrocedió. Si quieres un santo que vivió la vida al máximo mientras cambiaba la historia, JPII es tu hombre.",
@@ -409,7 +715,11 @@
         "filename": "john-paul-ii.jpg",
         "attribution": "Dominio Público / Vatican Media"
       },
-      "sources": ["Loyola Press", "Focus", "Hallow"]
+      "sources": [
+        "Loyola Press",
+        "Focus",
+        "Hallow"
+      ]
     },
     {
       "id": "pier-giorgio-frassati",
@@ -419,13 +729,30 @@
       "deathDate": "1925-07-04",
       "canonizationDate": null,
       "country": "Italia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["jóvenes adultos", "estudiantes", "atletas"],
-      "tags": ["joven", "moderno", "atlético", "caritativo", "Beato"],
-      "affinities": ["senderismo", "montañismo", "deportes", "esquí", "ayudar a otros", "amistad"],
+      "patronOf": [
+        "young adults",
+        "students",
+        "athletes"
+      ],
+      "tags": [
+        "young",
+        "modern",
+        "athletic",
+        "charitable",
+        "Blessed"
+      ],
+      "affinities": [
+        "hiking",
+        "mountain climbing",
+        "sports",
+        "skiing",
+        "helping others",
+        "friendship"
+      ],
       "quote": "¡Hacia la cumbre! Verso l'alto!",
       "biography": "Pier Giorgio Frassati nació el 6 de abril de 1901 en Turín, Italia, en una familia adinerada y prominente — su padre era dueño del periódico La Stampa y sirvió como embajador italiano en Alemania. A pesar de su origen privilegiado, Pier Giorgio se sentía atraído por los pobres y marginados.\n\nEra un ávido montañista, esquiador y amante del aire libre, famoso por su alegría contagiosa y su amor por la aventura. Se unió a la Sociedad de San Vicente de Paúl y secretamente regalaba su dinero, el pasaje de autobús e incluso su ropa a los pobres. También era políticamente activo, oponiéndose tanto al Fascismo como al Comunismo, y una vez fue golpeado por la policía fascista en una manifestación.\n\nEn junio de 1925, Pier Giorgio contrajo polio, probablemente de las personas enfermas que visitaba regularmente. Murió el 4 de julio de 1925, a los 24 años. Su familia se sorprendió cuando miles de personas pobres que nunca habían conocido aparecieron en su funeral. Fue beatificado por Juan Pablo II en 1990, quien lo llamó 'el hombre de las ocho Bienaventuranzas'.",
       "whyConfirmationSaint": "Pier Giorgio Frassati es el santo para aventureros, atletas y cualquiera que ame la vida. Escalaba montañas, hacía bromas a sus amigos y se divertía enormemente — mientras secretamente daba todo lo que tenía a los pobres. Su lema era '¡Verso l'alto!' — '¡Hacia la cumbre!' Demuestra que ser santo no significa ser aburrido. Significa vivir la vida plenamente y amar a los demás radicalmente.",
@@ -433,23 +760,43 @@
         "filename": "pier-giorgio-frassati.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Focus", "Ascension Press", "Hallow"]
+      "sources": [
+        "Focus",
+        "Ascension Press",
+        "Hallow"
+      ]
     },
     {
       "id": "kateri-tekakwitha",
       "name": "Santa Kateri Tekakwitha",
       "feastDay": "07-14",
-      "birthDate": "1656",
+      "birthDate": "1656-01-01",
       "deathDate": "1680-04-17",
       "canonizationDate": "2012-10-21",
       "country": "Estados Unidos",
-      "region": "Norteamérica",
+      "region": "North America",
       "gender": "female",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["ecología", "medio ambiente", "nativos americanos", "exiliados"],
-      "tags": ["nativa americana", "naturaleza", "mohawk", "conversa"],
-      "affinities": ["naturaleza", "medio ambiente", "arte", "manualidades", "oración"],
+      "patronOf": [
+        "ecology",
+        "environment",
+        "Native Americans",
+        "exiles"
+      ],
+      "tags": [
+        "Native American",
+        "nature",
+        "Mohawk",
+        "convert"
+      ],
+      "affinities": [
+        "nature",
+        "environment",
+        "art",
+        "crafts",
+        "prayer"
+      ],
       "quote": "¿Quién me enseñará lo que más agrada a Dios, para que yo lo haga?",
       "biography": "Kateri Tekakwitha nació en 1656 en la aldea mohawk de Ossernenon (actual Auriesville, Nueva York), hija de un jefe mohawk y una madre cristiana algonquina. A los cuatro años, una epidemia de viruela mató a sus padres y hermano, dejando a Kateri con la piel marcada y la vista debilitada.\n\nCriada por su tío, un jefe mohawk que se oponía al cristianismo, Kateri sin embargo se sintió atraída por la fe. A los 19 años fue bautizada por un misionero jesuita y tomó el nombre Kateri (Catalina). Su conversión le trajo una severa persecución de su tribu — fue burlada, le negaban comida los domingos e incluso fue amenazada de muerte.\n\nKateri huyó al asentamiento cristiano nativo de Kahnawake cerca de Montreal, donde vivió una vida de extraordinaria oración, penitencia y cuidado de enfermos y ancianos. Murió el 17 de abril de 1680, a los 24 años. Los testigos dijeron que sus cicatrices de viruela desaparecieron en el momento de su muerte. Fue canonizada en 2012, convirtiéndose en la primera santa nativa americana.",
       "whyConfirmationSaint": "Santa Kateri Tekakwitha es una elección increíble para quien ame la naturaleza y el medio ambiente — es la patrona de la ecología. También representa el coraje de seguir tu fe incluso cuando tu propia familia se opone. Como primera santa nativa americana, es un poderoso recordatorio de que la santidad existe en todas las culturas y todos los pueblos. Es perfecta para quien se sienta diferente o haya tenido que estar solo.",
@@ -457,23 +804,41 @@
         "filename": "kateri-tekakwitha.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Lifeteen"]
+      "sources": [
+        "Loyola Press",
+        "Lifeteen"
+      ]
     },
     {
       "id": "augustine-of-hippo",
       "name": "San Agustín de Hipona",
       "feastDay": "08-28",
-      "birthDate": "354-11-13",
+      "birthDate": "0354-11-13",
       "deathDate": "430-08-28",
       "canonizationDate": null,
       "country": "Argelia",
-      "region": "África",
+      "region": "Africa",
       "gender": "male",
       "lifeState": "religious",
       "ageCategory": "adult",
-      "patronOf": ["cerveceros", "teólogos", "impresores", "problemas de la vista"],
-      "tags": ["converso", "Doctor de la Iglesia", "intelectual", "africano"],
-      "affinities": ["lectura", "escritura", "filosofía", "debate"],
+      "patronOf": [
+        "brewers",
+        "theologians",
+        "printers",
+        "sore eyes"
+      ],
+      "tags": [
+        "convert",
+        "Doctor of the Church",
+        "intellectual",
+        "African"
+      ],
+      "affinities": [
+        "reading",
+        "writing",
+        "philosophy",
+        "debating"
+      ],
       "quote": "Nos hiciste para ti, Señor, y nuestro corazón está inquieto hasta que descanse en ti.",
       "biography": "Agustín nació el 13 de noviembre de 354 en Tagaste, Numidia (actual Souk Ahras, Argelia), en el norte de África. Su madre, Santa Mónica, era una devota cristiana, pero Agustín pasó su juventud persiguiendo placeres mundanos, uniéndose a la herejía maniquea y viviendo con una compañera con quien tuvo un hijo.\n\nA pesar de su mente brillante, Agustín luchó durante años con la fe y la moralidad. Su madre oraba incansablemente por su conversión. En Milán, encontró la predicación de San Ambrosio, y en 386, durante una crisis espiritual en un jardín, escuchó la voz de un niño que decía 'Toma y lee'. Abrió la Biblia en Romanos 13:13-14 y se convirtió al instante.\n\nBautizado en 387, Agustín se hizo sacerdote y luego Obispo de Hipona en el norte de África. Se convirtió en uno de los escritores más influyentes de la historia cristiana, autor de las 'Confesiones', 'La Ciudad de Dios' y cientos de otras obras. Murió en 430 mientras los vándalos sitiaban su ciudad. Es Doctor de la Iglesia y uno de los pensadores más importantes de la civilización occidental.",
       "whyConfirmationSaint": "San Agustín demuestra que nunca es tarde para cambiar tu vida. Cometió todos los errores del libro — fiestas, seguir enseñanzas falsas, huir de Dios — antes de tener una de las conversiones más dramáticas de la historia. Si alguna vez has sentido que has fallado demasiado para que Dios te ame, Agustín dice lo contrario. También es genial para quien ame el pensamiento profundo y las grandes preguntas sobre la vida.",
@@ -481,23 +846,41 @@
         "filename": "augustine-of-hippo.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Ascension Press"]
+      "sources": [
+        "Loyola Press",
+        "Ascension Press"
+      ]
     },
     {
       "id": "josephine-bakhita",
       "name": "Santa Josefina Bakhita",
       "feastDay": "02-08",
-      "birthDate": "1869",
+      "birthDate": "1869-01-01",
       "deathDate": "1947-02-08",
       "canonizationDate": "2000-10-01",
       "country": "Sudán",
-      "region": "África",
+      "region": "Africa",
       "gender": "female",
       "lifeState": "religious",
       "ageCategory": "adult",
-      "patronOf": ["sobrevivientes de trata de personas", "Sudán", "víctimas de esclavitud moderna"],
-      "tags": ["africana", "conversa", "moderna", "sobreviviente", "religiosa"],
-      "affinities": ["ayudar a otros", "valentía", "oración", "enseñanza"],
+      "patronOf": [
+        "human trafficking survivors",
+        "Sudan",
+        "modern slavery victims"
+      ],
+      "tags": [
+        "African",
+        "convert",
+        "modern",
+        "survivor",
+        "religious"
+      ],
+      "affinities": [
+        "helping others",
+        "courage",
+        "prayer",
+        "teaching"
+      ],
       "quote": "Si me encontrara con los traficantes de esclavos que me secuestraron, e incluso con quienes me torturaron, me arrodillaría y besaría sus manos. Porque si eso no hubiera sucedido, no sería cristiana ni religiosa hoy.",
       "biography": "Bakhita nació alrededor de 1869 en Darfur, Sudán. A los siete años fue secuestrada por traficantes de esclavos que le dieron el nombre 'Bakhita' (que significa 'afortunada' — una cruel ironía). Durante los siguientes 12 años fue vendida cinco veces, soportando abusos horribles incluyendo sal frotada en 60 cortes tallados en su pecho.\n\nEn 1885 fue comprada por un cónsul italiano que la trató con amabilidad, y eventualmente viajó a Italia con su familia. Mientras cuidaba a la hija del cónsul en un convento canossiano en Venecia, Bakhita encontró el cristianismo por primera vez. Dijo que sentía una fuerza inexplicable atrayéndola hacia Dios — el 'Amo' que siempre había sentido en su corazón sin conocer Su nombre.\n\nEn 1890, tras una batalla legal que estableció que era libre bajo la ley italiana (ya que Italia no reconocía la esclavitud), Bakhita eligió ser bautizada y entrar en las Hermanas Canossianas. Pasó los siguientes 50 años en el convento, sirviendo como cocinera, sacristana y portera. Su presencia gentil y alegre atrajo a muchas personas a la fe. Fue canonizada en el año 2000.",
       "whyConfirmationSaint": "La historia de Santa Josefina Bakhita es una de las más poderosas de la Iglesia. Pasó de ser una niña secuestrada y esclavizada a una mujer libre que eligió entregar su libertad a Dios. Su capacidad de perdonar y encontrar alegría después de un sufrimiento inimaginable es sobrehumana — es la gracia de Dios en acción. Es patrona de los sobrevivientes de trata de personas y un faro de esperanza para quien haya sufrido injusticia.",
@@ -505,23 +888,37 @@
         "filename": "josephine-bakhita.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Hallow"]
+      "sources": [
+        "Loyola Press",
+        "Hallow"
+      ]
     },
     {
       "id": "juan-diego",
       "name": "San Juan Diego",
       "feastDay": "12-09",
-      "birthDate": "1474",
+      "birthDate": "1474-01-01",
       "deathDate": "1548-05-30",
       "canonizationDate": "2002-07-31",
       "country": "México",
-      "region": "América Latina",
+      "region": "Latin America",
       "gender": "male",
       "lifeState": "married",
       "ageCategory": "adult",
-      "patronOf": ["pueblos indígenas de las Américas"],
-      "tags": ["indígena", "latinoamericano", "mariano", "visionario"],
-      "affinities": ["oración", "humildad", "naturaleza"],
+      "patronOf": [
+        "Indigenous peoples of the Americas"
+      ],
+      "tags": [
+        "Indigenous",
+        "Latin American",
+        "Marian",
+        "visionary"
+      ],
+      "affinities": [
+        "prayer",
+        "humility",
+        "nature"
+      ],
       "quote": "¿No estoy yo aquí, que soy tu madre? ¿No estás bajo mi sombra y protección?",
       "biography": "Juan Diego Cuauhtlatoatzin nació en 1474 en Cuautitlán, cerca de la actual Ciudad de México. Era un azteca del pueblo llano que se convirtió al cristianismo tras la conquista española. Era un hombre humilde que caminaba kilómetros cada día para asistir a Misa y clases de catecismo.\n\nEl 9 de diciembre de 1531, Juan Diego caminaba hacia Misa cuando la Virgen María se le apareció en el cerro del Tepeyac. Le pidió que dijera al obispo que construyera una iglesia en el cerro. El obispo, Juan de Zumárraga, fue escéptico y pidió una prueba. El 12 de diciembre, María apareció de nuevo y le dijo a Juan Diego que recogiera rosas de la cima del cerro — milagrosamente florecidas en invierno. Cuando Juan Diego abrió su tilma (manto) para mostrar al obispo las rosas, la imagen de Nuestra Señora de Guadalupe apareció milagrosamente impresa en la tela.\n\nEste acontecimiento llevó a la conversión de millones de indígenas al cristianismo. Juan Diego pasó el resto de su vida como guardián de la capilla en el Tepeyac. Fue canonizado en 2002 por Juan Pablo II en la Ciudad de México. Su tilma, desafiando toda explicación científica, permanece preservada en la Basílica de Nuestra Señora de Guadalupe.",
       "whyConfirmationSaint": "San Juan Diego es especialmente significativo para cualquiera con herencia latinoamericana. Fue un hombre humilde y ordinario a quien la Virgen María eligió para una misión extraordinaria. Su historia nos recuerda que Dios no llama a los capacitados — capacita a los llamados. Si alguna vez te has sentido demasiado ordinario para que Dios te use, la historia de Juan Diego te hará cambiar de opinión.",
@@ -529,13 +926,17 @@
         "filename": "juan-diego.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Ascension Press", "Hallow"]
+      "sources": [
+        "Loyola Press",
+        "Ascension Press",
+        "Hallow"
+      ]
     },
     {
       "id": "pedro-calungsod",
       "name": "San Pedro Calungsod",
       "feastDay": "04-02",
-      "birthDate": "1654",
+      "birthDate": "1654-01-01",
       "deathDate": "1672-04-02",
       "canonizationDate": "2012-10-21",
       "country": "Filipinas",
@@ -543,9 +944,24 @@
       "gender": "male",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["juventud filipina", "catequistas", "monaguillos"],
-      "tags": ["joven", "mártir", "asiático", "catequista", "misionero"],
-      "affinities": ["enseñanza", "valentía", "fe", "aventura"],
+      "patronOf": [
+        "Filipino youth",
+        "catechists",
+        "altar servers"
+      ],
+      "tags": [
+        "young",
+        "martyr",
+        "Asian",
+        "catechist",
+        "missionary"
+      ],
+      "affinities": [
+        "teaching",
+        "courage",
+        "faith",
+        "adventure"
+      ],
       "quote": null,
       "biography": "Pedro Calungsod nació alrededor de 1654 en la región de Visayas en Filipinas. Siendo muy joven, se convirtió en catequista — maestro de la fe — y se unió a los misioneros jesuitas españoles en una peligrosa misión a las Islas Marianas (actual Guam) en 1668.\n\nA pesar de su juventud, Pedro demostró ser un misionero excepcional, ayudando a bautizar a cientos de personas y enseñándoles sobre el cristianismo. También sirvió como traductor, sacristán y cantor. Su espíritu alegre y su dedicación lo hicieron querido por el pueblo chamorro local.\n\nEl 2 de abril de 1672, cuando Pedro tenía unos 17 años, él y el Padre Diego Luis de San Vitores fueron a bautizar a una niña en la isla de Guam. El padre de la niña, instigado por un chino que había difundido mentiras sobre el bautismo, los atacó. Pedro podría haber escapado — era joven, atlético y buen nadador — pero eligió quedarse con el Padre Diego. Ambos fueron asesinados. Pedro fue canonizado en 2012.",
       "whyConfirmationSaint": "San Pedro Calungsod fue un misionero adolescente que cruzó el océano para compartir su fe — y finalmente dio su vida por ella. Es un santo especialmente significativo para los católicos filipinos y para cualquiera de herencia asiática. Pudo haberse salvado pero eligió la lealtad y el coraje. Es el patrón perfecto para quien quiera ser valiente al compartir su fe.",
@@ -553,7 +969,10 @@
         "filename": "pedro-calungsod.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Ascension Press", "Enciclopedia Católica"]
+      "sources": [
+        "Ascension Press",
+        "Enciclopedia Católica"
+      ]
     },
     {
       "id": "rose-of-lima",
@@ -563,13 +982,29 @@
       "deathDate": "1617-08-24",
       "canonizationDate": "1671-04-12",
       "country": "Perú",
-      "region": "América Latina",
+      "region": "Latin America",
       "gender": "female",
       "lifeState": "single",
       "ageCategory": "young",
-      "patronOf": ["América Latina", "Filipinas", "jardineros", "floristas"],
-      "tags": ["latinoamericana", "mística", "dominica", "primera santa de las Américas"],
-      "affinities": ["jardinería", "costura", "oración", "ayudar a otros"],
+      "patronOf": [
+        "Latin America",
+        "Philippines",
+        "gardeners",
+        "florists"
+      ],
+      "tags": [
+        "Latin American",
+        "mystic",
+        "Dominican",
+        "first saint of the Americas"
+      ],
+      "affinities": [
+        "gardening",
+        "sewing",
+        "prayer",
+        "helping others",
+        "cooking"
+      ],
       "quote": "Fuera de la Cruz, no hay otra escalera por la que podamos subir al cielo.",
       "biography": "Isabel Flores de Oliva nació el 20 de abril de 1586 en Lima, Perú. Fue apodada 'Rosa' por su extraordinaria belleza — una belleza que deliberadamente minimizaba, incluso frotando pimienta en su rostro para evitar atraer pretendientes, porque quería dedicarse enteramente a Dios.\n\nRosa se convirtió en terciaria dominica y vivió en una pequeña choza en el jardín de su familia, donde pasaba horas en oración y penitencia. Cultivaba flores y hacía bordados para ganar dinero para apoyar a su familia y ayudar a los pobres. También preparó una habitación en la casa para cuidar a niños y ancianos enfermos y sin hogar.\n\nA pesar de severas pruebas espirituales y sufrimiento físico, Rosa mantuvo una profunda vida de oración mística. Murió el 24 de agosto de 1617, a los 31 años. Fue canonizada en 1671, convirtiéndose en la primera persona nacida en las Américas en ser declarada santa. Es la patrona de toda América Latina y Filipinas.",
       "whyConfirmationSaint": "Santa Rosa de Lima es una elección maravillosa para cualquiera con raíces latinoamericanas — es la patrona de toda América Latina y la primera santa nacida en las Américas. También es genial para quien ame la jardinería, la naturaleza o el trabajo creativo. Rosa demostró que puedes servir a Dios justo donde estás, usando los dones que tengas, aunque tu vida parezca sencilla desde afuera.",
@@ -577,7 +1012,10 @@
         "filename": "rose-of-lima.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Enciclopedia Católica"]
+      "sources": [
+        "Loyola Press",
+        "Enciclopedia Católica"
+      ]
     },
     {
       "id": "maximilian-kolbe",
@@ -587,13 +1025,31 @@
       "deathDate": "1941-08-14",
       "canonizationDate": "1982-10-10",
       "country": "Polonia",
-      "region": "Europa",
+      "region": "Europe",
       "gender": "male",
-      "lifeState": "religious",
+      "lifeState": "martyr",
       "ageCategory": "adult",
-      "patronOf": ["periodistas", "prisioneros", "adictos", "presos políticos", "radioaficionados"],
-      "tags": ["mártir", "moderno", "franciscano", "mariano", "medios"],
-      "affinities": ["escritura", "periodismo", "medios de comunicación", "tecnología", "oración"],
+      "patronOf": [
+        "journalists",
+        "prisoners",
+        "drug addicts",
+        "political prisoners",
+        "amateur radio operators"
+      ],
+      "tags": [
+        "martyr",
+        "modern",
+        "Franciscan",
+        "Marian",
+        "media"
+      ],
+      "affinities": [
+        "writing",
+        "journalism",
+        "media",
+        "technology",
+        "prayer"
+      ],
       "quote": "Nadie en el mundo puede cambiar la Verdad. Lo que podemos y debemos hacer es buscar la verdad y servirla cuando la hayamos encontrado.",
       "biography": "Rajmund Kolbe nació el 8 de enero de 1894 en Zduńska Wola, Polonia. Como fraile franciscano, tomó el nombre Maximiliano y se convirtió en pionero de los medios católicos, fundando una revista, una estación de radio y un monasterio que se convirtió en la comunidad religiosa más grande del mundo en ese momento, con más de 700 frailes.\n\nCuando los nazis invadieron Polonia, Maximiliano refugió a miles de personas, incluyendo 2,000 judíos, en su monasterio. Fue arrestado por la Gestapo en 1941 y enviado al campo de concentración de Auschwitz, prisionero #16670.\n\nEn julio de 1941, cuando un prisionero escapó, los nazis seleccionaron a diez hombres para morir de hambre como represalia. Cuando uno de los seleccionados, Franciszek Gajowniczek, gritó que tenía esposa e hijos, Maximiliano se adelantó y se ofreció a tomar su lugar. Tras dos semanas de inanición, Maximiliano fue el último sobreviviente y fue asesinado con una inyección letal el 14 de agosto de 1941. Fue canonizado en 1982 como 'Mártir de la Caridad'.",
       "whyConfirmationSaint": "San Maximiliano Kolbe es el ejemplo máximo de 'nadie tiene amor más grande que el que da la vida por sus amigos'. Literalmente dio su vida para que un desconocido pudiera vivir. También fue un pionero de los medios de comunicación que usó la última tecnología para difundir la fe — como un influencer católico antes de que eso existiera. Si quieres un santo que fue brillante y heroicamente generoso, elige a Maximiliano.",
@@ -601,7 +1057,98 @@
         "filename": "maximilian-kolbe.jpg",
         "attribution": "Dominio Público"
       },
-      "sources": ["Loyola Press", "Focus", "Ascension Press"]
+      "sources": [
+        "Loyola Press",
+        "Focus",
+        "Ascension Press"
+      ]
+    },
+    {
+      "id": "monica",
+      "name": "Santa Mónica",
+      "feastDay": "08-27",
+      "birthDate": "0331-01-01",
+      "deathDate": "0387-01-01",
+      "canonizationDate": null,
+      "country": "Argelia",
+      "region": "Africa",
+      "gender": "female",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "mothers",
+        "married women",
+        "abuse victims",
+        "alcoholics",
+        "difficult marriages"
+      ],
+      "tags": [
+        "mother",
+        "perseverance",
+        "prayer",
+        "conversion"
+      ],
+      "affinities": [
+        "prayer",
+        "family",
+        "perseverance",
+        "community service",
+        "cooking"
+      ],
+      "quote": "Nada está lejos de Dios.",
+      "biography": "Mónica nació alrededor del año 331 d.C. en Tagaste, una ciudad del norte de África romana (la actual Argelia). Criada en un hogar cristiano, fue casada joven con Patricio, un funcionario romano pagano de temperamento violento. A pesar del trato duro de su esposo y la hostilidad de su suegra, Mónica respondió con paciencia, oración y testimonio silencioso, logrando finalmente que tanto su esposo como su suegra abrazaran el cristianismo antes de la muerte de Patricio.\n\nPero la mayor lucha de Mónica fue su brillante e inquieto hijo Agustín. Durante casi 17 años, lloró y oró incansablemente mientras él perseguía una vida de placeres y abrazaba una filosofía herética tras otra. Lo siguió desde el norte de África hasta Roma y luego a Milán, sin perder nunca la esperanza. Cuando Agustín finalmente se convirtió y fue bautizado por San Ambrosio en el 387, la alegría de Mónica fue completa.\n\nMurió ese mismo año en Ostia, Italia, en paz sabiendo que sus oraciones habían sido respondidas. Agustín se convirtió en uno de los más grandes santos y teólogos de la historia de la Iglesia, y siempre atribuyó la fe inquebrantable y las lágrimas de su madre como el instrumento de su conversión.",
+      "whyConfirmationSaint": "Santa Mónica es la patrona perfecta si tienes a alguien en tu vida por quien estás rezando — un familiar, un amigo — que parece estar lejos de Dios. Mónica rezó por su hijo Agustín durante 17 años sin rendirse, y él se convirtió en uno de los santos más grandes de la historia. Ella demuestra que la oración persistente y amorosa puede mover montañas. Si valoras la familia, la paciencia y nunca rendirte con las personas que amas, Mónica es tu santa.",
+      "image": {
+        "filename": "monica.jpg",
+        "attribution": "Public Domain"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Loyola Press"
+      ]
+    },
+    {
+      "id": "charbel-makhlouf",
+      "name": "San Charbel Makhlouf",
+      "feastDay": "07-24",
+      "birthDate": "1828-05-08",
+      "deathDate": "1898-12-24",
+      "canonizationDate": "1977-10-09",
+      "country": "Líbano",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Lebanon",
+        "healing",
+        "peace"
+      ],
+      "tags": [
+        "hermit",
+        "mystic",
+        "modern",
+        "Maronite",
+        "miracle worker"
+      ],
+      "affinities": [
+        "prayer",
+        "nature",
+        "silence",
+        "hiking",
+        "philosophy"
+      ],
+      "quote": "Señor, no te pido que me quites las pruebas, sino que me des la fuerza para soportarlas.",
+      "biography": "Youssef Antoun Makhlouf nació el 8 de mayo de 1828 en el pueblo montañoso de Bekaa Kafra, en el norte del Líbano, siendo el menor de cinco hijos. A los 23 años, dejó su hogar sin avisar a su familia e ingresó a la Orden Maronita Libanesa, tomando el nombre de Charbel en honor a un mártir del siglo II.\n\nTras su ordenación, Charbel pasó 16 años como monje en el Monasterio de San Marón en Annaya, donde se hizo conocido por su profunda oración, ayuno estricto y humilde obediencia. En 1875, recibió permiso para vivir como ermitaño en la cercana Ermita de los Santos Pedro y Pablo, donde pasó los últimos 23 años de su vida en soledad, silencio y comunión intensa con Dios.\n\nCharbel murió en la Nochebuena de 1898. Inmediatamente después de su entierro, los testigos reportaron una luz brillante que emanaba de su tumba, y su cuerpo fue encontrado incorrupto. Numerosas curaciones milagrosas han sido atribuidas a su intercesión, atrayendo peregrinos de todas las religiones — cristianos, musulmanes y drusos — a su santuario en Annaya. Fue canonizado por el Papa Pablo VI en 1977.",
+      "whyConfirmationSaint": "San Charbel es una elección increíble si te atrae la fortaleza silenciosa y la paz interior. En un mundo lleno de ruido y distracciones, Charbel encontró a Dios en el silencio y la soledad, y esa conexión profunda le dio un poder que todavía toca a las personas hoy a través de innumerables curaciones. Él demuestra que no necesitas ser ruidoso o famoso para hacer un impacto. Si valoras la paz, la oración y profundizar en lugar de expandirte, Charbel es tu santo.",
+      "image": {
+        "filename": "charbel-makhlouf.jpg",
+        "attribution": "Public Domain"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Loyola Press"
+      ]
     }
   ]
 }
