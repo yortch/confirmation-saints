@@ -1,31 +1,46 @@
 import SwiftUI
 
 struct SaintDetailView: View {
-    let saint: Saint
+    let saintId: String
+    var viewModel: SaintListViewModel
     @Environment(\.appLanguage) private var language
 
+    /// Reactively looks up the saint from the viewModel's current (language-appropriate) data.
+    private var saint: Saint? {
+        viewModel.saints.first { $0.id == saintId }
+    }
+
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                headerSection
-                quoteSection
-                whySection
-                biographySection
-                detailsSection
-                patronSection
-                tagsSection
-                sourcesSection
+        Group {
+            if let saint {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        headerSection(saint)
+                        quoteSection(saint)
+                        whySection(saint)
+                        biographySection(saint)
+                        detailsSection(saint)
+                        patronSection(saint)
+                        tagsSection(saint)
+                        sourcesSection(saint)
+                    }
+                    .padding()
+                }
+                .navigationTitle(saint.name)
+            } else {
+                ContentUnavailableView(
+                    AppStrings.localized("Content Loading...", language: language),
+                    systemImage: "person.crop.circle.badge.questionmark"
+                )
             }
-            .padding()
         }
-        .navigationTitle(saint.name)
         .navigationBarTitleDisplayMode(.large)
     }
 
     // MARK: - Header
 
     @ViewBuilder
-    private var headerSection: some View {
+    private func headerSection(_ saint: Saint) -> some View {
         VStack(spacing: 12) {
             SaintImageView(saint: saint, size: 120)
 
@@ -68,7 +83,7 @@ struct SaintDetailView: View {
     // MARK: - Quote
 
     @ViewBuilder
-    private var quoteSection: some View {
+    private func quoteSection(_ saint: Saint) -> some View {
         if let quote = saint.quote {
             VStack(spacing: 8) {
                 Image(systemName: "quote.opening")
@@ -92,7 +107,7 @@ struct SaintDetailView: View {
     // MARK: - Why This Saint
 
     @ViewBuilder
-    private var whySection: some View {
+    private func whySection(_ saint: Saint) -> some View {
         if let why = saint.whyConfirmationSaint {
             VStack(alignment: .leading, spacing: 8) {
                 Label(AppStrings.localized("Why Choose This Saint?", language: language), systemImage: "heart.fill")
@@ -110,7 +125,7 @@ struct SaintDetailView: View {
     // MARK: - Biography
 
     @ViewBuilder
-    private var biographySection: some View {
+    private func biographySection(_ saint: Saint) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Label(AppStrings.localized("Biography", language: language), systemImage: "book.fill")
                 .font(.title3.bold())
@@ -122,7 +137,7 @@ struct SaintDetailView: View {
     // MARK: - Details
 
     @ViewBuilder
-    private var detailsSection: some View {
+    private func detailsSection(_ saint: Saint) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Label(AppStrings.localized("Details", language: language), systemImage: "info.circle.fill")
                 .font(.title3.bold())
@@ -162,7 +177,7 @@ struct SaintDetailView: View {
     // MARK: - Patron Of
 
     @ViewBuilder
-    private var patronSection: some View {
+    private func patronSection(_ saint: Saint) -> some View {
         if !saint.patronOf.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
                 Label(AppStrings.localized("Patron Of", language: language), systemImage: "shield.fill")
@@ -184,7 +199,7 @@ struct SaintDetailView: View {
     // MARK: - Tags
 
     @ViewBuilder
-    private var tagsSection: some View {
+    private func tagsSection(_ saint: Saint) -> some View {
         if !saint.affinities.isEmpty || !saint.tags.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
                 Label(AppStrings.localized("Interests & Tags", language: language), systemImage: "tag.fill")
@@ -206,7 +221,7 @@ struct SaintDetailView: View {
     // MARK: - Sources
 
     @ViewBuilder
-    private var sourcesSection: some View {
+    private func sourcesSection(_ saint: Saint) -> some View {
         if !saint.sources.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
                 Label(AppStrings.localized("Sources", language: language), systemImage: "doc.text.fill")

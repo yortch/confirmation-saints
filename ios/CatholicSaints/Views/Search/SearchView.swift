@@ -74,7 +74,7 @@ struct SearchView: View {
                         ContentUnavailableView.search(text: viewModel.searchText)
                     } else {
                         List(viewModel.filteredSaints) { saint in
-                            NavigationLink(value: saint) {
+                            NavigationLink(value: saint.id) {
                                 SaintRowView(saint: saint)
                             }
                         }
@@ -85,8 +85,8 @@ struct SearchView: View {
             .navigationTitle(AppStrings.localized("Find Your Saint", language: language))
             .searchable(text: $viewModel.searchText,
                         prompt: AppStrings.localized("Name, interest, country...", language: language))
-            .navigationDestination(for: Saint.self) { saint in
-                SaintDetailView(saint: saint)
+            .navigationDestination(for: String.self) { saintId in
+                SaintDetailView(saintId: saintId, viewModel: viewModel)
             }
         }
     }

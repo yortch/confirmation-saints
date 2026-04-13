@@ -38,7 +38,9 @@ struct CategoryBrowseView: View {
                     NavigationLink {
                         CategorySaintsListView(
                             title: value.label,
-                            saints: viewModel.saints(forCategoryGroup: group.id, valueId: value.id)
+                            groupId: group.id,
+                            valueId: value.id,
+                            viewModel: viewModel
                         )
                     } label: {
                         HStack {
@@ -68,8 +70,14 @@ struct CategoryBrowseView: View {
 
 struct CategorySaintsListView: View {
     let title: String
-    let saints: [Saint]
+    let groupId: String
+    let valueId: String
+    var viewModel: SaintListViewModel
     @Environment(\.appLanguage) private var language
+
+    private var saints: [Saint] {
+        viewModel.saints(forCategoryGroup: groupId, valueId: valueId)
+    }
 
     var body: some View {
         Group {
@@ -82,7 +90,7 @@ struct CategorySaintsListView: View {
             } else {
                 List(saints) { saint in
                     NavigationLink {
-                        SaintDetailView(saint: saint)
+                        SaintDetailView(saintId: saint.id, viewModel: viewModel)
                     } label: {
                         SaintRowView(saint: saint)
                     }
