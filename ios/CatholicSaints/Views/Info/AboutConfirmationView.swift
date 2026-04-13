@@ -65,12 +65,9 @@ struct AboutConfirmationView: View {
     }
 
     private func markdownAttributedString(_ text: String) -> AttributedString {
-        // Markdown treats single newlines as spaces. Convert \n to double-newline
-        // for proper line break rendering, preserving existing paragraph breaks.
-        let normalized = text
-            .replacingOccurrences(of: "\n\n", with: "⏎⏎")  // protect paragraph breaks
-            .replacingOccurrences(of: "\n", with: "  \n")    // trailing double-space = hard line break in Markdown
-            .replacingOccurrences(of: "⏎⏎", with: "\n\n")   // restore paragraph breaks
+        // Convert every newline to a Markdown hard line break (two trailing spaces)
+        // so bullets, numbered lists, and bold section headings render with visible breaks.
+        let normalized = text.replacingOccurrences(of: "\n", with: "  \n")
         return (try? AttributedString(markdown: normalized)) ?? AttributedString(text)
     }
 
