@@ -9,24 +9,78 @@
       "description": "Encuentra santos por su patronazgo",
       "icon": "shield.fill",
       "values": [
-        {"id": "athletes", "label": "Atletas y Deportistas"},
-        {"id": "students", "label": "Estudiantes y Académicos"},
-        {"id": "musicians", "label": "Músicos y Cantantes"},
-        {"id": "animals", "label": "Animales y Ecología"},
-        {"id": "missionaries", "label": "Misioneros"},
-        {"id": "youth", "label": "Juventud y Jóvenes Adultos"},
-        {"id": "mothers", "label": "Madres"},
-        {"id": "fathers", "label": "Padres"},
-        {"id": "families", "label": "Familias"},
-        {"id": "doctors", "label": "Médicos y Sanadores"},
-        {"id": "lawyers", "label": "Abogados y Políticos"},
-        {"id": "journalists", "label": "Periodistas y Escritores"},
-        {"id": "soldiers", "label": "Soldados y Militares"},
-        {"id": "prisoners", "label": "Prisioneros y Cautivos"},
-        {"id": "internet", "label": "Internet y Tecnología"},
-        {"id": "forgiveness", "label": "Perdón y Misericordia"},
-        {"id": "indigenous", "label": "Pueblos Indígenas"},
-        {"id": "trafficking", "label": "Sobrevivientes de Trata de Personas"}
+        {
+          "id": "athletes",
+          "label": "Atletas y Deportistas"
+        },
+        {
+          "id": "students",
+          "label": "Estudiantes y Académicos"
+        },
+        {
+          "id": "musicians",
+          "label": "Músicos y Cantantes"
+        },
+        {
+          "id": "animals",
+          "label": "Animales y Ecología"
+        },
+        {
+          "id": "missionaries",
+          "label": "Misioneros"
+        },
+        {
+          "id": "youth",
+          "label": "Juventud y Jóvenes Adultos"
+        },
+        {
+          "id": "mothers",
+          "label": "Madres"
+        },
+        {
+          "id": "fathers",
+          "label": "Padres"
+        },
+        {
+          "id": "families",
+          "label": "Familias"
+        },
+        {
+          "id": "doctors",
+          "label": "Médicos y Sanadores"
+        },
+        {
+          "id": "lawyers",
+          "label": "Abogados y Políticos"
+        },
+        {
+          "id": "journalists",
+          "label": "Periodistas y Escritores"
+        },
+        {
+          "id": "soldiers",
+          "label": "Soldados y Militares"
+        },
+        {
+          "id": "prisoners",
+          "label": "Prisioneros y Cautivos"
+        },
+        {
+          "id": "internet",
+          "label": "Internet y Tecnología"
+        },
+        {
+          "id": "forgiveness",
+          "label": "Perdón y Misericordia"
+        },
+        {
+          "id": "indigenous",
+          "label": "Pueblos Indígenas"
+        },
+        {
+          "id": "trafficking",
+          "label": "Sobrevivientes de Trata de Personas"
+        }
       ]
     },
     {
@@ -35,20 +89,62 @@
       "description": "Encuentra santos que comparten tus intereses",
       "icon": "heart.fill",
       "values": [
-        {"id": "sports", "label": "Deportes y Atletismo"},
-        {"id": "music", "label": "Música y Canto"},
-        {"id": "art", "label": "Arte y Creatividad"},
-        {"id": "technology", "label": "Tecnología y Videojuegos"},
-        {"id": "reading", "label": "Lectura y Escritura"},
-        {"id": "science", "label": "Ciencia y Medicina"},
-        {"id": "nature", "label": "Naturaleza y Animales"},
-        {"id": "hiking", "label": "Senderismo y Aire Libre"},
-        {"id": "cooking", "label": "Cocina y Hospitalidad"},
-        {"id": "community-service", "label": "Servicio Comunitario"},
-        {"id": "leadership", "label": "Liderazgo y Justicia"},
-        {"id": "philosophy", "label": "Filosofía y Grandes Preguntas"},
-        {"id": "family", "label": "Familia y Relaciones"},
-        {"id": "adventure", "label": "Aventura y Viajes"}
+        {
+          "id": "sports",
+          "label": "Deportes y Atletismo"
+        },
+        {
+          "id": "music",
+          "label": "Música y Canto"
+        },
+        {
+          "id": "art",
+          "label": "Arte y Creatividad"
+        },
+        {
+          "id": "technology",
+          "label": "Tecnología y Videojuegos"
+        },
+        {
+          "id": "reading",
+          "label": "Lectura y Escritura"
+        },
+        {
+          "id": "science",
+          "label": "Ciencia y Medicina"
+        },
+        {
+          "id": "nature",
+          "label": "Naturaleza y Animales"
+        },
+        {
+          "id": "hiking",
+          "label": "Senderismo y Aire Libre"
+        },
+        {
+          "id": "cooking",
+          "label": "Cocina y Hospitalidad"
+        },
+        {
+          "id": "community-service",
+          "label": "Servicio Comunitario"
+        },
+        {
+          "id": "leadership",
+          "label": "Liderazgo y Justicia"
+        },
+        {
+          "id": "philosophy",
+          "label": "Filosofía y Grandes Preguntas"
+        },
+        {
+          "id": "family",
+          "label": "Familia y Relaciones"
+        },
+        {
+          "id": "adventure",
+          "label": "Aventura y Viajes"
+        }
       ]
     },
     {
@@ -57,8 +153,14 @@
       "description": "Santos agrupados por su edad",
       "icon": "person.fill",
       "values": [
-        {"id": "young", "label": "Santos Jóvenes (menores de 25)"},
-        {"id": "adult", "label": "Santos Adultos"}
+        {
+          "id": "young",
+          "label": "Santos Jóvenes (menores de 25)"
+        },
+        {
+          "id": "adult",
+          "label": "Santos Adultos"
+        }
       ]
     },
     {
@@ -67,12 +169,26 @@
       "description": "Encuentra santos de tu parte del mundo",
       "icon": "globe",
       "values": [
-        {"id": "europe", "label": "Europa"},
-        {"id": "latin-america", "label": "América Latina"},
-        {"id": "north-america", "label": "Norteamérica"},
-        {"id": "africa", "label": "África"},
-        {"id": "asia", "label": "Asia"},
-        {"id": "middle-east", "label": "Medio Oriente"}
+        {
+          "id": "europe",
+          "label": "Europa"
+        },
+        {
+          "id": "africa",
+          "label": "África"
+        },
+        {
+          "id": "asia",
+          "label": "Asia"
+        },
+        {
+          "id": "middle-east",
+          "label": "Medio Oriente"
+        },
+        {
+          "id": "americas",
+          "label": "Américas"
+        }
       ]
     },
     {
@@ -81,10 +197,22 @@
       "description": "Cómo vivieron su vocación",
       "icon": "figure.stand",
       "values": [
-        {"id": "married", "label": "Casado/a"},
-        {"id": "religious", "label": "Religioso/a (Sacerdote, Monja, Monje)"},
-        {"id": "single", "label": "Soltero/a / Laico/a"},
-        {"id": "martyr", "label": "Mártir"}
+        {
+          "id": "married",
+          "label": "Casado/a"
+        },
+        {
+          "id": "religious",
+          "label": "Religioso/a (Sacerdote, Monja, Monje)"
+        },
+        {
+          "id": "single",
+          "label": "Soltero/a / Laico/a"
+        },
+        {
+          "id": "martyr",
+          "label": "Mártir"
+        }
       ]
     },
     {
@@ -93,11 +221,26 @@
       "description": "Cuándo vivió el santo",
       "icon": "clock.fill",
       "values": [
-        {"id": "early-church", "label": "Iglesia Primitiva (siglos I–V)"},
-        {"id": "medieval", "label": "Medieval (siglos VI–XV)"},
-        {"id": "early-modern", "label": "Edad Moderna Temprana (siglos XVI–XVIII)"},
-        {"id": "modern", "label": "Moderno (siglos XIX–XX)"},
-        {"id": "contemporary", "label": "Contemporáneo (siglos XX–XXI)"}
+        {
+          "id": "early-church",
+          "label": "Iglesia Primitiva (siglos I–V)"
+        },
+        {
+          "id": "medieval",
+          "label": "Medieval (siglos VI–XV)"
+        },
+        {
+          "id": "early-modern",
+          "label": "Edad Moderna Temprana (siglos XVI–XVIII)"
+        },
+        {
+          "id": "modern",
+          "label": "Moderno (siglos XIX–XX)"
+        },
+        {
+          "id": "contemporary",
+          "label": "Contemporáneo (siglos XX–XXI)"
+        }
       ]
     },
     {
@@ -106,8 +249,14 @@
       "description": "Santos masculinos o femeninos",
       "icon": "person.2.fill",
       "values": [
-        {"id": "male", "label": "Santos"},
-        {"id": "female", "label": "Santas"}
+        {
+          "id": "male",
+          "label": "Santos"
+        },
+        {
+          "id": "female",
+          "label": "Santas"
+        }
       ]
     }
   ]

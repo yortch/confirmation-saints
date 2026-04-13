@@ -48,7 +48,7 @@ struct SaintListView: View {
                             }
                         }
 
-                        ForEach(["Europe", "Latin America", "North America", "Africa", "Asia"], id: \.self) { region in
+                        ForEach(["Europe", "Americas", "Africa", "Asia", "Middle East"], id: \.self) { region in
                             FilterChip(
                                 title: AppStrings.localized(region, language: language),
                                 systemImage: "globe",
