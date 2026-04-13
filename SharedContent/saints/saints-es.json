@@ -2318,6 +2318,187 @@
         "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10066a.htm",
         "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthias/"
       }
+    },
+    {
+      "id": "pius-x",
+      "name": "San Pío X",
+      "feastDay": "08-21",
+      "birthDate": "1835-06-02",
+      "deathDate": "1914-08-20",
+      "canonizationDate": "1954-05-29",
+      "country": "Italia",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "first communicants",
+        "pilgrims"
+      ],
+      "tags": [
+        "pope",
+        "reformer",
+        "Eucharist",
+        "catechesis"
+      ],
+      "affinities": [
+        "prayer",
+        "teaching",
+        "leadership",
+        "service"
+      ],
+      "quote": "La Sagrada Comunión es el camino más corto y seguro al Cielo.",
+      "biography": "Giuseppe Melchiorre Sarto nació el 2 de junio de 1835 en Riese, un pequeño pueblo del norte de Italia. Segundo de diez hijos en una familia humilde, caminaba seis kilómetros de ida y vuelta a la escuela cada día. Ordenado sacerdote a los 23 años, sirvió como párroco, obispo y cardenal antes de ser elegido Papa en 1903.\n\nComo Papa Pío X, fue conocido como el 'Papa de la Eucaristía' por reducir la edad de la Primera Comunión de 12 a aproximadamente 7 años, creyendo que los niños debían recibir a Jesús lo antes posible. También reformó la música sacra, reorganizó la Curia Romana y comenzó la codificación del derecho canónico.\n\nFue profundamente pastoral y sencillo en sus costumbres, catequizando personalmente a los niños en los jardines del Vaticano. Murió el 20 de agosto de 1914, con el corazón roto por el estallido de la Primera Guerra Mundial, y fue canonizado por el Papa Pío XII en 1954.",
+      "whyConfirmationSaint": "San Pío X es un patrón inspirador si te importa hacer la fe accesible a todos. Luchó para que los jóvenes recibieran la Eucaristía antes porque creía que la edad no debía ser una barrera para encontrarse con Jesús. Si valoras la sencillez, la humildad y la reforma audaz, Pío X demuestra que el verdadero liderazgo significa servir a los demás, especialmente a los jóvenes.",
+      "image": {
+        "filename": "pius-x.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-pius-x/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/12137a.htm"
+      }
+    },
+    {
+      "id": "patrick",
+      "name": "San Patricio",
+      "feastDay": "03-17",
+      "birthDate": "0385-01-01",
+      "deathDate": "0461-03-17",
+      "canonizationDate": null,
+      "country": "Irlanda",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Ireland",
+        "engineers",
+        "excluded people"
+      ],
+      "tags": [
+        "missionary",
+        "bishop",
+        "apostle",
+        "early-church"
+      ],
+      "affinities": [
+        "nature",
+        "adventure",
+        "prayer",
+        "leadership"
+      ],
+      "quote": "Cristo a mi lado, Cristo ante mí, Cristo detrás de mí, Cristo dentro de mí, Cristo debajo de mí, Cristo sobre mí.",
+      "biography": "Patricio nació alrededor del año 385 d.C. en la Britania romana. A los 16 años fue secuestrado por piratas irlandeses y llevado a Irlanda como esclavo, donde pasó seis años cuidando ovejas en aislamiento. Durante su cautiverio, se volcó a la oración y profundizó su fe enormemente.\n\nTras escapar y regresar a Britania, Patricio tuvo una visión que lo llamaba a volver a Irlanda como misionero. Estudió para el sacerdocio, fue ordenado obispo y regresó a la tierra de su cautiverio para difundir el Evangelio.\n\nDurante los siguientes 30 años, Patricio bautizó a miles de personas, estableció monasterios, escuelas e iglesias por toda Irlanda, y usó el trébol para enseñar la Santísima Trinidad. Transformó Irlanda de una tierra pagana en uno de los grandes centros del cristianismo en el mundo medieval. Su legado le valió el título de 'Apóstol de Irlanda'.",
+      "whyConfirmationSaint": "San Patricio es el patrón perfecto si alguna vez te has sentido fuera de lugar o has enfrentado algo realmente difícil. Secuestrado de adolescente y esclavizado durante seis años, no se amargó — se hizo más fuerte en la fe. Luego regresó al mismo lugar de su sufrimiento para llevar esperanza. Si valoras el coraje, el perdón y la aventura, Patricio demuestra que Dios puede convertir tus experiencias más difíciles en tu mayor misión.",
+      "image": {
+        "filename": "patrick.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-patrick/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11554a.htm"
+      }
+    },
+    {
+      "id": "catherine-of-siena",
+      "name": "Santa Catalina de Siena",
+      "feastDay": "04-29",
+      "birthDate": "1347-03-25",
+      "deathDate": "1380-04-29",
+      "canonizationDate": "1461-06-29",
+      "country": "Italia",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "young",
+      "patronOf": [
+        "Italy",
+        "Europe",
+        "nurses",
+        "fire prevention"
+      ],
+      "tags": [
+        "Doctor of the Church",
+        "mystic",
+        "writer",
+        "reformer"
+      ],
+      "affinities": [
+        "writing",
+        "prayer",
+        "leadership",
+        "service"
+      ],
+      "quote": "Sé quien Dios quiso que fueras y prenderás fuego al mundo.",
+      "biography": "Caterina di Giacomo di Benincasa nació el 25 de marzo de 1347 en Siena, Italia — una de 25 hijos. Desde los seis años experimentó visiones místicas, y a los siete consagró su vida a Dios. A pesar de la resistencia de su familia, se negó a casarse y se unió a la Tercera Orden Dominica a los 16 años.\n\nCatalina pasó tres años en casi total silencio y oración en una pequeña habitación de la casa familiar. Cuando salió, se entregó al cuidado de los enfermos, los pobres y los prisioneros condenados a muerte. También se convirtió en una voz audaz en la política eclesial, escribiendo cientos de cartas a papas, reyes y líderes pidiendo reforma y paz.\n\nSu mayor logro fue convencer al Papa Gregorio XI de devolver el papado de Aviñón a Roma, poniendo fin a un exilio de 70 años. Murió a los 33 años, fue canonizada en 1461 y declarada Doctora de la Iglesia en 1970 — solo la segunda mujer en recibir ese título.",
+      "whyConfirmationSaint": "Santa Catalina es una patrona increíble para quien quiera hacer oír su voz. En una época en que las mujeres casi no tenían influencia pública, escribió a papas y reyes y cambió el curso de la historia de la Iglesia — todo a través del poder de su fe y su coraje. Si te apasiona la justicia, no tienes miedo de decir la verdad al poder y crees que los jóvenes pueden cambiar el mundo, Catalina de Siena es tu santa.",
+      "image": {
+        "filename": "catherine-of-siena.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-catherine-of-siena/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/03447a.htm"
+      }
+    },
+    {
+      "id": "martin-de-porres",
+      "name": "San Martín de Porres",
+      "feastDay": "11-03",
+      "birthDate": "1579-12-09",
+      "deathDate": "1639-11-03",
+      "canonizationDate": "1962-05-06",
+      "country": "Perú",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "mixed-race people",
+        "barbers",
+        "social justice",
+        "public health"
+      ],
+      "tags": [
+        "Dominican",
+        "lay brother",
+        "healer",
+        "humble"
+      ],
+      "affinities": [
+        "animals",
+        "service",
+        "nature",
+        "cooking"
+      ],
+      "quote": "La compasión, querido hermano, es preferible a la limpieza.",
+      "biography": "Martín de Porres nació el 9 de diciembre de 1579 en Lima, Perú, hijo ilegítimo de un noble español y una esclava liberada de ascendencia africana e indígena. Abandonado por su padre y discriminado por su raza mestiza, creció en la pobreza pero aprendió medicina herbal y barbería de joven.\n\nA los 15 años, Martín ingresó al priorato dominico de Lima como sirviente, ya que las leyes raciales le impedían ser miembro pleno. Su extraordinaria humildad, caridad y sus reportadas curaciones milagrosas eventualmente llevaron a los dominicos a aceptarlo como hermano lego. Fundó un orfanato y un hospital para los pobres, alimentaba a cientos diariamente y era conocido por su tierno cuidado de los animales.\n\nMartín era famoso por su humildad radical — se consideraba el más bajo de todos y prefería ser tratado como esclavo antes que como hermano. Sin embargo, su santidad atraía a personas de toda clase y raza. Murió en 1639, amado por todo Lima, y fue canonizado por el Papa Juan XXIII en 1962.",
+      "whyConfirmationSaint": "San Martín de Porres es un patrón poderoso para quien alguna vez se haya sentido juzgado o excluido por ser quien es. Nacido en la pobreza y la discriminación, respondió no con ira sino con un amor y servicio abrumadores. Rompió barreras raciales a través de la pura santidad. Si te importa la justicia social, la igualdad y servir a los olvidados, Martín de Porres demuestra que la verdadera grandeza viene de elevar a los demás.",
+      "image": {
+        "filename": "martin-de-porres.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-martin-de-porres/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09728a.htm"
+      }
     }
   ]
 }

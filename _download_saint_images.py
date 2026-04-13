@@ -71,6 +71,10 @@ SAINT_IMAGES = {
     "jude-thaddeus": "El_Greco_-_St._Jude_Thaddeus_-_Google_Art_Project.jpg",
     "simon-zealot": "Anthony_van_Dyck_-_The_Apostle_Saint_Simon.jpg",
     "matthias-apostle": "Rubens_apostle_Matthias_grt.jpg",
+    "pius-x": "Pius_X_pope.jpg",
+    "patrick": "St._Patrick,_Bishop_of_Ireland_Met_DP890884.jpg",
+    "catherine-of-siena": "Giovanni_Battista_Tiepolo_096.jpg",
+    "martin-de-porres": "Martin_de_Porres.jpg",
 }
 
 

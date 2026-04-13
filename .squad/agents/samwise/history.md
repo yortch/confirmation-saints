@@ -109,3 +109,15 @@
 - sourceURLs use Catholic Encyclopedia (newadvent.org), Franciscan Media, CNA, and EWTN — verified URL patterns match existing saints
 - Xcode project regenerated via xcodegen after adding images
 
+### Four Priority Saints Added (2026-07-17)
+- Added 4 saints to both `saints-en.json` and `saints-es.json` (50 → 54 total):
+  - **St. Pius X** (`pius-x`): Pope, patron of first communicants. Feast 08-21. Known as "Pope of the Eucharist."
+  - **St. Patrick** (`patrick`): Apostle of Ireland, patron of Ireland/engineers. Feast 03-17. Pre-congregation saint, canonizationDate null.
+  - **St. Catherine of Siena** (`catherine-of-siena`): Doctor of the Church, mystic. Patron of Italy/Europe. Feast 04-29. ageCategory "young" (died at 33).
+  - **St. Martin de Porres** (`martin-de-porres`): Dominican lay brother, patron of mixed-race people/social justice. Feast 11-03. Region "Americas" (Peru).
+- All matching fields (patronOf, tags, affinities, region, lifeState, ageCategory, gender) kept in English in both EN and ES per established convention
+- Only display fields (name, biography, whyConfirmationSaint, quote) and country translated to Spanish
+- Sources: Franciscan Media + Catholic Encyclopedia (newadvent.org) — verified URL patterns
+- Downloaded 4 public domain images from Wikimedia Commons at 400px width; updated `_download_saint_images.py` with new mappings
+- Wikimedia filenames found via API search: Pius_X_pope.jpg, St._Patrick,_Bishop_of_Ireland_Met_DP890884.jpg, Giovanni_Battista_Tiepolo_096.jpg, Martin_de_Porres.jpg
+
