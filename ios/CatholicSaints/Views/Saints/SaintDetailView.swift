@@ -61,7 +61,7 @@ struct SaintDetailView: View {
                         .foregroundStyle(.secondary)
                 }
                 if let lifeState = saint.lifeState {
-                    Label(lifeState.capitalized, systemImage: "person.fill")
+                    Label(AppStrings.localized(lifeState, language: language).capitalized, systemImage: "person.fill")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
@@ -153,7 +153,7 @@ struct SaintDetailView: View {
                     detailCard(label: AppStrings.localized("Canonized", language: language), value: SaintDateFormatter.format(canon, language: language), icon: "star.fill")
                 }
                 if let region = saint.region {
-                    detailCard(label: AppStrings.localized("Region", language: language), value: region, icon: "map.fill")
+                    detailCard(label: AppStrings.localized("Region", language: language), value: AppStrings.localized(region, language: language), icon: "map.fill")
                 }
             }
         }
@@ -178,12 +178,13 @@ struct SaintDetailView: View {
 
     @ViewBuilder
     private func patronSection(_ saint: Saint) -> some View {
-        if !saint.patronOf.isEmpty {
+        let displayValues = saint.displayPatronOf ?? saint.patronOf
+        if !displayValues.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
                 Label(AppStrings.localized("Patron Of", language: language), systemImage: "shield.fill")
                     .font(.title3.bold())
                 FlowLayout(spacing: 8) {
-                    ForEach(saint.patronOf, id: \.self) { patron in
+                    ForEach(displayValues, id: \.self) { patron in
                         Text(patron.capitalized)
                             .font(.subheadline)
                             .padding(.horizontal, 12)

@@ -21,6 +21,12 @@
         "pilots",
         "France"
       ],
+      "displayPatronOf": [
+        "misioneros",
+        "floristas",
+        "pilotos",
+        "Francia"
+      ],
       "tags": [
         "young",
         "writer",
@@ -78,6 +84,11 @@
         "falsely accused",
         "juvenile delinquents"
       ],
+      "displayPatronOf": [
+        "niños del coro",
+        "falsamente acusados",
+        "jóvenes delincuentes"
+      ],
       "tags": [
         "young",
         "student",
@@ -130,6 +141,11 @@
         "internet",
         "computer programmers",
         "youth"
+      ],
+      "displayPatronOf": [
+        "internet",
+        "programadores",
+        "juventud"
       ],
       "tags": [
         "young",
@@ -193,6 +209,12 @@
         "prisoners",
         "women in the military"
       ],
+      "displayPatronOf": [
+        "soldados",
+        "Francia",
+        "prisioneros",
+        "mujeres militares"
+      ],
       "tags": [
         "young",
         "brave",
@@ -251,6 +273,12 @@
         "forgiveness",
         "crime victims"
       ],
+      "displayPatronOf": [
+        "juventud",
+        "pureza",
+        "perdón",
+        "víctimas del crimen"
+      ],
       "tags": [
         "young",
         "martyr",
@@ -302,6 +330,10 @@
       "patronOf": [
         "youth",
         "cancer patients"
+      ],
+      "displayPatronOf": [
+        "juventud",
+        "pacientes con cáncer"
       ],
       "tags": [
         "young",
@@ -361,6 +393,10 @@
         "persecuted Christians",
         "Mexican youth"
       ],
+      "displayPatronOf": [
+        "cristianos perseguidos",
+        "juventud mexicana"
+      ],
       "tags": [
         "young",
         "martyr",
@@ -417,6 +453,11 @@
         "athletes",
         "soldiers",
         "plague victims"
+      ],
+      "displayPatronOf": [
+        "atletas",
+        "soldados",
+        "víctimas de la peste"
       ],
       "tags": [
         "martyr",
@@ -476,6 +517,12 @@
         "poets",
         "Church music"
       ],
+      "displayPatronOf": [
+        "músicos",
+        "cantantes",
+        "poetas",
+        "música sacra"
+      ],
       "tags": [
         "martyr",
         "musician",
@@ -531,6 +578,12 @@
         "ecology",
         "merchants",
         "Italy"
+      ],
+      "displayPatronOf": [
+        "animales",
+        "ecología",
+        "comerciantes",
+        "Italia"
       ],
       "tags": [
         "nature",
@@ -594,6 +647,12 @@
         "philosophers",
         "theologians"
       ],
+      "displayPatronOf": [
+        "estudiantes",
+        "universidades",
+        "filósofos",
+        "teólogos"
+      ],
       "tags": [
         "intellectual",
         "Doctor of the Church",
@@ -653,6 +712,12 @@
         "politicians",
         "statesmen",
         "religious freedom"
+      ],
+      "displayPatronOf": [
+        "abogados",
+        "políticos",
+        "estadistas",
+        "libertad religiosa"
       ],
       "tags": [
         "martyr",
@@ -716,6 +781,13 @@
         "unborn children",
         "working mothers",
         "doctors"
+      ],
+      "displayPatronOf": [
+        "madres",
+        "médicos",
+        "niños por nacer",
+        "madres trabajadoras",
+        "médicos"
       ],
       "tags": [
         "modern",
@@ -782,6 +854,11 @@
         "married couples",
         "family life"
       ],
+      "displayPatronOf": [
+        "padres",
+        "parejas casadas",
+        "vida familiar"
+      ],
       "tags": [
         "married",
         "father",
@@ -838,6 +915,11 @@
         "mothers",
         "married couples",
         "working women"
+      ],
+      "displayPatronOf": [
+        "madres",
+        "parejas casadas",
+        "mujeres trabajadoras"
       ],
       "tags": [
         "married",
@@ -899,6 +981,10 @@
         "World Youth Day",
         "missionaries of charity"
       ],
+      "displayPatronOf": [
+        "Jornada Mundial de la Juventud",
+        "misioneras de la caridad"
+      ],
       "tags": [
         "modern",
         "missionary",
@@ -957,6 +1043,11 @@
         "World Youth Day",
         "families",
         "young people"
+      ],
+      "displayPatronOf": [
+        "Jornada Mundial de la Juventud",
+        "familias",
+        "jóvenes"
       ],
       "tags": [
         "modern",
@@ -1025,6 +1116,11 @@
         "students",
         "athletes"
       ],
+      "displayPatronOf": [
+        "jóvenes adultos",
+        "estudiantes",
+        "atletas"
+      ],
       "tags": [
         "young",
         "modern",
@@ -1091,6 +1187,12 @@
         "Native Americans",
         "exiles"
       ],
+      "displayPatronOf": [
+        "ecología",
+        "medio ambiente",
+        "nativos americanos",
+        "exiliados"
+      ],
       "tags": [
         "Native American",
         "nature",
@@ -1151,6 +1253,12 @@
         "printers",
         "sore eyes"
       ],
+      "displayPatronOf": [
+        "cerveceros",
+        "teólogos",
+        "impresores",
+        "dolor de ojos"
+      ],
       "tags": [
         "convert",
         "Doctor of the Church",
@@ -1207,6 +1315,11 @@
         "human trafficking survivors",
         "Sudan",
         "modern slavery victims"
+      ],
+      "displayPatronOf": [
+        "sobrevivientes de trata de personas",
+        "Sudán",
+        "víctimas de la esclavitud moderna"
       ],
       "tags": [
         "African",
@@ -1265,6 +1378,9 @@
       "patronOf": [
         "Indigenous peoples of the Americas"
       ],
+      "displayPatronOf": [
+        "pueblos indígenas de las Américas"
+      ],
       "tags": [
         "Indigenous",
         "Latin American",
@@ -1321,6 +1437,11 @@
         "Filipino youth",
         "catechists",
         "altar servers"
+      ],
+      "displayPatronOf": [
+        "juventud filipina",
+        "catequistas",
+        "monaguillos"
       ],
       "tags": [
         "young",
@@ -1382,6 +1503,12 @@
         "gardeners",
         "florists"
       ],
+      "displayPatronOf": [
+        "América Latina",
+        "Filipinas",
+        "jardineros",
+        "floristas"
+      ],
       "tags": [
         "Latin American",
         "mystic",
@@ -1442,6 +1569,13 @@
         "drug addicts",
         "political prisoners",
         "amateur radio operators"
+      ],
+      "displayPatronOf": [
+        "periodistas",
+        "prisioneros",
+        "adictos a las drogas",
+        "presos políticos",
+        "radioaficionados"
       ],
       "tags": [
         "martyr",
@@ -1508,6 +1642,13 @@
         "alcoholics",
         "difficult marriages"
       ],
+      "displayPatronOf": [
+        "madres",
+        "mujeres casadas",
+        "víctimas de abuso",
+        "alcohólicos",
+        "matrimonios difíciles"
+      ],
       "tags": [
         "mother",
         "perseverance",
@@ -1566,6 +1707,11 @@
         "Lebanon",
         "healing",
         "peace"
+      ],
+      "displayPatronOf": [
+        "Líbano",
+        "sanación",
+        "paz"
       ],
       "tags": [
         "hermit",
@@ -1631,6 +1777,14 @@
         "mariners",
         "the sick"
       ],
+      "displayPatronOf": [
+        "soldados",
+        "policías",
+        "paracaidistas",
+        "tenderos",
+        "marineros",
+        "los enfermos"
+      ],
       "tags": [
         "archangel",
         "warrior",
@@ -1692,6 +1846,13 @@
         "diplomats",
         "broadcasters"
       ],
+      "displayPatronOf": [
+        "trabajadores de comunicaciones",
+        "mensajeros",
+        "trabajadores postales",
+        "diplomáticos",
+        "comunicadores"
+      ],
       "tags": [
         "archangel",
         "messenger",
@@ -1747,6 +1908,12 @@
         "Mexico",
         "unborn children",
         "indigenous peoples"
+      ],
+      "displayPatronOf": [
+        "Américas",
+        "México",
+        "niños por nacer",
+        "pueblos indígenas"
       ],
       "tags": [
         "Blessed Virgin Mary",
@@ -1805,6 +1972,11 @@
         "peace",
         "rosary"
       ],
+      "displayPatronOf": [
+        "Portugal",
+        "paz",
+        "rosario"
+      ],
       "tags": [
         "Blessed Virgin Mary",
         "apparition",
@@ -1861,6 +2033,11 @@
         "immigrants",
         "hospital administrators",
         "orphans"
+      ],
+      "displayPatronOf": [
+        "inmigrantes",
+        "administradores de hospitales",
+        "huérfanos"
       ],
       "tags": [
         "founder",
@@ -1921,6 +2098,13 @@
         "universal Church",
         "carpenters"
       ],
+      "displayPatronOf": [
+        "trabajadores",
+        "padres",
+        "moribundos",
+        "Iglesia universal",
+        "carpinteros"
+      ],
       "tags": [
         "Holy Family",
         "worker",
@@ -1980,6 +2164,11 @@
         "fathers",
         "linen traders"
       ],
+      "displayPatronOf": [
+        "abuelos",
+        "padres",
+        "comerciantes de lino"
+      ],
       "tags": [
         "Holy Family",
         "father",
@@ -2036,6 +2225,13 @@
         "women in labor",
         "miners",
         "horseback riders"
+      ],
+      "displayPatronOf": [
+        "abuelas",
+        "madres",
+        "mujeres en parto",
+        "mineros",
+        "jinetes"
       ],
       "tags": [
         "Holy Family",
@@ -2096,6 +2292,13 @@
         "apprentices",
         "magicians"
       ],
+      "displayPatronOf": [
+        "juventud",
+        "educadores",
+        "estudiantes",
+        "aprendices",
+        "magos"
+      ],
       "tags": [
         "founder",
         "educator",
@@ -2154,6 +2357,10 @@
         "educators",
         "Marist Brothers"
       ],
+      "displayPatronOf": [
+        "educadores",
+        "Hermanos Maristas"
+      ],
       "tags": [
         "founder",
         "educator",
@@ -2211,6 +2418,12 @@
         "fishermen",
         "net makers",
         "locksmiths"
+      ],
+      "displayPatronOf": [
+        "papas",
+        "pescadores",
+        "fabricantes de redes",
+        "cerrajeros"
       ],
       "tags": [
         "apostle",
@@ -2271,6 +2484,12 @@
         "theologians",
         "writers",
         "tentmakers"
+      ],
+      "displayPatronOf": [
+        "misioneros",
+        "teólogos",
+        "escritores",
+        "fabricantes de tiendas"
       ],
       "tags": [
         "apostle",
@@ -2333,6 +2552,13 @@
         "Greece",
         "Russia"
       ],
+      "displayPatronOf": [
+        "Escocia",
+        "pescadores",
+        "cantantes",
+        "Grecia",
+        "Rusia"
+      ],
       "tags": [
         "apostle",
         "martyr",
@@ -2390,6 +2616,12 @@
         "pilgrims",
         "laborers",
         "soldiers"
+      ],
+      "displayPatronOf": [
+        "España",
+        "peregrinos",
+        "trabajadores",
+        "soldados"
       ],
       "tags": [
         "apostle",
@@ -2449,6 +2681,12 @@
         "publishers",
         "Asia Minor"
       ],
+      "displayPatronOf": [
+        "escritores",
+        "teólogos",
+        "editores",
+        "Asia Menor"
+      ],
       "tags": [
         "apostle",
         "evangelist",
@@ -2506,6 +2744,11 @@
         "hatters",
         "Uruguay"
       ],
+      "displayPatronOf": [
+        "pasteleros",
+        "sombrereros",
+        "Uruguay"
+      ],
       "tags": [
         "apostle",
         "martyr",
@@ -2558,6 +2801,12 @@
         "tanners",
         "leather workers",
         "bookbinders",
+        "Armenia"
+      ],
+      "displayPatronOf": [
+        "curtidores",
+        "curtidores",
+        "encuadernadores",
         "Armenia"
       ],
       "tags": [
@@ -2613,6 +2862,12 @@
         "bankers",
         "tax collectors",
         "bookkeepers"
+      ],
+      "displayPatronOf": [
+        "contadores",
+        "banqueros",
+        "recaudadores de impuestos",
+        "contables"
       ],
       "tags": [
         "apostle",
@@ -2674,6 +2929,12 @@
         "builders",
         "blind people"
       ],
+      "displayPatronOf": [
+        "India",
+        "arquitectos",
+        "constructores",
+        "personas ciegas"
+      ],
       "tags": [
         "apostle",
         "martyr",
@@ -2729,6 +2990,11 @@
       "patronOf": [
         "pharmacists",
         "dying people",
+        "Uruguay"
+      ],
+      "displayPatronOf": [
+        "farmacéuticos",
+        "personas moribundas",
         "Uruguay"
       ],
       "tags": [
@@ -2788,6 +3054,11 @@
         "desperate situations",
         "hospitals"
       ],
+      "displayPatronOf": [
+        "causas perdidas",
+        "situaciones desesperadas",
+        "hospitales"
+      ],
       "tags": [
         "apostle",
         "martyr",
@@ -2845,6 +3116,11 @@
         "woodcutters",
         "sawyers"
       ],
+      "displayPatronOf": [
+        "curtidores",
+        "leñadores",
+        "aserradores"
+      ],
       "tags": [
         "apostle",
         "martyr",
@@ -2899,6 +3175,11 @@
         "alcoholics",
         "carpenters",
         "tailors"
+      ],
+      "displayPatronOf": [
+        "alcohólicos",
+        "carpinteros",
+        "sastres"
       ],
       "tags": [
         "apostle",
@@ -2956,6 +3237,10 @@
         "first communicants",
         "pilgrims"
       ],
+      "displayPatronOf": [
+        "primeros comulgantes",
+        "peregrinos"
+      ],
       "tags": [
         "pope",
         "reformer",
@@ -3012,6 +3297,11 @@
         "Ireland",
         "engineers",
         "excluded people"
+      ],
+      "displayPatronOf": [
+        "Irlanda",
+        "ingenieros",
+        "personas excluidas"
       ],
       "tags": [
         "missionary",
@@ -3071,6 +3361,12 @@
         "nurses",
         "fire prevention"
       ],
+      "displayPatronOf": [
+        "Italia",
+        "Europa",
+        "enfermeros",
+        "prevención de incendios"
+      ],
       "tags": [
         "Doctor of the Church",
         "mystic",
@@ -3128,6 +3424,12 @@
         "barbers",
         "social justice",
         "public health"
+      ],
+      "displayPatronOf": [
+        "personas mestizas",
+        "barberos",
+        "justicia social",
+        "salud pública"
       ],
       "tags": [
         "Dominican",
@@ -3187,6 +3489,12 @@
         "animals",
         "wool workers"
       ],
+      "displayPatronOf": [
+        "veterinarios",
+        "enfermedades de garganta",
+        "animales",
+        "trabajadores de lana"
+      ],
       "tags": [
         "bishop",
         "martyr",
@@ -3244,6 +3552,12 @@
         "actors",
         "comedians",
         "epilepsy"
+      ],
+      "displayPatronOf": [
+        "bailarines",
+        "actores",
+        "comediantes",
+        "epilepsia"
       ],
       "tags": [
         "young",
@@ -3304,6 +3618,13 @@
         "converts",
         "lawyers"
       ],
+      "displayPatronOf": [
+        "actores",
+        "teatro",
+        "comediantes",
+        "conversos",
+        "abogados"
+      ],
       "tags": [
         "martyr",
         "convert",
@@ -3361,6 +3682,11 @@
         "families",
         "parish priests"
       ],
+      "displayPatronOf": [
+        "Caballeros de Colón",
+        "familias",
+        "párrocos"
+      ],
       "tags": [
         "blessed",
         "priest",
@@ -3416,6 +3742,11 @@
       "patronOf": [
         "young people",
         "sick people",
+        "Chile"
+      ],
+      "displayPatronOf": [
+        "jóvenes",
+        "enfermos",
         "Chile"
       ],
       "tags": [
@@ -3479,6 +3810,11 @@
         "African youth",
         "converts"
       ],
+      "displayPatronOf": [
+        "Uganda",
+        "juventud africana",
+        "conversos"
+      ],
       "tags": [
         "young",
         "martyr",
@@ -3538,6 +3874,12 @@
         "widows",
         "seafarers",
         "in-law problems"
+      ],
+      "displayPatronOf": [
+        "escuelas católicas",
+        "viudas",
+        "navegantes",
+        "problemas con suegros"
       ],
       "tags": [
         "convert",
@@ -3601,6 +3943,12 @@
         "persecuted Christians",
         "social justice"
       ],
+      "displayPatronOf": [
+        "El Salvador",
+        "las Américas",
+        "cristianos perseguidos",
+        "justicia social"
+      ],
       "tags": [
         "martyr",
         "bishop",
@@ -3658,6 +4006,10 @@
       "patronOf": [
         "Divine Mercy",
         "mercy"
+      ],
+      "displayPatronOf": [
+        "Divina Misericordia",
+        "misericordia"
       ],
       "tags": [
         "mystic",
@@ -3720,6 +4072,13 @@
         "pharmacists",
         "contemplative life"
       ],
+      "displayPatronOf": [
+        "conversos",
+        "penitentes",
+        "mujeres",
+        "farmacéuticos",
+        "vida contemplativa"
+      ],
       "tags": [
         "biblical",
         "apostle to the apostles",
@@ -3779,6 +4138,12 @@
         "brewers",
         "tailors",
         "file cutters"
+      ],
+      "displayPatronOf": [
+        "Alemania",
+        "cerveceros",
+        "sastres",
+        "cortadores de lima"
       ],
       "tags": [
         "bishop",
@@ -3840,6 +4205,13 @@
         "teachers",
         "librarians",
         "lawyers"
+      ],
+      "displayPatronOf": [
+        "filósofos",
+        "estudiantes",
+        "maestros",
+        "bibliotecarios",
+        "abogados"
       ],
       "tags": [
         "young",
@@ -3903,6 +4275,12 @@
         "monastic life",
         "Jordan"
       ],
+      "displayPatronOf": [
+        "bautismo",
+        "conversos",
+        "vida monástica",
+        "Jordania"
+      ],
       "tags": [
         "biblical",
         "prophet",
@@ -3963,6 +4341,12 @@
         "goldsmiths",
         "laundry workers"
       ],
+      "displayPatronOf": [
+        "televisión",
+        "enfermedades oculares",
+        "orfebres",
+        "lavanderos"
+      ],
       "tags": [
         "founder",
         "mystic",
@@ -4019,6 +4403,13 @@
         "painters",
         "surgeons",
         "students"
+      ],
+      "displayPatronOf": [
+        "médicos",
+        "artistas",
+        "pintores",
+        "cirujanos",
+        "estudiantes"
       ],
       "tags": [
         "evangelist",
@@ -4079,6 +4470,12 @@
         "students",
         "loss of parents",
         "those suffering back injuries"
+      ],
+      "displayPatronOf": [
+        "farmacéuticos",
+        "estudiantes",
+        "pérdida de padres",
+        "personas con lesiones de espalda"
       ],
       "tags": [
         "young",

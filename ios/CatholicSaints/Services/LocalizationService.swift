@@ -63,6 +63,22 @@ struct AppStrings {
             "Why Choose This Saint?": "¿Por qué elegir este santo?",
             "Young Saint": "Santo Joven",
             "Young Saints": "Santos Jóvenes",
+            // Filter chip labels
+            "Married": "Casados",
+            "Religious": "Religiosos",
+            "Single": "Solteros",
+            // Region labels
+            "Europe": "Europa",
+            "Americas": "Américas",
+            "Africa": "África",
+            "Asia": "Asia",
+            "Middle East": "Medio Oriente",
+            // Life state display values
+            "married": "casado",
+            "religious": "religioso",
+            "single": "soltero",
+            "layperson": "laico",
+            "martyr": "mártir",
         ]
     ]
 

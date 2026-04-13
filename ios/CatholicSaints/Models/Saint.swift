@@ -15,6 +15,7 @@ struct Saint: Codable, Identifiable, Hashable, Sendable {
     let lifeState: String?
     let ageCategory: String?
     let patronOf: [String]
+    let displayPatronOf: [String]?
     let tags: [String]
     let displayTags: [String]?
     let affinities: [String]
