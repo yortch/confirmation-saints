@@ -113,9 +113,35 @@ All string matching in search/filter logic uses diacritic-insensitive comparison
 
 ---
 
+### Four Priority Saints Added — Batch 3 (2026-04-13)
+**Author:** Samwise (Data/Backend)  
+**Status:** Implemented
+
+Added 4 saints to both `saints-en.json` and `saints-es.json`, bringing total from 50 → 54:
+
+1. **St. Pius X** — Pope, patron of first communicants (Europe/Italy)
+2. **St. Patrick** — Apostle of Ireland, patron of Ireland/engineers (Europe/Ireland)
+3. **St. Catherine of Siena** — Doctor of the Church, mystic, patron of Italy/Europe (Europe/Italy)
+4. **St. Martin de Porres** — Dominican lay brother, patron of mixed-race people/social justice (Americas/Peru)
+
+**Data Decisions:**
+- Patrick & Pius X: Pre-congregation saints → `canonizationDate: null` (consistent with apostles pattern)
+- Catherine of Siena: `ageCategory: "young"` (died at 33)
+- Martin de Porres: Region set to "Americas" (matching Peru/Latin America saints)
+- Sources: Wikimedia Commons public domain images; Franciscan Media + Catholic Encyclopedia
+
+**Impact:**
+- Frodo (iOS): 4 new saints visible in search/browse — no UI changes needed
+- Legolas (QA): Category coverage unchanged; region filters now include Martin de Porres in Americas
+- Gandalf: No architectural changes
+
+---
+
 ### User Directives (Captured)
 - **2026-04-12T17:13:10Z:** Jorge Balderas — App name changed to "Confirmation Saints". Update all references.
 - **2026-04-12T16:29Z:** Jorge Balderas — Project scaffolded with cross-platform separation. Expand saint roster to 50-100+. Add "most popular saints" categories by year + all-time.
+- **2026-04-13T01:12:10Z:** Jorge Balderas — Skip priority 3 (diversity gaps). Target ~75 saints total (not 90-100). Focus priorities 1, 2, 4.
+- **2026-04-13T01:28:48Z:** Jorge Balderas — Skip priority 4. Focus ONLY priorities 1 & 2 (Pius X, Patrick, Catherine of Siena, Martin de Porres, key saints).
 
 ## Governance
 
