@@ -91,3 +91,11 @@
 - Saint data integrity maintained across EN/ES files
 - Decision records: "Saint Image Sources from Wikimedia Commons" and "Source URL Replacement Strategy"
 - UI rendering already supports image display and clickable source links — no code changes needed
+
+### Language Reactivity Bug Fix (2025-07-18)
+- **Bug:** Switching language (EN↔ES) in Settings didn't update already-open views (saint details, category saint lists). User had to navigate away and back.
+- **Root cause:** `SaintDetailView` received `let saint: Saint` (a captured value-type snapshot) at navigation time. When `SaintListViewModel.loadData()` reloaded saints for the new language, the detail view still held the old-language `Saint` struct. Same issue for `CategorySaintsListView` which received `let saints: [Saint]`.
+- **Fix:** Changed `SaintDetailView` to accept `saintId: String` + `viewModel: SaintListViewModel` and compute the saint reactively via `viewModel.saints.first { $0.id == saintId }`. Changed `CategorySaintsListView` to accept `groupId`/`valueId` + `viewModel` and compute saints reactively. Updated all navigation sites (`SaintListView`, `SearchView`, `CategoryBrowseView`) to pass saint IDs and viewModel references.
+- **Pattern:** Never pass captured content model values (`let saint: Saint`) to detail views when that content can change (e.g., language switch). Always pass an ID + an @Observable data source so the view re-renders reactively.
+- **Navigation change:** `SaintListView` and `SearchView` now use `.navigationDestination(for: String.self)` (saint ID) instead of `.navigationDestination(for: Saint.self)`.
+- Build verified clean on iPhone 17 simulator.

@@ -176,3 +176,27 @@ Created `AppStrings.localized(_:language:)` in `LocalizationService.swift` — a
 - **Samwise:** No data layer impact — saint content was already language-switched via JSON files.
 - **Gandalf:** Pattern is `AppStrings.localized("Key", language: language)` with `@Environment(\.appLanguage) private var language` in each view.
 - **Frodo:** 62 UI string calls migrated in this session.
+
+---
+
+### Decision: Reactive Language Switching Pattern
+**Author:** Frodo (iOS Dev) | **Date:** 2025-07-18 | **Status:** Implemented
+
+#### Decision
+
+All views displaying localized *content data* (saints, categories, confirmation info) must reactively observe the viewModel — never hold captured value-type snapshots. Detail views receive an ID + viewModel reference, not a pre-resolved model object.
+
+#### Context
+
+Language switching via `@AppStorage("appLanguage")` triggers `SaintListViewModel.loadData(language:)` which replaces the saints/categories arrays. Views that held `let saint: Saint` (a value-type copy from the old array) didn't update. This made it appear that language switching was broken on already-open screens.
+
+#### Pattern
+
+- **Do:** `SaintDetailView(saintId: saint.id, viewModel: viewModel)` — reactive lookup
+- **Don't:** `SaintDetailView(saint: saint)` — stale capture
+
+#### Impact
+
+- **Legolas (QA):** Navigation tests should verify saint detail content updates when language changes without re-navigation
+- **Samwise (Data):** Saint `id` field must remain stable across language files (already the case)
+- **Gandalf (Arch):** Same pattern should apply to any future detail views for content that varies by language
