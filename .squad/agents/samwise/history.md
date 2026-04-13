@@ -121,3 +121,12 @@
 - Downloaded 4 public domain images from Wikimedia Commons at 400px width; updated `_download_saint_images.py` with new mappings
 - Wikimedia filenames found via API search: Pius_X_pope.jpg, St._Patrick,_Bishop_of_Ireland_Met_DP890884.jpg, Giovanni_Battista_Tiepolo_096.jpg, Martin_de_Porres.jpg
 
+### Spanish Display Tags & Affinities (2026-04-13)
+- Added `displayTags` and `displayAffinities` arrays to all 54 saints in `saints-es.json`
+- These provide properly translated Spanish versions for UI display while keeping English `tags`/`affinities` intact for category matching
+- Gender-appropriate forms used for female saints (e.g., "mística", "escritora", "Doctora de la Iglesia", "fundadora", "misionera")
+- Translation covers 100+ unique tags and 65 unique affinities
+- Swift changes: `Saint.swift` model has optional `displayTags`/`displayAffinities`; `SaintDetailView` uses display versions for rendering; `SaintListViewModel` searches both English and Spanish arrays
+- **Key insight:** Tags/affinities serve dual purposes (matching + display). Adding parallel display arrays avoids breaking category browsing while fixing the Spanish display bug
+- Pattern: Any future localized display fields should follow this `display*` prefix convention to keep matching fields stable
+
