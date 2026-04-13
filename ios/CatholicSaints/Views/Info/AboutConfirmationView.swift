@@ -43,7 +43,7 @@ struct AboutConfirmationView: View {
                     Text(content.heading)
                         .font(.headline)
                         .foregroundStyle(.primary)
-                    Text(content.body)
+                    Text(markdownAttributedString(content.body))
                         .font(.body)
                         .foregroundStyle(.primary.opacity(0.85))
                 }
@@ -62,6 +62,10 @@ struct AboutConfirmationView: View {
 
             Divider()
         }
+    }
+
+    private func markdownAttributedString(_ text: String) -> AttributedString {
+        (try? AttributedString(markdown: text)) ?? AttributedString(text)
     }
 
     private func iconForSection(_ id: String) -> String {
