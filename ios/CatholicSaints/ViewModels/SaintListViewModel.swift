@@ -28,6 +28,8 @@ final class SaintListViewModel {
                 || saint.patronOf.contains { $0.containsIgnoringDiacritics(query) }
                 || saint.affinities.contains { $0.containsIgnoringDiacritics(query) }
                 || saint.tags.contains { $0.containsIgnoringDiacritics(query) }
+                || (saint.displayAffinities ?? []).contains { $0.containsIgnoringDiacritics(query) }
+                || (saint.displayTags ?? []).contains { $0.containsIgnoringDiacritics(query) }
                 || (saint.country?.containsIgnoringDiacritics(query) ?? false)
             }
         }

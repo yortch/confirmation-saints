@@ -16,7 +16,9 @@ struct Saint: Codable, Identifiable, Hashable, Sendable {
     let ageCategory: String?
     let patronOf: [String]
     let tags: [String]
+    let displayTags: [String]?
     let affinities: [String]
+    let displayAffinities: [String]?
     let quote: String?
     let biography: String
     let whyConfirmationSaint: String?

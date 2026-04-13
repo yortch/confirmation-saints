@@ -144,13 +144,13 @@ struct SaintDetailView: View {
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
                 if let birth = saint.birthDate {
-                    detailCard(label: AppStrings.localized("Born", language: language), value: birth, icon: "calendar")
+                    detailCard(label: AppStrings.localized("Born", language: language), value: SaintDateFormatter.format(birth), icon: "calendar")
                 }
                 if let death = saint.deathDate {
-                    detailCard(label: AppStrings.localized("Died", language: language), value: death, icon: "calendar.badge.clock")
+                    detailCard(label: AppStrings.localized("Died", language: language), value: SaintDateFormatter.format(death), icon: "calendar.badge.clock")
                 }
                 if let canon = saint.canonizationDate {
-                    detailCard(label: AppStrings.localized("Canonized", language: language), value: canon, icon: "star.fill")
+                    detailCard(label: AppStrings.localized("Canonized", language: language), value: SaintDateFormatter.format(canon), icon: "star.fill")
                 }
                 if let region = saint.region {
                     detailCard(label: AppStrings.localized("Region", language: language), value: region, icon: "map.fill")
@@ -205,7 +205,7 @@ struct SaintDetailView: View {
                 Label(AppStrings.localized("Interests & Tags", language: language), systemImage: "tag.fill")
                     .font(.title3.bold())
                 FlowLayout(spacing: 8) {
-                    ForEach(saint.affinities + saint.tags, id: \.self) { tag in
+                    ForEach((saint.displayAffinities ?? saint.affinities) + (saint.displayTags ?? saint.tags), id: \.self) { tag in
                         Text(tag.capitalized)
                             .font(.caption)
                             .padding(.horizontal, 10)
