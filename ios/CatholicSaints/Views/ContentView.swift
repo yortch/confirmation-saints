@@ -3,13 +3,13 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.appLanguage) private var language
     @State private var viewModel = SaintListViewModel()
-    @State private var selectedTab = 1
+    @State private var selectedTab = 0
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            SaintListView(viewModel: viewModel)
+            AboutConfirmationView(viewModel: viewModel)
                 .tabItem {
-                    Label(AppStrings.localized("Saints", language: language), systemImage: "person.3.fill")
+                    Label(AppStrings.localized("About", language: language), systemImage: "book.fill")
                 }
                 .tag(0)
 
@@ -19,15 +19,15 @@ struct ContentView: View {
                 }
                 .tag(1)
 
-            SearchView(viewModel: viewModel)
+            SaintListView(viewModel: viewModel)
                 .tabItem {
-                    Label(AppStrings.localized("Search", language: language), systemImage: "magnifyingglass")
+                    Label(AppStrings.localized("Saints", language: language), systemImage: "person.3.fill")
                 }
                 .tag(2)
 
-            AboutConfirmationView(viewModel: viewModel)
+            SearchView(viewModel: viewModel)
                 .tabItem {
-                    Label(AppStrings.localized("About", language: language), systemImage: "book.fill")
+                    Label(AppStrings.localized("Search", language: language), systemImage: "magnifyingglass")
                 }
                 .tag(3)
 

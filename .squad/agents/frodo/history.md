@@ -99,3 +99,10 @@
 - **Pattern:** Never pass captured content model values (`let saint: Saint`) to detail views when that content can change (e.g., language switch). Always pass an ID + an @Observable data source so the view re-renders reactively.
 - **Navigation change:** `SaintListView` and `SearchView` now use `.navigationDestination(for: String.self)` (saint ID) instead of `.navigationDestination(for: Saint.self)`.
 - Build verified clean on iPhone 17 simulator.
+
+### Splash Screen, Date Formatting & Tab Reorder (2025-07-19)
+- **Task 1 (Splash Screen):** Created `SplashView.swift` — red background with centered app icon (SplashLogo image set) and "Confirmation Saints" text. Shows as overlay in `CatholicSaintsApp.swift` for 1.5s then fades out. Created `SplashLogo.imageset` in Assets.xcassets (reuses app-icon-1024.png) since `Image("AppIcon")` doesn't work for AppIcon asset sets.
+- **Task 2 (Date Formatting):** Created `SaintDateFormatter` enum in `Extensions/DateFormatting.swift`. Formats ISO dates as dd-Mon-yyyy (e.g., "02-Jan-1873"). Detects approximate ancient dates (month=01, day=01, year<800) and shows year only. Applied in `SaintDetailView` for birthDate, deathDate, canonizationDate display.
+- **Task 3 (Tab Reorder):** Changed tab order to About→Explore→Saints→Search→Settings. About is now tag(0) and default landing tab (`selectedTab = 0`).
+- Lesson: Can't use `Image("AppIcon")` in SwiftUI — the AppIcon.appiconset is special. Create a separate imageset with the same file for in-app icon display.
+- Build verified clean on iPhone 17 simulator.

@@ -13,14 +13,32 @@ struct CatholicSaintsApp: App {
     @AppStorage("appLanguage") private var appLanguage = systemDefaultLanguage
     @AppStorage("hasSeenWelcome") private var hasSeenWelcome = false
 
+    @State private var showSplash = true
+
     var body: some Scene {
         WindowGroup {
-            if hasSeenWelcome {
-                ContentView()
-                    .environment(\.appLanguage, appLanguage)
-            } else {
-                WelcomeView()
-                    .environment(\.appLanguage, appLanguage)
+            ZStack {
+                if hasSeenWelcome {
+                    ContentView()
+                        .environment(\.appLanguage, appLanguage)
+                } else {
+                    WelcomeView()
+                        .environment(\.appLanguage, appLanguage)
+                }
+            }
+            .overlay {
+                if showSplash {
+                    SplashView()
+                        .transition(.opacity)
+                        .zIndex(1)
+                }
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    withAnimation(.easeOut(duration: 0.5)) {
+                        showSplash = false
+                    }
+                }
             }
         }
     }
