@@ -65,7 +65,13 @@ struct AboutConfirmationView: View {
     }
 
     private func markdownAttributedString(_ text: String) -> AttributedString {
-        (try? AttributedString(markdown: text)) ?? AttributedString(text)
+        // Markdown treats single newlines as spaces. Convert \n to double-newline
+        // for proper line break rendering, preserving existing paragraph breaks.
+        let normalized = text
+            .replacingOccurrences(of: "\n\n", with: "⏎⏎")  // protect paragraph breaks
+            .replacingOccurrences(of: "\n", with: "  \n")    // trailing double-space = hard line break in Markdown
+            .replacingOccurrences(of: "⏎⏎", with: "\n\n")   // restore paragraph breaks
+        return (try? AttributedString(markdown: normalized)) ?? AttributedString(text)
     }
 
     private func iconForSection(_ id: String) -> String {

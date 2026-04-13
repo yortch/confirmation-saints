@@ -57,7 +57,7 @@ final class SaintListViewModel {
             }
         }
 
-        return result.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
+        return result.sorted { sortableName($0.name).localizedCaseInsensitiveCompare(sortableName($1.name)) == .orderedAscending }
     }
 
     /// Saints matching a specific category value (for category browsing).
@@ -83,7 +83,18 @@ final class SaintListViewModel {
                 return false
             }
         }
-        .sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
+        .sorted { sortableName($0.name).localizedCaseInsensitiveCompare(sortableName($1.name)) == .orderedAscending }
+    }
+
+    /// Strips title prefixes (St., Bl., Our Lady, Santa, San, Santo, Beato, Beata) for sorting.
+    private func sortableName(_ name: String) -> String {
+        let prefixes = ["St. ", "Bl. ", "Our Lady of ", "Santa ", "San ", "Santo ", "Beato ", "Beata "]
+        for prefix in prefixes {
+            if name.hasPrefix(prefix) {
+                return String(name.dropFirst(prefix.count))
+            }
+        }
+        return name
     }
 
     private func matchesEra(saint: Saint, era: String) -> Bool {

@@ -4,15 +4,9 @@ import Foundation
 /// Converts ISO date strings to display format: dd-Mon-yyyy (e.g., "02-Jan-1873").
 /// For approximate ancient dates (month=01, day=01, year<800), shows year only.
 enum SaintDateFormatter {
-    private static let monthAbbreviations = [
-        1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr",
-        5: "May", 6: "Jun", 7: "Jul", 8: "Aug",
-        9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"
-    ]
-
     /// Formats an ISO date string (e.g., "1873-01-02") for display.
-    /// Returns "02-Jan-1873" for precise dates, or just the year for approximate ancient dates.
-    static func format(_ isoDate: String) -> String {
+    /// Uses the system DateFormatter for locale-aware month abbreviations.
+    static func format(_ isoDate: String, language: String = "en") -> String {
         let parts = isoDate.split(separator: "-")
         guard parts.count == 3,
               let year = Int(parts[0]),
@@ -26,8 +20,11 @@ enum SaintDateFormatter {
             return "\(year)"
         }
 
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: language)
+        let monthStr = formatter.shortMonthSymbols[month - 1].capitalized
+
         let dayStr = String(format: "%02d", day)
-        let monthStr = monthAbbreviations[month] ?? "\(month)"
         return "\(dayStr)-\(monthStr)-\(year)"
     }
 }

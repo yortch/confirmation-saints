@@ -75,6 +75,19 @@ SAINT_IMAGES = {
     "patrick": "St._Patrick,_Bishop_of_Ireland_Met_DP890884.jpg",
     "catherine-of-siena": "Giovanni_Battista_Tiepolo_096.jpg",
     "martin-de-porres": "Martin_de_Porres.jpg",
+    "blaise": "Ca'_Rezzonico_-_Sala_Tiepolo_-_San_Biagio_by_Giambattiasta_Tiepolo.jpg",
+    "vitus": "Saint_Vitus.jpg",
+    "genesius-of-rome": "Cristoforo_Moretti_-_Saint_Genesius_-_Google_Art_Project.jpg",
+    "michael-mcgivney": "Father_McGivney_300.jpg",
+    "teresa-of-the-andes": "Teresa_de_los_Andes.jpg",
+    "joseph-mukasa-balikuddembe": "St_Joseph_Mukasa_c1920_d.png",
+    "elizabeth-ann-seton": "Elizabeth_Ann_Seton_portrait_by_Amabilia_Filicchi_(cropped).jpg",
+    "oscar-romero": "Monseñor_Romero_(colour).jpg",
+    "faustina-kowalska": "Faustina.jpg",
+    "mary-magdalene": "Paolo_Veronese,_The_Conversion_of_Mary_Magdalene.jpg",
+    "boniface": "SaintBoniface.jpg",
+    "catherine-of-alexandria": "Saint_Catherine_of_Alexandria_and_the_Angel_-_Francesco_Solimena.jpg",
+    "john-the-baptist": "Leonardo_da_Vinci_-_Saint_John_the_Baptist_C2RMF_retouched.jpg",
 }
 
 

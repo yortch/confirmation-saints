@@ -144,13 +144,13 @@ struct SaintDetailView: View {
 
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
                 if let birth = saint.birthDate {
-                    detailCard(label: AppStrings.localized("Born", language: language), value: SaintDateFormatter.format(birth), icon: "calendar")
+                    detailCard(label: AppStrings.localized("Born", language: language), value: SaintDateFormatter.format(birth, language: language), icon: "calendar")
                 }
                 if let death = saint.deathDate {
-                    detailCard(label: AppStrings.localized("Died", language: language), value: SaintDateFormatter.format(death), icon: "calendar.badge.clock")
+                    detailCard(label: AppStrings.localized("Died", language: language), value: SaintDateFormatter.format(death, language: language), icon: "calendar.badge.clock")
                 }
                 if let canon = saint.canonizationDate {
-                    detailCard(label: AppStrings.localized("Canonized", language: language), value: SaintDateFormatter.format(canon), icon: "star.fill")
+                    detailCard(label: AppStrings.localized("Canonized", language: language), value: SaintDateFormatter.format(canon, language: language), icon: "star.fill")
                 }
                 if let region = saint.region {
                     detailCard(label: AppStrings.localized("Region", language: language), value: region, icon: "map.fill")
