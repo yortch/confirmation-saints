@@ -1495,6 +1495,829 @@
         "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-frances-xavier-cabrini/",
         "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-frances-xavier-cabrini-702"
       }
+    },
+    {
+      "id": "joseph",
+      "name": "San José",
+      "feastDay": "03-19",
+      "birthDate": "0001-01-01",
+      "deathDate": "0030-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "workers",
+        "fathers",
+        "dying",
+        "universal Church",
+        "carpenters"
+      ],
+      "tags": [
+        "Holy Family",
+        "worker",
+        "father",
+        "humble",
+        "protector"
+      ],
+      "affinities": [
+        "family",
+        "work",
+        "prayer",
+        "craftsmanship"
+      ],
+      "quote": "Él no habló, pero obedeció. Es el guardián silencioso del misterio de Dios.",
+      "biography": "San José fue un carpintero de Nazaret en Galilea y descendiente del Rey David. Estaba desposado con María cuando un ángel se le apareció en sueños, revelándole que el hijo de María fue concebido por el Espíritu Santo. José confió en el plan de Dios y tomó a María como esposa, convirtiéndose en el padre adoptivo y protector terrenal de Jesucristo.\n\nLos Evangelios presentan a José como un 'hombre justo' — obediente, trabajador y profundamente fiel. Protegió a la Sagrada Familia durante la huida a Egipto cuando el rey Herodes buscaba matar al niño Jesús, y crió a Jesús en el humilde oficio de la carpintería en Nazaret.\n\nAunque José no pronuncia palabras registradas en las Escrituras, sus acciones revelan a un hombre de extraordinaria fe y valentía. Se cree que murió antes de que Jesús comenzara su ministerio público. En 1870, el Papa Pío IX declaró a José Patrono de la Iglesia Universal, y en 1955, el Papa Pío XII estableció la Fiesta de San José Obrero el 1 de mayo.",
+      "whyConfirmationSaint": "San José es el máximo ejemplo de fortaleza silenciosa y fidelidad. No necesitaba ser el centro de atención — simplemente se presentó e hizo lo que Dios le pidió, incluso cuando no tenía sentido. Si valoras el trabajo duro, proteger a tu familia, o simplemente quieres un santo que modele la humildad y la confianza en el plan de Dios, José es una elección increíble como santo de confirmación.",
+      "image": {
+        "filename": "joseph.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08504a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-joseph/"
+      }
+    },
+    {
+      "id": "joachim",
+      "name": "San Joaquín",
+      "feastDay": "07-26",
+      "birthDate": "0050-01-01",
+      "deathDate": "0100-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "grandparents",
+        "fathers",
+        "linen traders"
+      ],
+      "tags": [
+        "Holy Family",
+        "father",
+        "grandparent",
+        "faithful"
+      ],
+      "affinities": [
+        "family",
+        "prayer",
+        "patience"
+      ],
+      "quote": "Bienaventurados los que confían en el Señor y esperan pacientemente Sus promesas.",
+      "biography": "San Joaquín es venerado como el padre de la Santísima Virgen María y abuelo de Jesucristo. Aunque no aparece en los Evangelios canónicos, su historia se conserva en el Protoevangelio de Santiago, un texto cristiano primitivo del siglo II.\n\nSegún la tradición, Joaquín era un hombre rico y piadoso de Nazaret que, junto con su esposa Ana, sufrió el dolor de no tener hijos durante muchos años. En la cultura judía, esto se consideraba una señal del disfavor de Dios, y la ofrenda de Joaquín en el Templo fue una vez rechazada porque no tenía hijos. Desconsolado, se retiró al desierto para ayunar y orar durante cuarenta días.\n\nUn ángel se apareció tanto a Joaquín como a Ana por separado, anunciando que Dios había escuchado sus oraciones y concebirían un hijo de quien se hablaría en todo el mundo. Se encontraron con alegría en la Puerta Dorada de Jerusalén, y Ana concibió a María, quien se convertiría en la Madre de Dios. La fiesta de Joaquín se celebra el 26 de julio junto con su esposa, Santa Ana.",
+      "whyConfirmationSaint": "San Joaquín es una hermosa elección si valoras la paciencia y la confianza en el tiempo de Dios. Esperó años por la bendición de un hijo, y a través de su fidelidad, se convirtió en el abuelo de Jesús mismo. Elige a Joaquín si quieres un santo que te recuerde que los planes de Dios valen la pena esperar, incluso cuando la vida se siente desalentadora.",
+      "image": {
+        "filename": "joachim.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08406a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-joachim-and-anne/"
+      }
+    },
+    {
+      "id": "anne",
+      "name": "Santa Ana",
+      "feastDay": "07-26",
+      "birthDate": "0050-01-01",
+      "deathDate": "0100-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "female",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "grandmothers",
+        "mothers",
+        "women in labor",
+        "miners",
+        "horseback riders"
+      ],
+      "tags": [
+        "Holy Family",
+        "mother",
+        "grandmother",
+        "faithful"
+      ],
+      "affinities": [
+        "family",
+        "prayer",
+        "patience",
+        "teaching"
+      ],
+      "quote": "El fruto de la paciencia es el regalo más dulce de todos.",
+      "biography": "Santa Ana es venerada como la madre de la Santísima Virgen María y abuela de Jesucristo. Al igual que su esposo Joaquín, no aparece en los Evangelios canónicos, pero es celebrada en el Protoevangelio de Santiago, un influyente escrito cristiano primitivo.\n\nAna y Joaquín fueron padres judíos devotos que anhelaron tener un hijo durante muchos años. Según la tradición, después de años de esterilidad y oración, un ángel se apareció a Ana prometiéndole un hijo. Ella prometió dedicar a su hijo al servicio de Dios. Las oraciones de la pareja fueron respondidas con el nacimiento de María, quien se convertiría en la Madre de Dios.\n\nSe cree que Ana crió a María en profunda fe y piedad, enseñándole las Escrituras y preparándola para su extraordinario papel en la historia de la salvación. La devoción a Santa Ana se extendió por todo el mundo cristiano desde los primeros siglos. Es una de las santas más populares en la tradición católica, con el famoso santuario de Sainte-Anne-de-Beaupré en Quebec atrayendo millones de peregrinos.",
+      "whyConfirmationSaint": "Santa Ana es la santa de confirmación perfecta si tienes un vínculo especial con tus abuelos o quieres honrar el papel de la familia en tu fe. Confió en Dios durante años de espera y crió a una de las personas más santas que haya existido. Elige a Ana si quieres una santa que demuestre que criar y amar fielmente a tu familia es una de las cosas más poderosas que puedes hacer.",
+      "image": {
+        "filename": "anne.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/01538a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-joachim-and-anne/"
+      }
+    },
+    {
+      "id": "john-bosco",
+      "name": "San Juan Bosco",
+      "feastDay": "01-31",
+      "birthDate": "1815-08-16",
+      "deathDate": "1888-01-31",
+      "canonizationDate": "1934-04-01",
+      "country": "Italia",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "youth",
+        "educators",
+        "students",
+        "apprentices",
+        "magicians"
+      ],
+      "tags": [
+        "founder",
+        "educator",
+        "priest",
+        "youth advocate"
+      ],
+      "affinities": [
+        "teaching",
+        "leadership",
+        "community service",
+        "sports",
+        "music"
+      ],
+      "quote": "No basta con amar a los jóvenes. Ellos deben saber que son amados.",
+      "biography": "Giovanni Melchior Bosco nació el 16 de agosto de 1815 en Becchi, un pequeño caserío cerca de Turín, Italia. Su padre murió cuando tenía solo dos años, dejando a su madre Margarita criar a tres hijos en profunda pobreza. Desde joven, Juan tuvo sueños vívidos que creía eran mensajes de Dios sobre su futura misión de ayudar a los jóvenes.\n\nDe adolescente, Juan trabajó como pastor, mesero, zapatero y carpintero para pagar su educación. Fue ordenado sacerdote en 1841 e inmediatamente comenzó la obra de su vida: rescatar a los muchachos de las calles del Turín industrializado. Reunió a niños abandonados, huérfanos y delincuentes, ofreciéndoles refugio, educación, formación laboral y, sobre todo, un ambiente familiar amoroso.\n\nDon Bosco, como llegó a ser conocido, desarrolló el 'Sistema Preventivo' de educación basado en la razón, la religión y la amabilidad amorosa — un enfoque revolucionario en una era de disciplina severa. Fundó los Salesianos de Don Bosco en 1859, que creció hasta convertirse en una de las órdenes religiosas más grandes del mundo. También cofundó las Hijas de María Auxiliadora con Santa María Dominica Mazzarello. Para su muerte el 31 de enero de 1888, su obra se había extendido por Europa y Sudamérica.",
+      "whyConfirmationSaint": "Don Bosco es el santo patrón de la juventud — y se ganó ese título dedicando toda su vida a jóvenes como tú. Creció pobre, trabajó en innumerables oficios para educarse, y luego usó todo lo que tenía para ayudar a niños que nadie más quería. Si te importa la educación, ayudar a otros, o simplemente quieres un santo que genuinamente amaba a los adolescentes, Don Bosco es tu hombre.",
+      "image": {
+        "filename": "john-bosco.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08677a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-bosco/"
+      }
+    },
+    {
+      "id": "marcellin-champagnat",
+      "name": "San Marcelino Champagnat",
+      "feastDay": "06-06",
+      "birthDate": "1789-05-20",
+      "deathDate": "1840-06-06",
+      "canonizationDate": "1999-04-18",
+      "country": "Francia",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "educators",
+        "Marist Brothers"
+      ],
+      "tags": [
+        "founder",
+        "educator",
+        "priest",
+        "humble"
+      ],
+      "affinities": [
+        "teaching",
+        "community service",
+        "leadership",
+        "faith"
+      ],
+      "quote": "Para educar bien a los niños, hay que amarlos y amarlos a todos por igual.",
+      "biography": "Marcelino José Benito Champagnat nació el 20 de mayo de 1789 en el pequeño pueblo de Le Rosey, en el sur de Francia, apenas semanas antes de que estallara la Revolución Francesa. Su temprana experiencia con la mala escolaridad — estaba tan desanimado por un maestro severo que abandonó los estudios — moldeó su misión de por vida de proporcionar educación de calidad a los niños, especialmente a los pobres rurales.\n\nOrdenado sacerdote en 1816, Champagnat quedó profundamente conmovido cuando fue llamado al lecho de un adolescente moribundo al que nunca le habían enseñado nada sobre Dios. Esta experiencia cimentó su resolución de fundar una orden dedicada a la enseñanza. En 1817, con solo dos jóvenes reclutas, estableció los Hermanos Maristas (Hermanitos de María), dedicados a educar a niños en comunidades rurales y desatendidas.\n\nA pesar de enfrentar oposición de las autoridades eclesiásticas, dificultades financieras y su propia salud en declive, Champagnat construyó escuelas por toda Francia. Su filosofía educativa se centraba en la presencia amorosa — estar con los jóvenes, conocerlos personalmente y tratarlos con dignidad. Murió el 6 de junio de 1840, a los 51 años. Hoy los Hermanos Maristas operan escuelas en 80 países, sirviendo a más de 650,000 estudiantes.",
+      "whyConfirmationSaint": "San Marcelino Champagnat es el santo perfecto para cualquiera que crea en el poder de la educación y el cuidado de los demás. Experimentó la mala enseñanza de primera mano y juró hacerlo mejor. Si alguna vez te has sentido ignorado o subestimado, Champagnat te recuerda que la dedicación de una persona hacia los demás puede cambiar el mundo — literalmente cientos de miles de estudiantes son educados gracias a su visión.",
+      "image": {
+        "filename": "marcellin-champagnat.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Catholic News Agency"
+      ],
+      "sourceURLs": {
+        "EWTN": "https://www.ewtn.com/catholicism/saints/marcellin-champagnat-777",
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-marcellin-champagnat-597"
+      }
+    },
+    {
+      "id": "peter-apostle",
+      "name": "San Pedro Apóstol",
+      "feastDay": "06-29",
+      "birthDate": "0001-01-01",
+      "deathDate": "0064-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "popes",
+        "fishermen",
+        "net makers",
+        "locksmiths"
+      ],
+      "tags": [
+        "apostle",
+        "leader",
+        "first pope",
+        "martyr",
+        "fisherman"
+      ],
+      "affinities": [
+        "leadership",
+        "courage",
+        "faith",
+        "fishing"
+      ],
+      "quote": "Señor, tú lo sabes todo; tú sabes que te amo.",
+      "biography": "Simón Pedro fue un pescador de Betsaida en Galilea. Él y su hermano Andrés fueron de los primeros discípulos llamados por Jesús, quien le dijo: 'Tú eres Pedro, y sobre esta piedra edificaré mi Iglesia.' Jesús le cambió el nombre de Simón a Pedro (Cefas en arameo), que significa 'roca.'\n\nPedro fue parte del círculo íntimo de Jesús, presenciando la Transfiguración y la agonía en el Huerto de Getsemaní. Era audaz e impetuoso — caminó sobre el agua hacia Jesús, y luego se hundió cuando dudó. Famosamente negó conocer a Jesús tres veces la noche de la crucifixión, y luego lloró amargamente en arrepentimiento.\n\nDespués de la Resurrección, Jesús se apareció a Pedro y le preguntó tres veces: '¿Me amas?' — restaurándolo y comisionándolo a 'Apacienta mis ovejas.' Pedro se convirtió en el líder de la Iglesia primitiva, predicando en Pentecostés y convirtiendo a miles. Viajó a Roma, donde la tradición sostiene que fue crucificado cabeza abajo bajo el emperador Nerón alrededor del año 64 d.C., pidiendo ser invertido porque se sentía indigno de morir de la misma manera que Jesús. La Basílica de San Pedro en Roma está construida sobre su tumba.",
+      "whyConfirmationSaint": "Pedro es el santo para cualquiera que haya cometido errores y se pregunte si Dios todavía puede usarlo. Negó a Jesús tres veces — y Jesús lo hizo el primer papa de todas formas. Pedro demuestra que tus fracasos no te definen; tu disposición a levantarte sí. Elige a Pedro si quieres un santo que pruebe que Dios obra a través de personas imperfectas.",
+      "image": {
+        "filename": "peter-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11744a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-peter-and-paul/"
+      }
+    },
+    {
+      "id": "paul-apostle",
+      "name": "San Pablo Apóstol",
+      "feastDay": "06-29",
+      "birthDate": "0005-01-01",
+      "deathDate": "0064-01-01",
+      "canonizationDate": null,
+      "country": "Turquía",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "missionaries",
+        "theologians",
+        "writers",
+        "tentmakers"
+      ],
+      "tags": [
+        "apostle",
+        "missionary",
+        "writer",
+        "martyr",
+        "convert"
+      ],
+      "affinities": [
+        "writing",
+        "leadership",
+        "adventure",
+        "studying"
+      ],
+      "quote": "Todo lo puedo en Cristo que me fortalece.",
+      "biography": "Saulo de Tarso nació alrededor del año 5 d.C. en Tarso, una ciudad importante en la actual Turquía. Era un fariseo devoto, ciudadano romano y celoso perseguidor de los primeros cristianos. Supervisó la lapidación de San Esteban, el primer mártir cristiano, y buscaba activamente creyentes para encarcelarlos.\n\nTodo cambió en el camino a Damasco alrededor del año 33-36 d.C. Una luz cegadora derribó a Saulo, y la voz de Jesús preguntó: 'Saulo, Saulo, ¿por qué me persigues?' Ciego durante tres días, Saulo fue bautizado por Ananías y emergió como Pablo — el evangelista más apasionado que el mundo haya conocido.\n\nPablo emprendió tres épicos viajes misioneros a través del Mediterráneo, fundando iglesias en Asia Menor, Grecia y Roma. Escribió 13 epístolas (cartas) que constituyen una porción significativa del Nuevo Testamento, incluyendo Romanos, Corintios, Gálatas y Filipenses. Su teología moldeó la comprensión cristiana de la gracia, la fe y la salvación.\n\nPablo soportó naufragios, golpizas, encarcelamiento y peligro constante por el Evangelio. Fue decapitado en Roma bajo el emperador Nerón alrededor del año 64 d.C. Su fiesta se celebra el 29 de junio junto con San Pedro.",
+      "whyConfirmationSaint": "Pablo pasó de ser el mayor enemigo de la Iglesia a su mayor misionero. Su historia es la conversión definitiva — prueba de que nadie está demasiado lejos para la gracia de Dios. Si alguna vez has sentido que tus errores pasados te descalifican, Pablo demuestra que Dios puede transformar a cualquiera. Elige a Pablo si quieres un santo con una historia de regreso increíble y dedicación imparable.",
+      "image": {
+        "filename": "paul-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11567b.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-peter-and-paul/"
+      }
+    },
+    {
+      "id": "andrew-apostle",
+      "name": "San Andrés Apóstol",
+      "feastDay": "11-30",
+      "birthDate": "0005-01-01",
+      "deathDate": "0060-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Scotland",
+        "fishermen",
+        "singers",
+        "Greece",
+        "Russia"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "fisherman",
+        "first-called"
+      ],
+      "affinities": [
+        "fishing",
+        "adventure",
+        "faith",
+        "courage"
+      ],
+      "quote": "¡Hemos encontrado al Mesías!",
+      "biography": "Andrés fue un pescador de Betsaida en Galilea y hermano de Simón Pedro. Fue originalmente discípulo de Juan el Bautista antes de convertirse en uno de los primeros seguidores de Jesús — ganándose el título de 'Protocleto' o 'Primer Llamado.' Fue Andrés quien trajo a Pedro ante Jesús, diciendo: '¡Hemos encontrado al Mesías!'\n\nEn los Evangelios, Andrés aparece en momentos clave: es quien encontró al muchacho con cinco panes y dos peces antes del milagro de la multiplicación de los panes. Trajo visitantes de habla griega a conocer a Jesús, sirviendo como puente entre culturas.\n\nDespués de Pentecostés, la tradición sostiene que Andrés predicó en la actual Grecia, Turquía y a lo largo de la costa del Mar Negro. Se dice que fundó la Iglesia de Bizancio (luego Constantinopla), convirtiéndolo en el santo patrón del Patriarcado Ecuménico de Constantinopla.\n\nAndrés fue martirizado en Patras, Grecia, alrededor del año 60 d.C. Según la tradición, fue crucificado en una cruz en forma de X (ahora conocida como la Cruz de San Andrés o aspa), porque se sentía indigno de ser crucificado en el mismo tipo de cruz que Jesús. Esta cruz en forma de X aparece en la bandera de Escocia, donde Andrés es el santo patrón.",
+      "whyConfirmationSaint": "Andrés fue el primer apóstol llamado por Jesús, y su primer instinto fue ir a contarle a su hermano. Es el santo de traer a otros a Cristo — no a través de grandes sermones, sino de invitación personal. Elige a Andrés si quieres un santo que demuestre que lo más poderoso que puedes hacer es compartir tu fe con las personas más cercanas a ti.",
+      "image": {
+        "filename": "andrew-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/01471a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-andrew/"
+      }
+    },
+    {
+      "id": "james-greater",
+      "name": "Santiago el Mayor",
+      "feastDay": "07-25",
+      "birthDate": "0003-01-01",
+      "deathDate": "0044-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Spain",
+        "pilgrims",
+        "laborers",
+        "soldiers"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "pilgrim",
+        "inner circle"
+      ],
+      "affinities": [
+        "adventure",
+        "courage",
+        "faith",
+        "travel"
+      ],
+      "quote": "Sed hacedores de la palabra, y no tan solo oidores.",
+      "biography": "Santiago, hijo de Zebedeo y hermano de Juan, era un pescador en el Mar de Galilea cuando Jesús lo llamó a ser apóstol. Junto con Pedro y Juan, Santiago fue parte del círculo íntimo de los tres — presente en la Transfiguración, la resurrección de la hija de Jairo y la agonía en el Huerto de Getsemaní.\n\nJesús apodó a Santiago y Juan 'Boanerges' — 'Hijos del Trueno' — probablemente por sus temperamentos fogosos. Cuando una aldea samaritana se negó a recibir a Jesús, Santiago y Juan preguntaron si debían hacer bajar fuego del cielo. Jesús los reprendió, enseñando que su misión era salvar, no destruir.\n\nSantiago fue el primer apóstol en ser martirizado. Alrededor del año 44 d.C., el rey Herodes Agripa I lo mandó ejecutar a espada en Jerusalén, como se registra en los Hechos de los Apóstoles (12:2). Según la tradición española, Santiago había predicado en España antes de su muerte, y sus restos fueron milagrosamente transportados a Santiago de Compostela en el noroeste de España. La Catedral de Santiago de Compostela se convirtió en uno de los sitios de peregrinación más importantes de la cristiandad, con el Camino de Santiago atrayendo cientos de miles de peregrinos anualmente hasta el día de hoy.",
+      "whyConfirmationSaint": "Santiago era audaz, apasionado y a veces impulsivo — y Jesús lo eligió para su círculo íntimo de todas formas. Fue el primer apóstol en morir por su fe, demostrando que el verdadero coraje significa estar dispuesto a darlo todo por lo que crees. Elige a Santiago si eres apasionado y quieres un santo que te recuerde canalizar ese fuego para el propósito de Dios.",
+      "image": {
+        "filename": "james-greater.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08279b.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-james-apostle/"
+      }
+    },
+    {
+      "id": "john-apostle",
+      "name": "San Juan Apóstol",
+      "feastDay": "12-27",
+      "birthDate": "0006-01-01",
+      "deathDate": "0100-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "writers",
+        "theologians",
+        "publishers",
+        "Asia Minor"
+      ],
+      "tags": [
+        "apostle",
+        "evangelist",
+        "writer",
+        "beloved disciple"
+      ],
+      "affinities": [
+        "writing",
+        "studying",
+        "prayer",
+        "faith"
+      ],
+      "quote": "Dios es amor, y quien permanece en el amor permanece en Dios, y Dios en él.",
+      "biography": "Juan, hijo de Zebedeo y hermano de Santiago el Mayor, era un pescador de Galilea que se convirtió en uno de los primeros discípulos de Jesús y el más joven de los doce apóstoles. Tradicionalmente se lo identifica como 'el discípulo amado' — el que se reclinó sobre el pecho de Jesús en la Última Cena.\n\nJuan fue parte del círculo íntimo de Jesús con Pedro y Santiago. Estuvo al pie de la cruz durante la Crucifixión, donde Jesús encomendó a su madre María al cuidado de Juan, diciendo: 'He ahí a tu madre.' Juan llevó a María a su hogar y cuidó de ella.\n\nDespués de Pentecostés, Juan se convirtió en un pilar de la Iglesia primitiva en Jerusalén. Más tarde se estableció en Éfeso (actual Turquía), donde cuidó de la comunidad cristiana. Bajo el emperador Domiciano, fue exiliado a la isla de Patmos, donde la tradición sostiene que escribió el libro del Apocalipsis.\n\nA Juan se le atribuyen el Evangelio de Juan, tres epístolas y el Apocalipsis — convirtiéndolo en el autor más prolífico del Nuevo Testamento después de Pablo. Sus escritos enfatizan el amor como la virtud cristiana central. Es el único apóstol que se cree murió de causas naturales, viviendo hasta una edad avanzada alrededor del año 100 d.C.",
+      "whyConfirmationSaint": "Juan fue el apóstol más joven y el único que permaneció con Jesús hasta la cruz cuando todos los demás huyeron. Su mensaje fue simple pero profundo: 'Dios es amor.' Elige a Juan si quieres un santo que demuestre que el verdadero coraje es mantenerte leal a las personas y principios que amas, incluso cuando es aterrador.",
+      "image": {
+        "filename": "john-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08492a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-apostle-and-evangelist/"
+      }
+    },
+    {
+      "id": "philip-apostle",
+      "name": "San Felipe Apóstol",
+      "feastDay": "05-03",
+      "birthDate": "0005-01-01",
+      "deathDate": "0080-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "pastry chefs",
+        "hatters",
+        "Uruguay"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "evangelist"
+      ],
+      "affinities": [
+        "faith",
+        "community service",
+        "studying"
+      ],
+      "quote": "Señor, muéstranos al Padre, y nos basta.",
+      "biography": "Felipe era de Betsaida, el mismo pueblo que Pedro y Andrés. Fue uno de los primeros discípulos llamados por Jesús, quien simplemente le dijo: 'Sígueme.' Felipe inmediatamente fue a buscar a Natanael (Bartolomé) y le dijo: 'Hemos encontrado a aquel de quien escribió Moisés en la Ley y los Profetas — Jesús de Nazaret.'\n\nEn los Evangelios, Felipe aparece como un discípulo práctico y cuestionador. Cuando Jesús le preguntó dónde podían comprar pan para la multitud, Felipe calculó que 'doscientos denarios no serían suficientes.' En la Última Cena, Felipe pidió a Jesús: 'Señor, muéstranos al Padre,' provocando la profunda respuesta de Jesús: 'El que me ha visto a mí ha visto al Padre.'\n\nFelipe también sirvió como puente hacia el mundo gentil. Cuando visitantes griegos querían conocer a Jesús, se acercaron primero a Felipe — quizás por su nombre griego.\n\nSegún la tradición, después de Pentecostés Felipe predicó en Grecia, Siria y Frigia (actual Turquía). Se dice que fue martirizado en Hierápolis, donde fue crucificado cabeza abajo o colgado de un pilar. Su tumba fue descubierta allí por arqueólogos italianos en 2011.",
+      "whyConfirmationSaint": "Felipe era un tipo honesto y práctico que hacía preguntas reales — incluyendo algunas que podrían parecer vergonzosas. Pero Jesús nunca lo rechazó por preguntar. Elige a Felipe si eres alguien que quiere entender más profundamente su fe y no tiene miedo de hacer preguntas. Él prueba que la curiosidad y la fe pueden ir de la mano.",
+      "image": {
+        "filename": "philip-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "EWTN"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/12006a.htm",
+        "EWTN": "https://www.ewtn.com/catholicism/saints/philip-and-james-apostles-649"
+      }
+    },
+    {
+      "id": "bartholomew-apostle",
+      "name": "San Bartolomé Apóstol",
+      "feastDay": "08-24",
+      "birthDate": "0005-01-01",
+      "deathDate": "0071-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "tanners",
+        "leather workers",
+        "bookbinders",
+        "Armenia"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "missionary"
+      ],
+      "affinities": [
+        "faith",
+        "adventure",
+        "honesty"
+      ],
+      "quote": "¿De Nazaret puede salir algo bueno? ¡Ven y ve!",
+      "biography": "Bartolomé es uno de los doce apóstoles mencionados en los Evangelios sinópticos. La mayoría de los estudiosos lo identifican con Natanael, el discípulo presentado a Jesús por Felipe en el Evangelio de Juan. Cuando Felipe le contó a Natanael sobre Jesús de Nazaret, Natanael respondió escépticamente: '¿De Nazaret puede salir algo bueno?' La respuesta de Felipe fue simple: 'Ven y ve.'\n\nCuando Natanael se acercó a Jesús, el Señor dijo de él: 'He aquí un verdadero israelita en quien no hay engaño.' Asombrado, Natanael preguntó cómo Jesús lo conocía. Jesús respondió: 'Te vi cuando estabas debajo de la higuera, antes de que Felipe te llamara.' Esto conmovió tanto a Natanael que declaró: 'Rabí, tú eres el Hijo de Dios; tú eres el Rey de Israel.'\n\nDespués de Pentecostés, la tradición sostiene que Bartolomé predicó en India, Armenia, Etiopía y Mesopotamia. La Iglesia Apostólica Armenia lo honra como su santo patrón, afirmando que él llevó el cristianismo a Armenia. Según la tradición, Bartolomé fue martirizado en Armenia siendo desollado vivo y luego decapitado. Debido a su forma de muerte, es el santo patrón de los trabajadores del cuero y curtidores. En el Juicio Final de la Capilla Sixtina de Miguel Ángel, Bartolomé aparece sosteniendo su propia piel desollada.",
+      "whyConfirmationSaint": "Bartolomé comenzó siendo escéptico — '¿De Nazaret puede salir algo bueno?' — pero fue lo suficientemente abierto para 'ir y ver.' Jesús lo elogió por su honestidad y falta de engaño. Elige a Bartolomé si valoras la autenticidad y quieres un santo que demuestre que está bien tener dudas, siempre y cuando estés dispuesto a buscar la verdad.",
+      "image": {
+        "filename": "bartholomew-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/02313c.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-bartholomew/"
+      }
+    },
+    {
+      "id": "matthew-apostle",
+      "name": "San Mateo Apóstol",
+      "feastDay": "09-21",
+      "birthDate": "0005-01-01",
+      "deathDate": "0074-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "accountants",
+        "bankers",
+        "tax collectors",
+        "bookkeepers"
+      ],
+      "tags": [
+        "apostle",
+        "evangelist",
+        "writer",
+        "convert",
+        "martyr"
+      ],
+      "affinities": [
+        "writing",
+        "studying",
+        "math",
+        "justice"
+      ],
+      "quote": "Sígueme.",
+      "biography": "Mateo, también conocido como Leví, era un recaudador de impuestos en Cafarnaúm antes de que Jesús lo llamara a ser apóstol. En el mundo judío antiguo, los recaudadores de impuestos eran despreciados — trabajaban para la ocupación romana y eran considerados traidores y pecadores. Cuando Jesús vio a Mateo sentado en su puesto de impuestos, simplemente le dijo: 'Sígueme,' y Mateo inmediatamente dejó todo atrás.\n\nMateo luego organizó un gran banquete en su casa, invitando a sus compañeros recaudadores de impuestos y pecadores a conocer a Jesús. Cuando los fariseos criticaron a Jesús por cenar con esas personas, Jesús respondió con una de sus frases más famosas: 'No son los sanos los que necesitan médico, sino los enfermos. No he venido a llamar a los justos, sino a los pecadores.'\n\nA Mateo se le atribuye tradicionalmente la escritura del primer Evangelio, que fue particularmente importante para los cristianos judíos porque constantemente hace referencia a las profecías del Antiguo Testamento cumplidas por Jesús. Su Evangelio incluye el Sermón de la Montaña, el Padre Nuestro y la Gran Comisión.\n\nSegún diversas tradiciones, después de Pentecostés Mateo predicó en Judea, Etiopía, Persia o Partia. Se cree que fue martirizado, aunque los relatos difieren sobre si fue apuñalado, decapitado o quemado.",
+      "whyConfirmationSaint": "Mateo tenía la peor reputación del pueblo — un recaudador de impuestos, considerado tramposo y traidor. Pero cuando Jesús lo llamó, dejó todo y lo siguió. Si alguna vez te has sentido juzgado por tu pasado o como si no pertenecieras a la iglesia, Mateo es prueba de que Jesús llama exactamente a las personas que el mundo descarta. Tu pasado no te descalifica de la grandeza.",
+      "image": {
+        "filename": "matthew-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10056a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthew/"
+      }
+    },
+    {
+      "id": "thomas-apostle",
+      "name": "Santo Tomás Apóstol",
+      "feastDay": "07-03",
+      "birthDate": "0005-01-01",
+      "deathDate": "0072-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "India",
+        "architects",
+        "builders",
+        "blind people"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "missionary",
+        "doubter turned believer"
+      ],
+      "affinities": [
+        "studying",
+        "adventure",
+        "faith",
+        "honesty"
+      ],
+      "quote": "¡Señor mío y Dios mío!",
+      "biography": "Tomás, también llamado Dídimo ('el Gemelo'), es uno de los doce apóstoles más conocido por su duda inicial sobre la Resurrección de Jesús. Cuando los otros apóstoles le dijeron a Tomás que habían visto al Señor resucitado, declaró: 'Si no veo en sus manos la señal de los clavos, y meto mi dedo en el lugar de los clavos, y meto mi mano en su costado, no creeré.'\n\nOcho días después, Jesús apareció de nuevo e invitó a Tomás a tocar sus heridas. Tomás respondió con una de las profesiones de fe más poderosas de toda la Escritura: '¡Señor mío y Dios mío!' Jesús respondió: 'Porque me has visto, has creído; bienaventurados los que no han visto y sin embargo han creído.'\n\nPero Tomás fue mucho más que su famosa duda. Antes en el Evangelio de Juan, cuando Jesús decidió regresar a la peligrosa Judea, fue Tomás quien valientemente dijo a los otros discípulos: 'Vamos también nosotros, para morir con él.'\n\nSegún la antigua tradición, Tomás viajó más lejos que cualquier otro apóstol, llevando el cristianismo hasta la India alrededor del año 52 d.C. La Iglesia Católica Siro-Malabar y otros Cristianos de Santo Tomás en India rastrean sus orígenes a su predicación. Se cree que fue martirizado cerca de Chennai, India, alrededor del año 72 d.C.",
+      "whyConfirmationSaint": "Tomás tiene mala fama como 'Tomás el incrédulo,' pero su duda llevó a una de las mayores declaraciones de fe jamás hechas: '¡Señor mío y Dios mío!' Él demuestra que cuestionar no es lo opuesto a la fe — puede llevarte más profundo en ella. Elige a Tomás si eres alguien que necesita pensar las cosas y quiere un santo que pruebe que las preguntas honestas llevan a una creencia más fuerte.",
+      "image": {
+        "filename": "thomas-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/14658b.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-thomas-the-apostle/"
+      }
+    },
+    {
+      "id": "james-less",
+      "name": "Santiago el Menor",
+      "feastDay": "05-03",
+      "birthDate": "0005-01-01",
+      "deathDate": "0062-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "pharmacists",
+        "dying people",
+        "Uruguay"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "leader",
+        "bishop"
+      ],
+      "affinities": [
+        "leadership",
+        "justice",
+        "prayer",
+        "community service"
+      ],
+      "quote": "Tened paciencia, hermanos, hasta la venida del Señor.",
+      "biography": "Santiago, hijo de Alfeo, es llamado 'el Menor' (o 'el Joven') para distinguirlo de Santiago, hijo de Zebedeo ('el Mayor'). Algunos estudiosos lo identifican con 'Santiago el hermano del Señor' que se convirtió en líder de la comunidad cristiana primitiva en Jerusalén, aunque esta identificación es debatida.\n\nSi Santiago el Menor es el mismo que Santiago el hermano del Señor, entonces jugó un papel fundamental en el cristianismo primitivo. Presidió el Concilio de Jerusalén (alrededor del año 49-50 d.C.), donde la Iglesia primitiva tomó la decisión crucial de que los conversos gentiles no necesitaban seguir todas las leyes judías — una decisión que moldeó el futuro del cristianismo.\n\nLa Epístola de Santiago en el Nuevo Testamento se atribuye tradicionalmente a él. Enfatiza que 'la fe sin obras está muerta' y llama a la caridad práctica, el cuidado de los pobres y el control de la lengua.\n\nSegún el historiador Josefo y la tradición cristiana primitiva, Santiago fue martirizado en Jerusalén alrededor del año 62 d.C. Fue arrojado desde el pináculo del Templo, apedreado, y finalmente golpeado en la cabeza con un garrote de batanero. Su reputación de santidad era tan grande que incluso los judíos no cristianos lloraron su muerte.",
+      "whyConfirmationSaint": "Santiago el Menor fue un líder silencioso que mantuvo unida a la Iglesia primitiva durante algunos de sus mayores desacuerdos. Enseñó que la fe verdadera se muestra en cómo tratas a las personas — especialmente a los pobres. Elige a Santiago si quieres un santo que te recuerde que la fe no se trata solo de lo que crees, sino de lo que haces al respecto.",
+      "image": {
+        "filename": "james-less.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "EWTN"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08280a.htm",
+        "EWTN": "https://www.ewtn.com/catholicism/saints/philip-and-james-apostles-649"
+      }
+    },
+    {
+      "id": "jude-thaddeus",
+      "name": "San Judas Tadeo",
+      "feastDay": "10-28",
+      "birthDate": "0005-01-01",
+      "deathDate": "0065-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "lost causes",
+        "desperate situations",
+        "hospitals"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "intercessor",
+        "helper"
+      ],
+      "affinities": [
+        "prayer",
+        "courage",
+        "hope",
+        "community service"
+      ],
+      "quote": "Conservaos en el amor de Dios, esperando la misericordia de nuestro Señor Jesucristo.",
+      "biography": "Judas, también llamado Tadeo o Lebeo, fue uno de los doce apóstoles y es tradicionalmente identificado como pariente de Jesús — posiblemente un primo o hermano de Santiago el Menor. En el Evangelio de Juan, durante la Última Cena, es Judas (no Judas Iscariote) quien pregunta a Jesús: 'Señor, ¿cómo es que te manifestarás a nosotros y no al mundo?'\n\nLa Epístola de Judas, una carta breve pero poderosa en el Nuevo Testamento, se atribuye tradicionalmente a él. Advierte contra los falsos maestros y anima a los creyentes a 'contender por la fe' mientras muestran misericordia a quienes dudan.\n\nSegún la tradición, después de Pentecostés Judas predicó en Judea, Samaria, Idumea, Siria, Mesopotamia y Libia. Se dice que él y el apóstol Simón el Zelote viajaron juntos y ambos fueron martirizados en Persia alrededor del año 65 d.C. Se cree que Judas fue asesinado con un garrote o un hacha.\n\nSan Judas se convirtió en el santo patrón de las causas perdidas y situaciones desesperadas, probablemente porque su nombre era tan similar al de Judas Iscariote que pocas personas le rezaban — convirtiéndolo en el santo 'más dispuesto a ayudar' ya que tenía tan pocos peticionarios. Hoy es uno de los santos más populares del mundo católico, con innumerables devotos acudiendo a él en sus momentos más desesperados.",
+      "whyConfirmationSaint": "San Judas es el patrón de las causas perdidas y situaciones desesperadas — el santo al que acudes cuando todo parece imposible. Su popularidad viene de la creencia de que, como su nombre se confundía con Judas Iscariote, está especialmente deseoso de ayudar a cualquiera que lo invoque. Elige a Judas si quieres un santo que se especializa en la esperanza cuando todo parece perdido.",
+      "image": {
+        "filename": "jude-thaddeus.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08542b.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-simon-and-jude/"
+      }
+    },
+    {
+      "id": "simon-zealot",
+      "name": "San Simón el Zelote",
+      "feastDay": "10-28",
+      "birthDate": "0005-01-01",
+      "deathDate": "0065-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "tanners",
+        "woodcutters",
+        "sawyers"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "zealous"
+      ],
+      "affinities": [
+        "courage",
+        "justice",
+        "faith",
+        "adventure"
+      ],
+      "quote": "El celo de tu casa me consumirá.",
+      "biography": "Simón es llamado 'el Zelote' (o 'el Cananeo' en algunas traducciones) para distinguirlo de Simón Pedro. Su título sugiere que pudo haber pertenecido a los Zelotes, un movimiento político judío que resistió ferozmente la ocupación romana de Israel, o simplemente que era celoso en su fe.\n\nSimón es uno de los apóstoles menos documentados en el Nuevo Testamento, apareciendo principalmente en las listas de los doce. Sin embargo, su misma presencia entre los apóstoles es notable — si era realmente un Zelote, entonces Jesús eligió a un revolucionario violento para sentarse junto a Mateo, un recaudador de impuestos que colaboraba con Roma. El hecho de que estos dos opuestos pudieran partir el pan juntos como hermanos en Cristo dice mucho sobre el poder transformador del mensaje de Jesús.\n\nSegún diversas tradiciones, después de Pentecostés Simón predicó en Egipto, el norte de África, Persia y posiblemente incluso Britania. La tradición más común lo empareja con San Judas Tadeo como compañeros misioneros que viajaron y predicaron juntos.\n\nSe cree que Simón y Judas fueron martirizados juntos en Persia alrededor del año 65 d.C. Las tradiciones difieren sobre la forma de muerte de Simón — algunos dicen que fue aserrado por la mitad (de ahí su patronazgo de aserradores), mientras otros dicen que fue crucificado. Su fiesta compartida es el 28 de octubre.",
+      "whyConfirmationSaint": "Simón fue literalmente llamado 'el Zelote' — traía intensidad y pasión a todo lo que hacía. Lo que hace notable su historia es que Jesús tomó a alguien que canalizaba su energía en la revolución política y la redirigió hacia la construcción del Reino de Dios. Elige a Simón si eres apasionado por la justicia y quieres un santo que muestre cómo canalizar ese fuego en algo que verdaderamente cambie el mundo.",
+      "image": {
+        "filename": "simon-zealot.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "EWTN"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13796b.htm",
+        "EWTN": "https://www.ewtn.com/catholicism/saints/simon-and-jude-apostles-651"
+      }
+    },
+    {
+      "id": "matthias-apostle",
+      "name": "San Matías Apóstol",
+      "feastDay": "05-14",
+      "birthDate": "0005-01-01",
+      "deathDate": "0080-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "alcoholics",
+        "carpenters",
+        "tailors"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "chosen",
+        "faithful"
+      ],
+      "affinities": [
+        "faith",
+        "prayer",
+        "perseverance",
+        "community service"
+      ],
+      "quote": "Es necesario que uno de los hombres que nos acompañaron se haga testigo con nosotros de la resurrección.",
+      "biography": "Matías ocupa un lugar único entre los apóstoles — fue elegido por sorteo para reemplazar a Judas Iscariote después de la traición y muerte de Judas. La historia se narra en el primer capítulo de los Hechos de los Apóstoles. Pedro declaró que alguien que hubiera estado con Jesús desde el bautismo de Juan hasta la Ascensión debía tomar el lugar de Judas.\n\nSe propusieron dos candidatos: José llamado Barsabás (también conocido como Justo) y Matías. Después de orar, los apóstoles echaron suertes, y la suerte cayó sobre Matías. Así fue contado entre los doce apóstoles, restaurando su número a doce — representando simbólicamente las doce tribus de Israel.\n\nEl hecho de que Matías hubiera seguido a Jesús desde el principio de su ministerio, sin estar entre los doce originales, muestra una fidelidad notable. Fue un discípulo dedicado que perseveró en seguir a Cristo incluso sin el título o reconocimiento que recibían los Doce.\n\nPoco se sabe del ministerio posterior de Matías. Diversas tradiciones lo sitúan predicando en Judea, Capadocia, las costas del Mar Caspio o Etiopía. Según diferentes relatos, fue martirizado por lapidación y decapitación en Jerusalén, o por crucifixión en Cólquida (actual Georgia). Los restos atribuidos a él fueron llevados a Alemania por la Emperatriz Helena y son venerados en la Abadía de San Matías en Tréveris.",
+      "whyConfirmationSaint": "Matías siguió a Jesús fielmente durante años sin título ni reconocimiento — no era uno de los famosos Doce. Pero cuando llegó el momento, Dios lo eligió. Su historia es perfecta para cualquiera que sienta que está trabajando duro sin ser notado. Elige a Matías si quieres un santo que demuestre que la fidelidad silenciosa eventualmente es recompensada.",
+      "image": {
+        "filename": "matthias-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10066a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthias/"
+      }
     }
   ]
 }

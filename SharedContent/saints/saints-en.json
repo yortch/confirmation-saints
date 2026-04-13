@@ -1495,6 +1495,829 @@
         "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-frances-xavier-cabrini/",
         "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-frances-xavier-cabrini-702"
       }
+    },
+    {
+      "id": "joseph",
+      "name": "St. Joseph",
+      "feastDay": "03-19",
+      "birthDate": "0001-01-01",
+      "deathDate": "0030-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "workers",
+        "fathers",
+        "dying",
+        "universal Church",
+        "carpenters"
+      ],
+      "tags": [
+        "Holy Family",
+        "worker",
+        "father",
+        "humble",
+        "protector"
+      ],
+      "affinities": [
+        "family",
+        "work",
+        "prayer",
+        "craftsmanship"
+      ],
+      "quote": "He did not speak, but he obeyed. He is the silent guardian of the mystery of God.",
+      "biography": "St. Joseph was a carpenter from Nazareth in Galilee and a descendant of King David. He was betrothed to Mary when an angel appeared to him in a dream, revealing that Mary's child was conceived by the Holy Spirit. Joseph trusted God's plan and took Mary as his wife, becoming the foster father and earthly protector of Jesus Christ.\n\nThe Gospels portray Joseph as a 'righteous man' — obedient, hardworking, and deeply faithful. He protected the Holy Family during the flight into Egypt when King Herod sought to kill the infant Jesus, and he raised Jesus in the humble trade of carpentry in Nazareth.\n\nThough Joseph speaks no recorded words in Scripture, his actions reveal a man of extraordinary faith and courage. He is believed to have died before Jesus began his public ministry. In 1870, Pope Pius IX declared Joseph the Patron of the Universal Church, and in 1955, Pope Pius XII established the Feast of St. Joseph the Worker on May 1.",
+      "whyConfirmationSaint": "St. Joseph is the ultimate example of quiet strength and faithfulness. He didn't need the spotlight — he just showed up and did what God asked, even when it made no sense. If you value hard work, protecting your family, or simply want a saint who models humility and trust in God's plan, Joseph is an incredible choice for your confirmation saint.",
+      "image": {
+        "filename": "joseph.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08504a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-joseph/"
+      }
+    },
+    {
+      "id": "joachim",
+      "name": "St. Joachim",
+      "feastDay": "07-26",
+      "birthDate": "0050-01-01",
+      "deathDate": "0100-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "grandparents",
+        "fathers",
+        "linen traders"
+      ],
+      "tags": [
+        "Holy Family",
+        "father",
+        "grandparent",
+        "faithful"
+      ],
+      "affinities": [
+        "family",
+        "prayer",
+        "patience"
+      ],
+      "quote": "Blessed are those who trust in the Lord and wait patiently for His promises.",
+      "biography": "St. Joachim is venerated as the father of the Blessed Virgin Mary and the grandfather of Jesus Christ. While he does not appear in the canonical Gospels, his story is preserved in the Protoevangelium of James, an early Christian text from the second century.\n\nAccording to tradition, Joachim was a wealthy and pious man from Nazareth who, along with his wife Anne, suffered the sorrow of childlessness for many years. In Jewish culture, this was considered a sign of God's disfavor, and Joachim's offering at the Temple was once rejected because he had no children. Heartbroken, he withdrew to the desert to fast and pray for forty days.\n\nAn angel appeared to both Joachim and Anne separately, announcing that God had heard their prayers and they would conceive a child who would be spoken of throughout the world. They met joyfully at the Golden Gate of Jerusalem, and Anne conceived Mary, who would become the Mother of God. Joachim's feast day is celebrated on July 26 alongside his wife, St. Anne.",
+      "whyConfirmationSaint": "St. Joachim is a beautiful choice if you value patience and trust in God's timing. He waited years for the blessing of a child, and through his faithfulness, he became the grandfather of Jesus himself. Choose Joachim if you want a saint who reminds you that God's plans are worth waiting for, even when life feels discouraging.",
+      "image": {
+        "filename": "joachim.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08406a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-joachim-and-anne/"
+      }
+    },
+    {
+      "id": "anne",
+      "name": "St. Anne",
+      "feastDay": "07-26",
+      "birthDate": "0050-01-01",
+      "deathDate": "0100-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "female",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "grandmothers",
+        "mothers",
+        "women in labor",
+        "miners",
+        "horseback riders"
+      ],
+      "tags": [
+        "Holy Family",
+        "mother",
+        "grandmother",
+        "faithful"
+      ],
+      "affinities": [
+        "family",
+        "prayer",
+        "patience",
+        "teaching"
+      ],
+      "quote": "The fruit of patience is the sweetest gift of all.",
+      "biography": "St. Anne is venerated as the mother of the Blessed Virgin Mary and the grandmother of Jesus Christ. Like her husband Joachim, she does not appear in the canonical Gospels but is celebrated in the Protoevangelium of James, an influential early Christian writing.\n\nAnne and Joachim were devout Jewish parents who longed for a child for many years. According to tradition, after years of barrenness and prayer, an angel appeared to Anne promising her a child. She vowed to dedicate her child to God's service. The couple's prayers were answered with the birth of Mary, who would become the Mother of God.\n\nAnne is believed to have raised Mary in deep faith and piety, teaching her the Scriptures and preparing her for her extraordinary role in salvation history. Devotion to St. Anne spread throughout the Christian world from the early centuries. She is one of the most popular saints in Catholic tradition, with the famous shrine of Sainte-Anne-de-Beaupré in Quebec drawing millions of pilgrims.",
+      "whyConfirmationSaint": "St. Anne is the perfect confirmation saint if you have a special bond with your grandparents or want to honor the role of family in your faith. She trusted God through years of waiting and raised one of the holiest people who ever lived. Choose Anne if you want a saint who shows that faithfully raising and loving your family is one of the most powerful things you can do.",
+      "image": {
+        "filename": "anne.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/01538a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-joachim-and-anne/"
+      }
+    },
+    {
+      "id": "john-bosco",
+      "name": "St. John Bosco",
+      "feastDay": "01-31",
+      "birthDate": "1815-08-16",
+      "deathDate": "1888-01-31",
+      "canonizationDate": "1934-04-01",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "youth",
+        "educators",
+        "students",
+        "apprentices",
+        "magicians"
+      ],
+      "tags": [
+        "founder",
+        "educator",
+        "priest",
+        "youth advocate"
+      ],
+      "affinities": [
+        "teaching",
+        "leadership",
+        "community service",
+        "sports",
+        "music"
+      ],
+      "quote": "It is not enough to love the young. They must know they are loved.",
+      "biography": "Giovanni Melchior Bosco was born on August 16, 1815, in Becchi, a small hamlet near Turin, Italy. His father died when he was just two years old, leaving his mother Margherita to raise three boys in deep poverty. From a young age, John had vivid dreams that he believed were messages from God about his future mission to help young people.\n\nAs a teenager, John worked as a shepherd, waiter, shoemaker, and carpenter to pay for his education. He was ordained a priest in 1841 and immediately began his life's work: rescuing the street boys of industrialized Turin. He gathered abandoned, orphaned, and delinquent boys, offering them shelter, education, job training, and above all, a loving family environment.\n\nDon Bosco, as he became known, developed the 'Preventive System' of education based on reason, religion, and loving-kindness — a revolutionary approach in an era of harsh discipline. He founded the Salesians of Don Bosco in 1859, which grew into one of the largest religious orders in the world. He also co-founded the Daughters of Mary Help of Christians with St. Mary Domenica Mazzarello. By his death on January 31, 1888, his work had spread across Europe and South America.",
+      "whyConfirmationSaint": "Don Bosco is the patron saint of youth — and he earned that title by dedicating his entire life to young people just like you. He grew up poor, worked countless jobs to get an education, and then used everything he had to help kids nobody else cared about. If you care about education, helping others, or just want a saint who genuinely loved teenagers, Don Bosco is your man.",
+      "image": {
+        "filename": "john-bosco.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08677a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-bosco/"
+      }
+    },
+    {
+      "id": "marcellin-champagnat",
+      "name": "St. Marcellin Champagnat",
+      "feastDay": "06-06",
+      "birthDate": "1789-05-20",
+      "deathDate": "1840-06-06",
+      "canonizationDate": "1999-04-18",
+      "country": "France",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "educators",
+        "Marist Brothers"
+      ],
+      "tags": [
+        "founder",
+        "educator",
+        "priest",
+        "humble"
+      ],
+      "affinities": [
+        "teaching",
+        "community service",
+        "leadership",
+        "faith"
+      ],
+      "quote": "To raise children well, you must love them and love them all equally.",
+      "biography": "Marcellin Joseph Benedict Champagnat was born on May 20, 1789, in the small village of Le Rosey in southern France, just weeks before the French Revolution erupted. His early experience of poor schooling — he was so discouraged by a harsh teacher that he dropped out — shaped his lifelong mission to provide quality education for children, especially the rural poor.\n\nOrdained a priest in 1816, Champagnat was deeply moved when he was called to the bedside of a dying teenage boy who had never been taught anything about God. This experience cemented his resolve to found a teaching order. In 1817, with just two young recruits, he established the Marist Brothers (Little Brothers of Mary), dedicated to educating children in rural and underserved communities.\n\nDespite facing opposition from Church authorities, financial difficulties, and his own declining health, Champagnat built schools across France. His educational philosophy centered on loving presence — being with young people, knowing them personally, and treating them with dignity. He died on June 6, 1840, at age 51. Today the Marist Brothers operate schools in 80 countries, serving over 650,000 students.",
+      "whyConfirmationSaint": "St. Marcellin Champagnat is the perfect saint for anyone who believes in the power of education and caring for others. He experienced bad teaching firsthand and vowed to do better. If you've ever felt overlooked or underestimated, Champagnat reminds you that one person's dedication to others can change the world — literally hundreds of thousands of students are educated because of his vision.",
+      "image": {
+        "filename": "marcellin-champagnat.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Catholic News Agency"
+      ],
+      "sourceURLs": {
+        "EWTN": "https://www.ewtn.com/catholicism/saints/marcellin-champagnat-777",
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-marcellin-champagnat-597"
+      }
+    },
+    {
+      "id": "peter-apostle",
+      "name": "St. Peter the Apostle",
+      "feastDay": "06-29",
+      "birthDate": "0001-01-01",
+      "deathDate": "0064-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "popes",
+        "fishermen",
+        "net makers",
+        "locksmiths"
+      ],
+      "tags": [
+        "apostle",
+        "leader",
+        "first pope",
+        "martyr",
+        "fisherman"
+      ],
+      "affinities": [
+        "leadership",
+        "courage",
+        "faith",
+        "fishing"
+      ],
+      "quote": "Lord, you know all things; you know that I love you.",
+      "biography": "Simon Peter was a fisherman from Bethsaida in Galilee. He and his brother Andrew were among the first disciples called by Jesus, who said to him, 'You are Peter, and on this rock I will build my Church.' Jesus renamed him from Simon to Peter (Cephas in Aramaic), meaning 'rock.'\n\nPeter was part of Jesus' inner circle, witnessing the Transfiguration and the agony in the Garden of Gethsemane. He was bold and impetuous — he walked on water toward Jesus, then sank when he doubted. He famously denied knowing Jesus three times on the night of the crucifixion, then wept bitterly in repentance.\n\nAfter the Resurrection, Jesus appeared to Peter and asked him three times, 'Do you love me?' — restoring him and commissioning him to 'Feed my sheep.' Peter became the leader of the early Church, preaching at Pentecost and converting thousands. He traveled to Rome, where tradition holds he was crucified upside down under Emperor Nero around AD 64, requesting to be inverted because he felt unworthy to die in the same manner as Jesus. St. Peter's Basilica in Rome is built over his tomb.",
+      "whyConfirmationSaint": "Peter is the saint for anyone who has ever messed up and wondered if God could still use them. He denied Jesus three times — and Jesus made him the first pope anyway. Peter shows that your failures don't define you; your willingness to get back up does. Choose Peter if you want a saint who proves that God works through imperfect people.",
+      "image": {
+        "filename": "peter-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11744a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-peter-and-paul/"
+      }
+    },
+    {
+      "id": "paul-apostle",
+      "name": "St. Paul the Apostle",
+      "feastDay": "06-29",
+      "birthDate": "0005-01-01",
+      "deathDate": "0064-01-01",
+      "canonizationDate": null,
+      "country": "Turkey",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "missionaries",
+        "theologians",
+        "writers",
+        "tentmakers"
+      ],
+      "tags": [
+        "apostle",
+        "missionary",
+        "writer",
+        "martyr",
+        "convert"
+      ],
+      "affinities": [
+        "writing",
+        "leadership",
+        "adventure",
+        "studying"
+      ],
+      "quote": "I can do all things through Christ who strengthens me.",
+      "biography": "Saul of Tarsus was born around AD 5 in Tarsus, a major city in modern-day Turkey. He was a devout Pharisee, a Roman citizen, and a zealous persecutor of the early Christians. He supervised the stoning of St. Stephen, the first Christian martyr, and actively hunted believers to imprison them.\n\nEverything changed on the road to Damascus around AD 33-36. A blinding light struck Saul down, and the voice of Jesus asked, 'Saul, Saul, why do you persecute me?' Blinded for three days, Saul was baptized by Ananias and emerged as Paul — the most passionate evangelist the world has ever known.\n\nPaul undertook three epic missionary journeys across the Mediterranean, founding churches in Asia Minor, Greece, and Rome. He wrote 13 epistles (letters) that make up a significant portion of the New Testament, including Romans, Corinthians, Galatians, and Philippians. His theology shaped Christian understanding of grace, faith, and salvation.\n\nPaul endured shipwrecks, beatings, imprisonment, and constant danger for the Gospel. He was beheaded in Rome under Emperor Nero around AD 64. His feast day is celebrated on June 29 alongside St. Peter.",
+      "whyConfirmationSaint": "Paul went from being the Church's greatest enemy to its greatest missionary. His story is the ultimate conversion — proof that no one is too far gone for God's grace. If you've ever felt like your past mistakes disqualify you, Paul shows that God can transform anyone. Choose Paul if you want a saint with an incredible comeback story and unstoppable dedication.",
+      "image": {
+        "filename": "paul-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11567b.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-peter-and-paul/"
+      }
+    },
+    {
+      "id": "andrew-apostle",
+      "name": "St. Andrew the Apostle",
+      "feastDay": "11-30",
+      "birthDate": "0005-01-01",
+      "deathDate": "0060-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Scotland",
+        "fishermen",
+        "singers",
+        "Greece",
+        "Russia"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "fisherman",
+        "first-called"
+      ],
+      "affinities": [
+        "fishing",
+        "adventure",
+        "faith",
+        "courage"
+      ],
+      "quote": "We have found the Messiah!",
+      "biography": "Andrew was a fisherman from Bethsaida in Galilee and the brother of Simon Peter. He was originally a disciple of John the Baptist before becoming one of the first followers of Jesus — earning him the title 'Protoclete' or 'First-Called.' It was Andrew who brought Peter to Jesus, saying, 'We have found the Messiah.'\n\nIn the Gospels, Andrew appears at key moments: he is the one who found the boy with five loaves and two fish before the miracle of the feeding of the five thousand. He brought Greek-speaking visitors to meet Jesus, serving as a bridge between cultures.\n\nAfter Pentecost, tradition holds that Andrew preached in modern-day Greece, Turkey, and along the Black Sea coast. He is said to have founded the Church of Byzantium (later Constantinople), making him the patron saint of the Ecumenical Patriarchate of Constantinople.\n\nAndrew was martyred in Patras, Greece, around AD 60. According to tradition, he was crucified on an X-shaped cross (now known as St. Andrew's Cross or saltire), because he felt unworthy to be crucified on the same type of cross as Jesus. This X-shaped cross appears on the flag of Scotland, where Andrew is the patron saint.",
+      "whyConfirmationSaint": "Andrew was the first apostle called by Jesus, and his first instinct was to go tell his brother about it. He's the saint of bringing others to Christ — not through big sermons, but through personal invitation. Choose Andrew if you want a saint who shows that the most powerful thing you can do is share your faith with the people closest to you.",
+      "image": {
+        "filename": "andrew-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/01471a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-andrew/"
+      }
+    },
+    {
+      "id": "james-greater",
+      "name": "St. James the Greater",
+      "feastDay": "07-25",
+      "birthDate": "0003-01-01",
+      "deathDate": "0044-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Spain",
+        "pilgrims",
+        "laborers",
+        "soldiers"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "pilgrim",
+        "inner circle"
+      ],
+      "affinities": [
+        "adventure",
+        "courage",
+        "faith",
+        "travel"
+      ],
+      "quote": "Be doers of the word, and not hearers only.",
+      "biography": "James, son of Zebedee and brother of John, was a fisherman on the Sea of Galilee when Jesus called him to be an apostle. Along with Peter and John, James was part of Jesus' inner circle of three — present at the Transfiguration, the raising of Jairus' daughter, and the agony in the Garden of Gethsemane.\n\nJesus nicknamed James and John 'Boanerges' — 'Sons of Thunder' — likely for their fiery temperaments. When a Samaritan village refused to welcome Jesus, James and John asked if they should call down fire from heaven. Jesus rebuked them, teaching that his mission was to save, not destroy.\n\nJames was the first apostle to be martyred. Around AD 44, King Herod Agrippa I had him executed by the sword in Jerusalem, as recorded in the Acts of the Apostles (12:2). According to Spanish tradition, James had preached in Spain before his death, and his remains were miraculously transported to Santiago de Compostela in northwest Spain. The Cathedral of Santiago de Compostela became one of the most important pilgrimage sites in Christendom, with the Camino de Santiago drawing hundreds of thousands of pilgrims annually to this day.",
+      "whyConfirmationSaint": "James was bold, passionate, and sometimes hot-headed — and Jesus chose him for his inner circle anyway. He was the first apostle to die for his faith, showing that real courage means being willing to give everything for what you believe in. Choose James if you're passionate and want a saint who reminds you to channel that fire for God's purpose.",
+      "image": {
+        "filename": "james-greater.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08279b.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-james-apostle/"
+      }
+    },
+    {
+      "id": "john-apostle",
+      "name": "St. John the Apostle",
+      "feastDay": "12-27",
+      "birthDate": "0006-01-01",
+      "deathDate": "0100-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "writers",
+        "theologians",
+        "publishers",
+        "Asia Minor"
+      ],
+      "tags": [
+        "apostle",
+        "evangelist",
+        "writer",
+        "beloved disciple"
+      ],
+      "affinities": [
+        "writing",
+        "studying",
+        "prayer",
+        "faith"
+      ],
+      "quote": "God is love, and whoever abides in love abides in God, and God abides in him.",
+      "biography": "John, son of Zebedee and brother of James the Greater, was a fisherman from Galilee who became one of Jesus' first disciples and the youngest of the twelve apostles. He is traditionally identified as 'the beloved disciple' — the one who leaned on Jesus' chest at the Last Supper.\n\nJohn was part of Jesus' inner circle with Peter and James. He stood at the foot of the cross during the Crucifixion, where Jesus entrusted his mother Mary to John's care, saying, 'Behold, your mother.' John took Mary into his home and cared for her.\n\nAfter Pentecost, John became a pillar of the early Church in Jerusalem. He later settled in Ephesus (modern Turkey), where he cared for the Christian community. Under Emperor Domitian, he was exiled to the island of Patmos, where tradition holds he wrote the Book of Revelation.\n\nJohn is credited with writing the Gospel of John, three epistles, and Revelation — making him the most prolific New Testament author after Paul. His writings emphasize love as the central Christian virtue. He is the only apostle believed to have died of natural causes, living to an advanced age around AD 100.",
+      "whyConfirmationSaint": "John was the youngest apostle and the only one who stayed with Jesus all the way to the cross when everyone else fled. His message was simple but profound: 'God is love.' Choose John if you want a saint who shows that true courage is staying loyal to the people and principles you love, even when it's terrifying.",
+      "image": {
+        "filename": "john-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08492a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-apostle-and-evangelist/"
+      }
+    },
+    {
+      "id": "philip-apostle",
+      "name": "St. Philip the Apostle",
+      "feastDay": "05-03",
+      "birthDate": "0005-01-01",
+      "deathDate": "0080-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "pastry chefs",
+        "hatters",
+        "Uruguay"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "evangelist"
+      ],
+      "affinities": [
+        "faith",
+        "community service",
+        "studying"
+      ],
+      "quote": "Lord, show us the Father, and that will be enough for us.",
+      "biography": "Philip was from Bethsaida, the same town as Peter and Andrew. He was one of the first disciples called by Jesus, who simply said to him, 'Follow me.' Philip immediately went to find Nathanael (Bartholomew) and told him, 'We have found the one Moses wrote about in the Law and the Prophets — Jesus of Nazareth.'\n\nIn the Gospels, Philip appears as a practical, questioning disciple. When Jesus asked him where they could buy bread for the multitude, Philip calculated that 'two hundred denarii would not be enough.' At the Last Supper, Philip asked Jesus, 'Lord, show us the Father,' prompting Jesus' profound response: 'Anyone who has seen me has seen the Father.'\n\nPhilip also served as a bridge to the Gentile world. When Greek visitors wanted to meet Jesus, they approached Philip first — perhaps because of his Greek name.\n\nAccording to tradition, after Pentecost Philip preached in Greece, Syria, and Phrygia (modern Turkey). He is said to have been martyred in Hierapolis, where he was crucified upside down or hung from a pillar. His tomb was discovered there by Italian archaeologists in 2011.",
+      "whyConfirmationSaint": "Philip was an honest, practical guy who asked real questions — including ones that might seem embarrassing. But Jesus never rejected him for asking. Choose Philip if you're someone who wants to understand your faith more deeply and aren't afraid to ask questions. He proves that curiosity and faith can go hand in hand.",
+      "image": {
+        "filename": "philip-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "EWTN"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/12006a.htm",
+        "EWTN": "https://www.ewtn.com/catholicism/saints/philip-and-james-apostles-649"
+      }
+    },
+    {
+      "id": "bartholomew-apostle",
+      "name": "St. Bartholomew the Apostle",
+      "feastDay": "08-24",
+      "birthDate": "0005-01-01",
+      "deathDate": "0071-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "tanners",
+        "leather workers",
+        "bookbinders",
+        "Armenia"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "missionary"
+      ],
+      "affinities": [
+        "faith",
+        "adventure",
+        "honesty"
+      ],
+      "quote": "Can anything good come from Nazareth? Come and see!",
+      "biography": "Bartholomew is one of the twelve apostles listed in the Synoptic Gospels. Most scholars identify him with Nathanael, the disciple introduced to Jesus by Philip in the Gospel of John. When Philip told Nathanael about Jesus of Nazareth, Nathanael skeptically replied, 'Can anything good come from Nazareth?' Philip's answer was simple: 'Come and see.'\n\nWhen Nathanael approached Jesus, the Lord said of him, 'Here truly is an Israelite in whom there is no deceit.' Astonished, Nathanael asked how Jesus knew him. Jesus replied, 'I saw you while you were still under the fig tree before Philip called you.' This so moved Nathanael that he declared, 'Rabbi, you are the Son of God; you are the king of Israel.'\n\nAfter Pentecost, tradition holds that Bartholomew preached in India, Armenia, Ethiopia, and Mesopotamia. The Armenian Apostolic Church honors him as its patron saint, claiming he brought Christianity to Armenia. According to tradition, Bartholomew was martyred in Armenia by being flayed alive and then beheaded. Because of his manner of death, he is the patron saint of leather workers and tanners. In Michelangelo's Sistine Chapel Last Judgment, Bartholomew is depicted holding his own flayed skin.",
+      "whyConfirmationSaint": "Bartholomew started out skeptical — 'Can anything good come from Nazareth?' — but he was open enough to 'come and see.' Jesus praised him for his honesty and lack of deceit. Choose Bartholomew if you value authenticity and want a saint who shows it's okay to have doubts, as long as you're willing to seek the truth.",
+      "image": {
+        "filename": "bartholomew-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/02313c.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-bartholomew/"
+      }
+    },
+    {
+      "id": "matthew-apostle",
+      "name": "St. Matthew the Apostle",
+      "feastDay": "09-21",
+      "birthDate": "0005-01-01",
+      "deathDate": "0074-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "accountants",
+        "bankers",
+        "tax collectors",
+        "bookkeepers"
+      ],
+      "tags": [
+        "apostle",
+        "evangelist",
+        "writer",
+        "convert",
+        "martyr"
+      ],
+      "affinities": [
+        "writing",
+        "studying",
+        "math",
+        "justice"
+      ],
+      "quote": "Follow me.",
+      "biography": "Matthew, also known as Levi, was a tax collector in Capernaum before Jesus called him to be an apostle. In the ancient Jewish world, tax collectors were despised — they worked for the Roman occupation and were considered traitors and sinners. When Jesus saw Matthew sitting at his tax booth, he simply said, 'Follow me,' and Matthew immediately left everything behind.\n\nMatthew then hosted a great banquet at his home, inviting his fellow tax collectors and sinners to meet Jesus. When the Pharisees criticized Jesus for dining with such people, Jesus responded with one of his most famous sayings: 'It is not the healthy who need a doctor, but the sick. I have not come to call the righteous, but sinners.'\n\nMatthew is traditionally credited with writing the first Gospel, which was particularly important for Jewish Christians because it constantly references Old Testament prophecies fulfilled by Jesus. His Gospel includes the Sermon on the Mount, the Lord's Prayer, and the Great Commission.\n\nAccording to various traditions, after Pentecost Matthew preached in Judea, Ethiopia, Persia, or Parthia. He is believed to have been martyred, though accounts differ on whether he was stabbed, beheaded, or burned.",
+      "whyConfirmationSaint": "Matthew had the worst reputation in town — a tax collector, considered a cheater and a traitor. But when Jesus called him, he dropped everything and followed. If you've ever felt judged by your past or like you don't belong in church, Matthew is proof that Jesus calls exactly the people the world writes off. Your past doesn't disqualify you from greatness.",
+      "image": {
+        "filename": "matthew-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10056a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthew/"
+      }
+    },
+    {
+      "id": "thomas-apostle",
+      "name": "St. Thomas the Apostle",
+      "feastDay": "07-03",
+      "birthDate": "0005-01-01",
+      "deathDate": "0072-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "India",
+        "architects",
+        "builders",
+        "blind people"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "missionary",
+        "doubter turned believer"
+      ],
+      "affinities": [
+        "studying",
+        "adventure",
+        "faith",
+        "honesty"
+      ],
+      "quote": "My Lord and my God!",
+      "biography": "Thomas, also called Didymus ('the Twin'), is one of the twelve apostles best known for his initial doubt about the Resurrection of Jesus. When the other apostles told Thomas they had seen the risen Lord, he declared, 'Unless I see the nail marks in his hands and put my finger where the nails were, and put my hand into his side, I will not believe.'\n\nEight days later, Jesus appeared again and invited Thomas to touch his wounds. Thomas responded with one of the most powerful professions of faith in all of Scripture: 'My Lord and my God!' Jesus replied, 'Because you have seen me, you have believed; blessed are those who have not seen and yet have believed.'\n\nBut Thomas was much more than his famous doubt. Earlier in John's Gospel, when Jesus decided to return to dangerous Judea, it was Thomas who bravely told the other disciples, 'Let us also go, that we may die with him.'\n\nAccording to ancient tradition, Thomas traveled further than any other apostle, bringing Christianity all the way to India around AD 52. The Syro-Malabar Catholic Church and other Saint Thomas Christians in India trace their origins to his preaching. He is believed to have been martyred near Chennai, India, around AD 72.",
+      "whyConfirmationSaint": "Thomas gets a bad rap as 'Doubting Thomas,' but his doubt led to one of the greatest declarations of faith ever: 'My Lord and my God!' He shows that questioning isn't the opposite of faith — it can actually lead you deeper into it. Choose Thomas if you're someone who needs to think things through and wants a saint who proves that honest questions lead to stronger belief.",
+      "image": {
+        "filename": "thomas-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/14658b.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-thomas-the-apostle/"
+      }
+    },
+    {
+      "id": "james-less",
+      "name": "St. James the Less",
+      "feastDay": "05-03",
+      "birthDate": "0005-01-01",
+      "deathDate": "0062-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "pharmacists",
+        "dying people",
+        "Uruguay"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "leader",
+        "bishop"
+      ],
+      "affinities": [
+        "leadership",
+        "justice",
+        "prayer",
+        "community service"
+      ],
+      "quote": "Be patient, therefore, brothers, until the coming of the Lord.",
+      "biography": "James, son of Alphaeus, is called 'the Less' (or 'the Younger') to distinguish him from James, son of Zebedee ('the Greater'). Some scholars identify him with 'James the brother of the Lord' who became the leader of the early Christian community in Jerusalem, though this identification is debated.\n\nIf James the Less is the same as James the brother of the Lord, then he played a pivotal role in early Christianity. He presided over the Council of Jerusalem (around AD 49-50), where the early Church made the crucial decision that Gentile converts did not need to follow all Jewish laws — a decision that shaped the future of Christianity.\n\nThe Epistle of James in the New Testament is traditionally attributed to him. It emphasizes that 'faith without works is dead' and calls for practical charity, care for the poor, and control of the tongue.\n\nAccording to the historian Josephus and early Christian tradition, James was martyred in Jerusalem around AD 62. He was thrown from the pinnacle of the Temple, stoned, and finally struck on the head with a fuller's club. His reputation for holiness was so great that even non-Christian Jews mourned his death.",
+      "whyConfirmationSaint": "James the Less was a quiet leader who held the early Church together through some of its biggest disagreements. He taught that real faith shows up in how you treat people — especially the poor. Choose James if you want a saint who reminds you that faith isn't just about what you believe, but what you do about it.",
+      "image": {
+        "filename": "james-less.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "EWTN"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08280a.htm",
+        "EWTN": "https://www.ewtn.com/catholicism/saints/philip-and-james-apostles-649"
+      }
+    },
+    {
+      "id": "jude-thaddeus",
+      "name": "St. Jude Thaddeus",
+      "feastDay": "10-28",
+      "birthDate": "0005-01-01",
+      "deathDate": "0065-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "lost causes",
+        "desperate situations",
+        "hospitals"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "intercessor",
+        "helper"
+      ],
+      "affinities": [
+        "prayer",
+        "courage",
+        "hope",
+        "community service"
+      ],
+      "quote": "Keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.",
+      "biography": "Jude, also called Thaddeus or Lebbaeus, was one of the twelve apostles and is traditionally identified as a relative of Jesus — possibly a cousin or a brother of James the Less. In the Gospel of John, during the Last Supper, it is Jude (not Judas Iscariot) who asks Jesus, 'Lord, how is it that you will reveal yourself to us and not to the world?'\n\nThe Epistle of Jude, a short but powerful letter in the New Testament, is traditionally attributed to him. It warns against false teachers and encourages believers to 'contend for the faith' while showing mercy to those who doubt.\n\nAccording to tradition, after Pentecost Jude preached in Judea, Samaria, Idumaea, Syria, Mesopotamia, and Libya. He and the apostle Simon the Zealot are said to have traveled together and were both martyred in Persia around AD 65. Jude is believed to have been killed with a club or axe.\n\nSt. Jude became the patron saint of lost causes and desperate situations, likely because his name was so similar to Judas Iscariot that few people prayed to him — making him the saint 'most willing to help' since he had so few petitioners. Today he is one of the most popular saints in the Catholic world, with countless devotees turning to him in their most desperate moments.",
+      "whyConfirmationSaint": "St. Jude is the patron of lost causes and desperate situations — the saint you turn to when everything seems impossible. His popularity comes from the belief that because his name was confused with Judas Iscariot, he's especially eager to help anyone who calls on him. Choose Jude if you want a saint who specializes in hope when all seems lost.",
+      "image": {
+        "filename": "jude-thaddeus.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08542b.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-simon-and-jude/"
+      }
+    },
+    {
+      "id": "simon-zealot",
+      "name": "St. Simon the Zealot",
+      "feastDay": "10-28",
+      "birthDate": "0005-01-01",
+      "deathDate": "0065-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "tanners",
+        "woodcutters",
+        "sawyers"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "zealous"
+      ],
+      "affinities": [
+        "courage",
+        "justice",
+        "faith",
+        "adventure"
+      ],
+      "quote": "Zeal for your house will consume me.",
+      "biography": "Simon is called 'the Zealot' (or 'the Canaanite' in some translations) to distinguish him from Simon Peter. His title suggests he may have belonged to the Zealots, a Jewish political movement that fiercely resisted Roman occupation of Israel, or simply that he was zealous in his faith.\n\nSimon is one of the least documented apostles in the New Testament, appearing primarily in the lists of the twelve. Yet his very presence among the apostles is remarkable — if he was indeed a Zealot, then Jesus chose a violent revolutionary to sit alongside Matthew, a tax collector who collaborated with Rome. The fact that these two opposites could break bread together as brothers in Christ speaks volumes about the transforming power of Jesus' message.\n\nAccording to various traditions, after Pentecost Simon preached in Egypt, North Africa, Persia, and possibly even Britain. The most common tradition pairs him with St. Jude Thaddeus as missionary companions who traveled and preached together.\n\nSimon and Jude are believed to have been martyred together in Persia around AD 65. Traditions differ on the manner of Simon's death — some say he was sawn in half (hence his patronage of sawyers), while others say he was crucified. Their shared feast day is October 28.",
+      "whyConfirmationSaint": "Simon was literally called 'the Zealot' — he brought intensity and passion to everything he did. What makes his story remarkable is that Jesus took someone who channeled his energy into political revolution and redirected it toward building the Kingdom of God. Choose Simon if you're passionate about justice and want a saint who shows how to channel that fire into something that truly changes the world.",
+      "image": {
+        "filename": "simon-zealot.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "EWTN"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13796b.htm",
+        "EWTN": "https://www.ewtn.com/catholicism/saints/simon-and-jude-apostles-651"
+      }
+    },
+    {
+      "id": "matthias-apostle",
+      "name": "St. Matthias the Apostle",
+      "feastDay": "05-14",
+      "birthDate": "0005-01-01",
+      "deathDate": "0080-01-01",
+      "canonizationDate": null,
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "alcoholics",
+        "carpenters",
+        "tailors"
+      ],
+      "tags": [
+        "apostle",
+        "martyr",
+        "chosen",
+        "faithful"
+      ],
+      "affinities": [
+        "faith",
+        "prayer",
+        "perseverance",
+        "community service"
+      ],
+      "quote": "It is necessary that one of the men who accompanied us become a witness with us of the resurrection.",
+      "biography": "Matthias holds a unique place among the apostles — he was chosen by lot to replace Judas Iscariot after Judas' betrayal and death. The story is told in the first chapter of the Acts of the Apostles. Peter declared that someone who had been with Jesus from the baptism of John through the Ascension should take Judas' place.\n\nTwo candidates were proposed: Joseph called Barsabbas (also known as Justus) and Matthias. After prayer, the apostles cast lots, and the lot fell on Matthias. He was thus numbered among the twelve apostles, restoring their number to twelve — symbolically representing the twelve tribes of Israel.\n\nThe fact that Matthias had followed Jesus from the beginning of his ministry, without being among the original twelve, shows remarkable faithfulness. He was a dedicated disciple who persevered in following Christ even without the title or recognition the Twelve received.\n\nLittle is known of Matthias' later ministry. Various traditions place him preaching in Judea, Cappadocia, the shores of the Caspian Sea, or Ethiopia. According to different accounts, he was martyred by stoning and beheading in Jerusalem, or by crucifixion in Colchis (modern Georgia). The remains attributed to him were brought to Germany by Empress Helena and are venerated in the Abbey of St. Matthias in Trier.",
+      "whyConfirmationSaint": "Matthias followed Jesus faithfully for years without any title or recognition — he wasn't one of the famous Twelve. But when the moment came, God chose him. His story is perfect for anyone who feels like they're working hard without getting noticed. Choose Matthias if you want a saint who shows that quiet faithfulness is eventually rewarded.",
+      "image": {
+        "filename": "matthias-apostle.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10066a.htm",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthias/"
+      }
     }
   ]
 }
