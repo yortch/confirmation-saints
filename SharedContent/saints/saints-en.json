@@ -3107,6 +3107,143 @@
         "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-john-the-baptist/",
         "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08486b.htm"
       }
+    },
+    {
+      "id": "clare-of-assisi",
+      "name": "St. Clare of Assisi",
+      "feastDay": "08-11",
+      "birthDate": "1194-07-16",
+      "deathDate": "1253-08-11",
+      "canonizationDate": "1255-09-26",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "television",
+        "eye disease",
+        "goldsmiths",
+        "laundry workers"
+      ],
+      "tags": [
+        "founder",
+        "mystic",
+        "religious"
+      ],
+      "affinities": [
+        "prayer",
+        "simplicity",
+        "nature",
+        "poverty"
+      ],
+      "quote": "Love God, serve God: everything is in that.",
+      "biography": "Chiara Offreduccio was born on July 16, 1194, in Assisi, Italy, to a wealthy noble family. As a young woman, she was deeply moved by the preaching of St. Francis of Assisi and his radical embrace of poverty and simplicity. At age 18, she secretly left her family's home on Palm Sunday night to join Francis and his followers, forever changing the course of her life.\n\nClare founded the Order of Poor Ladies, later known as the Poor Clares, which became the first religious order for women to be written by a woman. She and her sisters lived in the church of San Damiano, embracing radical poverty — owning nothing, begging for food, and spending their days in prayer and manual work. Clare fiercely defended her order's right to live without property, even resisting pressure from popes.\n\nClare's faith was legendary. When Saracen soldiers invaded Assisi in 1234, she reportedly held up the Blessed Sacrament at the convent walls, and the attackers fled. She spent 27 years as abbess, guiding her community with gentleness and strength even while suffering from chronic illness.\n\nShe was canonized just two years after her death — one of the fastest canonizations in Church history. In 1958, Pope Pius XII declared her the patron saint of television because she reportedly saw and heard a Christmas Mass being celebrated miles away while bedridden.",
+      "whyConfirmationSaint": "St. Clare is a powerful choice for anyone who values authenticity and simplicity in a world that constantly pushes you to want more. She gave up wealth and status to follow what she knew was true, even when her family opposed her. If you've ever felt called to go against the crowd and live by your own convictions, Clare shows that real strength comes from staying true to your beliefs.\n\nHer deep friendship with St. Francis also reminds us that holy friendships can change the world. Clare proves that you don't need to be loud to be a leader — her quiet determination transformed the Church.",
+      "image": {
+        "filename": "clare-of-assisi.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-clare-of-assisi/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/04004a.htm"
+      }
+    },
+    {
+      "id": "luke-evangelist",
+      "name": "St. Luke the Evangelist",
+      "feastDay": "10-18",
+      "birthDate": "0001-01-01",
+      "deathDate": "0084-10-18",
+      "canonizationDate": "0001-01-01",
+      "country": "Syria",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "physicians",
+        "artists",
+        "painters",
+        "surgeons",
+        "students"
+      ],
+      "tags": [
+        "evangelist",
+        "writer",
+        "physician",
+        "artist"
+      ],
+      "affinities": [
+        "writing",
+        "painting",
+        "art",
+        "medicine",
+        "healing"
+      ],
+      "quote": "For nothing will be impossible with God.",
+      "biography": "Luke was a Greek-speaking physician from Antioch in ancient Syria who became one of the most important writers in Christian history. A well-educated man of science and letters, he was uniquely positioned to tell the story of Jesus and the early Church with both precision and beauty. He is the author of the Gospel of Luke and the Acts of the Apostles — together making up more than a quarter of the entire New Testament.\n\nWhat makes Luke's Gospel special is his attention to people that others overlooked. He highlighted Jesus's compassion for the poor, for women, for outsiders, and for sinners. Many of the most beloved parables — the Good Samaritan, the Prodigal Son — are found only in Luke's account. He was a storyteller who understood that everyone matters in God's eyes.\n\nLuke was a close companion of St. Paul, traveling with him on missionary journeys and staying loyal even when others left. Paul called him 'the beloved physician,' and Luke's medical background shows in his precise descriptions of healings in both his Gospel and Acts.\n\nAncient tradition also holds that Luke was a painter who created some of the first icons of the Virgin Mary. Whether historically accurate or not, this tradition reflects how Luke's vivid, compassionate writing painted a portrait of Jesus and Mary that has inspired artists for two thousand years.",
+      "whyConfirmationSaint": "St. Luke is an incredible patron for anyone who loves writing, art, science, or medicine — or anyone who feels like they can serve God through their talents. He shows that faith and intellect aren't opposites; they work together beautifully. If you're the type who likes to research, create, or tell stories, Luke proves those gifts can change the world.\n\nHe's also a great saint for anyone who cares about justice and standing up for the overlooked. Luke made sure the voices of the poor, women, and outsiders were heard in the story of Jesus. Choosing Luke means choosing to use your gifts to lift up others.",
+      "image": {
+        "filename": "luke-evangelist.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-luke/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09420a.htm"
+      }
+    },
+    {
+      "id": "gemma-galgani",
+      "name": "St. Gemma Galgani",
+      "feastDay": "04-11",
+      "birthDate": "1878-03-12",
+      "deathDate": "1903-04-11",
+      "canonizationDate": "1940-05-02",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "young",
+      "patronOf": [
+        "pharmacists",
+        "students",
+        "loss of parents",
+        "those suffering back injuries"
+      ],
+      "tags": [
+        "young",
+        "mystic",
+        "stigmatist"
+      ],
+      "affinities": [
+        "prayer",
+        "reading",
+        "helping others"
+      ],
+      "quote": "I am nothing but a poor creature who has received everything from God.",
+      "biography": "Gemma Galgani was born on March 12, 1878, in a small town near Lucca, Italy. She was the fifth of eight children in a deeply Catholic family. Tragedy struck early — her mother died when Gemma was seven, and her father died when she was eighteen, leaving the family in poverty. Despite these heartbreaking losses, Gemma's faith only deepened.\n\nAs a young woman, Gemma experienced extraordinary mystical phenomena. Beginning in 1899, she received the stigmata — the wounds of Christ — which appeared on her hands, feet, and side every Thursday evening and healed by Sunday. She also reported visions of Jesus, Mary, and her guardian angel. These experiences drew both devotion and skepticism, but Gemma remained humble and grounded throughout.\n\nGemma desperately wanted to become a Passionist nun, but was rejected due to her poor health. Instead, she lived with the Giannini family in Lucca, spending her days in prayer, household work, and caring for others. She bore her sufferings — including spinal tuberculosis — with remarkable patience and even joy, seeing them as a way to share in Christ's passion.\n\nShe died on Holy Saturday, April 11, 1903, at just 25 years old. Her spiritual writings and letters reveal a soul of extraordinary depth and love. She was canonized in 1940, and her story continues to inspire young people who face suffering with faith and courage.",
+      "whyConfirmationSaint": "St. Gemma Galgani is a powerful patron for anyone who has experienced loss, illness, or hardship at a young age. She didn't have an easy life — she lost both parents, struggled with poverty, and was denied her dream of religious life. Yet she transformed her suffering into something beautiful through faith and prayer.\n\nChoosing Gemma means choosing resilience. She shows that holiness isn't about having a perfect life; it's about trusting God even when things fall apart. If you've ever felt like life isn't fair, Gemma understands — and she proves that God can work powerfully through our weakness.",
+      "image": {
+        "filename": "gemma-galgani.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gemma-galgani/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06411b.htm"
+      }
     }
   ]
 }

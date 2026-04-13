@@ -88,6 +88,9 @@ SAINT_IMAGES = {
     "boniface": "SaintBoniface.jpg",
     "catherine-of-alexandria": "Saint_Catherine_of_Alexandria_and_the_Angel_-_Francesco_Solimena.jpg",
     "john-the-baptist": "Leonardo_da_Vinci_-_Saint_John_the_Baptist_C2RMF_retouched.jpg",
+    "clare-of-assisi": "Simone_Martini_047.jpg",
+    "luke-evangelist": "St_Luke_the_Evangelist.jpg",
+    "gemma-galgani": "Gemma_Galgani.jpg",
 }
 
 
