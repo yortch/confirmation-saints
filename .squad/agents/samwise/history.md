@@ -96,3 +96,16 @@
 - Saint data integrity maintained across EN/ES files
 - Decision records: "Saint Image Sources from Wikimedia Commons" and "Source URL Replacement Strategy"
 
+### Saints Batch 2: Holy Family, Educators, Apostles (2026-07-17)
+- Added 18 saints to both `saints-en.json` and `saints-es.json` (32 → 50 total)
+- **Holy Family:** St. Joseph, St. Joachim, St. Anne
+- **Educators:** St. John Bosco (Don Bosco), St. Marcellin Champagnat
+- **Apostles (13):** Peter, Paul, Andrew, James the Greater, John, Philip, Bartholomew, Matthew, Thomas, James the Less, Jude Thaddeus, Simon the Zealot, Matthias
+- All matching fields (patronOf, affinities, tags, region, lifeState, ageCategory, gender) kept in English in both EN and ES files per established convention
+- Only display fields (name, biography, whyConfirmationSaint, quote) translated to Spanish; country translated per existing pattern (e.g., "Francia", "Italia")
+- Pre-congregation saints (apostles, Holy Family) use `null` for canonizationDate; approximate birth/death dates used with 4-digit year format
+- Downloaded 18 public domain images from Wikimedia Commons at 400px width; updated `_download_saint_images.py` with new mappings
+- Some Wikimedia filenames required searching via API (8/18 initial guesses were wrong — apostle art filenames vary widely)
+- sourceURLs use Catholic Encyclopedia (newadvent.org), Franciscan Media, CNA, and EWTN — verified URL patterns match existing saints
+- Xcode project regenerated via xcodegen after adding images
+

@@ -98,6 +98,21 @@ Link audit identified 46 broken source URLs across saints-en.json and saints-es.
 
 ---
 
+### Diacritic-Insensitive Search Convention (2025-07-17)
+**Author:** Frodo (iOS Dev)  
+**Status:** Implemented
+
+All string matching in search/filter logic uses diacritic-insensitive comparison via shared `String+Diacritics.swift` extension (`containsIgnoringDiacritics` / `equalsIgnoringDiacritics`), not `.lowercased().contains()`.
+
+**Rationale:** Saint names include accented characters (Thérèse, José, María) common in French, Spanish, and other languages. Users typing on English keyboards won't include accents, so search must treat accented and unaccented characters as equivalent.
+
+**Impact:**
+- **Legolas (QA):** Search tests verify accent-insensitive matching
+- **Samwise (Data):** Saint data retains proper accented names
+- **Android:** Use Java/Kotlin `Normalizer` or `Collator` with `SECONDARY` strength
+
+---
+
 ### User Directives (Captured)
 - **2026-04-12T17:13:10Z:** Jorge Balderas — App name changed to "Confirmation Saints". Update all references.
 - **2026-04-12T16:29Z:** Jorge Balderas — Project scaffolded with cross-platform separation. Expand saint roster to 50-100+. Add "most popular saints" categories by year + all-time.
