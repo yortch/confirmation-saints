@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "language": "en",
-  "lastUpdated": "2025-07-15",
+  "lastUpdated": "2025-07-18",
   "saints": [
     {
       "id": "therese-of-lisieux",
@@ -2498,6 +2498,614 @@
       "sourceURLs": {
         "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-martin-de-porres/",
         "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09728a.htm"
+      }
+    },
+    {
+      "id": "blaise",
+      "name": "St. Blaise",
+      "feastDay": "02-03",
+      "birthDate": "0001-01-01",
+      "deathDate": "0316-02-03",
+      "canonizationDate": "0001-01-01",
+      "country": "Armenia",
+      "region": "Asia",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "veterinarians",
+        "throat ailments",
+        "animals",
+        "wool workers"
+      ],
+      "tags": [
+        "bishop",
+        "martyr",
+        "healer",
+        "early Church"
+      ],
+      "affinities": [
+        "animals",
+        "healing",
+        "prayer",
+        "nature"
+      ],
+      "quote": "Through the intercession of St. Blaise, bishop and martyr, may God deliver you from every disease of the throat and from every other illness.",
+      "biography": "St. Blaise was a physician and Bishop of Sebastea in Armenia during the early fourth century. According to tradition, before becoming a bishop, he was known as a skilled doctor who healed both people and animals. When persecution of Christians intensified under the Roman emperor Licinius, Blaise retreated to a cave in the mountains where wild animals would come to him for healing.\n\nOne of the most famous stories about Blaise tells of a mother who brought her son to him because the boy was choking on a fish bone stuck in his throat. Blaise prayed over the child and miraculously dislodged the bone, saving the boy's life. This event led to the long-standing Catholic tradition of the Blessing of the Throats on his feast day.\n\nBlaise was eventually discovered in his cave by Roman soldiers, arrested, and brought before the governor. Despite being tortured — tradition says his flesh was torn with iron combs — he refused to renounce his faith. He was beheaded around the year 316, dying as a martyr for Christ.\n\nHis legacy lives on in the annual Blessing of the Throats, performed each February 3rd in Catholic parishes around the world, where two crossed candles are held near the throat while a prayer for protection is recited.",
+      "whyConfirmationSaint": "St. Blaise is an excellent confirmation saint for anyone who loves animals or feels called to the healing professions. He used his gifts as a physician to serve others and never abandoned his faith, even when it cost him his life. His story reminds us that our talents — whether in medicine, science, or caring for creation — can be powerful tools for God's work.\n\nIf you've ever felt drawn to helping the sick, caring for animals, or standing firm in your beliefs when it's difficult, St. Blaise is a powerful heavenly companion to walk with you.",
+      "image": {
+        "filename": "blaise.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-blaise/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/02592a.htm"
+      }
+    },
+    {
+      "id": "vitus",
+      "name": "St. Vitus",
+      "feastDay": "06-15",
+      "birthDate": "0001-01-01",
+      "deathDate": "0303-06-15",
+      "canonizationDate": "0001-01-01",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "layperson",
+      "ageCategory": "young",
+      "patronOf": [
+        "dancers",
+        "actors",
+        "comedians",
+        "epilepsy"
+      ],
+      "tags": [
+        "young",
+        "martyr",
+        "early Church",
+        "patron of performers"
+      ],
+      "affinities": [
+        "dance",
+        "acting",
+        "performance",
+        "courage"
+      ],
+      "quote": "I am a Christian. I worship the one true God who made heaven and earth.",
+      "biography": "St. Vitus was a young Christian from Sicily who lived during the reign of Emperor Diocletian, one of the fiercest persecutors of Christians in Roman history. According to tradition, Vitus was the son of a pagan senator and was converted to Christianity as a child by his tutor Modestus and his nursemaid Crescentia.\n\nWhen Vitus's father discovered his son's faith, he tried everything to force the boy to abandon Christianity — including having the local governor torture him. But the young Vitus remained firm in his beliefs. According to legend, he fled Sicily with Modestus and Crescentia and traveled to Rome.\n\nIn Rome, Vitus reportedly performed an exorcism on Emperor Diocletian's own son. However, instead of being grateful, the emperor demanded that Vitus sacrifice to the Roman gods. When Vitus refused, he was subjected to various tortures. Tradition holds that he was thrown into a cauldron of boiling oil but emerged unharmed. He was eventually martyred around the year 303.\n\nSt. Vitus became the patron saint of dancers and actors because of a medieval belief that dancing before his statue on his feast day would ensure good health for the coming year. A neurological condition called 'St. Vitus' Dance' (Sydenham's chorea) was also named after him.",
+      "whyConfirmationSaint": "St. Vitus is an incredible confirmation saint for young people who love dance, theater, or performing arts. He was just a teenager when he stood up for his faith against the most powerful empire in the world. His courage shows that age doesn't determine the strength of your conviction.\n\nChoose St. Vitus if you're passionate about the arts and want a patron who understands what it means to perform boldly — both on stage and in your faith life. He reminds us that being young is never an excuse to stay silent about what matters most.",
+      "image": {
+        "filename": "vitus.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Catholic Online"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/15490a.htm",
+        "Catholic Online": "https://www.catholic.org/saints/saint.php?saint_id=131"
+      }
+    },
+    {
+      "id": "genesius-of-rome",
+      "name": "St. Genesius of Rome",
+      "feastDay": "08-25",
+      "birthDate": "0001-01-01",
+      "deathDate": "0303-08-25",
+      "canonizationDate": "0001-01-01",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "layperson",
+      "ageCategory": "adult",
+      "patronOf": [
+        "actors",
+        "theater",
+        "comedians",
+        "converts",
+        "lawyers"
+      ],
+      "tags": [
+        "martyr",
+        "convert",
+        "performer",
+        "early Church"
+      ],
+      "affinities": [
+        "acting",
+        "theater",
+        "performance",
+        "comedy"
+      ],
+      "quote": "There is no king but Christ, whom I have seen and worship. For Him I will die a thousand times. I am sorry for my sin, that I was late in coming to His service, and only sought to worship Him when my end was near.",
+      "biography": "St. Genesius was a Roman actor and comedian during the reign of Emperor Diocletian in the early fourth century. He was the leader of a troupe of actors who performed comedies and satires for the Roman elite. One day, he was asked to perform a play mocking Christian baptism for the emperor's entertainment.\n\nAs Genesius acted out the baptismal scene on stage, something extraordinary happened. According to tradition, he experienced a sudden and genuine conversion. In the middle of the performance, with the emperor watching, Genesius declared that he truly believed in Jesus Christ and wished to be baptized for real.\n\nDiocletian, thinking it was part of the act at first, soon realized Genesius was serious. Furious, the emperor ordered him to be tortured. Genesius was stretched on the rack, burned with torches, and torn with iron hooks, but he refused to deny Christ. He was finally beheaded, becoming one of the most dramatic conversion stories in Church history.\n\nHis story has inspired countless artists, actors, and performers throughout the centuries. Theaters and drama programs around the world are named in his honor, and he remains one of the most beloved patron saints of the performing arts.",
+      "whyConfirmationSaint": "St. Genesius is the perfect confirmation saint for anyone involved in drama, comedy, film, or the performing arts. His conversion happened literally on stage — showing that God can reach us anywhere, even in the most unexpected moments. He turned his art into an act of faith.\n\nIf you love acting, storytelling, or making people laugh, Genesius reminds you that your creative gifts can be a pathway to God. He also shows incredible courage: once he found the truth, he refused to back down, even when it cost him everything.",
+      "image": {
+        "filename": "genesius-of-rome.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Loyola Press"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06411a.htm",
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-genesius/"
+      }
+    },
+    {
+      "id": "michael-mcgivney",
+      "name": "Bl. Michael McGivney",
+      "feastDay": "08-13",
+      "birthDate": "1852-08-12",
+      "deathDate": "1890-08-14",
+      "canonizationDate": "2020-10-31",
+      "country": "United States",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "young",
+      "patronOf": [
+        "Knights of Columbus",
+        "families",
+        "parish priests"
+      ],
+      "tags": [
+        "blessed",
+        "priest",
+        "founder",
+        "American"
+      ],
+      "affinities": [
+        "baseball",
+        "sports",
+        "community",
+        "family"
+      ],
+      "quote": "The best thing Catholics can do is stand together and help one another.",
+      "biography": "Michael Joseph McGivney was born on August 12, 1852, in Waterbury, Connecticut, to Irish immigrant parents. Growing up in a working-class family, he understood the struggles that immigrant Catholic families faced in 19th-century America — poverty, discrimination, and the constant fear of losing a breadwinner with no safety net.\n\nMichael felt called to the priesthood from a young age. He entered seminary but had to leave temporarily when his father died, returning home to help support his family. He eventually completed his studies and was ordained a priest in 1877. As a young parish priest in New Haven, Connecticut, he threw himself into serving his community. He was known for his love of baseball — he'd organize games with the young men of his parish and was often seen playing alongside them.\n\nIn 1882, at just 29 years old, Father McGivney founded the Knights of Columbus, a Catholic fraternal organization dedicated to charity, unity, and mutual aid. The organization provided life insurance to families who lost their primary earner, combated anti-Catholic discrimination, and built a strong Catholic community. Today, the Knights of Columbus has nearly two million members worldwide and is the largest Catholic fraternal organization in the world.\n\nFather McGivney died of pneumonia on August 14, 1890, at the age of 38 during a pandemic of influenza and pneumonia. He was beatified by Pope Francis on October 31, 2020, recognizing a miracle attributed to his intercession.",
+      "whyConfirmationSaint": "Blessed Michael McGivney is an amazing choice for anyone who loves sports, community, and standing up for others. He was a young priest who played baseball with the kids in his parish and understood that faith is lived out in friendship, fun, and service. He saw a problem — Catholic families struggling without support — and he created a solution that still helps millions today.\n\nIf you're someone who believes in teamwork, looking out for your friends and family, or using your energy to build something bigger than yourself, Bl. Michael McGivney is your guy. He shows that saints can love sports, enjoy life, and still change the world.",
+      "image": {
+        "filename": "michael-mcgivney.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Knights of Columbus",
+        "Vatican News"
+      ],
+      "sourceURLs": {
+        "Knights of Columbus": "https://www.kofc.org/en/who-we-are/our-founder.html",
+        "Vatican News": "https://www.vaticannews.va/en/saints/bl--michael-mcgivney.html"
+      }
+    },
+    {
+      "id": "teresa-of-the-andes",
+      "name": "St. Teresa of the Andes",
+      "feastDay": "07-13",
+      "birthDate": "1900-07-13",
+      "deathDate": "1920-04-12",
+      "canonizationDate": "1993-03-21",
+      "country": "Chile",
+      "region": "Americas",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "young",
+      "patronOf": [
+        "young people",
+        "sick people",
+        "Chile"
+      ],
+      "tags": [
+        "young",
+        "mystic",
+        "Carmelite",
+        "South American"
+      ],
+      "affinities": [
+        "swimming",
+        "horseback riding",
+        "tennis",
+        "dance",
+        "nature",
+        "prayer"
+      ],
+      "quote": "God is infinite joy, and by being close to Him, we begin to taste that joy.",
+      "biography": "Juanita Fernández Solar was born on July 13, 1900, in Santiago, Chile, to a wealthy and prominent family. Growing up, she was anything but the stereotypical image of a future saint — she was athletic, outgoing, and full of life. She loved swimming, horseback riding, playing tennis, and dancing at family gatherings. She was popular at school and known for her joyful personality.\n\nBut beneath her active social life, Juanita had a deep interior life of prayer. She began reading the works of St. Thérèse of Lisieux and St. Teresa of Ávila as a teenager and felt a powerful call to Carmelite religious life. At 19, despite her family's initial resistance, she entered the Carmelite monastery of Los Andes in Chile, taking the name Teresa of Jesus.\n\nSadly, just 11 months after entering the convent, Teresa became gravely ill with typhus. She made her religious profession on her deathbed and died on April 12, 1920, at just 19 years of age. Her diary and letters, written during her teenage years, reveal a remarkable spiritual depth and a passionate love for Christ.\n\nSt. Teresa of the Andes was canonized by Pope John Paul II on March 21, 1993, becoming the first Chilean saint and the first Carmelite from Latin America to be canonized. Her writings continue to inspire young people around the world.",
+      "whyConfirmationSaint": "St. Teresa of the Andes is the perfect confirmation saint for anyone who loves sports, the outdoors, and living life to the fullest. She proves that being holy doesn't mean giving up the things you love — she was a swimmer, horseback rider, tennis player, and dancer who also happened to have an incredibly deep relationship with God.\n\nIf you're an active, energetic person who sometimes wonders if faith is for 'quiet, serious people,' Teresa is your answer. She shows that joy, athleticism, and a love of adventure go hand in hand with a vibrant spiritual life. She was a normal teenager with an extraordinary heart.",
+      "image": {
+        "filename": "teresa-of-the-andes.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Vatican News",
+        "Loyola Press"
+      ],
+      "sourceURLs": {
+        "Vatican News": "https://www.vaticannews.va/en/saints/st-teresa-of-jesus-of-the-andes.html",
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-teresa-of-the-andes/"
+      }
+    },
+    {
+      "id": "joseph-mukasa-balikuddembe",
+      "name": "St. Joseph Mukasa Balikuddembe",
+      "feastDay": "11-03",
+      "birthDate": "0001-01-01",
+      "deathDate": "1885-11-15",
+      "canonizationDate": "1964-10-18",
+      "country": "Uganda",
+      "region": "Africa",
+      "gender": "male",
+      "lifeState": "layperson",
+      "ageCategory": "young",
+      "patronOf": [
+        "Uganda",
+        "African youth",
+        "converts"
+      ],
+      "tags": [
+        "young",
+        "martyr",
+        "African",
+        "athlete"
+      ],
+      "affinities": [
+        "running",
+        "wrestling",
+        "sports",
+        "leadership",
+        "courage"
+      ],
+      "quote": "Tell King Mwanga that he has condemned me unjustly, but I forgive him. Tell him to repent, for if he does not, I will accuse him before the judgment seat of God.",
+      "biography": "Joseph Mukasa Balikuddembe was born around 1860 in the Kingdom of Buganda, in what is now Uganda. He was a member of the royal court and served as the chief attendant to King Mwanga II. Known for his physical strength and athletic ability — particularly in running and wrestling — Joseph was respected as both a leader and a man of action.\n\nJoseph was among the first Ugandans to be baptized as a Catholic, embracing the faith brought by the White Fathers missionaries. He quickly became a leader among the Christian converts at court, teaching them the faith and protecting the young pages from the king's abuses. He was fearless in confronting King Mwanga about his immoral behavior, particularly the king's exploitation of the young boys in his service.\n\nWhen King Mwanga had the Anglican missionary James Hannington murdered in October 1885, Joseph directly rebuked the king for the killing. This act of courage sealed his fate. On November 15, 1885, King Mwanga ordered Joseph to be beheaded. Joseph forgave his executioner and the king before his death, becoming the first of the Uganda Martyrs to die.\n\nJoseph Mukasa and his companions were canonized by Pope Paul VI on October 18, 1964. The Uganda Martyrs are celebrated throughout Africa and around the world as powerful examples of courage and faith.",
+      "whyConfirmationSaint": "St. Joseph Mukasa is an outstanding confirmation saint for anyone who is athletic, competitive, or passionate about standing up for what's right. He was a runner and wrestler who used his strength not just in sports but to protect the vulnerable and confront injustice — even when it meant challenging a king to his face.\n\nIf you believe in using your strength and influence to defend those who can't defend themselves, Joseph Mukasa is your patron. He shows that true courage isn't just physical — it's the willingness to speak truth to power, even when the cost is your own life.",
+      "image": {
+        "filename": "joseph-mukasa-balikuddembe.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Vatican News",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Vatican News": "https://www.vaticannews.va/en/saints/st-charles-lwanga-and-companions--martyrs.html",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/15## .htm"
+      }
+    },
+    {
+      "id": "elizabeth-ann-seton",
+      "name": "St. Elizabeth Ann Seton",
+      "feastDay": "01-04",
+      "birthDate": "1774-08-28",
+      "deathDate": "1821-01-04",
+      "canonizationDate": "1975-09-14",
+      "country": "United States",
+      "region": "Americas",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Catholic schools",
+        "widows",
+        "seafarers",
+        "in-law problems"
+      ],
+      "tags": [
+        "convert",
+        "founder",
+        "educator",
+        "American",
+        "mother"
+      ],
+      "affinities": [
+        "teaching",
+        "reading",
+        "music",
+        "family",
+        "service"
+      ],
+      "quote": "Live simply so that others may simply live.",
+      "biography": "Elizabeth Ann Bayley was born on August 28, 1774, in New York City into a prominent Episcopalian family. Her father was a respected physician, and she received an excellent education — unusual for women of her era. In 1794, she married William Magee Seton, a wealthy businessman, and together they had five children.\n\nElizabeth's life took a dramatic turn when her husband's business failed and his health deteriorated. She traveled with him to Italy hoping the climate would help, but William died there in 1803, leaving Elizabeth a young widow with five children. While in Italy, she was deeply moved by the Catholic faith of her hosts, the Filicchi family. After returning to New York, she converted to Catholicism in 1805 — a decision that caused her Protestant family and friends to largely abandon her.\n\nFacing poverty and rejection, Elizabeth moved to Baltimore and then to Emmitsburg, Maryland, where she founded the Sisters of Charity of St. Joseph's in 1809 — the first American religious community for women. She also established one of the first free Catholic schools in America, laying the foundation for the entire Catholic school system in the United States.\n\nElizabeth Ann Seton died on January 4, 1821, at the age of 46. She was canonized by Pope Paul VI on September 14, 1975, becoming the first person born in the United States to be declared a saint.",
+      "whyConfirmationSaint": "St. Elizabeth Ann Seton is a wonderful confirmation saint for anyone who values education, family, or overcoming adversity. She lost her husband, her wealth, and her social standing — but she turned her suffering into a mission that transformed American Catholic life. She founded the Catholic school system that still educates millions today.\n\nIf you're someone who cares about learning, teaching, or helping others through tough times, Elizabeth Ann Seton shows that God can take your greatest struggles and turn them into your greatest contributions. She's proof that starting over is not failure — it's the beginning of something amazing.",
+      "image": {
+        "filename": "elizabeth-ann-seton.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-elizabeth-ann-seton/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13737a.htm"
+      }
+    },
+    {
+      "id": "oscar-romero",
+      "name": "St. Óscar Romero",
+      "feastDay": "03-24",
+      "birthDate": "1917-08-15",
+      "deathDate": "1980-03-24",
+      "canonizationDate": "2018-10-14",
+      "country": "El Salvador",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "elder",
+      "patronOf": [
+        "El Salvador",
+        "the Americas",
+        "persecuted Christians",
+        "social justice"
+      ],
+      "tags": [
+        "martyr",
+        "bishop",
+        "social justice",
+        "Central American"
+      ],
+      "affinities": [
+        "justice",
+        "speaking out",
+        "community",
+        "prayer",
+        "leadership"
+      ],
+      "quote": "We who have a voice must speak for the voiceless.",
+      "biography": "Óscar Arnulfo Romero y Galdámez was born on August 15, 1917, in Ciudad Barrios, a small mountain town in El Salvador. From a young age, he felt called to the priesthood and entered seminary at 13. He was ordained in 1942 and spent decades serving quietly as a parish priest, seminary rector, and eventually bishop — known more for his conservative, bookish nature than for activism.\n\nEverything changed in 1977 when Romero was appointed Archbishop of San Salvador during a time of intense political violence. Just weeks into his new role, his close friend Father Rutilio Grande was assassinated by government-linked forces for defending the rights of the poor. This murder transformed Romero. He began using his Sunday homilies — broadcast live on radio across the country — to document human rights abuses, name the victims, and call for justice.\n\nArchbishop Romero became the voice of the voiceless in El Salvador, fearlessly denouncing the military government's violence against civilians. He received numerous death threats but refused to be silenced. 'If they kill me,' he said, 'I shall arise in the Salvadoran people.' On March 24, 1980, while celebrating Mass in a hospital chapel, he was shot and killed by an assassin's bullet.\n\nRomero was canonized by Pope Francis on October 14, 2018. He is widely regarded as one of the most important Catholic figures of the twentieth century — a man who showed that the Gospel demands action in the face of injustice.",
+      "whyConfirmationSaint": "St. Óscar Romero is a powerful confirmation saint for anyone who cares about justice, fairness, and speaking up for those who are mistreated. He wasn't always bold — for most of his life, he was quiet and cautious. But when he saw innocent people suffering, he found his voice and refused to stay silent, even when it put his life in danger.\n\nIf you've ever felt angry about injustice or wondered how your faith connects to the real problems of the world, Romero shows you the way. He proves that following Jesus isn't just about personal piety — it's about standing with the poor, the oppressed, and the forgotten.",
+      "image": {
+        "filename": "oscar-romero.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Vatican News",
+        "Loyola Press"
+      ],
+      "sourceURLs": {
+        "Vatican News": "https://www.vaticannews.va/en/saints/st-oscar-arnulfo-romero-y-galdamez.html",
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-oscar-romero/"
+      }
+    },
+    {
+      "id": "faustina-kowalska",
+      "name": "St. Faustina Kowalska",
+      "feastDay": "10-05",
+      "birthDate": "1905-08-25",
+      "deathDate": "1938-10-05",
+      "canonizationDate": "2000-04-30",
+      "country": "Poland",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "young",
+      "patronOf": [
+        "Divine Mercy",
+        "mercy"
+      ],
+      "tags": [
+        "mystic",
+        "religious sister",
+        "visionary",
+        "writer"
+      ],
+      "affinities": [
+        "prayer",
+        "writing",
+        "mercy",
+        "compassion",
+        "art"
+      ],
+      "quote": "Jesus, I trust in You.",
+      "biography": "Helena Kowalska was born on August 25, 1905, in Głogowiec, Poland, the third of ten children in a poor but devout farming family. From childhood, she felt called to religious life, but her parents couldn't afford it and asked her to work as a domestic servant instead. At age 19, after a mystical experience at a dance hall — where she had a vision of Jesus suffering — she left everything and joined the Sisters of Our Lady of Mercy in Warsaw.\n\nAs Sister Faustina, she worked as a cook, gardener, and doorkeeper in the convent — humble tasks that hid an extraordinary inner life. Beginning in the 1930s, she received a series of visions from Jesus in which He asked her to spread the message of Divine Mercy to the world. Jesus told her to have an image painted showing Him with rays of red and white light streaming from His heart, with the words 'Jesus, I Trust in You' beneath it.\n\nFaustina recorded all of these experiences in her diary, which would become the famous 'Diary: Divine Mercy in My Soul' — one of the most remarkable mystical documents of the twentieth century. Despite having only three years of formal education, she produced over 600 pages of profound spiritual writing.\n\nSister Faustina died of tuberculosis on October 5, 1938, at the age of 33. Pope John Paul II — who credited the Divine Mercy message with sustaining him during World War II — canonized her on April 30, 2000, and established Divine Mercy Sunday as a universal feast of the Church.",
+      "whyConfirmationSaint": "St. Faustina Kowalska is an incredible confirmation saint for anyone drawn to prayer, art, or the message of God's mercy. She was a simple, uneducated woman who became one of the most influential mystics in Church history. Her message — 'Jesus, I Trust in You' — is one of the most powerful prayers you can ever learn.\n\nIf you've ever felt like you're not smart enough, talented enough, or important enough to make a difference, Faustina's story will change your mind. God chose her precisely because of her simplicity and humility. She reminds us that God's mercy is for everyone, and that trusting Him is the beginning of everything.",
+      "image": {
+        "filename": "faustina-kowalska.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Vatican News",
+        "Loyola Press"
+      ],
+      "sourceURLs": {
+        "Vatican News": "https://www.vaticannews.va/en/saints/st-maria-faustina--helena--kowalska.html",
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-faustina-kowalska/"
+      }
+    },
+    {
+      "id": "mary-magdalene",
+      "name": "St. Mary Magdalene",
+      "feastDay": "07-22",
+      "birthDate": "0001-01-01",
+      "deathDate": "0001-01-01",
+      "canonizationDate": "0001-01-01",
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "female",
+      "lifeState": "layperson",
+      "ageCategory": "adult",
+      "patronOf": [
+        "converts",
+        "penitents",
+        "women",
+        "pharmacists",
+        "contemplative life"
+      ],
+      "tags": [
+        "biblical",
+        "apostle to the apostles",
+        "follower of Jesus",
+        "witness to Resurrection"
+      ],
+      "affinities": [
+        "prayer",
+        "devotion",
+        "courage",
+        "contemplation",
+        "faithfulness"
+      ],
+      "quote": "I have seen the Lord!",
+      "biography": "St. Mary Magdalene is one of the most important figures in the Gospels and among the most beloved saints in Christian history. She came from Magdala, a fishing town on the western shore of the Sea of Galilee. According to the Gospel of Luke, Jesus cast seven demons out of her, and from that moment she became one of His most devoted followers.\n\nMary Magdalene was part of a group of women who traveled with Jesus and His disciples, supporting His ministry. Unlike many of the apostles, she never abandoned Jesus. She stood at the foot of the cross during His crucifixion when most of the male disciples had fled in fear. Her faithfulness in the darkest hour is one of the most powerful examples of loyalty in all of Scripture.\n\nMost remarkably, Mary Magdalene was the first person to see the Risen Christ on Easter morning. Jesus appeared to her at the empty tomb and gave her the mission of announcing the Resurrection to the apostles — earning her the ancient title 'Apostle to the Apostles.' In 2016, Pope Francis elevated her feast day to the same rank as the apostles' feasts, recognizing her unique role.\n\nThroughout the centuries, Mary Magdalene has been a symbol of conversion, devotion, and the transformative power of encountering Christ. Her story reminds us that no matter our past, meeting Jesus changes everything.",
+      "whyConfirmationSaint": "St. Mary Magdalene is a powerful confirmation saint for anyone who has experienced a life-changing encounter with God — or who longs for one. She was healed by Jesus, became His most faithful follower, and was the first witness of the Resurrection. Her story is about second chances, radical devotion, and fearless faith.\n\nIf you've ever felt defined by your past mistakes or wondered if God could really use you, Mary Magdalene is your answer. She went from suffering to standing at the foot of the cross, and from tears at the tomb to proclaiming the greatest news in history. She's proof that God chooses the faithful, not the perfect.",
+      "image": {
+        "filename": "mary-magdalene.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-mary-magdalene/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09761a.htm"
+      }
+    },
+    {
+      "id": "boniface",
+      "name": "St. Boniface",
+      "feastDay": "06-05",
+      "birthDate": "0675-01-01",
+      "deathDate": "0754-06-05",
+      "canonizationDate": "0001-01-01",
+      "country": "England",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "elder",
+      "patronOf": [
+        "Germany",
+        "brewers",
+        "tailors",
+        "file cutters"
+      ],
+      "tags": [
+        "bishop",
+        "martyr",
+        "missionary",
+        "Apostle of Germany"
+      ],
+      "affinities": [
+        "travel",
+        "teaching",
+        "leadership",
+        "courage",
+        "adventure"
+      ],
+      "quote": "Let us trust in Him who has placed this burden upon us. What we ourselves cannot bear, let us bear with the help of Christ.",
+      "biography": "St. Boniface was born Winfrid around the year 675 in the kingdom of Wessex in England. From a young age, he was educated in Benedictine monasteries and became a brilliant scholar and teacher. But Boniface wasn't content with a comfortable life in England — he felt called to bring the Gospel to the pagan peoples of Germania (modern-day Germany and the Netherlands).\n\nIn 719, Pope Gregory II gave Boniface an official mission to evangelize the Germanic tribes. His most famous act was the felling of the sacred Oak of Thor (also called Donar's Oak) at Geismar. The pagan Germans believed that cutting the tree would bring divine punishment, but when Boniface chopped it down and nothing happened, many converted to Christianity. According to legend, a fir tree grew in its place — which some traditions link to the origin of the Christmas tree.\n\nBoniface organized the Church in Germany, founded monasteries and schools, reformed the Frankish clergy, and crowned Pepin the Short as King of the Franks — laying the groundwork for what would become the Holy Roman Empire. He was made Archbishop of Mainz and became the most influential churchman in Western Europe outside of Rome.\n\nIn 754, at nearly 80 years old, Boniface set out on one final missionary journey to Frisia (the Netherlands). On June 5, he and his companions were attacked and killed by a band of pagan raiders. He died holding a book, which reportedly bore sword cuts — a relic still preserved today in Fulda, Germany.",
+      "whyConfirmationSaint": "St. Boniface is a fantastic confirmation saint for anyone with a spirit of adventure, a love of travel, or a desire to make a real impact on the world. He left the comfort and safety of his homeland to bring the faith to an entirely foreign culture — and he changed the course of European history in the process.\n\nIf you're drawn to big challenges, exploring new places, or leading others, Boniface shows what's possible when you combine courage with faith. He never stopped pushing forward, even into his old age. His life is proof that one person with conviction can transform an entire continent.",
+      "image": {
+        "filename": "boniface.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Loyola Press"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/02656a.htm",
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-boniface/"
+      }
+    },
+    {
+      "id": "catherine-of-alexandria",
+      "name": "St. Catherine of Alexandria",
+      "feastDay": "11-25",
+      "birthDate": "0287-01-01",
+      "deathDate": "0305-11-25",
+      "canonizationDate": "0001-01-01",
+      "country": "Egypt",
+      "region": "Africa",
+      "gender": "female",
+      "lifeState": "layperson",
+      "ageCategory": "young",
+      "patronOf": [
+        "philosophers",
+        "students",
+        "teachers",
+        "librarians",
+        "lawyers"
+      ],
+      "tags": [
+        "young",
+        "martyr",
+        "intellectual",
+        "early Church",
+        "virgin"
+      ],
+      "affinities": [
+        "studying",
+        "debate",
+        "philosophy",
+        "reading",
+        "learning"
+      ],
+      "quote": "I have chosen Christ as my spouse, and He alone is my love. Nothing in this world can separate me from Him.",
+      "biography": "St. Catherine of Alexandria was born around the year 287 in Alexandria, Egypt, one of the greatest intellectual centers of the ancient world. According to tradition, she was a young woman of noble birth who was exceptionally intelligent and well-educated. She studied philosophy, science, and rhetoric — subjects rarely available to women of her time — and was known for her brilliant mind.\n\nWhen the Roman Emperor Maxentius visited Alexandria and ordered everyone to offer sacrifices to pagan gods, Catherine — still a teenager — went to the emperor and argued against idol worship using philosophy and reason. Maxentius was so impressed that he summoned 50 of his best pagan philosophers to debate her. According to legend, Catherine defeated them all with her arguments, and many of the philosophers converted to Christianity on the spot.\n\nFurious, Maxentius had Catherine imprisoned and tortured. He ordered her to be broken on a spiked wheel (which later became known as the 'Catherine Wheel'), but the device miraculously shattered when she touched it. She was finally beheaded around the year 305. She was only about 18 years old.\n\nSt. Catherine became one of the most popular saints of the Middle Ages and was revered as the patron saint of philosophers, students, and scholars. She was one of the saints who appeared to Joan of Arc, inspiring the young French girl to follow God's call. Her legacy as a brilliant young woman who stood up for truth continues to inspire students and thinkers around the world.",
+      "whyConfirmationSaint": "St. Catherine of Alexandria is the ideal confirmation saint for anyone who loves learning, studying, or intellectual challenges. She was a teenager who outargued 50 professional philosophers — not because she was arrogant, but because she was deeply rooted in truth. Her intelligence was her greatest weapon for the faith.\n\nIf you're a student who loves books, debate, science, or asking big questions, Catherine is your patron. She shows that being smart and being holy are not opposites — your mind is one of God's greatest gifts. Use it boldly, like she did, and never be afraid to speak the truth.",
+      "image": {
+        "filename": "catherine-of-alexandria.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic Encyclopedia",
+        "Loyola Press"
+      ],
+      "sourceURLs": {
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/03445a.htm",
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-catherine-of-alexandria/"
+      }
+    },
+    {
+      "id": "john-the-baptist",
+      "name": "St. John the Baptist",
+      "feastDay": "06-24",
+      "birthDate": "0001-01-01",
+      "deathDate": "0030-08-29",
+      "canonizationDate": "0001-01-01",
+      "country": "Israel",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "baptism",
+        "converts",
+        "monastic life",
+        "Jordan"
+      ],
+      "tags": [
+        "biblical",
+        "prophet",
+        "martyr",
+        "forerunner of Christ"
+      ],
+      "affinities": [
+        "prayer",
+        "nature",
+        "solitude",
+        "courage",
+        "speaking out"
+      ],
+      "quote": "He must increase, but I must decrease.",
+      "biography": "St. John the Baptist is one of the most important figures in the entire Bible. His birth was itself miraculous — his parents, Zechariah and Elizabeth (a relative of the Virgin Mary), were elderly and had been unable to have children. The angel Gabriel appeared to Zechariah in the Temple and announced that they would have a son who would 'make ready a people prepared for the Lord.'\n\nJohn grew up to become a striking and radical figure. He lived in the Judean wilderness, wore clothing made of camel's hair, and ate locusts and wild honey. He preached a powerful message of repentance and baptized people in the Jordan River, preparing the way for the coming of the Messiah. Crowds flocked to hear him from all over Judea and beyond.\n\nThe climax of John's ministry came when Jesus Himself came to be baptized. John initially protested, saying he was not worthy to untie Jesus' sandals, but Jesus insisted. As John baptized Jesus, the heavens opened, the Holy Spirit descended like a dove, and the Father's voice declared, 'This is my beloved Son.' It was the moment John's entire life had been building toward.\n\nJohn's courage ultimately led to his death. He publicly condemned King Herod Antipas for unlawfully marrying his brother's wife, Herodias. This so enraged Herodias that she arranged for her daughter Salome to request John's head on a platter. John was beheaded in Herod's prison, dying as a martyr for truth. Jesus Himself said of John, 'Among those born of women there has risen no one greater.'",
+      "whyConfirmationSaint": "St. John the Baptist is an extraordinary confirmation saint for anyone who values honesty, courage, and being your authentic self. He didn't care about popularity or comfort — he lived simply, spoke boldly, and pointed everyone toward Jesus. His entire life was about preparing the way for something greater than himself.\n\nIf you're the kind of person who speaks the truth even when it's uncomfortable, who would rather be real than popular, or who feels called to help others find God, John the Baptist is your saint. His famous words — 'He must increase, but I must decrease' — are a master class in humility and purpose.",
+      "image": {
+        "filename": "john-the-baptist.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Loyola Press",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-john-the-baptist/",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08486b.htm"
       }
     }
   ]
