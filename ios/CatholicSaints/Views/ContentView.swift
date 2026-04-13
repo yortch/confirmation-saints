@@ -25,17 +25,11 @@ struct ContentView: View {
                 }
                 .tag(2)
 
-            SearchView(viewModel: viewModel)
-                .tabItem {
-                    Label(AppStrings.localized("Search", language: language), systemImage: "magnifyingglass")
-                }
-                .tag(3)
-
             SettingsView(viewModel: viewModel)
                 .tabItem {
                     Label(AppStrings.localized("Settings", language: language), systemImage: "gearshape.fill")
                 }
-                .tag(4)
+                .tag(3)
         }
         .tint(.purple)
         .onAppear {
