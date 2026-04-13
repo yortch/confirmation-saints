@@ -200,3 +200,65 @@ Language switching via `@AppStorage("appLanguage")` triggers `SaintListViewModel
 - **Legolas (QA):** Navigation tests should verify saint detail content updates when language changes without re-navigation
 - **Samwise (Data):** Saint `id` field must remain stable across language files (already the case)
 - **Gandalf (Arch):** Same pattern should apply to any future detail views for content that varies by language
+
+---
+
+### Decision: UI Polish — Splash Screen, Date Formatting, Tab Reorder
+**Author:** Frodo (iOS Dev) | **Date:** 2026-04-13 | **Status:** Implemented
+
+#### Changes
+
+1. **Splash Screen:** New `SplashView.swift` displays branded red overlay with app icon + "Confirmation Saints" text for 1.5s on launch, then fades out smoothly. Integrated into `CatholicSaintsApp.swift` as an overlay. Created `SplashLogo.imageset` since `Image("AppIcon")` cannot reference the AppIcon asset set directly.
+
+2. **Date Formatting:** New `SaintDateFormatter` utility in `Extensions/DateFormatting.swift` converts ISO dates to human-readable `dd-Mon-yyyy` format (e.g., "02-Jan-1873"). Detects ancient approximate dates (month=01, day=01, year<800) and shows year only. Applied to all date displays in `SaintDetailView` (birthDate, deathDate, canonizationDate).
+
+3. **Tab Reorder:** Changed default tab order from Saints→Explore→Search→About→Settings to **About→Explore→Saints→Search→Settings**, making About the landing page (tag 0).
+
+#### Files Modified
+- `SplashView.swift` (new)
+- `Extensions/DateFormatting.swift` (new)
+- `Assets.xcassets/SplashLogo.imageset/` (new)
+- `CatholicSaintsApp.swift` (splash overlay integration)
+- `ContentView.swift` (default tab index)
+- `SaintDetailView.swift` (date formatter applied)
+
+#### Build Status
+✅ Swift typecheck passed clean  
+✅ XcodeGen regenerated successfully  
+✅ iPhone 17 simulator tested
+
+#### Impact
+- **Legolas (QA):** `SaintDateFormatter` should have unit tests; splash screen UI should be visually verified
+- **Samwise (Data):** No data changes required
+- **Gandalf (Arch):** No architectural changes; follows existing patterns
+
+---
+
+### Decision: Spanish Display Tags and Affinities
+**Author:** Samwise (Data/Backend) | **Date:** 2026-04-13 | **Status:** Implemented
+
+#### Context
+Spanish saints file displayed English tags and affinities in the UI because translations were not available. While English matching fields must remain for category browsing, display fields should be localized for proper Spanish UI rendering.
+
+#### Decision
+Added `displayTags[]` and `displayAffinities[]` arrays to all 54 saints in `saints-es.json`. These provide properly translated Spanish versions for UI display while keeping English `tags` and `affinities` intact for category matching and search.
+
+**Translation Coverage:**
+- 100+ unique tags with gender-appropriate forms (e.g., "mística", "escritora", "Doctora de la Iglesia", "fundadora", "misionera")
+- 65 unique affinities fully translated
+- All saints include both arrays
+
+#### Implementation
+- **Data:** Updated `saints-es.json` with new arrays
+- **Model:** `Saint.swift` now has optional `displayTags` and `displayAffinities` fields
+- **View:** `SaintDetailView` renders display versions when available, falls back to English
+- **Search:** `SaintListViewModel.search()` matches both English and Spanish arrays
+
+#### Pattern for Future Work
+Any localized display fields should use the `display*` prefix convention. This preserves matching-field stability while enabling language-specific UI rendering.
+
+#### Impact
+- **Frodo (iOS):** UI now displays Spanish tags/affinities for Spanish language mode
+- **Legolas (QA):** Search filtering tests should verify both EN and ES queries work
+- **Gandalf (Arch):** New convention established for dual-language display patterns
+- **Samwise (Data):** Apply same pattern to any future display-only fields requiring translation
