@@ -31,7 +31,7 @@ struct ContentView: View {
                 }
                 .tag(3)
         }
-        .tint(.purple)
+        .tint(.red)
         .onAppear {
             viewModel.loadData(language: language)
         }

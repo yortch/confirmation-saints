@@ -57,8 +57,8 @@ struct WelcomeView: View {
             // Background gradient
             LinearGradient(
                 colors: [
-                    Color.purple.opacity(0.15),
-                    Color.purple.opacity(0.05),
+                    Color.red.opacity(0.15),
+                    Color.red.opacity(0.05),
                     Color(red: 1.0, green: 0.95, blue: 0.8).opacity(0.3)
                 ],
                 startPoint: .topLeading,
@@ -100,7 +100,7 @@ struct WelcomeView: View {
                                 .foregroundStyle(.white)
                                 .padding(.horizontal, 24)
                                 .padding(.vertical, 12)
-                                .background(Color.purple, in: Capsule())
+                                .background(Color.red, in: Capsule())
                             }
                         }
                         .padding(.horizontal, 32)
@@ -122,7 +122,7 @@ struct WelcomeView: View {
         HStack(spacing: 8) {
             ForEach(0..<pageCount, id: \.self) { index in
                 Circle()
-                    .fill(index == currentPage ? Color.purple : Color.purple.opacity(0.3))
+                    .fill(index == currentPage ? Color.red : Color.red.opacity(0.3))
                     .frame(width: index == currentPage ? 10 : 8,
                            height: index == currentPage ? 10 : 8)
                     .animation(.spring(response: 0.3), value: currentPage)
@@ -136,7 +136,7 @@ struct WelcomeView: View {
         VStack(spacing: 24) {
             Spacer()
 
-            LatinCrossView(size: 70, color: .purple)
+            LatinCrossView(size: 70, color: .red)
                 .scaleEffect(animateContent ? 1.0 : 0.5)
                 .opacity(animateContent ? 1.0 : 0.0)
 
@@ -164,7 +164,7 @@ struct WelcomeView: View {
 
             Image(systemName: "magnifyingglass.circle.fill")
                 .font(.system(size: 70))
-                .foregroundStyle(.purple)
+                .foregroundStyle(.red)
                 .symbolRenderingMode(.hierarchical)
 
             Text(AppStrings.localized("Explore Saints Your Way", language: language))
@@ -190,7 +190,7 @@ struct WelcomeView: View {
         HStack(spacing: 12) {
             Image(systemName: icon)
                 .font(.title3)
-                .foregroundStyle(.purple)
+                .foregroundStyle(.red)
                 .frame(width: 32)
             Text(text)
                 .font(.body)
@@ -217,7 +217,7 @@ struct WelcomeView: View {
 
             Image(systemName: "hands.sparkles.fill")
                 .font(.system(size: 70))
-                .foregroundStyle(.purple)
+                .foregroundStyle(.red)
                 .symbolRenderingMode(.hierarchical)
 
             Text(AppStrings.localized("Ready to Find Your Saint?", language: language))
@@ -240,7 +240,7 @@ struct WelcomeView: View {
                     .padding(.vertical, 16)
                     .background(
                         LinearGradient(
-                            colors: [.purple, Color(red: 0.5, green: 0.2, blue: 0.7)],
+                            colors: [.red, Color(red: 0.7, green: 0.1, blue: 0.1)],
                             startPoint: .leading,
                             endPoint: .trailing
                         ),

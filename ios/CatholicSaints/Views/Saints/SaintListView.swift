@@ -102,7 +102,7 @@ struct SaintListView: View {
                 viewModel.clearFilters()
             }
             .font(.caption.bold())
-            .foregroundStyle(.purple)
+            .foregroundStyle(.red)
         }
         .padding(.horizontal)
         .padding(.vertical, 6)

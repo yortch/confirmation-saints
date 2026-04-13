@@ -18,7 +18,7 @@ struct FilterChip: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(isActive ? Color.purple : Color(.systemGray5))
+            .background(isActive ? Color.red : Color(.systemGray5))
             .foregroundStyle(isActive ? .white : .primary)
             .clipShape(Capsule())
         }

@@ -88,7 +88,7 @@ struct SaintDetailView: View {
             VStack(spacing: 8) {
                 Image(systemName: "quote.opening")
                     .font(.title2)
-                    .foregroundStyle(.purple.opacity(0.6))
+                    .foregroundStyle(.red.opacity(0.6))
                 Text(quote)
                     .font(.body.italic())
                     .multilineTextAlignment(.center)
@@ -99,7 +99,7 @@ struct SaintDetailView: View {
             }
             .padding()
             .frame(maxWidth: .infinity)
-            .background(.purple.opacity(0.06))
+            .background(.red.opacity(0.06))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }
@@ -112,12 +112,12 @@ struct SaintDetailView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Label(AppStrings.localized("Why Choose This Saint?", language: language), systemImage: "heart.fill")
                     .font(.title3.bold())
-                    .foregroundStyle(.purple)
+                    .foregroundStyle(.red)
                 Text(why)
                     .font(.body)
             }
             .padding()
-            .background(.purple.opacity(0.04))
+            .background(.red.opacity(0.04))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }
@@ -188,7 +188,7 @@ struct SaintDetailView: View {
                             .font(.subheadline)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
-                            .background(.purple.opacity(0.1))
+                            .background(.red.opacity(0.1))
                             .clipShape(Capsule())
                     }
                 }

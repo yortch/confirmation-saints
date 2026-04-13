@@ -14,7 +14,7 @@ struct SaintImageView: View {
                 .scaledToFill()
                 .frame(width: size, height: size)
                 .clipShape(Circle())
-                .overlay(Circle().stroke(Color.purple.opacity(0.3), lineWidth: size > 60 ? 2 : 1))
+                .overlay(Circle().stroke(Color.red.opacity(0.3), lineWidth: size > 60 ? 2 : 1))
         } else {
             ZStack {
                 Circle()
@@ -49,7 +49,7 @@ struct SaintImageView: View {
     }
 
     private func colorForSaint(_ saint: Saint) -> Color {
-        let colors: [Color] = [.purple, .blue, .indigo, .teal, .pink, .orange, .mint, .cyan]
+        let colors: [Color] = [.red, .blue, .indigo, .teal, .pink, .orange, .mint, .cyan]
         let index = abs(saint.id.hashValue) % colors.count
         return colors[index]
     }

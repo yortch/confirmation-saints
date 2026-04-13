@@ -32,7 +32,7 @@ struct AboutConfirmationView: View {
             HStack {
                 Image(systemName: iconForSection(section.id))
                     .font(.title2)
-                    .foregroundStyle(.purple)
+                    .foregroundStyle(.red)
                 Text(section.title)
                     .font(.title2.bold())
             }
@@ -43,9 +43,7 @@ struct AboutConfirmationView: View {
                     Text(content.heading)
                         .font(.headline)
                         .foregroundStyle(.primary)
-                    Text(markdownAttributedString(content.body))
-                        .font(.body)
-                        .foregroundStyle(.primary.opacity(0.85))
+                    bodyView(content.body)
                 }
             }
 
@@ -64,11 +62,38 @@ struct AboutConfirmationView: View {
         }
     }
 
-    private func markdownAttributedString(_ text: String) -> AttributedString {
-        // Convert every newline to a Markdown hard line break (two trailing spaces)
-        // so bullets, numbered lists, and bold section headings render with visible breaks.
-        let normalized = text.replacingOccurrences(of: "\n", with: "  \n")
-        return (try? AttributedString(markdown: normalized)) ?? AttributedString(text)
+    /// Renders a body string as a vertical stack of paragraphs.
+    /// Splits on double-newlines for paragraph spacing, and uses
+    /// explicit newline characters within each paragraph for line breaks.
+    @ViewBuilder
+    private func bodyView(_ text: String) -> some View {
+        let paragraphs = text.components(separatedBy: "\n\n")
+        VStack(alignment: .leading, spacing: 12) {
+            ForEach(Array(paragraphs.enumerated()), id: \.offset) { _, paragraph in
+                let attributed = markdownAttributed(paragraph)
+                Text(attributed)
+                    .font(.body)
+                    .foregroundStyle(.primary.opacity(0.85))
+            }
+        }
+    }
+
+    /// Parses markdown bold while preserving newlines as actual line breaks.
+    private func markdownAttributed(_ text: String) -> AttributedString {
+        // Split on single newlines, parse each line for markdown, rejoin with newlines
+        let lines = text.components(separatedBy: "\n")
+        var result = AttributedString()
+        for (index, line) in lines.enumerated() {
+            if index > 0 {
+                result.append(AttributedString("\n"))
+            }
+            if let parsed = try? AttributedString(markdown: line) {
+                result.append(parsed)
+            } else {
+                result.append(AttributedString(line))
+            }
+        }
+        return result
     }
 
     private func iconForSection(_ id: String) -> String {
