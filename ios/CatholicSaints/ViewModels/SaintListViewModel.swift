@@ -22,15 +22,16 @@ final class SaintListViewModel {
 
         if !searchText.isEmpty {
             let query = searchText
+            let deepSearch = query.count >= 3
             result = result.filter { saint in
-                saint.name.containsIgnoringDiacritics(query)
-                || saint.biography.containsIgnoringDiacritics(query)
-                || saint.patronOf.contains { $0.containsIgnoringDiacritics(query) }
-                || saint.affinities.contains { $0.containsIgnoringDiacritics(query) }
-                || saint.tags.contains { $0.containsIgnoringDiacritics(query) }
-                || (saint.displayAffinities ?? []).contains { $0.containsIgnoringDiacritics(query) }
-                || (saint.displayTags ?? []).contains { $0.containsIgnoringDiacritics(query) }
-                || (saint.country?.containsIgnoringDiacritics(query) ?? false)
+                if saint.name.containsIgnoringDiacritics(query) { return true }
+                guard deepSearch else { return false }
+                return saint.patronOf.contains { $0.containsIgnoringDiacritics(query) }
+                    || saint.affinities.contains { $0.containsIgnoringDiacritics(query) }
+                    || saint.tags.contains { $0.containsIgnoringDiacritics(query) }
+                    || (saint.displayAffinities ?? []).contains { $0.containsIgnoringDiacritics(query) }
+                    || (saint.displayTags ?? []).contains { $0.containsIgnoringDiacritics(query) }
+                    || (saint.country?.containsIgnoringDiacritics(query) ?? false)
             }
         }
 
@@ -56,7 +57,7 @@ final class SaintListViewModel {
             }
         }
 
-        return result
+        return result.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
     }
 
     /// Saints matching a specific category value (for category browsing).
@@ -82,6 +83,7 @@ final class SaintListViewModel {
                 return false
             }
         }
+        .sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
     }
 
     private func matchesEra(saint: Saint, era: String) -> Bool {

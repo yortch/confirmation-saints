@@ -106,3 +106,9 @@
 - **Task 3 (Tab Reorder):** Changed tab order to About→Explore→Saints→Search→Settings. About is now tag(0) and default landing tab (`selectedTab = 0`).
 - Lesson: Can't use `Image("AppIcon")` in SwiftUI — the AppIcon.appiconset is special. Create a separate imageset with the same file for in-app icon display.
 - Build verified clean on iPhone 17 simulator.
+
+### Search Precision Fix (2025-07-19)
+- **Bug:** Searching "ter" returned saints whose biography contained words like "after", "water", "monastery" — too noisy.
+- **Fix:** Removed `saint.biography` from `filteredSaints` search entirely. Added 3-character minimum gate for secondary fields (patronOf, affinities, tags, displayAffinities, displayTags, country). Name search remains active for any query length.
+- **Lesson:** Never include long prose fields (biography) in substring search — they match too broadly. Keep search to structured/short fields.
+- Build verified clean on iPhone 17 simulator.
