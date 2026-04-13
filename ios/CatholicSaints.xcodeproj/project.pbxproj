@@ -40,7 +40,7 @@
 		4E34B3B2B01D51EE384ADB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B550247717C067DCFBA00A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		658D2564D15C3A8EA7CFB95A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6BD77F99DAAE5D116CE311F1 /* Confirmation Saints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Confirmation Saints.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD77F99DAAE5D116CE311F1 /* CatholicSaints.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CatholicSaints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2C717D5A1AD4A511CBB642 /* CatholicSaintsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatholicSaintsApp.swift; sourceTree = "<group>"; };
 		6F87D877510DBE165CE3137B /* AboutConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutConfirmationView.swift; sourceTree = "<group>"; };
 		73AD551ABCE820B6F50CF128 /* SaintListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintListView.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		3371D7E612BE94280A85E18A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BD77F99DAAE5D116CE311F1 /* Confirmation Saints.app */,
+				6BD77F99DAAE5D116CE311F1 /* CatholicSaints.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 			packageProductDependencies = (
 			);
 			productName = CatholicSaints;
-			productReference = 6BD77F99DAAE5D116CE311F1 /* Confirmation Saints.app */;
+			productReference = 6BD77F99DAAE5D116CE311F1 /* CatholicSaints.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -245,9 +245,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					31BF1BF4D3DEBE32A2A9508C = {
+						DevelopmentTeam = G98XX4494X;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -326,7 +327,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jorgebalderas.CatholicSaints;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgebalderas.ConfirmationSaints;
 				PRODUCT_NAME = "Confirmation Saints";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jorgebalderas.CatholicSaints;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgebalderas.ConfirmationSaints;
 				PRODUCT_NAME = "Confirmation Saints";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

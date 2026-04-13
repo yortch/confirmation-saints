@@ -44,6 +44,6 @@ targets:
       - path: CatholicSaints/Resources/Localizable.xcstrings
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.jorgebalderas.CatholicSaints
+        PRODUCT_BUNDLE_IDENTIFIER: com.jorgebalderas.ConfirmationSaints
         PRODUCT_NAME: "Confirmation Saints"
         DEVELOPMENT_ASSET_PATHS: "\"CatholicSaints/Resources/Preview Content\""
