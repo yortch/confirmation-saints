@@ -79,6 +79,11 @@ struct AppStrings {
             "single": "soltero",
             "layperson": "laico",
             "martyr": "mártir",
+            // Support & Legal
+            "Privacy Policy": "Política de Privacidad",
+            "Support": "Soporte",
+            "Contact Us": "Contáctanos",
+            "Support & Legal": "Soporte y Legal",
         ]
     ]
 

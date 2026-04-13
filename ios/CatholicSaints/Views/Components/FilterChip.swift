@@ -22,5 +22,8 @@ struct FilterChip: View {
             .foregroundStyle(isActive ? .white : .primary)
             .clipShape(Capsule())
         }
+        .accessibilityLabel(title)
+        .accessibilityAddTraits(isActive ? .isSelected : [])
+        .accessibilityHint(isActive ? "Double tap to remove filter" : "Double tap to filter")
     }
 }

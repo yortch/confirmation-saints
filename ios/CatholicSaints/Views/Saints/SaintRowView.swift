@@ -37,8 +37,11 @@ struct SaintRowView: View {
                 Image(systemName: "sparkles")
                     .foregroundStyle(.orange)
                     .font(.caption)
+                    .accessibilityHidden(true)
             }
         }
         .padding(.vertical, 4)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(saint.name), \(saint.formattedFeastDay)\(saint.country.map { ", \($0)" } ?? "")\(saint.isYoung ? ", Young Saint" : "")")
     }
 }
