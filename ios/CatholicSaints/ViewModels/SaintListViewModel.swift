@@ -21,19 +21,19 @@ final class SaintListViewModel {
         var result = saints
 
         if !searchText.isEmpty {
-            let query = searchText.lowercased()
+            let query = searchText
             result = result.filter { saint in
-                saint.name.lowercased().contains(query)
-                || saint.biography.lowercased().contains(query)
-                || saint.patronOf.contains { $0.lowercased().contains(query) }
-                || saint.affinities.contains { $0.lowercased().contains(query) }
-                || saint.tags.contains { $0.lowercased().contains(query) }
-                || (saint.country?.lowercased().contains(query) ?? false)
+                saint.name.containsIgnoringDiacritics(query)
+                || saint.biography.containsIgnoringDiacritics(query)
+                || saint.patronOf.contains { $0.containsIgnoringDiacritics(query) }
+                || saint.affinities.contains { $0.containsIgnoringDiacritics(query) }
+                || saint.tags.contains { $0.containsIgnoringDiacritics(query) }
+                || (saint.country?.containsIgnoringDiacritics(query) ?? false)
             }
         }
 
         if let region = selectedRegion {
-            result = result.filter { $0.region?.lowercased() == region.lowercased() }
+            result = result.filter { $0.region?.equalsIgnoringDiacritics(region) ?? false }
         }
 
         if let lifeState = selectedLifeState {
@@ -50,7 +50,7 @@ final class SaintListViewModel {
 
         if let affinity = selectedAffinity {
             result = result.filter {
-                $0.affinities.contains { $0.lowercased().contains(affinity.lowercased()) }
+                $0.affinities.contains { $0.containsIgnoringDiacritics(affinity) }
             }
         }
 
@@ -62,14 +62,14 @@ final class SaintListViewModel {
         saints.filter { saint in
             switch groupId {
             case "patronage":
-                return saint.patronOf.contains { $0.lowercased().contains(valueId.replacingOccurrences(of: "-", with: " ")) }
+                return saint.patronOf.contains { $0.containsIgnoringDiacritics(valueId.replacingOccurrences(of: "-", with: " ")) }
             case "interests":
-                return saint.affinities.contains { $0.lowercased().contains(valueId.replacingOccurrences(of: "-", with: " ")) }
-                    || saint.tags.contains { $0.lowercased().contains(valueId.replacingOccurrences(of: "-", with: " ")) }
+                return saint.affinities.contains { $0.containsIgnoringDiacritics(valueId.replacingOccurrences(of: "-", with: " ")) }
+                    || saint.tags.contains { $0.containsIgnoringDiacritics(valueId.replacingOccurrences(of: "-", with: " ")) }
             case "age-category":
                 return saint.ageCategory == valueId
             case "region":
-                return saint.region?.lowercased() == valueId.replacingOccurrences(of: "-", with: " ")
+                return saint.region?.equalsIgnoringDiacritics(valueId.replacingOccurrences(of: "-", with: " ")) ?? false
             case "life-state":
                 return saint.lifeState == valueId
             case "era":
