@@ -2,9 +2,10 @@
 """
 Generate a 1024x1024 app icon for Confirmation Saints.
 
-Design: Rich liturgical red radial gradient background, white dove in side-view
-profile (classic Pentecost style — gliding left-to-right with wings gracefully
-extended), subtle golden glow/halo, and small Pentecost flame accents.
+Design: Rich liturgical red radial gradient background, white dove in classic
+Pentecost style (descending with wings spread wide, facing right), a prominent
+single flame of the Holy Spirit above the dove, subtle golden glow/halo, and
+gold accent dots.
 
 Renders at 2x (2048x2048) then downscales with LANCZOS for anti-aliasing.
 """
@@ -64,145 +65,166 @@ def draw_light_rays(draw, cx, cy, size, color_rgba):
                   fill=ray_color, width=ray_width)
 
 
-def draw_dove_side_view(draw, cx, cy, size, color):
-    """Draw a side-view dove in classic Pentecost style — gliding in profile."""
-    # The dove faces right, body slightly angled upward as if gliding/descending
+def draw_dove_pentecost(draw, cx, cy, size, color):
+    """Draw a classic Pentecost dove — descending with wings spread wide, facing right.
 
-    # Body — elongated horizontal oval, slightly tilted upward to the right
-    body_w = size * 0.28
-    body_h = size * 0.11
-    tilt = -0.08 * size  # slight upward tilt
+    Inspired by traditional Holy Spirit iconography: clean iconic silhouette,
+    broad graceful wings sweeping upward, body angled in gentle descent.
+    """
+    s = size  # shorthand
 
-    body_pts = []
-    for angle_deg in range(360):
-        a = math.radians(angle_deg)
-        bx = cx + body_w * math.cos(a)
-        by = cy + body_h * math.sin(a) + tilt * math.cos(a) * 0.3
-        body_pts.append((bx, by))
+    # Dove center is shifted up slightly so the flame + dove compose well
+    dy = cy - s * 0.02
+
+    # --- Body: plump rounded dove body ---
+    body_pts = [
+        (cx + s * 0.16, dy + s * 0.04),    # front chest
+        (cx + s * 0.12, dy - s * 0.02),    # upper chest
+        (cx + s * 0.04, dy - s * 0.05),    # neck/back of head
+        (cx - s * 0.06, dy - s * 0.04),    # upper back
+        (cx - s * 0.14, dy + s * 0.00),    # mid-back
+        (cx - s * 0.18, dy + s * 0.06),    # lower back
+        (cx - s * 0.16, dy + s * 0.12),    # under-tail
+        (cx - s * 0.08, dy + s * 0.15),    # belly back
+        (cx + s * 0.02, dy + s * 0.15),    # belly mid
+        (cx + s * 0.10, dy + s * 0.12),    # belly front
+        (cx + s * 0.15, dy + s * 0.08),    # lower chest
+    ]
     draw.polygon(body_pts, fill=color)
 
-    # Head — circle at the front-right of the body
-    head_r = size * 0.075
-    head_cx = cx + body_w * 0.85
-    head_cy = cy - body_h * 0.5 + tilt * 0.4
+    # --- Head: round ---
+    head_cx = cx + s * 0.12
+    head_cy = dy + s * 0.01
+    head_r = s * 0.060
     draw.ellipse(
         [head_cx - head_r, head_cy - head_r,
          head_cx + head_r, head_cy + head_r],
         fill=color
     )
 
-    # Beak — small pointed triangle extending right from head
-    beak_len = size * 0.065
-    beak_w = size * 0.022
-    beak_tip_x = head_cx + head_r + beak_len
-    beak_tip_y = head_cy + head_r * 0.15
+    # --- Beak: small pointed triangle ---
+    beak_len = s * 0.050
     draw.polygon([
-        (head_cx + head_r * 0.6, head_cy - beak_w),
-        (beak_tip_x, beak_tip_y),
-        (head_cx + head_r * 0.6, head_cy + beak_w * 1.2),
+        (head_cx + head_r * 0.6, head_cy - s * 0.008),
+        (head_cx + head_r + beak_len, head_cy + s * 0.006),
+        (head_cx + head_r * 0.6, head_cy + s * 0.016),
     ], fill=color)
 
-    # Upper wing — large, sweeping upward from mid-body
-    wing_attach_x = cx - body_w * 0.1
-    wing_attach_y = cy - body_h * 0.6
-
-    upper_wing_pts = [
-        (wing_attach_x + size * 0.10, wing_attach_y),                    # front attach
-        (wing_attach_x + size * 0.05, wing_attach_y - size * 0.12),
-        (wing_attach_x - size * 0.02, wing_attach_y - size * 0.24),
-        (wing_attach_x - size * 0.08, wing_attach_y - size * 0.34),
-        (wing_attach_x - size * 0.14, wing_attach_y - size * 0.42),      # peak
-        (wing_attach_x - size * 0.22, wing_attach_y - size * 0.46),
-        (wing_attach_x - size * 0.32, wing_attach_y - size * 0.44),      # wingtip
-        (wing_attach_x - size * 0.36, wing_attach_y - size * 0.40),      # outer tip
-        (wing_attach_x - size * 0.34, wing_attach_y - size * 0.34),
-        (wing_attach_x - size * 0.28, wing_attach_y - size * 0.24),
-        (wing_attach_x - size * 0.20, wing_attach_y - size * 0.14),
-        (wing_attach_x - size * 0.12, wing_attach_y - size * 0.06),
-        (wing_attach_x - size * 0.08, wing_attach_y + size * 0.02),      # back attach
+    # --- Right wing (upper/front): broad, sweeps up-right with curved edge ---
+    # The wing is wide — like a fan shape from the body up and outward
+    rw_pts = [
+        (cx + s * 0.04, dy - s * 0.04),       # attach at upper body
+        (cx + s * 0.06, dy - s * 0.08),       # inner leading edge
+        (cx + s * 0.10, dy - s * 0.14),
+        (cx + s * 0.15, dy - s * 0.20),
+        (cx + s * 0.21, dy - s * 0.26),
+        (cx + s * 0.28, dy - s * 0.30),       # mid leading edge
+        (cx + s * 0.35, dy - s * 0.32),
+        (cx + s * 0.42, dy - s * 0.32),       # tip leading edge
+        (cx + s * 0.46, dy - s * 0.30),       # wingtip
+        (cx + s * 0.44, dy - s * 0.26),       # tip trailing edge
+        (cx + s * 0.38, dy - s * 0.20),
+        (cx + s * 0.32, dy - s * 0.14),       # mid trailing edge
+        (cx + s * 0.26, dy - s * 0.08),
+        (cx + s * 0.20, dy - s * 0.03),
+        (cx + s * 0.14, dy + s * 0.02),       # trailing edge meets body
+        (cx + s * 0.08, dy + s * 0.04),       # back to body
     ]
-    draw.polygon(upper_wing_pts, fill=color)
+    draw.polygon(rw_pts, fill=color)
 
-    # Wing feather lines — long parallel feather details
-    feather_w = max(2, int(size * 0.009))
-    for i in range(6):
-        t = 0.15 + i * 0.14
-        sx = wing_attach_x + size * (0.06 - t * 0.04)
-        sy = wing_attach_y - size * (0.02 + t * 0.04)
-        ex = wing_attach_x - size * (0.10 + t * 0.22)
-        ey = wing_attach_y - size * (0.18 + t * 0.22)
-        draw.line([(sx, sy), (ex, ey)], fill=color, width=feather_w)
-
-    # Lower wing — smaller, extending below and behind body
-    lower_wing_pts = [
-        (cx - body_w * 0.3, cy + body_h * 0.4),
-        (cx - body_w * 0.6, cy + body_h * 0.2),
-        (cx - body_w * 0.9, cy + size * 0.06),
-        (cx - body_w * 1.1, cy + size * 0.10),
-        (cx - body_w * 1.2, cy + size * 0.14),       # tip
-        (cx - body_w * 1.15, cy + size * 0.18),
-        (cx - body_w * 0.9, cy + size * 0.16),
-        (cx - body_w * 0.5, cy + body_h * 0.9),
+    # --- Left wing (rear/back): broad, sweeps up-left ---
+    lw_pts = [
+        (cx - s * 0.04, dy - s * 0.03),       # attach at upper back
+        (cx - s * 0.06, dy - s * 0.07),
+        (cx - s * 0.10, dy - s * 0.13),
+        (cx - s * 0.15, dy - s * 0.19),
+        (cx - s * 0.21, dy - s * 0.25),
+        (cx - s * 0.28, dy - s * 0.29),       # mid leading edge
+        (cx - s * 0.35, dy - s * 0.31),
+        (cx - s * 0.42, dy - s * 0.31),       # tip area
+        (cx - s * 0.46, dy - s * 0.29),       # wingtip
+        (cx - s * 0.44, dy - s * 0.25),       # tip trailing edge
+        (cx - s * 0.38, dy - s * 0.19),
+        (cx - s * 0.32, dy - s * 0.13),
+        (cx - s * 0.26, dy - s * 0.07),
+        (cx - s * 0.20, dy - s * 0.02),
+        (cx - s * 0.14, dy + s * 0.03),       # trailing edge meets body
+        (cx - s * 0.08, dy + s * 0.05),       # back to body
     ]
-    draw.polygon(lower_wing_pts, fill=color)
+    draw.polygon(lw_pts, fill=color)
 
-    # Tail — fan of feathers extending behind (to the left)
-    tail_cx = cx - body_w * 0.9
-    tail_cy = cy + body_h * 0.3
+    # --- Tail: fan of feathers extending behind-left ---
     tail_pts = [
-        (tail_cx + size * 0.02, tail_cy - size * 0.02),
-        (tail_cx - size * 0.16, tail_cy - size * 0.10),
-        (tail_cx - size * 0.22, tail_cy - size * 0.06),
-        (tail_cx - size * 0.25, tail_cy),               # tip
-        (tail_cx - size * 0.22, tail_cy + size * 0.06),
-        (tail_cx - size * 0.16, tail_cy + size * 0.10),
-        (tail_cx + size * 0.02, tail_cy + size * 0.04),
+        (cx - s * 0.16, dy + s * 0.06),       # base top
+        (cx - s * 0.24, dy + s * 0.01),
+        (cx - s * 0.30, dy - s * 0.01),
+        (cx - s * 0.35, dy + s * 0.02),       # tip
+        (cx - s * 0.33, dy + s * 0.08),
+        (cx - s * 0.28, dy + s * 0.13),
+        (cx - s * 0.22, dy + s * 0.14),
+        (cx - s * 0.16, dy + s * 0.12),       # base bottom
     ]
     draw.polygon(tail_pts, fill=color)
 
-    # Tail feather lines
-    for i in range(4):
-        t = 0.2 + i * 0.2
-        sx = tail_cx
-        sy = tail_cy - size * 0.01 + size * 0.02 * t
-        ex = tail_cx - size * (0.16 + t * 0.06)
-        ey = tail_cy - size * 0.06 + size * 0.12 * t
-        draw.line([(sx, sy), (ex, ey)], fill=color, width=feather_w)
-
-    # Eye — small dark dot on the head
-    eye_r = size * 0.012
-    eye_cx = head_cx + head_r * 0.35
-    eye_cy = head_cy - head_r * 0.15
+    # --- Eye ---
+    eye_r = s * 0.010
+    eye_x = head_cx + head_r * 0.30
+    eye_y = head_cy - head_r * 0.10
     draw.ellipse(
-        [eye_cx - eye_r, eye_cy - eye_r,
-         eye_cx + eye_r, eye_cy + eye_r],
-        fill=(180, 30, 30, 200)  # subtle reddish to blend with background
+        [eye_x - eye_r, eye_y - eye_r,
+         eye_x + eye_r, eye_y + eye_r],
+        fill=(180, 30, 30, 200)
     )
 
 
-def draw_flame(draw, cx, cy, width, height, outer_color, inner_color):
-    """Draw a stylized flame tongue using overlapping tear-drop shapes."""
+def draw_large_flame(draw, cx, cy, width, height, outer_color, inner_color):
+    """Draw a large prominent Pentecost flame — the central Holy Spirit fire."""
+    # Outer flame — teardrop shape
     outer_pts = [
-        (cx, cy - height),
-        (cx + width * 0.45, cy - height * 0.35),
-        (cx + width * 0.35, cy + height * 0.1),
-        (cx, cy + height * 0.15),
-        (cx - width * 0.35, cy + height * 0.1),
-        (cx - width * 0.45, cy - height * 0.35),
+        (cx, cy - height),                          # tip
+        (cx + width * 0.15, cy - height * 0.75),
+        (cx + width * 0.35, cy - height * 0.45),
+        (cx + width * 0.45, cy - height * 0.15),
+        (cx + width * 0.40, cy + height * 0.08),
+        (cx + width * 0.25, cy + height * 0.15),
+        (cx, cy + height * 0.18),                   # base
+        (cx - width * 0.25, cy + height * 0.15),
+        (cx - width * 0.40, cy + height * 0.08),
+        (cx - width * 0.45, cy - height * 0.15),
+        (cx - width * 0.35, cy - height * 0.45),
+        (cx - width * 0.15, cy - height * 0.75),
     ]
     draw.polygon(outer_pts, fill=outer_color)
 
-    inner_h = height * 0.55
-    inner_w = width * 0.45
+    # Inner flame — brighter, narrower
+    ih = height * 0.65
+    iw = width * 0.50
     inner_pts = [
-        (cx, cy - inner_h),
-        (cx + inner_w * 0.4, cy - inner_h * 0.25),
-        (cx + inner_w * 0.3, cy + inner_h * 0.15),
-        (cx, cy + inner_h * 0.2),
-        (cx - inner_w * 0.3, cy + inner_h * 0.15),
-        (cx - inner_w * 0.4, cy - inner_h * 0.25),
+        (cx, cy - ih),
+        (cx + iw * 0.12, cy - ih * 0.70),
+        (cx + iw * 0.30, cy - ih * 0.35),
+        (cx + iw * 0.38, cy - ih * 0.05),
+        (cx + iw * 0.25, cy + ih * 0.15),
+        (cx, cy + ih * 0.20),
+        (cx - iw * 0.25, cy + ih * 0.15),
+        (cx - iw * 0.38, cy - ih * 0.05),
+        (cx - iw * 0.30, cy - ih * 0.35),
+        (cx - iw * 0.12, cy - ih * 0.70),
     ]
     draw.polygon(inner_pts, fill=inner_color)
+
+    # Core — white-hot center
+    ch = height * 0.35
+    cw = width * 0.22
+    core_pts = [
+        (cx, cy - ch),
+        (cx + cw * 0.3, cy - ch * 0.3),
+        (cx + cw * 0.2, cy + ch * 0.15),
+        (cx, cy + ch * 0.2),
+        (cx - cw * 0.2, cy + ch * 0.15),
+        (cx - cw * 0.3, cy - ch * 0.3),
+    ]
+    draw.polygon(core_pts, fill=(255, 245, 200, 180))
 
 
 def main():
@@ -262,10 +284,12 @@ def main():
     img = Image.alpha_composite(img, rays_layer)
     draw = ImageDraw.Draw(img)
 
-    # --- Main dove (white, side-view Pentecost style) ---
+    # --- Main dove (white, classic Pentecost style facing right) ---
     dove_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     dove_draw = ImageDraw.Draw(dove_layer)
-    draw_dove_side_view(dove_draw, CENTER, dove_cy, dove_size, WHITE)
+    # Shift dove down to make room for the flame above
+    dove_cy_actual = dove_cy + int(RENDER_SIZE * 0.06)
+    draw_dove_pentecost(dove_draw, CENTER, dove_cy_actual, dove_size, WHITE)
 
     # Soft glow effect
     dove_glow = dove_layer.copy()
@@ -279,28 +303,25 @@ def main():
     img = Image.alpha_composite(img, dove_layer)
     draw = ImageDraw.Draw(img)
 
-    # --- Pentecost flame accents (seven flames below dove) ---
+    # --- Single prominent Pentecost flame above the dove ---
     flame_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     flame_draw = ImageDraw.Draw(flame_layer)
-    flame_base_y = CENTER + int(RENDER_SIZE * 0.20)
-    flame_w = int(RENDER_SIZE * 0.032)
-    flame_h = int(RENDER_SIZE * 0.060)
+    flame_cx = CENTER
+    flame_cy = dove_cy_actual - int(RENDER_SIZE * 0.16)
+    flame_w = int(RENDER_SIZE * 0.10)
+    flame_h = int(RENDER_SIZE * 0.14)
+    draw_large_flame(flame_draw, flame_cx, flame_cy, flame_w, flame_h,
+                     FLAME_ORANGE, FLAME_YELLOW)
 
-    flame_positions = [
-        (CENTER - int(RENDER_SIZE * 0.20), flame_base_y),
-        (CENTER - int(RENDER_SIZE * 0.13), flame_base_y + int(RENDER_SIZE * 0.02)),
-        (CENTER - int(RENDER_SIZE * 0.065), flame_base_y + int(RENDER_SIZE * 0.03)),
-        (CENTER, flame_base_y + int(RENDER_SIZE * 0.035)),
-        (CENTER + int(RENDER_SIZE * 0.065), flame_base_y + int(RENDER_SIZE * 0.03)),
-        (CENTER + int(RENDER_SIZE * 0.13), flame_base_y + int(RENDER_SIZE * 0.02)),
-        (CENTER + int(RENDER_SIZE * 0.20), flame_base_y),
-    ]
-
-    for i, (fx, fy) in enumerate(flame_positions):
-        scale = 0.85 + 0.15 * math.sin(i * 1.2)
-        draw_flame(flame_draw, fx, fy, int(flame_w * scale),
-                   int(flame_h * scale), FLAME_ORANGE, FLAME_YELLOW)
-
+    # Soft flame glow
+    flame_glow = flame_layer.copy()
+    flame_glow = flame_glow.filter(ImageFilter.GaussianBlur(radius=20))
+    glow_data = flame_glow.split()
+    flame_glow = Image.merge("RGBA", (
+        glow_data[0], glow_data[1], glow_data[2],
+        glow_data[3].point(lambda p: int(p * 0.4))
+    ))
+    img = Image.alpha_composite(img, flame_glow)
     img = Image.alpha_composite(img, flame_layer)
     draw = ImageDraw.Draw(img)
 
