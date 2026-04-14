@@ -252,8 +252,8 @@ def main():
     # --- Golden glow behind the dove ---
     glow_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     glow_draw = ImageDraw.Draw(glow_layer)
-    glow_r = int(RENDER_SIZE * 0.26)
-    dove_cy = CENTER - int(RENDER_SIZE * 0.03)
+    glow_r = int(RENDER_SIZE * 0.36)
+    dove_cy = CENTER - int(RENDER_SIZE * 0.01)
     for i in range(50, 0, -1):
         alpha = int(7 * (i / 50))
         r = glow_r + i * 7
@@ -266,17 +266,17 @@ def main():
     draw = ImageDraw.Draw(img)
 
     # --- Thin gold halo circle around the dove area ---
-    halo_r = int(RENDER_SIZE * 0.32)
+    halo_r = int(RENDER_SIZE * 0.44)
     draw.ellipse(
         [CENTER - halo_r, dove_cy - halo_r,
          CENTER + halo_r, dove_cy + halo_r],
-        outline=(218, 175, 62, 55), width=int(RENDER_SIZE * 0.005)
+        outline=(218, 175, 62, 55), width=int(RENDER_SIZE * 0.006)
     )
 
     # --- Light rays radiating from behind the dove ---
     rays_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     rays_draw = ImageDraw.Draw(rays_layer)
-    dove_size = RENDER_SIZE * 0.44
+    dove_size = RENDER_SIZE * 0.62
     draw_light_rays(rays_draw, CENTER, dove_cy, dove_size,
                     (255, 235, 160, 40))
     rays_blur = rays_layer.filter(ImageFilter.GaussianBlur(radius=18))
@@ -287,13 +287,13 @@ def main():
     # --- Main dove (white, classic Pentecost style facing right) ---
     dove_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     dove_draw = ImageDraw.Draw(dove_layer)
-    # Shift dove down to make room for the flame above
-    dove_cy_actual = dove_cy + int(RENDER_SIZE * 0.06)
+    # Shift dove down slightly to make room for the flame above
+    dove_cy_actual = dove_cy + int(RENDER_SIZE * 0.07)
     draw_dove_pentecost(dove_draw, CENTER, dove_cy_actual, dove_size, WHITE)
 
     # Soft glow effect
     dove_glow = dove_layer.copy()
-    dove_glow = dove_glow.filter(ImageFilter.GaussianBlur(radius=14))
+    dove_glow = dove_glow.filter(ImageFilter.GaussianBlur(radius=18))
     glow_data = dove_glow.split()
     dove_glow = Image.merge("RGBA", (
         glow_data[0], glow_data[1], glow_data[2],
@@ -307,15 +307,15 @@ def main():
     flame_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     flame_draw = ImageDraw.Draw(flame_layer)
     flame_cx = CENTER
-    flame_cy = dove_cy_actual - int(RENDER_SIZE * 0.16)
-    flame_w = int(RENDER_SIZE * 0.10)
-    flame_h = int(RENDER_SIZE * 0.14)
+    flame_cy = dove_cy_actual - int(RENDER_SIZE * 0.22)
+    flame_w = int(RENDER_SIZE * 0.13)
+    flame_h = int(RENDER_SIZE * 0.18)
     draw_large_flame(flame_draw, flame_cx, flame_cy, flame_w, flame_h,
                      FLAME_ORANGE, FLAME_YELLOW)
 
     # Soft flame glow
     flame_glow = flame_layer.copy()
-    flame_glow = flame_glow.filter(ImageFilter.GaussianBlur(radius=20))
+    flame_glow = flame_glow.filter(ImageFilter.GaussianBlur(radius=24))
     glow_data = flame_glow.split()
     flame_glow = Image.merge("RGBA", (
         glow_data[0], glow_data[1], glow_data[2],
@@ -326,7 +326,7 @@ def main():
     draw = ImageDraw.Draw(img)
 
     # --- Small gold accent dots in an arc above the dove ---
-    arc_r = int(RENDER_SIZE * 0.37)
+    arc_r = int(RENDER_SIZE * 0.44)
     dot_r = int(RENDER_SIZE * 0.005)
     for i in range(7):
         angle = math.pi + (math.pi * (i + 1) / 8)
