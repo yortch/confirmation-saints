@@ -79,7 +79,7 @@ struct SettingsView: View {
                     Link(destination: URL(string: "https://yortch.github.io/confirmation-saints/support.html")!) {
                         Label(AppStrings.localized("Support", language: language), systemImage: "questionmark.circle.fill")
                     }
-                    Link(destination: URL(string: "mailto:confirmation_saints@outlook.com")!) {
+                    Link(destination: URL(string: "https://yortch.github.io/confirmation-saints/support.html")!) {
                         Label(AppStrings.localized("Contact Us", language: language), systemImage: "envelope.fill")
                     }
                 } header: {

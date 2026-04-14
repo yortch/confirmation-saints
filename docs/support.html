@@ -4,53 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - Confirmation Saints</title>
+    <link rel="icon" type="image/png" href="images/app-icon.png">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            max-width: 700px;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            max-width: 680px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
             color: #333;
+            background: #f8f9fa;
         }
-        h1 { color: #c0392b; }
-        h2 { color: #555; margin-top: 1.5em; }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        h1 {
+            color: #c0392b;
+            display: flex; align-items: center; gap: 12px;
+        }
+        h1 img { width: 40px; height: 40px; border-radius: 10px; }
+        h2 { color: #555; margin-top: 0; font-size: 1.2rem; }
         a { color: #c0392b; }
+
+        /* Form */
+        .form-group { margin-bottom: 16px; }
+        label {
+            display: block; margin-bottom: 4px;
+            font-weight: 600; font-size: 0.9rem; color: #555;
+        }
+        input[type="text"], select, textarea {
+            width: 100%; padding: 10px 14px;
+            border: 1.5px solid #ddd;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+            background: #fafafa;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #c0392b;
+            background: #fff;
+        }
+        textarea { resize: vertical; min-height: 120px; }
+        .submit-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 28px;
+            background: #c0392b;
+            color: #fff;
+            border: none; border-radius: 10px;
+            font-size: 1rem; font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+        .submit-btn:hover { background: #a93226; }
+        .submit-btn:active { transform: scale(0.98); }
+        .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .form-note {
+            margin-top: 12px; font-size: 0.8rem; color: #999;
+        }
+
+        /* FAQ */
+        details {
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+        }
+        details:last-child { border-bottom: none; }
+        summary {
+            cursor: pointer; font-weight: 600;
+            font-size: 0.95rem; color: #333;
+            list-style: none;
+            display: flex; align-items: center; gap: 8px;
+        }
+        summary::before { content: '▸'; color: #c0392b; transition: transform 0.2s; }
+        details[open] summary::before { transform: rotate(90deg); }
+        summary::-webkit-details-marker { display: none; }
+        details p {
+            margin: 8px 0 0 20px;
+            color: #666; font-size: 0.9rem;
+        }
+
+        .back-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            margin-bottom: 16px; font-size: 0.9rem;
+            text-decoration: none; color: #999;
+        }
+        .back-link:hover { color: #c0392b; }
     </style>
 </head>
 <body>
-    <h1>Confirmation Saints — Support</h1>
+    <a href="index.html" class="back-link">← Back to home</a>
 
-    <h2>About the App</h2>
-    <p>
-        Confirmation Saints helps Catholic confirmation candidates discover and choose a patron
-        saint for their Confirmation journey. Browse saints by name, interest, region, feast day,
-        and more — all in English and Spanish.
-    </p>
+    <h1>
+        <img src="images/app-icon.png" alt="">
+        Confirmation Saints Support
+    </h1>
 
-    <h2>Frequently Asked Questions</h2>
+    <!-- Contact Form -->
+    <div class="card">
+        <h2>📬 Contact Us</h2>
+        <p style="color:#666; font-size:0.9rem; margin-top:0;">
+            Have a question, found a bug, or want to suggest a feature?
+            Fill out the form below and we'll get back to you.
+        </p>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name (optional)</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Maria">
+            </div>
+            <div class="form-group">
+                <label for="type">What's this about?</label>
+                <select id="type" name="type">
+                    <option value="Feedback">💬 General Feedback</option>
+                    <option value="Bug Report">🐛 Bug Report</option>
+                    <option value="Feature Request">💡 Feature Request</option>
+                    <option value="Saint Suggestion">⛪ Suggest a Saint</option>
+                    <option value="Question">❓ Question</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us what's on your mind..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">✉️ Send Message</button>
+            <p class="form-note">This will open your email client with the message pre-filled.</p>
+        </form>
+    </div>
 
-    <h3>How do I change the language?</h3>
-    <p>Go to the <strong>Settings</strong> tab and select your preferred language (English or Spanish).</p>
+    <!-- FAQ -->
+    <div class="card">
+        <h2>❓ Frequently Asked Questions</h2>
 
-    <h3>How do I search for a saint?</h3>
-    <p>Go to the <strong>Saints</strong> tab and use the search bar at the top. You can search by name, interest, country, or patron saint association.</p>
+        <details>
+            <summary>How do I change the language?</summary>
+            <p>Go to the <strong>Settings</strong> tab and select your preferred language (English or Spanish). All content updates instantly.</p>
+        </details>
 
-    <h3>How do I filter saints?</h3>
-    <p>On the <strong>Saints</strong> tab, use the filter chips below the search bar to filter by age, gender, life state, or region.</p>
+        <details>
+            <summary>How do I search for a saint?</summary>
+            <p>Go to the <strong>Saints</strong> tab and use the search bar. You can search by name, interest, country, or patron association.</p>
+        </details>
 
-    <h3>Can I suggest a saint to add?</h3>
-    <p>Yes! Please contact us at the email below and we'll consider adding them in a future update.</p>
+        <details>
+            <summary>How do I filter saints?</summary>
+            <p>On the <strong>Saints</strong> tab, use the filter chips below the search bar to filter by age, gender, life state, or region.</p>
+        </details>
 
-    <h2>Contact Us</h2>
-    <p>
-        For questions, feedback, or support, please email:<br>
-        <a href="mailto:confirmation_saints@outlook.com">confirmation_saints@outlook.com</a>
-    </p>
+        <details>
+            <summary>Can I suggest a saint to add?</summary>
+            <p>Yes! Use the contact form above and select "Suggest a Saint." We'd love to hear your ideas for future updates.</p>
+        </details>
 
-    <h2>Privacy</h2>
-    <p>
-        Read our <a href="privacy-policy.html">Privacy Policy</a>.
-    </p>
+        <details>
+            <summary>Does this app collect my data?</summary>
+            <p>No. The app collects zero personal data. Everything works offline and your preferences stay on your device. Read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        </details>
+
+        <details>
+            <summary>Is there an Android version?</summary>
+            <p>Not yet, but it's planned! The app is designed for cross-platform content sharing, so an Android version is on the roadmap.</p>
+        </details>
+    </div>
+
+    <div class="card">
+        <h2>🔗 Links</h2>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> ·
+            <a href="https://github.com/yortch/confirmation-saints">GitHub Repository</a> ·
+            <a href="index.html">Home</a>
+        </p>
+    </div>
+
+    <script src="contact.js"></script>
 </body>
 </html>
