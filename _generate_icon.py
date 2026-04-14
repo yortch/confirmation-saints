@@ -2,9 +2,9 @@
 """
 Generate a 1024x1024 app icon for Confirmation Saints.
 
-Design: Rich liturgical red radial gradient background, prominent white dove
-(Holy Spirit) with wings spread upward, subtle golden glow/halo around the
-dove, and small Pentecost flame accents.
+Design: Rich liturgical red radial gradient background, white dove in side-view
+profile (classic Pentecost style — gliding left-to-right with wings gracefully
+extended), subtle golden glow/halo, and small Pentecost flame accents.
 
 Renders at 2x (2048x2048) then downscales with LANCZOS for anti-aliasing.
 """
@@ -48,17 +48,15 @@ def draw_radial_gradient(img, center, radius, inner_color, outer_color):
 
 def draw_light_rays(draw, cx, cy, size, color_rgba):
     """Draw subtle rays of light radiating downward from the dove."""
-    num_rays = 12
+    num_rays = 14
     ray_length = size * 0.95
-    ray_width = max(2, int(size * 0.018))
-    start_y = cy + size * 0.10  # rays start just below dove body
+    ray_width = max(2, int(size * 0.016))
+    start_y = cy + size * 0.05
 
     for i in range(num_rays):
-        # Spread rays in a downward fan (~140 degrees)
-        angle = math.pi * 0.15 + (math.pi * 0.70) * (i / (num_rays - 1))
+        angle = math.pi * 0.12 + (math.pi * 0.76) * (i / (num_rays - 1))
         x_end = cx + ray_length * math.cos(angle)
         y_end = start_y + ray_length * math.sin(angle)
-        # Fade alpha toward edges
         center_dist = abs(i - (num_rays - 1) / 2) / ((num_rays - 1) / 2)
         alpha = int(color_rgba[3] * (1.0 - 0.6 * center_dist))
         ray_color = (color_rgba[0], color_rgba[1], color_rgba[2], alpha)
@@ -66,94 +64,124 @@ def draw_light_rays(draw, cx, cy, size, color_rgba):
                   fill=ray_color, width=ray_width)
 
 
-def draw_dove(draw, cx, cy, size, color):
-    """Draw a traditional Holy Spirit descending dove — frontal, symmetrical."""
-    # Small compact body — an oval centered slightly below middle
-    body_w = size * 0.14
-    body_h = size * 0.20
-    body_top = cy - body_h * 0.3
+def draw_dove_side_view(draw, cx, cy, size, color):
+    """Draw a side-view dove in classic Pentecost style — gliding in profile."""
+    # The dove faces right, body slightly angled upward as if gliding/descending
+
+    # Body — elongated horizontal oval, slightly tilted upward to the right
+    body_w = size * 0.28
+    body_h = size * 0.11
+    tilt = -0.08 * size  # slight upward tilt
+
+    body_pts = []
+    for angle_deg in range(360):
+        a = math.radians(angle_deg)
+        bx = cx + body_w * math.cos(a)
+        by = cy + body_h * math.sin(a) + tilt * math.cos(a) * 0.3
+        body_pts.append((bx, by))
+    draw.polygon(body_pts, fill=color)
+
+    # Head — circle at the front-right of the body
+    head_r = size * 0.075
+    head_cx = cx + body_w * 0.85
+    head_cy = cy - body_h * 0.5 + tilt * 0.4
     draw.ellipse(
-        [cx - body_w, body_top, cx + body_w, body_top + body_h * 2],
+        [head_cx - head_r, head_cy - head_r,
+         head_cx + head_r, head_cy + head_r],
         fill=color
     )
 
-    # Head — small circle at the top of the body
-    head_r = size * 0.08
-    head_cy = body_top - head_r * 0.3
-    draw.ellipse(
-        [cx - head_r, head_cy - head_r,
-         cx + head_r, head_cy + head_r],
-        fill=color
-    )
-
-    # Beak — small downward-pointing triangle (descending pose)
-    beak_len = size * 0.05
+    # Beak — small pointed triangle extending right from head
+    beak_len = size * 0.065
+    beak_w = size * 0.022
+    beak_tip_x = head_cx + head_r + beak_len
+    beak_tip_y = head_cy + head_r * 0.15
     draw.polygon([
-        (cx - beak_len * 0.4, head_cy + head_r * 0.6),
-        (cx, head_cy + head_r + beak_len),
-        (cx + beak_len * 0.4, head_cy + head_r * 0.6),
+        (head_cx + head_r * 0.6, head_cy - beak_w),
+        (beak_tip_x, beak_tip_y),
+        (head_cx + head_r * 0.6, head_cy + beak_w * 1.2),
     ], fill=color)
 
-    # Wings — large, sweeping upward and outward in a wide V/arc
-    # Each wing is a smooth polygon curving from body up and outward
-    wing_attach_y = body_top + body_h * 0.3  # attach near upper body
+    # Upper wing — large, sweeping upward from mid-body
+    wing_attach_x = cx - body_w * 0.1
+    wing_attach_y = cy - body_h * 0.6
 
-    # Left wing
-    wing_pts_l = [
-        (cx - body_w * 0.5, wing_attach_y),            # inner attach
-        (cx - size * 0.12, wing_attach_y - size * 0.08),
-        (cx - size * 0.28, wing_attach_y - size * 0.22),
-        (cx - size * 0.42, wing_attach_y - size * 0.38),
-        (cx - size * 0.52, wing_attach_y - size * 0.48),  # wingtip area
-        (cx - size * 0.58, wing_attach_y - size * 0.50),
-        (cx - size * 0.62, wing_attach_y - size * 0.48),  # outer tip
-        (cx - size * 0.60, wing_attach_y - size * 0.42),
-        (cx - size * 0.52, wing_attach_y - size * 0.32),
-        (cx - size * 0.40, wing_attach_y - size * 0.20),
-        (cx - size * 0.25, wing_attach_y - size * 0.08),
-        (cx - body_w * 0.8, wing_attach_y + body_h * 0.4),  # lower attach
+    upper_wing_pts = [
+        (wing_attach_x + size * 0.10, wing_attach_y),                    # front attach
+        (wing_attach_x + size * 0.05, wing_attach_y - size * 0.12),
+        (wing_attach_x - size * 0.02, wing_attach_y - size * 0.24),
+        (wing_attach_x - size * 0.08, wing_attach_y - size * 0.34),
+        (wing_attach_x - size * 0.14, wing_attach_y - size * 0.42),      # peak
+        (wing_attach_x - size * 0.22, wing_attach_y - size * 0.46),
+        (wing_attach_x - size * 0.32, wing_attach_y - size * 0.44),      # wingtip
+        (wing_attach_x - size * 0.36, wing_attach_y - size * 0.40),      # outer tip
+        (wing_attach_x - size * 0.34, wing_attach_y - size * 0.34),
+        (wing_attach_x - size * 0.28, wing_attach_y - size * 0.24),
+        (wing_attach_x - size * 0.20, wing_attach_y - size * 0.14),
+        (wing_attach_x - size * 0.12, wing_attach_y - size * 0.06),
+        (wing_attach_x - size * 0.08, wing_attach_y + size * 0.02),      # back attach
     ]
-    draw.polygon(wing_pts_l, fill=color)
+    draw.polygon(upper_wing_pts, fill=color)
 
-    # Right wing — perfect mirror
-    wing_pts_r = [(2 * cx - px, py) for px, py in wing_pts_l]
-    draw.polygon(wing_pts_r, fill=color)
+    # Wing feather lines — long parallel feather details
+    feather_w = max(2, int(size * 0.009))
+    for i in range(6):
+        t = 0.15 + i * 0.14
+        sx = wing_attach_x + size * (0.06 - t * 0.04)
+        sy = wing_attach_y - size * (0.02 + t * 0.04)
+        ex = wing_attach_x - size * (0.10 + t * 0.22)
+        ey = wing_attach_y - size * (0.18 + t * 0.22)
+        draw.line([(sx, sy), (ex, ey)], fill=color, width=feather_w)
 
-    # Wing feather details — 5 long feather lines per wing for definition
-    feather_w = max(2, int(size * 0.010))
-    feather_color = color if len(color) == 3 else (
-        color[0], color[1], color[2], min(255, color[3] + 20))
+    # Lower wing — smaller, extending below and behind body
+    lower_wing_pts = [
+        (cx - body_w * 0.3, cy + body_h * 0.4),
+        (cx - body_w * 0.6, cy + body_h * 0.2),
+        (cx - body_w * 0.9, cy + size * 0.06),
+        (cx - body_w * 1.1, cy + size * 0.10),
+        (cx - body_w * 1.2, cy + size * 0.14),       # tip
+        (cx - body_w * 1.15, cy + size * 0.18),
+        (cx - body_w * 0.9, cy + size * 0.16),
+        (cx - body_w * 0.5, cy + body_h * 0.9),
+    ]
+    draw.polygon(lower_wing_pts, fill=color)
 
-    for i in range(5):
-        t = 0.25 + i * 0.15
-        # Left feathers: lines from mid-wing radiating outward
-        start_x = cx - size * (0.08 + t * 0.10)
-        start_y = wing_attach_y - size * (0.02 + t * 0.06)
-        end_x = cx - size * (0.30 + t * 0.28)
-        end_y = wing_attach_y - size * (0.18 + t * 0.26)
-        draw.line([(start_x, start_y), (end_x, end_y)],
-                  fill=feather_color, width=feather_w)
-        # Right feathers — mirror
-        draw.line([(2 * cx - start_x, start_y), (2 * cx - end_x, end_y)],
-                  fill=feather_color, width=feather_w)
-
-    # Tail — symmetrical fan of feathers descending below the body
-    tail_cy = body_top + body_h * 2
+    # Tail — fan of feathers extending behind (to the left)
+    tail_cx = cx - body_w * 0.9
+    tail_cy = cy + body_h * 0.3
     tail_pts = [
-        (cx - body_w * 0.6, tail_cy - body_h * 0.2),
-        (cx - size * 0.12, tail_cy + size * 0.10),
-        (cx - size * 0.06, tail_cy + size * 0.18),
-        (cx, tail_cy + size * 0.22),  # center tail tip
-        (cx + size * 0.06, tail_cy + size * 0.18),
-        (cx + size * 0.12, tail_cy + size * 0.10),
-        (cx + body_w * 0.6, tail_cy - body_h * 0.2),
+        (tail_cx + size * 0.02, tail_cy - size * 0.02),
+        (tail_cx - size * 0.16, tail_cy - size * 0.10),
+        (tail_cx - size * 0.22, tail_cy - size * 0.06),
+        (tail_cx - size * 0.25, tail_cy),               # tip
+        (tail_cx - size * 0.22, tail_cy + size * 0.06),
+        (tail_cx - size * 0.16, tail_cy + size * 0.10),
+        (tail_cx + size * 0.02, tail_cy + size * 0.04),
     ]
     draw.polygon(tail_pts, fill=color)
+
+    # Tail feather lines
+    for i in range(4):
+        t = 0.2 + i * 0.2
+        sx = tail_cx
+        sy = tail_cy - size * 0.01 + size * 0.02 * t
+        ex = tail_cx - size * (0.16 + t * 0.06)
+        ey = tail_cy - size * 0.06 + size * 0.12 * t
+        draw.line([(sx, sy), (ex, ey)], fill=color, width=feather_w)
+
+    # Eye — small dark dot on the head
+    eye_r = size * 0.012
+    eye_cx = head_cx + head_r * 0.35
+    eye_cy = head_cy - head_r * 0.15
+    draw.ellipse(
+        [eye_cx - eye_r, eye_cy - eye_r,
+         eye_cx + eye_r, eye_cy + eye_r],
+        fill=(180, 30, 30, 200)  # subtle reddish to blend with background
+    )
 
 
 def draw_flame(draw, cx, cy, width, height, outer_color, inner_color):
     """Draw a stylized flame tongue using overlapping tear-drop shapes."""
-    # Outer flame
     outer_pts = [
         (cx, cy - height),
         (cx + width * 0.45, cy - height * 0.35),
@@ -164,7 +192,6 @@ def draw_flame(draw, cx, cy, width, height, outer_color, inner_color):
     ]
     draw.polygon(outer_pts, fill=outer_color)
 
-    # Inner flame — smaller, brighter
     inner_h = height * 0.55
     inner_w = width * 0.45
     inner_pts = [
@@ -184,7 +211,6 @@ def main():
     draw_radial_gradient(img, (CENTER, CENTER), RENDER_SIZE * 0.75,
                          RED_BRIGHT, RED_DARK)
 
-    # Convert to RGBA for layering
     img = img.convert("RGBA")
     draw = ImageDraw.Draw(img)
 
@@ -204,48 +230,46 @@ def main():
     # --- Golden glow behind the dove ---
     glow_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     glow_draw = ImageDraw.Draw(glow_layer)
-    glow_r = int(RENDER_SIZE * 0.28)
+    glow_r = int(RENDER_SIZE * 0.26)
+    dove_cy = CENTER - int(RENDER_SIZE * 0.03)
     for i in range(50, 0, -1):
-        alpha = int(6 * (i / 50))
-        r = glow_r + i * 6
+        alpha = int(7 * (i / 50))
+        r = glow_r + i * 7
         glow_draw.ellipse(
-            [CENTER - r, CENTER - r - int(RENDER_SIZE * 0.04),
-             CENTER + r, CENTER + r - int(RENDER_SIZE * 0.04)],
+            [CENTER - r, dove_cy - r,
+             CENTER + r, dove_cy + r],
             fill=(240, 210, 100, alpha)
         )
     img = Image.alpha_composite(img, glow_layer)
     draw = ImageDraw.Draw(img)
 
     # --- Thin gold halo circle around the dove area ---
-    halo_r = int(RENDER_SIZE * 0.30)
-    halo_cy = CENTER - int(RENDER_SIZE * 0.02)
+    halo_r = int(RENDER_SIZE * 0.32)
     draw.ellipse(
-        [CENTER - halo_r, halo_cy - halo_r,
-         CENTER + halo_r, halo_cy + halo_r],
-        outline=(218, 175, 62, 60), width=int(RENDER_SIZE * 0.006)
+        [CENTER - halo_r, dove_cy - halo_r,
+         CENTER + halo_r, dove_cy + halo_r],
+        outline=(218, 175, 62, 55), width=int(RENDER_SIZE * 0.005)
     )
 
     # --- Light rays radiating from behind the dove ---
     rays_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     rays_draw = ImageDraw.Draw(rays_layer)
-    dove_size = RENDER_SIZE * 0.42
-    dove_cy = CENTER - int(RENDER_SIZE * 0.02)
+    dove_size = RENDER_SIZE * 0.44
     draw_light_rays(rays_draw, CENTER, dove_cy, dove_size,
-                    (255, 235, 160, 45))
+                    (255, 235, 160, 40))
     rays_blur = rays_layer.filter(ImageFilter.GaussianBlur(radius=18))
     img = Image.alpha_composite(img, rays_blur)
     img = Image.alpha_composite(img, rays_layer)
     draw = ImageDraw.Draw(img)
 
-    # --- Main dove (white, prominent, centered) ---
+    # --- Main dove (white, side-view Pentecost style) ---
     dove_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     dove_draw = ImageDraw.Draw(dove_layer)
-    draw_dove(dove_draw, CENTER, dove_cy, dove_size, WHITE)
+    draw_dove_side_view(dove_draw, CENTER, dove_cy, dove_size, WHITE)
 
-    # Slight blur on a copy for soft glow effect, then composite both
+    # Soft glow effect
     dove_glow = dove_layer.copy()
-    dove_glow = dove_glow.filter(ImageFilter.GaussianBlur(radius=12))
-    # Reduce glow opacity
+    dove_glow = dove_glow.filter(ImageFilter.GaussianBlur(radius=14))
     glow_data = dove_glow.split()
     dove_glow = Image.merge("RGBA", (
         glow_data[0], glow_data[1], glow_data[2],
@@ -255,26 +279,24 @@ def main():
     img = Image.alpha_composite(img, dove_layer)
     draw = ImageDraw.Draw(img)
 
-    # --- Pentecost flame accents (small tongues of fire below/around dove) ---
+    # --- Pentecost flame accents (seven flames below dove) ---
     flame_layer = Image.new("RGBA", (RENDER_SIZE, RENDER_SIZE), (0, 0, 0, 0))
     flame_draw = ImageDraw.Draw(flame_layer)
-    flame_base_y = CENTER + int(RENDER_SIZE * 0.18)
-    flame_w = int(RENDER_SIZE * 0.035)
-    flame_h = int(RENDER_SIZE * 0.065)
+    flame_base_y = CENTER + int(RENDER_SIZE * 0.20)
+    flame_w = int(RENDER_SIZE * 0.032)
+    flame_h = int(RENDER_SIZE * 0.060)
 
-    # Seven flames — recalling the seven gifts of the Holy Spirit
     flame_positions = [
-        (CENTER - int(RENDER_SIZE * 0.18), flame_base_y),
-        (CENTER - int(RENDER_SIZE * 0.12), flame_base_y + int(RENDER_SIZE * 0.02)),
-        (CENTER - int(RENDER_SIZE * 0.06), flame_base_y + int(RENDER_SIZE * 0.03)),
+        (CENTER - int(RENDER_SIZE * 0.20), flame_base_y),
+        (CENTER - int(RENDER_SIZE * 0.13), flame_base_y + int(RENDER_SIZE * 0.02)),
+        (CENTER - int(RENDER_SIZE * 0.065), flame_base_y + int(RENDER_SIZE * 0.03)),
         (CENTER, flame_base_y + int(RENDER_SIZE * 0.035)),
-        (CENTER + int(RENDER_SIZE * 0.06), flame_base_y + int(RENDER_SIZE * 0.03)),
-        (CENTER + int(RENDER_SIZE * 0.12), flame_base_y + int(RENDER_SIZE * 0.02)),
-        (CENTER + int(RENDER_SIZE * 0.18), flame_base_y),
+        (CENTER + int(RENDER_SIZE * 0.065), flame_base_y + int(RENDER_SIZE * 0.03)),
+        (CENTER + int(RENDER_SIZE * 0.13), flame_base_y + int(RENDER_SIZE * 0.02)),
+        (CENTER + int(RENDER_SIZE * 0.20), flame_base_y),
     ]
 
     for i, (fx, fy) in enumerate(flame_positions):
-        # Vary sizes slightly for organic feel
         scale = 0.85 + 0.15 * math.sin(i * 1.2)
         draw_flame(flame_draw, fx, fy, int(flame_w * scale),
                    int(flame_h * scale), FLAME_ORANGE, FLAME_YELLOW)
@@ -283,16 +305,15 @@ def main():
     draw = ImageDraw.Draw(img)
 
     # --- Small gold accent dots in an arc above the dove ---
-    arc_r = int(RENDER_SIZE * 0.35)
-    arc_cy = CENTER - int(RENDER_SIZE * 0.02)
-    dot_r = int(RENDER_SIZE * 0.006)
+    arc_r = int(RENDER_SIZE * 0.37)
+    dot_r = int(RENDER_SIZE * 0.005)
     for i in range(7):
         angle = math.pi + (math.pi * (i + 1) / 8)
         dx = CENTER + arc_r * math.cos(angle)
-        dy = arc_cy + arc_r * math.sin(angle)
+        dy = dove_cy + arc_r * math.sin(angle)
         draw.ellipse(
             [dx - dot_r, dy - dot_r, dx + dot_r, dy + dot_r],
-            fill=(240, 215, 110, 140)
+            fill=(240, 215, 110, 130)
         )
 
     # --- Downscale for anti-aliasing ---
