@@ -130,7 +130,7 @@ https://yortch.github.io/confirmation-saints/privacy-policy.html
 
 ### Version
 ```
-0.1.0
+1.0.0
 ```
 
 ### Bundle ID
