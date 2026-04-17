@@ -23,49 +23,49 @@ Or use Cmd+S in the Simulator app.
 
 ## 2. Promotional Text (170 chars max)
 
-> Discover your perfect Confirmation saint! Browse 70+ saints, filter by interest, age, region & more. Bilingual in English & Spanish. 100% offline & private.
+Find your Catholic Confirmation saint! Browse 70+ saints, filter by interest, age, region & more. Bilingual in English & Spanish. 100% offline & private.
 
 ---
 
 ## 3. Description (4000 chars max)
 
-> Preparing for Catholic Confirmation? Confirmation Saints helps you find and choose the perfect patron saint for your Confirmation journey.
->
-> Browse over 70 Catholic saints with rich biographies, inspirational quotes, feast days, and beautiful images — all sourced from trusted Catholic resources including Loyola Press, FOCUS, Lifeteen, Ascension Press, Hallow, and the Catholic Encyclopedia.
->
-> FIND YOUR SAINT
-> • Search by name, patron association, or country of origin
-> • Filter by interest — sports, music, science, education, medicine & more
-> • Discover young saints, married saints, religious, and martyrs
-> • Explore by region: Europe, Americas, Africa, Asia, and Middle East
-> • Browse by historical era from the Early Church to contemporary saints
->
-> LEARN ABOUT CONFIRMATION
-> • Understand what the Sacrament of Confirmation is
-> • Learn the tradition of choosing a Confirmation name
-> • Get tips for finding the saint that resonates with you
->
-> RICH SAINT PROFILES
-> • Detailed biographies for every saint
-> • Inspirational quotes attributed to each saint
-> • Feast day information
-> • Patron saint associations and why they're great for Confirmation
-> • Source citations so you can explore further
->
-> BILINGUAL
-> • Full content in English and Spanish
-> • Switch languages instantly in settings
-> • All saint details, categories, and UI update in real time
->
-> PRIVATE & OFFLINE
-> • No account required
-> • No tracking, no analytics, no ads
-> • Everything works completely offline
-> • Your data stays on your device
->
-> Designed for teenagers preparing for Confirmation and adults receiving the sacrament later in life. Whether you're a candidate, sponsor, catechist, or parent — Confirmation Saints makes the journey of choosing a patron saint meaningful and personal.
->
-> Optimized for iPhone and iPad with native SwiftUI design, VoiceOver accessibility, Dynamic Type support, and Dark Mode.
+Preparing for Catholic Confirmation? Confirmation Saints helps you find and choose the perfect patron saint for your Confirmation journey.
+
+Browse over 70 Catholic saints with rich biographies, inspirational quotes, feast days, and beautiful images — all sourced from trusted Catholic resources including Loyola Press, FOCUS, Lifeteen, Ascension Press, Hallow, and the Catholic Encyclopedia.
+
+FIND YOUR SAINT
+• Search by name, patron association, or country of origin
+• Filter by interest — sports, music, science, education, medicine & more
+• Discover young saints, married saints, religious, and martyrs
+• Explore by region: Europe, Americas, Africa, Asia, and Middle East
+• Browse by historical era from the Early Church to contemporary saints
+
+LEARN ABOUT CONFIRMATION
+• Understand what the Sacrament of Confirmation is
+• Learn the tradition of choosing a Confirmation name
+• Get tips for finding the saint that resonates with you
+
+RICH SAINT PROFILES
+• Detailed biographies for every saint
+• Inspirational quotes attributed to each saint
+• Feast day information
+• Patron saint associations and why they're great for Confirmation
+• Source citations so you can explore further
+
+BILINGUAL
+• Full content in English and Spanish
+• Switch languages instantly in settings
+• All saint details, categories, and UI update in real time
+
+PRIVATE & OFFLINE
+• No account required
+• No tracking, no analytics, no ads
+• Everything works completely offline
+• Your data stays on your device
+
+Designed for teenagers preparing for Confirmation and adults receiving the sacrament later in life. Whether you're a candidate, sponsor, catechist, or parent — Confirmation Saints makes the journey of choosing a patron saint meaningful and personal.
+
+Optimized for iPhone and iPad with native SwiftUI design, VoiceOver accessibility, Dynamic Type support, and Dark Mode.
 
 ---
 
