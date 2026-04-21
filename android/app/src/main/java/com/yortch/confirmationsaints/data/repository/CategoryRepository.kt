@@ -7,13 +7,14 @@ import com.yortch.confirmationsaints.data.json.ConfirmationInfoFile
 import com.yortch.confirmationsaints.data.model.CategoryGroup
 import com.yortch.confirmationsaints.data.model.ConfirmationSection
 import com.yortch.confirmationsaints.localization.AppLanguage
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.serialization.json.Json
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class CategoryRepository @Inject constructor(
-    private val context: Context,
+    @ApplicationContext private val context: Context,
     private val json: Json,
 ) {
     fun loadCategories(language: AppLanguage): List<CategoryGroup> =

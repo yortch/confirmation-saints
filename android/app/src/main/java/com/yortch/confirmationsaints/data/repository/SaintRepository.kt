@@ -5,6 +5,7 @@ import android.util.Log
 import com.yortch.confirmationsaints.data.json.SaintsFile
 import com.yortch.confirmationsaints.data.model.Saint
 import com.yortch.confirmationsaints.localization.AppLanguage
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.serialization.json.Json
 import java.io.IOException
 import javax.inject.Inject
@@ -22,7 +23,7 @@ import javax.inject.Singleton
  */
 @Singleton
 class SaintRepository @Inject constructor(
-    private val context: Context,
+    @ApplicationContext private val context: Context,
     private val json: Json,
 ) {
     fun loadSaints(language: AppLanguage): List<Saint> {
