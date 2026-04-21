@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--
-      Minimal Material 3 base theme for the splash / pre-Compose launch window.
-      Full Compose theming (colors, typography, shapes) lives in
-      com.yortch.confirmationsaints.ui.theme.Theme.kt.
+      Base Material theme used only for the pre-Compose launch window. Real
+      theming (colors, typography) lives in Kotlin: see
+      com.yortch.confirmationsaints.ui.theme.ConfirmationSaintsTheme.
     -->
     <style name="Theme.ConfirmationSaints" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!--
+      AndroidX SplashScreen (androidx.core:core-splashscreen) — compatible
+      Android 6+; Android 12+ uses the system splash API automatically.
+      Background uses the adaptive-icon background color; foreground is
+      the launcher icon foreground.
+    -->
+    <style name="Theme.ConfirmationSaints.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.ConfirmationSaints</item>
+    </style>
 </resources>

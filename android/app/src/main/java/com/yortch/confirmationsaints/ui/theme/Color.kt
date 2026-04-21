@@ -17,3 +17,7 @@ val SacredGold40 = Color(0xFFB08A2E)
 // Tertiary: soft rose
 val RoseTertiary80 = Color(0xFFEFB8C8)
 val RoseTertiary40 = Color(0xFF7D5260)
+
+// Emphasis red (iOS uses `.red` heavily for accents / CTAs).
+val AccentRed = Color(0xFFC62828)
+val AccentRedLight = Color(0xFFEF9A9A)

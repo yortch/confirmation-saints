@@ -15,22 +15,25 @@ private val DarkColors = darkColorScheme(
     primary = LiturgicalPurple80,
     secondary = SacredGold80,
     tertiary = RoseTertiary80,
+    error = AccentRedLight,
 )
 
 private val LightColors = lightColorScheme(
     primary = LiturgicalPurple40,
     secondary = SacredGold40,
     tertiary = RoseTertiary40,
+    error = AccentRed,
 )
 
 /**
- * Root Material 3 theme for the Android app. Uses dynamic color on Android 12+
- * when available and falls back to the brand palette otherwise.
+ * Root Material 3 theme. Dynamic color is OFF by default so the brand
+ * (purple/gold) shows everywhere — matches iOS. Pass `dynamicColor = true`
+ * to opt in to Material You on Android 12+.
  */
 @Composable
 fun ConfirmationSaintsTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit,
 ) {
     val colorScheme = when {
