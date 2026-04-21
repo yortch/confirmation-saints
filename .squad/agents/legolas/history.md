@@ -24,3 +24,15 @@
 - **Samwise** generated app icon: 1024×1024 PNG with Chi-Rho design, purple gradient, gold accents, dove silhouette
 - Icon integration complete; Xcode auto-generates smaller sizes from 1024×1024 source
 
+### Anticipatory Android Test Scaffolding (2026-07-22)
+- Aragorn was landing Phases 2–7 of the Android port on `squad/android-port` in parallel; my job was test scaffolding that does not depend on his yet-unwritten source.
+- **Cross-platform parity guardrail** written as `tests/shared-content-parity.py` (Python, stdlib only). Enforces id parity, `sourceURLs` value-set parity, canonical field parity (`patronOf`, `affinities`, `tags`, `region`, `lifeState`, `ageCategory`, `gender`), per-saint image existence, and category group+value id parity. Exits 0/1/2 with diff on stderr. Ran against HEAD → **PASS** (70 saints in lockstep, no drift).
+- **Rationale for Python (not XCTest / JUnit):** data invariants are language-agnostic; both platforms can share one guardrail instead of duplicating. Captured as `.squad/skills/cross-platform-json-parity-check/SKILL.md`.
+- **Android unit test stubs** at `android/app/src/test/` — `SaintRepositoryTest`, `CategoryMatchingTest`, `LocalizationServiceTest`, `BirthDateParsingTest`. All `@Disabled` with TODO comments citing the specific contract from `.squad/decisions.md` (70-saint roster, English-canonical matching, in-app language switch, 0256 edge case). JUnit 5 (project already wires `junit-jupiter` + Turbine).
+- **Android instrumentation stubs** at `android/app/src/androidTest/` — `WelcomeScreenNavigationTest`, `SaintListDisplayTest`, `LanguageSwitchTest`. `@Ignore`'d pending Aragorn's source.
+- **CI hook** at `.github/workflows/android-ci.yml`, every job `if: false` so it's a scaffold only — flip on after Phases 2–7 stabilize.
+- **Lane discipline:** wrote nothing under `android/app/src/main/` (Aragorn's lane). Found zero parity drift, so did NOT touch any JSON (Samwise's lane). Filed a decision inbox note at `.squad/decisions/inbox/legolas-parity-guardrail.md` asking Gandalf to confirm whether `country` should be canonical (currently excluded from the check — EN/ES country names may legitimately differ, e.g. "Italy" vs "Italia").
+- **Key Android test conventions this session:**
+  - JUnit 5 for `src/test/` (`org.junit.jupiter.api.Test`, `@Disabled`).
+  - JUnit 4 for `src/androidTest/` (Compose UI test framework is still JUnit 4 — `org.junit.Test`, `@Ignore`). Do not accidentally mix these.
+  - Package layout in test dirs mirrors `com.yortch.confirmationsaints` packages from `docs/android-architecture.md`.
