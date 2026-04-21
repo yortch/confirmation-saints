@@ -4,21 +4,26 @@
 
 ## Status
 
-🚧 **Scaffolding complete.** Gradle project, app module, theme, and the
-`SharedContent → assets` sync task are in place. Data classes, JSON loading,
-ViewModels, screens, navigation, and localization will follow the architecture
-plan in [`../docs/android-architecture.md`](../docs/android-architecture.md).
+🚀 **Phases 2–7 implemented** (per [`../docs/android-architecture.md`](../docs/android-architecture.md)).
+Data layer, localization + DataStore, all core screens (list / detail / explore /
+category-saints / about), onboarding pager, and settings are in place, plus
+navigation graph, splash screen, and launcher icon generation. **Not yet
+compile-verified** — no JDK available to Aragorn in the authoring environment;
+Jorge must run `./gradlew :app:assembleDebug` to validate.
 
 ## Stack
 
 - **Kotlin** 2.0 + **Jetpack Compose** (Compose BOM 2024.09) + **Material 3**
+  (incl. `material-icons-extended`)
 - **Min SDK 26** (Android 8.0) / target + compile SDK 34
-- **AGP 8.6**, Gradle 8.9 wrapper
-- **Navigation Compose**, **Lifecycle / ViewModel Compose**
-- **DataStore Preferences** (for `appLanguage`, `hasSeenWelcome`)
-- **kotlinx.serialization** for JSON
-- **Coil** for image loading
-- **JUnit 5** + **Turbine** for tests
+- **AGP 8.6**, Gradle 8.9 wrapper, **KSP** 2.0.20-1.0.25
+- **Hilt** 2.52 (DI) + **Navigation Compose** (typed `@Serializable` routes) +
+  **Lifecycle / ViewModel Compose**
+- **DataStore Preferences** (`appLanguage`, `hasSeenWelcome`)
+- **kotlinx.serialization** 1.7.3 for JSON
+- **Coil 3** (`io.coil-kt.coil3`) — resolves `file:///android_asset/` natively
+- **AndroidX SplashScreen** 1.0.1 (API 23+ compatible)
+- **JUnit 4** + **Turbine** + **Robolectric** for tests
 - Application id: `com.yortch.confirmationsaints`
 
 ## Prerequisites
@@ -58,6 +63,7 @@ The canonical data source is [`../SharedContent/`](../SharedContent/). It is
 | --------------------------------------------- | --------------------------------------- |
 | `SharedContent/saints/saints-{en,es}.json`    | `app/src/main/assets/saints-*.json`     |
 | `SharedContent/categories/categories-{en,es}.json` | `app/src/main/assets/categories-*.json` |
+| `SharedContent/content/confirmation-info-{en,es}.json` | `app/src/main/assets/confirmation-info-*.json` |
 | `SharedContent/images/*.jpg`                  | `app/src/main/assets/images/`           |
 
 These generated files are gitignored; only `assets/README.md` is committed.
@@ -91,15 +97,15 @@ android/
 
 ## What's deliberately NOT here yet
 
-Per the split of concerns with the lead architect, the following are **deferred**
-to the architecture plan in [`../docs/android-architecture.md`](../docs/android-architecture.md):
-
-- Kotlin data classes for `Saint` / `Category`
-- JSON loading / repository layer
-- `SaintListViewModel` (matching / filtering / search — mirrors iOS)
-- Localization service and language-switch UX
-- Navigation graph, screens, onboarding
-- DataStore wiring for `appLanguage` / `hasSeenWelcome`
+- **Compile verification.** Phases 2–7 were authored without a JDK available;
+  expect minor import/API fixups on first `./gradlew :app:assembleDebug`.
+- **Release signing config.** `buildTypes.release` has `TODO: add signingConfig`.
+- **Instrumented tests.** Only JVM unit tests are in place
+  (`SaintParsingTest`, `DiacriticsTest`, `CategoryMatcherTest`). A Compose UI
+  smoke test is a good next add.
+- **Adaptive-icon polish.** `_generate_android_icon.py` scales the iOS 1024×1024
+  icon into all five density buckets. Swap in a purpose-built Chi-Rho
+  foreground once ready.
 
 ## Big picture
 

@@ -83,3 +83,21 @@
 - DataStore for `appLanguage` / `hasSeenWelcome`
 - Localization service
 
+
+## Learnings — Phases 2–7 implementation (2026-04-22)
+
+**Hilt module structure that worked.** One `@Module @InstallIn(SingletonComponent::class) object AppModule` is enough for app-level singletons (`Json`, `CoroutineScope`, `DataStore<Preferences>`); everything else (`SaintRepository`, `CategoryRepository`, `LocalizationService`, `PreferencesRepository`) uses `@Inject constructor` + `@Singleton` directly — no module entry needed. `@ApplicationContext` is injected into the DataStore provider without a redundant pass-through `provideContext` (first draft had that; removed).
+
+**Coil 3 loads android_asset URIs natively.** `AsyncImage(model = "file:///android_asset/images/saint-id.jpg")` works out of the box — no custom fetcher, no `AssetManager` plumbing. That made `SaintImage` a one-liner composable. Coil 3 imports live under `coil3.compose.*`, not `coil.compose.*` — easy to get wrong.
+
+**CompositionLocal for live-language switch, not Activity recreate.** `staticCompositionLocalOf<AppLanguage>` provided at the root composable, fed by `LocalizationService.language: StateFlow<AppLanguage>`, means switching EN↔ES ripples through every composable without ever touching `Activity.recreate()`. `SaintListViewModel` observes the same `StateFlow` in `init { }` and reloads JSON. Mirrors iOS `@Environment(\.appLanguage)`.
+
+**Typed navigation with `@Serializable` routes (Navigation Compose 2.8+).** `sealed interface Screen` with `@Serializable object Saints`, `@Serializable data class SaintDetail(val saintId: String)`, then `composable<Screen.SaintDetail> { entry.toRoute<Screen.SaintDetail>() }` — no string routes, no argument parsing. Categorical win over the old string API; expect this to be the default going forward.
+
+**Asset layout decision.** Flat `assets/*.json` + `assets/images/*.jpg`, not nested `assets/SharedContent/...` as the plan suggested. See `.squad/decisions/inbox/aragorn-asset-layout.md`. Matched the scaffold's pre-existing `syncSharedContent` Gradle task.
+
+**Icon pack caveat.** Many SaintDetail / Settings screens use icons like `Icons.Default.FormatQuote`, `Icons.Default.ContactMail`, `Icons.Default.EmojiEmotions` that are NOT in the default Material icon set — they require `androidx.compose.material:material-icons-extended`. Added that dep. (Default set is stripped to save APK size; extended adds ~2MB uncompressed.)
+
+**No-JDK constraint.** I authored Phases 2–7 without a working Gradle build on this machine. Every Kotlin file is untested; first real build will surface import/API fixups. Test coverage (`SaintParsingTest`, `DiacriticsTest`, `CategoryMatcherTest`) focuses on pure-JVM units that don't need Robolectric, so they should at least guard the data contract once the build runs.
+
+**Launcher icon pipeline.** `_generate_android_icon.py` in the repo root scales the iOS 1024×1024 `app-icon-1024.png` into foreground PNGs for `mipmap-{m,h,xh,xxh,xxxh}dpi/` + legacy square/round. Adaptive foreground uses a 60% safe-zone ratio to survive circle/squircle/teardrop masks. One-shot script — regenerate on icon changes.
