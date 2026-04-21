@@ -36,3 +36,27 @@
   - JUnit 5 for `src/test/` (`org.junit.jupiter.api.Test`, `@Disabled`).
   - JUnit 4 for `src/androidTest/` (Compose UI test framework is still JUnit 4 — `org.junit.Test`, `@Ignore`). Do not accidentally mix these.
   - Package layout in test dirs mirrors `com.yortch.confirmationsaints` packages from `docs/android-architecture.md`.
+
+### Android Instrumentation Tests — Phases 1–7 Unblocked (2026-07-23)
+- **Trigger:** Aragorn landed Phases 1–7 (PR #1 open). Three `@Ignore`'d stubs in `android/app/src/androidTest/java/com/yortch/confirmationsaints/ui/` could now be implemented against real source.
+- **Outcome:** Compile-clean (`./gradlew :app:compileDebugAndroidTestKotlin` → BUILD SUCCESSFUL). 2 tests live, 10 still `@Ignore`'d with specific single-root-cause reasons.
+- **What went live (no `@Ignore`):**
+  - `WelcomeScreenNavigationTest#should_show_welcome_screen_when_hasSeenWelcome_is_false`
+  - `WelcomeScreenNavigationTest#should_navigate_to_saint_list_when_get_started_is_tapped`
+  - Both use `createComposeRule()` hosting `WelcomeScreen` directly with an explicit `CompositionLocalProvider(LocalAppLanguage provides AppLanguage.EN)`. No Hilt needed because `WelcomeScreen(onComplete)` has no `hiltViewModel()` dependency.
+- **What stays `@Ignore`'d (10 tests across all 3 files):** All blocked on **one** missing piece: there is no `HiltTestRunner` in `testInstrumentationRunner`, so `MainActivity` (`@AndroidEntryPoint`) can't launch and `hiltViewModel()` defaults in `SaintListScreen` + `SettingsScreen` can't be resolved.
+- **Key Compose UI test patterns that worked:**
+  - **`createComposeRule()` > `createAndroidComposeRule<MainActivity>()` when the composable is self-contained.** Don't pay the Hilt tax for pure composables in a Hilt app. Wrote this up as `.squad/skills/android-compose-instrumentation/SKILL.md`.
+  - **Drive Compose Pager through the UI, not state.** `pagerState` is `remember`'d inside `WelcomeScreen`; the test taps "Next" × 3 to reach the final CTA. Matches user behavior and doesn't require exposing internals.
+  - **`composeRule.waitForIdle()` after every Next click.** Pager animation otherwise races assertions.
+  - **Explicit `CompositionLocalProvider(LocalAppLanguage provides AppLanguage.EN)`** — the local has a default, so omitting it passes silently but doesn't exercise the real language-propagation path.
+- **Production-code gaps found (filed to Aragorn via `.squad/decisions/inbox/legolas-android-instrumentation-tests.md`):**
+  - No `HiltTestRunner` class + `testInstrumentationRunner` line in `app/build.gradle.kts` defaultConfig. Required before any `@HiltAndroidTest` can run. Exact wiring (runner class, dependencies: `hilt-android-testing`, `kspAndroidTest` for `hilt-android-compiler`, `androidx.test:runner`) documented in the decision file — ready for Aragorn to paste in.
+  - No production semantic tags needed — `onNodeWithText` against `AppStrings` literals is sufficient. No production code was edited.
+- **Files touched (test sources only):**
+  - `android/app/src/androidTest/java/com/yortch/confirmationsaints/ui/WelcomeScreenNavigationTest.kt` — 2 live, 2 `@Ignore`'d with reasons.
+  - `android/app/src/androidTest/java/com/yortch/confirmationsaints/ui/SaintListDisplayTest.kt` — 0 live, 4 `@Ignore`'d with reasons + detailed TODOs citing stable EN/ES saint name pairs.
+  - `android/app/src/androidTest/java/com/yortch/confirmationsaints/ui/LanguageSwitchTest.kt` — 0 live, 4 `@Ignore`'d with reasons + TODOs naming the EN↔ES string pairs ("Settings"↔"Ajustes", "Language"↔"Idioma", "Saints"↔"Santos").
+  - Class-level `@Ignore` annotations removed from all three so individual methods become independently un-ignorable as the Hilt harness lands.
+- **No new dependencies added** to `app/build.gradle.kts`. The existing `androidx.compose.ui.test.junit4` + `ui-test-manifest` setup was sufficient. Hilt-specific deps only become necessary once Aragorn lands the test runner (spec'd in decision file).
+- **Lane discipline:** 100% test-side changes. No edits under `android/app/src/main/`. Where guidance conflicted (user asked to remove `@Ignore` vs. rule forbidding feature wiring), I followed the lane rule and filed a sharp, actionable decision-inbox note with copy-pasteable wiring for Aragorn.

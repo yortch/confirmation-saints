@@ -122,3 +122,13 @@
 - `android/app/src/main/res/values/themes.xml` — `<item name="windowSplashScreenBackground">@color/splash_background</item>` on `Theme.ConfirmationSaints.Splash` (parent `Theme.SplashScreen`, from `androidx.core:core-splashscreen`). Android 12+ honors this through the system splash API; pre-12 via the compat library.
 - `android/app/src/main/res/values/colors.xml` — `<color name="splash_background">#E53935</color>` matches iOS brand red (`Color(0xFFE53935)`).
 - No `values-night/themes.xml` exists; single declaration serves both light and dark. The existing `AccentRed` in `Theme.kt` is `#C62828` (slightly darker) — kept distinct from splash red intentionally so compose theming and the launch window can evolve independently; revisit if the brand consolidates on one shade.
+
+## Pending work (cross-agent sync via Scribe, 2026-04-21T19:53:26Z)
+
+**HiltTestRunner wiring is pending** to unblock Android instrumentation tests. Legolas (QA) has implemented 2 live Compose UI tests for `WelcomeScreenNavigationTest` and identified 10 remaining tests that require Hilt graph access. The full specification is now merged into `.squad/decisions/decisions.md` under **"Decision: Android Instrumentation Tests — Status + Hilt Test Runner Gap"**. Setup checklist:
+1. New `HiltTestRunner` class extending `AndroidJUnitRunner`
+2. Wire into `app/build.gradle.kts` defaultConfig (`testInstrumentationRunner`)
+3. Add test dependencies: `hilt-android-testing` + `kspAndroidTest` compiler
+4. Optional: debug `AndroidManifest.xml` override if needed
+
+Once the harness lands, Legolas will un-`@Ignore` the remaining tests in a follow-up PR.
