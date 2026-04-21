@@ -44,3 +44,23 @@
 - Xcode auto-generates all required icon sizes from 1024×1024 source
 - No architecture changes — follows existing MVVM + @AppStorage pattern
 
+
+### Documentation Audit Pre-Android (2026-04-21)
+- iOS app shipped v1.0.0 to App Store (id6762463641). Docs refreshed ahead of Android port.
+- **Most surprising staleness in README:** the documented data model was obsolete — described a `LocalizedText {en,es}` per-field model with fields like `birthYear`, `countryOfOrigin`, `isYoungSaint`, `imageName`/`imageAttribution`, and a nonexistent `categories` field on saints. The actual implementation migrated (some time before the audit) to **per-language JSON files** (`saints-en.json`, `saints-es.json`) with plain-string fields plus parallel `displayPatronOf` / `displayTags` / `displayAffinities` arrays. Matching is done against **canonical English ids** in `patronOf` / `tags` / `affinities` / `region` / `lifeState` / `ageCategory` / `gender`, which are identical across both language files. Anyone relying on the old README to build Android would have produced a broken data layer.
+- Saint count in docs drifted too: history.md referenced 50 / 54; actual is **70**.
+- README "How to Add a New Language" was also stale (told contributors to add a field to the `LocalizedText` Swift struct, which no longer exists). Replaced with per-file instructions.
+- `android/README.md` still carried the old "Catholic Saints — Android" name. Updated to current "Confirmation Saints" branding and pointed to the new Android Port Guide section in the root README.
+- Marketing site (`docs/index.html`) and `docs/appstore/` were already current (recent commits updated App Store link and submission assets) — left untouched.
+- `.github/copilot-instructions.md` does not exist; no dev-facing docs found beyond README.
+- **Minor code-level staleness spotted (out of scope for doc task, flagging for Frodo):** `SettingsView.swift` hardcodes `Text("0.1.0")` for version while `project.yml` has `MARKETING_VERSION: 1.0.0`. Should read from `Bundle.main.infoDictionary`.
+
+### Key Android-Port Considerations (captured in README + android/README)
+- **SharedContent/ is the canonical single source of truth.** Android wires it via a Gradle asset source-set include, does not fork.
+- Filter on canonical English ids; render from `display*` arrays. Do not filter against Spanish labels.
+- Diacritic-insensitive search is non-negotiable (iOS uses `String+Diacritics`; Android = `Normalizer.NFD` + strip combining marks, or `Collator` SECONDARY).
+- Persisted keys to preserve cross-platform: `appLanguage`, `hasSeenWelcome`.
+- Language auto-detect from system locale on first launch (ES → es, else en), overridable in Settings.
+- Feast day format is `MM-DD` (no year).
+- Display name "Confirmation Saints" — internal module name is free to follow Android conventions.
+- Suggested bundle id: `com.jorgebalderas.confirmationsaints` (iOS uses `com.jorgebalderas.ConfirmationSaints`).

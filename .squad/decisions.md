@@ -113,6 +113,33 @@ All string matching in search/filter logic uses diacritic-insensitive comparison
 
 ---
 
+### SharedContent/ is the Canonical Cross-Platform Data Source (2026-04-21)
+**Author:** Gandalf (Lead)  
+**Status:** Decided
+
+iOS v1.0.0 is live on the App Store. Android port is starting. To maintain sync across platforms, `SharedContent/` at the repo root is the **single source of truth** for all content-layer data and imagery:
+
+- `SharedContent/saints/saints-{en,es}.json`
+- `SharedContent/categories/categories-{en,es}.json`
+- `SharedContent/content/confirmation-info-{en,es}.json`
+- `SharedContent/images/*.jpg`
+
+Neither platform forks or duplicates this directory. iOS consumes it via a folder-reference build phase and symlink; Android will consume it via Gradle asset source-set include.
+
+**Key Contract:**
+- **Canonical ids are English.** Fields driving matching (`patronOf`, `tags`, `affinities`, `region`, `lifeState`, `ageCategory`, `gender`) must contain identical English identifier values in every language file.
+- **Display localization lives in optional `display*` arrays** (`displayPatronOf`, `displayTags`, `displayAffinities`) and freely-translated fields (`name`, `country`, `biography`, `quote`, `whyConfirmationSaint`).
+- **Schema changes require PRs touching every language file** so they stay in lockstep.
+- **Image filenames equal the saint `id`.** One image serves all languages.
+
+**Impact:**
+- **Samwise:** Continue treating `SharedContent/` as delivery target; schema changes require identical updates to both language files.
+- **Frodo/Android dev:** Decode directly from these files; do not fork into platform-specific copies.
+- **Legolas:** Add cross-platform parity test — for every saint id, both language files must have identical canonical-id values.
+- **Gandalf:** Reject PRs duplicating `SharedContent/` into `ios/` or `android/`.
+
+---
+
 ### Four Priority Saints Added — Batch 3 (2026-04-13)
 **Author:** Samwise (Data/Backend)  
 **Status:** Implemented

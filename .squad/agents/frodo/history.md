@@ -112,3 +112,6 @@
 - **Fix:** Removed `saint.biography` from `filteredSaints` search entirely. Added 3-character minimum gate for secondary fields (patronOf, affinities, tags, displayAffinities, displayTags, country). Name search remains active for any query length.
 - **Lesson:** Never include long prose fields (biography) in substring search — they match too broadly. Keep search to structured/short fields.
 - Build verified clean on iPhone 17 simulator.
+
+### ⚠️ Follow-up: SettingsView Version Label Hardcoding (2026-04-21)
+**Cross-agent Note from Gandalf (Lead)** — During documentation audit for Android port, noted that `SettingsView.swift` hardcodes `Text("0.1.0")` for version display while `ios/project.yml` has `MARKETING_VERSION: 1.0.0` (shipped to App Store as v1.0.0). Should read version from `Bundle.main.infoDictionary["CFBundleShortVersionString"]` to stay in sync with build config. Out of scope for current documentation audit, but worth a quick PR fix.
