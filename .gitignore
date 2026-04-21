@@ -32,4 +32,6 @@ captures/
 # the generated assets are build artifacts and should not be committed.
 android/app/src/main/assets/saints-*.json
 android/app/src/main/assets/categories-*.json
+android/app/src/main/assets/confirmation-info-*.json
 android/app/src/main/assets/images/
+android/.kotlin/

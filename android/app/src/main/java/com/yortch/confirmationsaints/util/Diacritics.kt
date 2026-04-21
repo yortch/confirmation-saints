@@ -25,3 +25,17 @@ fun String.containsIgnoringDiacritics(other: String): Boolean =
 
 fun String.equalsIgnoringDiacritics(other: String): Boolean =
     this.stripDiacritics().equals(other.stripDiacritics(), ignoreCase = true)
+
+/**
+ * Token-prefix match for deep search fields (tags / patronOf / affinities).
+ * A query matches if it's the prefix of any whitespace/hyphen/slash/comma-
+ * delimited word. Avoids the "ter" -> "writers"/"interpreters" false
+ * positives that plain substring `contains` produces.
+ */
+fun String.matchesTokenPrefixIgnoringDiacritics(query: String): Boolean {
+    val q = query.stripDiacritics().lowercase()
+    if (q.isEmpty()) return false
+    return this.stripDiacritics().lowercase()
+        .split(' ', '-', '/', ',', '\t')
+        .any { it.startsWith(q) }
+}

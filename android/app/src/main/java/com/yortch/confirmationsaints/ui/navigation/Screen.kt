@@ -9,14 +9,23 @@ import kotlinx.serialization.Serializable
  */
 sealed interface Screen {
 
-    // Top-level tabs
+    // Welcome (pre-main) destination
     @Serializable data object Welcome : Screen
+
+    // Top-level tab graphs — each is a nested navigation graph that owns
+    // its own back stack. `navigateTopLevel` targets these.
     @Serializable data object About : Screen
     @Serializable data object Explore : Screen
     @Serializable data object Saints : Screen
     @Serializable data object Settings : Screen
 
-    // Detail destinations
+    // Start destinations inside each tab graph — the actual leaf screens.
+    @Serializable data object AboutHome : Screen
+    @Serializable data object ExploreHome : Screen
+    @Serializable data object SaintsHome : Screen
+    @Serializable data object SettingsHome : Screen
+
+    // Detail destinations — pushed onto the CURRENT tab's back stack.
     @Serializable data class SaintDetail(val saintId: String) : Screen
     @Serializable data class CategorySaints(
         val groupId: String,

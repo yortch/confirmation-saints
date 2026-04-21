@@ -23,6 +23,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -82,7 +85,7 @@ private fun SectionView(section: ConfirmationSection) {
                 // Body text: render paragraphs separated by blank lines.
                 block.body.split("\n\n").forEach { paragraph ->
                     Text(
-                        paragraph,
+                        parseInlineMarkdown(paragraph),
                         style = MaterialTheme.typography.bodyLarge,
                     )
                 }
@@ -103,4 +106,26 @@ private fun iconForSection(id: String): ImageVector = when (id) {
     "choosing-your-saint" -> Icons.Default.PersonPin
     "tips-for-finding-your-match" -> Icons.Default.Lightbulb
     else -> Icons.Default.Book
+}
+
+/**
+ * Render a subset of inline markdown: `**bold**`. Keeps it trivial — no
+ * emphasis, links, or code spans needed by current About content.
+ */
+private fun parseInlineMarkdown(text: String): AnnotatedString = buildAnnotatedString {
+    val regex = Regex("""\*\*(.+?)\*\*""")
+    var cursor = 0
+    for (match in regex.findAll(text)) {
+        if (match.range.first > cursor) {
+            append(text.substring(cursor, match.range.first))
+        }
+        withStyleBold { append(match.groupValues[1]) }
+        cursor = match.range.last + 1
+    }
+    if (cursor < text.length) append(text.substring(cursor))
+}
+
+private inline fun androidx.compose.ui.text.AnnotatedString.Builder.withStyleBold(block: () -> Unit) {
+    val idx = pushStyle(SpanStyle(fontWeight = FontWeight.Bold))
+    try { block() } finally { pop(idx) }
 }

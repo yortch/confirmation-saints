@@ -101,3 +101,24 @@
 **No-JDK constraint.** I authored Phases 2–7 without a working Gradle build on this machine. Every Kotlin file is untested; first real build will surface import/API fixups. Test coverage (`SaintParsingTest`, `DiacriticsTest`, `CategoryMatcherTest`) focuses on pure-JVM units that don't need Robolectric, so they should at least guard the data contract once the build runs.
 
 **Launcher icon pipeline.** `_generate_android_icon.py` in the repo root scales the iOS 1024×1024 `app-icon-1024.png` into foreground PNGs for `mipmap-{m,h,xh,xxh,xxxh}dpi/` + legacy square/round. Adaptive foreground uses a 60% safe-zone ratio to survive circle/squircle/teardrop masks. One-shot script — regenerate on icon changes.
+
+## Learnings — TopAppBar back navigation (follow-up)
+
+**Back button pattern on a shared TopAppBar.** With a single Scaffold owning the `TopAppBar` above the NavHost (rather than per-screen Scaffolds), the back affordance is gated by two conditions evaluated against the current `NavBackStackEntry`: `navController.previousBackStackEntry != null` AND `currentRoute` matches a detail class (`SaintDetail` / `CategorySaints`). The icon used is `Icons.AutoMirrored.Filled.ArrowBack` (RTL-aware — the non-mirrored `Icons.Default.ArrowBack` is deprecated for directional glyphs). Click handler is `navController.popBackStack()`.
+
+**Resolving a detail title from a VM owned by a nav entry.** `resolveTitle` is `@Composable` and scopes the ViewModel to the destination's `NavBackStackEntry` via `hiltViewModel(backStackEntry)` — this returns the *same* `SaintListViewModel` instance that `SaintDetailScreen` gets, so no duplicate load. Route args are pulled with `backStackEntry.toRoute<Screen.SaintDetail>()` (typed nav). Title falls back to `""` while the saint list is still loading, but the back button is rendered unconditionally so the user is never stuck.
+
+## Learnings — Per-tab nested nav graphs + splash color (2026-04-??)
+
+**Bottom-nav state bug root cause.** A single flat NavHost with all routes as siblings + `launchSingleTop = true` + `restoreState = true` breaks on the *first* tap of a tab whose destination hasn't been visited yet: `restoreState` expects a saved-state bundle keyed by destination id; when there is none, the `popUpTo + singleTop` combo collapses to a no-op and the back stack doesn't actually switch. Symptom: tapping "Saints" from a detail screen in another tab appeared to do nothing until Saints had been visited at least once.
+
+**Fix — nested graph per tab.** Each top-level tab is now its own `navigation<Screen.Tab>(startDestination = ...)` block. Detail routes (SaintDetail, CategorySaints) live *inside* the tab graph that pushes them. The same route type (`Screen.SaintDetail`) can be registered in multiple nested graphs — Nav Compose resolves `navigate(Screen.SaintDetail(id))` to the destination in the current back stack's graph, so the detail gets pushed onto the right tab's stack. This mirrors iOS `TabView { NavigationStack { ... } }` semantics and makes `navigateTopLevel` with `popUpTo(graph.findStartDestination().id) + saveState + restoreState` behave correctly even on first tap.
+
+**Selected-tab detection with nested graphs.** Can't rely on `currentRoute.startsWith(tab.qualifiedName)` once detail routes are nested — use `backStackEntry.destination.hierarchy.any { it.route == tab.qualifiedName }` instead. `hierarchy` walks destination → parent graph → root graph, so any descendant of a tab graph reports that tab as selected.
+
+**Route-to-title mapping with nested graphs.** Needed dedicated inner start-destination markers (`SaintsHome`, `ExploreHome`, `AboutHome`, `SettingsHome`) because the *graph* route (e.g. `Screen.Saints`) is no longer a leaf destination — the actual on-screen destination is the inner `*Home`. `resolveTitle` switched from `endsWith("Saints")` to `endsWith("SaintsHome")` etc. Detail-title logic (`contains("SaintDetail")` / `contains("CategorySaints")`) is unaffected.
+
+**Splash color lives in two files.**
+- `android/app/src/main/res/values/themes.xml` — `<item name="windowSplashScreenBackground">@color/splash_background</item>` on `Theme.ConfirmationSaints.Splash` (parent `Theme.SplashScreen`, from `androidx.core:core-splashscreen`). Android 12+ honors this through the system splash API; pre-12 via the compat library.
+- `android/app/src/main/res/values/colors.xml` — `<color name="splash_background">#E53935</color>` matches iOS brand red (`Color(0xFFE53935)`).
+- No `values-night/themes.xml` exists; single declaration serves both light and dark. The existing `AccentRed` in `Theme.kt` is `#C62828` (slightly darker) — kept distinct from splash red intentionally so compose theming and the launch window can evolve independently; revisit if the brand consolidates on one shade.

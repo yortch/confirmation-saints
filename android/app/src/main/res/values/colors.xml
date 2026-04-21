@@ -2,4 +2,7 @@
 <resources>
     <!-- Liturgical purple — placeholder until a full Chi-Rho adaptive icon is generated. -->
     <color name="ic_launcher_background">#4A148C</color>
+
+    <!-- Brand accent red — matches iOS Color(0xFFE53935) / MaterialTheme error. -->
+    <color name="splash_background">#E53935</color>
 </resources>

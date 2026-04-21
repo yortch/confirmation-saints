@@ -89,7 +89,12 @@ fun WelcomeScreen(onComplete: () -> Unit) {
             }
 
             // Page indicator + navigation
-            Column(Modifier.padding(bottom = 40.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+            Column(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 40.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
                 PageIndicator(pagerState.currentPage, pageCount)
                 Spacer(Modifier.height(16.dp))
                 if (pagerState.currentPage < pageCount - 1) {

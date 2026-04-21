@@ -4,6 +4,7 @@ import com.yortch.confirmationsaints.data.model.Saint
 import com.yortch.confirmationsaints.util.SaintNameComparator
 import com.yortch.confirmationsaints.util.containsIgnoringDiacritics
 import com.yortch.confirmationsaints.util.equalsIgnoringDiacritics
+import com.yortch.confirmationsaints.util.matchesTokenPrefixIgnoringDiacritics
 
 /**
  * Port of iOS `SaintListViewModel.filteredSaints`. Pure function — takes the
@@ -39,11 +40,14 @@ object SaintFilterEngine {
             result = result.filter { s ->
                 if (s.name.containsIgnoringDiacritics(query)) return@filter true
                 if (!deep) return@filter false
-                s.patronOf.any { it.containsIgnoringDiacritics(query) } ||
-                    s.affinities.any { it.containsIgnoringDiacritics(query) } ||
-                    s.tags.any { it.containsIgnoringDiacritics(query) } ||
-                    (s.displayAffinities?.any { it.containsIgnoringDiacritics(query) } == true) ||
-                    (s.displayTags?.any { it.containsIgnoringDiacritics(query) } == true) ||
+                // Tag fields use token-prefix match so "ter" finds "Teresa"
+                // but not "writers" / "interpreters" / "carpenters".
+                s.patronOf.any { it.matchesTokenPrefixIgnoringDiacritics(query) } ||
+                    s.affinities.any { it.matchesTokenPrefixIgnoringDiacritics(query) } ||
+                    s.tags.any { it.matchesTokenPrefixIgnoringDiacritics(query) } ||
+                    (s.displayPatronOf?.any { it.matchesTokenPrefixIgnoringDiacritics(query) } == true) ||
+                    (s.displayAffinities?.any { it.matchesTokenPrefixIgnoringDiacritics(query) } == true) ||
+                    (s.displayTags?.any { it.matchesTokenPrefixIgnoringDiacritics(query) } == true) ||
                     (s.country?.containsIgnoringDiacritics(query) == true)
             }
         }

@@ -120,7 +120,7 @@ struct SaintListView: View {
     private func iconForLifeState(_ state: String) -> String {
         switch state {
         case "married": return "heart.fill"
-        case "religious": return "cross.vase.fill"
+        case "religious": return "cross.fill"
         case "single": return "person"
         default: return "person"
         }

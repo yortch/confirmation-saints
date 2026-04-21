@@ -2,11 +2,13 @@ package com.yortch.confirmationsaints.ui.navigation
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Groups
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -17,15 +19,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.yortch.confirmationsaints.localization.AppStrings
 import com.yortch.confirmationsaints.localization.LocalAppLanguage
+import com.yortch.confirmationsaints.viewmodel.SaintListViewModel
 import com.yortch.confirmationsaints.ui.screens.about.AboutConfirmationScreen
 import com.yortch.confirmationsaints.ui.screens.categories.CategoryBrowseScreen
 import com.yortch.confirmationsaints.ui.screens.categories.CategorySaintsScreen
@@ -58,15 +65,32 @@ fun MainScaffold(
     Scaffold(
         topBar = {
             val title = resolveTitle(currentRoute, backStackEntry, language)
+            val isDetailRoute = currentRoute.contains("SaintDetail") ||
+                currentRoute.contains("CategorySaints")
+            val canPop = navController.previousBackStackEntry != null
             if (title != null) {
-                TopAppBar(title = { Text(title) })
+                TopAppBar(
+                    title = { Text(title) },
+                    navigationIcon = {
+                        if (isDetailRoute && canPop) {
+                            IconButton(onClick = { navController.popBackStack() }) {
+                                Icon(
+                                    Icons.AutoMirrored.Filled.ArrowBack,
+                                    contentDescription = AppStrings.localized("Back", language),
+                                )
+                            }
+                        }
+                    },
+                )
             }
         },
         bottomBar = {
             NavigationBar {
                 tabs.forEach { tab ->
                     val routeClass = tab.screen::class.qualifiedName ?: ""
-                    val selected = currentRoute.startsWith(routeClass)
+                    val selected = backStackEntry?.destination?.hierarchy?.any {
+                        it.route == routeClass
+                    } == true
                     NavigationBarItem(
                         selected = selected,
                         onClick = { navController.navigateTopLevel(tab.screen) },
@@ -82,38 +106,52 @@ fun MainScaffold(
             startDestination = Screen.Saints,
             modifier = Modifier.padding(padding),
         ) {
-            composable<Screen.About> { AboutConfirmationScreen() }
-
-            composable<Screen.Explore> {
-                CategoryBrowseScreen(
-                    onValueClick = { groupId, valueId, title ->
-                        navController.navigate(Screen.CategorySaints(groupId, valueId, title))
-                    },
-                )
+            // About tab — just the info screen.
+            navigation<Screen.About>(startDestination = Screen.AboutHome) {
+                composable<Screen.AboutHome> { AboutConfirmationScreen() }
             }
 
-            composable<Screen.Saints> {
-                SaintListScreen(
-                    onSaintClick = { id -> navController.navigate(Screen.SaintDetail(id)) },
-                )
+            // Explore tab — category browse → category saints → saint detail.
+            navigation<Screen.Explore>(startDestination = Screen.ExploreHome) {
+                composable<Screen.ExploreHome> {
+                    CategoryBrowseScreen(
+                        onValueClick = { groupId, valueId, title ->
+                            navController.navigate(Screen.CategorySaints(groupId, valueId, title))
+                        },
+                    )
+                }
+                composable<Screen.CategorySaints> { entry ->
+                    val route = entry.toRoute<Screen.CategorySaints>()
+                    CategorySaintsScreen(
+                        groupId = route.groupId,
+                        valueId = route.valueId,
+                        onSaintClick = { id -> navController.navigate(Screen.SaintDetail(id)) },
+                    )
+                }
+                composable<Screen.SaintDetail> { entry ->
+                    val route = entry.toRoute<Screen.SaintDetail>()
+                    SaintDetailScreen(saintId = route.saintId)
+                }
             }
 
-            composable<Screen.Settings> {
-                SettingsScreen(onReplayWelcome = onReplayWelcome)
+            // Saints tab — list → saint detail.
+            navigation<Screen.Saints>(startDestination = Screen.SaintsHome) {
+                composable<Screen.SaintsHome> {
+                    SaintListScreen(
+                        onSaintClick = { id -> navController.navigate(Screen.SaintDetail(id)) },
+                    )
+                }
+                composable<Screen.SaintDetail> { entry ->
+                    val route = entry.toRoute<Screen.SaintDetail>()
+                    SaintDetailScreen(saintId = route.saintId)
+                }
             }
 
-            composable<Screen.SaintDetail> { entry ->
-                val route = entry.toRoute<Screen.SaintDetail>()
-                SaintDetailScreen(saintId = route.saintId)
-            }
-
-            composable<Screen.CategorySaints> { entry ->
-                val route = entry.toRoute<Screen.CategorySaints>()
-                CategorySaintsScreen(
-                    groupId = route.groupId,
-                    valueId = route.valueId,
-                    onSaintClick = { id -> navController.navigate(Screen.SaintDetail(id)) },
-                )
+            // Settings tab.
+            navigation<Screen.Settings>(startDestination = Screen.SettingsHome) {
+                composable<Screen.SettingsHome> {
+                    SettingsScreen(onReplayWelcome = onReplayWelcome)
+                }
             }
         }
     }
@@ -129,13 +167,21 @@ private fun resolveTitle(
     language: com.yortch.confirmationsaints.localization.AppLanguage,
 ): String? {
     return when {
-        currentRoute.endsWith("About") -> AppStrings.localized("About Confirmation", language)
-        currentRoute.endsWith("Explore") -> AppStrings.localized("Explore", language)
-        currentRoute.endsWith("Saints") -> AppStrings.localized("Saints", language)
-        currentRoute.endsWith("Settings") -> AppStrings.localized("Settings", language)
+        currentRoute.endsWith("AboutHome") -> AppStrings.localized("About Confirmation", language)
+        currentRoute.endsWith("ExploreHome") -> AppStrings.localized("Explore", language)
+        currentRoute.endsWith("SaintsHome") -> AppStrings.localized("Saints", language)
+        currentRoute.endsWith("SettingsHome") -> AppStrings.localized("Settings", language)
         currentRoute.contains("SaintDetail") -> {
-            // We don't have the saint name here without wiring VM; leave empty title.
-            ""
+            val saintId = runCatching {
+                backStackEntry?.toRoute<Screen.SaintDetail>()?.saintId
+            }.getOrNull()
+            if (saintId != null && backStackEntry != null) {
+                val viewModel: SaintListViewModel = hiltViewModel(backStackEntry)
+                val state by viewModel.state.collectAsStateWithLifecycle()
+                state.saints.firstOrNull { it.id == saintId }?.name ?: ""
+            } else {
+                ""
+            }
         }
         currentRoute.contains("CategorySaints") -> {
             runCatching { backStackEntry?.toRoute<Screen.CategorySaints>()?.title }.getOrNull()
