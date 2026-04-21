@@ -5,6 +5,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -72,10 +74,14 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.extended)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     // Navigation
     implementation(libs.androidx.navigation.compose)
+
+    // Splash screen (Android 12+ compatible)
+    implementation(libs.androidx.core.splashscreen)
 
     // Persistence
     implementation(libs.androidx.datastore.preferences)
@@ -83,12 +89,25 @@ dependencies {
     // Serialization
     implementation(libs.kotlinx.serialization.json)
 
-    // Image loading
+    // Image loading (Coil 3 — resolves file:///android_asset/ natively)
     implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 
-    // Testing
-    testImplementation(libs.junit.jupiter)
+    // Dependency injection
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+    ksp(libs.hilt.compiler)
+
+    // Unit testing (JUnit4 for broad tool compatibility with Robolectric)
+    testImplementation(libs.junit4)
     testImplementation(libs.turbine)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidx.test.ext.junit)
+
+    // Instrumented / Compose UI testing
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
 
 // -----------------------------------------------------------------------------
@@ -116,6 +135,9 @@ val syncSharedContent by tasks.registering(Sync::class) {
     }
     from(sharedContentDir.dir("categories")) {
         include("categories-en.json", "categories-es.json")
+    }
+    from(sharedContentDir.dir("content")) {
+        include("confirmation-info-en.json", "confirmation-info-es.json")
     }
     from(sharedContentDir.dir("images")) {
         include("*.jpg")
