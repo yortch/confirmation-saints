@@ -1,6 +1,9 @@
 # Android Compose Instrumentation Testing (Hilt + DataStore aware)
 
 **Owner:** Legolas (QA)
+**Confidence:** medium (validated 2026-07-24 — 12 live tests across 3 files
+compile clean against Hilt 2.52 + androidx.test:runner 1.6.2 + the patterns
+below).
 **Scope:** `android/app/src/androidTest/` for this project, but the pattern
 generalizes to any Hilt + Compose + DataStore app.
 
@@ -91,6 +94,65 @@ Required wiring (one-time, in the app module):
    }
    ```
 
+## Pattern B-lazy — seeding DataStore BEFORE the Activity exists
+
+**Problem:** `createAndroidComposeRule<MainActivity>()` launches MainActivity
+in the rule's `before()` phase — which runs BEFORE `@Before`. If a test needs
+`hasSeenWelcome=true` (or `appLanguage=ES`) pre-launch so MainActivity's first
+composition lands on the correct screen, `@Before` is too late. The Welcome
+pager will flash or the wrong initial destination will render before the
+DataStore write propagates, causing flaky assertions.
+
+**Solution:** drop the auto-launching rule. Use `createEmptyComposeRule()`
+and drive the Activity manually via `ActivityScenario`:
+
+```kotlin
+@HiltAndroidTest
+class MyTest {
+    @get:Rule(order = 0) val hiltRule = HiltAndroidRule(this)
+    @get:Rule(order = 1) val composeRule = createEmptyComposeRule()
+
+    @Inject lateinit var prefs: PreferencesRepository
+
+    @Before fun setUp() {
+        hiltRule.inject()
+        runBlocking {
+            // Baseline reset — tests share a HiltTestApplication process and
+            // DataStore writes persist across them. Reset prevents order-
+            // dependent flakes.
+            prefs.setHasSeenWelcome(false)
+            prefs.setLanguage(AppLanguage.EN)
+        }
+    }
+
+    @Test fun seed_true_then_launch() {
+        runBlocking { prefs.setHasSeenWelcome(true) }  // before launch
+        ActivityScenario.launch(MainActivity::class.java).use {
+            composeRule.waitUntil(5_000) { /* stable landmark */ }
+            // assertions — Welcome was never composed
+        }
+    }
+
+    @Test fun recreate_activity() {
+        val scenario = ActivityScenario.launch(MainActivity::class.java)
+        try {
+            // ... drive UI, mutate state ...
+            scenario.recreate()
+            composeRule.waitUntil(10_000) { /* post-recreate landmark */ }
+        } finally { scenario.close() }
+    }
+}
+```
+
+Why `createEmptyComposeRule()` works: it provides the Compose testing
+infrastructure (idling resource, semantics tree access, `waitUntil`) without
+owning an Activity. When `ActivityScenario.launch` starts MainActivity, the
+compose rule attaches to whichever Compose hierarchy becomes current. Assertions
+via `composeRule.onNodeWithText(...)` route into that tree automatically.
+
+`ActivityScenario` is in `androidx.test:core`, pulled in transitively by
+`androidx.test:runner` — no extra dependency needed.
+
 ## DataStore seeding for instrumentation tests
 
 Two options, pick based on test intent:
@@ -131,6 +193,63 @@ processes.
   negatives when the UI wraps or trims a row label.
 - **Never** assert on ordering — saint list order is not contractually
   stable across platforms (see `SaintNameComparator.kt`).
+
+## Waiting for DataStore → Flow → Compose recomposition
+
+DataStore writes from `LocalizationService.setLanguage` / `markWelcomeSeen`
+launch on `appScope` (or `viewModelScope`), then emit through the StateFlow,
+then the `collectAsStateWithLifecycle` call site recomposes. That round trip
+is NOT captured by `composeRule.waitForIdle()` — idling only covers the
+Compose frame clock, not external coroutine dispatchers.
+
+Correct idiom for post-mutation assertions:
+
+```kotlin
+composeRule.onNodeWithText("Español").performClick()
+composeRule.waitForIdle()
+composeRule.waitUntil(5_000) {
+    composeRule.onAllNodesWithText("Ajustes").fetchSemanticsNodes().isNotEmpty()
+}
+composeRule.onNodeWithText("Ajustes").assertIsDisplayed()
+```
+
+The `waitUntil` block polls the semantics tree until the recomposition lands.
+5 seconds is generous — typical latency is < 200 ms on an emulator. Use 10 s
+for assertions that involve reloading assets (saints-es.json re-parse in
+`SaintListViewModel.load`).
+
+## Landmark selection — avoiding ambiguous text
+
+Many strings in this app appear in multiple places at once:
+- `"Saints"` → bottom-nav label AND top-bar title on Saints tab.
+- `"Settings"` → bottom-nav label AND top-bar title on Settings tab.
+- After ES switch: `"Santos"` and `"Ajustes"` get the same duplication.
+
+Guidance:
+- For "I am on the Saint List" assertions, prefer the search-field
+  placeholder `"Name, interest, country..."` — it's unique to SaintListScreen.
+- For "I am on Settings" assertions, prefer the `"Language"` section header
+  (or `"Idioma"` in ES).
+- When you legitimately need to assert BOTH places recomposed (e.g.,
+  "language change propagated across top-bar and nav"), use
+  `onAllNodesWithText(...).fetchSemanticsNodes().size >= 2`.
+
+## LazyColumn rows that are below the fold
+
+`onNodeWithText("St. Thérèse of Lisieux")` fails if the row isn't in the
+composed viewport — LazyColumn only composes visible items. Two workarounds
+that avoid touching production code:
+
+1. **Filter first, assert second.** Type a search query that narrows the list
+   to the target saint: `performTextInput("Thérèse")` → the LazyColumn now
+   contains exactly one row, guaranteed visible.
+2. `performScrollToNode(hasText(..., substring = true))` on a scrollable
+   ancestor — requires identifying the LazyColumn among multiple scrollables
+   (filter chip row also scrolls). Option 1 is simpler and also exercises the
+   filter pipeline.
+
+Never add a `testTag` to a production composable just to support a
+scrollable-picker query — the search-filter approach is always available.
 
 ## Pitfalls observed in this codebase
 

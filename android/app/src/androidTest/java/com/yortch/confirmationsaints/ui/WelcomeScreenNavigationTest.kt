@@ -1,103 +1,162 @@
 package com.yortch.confirmationsaints.ui
 
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.createEmptyComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.test.core.app.ActivityScenario
+import com.yortch.confirmationsaints.MainActivity
+import com.yortch.confirmationsaints.data.repository.PreferencesRepository
 import com.yortch.confirmationsaints.localization.AppLanguage
-import com.yortch.confirmationsaints.localization.LocalAppLanguage
-import com.yortch.confirmationsaints.ui.screens.onboarding.WelcomeScreen
-import org.junit.Ignore
+import dagger.hilt.android.testing.HiltAndroidRule
+import dagger.hilt.android.testing.HiltAndroidTest
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
+import org.junit.Assert.assertEquals
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.junit.Assert.assertTrue
+import javax.inject.Inject
 
 /**
- * Compose UI instrumentation test for the Welcome onboarding pager.
+ * Full-app Compose UI instrumentation tests for the Welcome → Saint List
+ * onboarding gate.
  *
  * Contract under test (mirrors iOS committed behavior):
- *  - On first launch (hasSeenWelcome == false), the Welcome pager is shown.
- *  - Tapping "Get started" on the last page invokes the completion callback,
- *    which at the app level marks hasSeenWelcome = true and surfaces the
- *    Saint List.
- *  - On subsequent launches, the Saint List is the initial destination.
+ *  - On first launch (DataStore `hasSeenWelcome == false`) MainActivity shows
+ *    the Welcome pager.
+ *  - Tapping "Let's Go!" on the last pager page flips `hasSeenWelcome = true`
+ *    and swaps the root to the Saint List (first destination of MainScaffold).
+ *  - On subsequent launches (DataStore already `hasSeenWelcome == true`) the
+ *    Welcome pager is never shown; Saint List is the initial destination.
  *
- * Scope note: This class exercises the [WelcomeScreen] composable in
- * isolation via [createComposeRule]. The two whole-app relaunch/persistence
- * cases need a MainActivity + Hilt launch and therefore remain @Ignore
- * pending a HiltTestRunner (see
- * `.squad/decisions/inbox/legolas-android-instrumentation-tests.md`).
+ * Seeding strategy (see SKILL.md — Pattern B + DataStore seeding):
+ *  - Uses [createEmptyComposeRule] plus a manual [ActivityScenario.launch] so
+ *    we can call `prefs.setHasSeenWelcome(...)` *before* MainActivity exists.
+ *    `createAndroidComposeRule<MainActivity>()` launches the Activity in its
+ *    own `before()` — too early for the "skip welcome on relaunch" test.
+ *  - `@Before` resets the DataStore to a known baseline so tests don't
+ *    leak state into one another (tests run in the same HiltTestApplication
+ *    process; DataStore writes persist).
  */
+@HiltAndroidTest
 class WelcomeScreenNavigationTest {
 
-    @get:Rule
-    val composeRule = createComposeRule()
+    @get:Rule(order = 0)
+    val hiltRule = HiltAndroidRule(this)
+
+    @get:Rule(order = 1)
+    val composeRule = createEmptyComposeRule()
+
+    @Inject
+    lateinit var prefs: PreferencesRepository
+
+    @Before
+    fun setUp() {
+        hiltRule.inject()
+        runBlocking {
+            prefs.setHasSeenWelcome(false)
+            prefs.setLanguage(AppLanguage.EN)
+        }
+    }
 
     @Test
     fun should_show_welcome_screen_when_hasSeenWelcome_is_false() {
-        composeRule.setContent {
-            CompositionLocalProvider(LocalAppLanguage provides AppLanguage.EN) {
-                WelcomeScreen(onComplete = {})
-            }
-        }
+        runBlocking { prefs.setHasSeenWelcome(false) }
 
-        // Page 1 title (English) renders when the pager first composes —
-        // which is exactly what AppRoot shows when hasSeenWelcome == false.
-        composeRule.onNodeWithText("Find Your Confirmation Saint").assertIsDisplayed()
-        // Skip + Next controls are visible on the first three pages.
-        composeRule.onNodeWithText("Skip").assertIsDisplayed()
-        composeRule.onNodeWithText("Next").assertIsDisplayed()
+        ActivityScenario.launch(MainActivity::class.java).use {
+            composeRule.waitForIdle()
+            composeRule.waitUntil(5_000) {
+                composeRule.onAllNodesWithText("Find Your Confirmation Saint")
+                    .fetchSemanticsNodes().isNotEmpty()
+            }
+            composeRule.onNodeWithText("Find Your Confirmation Saint").assertIsDisplayed()
+            composeRule.onNodeWithText("Skip").assertIsDisplayed()
+            composeRule.onNodeWithText("Next").assertIsDisplayed()
+        }
     }
 
     @Test
     fun should_navigate_to_saint_list_when_get_started_is_tapped() {
-        var completed = false
-        composeRule.setContent {
-            CompositionLocalProvider(LocalAppLanguage provides AppLanguage.EN) {
-                WelcomeScreen(onComplete = { completed = true })
+        runBlocking { prefs.setHasSeenWelcome(false) }
+
+        ActivityScenario.launch(MainActivity::class.java).use {
+            composeRule.waitUntil(5_000) {
+                composeRule.onAllNodesWithText("Find Your Confirmation Saint")
+                    .fetchSemanticsNodes().isNotEmpty()
             }
-        }
 
-        // Advance through the 4-page pager by tapping Next three times —
-        // exactly how a user reaches the final "Let's Go!" CTA.
-        repeat(3) {
-            composeRule.onNodeWithText("Next").performClick()
+            // Advance the 4-page pager via the user-visible Next button.
+            repeat(3) {
+                composeRule.onNodeWithText("Next").performClick()
+                composeRule.waitForIdle()
+            }
+
+            composeRule.onNodeWithText("Ready to Find Your Saint?").assertIsDisplayed()
+            composeRule.onNodeWithText("Let's Go!").performClick()
             composeRule.waitForIdle()
+
+            // After Let's Go! AppRoot flips to MainScaffold → SaintsHome.
+            // The search placeholder is a uniquely identifying Saint List
+            // element (top-bar "Saints" would collide with the nav tab).
+            composeRule.waitUntil(5_000) {
+                composeRule.onAllNodesWithText("Name, interest, country...")
+                    .fetchSemanticsNodes().isNotEmpty()
+            }
+            composeRule.onNodeWithText("Name, interest, country...").assertIsDisplayed()
         }
-
-        // Final page: the "Let's Go!" button is the "Get started" CTA.
-        composeRule.onNodeWithText("Ready to Find Your Saint?").assertIsDisplayed()
-        composeRule.onNodeWithText("Let's Go!").assertIsDisplayed().performClick()
-        composeRule.waitForIdle()
-
-        // Invocation of onComplete is what drives the app-level transition to
-        // the Saint List (AppRoot flips hasSeenWelcome and routes to MainScaffold).
-        assertTrue("Tapping Let's Go! must invoke onComplete", completed)
     }
 
     @Test
-    @Ignore(
-        "Needs HiltTestRunner + DataStore seeding to assert persistence " +
-            "across the whole-app boundary. Blocking on Aragorn to add a " +
-            "HiltTestRunner (see decisions inbox)."
-    )
     fun should_persist_hasSeenWelcome_true_after_completing_onboarding() {
-        // TODO(after Hilt test runner lands): launch MainActivity via
-        // createAndroidComposeRule<MainActivity>(), advance pager, tap
-        // "Let's Go!", then read PreferencesRepository.hasSeenWelcome and
-        // assert == true.
+        runBlocking { prefs.setHasSeenWelcome(false) }
+
+        ActivityScenario.launch(MainActivity::class.java).use {
+            composeRule.waitUntil(5_000) {
+                composeRule.onAllNodesWithText("Find Your Confirmation Saint")
+                    .fetchSemanticsNodes().isNotEmpty()
+            }
+            repeat(3) {
+                composeRule.onNodeWithText("Next").performClick()
+                composeRule.waitForIdle()
+            }
+            composeRule.onNodeWithText("Let's Go!").performClick()
+
+            // Wait for AppRoot to recompose past the Welcome screen — proves
+            // the onComplete → markWelcomeSeen → DataStore write round-trip
+            // completed.
+            composeRule.waitUntil(5_000) {
+                composeRule.onAllNodesWithText("Name, interest, country...")
+                    .fetchSemanticsNodes().isNotEmpty()
+            }
+
+            val persisted = runBlocking { prefs.hasSeenWelcome.first() }
+            assertEquals(
+                "Completing the onboarding pager must persist hasSeenWelcome=true",
+                true,
+                persisted,
+            )
+        }
     }
 
     @Test
-    @Ignore(
-        "Needs HiltTestRunner + DataStore seeding (hasSeenWelcome=true pre-launch) " +
-            "to assert the initial destination is Saint List. Blocking on Aragorn " +
-            "to add a HiltTestRunner (see decisions inbox)."
-    )
     fun should_skip_welcome_on_relaunch_when_hasSeenWelcome_is_true() {
-        // TODO(after Hilt test runner lands): seed DataStore with
-        // hasSeenWelcome=true before MainActivity launches, then assert the
-        // Saint List is the initial composition and Welcome never appears.
+        // Seed BEFORE the Activity exists — this is the whole reason we use
+        // createEmptyComposeRule + manual ActivityScenario rather than
+        // createAndroidComposeRule<MainActivity>().
+        runBlocking { prefs.setHasSeenWelcome(true) }
+
+        ActivityScenario.launch(MainActivity::class.java).use {
+            composeRule.waitUntil(5_000) {
+                composeRule.onAllNodesWithText("Name, interest, country...")
+                    .fetchSemanticsNodes().isNotEmpty()
+            }
+            // Saint List is the initial destination — no Welcome content ever
+            // becomes visible.
+            composeRule.onNodeWithText("Name, interest, country...").assertIsDisplayed()
+            composeRule.onNodeWithText("Find Your Confirmation Saint").assertDoesNotExist()
+            composeRule.onNodeWithText("Let's Go!").assertDoesNotExist()
+        }
     }
 }

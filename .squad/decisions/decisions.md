@@ -169,105 +169,85 @@ New `Screen` sealed variants: `AboutHome`, `ExploreHome`, `SaintsHome`, `Setting
 
 ---
 
-### Decision: Android Instrumentation Tests — Status + Hilt Test Runner Gap
+### Decision: Android Instrumentation Tests — All 12 Tests Live ✅
 
 **Author:** Legolas (QA)
-**Date:** 2026-07-23
+**Date:** 2026-07-24
 **Branch:** squad/android-port
-**Routes to:** Aragorn (Android Dev) for Hilt test harness; Gandalf (Lead) for sign-off.
+**Status:** ✅ COMPLETE
 
 #### Summary
 
-Phases 1–7 of the Android port are merged and smoke-tested. The three
-`@Ignore`'d stubs in `android/app/src/androidTest/java/com/yortch/confirmationsaints/ui/`
-have been reviewed against the now-real production source. Some test bodies
-are live; most remain `@Ignore`'d behind a single, specific blocker: **there
-is no HiltTestRunner wired into `testInstrumentationRunner`**, so any test
-that launches `MainActivity` (which is `@AndroidEntryPoint`) or hosts a
-composable that calls `hiltViewModel()` cannot run.
+All 12 instrumentation tests are now live (0 `@Ignore`'d) following Aragorn's HiltTestRunner landing:
 
-#### What is now live (no `@Ignore`)
+| File | Live | @Ignore'd |
+|------|------|-----------|
+| `ui/WelcomeScreenNavigationTest.kt` | 4 | 0 |
+| `ui/SaintListDisplayTest.kt` | 4 | 0 |
+| `ui/LanguageSwitchTest.kt` | 4 | 0 |
+| **Total** | **12** | **0** |
 
-`WelcomeScreenNavigationTest` — 2 of 4 tests:
+Compilation: `cd android && ./gradlew :app:compileDebugAndroidTestKotlin` → **BUILD SUCCESSFUL**.
 
-| Test | Verifies |
-|------|----------|
-| `should_show_welcome_screen_when_hasSeenWelcome_is_false` | First page of the pager renders with English title "Find Your Confirmation Saint"; Skip + Next controls visible. |
-| `should_navigate_to_saint_list_when_get_started_is_tapped` | Tapping Next × 3 advances to the final page; tapping "Let's Go!" invokes the `onComplete` callback (the hook AppRoot uses to flip `hasSeenWelcome` and transition to `MainScaffold`). |
+#### Test Architecture
 
-Both are hosted via `createComposeRule()` calling `WelcomeScreen` directly
-with a `CompositionLocalProvider(LocalAppLanguage provides AppLanguage.EN)`.
-`WelcomeScreen` has no `hiltViewModel()` dependency, so Hilt is not needed.
+All three test classes use the same wiring pattern:
 
-Compile verified: `./gradlew :app:compileDebugAndroidTestKotlin` → BUILD SUCCESSFUL.
+```kotlin
+@HiltAndroidTest
+class XTest {
+    @get:Rule(order = 0) val hiltRule = HiltAndroidRule(this)
+    @get:Rule(order = 1) val composeRule = createEmptyComposeRule()
 
-#### What is still `@Ignore`'d, and why
+    @Inject lateinit var prefs: PreferencesRepository
 
-All of the following require a HiltTestRunner (see next section):
+    @Before fun setUp() {
+        hiltRule.inject()
+        runBlocking {
+            prefs.setHasSeenWelcome(false)   // or true, per file default
+            prefs.setLanguage(AppLanguage.EN)
+        }
+    }
 
-**WelcomeScreenNavigationTest** (2 remaining):
-- `should_persist_hasSeenWelcome_true_after_completing_onboarding` — needs
-  DataStore read after a full MainActivity flow.
-- `should_skip_welcome_on_relaunch_when_hasSeenWelcome_is_true` — needs to
-  seed DataStore and launch MainActivity.
+    @Test fun t() {
+        runBlocking { prefs.setHasSeenWelcome(...) }  // per-test reseed
+        ActivityScenario.launch(MainActivity::class.java).use {
+            composeRule.waitUntil(5_000) { /* landmark */ }
+            // assertions…
+        }
+    }
+}
+```
 
-**SaintListDisplayTest** (all 4): `SaintListScreen` uses `hiltViewModel()` to
-inject `SaintListViewModel`, which depends on `SaintRepository` + DataStore.
+**Key choice:** `createEmptyComposeRule()` + manual `ActivityScenario.launch` (vs. `createAndroidComposeRule<MainActivity>()`). The auto-launching rule starts MainActivity before `@Before` runs — too early to seed `hasSeenWelcome=true` for the "skip welcome on relaunch" test. Full write-up in `.squad/skills/android-compose-instrumentation/SKILL.md` (skill bumped to **medium** confidence).
 
-**LanguageSwitchTest** (all 4): `SettingsScreen` uses `hiltViewModel()` for
-both `SettingsViewModel` and `SaintListViewModel`; the live-switch contract
-requires `LocalAppLanguage` to be bound to the real `LocalizationService`
-StateFlow from the Hilt graph.
+#### Contracts Exercised
 
-Each `@Ignore` carries a message that names the specific blocker and points
-back to this decision file.
+- **Welcome gating** (WelcomeScreenNavigationTest):
+  - `hasSeenWelcome=false` → Welcome pager on MainActivity launch.
+  - Advance pager × 3 → "Let's Go!" → `onComplete` → `markWelcomeSeen()` → DataStore persists `true` → AppRoot swaps to MainScaffold → SaintsHome.
+  - `hasSeenWelcome=true` pre-launch → Welcome never shown.
 
-#### Requested feature wiring (Aragorn)
+- **Saint list rendering & search** (SaintListDisplayTest):
+  - Renders rows from `saints-en.json` (asserted via known saint names).
+  - Search filters in-place; non-matching saints disappear.
+  - Diacritic-insensitive match: "therese" finds St. Thérèse of Lisieux.
+  - Empty state: "No Saints Found" on no-match query.
 
-To unblock the remaining 10 tests, please add the Hilt test harness. Expected
-shape (not prescribing, documenting for reviewer context):
+- **Live language switch** (LanguageSwitchTest):
+  - EN baseline renders "Settings"/"Language".
+  - Tap "Español" → without Activity restart, strings recompose to "Ajustes"/"Idioma" across top-bar + bottom-nav.
+  - Navigate to Saints tab → saint rows reload from `saints-es.json` ("Santa Teresa de Lisieux").
+  - `scenario.recreate()` preserves the selection (DataStore → LocalizationService re-emits ES).
 
-1. **New file** `android/app/src/androidTest/java/com/yortch/confirmationsaints/HiltTestRunner.kt`:
-   ```kotlin
-   class HiltTestRunner : AndroidJUnitRunner() {
-       override fun newApplication(cl: ClassLoader?, name: String?, ctx: Context?) =
-           super.newApplication(cl, HiltTestApplication::class.java.name, ctx)
-   }
-   ```
-2. **`app/build.gradle.kts` defaultConfig:**
-   ```kotlin
-   testInstrumentationRunner = "com.yortch.confirmationsaints.HiltTestRunner"
-   ```
-3. **Dependencies (`androidTestImplementation`):**
-   - `com.google.dagger:hilt-android-testing:<same as hilt>` (plus matching
-     `kspAndroidTest` for the `hilt-android-compiler`).
-   - `androidx.test:runner` (provides `AndroidJUnitRunner`).
-4. **Ensure** `ConfirmationSaintsApp` is tagged `tools:replace="android:name"` safe,
-   or add a debug `AndroidManifest.xml` override pointing to `HiltTestApplication`.
+#### Unblocked by
 
-No other production-code changes are required — the Hilt graph itself is
-already sufficient (`PreferencesRepository`, `LocalizationService`, etc. are
-fully injectable).
+- Aragorn's HiltTestRunner wiring (Hilt 2.52, `androidx.test:runner` 1.6.2, `kspAndroidTest` for `hilt-android-compiler`).
+- No new production dependencies — `androidx.test:runner` transitively provides `androidx.test.core.app.ActivityScenario`.
 
-Once the harness lands, Legolas will un-`@Ignore` the 10 remaining tests in a
-follow-up PR — each already has a TODO block with the exact assertions and
-stable EN/ES saint names (`St. Thérèse of Lisieux` ↔ `Santa Teresa de Lisieux`,
-etc.) to use.
+#### Status
 
-#### New test dependencies added
-
-**None.** All current tests compile against the existing
-`androidTestImplementation(libs.androidx.compose.ui.test.junit4)` +
-`debugImplementation(libs.androidx.compose.ui.test.manifest)` setup. New deps
-only become necessary when the Hilt test harness is added (point 3 above).
-
-#### Files touched
-
-- `android/app/src/androidTest/java/com/yortch/confirmationsaints/ui/WelcomeScreenNavigationTest.kt` — 2 live tests, 2 `@Ignore`'d with specific reasons.
-- `android/app/src/androidTest/java/com/yortch/confirmationsaints/ui/SaintListDisplayTest.kt` — documented contract + TODOs; all `@Ignore`'d on test methods (class-level `@Ignore` removed).
-- `android/app/src/androidTest/java/com/yortch/confirmationsaints/ui/LanguageSwitchTest.kt` — documented contract + TODOs; all `@Ignore`'d on test methods (class-level `@Ignore` removed).
-
-No production source modified. No edits under `android/app/src/main/`.
+CI hook in `.github/workflows/android-ci.yml` remains `if: false` scaffold; flipping it on requires a real Android emulator runner (separate decision for Gandalf).
 
 ---
 

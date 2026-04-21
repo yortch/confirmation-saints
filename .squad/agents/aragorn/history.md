@@ -157,3 +157,19 @@ Once the harness lands, Legolas will un-`@Ignore` the remaining tests in a follo
 - Did NOT touch `androidTest/.../ui/` files — that's Legolas's artifact. Infra-only boundary respected.
 
 **Handoff:** `.squad/decisions/inbox/aragorn-hilttestrunner-wiring.md` written so Legolas can pick up and un-`@Ignore` the 10 tests with the standard `@HiltAndroidTest` + `HiltAndroidRule` + `createAndroidComposeRule<MainActivity>()` pattern.
+
+## Cross-agent sync: Legolas unblocked all 12 instrumentation tests (2026-04-21T20:33:14Z)
+
+Legolas has completed the final un-`@Ignore` of the instrumentation tests after consuming the HiltTestRunner wiring above. All 12 tests are now live:
+
+- **WelcomeScreenNavigationTest** (4) — welcome gating contract
+- **SaintListDisplayTest** (4) — saint list rendering & diacritic-insensitive search
+- **LanguageSwitchTest** (4) — live language switch without Activity restart
+
+Architecture used: `@HiltAndroidTest` + `HiltAndroidRule(order=0)` + `createEmptyComposeRule()(order=1)` + manual `ActivityScenario.launch()`. This pattern allows pre-launch DataStore seeding in `@Before` (e.g., `hasSeenWelcome=true` for the relaunch test).
+
+Build verified: `./gradlew :app:compileDebugAndroidTestKotlin` → BUILD SUCCESSFUL.
+
+Decision merged to `.squad/decisions/decisions.md` as **"Decision: Android Instrumentation Tests — All 12 Tests Live ✅"**.
+
+No further instrumentation work is needed from my side; CI hook remains `if: false` for Gandalf to decide.

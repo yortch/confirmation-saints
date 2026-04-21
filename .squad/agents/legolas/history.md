@@ -65,3 +65,23 @@
 - **Trigger:** Aragorn landed HiltTestRunner (see `.squad/decisions.md#hilttestrunner-wiring-for-android-instrumentation-tests-2026-04-21`)
 - **Outcome:** All 10 `@Ignore`'d tests now ready to un-ignore and implement against real MainActivity + hiltViewModel()
 - **Next Steps:** Remove @Ignore, annotate with @HiltAndroidTest, add HiltAndroidRule + ComposeRule per skill pattern
+
+### Hilt Tests Unblocked — 12/12 Live (2026-07-24)
+- **Trigger:** Aragorn wired `HiltTestRunner` + `testInstrumentationRunner` + Hilt test deps (`.squad/decisions/inbox/aragorn-hilttestrunner-wiring.md`). All 10 previously `@Ignore`'d tests became implementable.
+- **Outcome:** `./gradlew :app:compileDebugAndroidTestKotlin` → **BUILD SUCCESSFUL**. `@Ignore` count across the three UI test files: **0**. Total live: 12/12.
+- **Files:** `WelcomeScreenNavigationTest.kt` (4), `SaintListDisplayTest.kt` (4), `LanguageSwitchTest.kt` (4). All `@HiltAndroidTest`.
+- **DataStore seeding pattern that worked (confirmed, not just speculation):**
+  - `createAndroidComposeRule<MainActivity>()` launches the Activity in its rule's `before()` — that runs BEFORE `@Before`, so `hiltRule.inject()` + `prefs.setHasSeenWelcome(true)` happen TOO LATE for "initial destination" tests (Welcome would flash first).
+  - Switched to `createEmptyComposeRule()` + manual `ActivityScenario.launch(MainActivity::class.java)` in each test body. This lets `@Before` inject + seed, then each test re-seeds pre-launch as needed. `composeRule` attaches to whichever Compose hierarchy becomes current — no per-activity wiring required.
+  - Baseline reset in `@Before` (`setHasSeenWelcome(false); setLanguage(EN)`) prevents test-order pollution — DataStore persists across tests in the same HiltTestApplication process.
+  - Promoted this pattern to `.squad/skills/android-compose-instrumentation/SKILL.md` as "Pattern B-lazy". Bumped skill confidence to medium.
+- **Compose assertion gotchas that bit me:**
+  - `onNodeWithText("Settings")` after language switch is ambiguous — both bottom-nav label AND top-bar title match. Used `onAllNodesWithText(...).fetchSemanticsNodes().size >= 2` to assert both places recomposed.
+  - Top-bar "Saints" collides with the nav tab "Saints". For the "arrived on Saint List" assertion, the search-field placeholder `"Name, interest, country..."` is a unique landmark — used it as the "I'm on Saint List" oracle throughout.
+  - `LazyColumn` only composes visible rows; naive `onNodeWithText("St. Thérèse of Lisieux")` fails if it's below the fold. Fix: type a search query first to collapse the list to one match — also exercises the filter pipeline. Avoids needing a testTag on the LazyColumn (would have required prod-code edit).
+  - `composeRule.waitUntil { … fetchSemanticsNodes().isNotEmpty() }` is the right idiom for DataStore-driven recomposition (async write → flow emit → recompose). `waitForIdle()` alone is insufficient — coroutine launches on `appScope` aren't in the Compose frame clock.
+- **ActivityScenario was necessary** — specifically for `should_skip_welcome_on_relaunch_when_hasSeenWelcome_is_true` (must seed pre-launch, can't with auto-launch rule) and for `should_persist_language_selection_across_activity_recreation` (needed `scenario.recreate()`). `createEmptyComposeRule` + manual launch was the pattern that covered all cases uniformly, so used it across all three files for consistency.
+- **Navigation assertions that were tricky:**
+  - Settings → tap "Español" radio → wait for `Ajustes`. The `LocalizationService.setLanguage` launches on `appScope` (not `viewModelScope`), so the write is async and the flow emits on another dispatcher. `waitUntil` with a 5s timeout was reliable; direct assertion without waiting was flaky.
+  - Tab switching via bottom-nav `Text` labels works (`onNodeWithText("Santos").performClick()`) because `NavigationBarItem` exposes its Text child semantics. No content-description needed.
+- **No production-code edits.** Every test hook used existing semantics. Two new `androidTest` files deps needed: none — `androidx.test:runner` transitively provides `androidx.test.core.app.ActivityScenario`, already declared.
