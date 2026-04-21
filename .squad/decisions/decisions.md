@@ -2,7 +2,7 @@
 
 ## Active Decisions
 
-### Decision: Project Architecture — Catholic Saints iOS App
+### Decision:### Decision: Project Architecture — Catholic Saints iOS App
 **Author:** Gandalf (Lead) | **Date:** 2026-04-12 | **Status:** Active
 
 #### Context
@@ -42,7 +42,11 @@ Greenfield iOS app for helping confirmation candidates choose a patron saint. Mu
 
 ---
 
-### Decision: UI Integration — Bilingual Data + Complete Views
+
+
+---
+
+### Decision:### Decision: UI Integration — Bilingual Data + Complete Views
 **Author:** Frodo (iOS Dev) | **Date:** 2026-04-12 | **Status:** Implemented
 
 #### What Changed
@@ -72,7 +76,11 @@ Integrated Samwise's bilingual saint data (25 saints EN+ES) into the app and bui
 
 ---
 
-### Decision: Saint Data Schema Design
+
+
+---
+
+### Decision:### Decision: Saint Data Schema Design
 **Author:** Samwise (Data/Backend) | **Date:** 2025-07-15 | **Status:** Implemented
 
 #### Context
@@ -100,7 +108,11 @@ The app needs a platform-agnostic, bilingual data format for saint information t
 
 ---
 
-### Decision: Matching Fields Must Stay English in All Language Files
+
+
+---
+
+### Decision:### Decision: Matching Fields Must Stay English in All Language Files
 **Author:** Samwise (Data/Backend) | **Date:** 2025-07-16 | **Status:** Implemented
 
 #### Context
@@ -118,7 +130,11 @@ This is because the ViewModel uses English category IDs for matching, and we agr
 
 ---
 
-### Decision: User Directives — System Locale, Clickable Sources, Saint Images, Icon Design
+
+
+---
+
+### Decision:### Decision: User Directives — System Locale, Clickable Sources, Saint Images, Icon Design
 **Author:** Jorge Balderas (via Copilot) | **Date:** 2026-04-12 | **Status:** Implemented
 
 #### Directives
@@ -140,7 +156,11 @@ This is because the ViewModel uses English category IDs for matching, and we agr
 
 ---
 
-### Decision: Source URLs and Standardized Source Names
+
+
+---
+
+### Decision:### Decision: Source URLs and Standardized Source Names
 **Author:** Samwise (Data/Backend) | **Date:** 2026-04-12 | **Status:** Implemented
 
 #### Context
@@ -160,7 +180,11 @@ Sources in saint detail view should be clickable links (per user directive). Req
 
 ---
 
-### Decision: Dictionary-Based In-App Localization
+
+
+---
+
+### Decision:### Decision: Dictionary-Based In-App Localization
 **Author:** Frodo (iOS Dev) | **Date:** 2026-04-12 | **Status:** Implemented
 
 #### Context
@@ -179,7 +203,11 @@ Created `AppStrings.localized(_:language:)` in `LocalizationService.swift` — a
 
 ---
 
-### Decision: Reactive Language Switching Pattern
+
+
+---
+
+### Decision:### Decision: Reactive Language Switching Pattern
 **Author:** Frodo (iOS Dev) | **Date:** 2025-07-18 | **Status:** Implemented
 
 #### Decision
@@ -203,7 +231,11 @@ Language switching via `@AppStorage("appLanguage")` triggers `SaintListViewModel
 
 ---
 
-### Decision: UI Polish — Splash Screen, Date Formatting, Tab Reorder
+
+
+---
+
+### Decision:### Decision: UI Polish — Splash Screen, Date Formatting, Tab Reorder
 **Author:** Frodo (iOS Dev) | **Date:** 2026-04-13 | **Status:** Implemented
 
 #### Changes
@@ -234,7 +266,11 @@ Language switching via `@AppStorage("appLanguage")` triggers `SaintListViewModel
 
 ---
 
-### Decision: Spanish Display Tags and Affinities
+
+
+---
+
+### Decision:### Decision: Spanish Display Tags and Affinities
 **Author:** Samwise (Data/Backend) | **Date:** 2026-04-13 | **Status:** Implemented
 
 #### Context
@@ -262,3 +298,223 @@ Any localized display fields should use the `display*` prefix convention. This p
 - **Legolas (QA):** Search filtering tests should verify both EN and ES queries work
 - **Gandalf (Arch):** New convention established for dual-language display patterns
 - **Samwise (Data):** Apply same pattern to any future display-only fields requiring translation
+
+---
+
+## Android Port Decisions
+
+
+
+---
+
+### Decision:### Decision: kotlinx.serialization Chosen Over Moshi
+
+**Author:** Gandalf (Lead) | **Date:** 2026-04-21 | **Status:** Decided
+
+#### Decision
+
+Use `kotlinx.serialization` (1.7.x) for all JSON parsing in the Android app. Do not use Moshi, Gson, or Jackson.
+
+#### Rationale
+
+- First-party Kotlin library with compile-time code generation (no reflection).
+- Pairs naturally with type-safe Navigation Compose routes (both use `@Serializable`).
+- Multiplatform-ready if KMP is considered later.
+- `ignoreUnknownKeys = true` handles future schema additions gracefully.
+
+#### Impact
+
+- **Aragorn:** All data classes annotated with `@Serializable`. Plugin: `kotlin-serialization`.
+- **Legolas:** Unit tests can use the same `Json` instance for test fixtures.
+
+---
+
+
+
+---
+
+### Decision:### Decision: SharedContent Gradle Sync Task — Canonical Assets Bridge
+
+**Author:** Gandalf (Lead) & Aragorn (Android Dev) | **Date:** 2026-04-21 | **Status:** Implemented
+
+#### Decision
+
+`SharedContent/` (JSON data + images) is copied into Android `assets/` at build time via a Gradle `Sync` task (type: `org.gradle.api.tasks.Sync`) wired as a `preBuild` dependency. The task whitelists only `saints-*.json`, `categories-*.json`, and `images/*.jpg` for APK inclusion. Generated assets are gitignored (except `assets/README.md`).
+
+#### Implementation
+
+```kotlin
+val syncSharedContent by tasks.registering(Sync::class) {
+    from(sharedContentDir.dir("saints")) { include("saints-en.json", "saints-es.json") }
+    from(sharedContentDir.dir("categories")) { include("categories-en.json", "categories-es.json") }
+    from(sharedContentDir.dir("images")) { include("*.jpg"); into("images") }
+    into(layout.projectDirectory.dir("src/main/assets"))
+    preserve { include("README.md") }
+}
+tasks.named("preBuild").configure { dependsOn(syncSharedContent) }
+```
+
+#### Rationale
+
+- APK must be self-contained (no runtime path to repo root).
+- `SharedContent/` at repo root remains the single source of truth.
+- `Sync` (not `Copy`) guarantees destination mirrors source — stale files auto-deleted.
+- Incremental and up-to-date aware. Hooking into `preBuild` means every build picks up latest content automatically.
+
+#### Contract for Other Agents
+
+- **Samwise (Data):** Continue editing `SharedContent/` as normal. Android picks up changes automatically on next build.
+- **Gandalf/Frodo:** The task's inclusion list is authoritative for "what ships in APK". If adding new `SharedContent/` category (e.g., `confirmation-info-*.json`), update the task's `from(...)` blocks in the same PR.
+- **Legolas (QA):** Android parity tests automatically get latest assets via `preBuild` dependency.
+
+#### Impact
+
+- No duplication between iOS and Android content paths.
+- Android APK grows by `SharedContent/images/` size (~2.8 MB) + JSON (~100 KB).
+
+---
+
+
+
+---
+
+### Decision:### Decision: Coil 3 for Image Loading from Assets
+
+**Author:** Gandalf (Lead) | **Date:** 2026-04-21 | **Status:** Decided
+
+#### Decision
+
+Use Coil 3 (`io.coil-kt.coil3:coil-compose:3.1.0`) for loading saint images from `assets/SharedContent/images/`. Use `file:///android_asset/` URI scheme — Coil resolves this natively without custom fetcher.
+
+#### Rationale
+
+- Coil 3 is Compose-first, Kotlin-first, and lightweight.
+- `file:///android_asset/` is a standard Android URI scheme that Coil handles out of the box.
+- Same image filenames used on both iOS and Android via `SharedContent/images/`.
+- Crossfade transitions and in-memory caching come for free.
+
+#### Implementation Pattern
+
+```kotlin
+AsyncImage(
+    model = "file:///android_asset/SharedContent/images/${saint.id}.jpg",
+    contentDescription = saint.name,
+    modifier = Modifier.size(64.dp),
+    contentScale = ContentScale.Crop,
+    placeholder = painterResource(id = R.drawable.ic_placeholder)
+)
+```
+
+#### Impact
+
+- **Aragorn:** Compose `SaintDetailView` and `SaintRowView` use `AsyncImage`.
+- **Samwise:** Image filenames must match saint `id` (already the case).
+- **Legolas:** Image loading tests verify fallback placeholder appears on missing assets.
+
+---
+
+
+
+---
+
+### Decision:### Decision: In-App Localization via StateFlow + DataStore (Not System Locale)
+
+**Author:** Gandalf (Lead) | **Date:** 2026-04-21 | **Status:** Decided
+
+#### Decision
+
+Android uses a `LocalizationService` holding a `StateFlow<AppLanguage>`, backed by `DataStore<Preferences>` for persistence. A Compose `CompositionLocal` provides the current language through the tree. UI strings are served by an in-memory `AppStrings` Kotlin map (ported from iOS). **Standard Android `strings.xml` is NOT used for user-facing text** that must respond to in-app language switch.
+
+`strings.xml` is reserved only for system-level strings (app name in launcher, permission rationale).
+
+#### Rationale
+
+- iOS switches language without restarting. Users expect the same on Android.
+- `strings.xml` localization is tied to system locale and requires `Activity` recreation or `attachBaseContext` hacks — fragile and inconsistent.
+- The `AppStrings` map is already maintained on iOS; porting it is lower risk than managing parallel `strings.xml` files.
+- Saint content switches by reloading the appropriate `saints-{lang}.json` from assets (no `strings.xml` dependency).
+
+#### Implementation Pattern
+
+```kotlin
+@Composable
+private fun SaintListScreen(viewModel: SaintListViewModel) {
+    val language by localLanguage.current
+    val appStrings = AppStrings(language)
+    
+    Column {
+        Text(appStrings.localized("screen_saints_title"))
+        LazyColumn {
+            items(viewModel.saints) { saint ->
+                SaintRow(saint, appStrings)
+            }
+        }
+    }
+}
+```
+
+#### Contract
+
+- All UI text calls `AppStrings.localized(key, language)` with the current language from `CompositionLocal`.
+- When adding new UI strings, add to both `AppStrings` map (active) and `strings.xml` (reference only).
+- Saint detail content and category names are never hardcoded — they come from JSON (no `strings.xml` translation).
+
+#### Impact
+
+- **Aragorn:** Implement `LocalizationService`, `AppStrings`, `CompositionLocalProvider`. Wire language state into all screens.
+- **Samwise:** No impact (JSON files already localized by language).
+- **Legolas:** Test that changing language updates both UI strings and saint content without Activity restart.
+
+---
+
+
+
+---
+
+### Decision:### Decision: Hilt for Dependency Injection
+
+**Author:** Gandalf (Lead) | **Date:** 2026-04-21 | **Status:** Decided
+
+#### Decision
+
+Use Hilt (2.54.x) for dependency injection in the Android app. ViewModels use `@HiltViewModel`. `SaintRepository`, `LocalizationService`, and `DataStore` are provided via Hilt modules.
+
+#### Rationale
+
+- Standard Android DI choice with first-class Jetpack integration.
+- `hilt-navigation-compose` provides `hiltViewModel()` for scoped ViewModel injection in Navigation Compose.
+- Single `:app` module means Hilt's simplicity is appropriate (no Dagger component complexity).
+
+#### Implementation Pattern
+
+```kotlin
+@HiltAndroidApp
+class CatholicSaintsApp : Application()
+
+@AndroidEntryPoint
+class MainActivity : ComponentActivity()
+
+@HiltViewModel
+class SaintListViewModel @Inject constructor(
+    private val repo: SaintRepository,
+    private val localization: LocalizationService
+) : ViewModel()
+
+// In Compose:
+val viewModel: SaintListViewModel = hiltViewModel()
+```
+
+#### Contract
+
+- **Legolas:** Test modules can swap `SaintRepository` for a fake via `@TestInstallIn` + custom qualifier.
+- All injectable dependencies must have explicit `@Inject` constructors or Hilt `@Provides` bindings.
+
+#### Impact
+
+- **Aragorn:** `@HiltAndroidApp` on Application, `@AndroidEntryPoint` on Activity, `@HiltViewModel` on all ViewModels.
+- Test infrastructure can mock repository and localization service.
+
+
+
+---
+
