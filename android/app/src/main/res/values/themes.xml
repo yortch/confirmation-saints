@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Minimal Material 3 base theme for the splash / pre-Compose launch window.
+      Full Compose theming (colors, typography, shapes) lives in
+      com.yortch.confirmationsaints.ui.theme.Theme.kt.
+    -->
+    <style name="Theme.ConfirmationSaints" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
