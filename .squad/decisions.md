@@ -140,6 +140,30 @@ Neither platform forks or duplicates this directory. iOS consumes it via a folde
 
 ---
 
+### HiltTestRunner Wiring for Android Instrumentation Tests (2026-04-21)
+**Author:** Aragorn (Android Dev)  
+**Status:** Implemented
+
+Added HiltTestRunner infrastructure to enable @HiltAndroidTest support for 10 blocked UI tests in `android/app/src/androidTest/`.
+
+**What was added:**
+1. New `android/app/src/androidTest/java/com/yortch/confirmationsaints/HiltTestRunner.kt` — extends AndroidJUnitRunner, swaps in HiltTestApplication
+2. `android/app/build.gradle.kts`:
+   - `testInstrumentationRunner = "com.yortch.confirmationsaints.HiltTestRunner"`
+   - `androidTestImplementation(libs.androidx.test.runner)` (1.6.2)
+   - `androidTestImplementation(libs.hilt.android.testing)` (2.52)
+   - `kspAndroidTest(libs.hilt.compiler)`
+3. `android/gradle/libs.versions.toml`: added androidx-test-runner 1.6.2 catalog entries
+
+**Verification:** `./gradlew :app:compileDebugAndroidTestKotlin` → BUILD SUCCESSFUL
+
+**Impact on Legolas (QA):**
+- 10 `@Ignore`'d tests in `android/app/src/androidTest/java/.../ui/` can now execute
+- Remove `@Ignore`, annotate test class with `@HiltAndroidTest`, apply HiltAndroidRule + ComposeRule pattern
+- MainActivity already @AndroidEntryPoint; ConfirmationSaintsApp already @HiltAndroidApp — no source changes needed
+
+---
+
 ### Four Priority Saints Added — Batch 3 (2026-04-13)
 **Author:** Samwise (Data/Backend)  
 **Status:** Implemented

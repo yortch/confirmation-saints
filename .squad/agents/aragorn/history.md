@@ -132,3 +132,28 @@
 4. Optional: debug `AndroidManifest.xml` override if needed
 
 Once the harness lands, Legolas will un-`@Ignore` the remaining tests in a follow-up PR.
+
+## Learnings — HiltTestRunner wiring (2026-04-21)
+
+**Task:** Unblock Legolas's 10 `@Ignore`'d instrumentation tests by wiring Pattern B from the android-compose-instrumentation skill.
+
+**What worked (exact recipe for this repo):**
+1. `androidTest/.../HiltTestRunner.kt` extends `AndroidJUnitRunner`, overrides `newApplication` to substitute `HiltTestApplication::class.java.name`.
+2. `app/build.gradle.kts` `defaultConfig { testInstrumentationRunner = "com.yortch.confirmationsaints.HiltTestRunner" }` — previously unset, so added (not replaced).
+3. Dependencies — use the version catalog, reuse the existing `hilt` version ref (2.52) so `hilt-android-testing` and `hilt-android-compiler` stay in lockstep. Critical: compiler goes through `kspAndroidTest(...)`, NOT `androidTestImplementation(...)`, because this project uses KSP for Hilt code-gen.
+4. Added `androidx.test:runner:1.6.2` to the catalog — compatible with existing `androidx-test-ext = 1.2.1`.
+
+**Versions used:**
+- Hilt = 2.52 (catalog key `hilt`)
+- androidx-test-runner = 1.6.2 (new catalog entry)
+- KSP plugin already applied project-wide.
+
+**Verification command (confirmed clean):**
+`cd android && ./gradlew :app:compileDebugAndroidTestKotlin` → BUILD SUCCESSFUL, `kspDebugAndroidTestKotlin` runs (proves Hilt test component generation is active).
+
+**Gotchas to remember:**
+- If someone later adds hilt-android-testing hard-coded to a different version, the DaggerGraph_HiltComponents mismatch surfaces as a confusing `kspAndroidTest` failure. Always drive both from the same `hilt` version ref.
+- The `kspAndroidTest` configuration requires the KSP plugin to already be applied in the module — it is here via `alias(libs.plugins.ksp)`.
+- Did NOT touch `androidTest/.../ui/` files — that's Legolas's artifact. Infra-only boundary respected.
+
+**Handoff:** `.squad/decisions/inbox/aragorn-hilttestrunner-wiring.md` written so Legolas can pick up and un-`@Ignore` the 10 tests with the standard `@HiltAndroidTest` + `HiltAndroidRule` + `createAndroidComposeRule<MainActivity>()` pattern.

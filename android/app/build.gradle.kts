@@ -21,6 +21,8 @@ android {
         versionName = "1.0.0"
 
         vectorDrawables { useSupportLibrary = true }
+
+        testInstrumentationRunner = "com.yortch.confirmationsaints.HiltTestRunner"
     }
 
     buildTypes {
@@ -107,6 +109,9 @@ dependencies {
     // Instrumented / Compose UI testing
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.hilt.android.testing)
+    kspAndroidTest(libs.hilt.compiler)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
 

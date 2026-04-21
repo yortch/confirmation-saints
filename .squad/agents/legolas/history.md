@@ -60,3 +60,8 @@
   - Class-level `@Ignore` annotations removed from all three so individual methods become independently un-ignorable as the Hilt harness lands.
 - **No new dependencies added** to `app/build.gradle.kts`. The existing `androidx.compose.ui.test.junit4` + `ui-test-manifest` setup was sufficient. Hilt-specific deps only become necessary once Aragorn lands the test runner (spec'd in decision file).
 - **Lane discipline:** 100% test-side changes. No edits under `android/app/src/main/`. Where guidance conflicted (user asked to remove `@Ignore` vs. rule forbidding feature wiring), I followed the lane rule and filed a sharp, actionable decision-inbox note with copy-pasteable wiring for Aragorn.
+
+### HiltTestRunner Landed — 10 Tests Unblocked (2026-04-21)
+- **Trigger:** Aragorn landed HiltTestRunner (see `.squad/decisions.md#hilttestrunner-wiring-for-android-instrumentation-tests-2026-04-21`)
+- **Outcome:** All 10 `@Ignore`'d tests now ready to un-ignore and implement against real MainActivity + hiltViewModel()
+- **Next Steps:** Remove @Ignore, annotate with @HiltAndroidTest, add HiltAndroidRule + ComposeRule per skill pattern
