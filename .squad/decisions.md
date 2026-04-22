@@ -188,6 +188,30 @@ Added 4 saints to both `saints-en.json` and `saints-es.json`, bringing total fro
 
 ---
 
+### Android Launcher Icon Polish — Red Background + Content-Aware Scaling (2026-04-22)
+**Author:** Aragorn (Android Dev)  
+**Status:** Implemented ✅
+
+Jorge requested two fixes for the adaptive launcher icon:
+1. Replace purple background (#4A148C) with red to match app branding
+2. Increase visible content size beyond worst-case 43% scale
+
+**Analysis:** Icon content is effectively circular (transparent corners), not square worst-case. At 61% scale, content diagonal ≈ 59dp, safely inside 66dp safe zone. Increases visible fill to ~75-85%.
+
+**Implementation:**
+- Background: `#B9161C` (icon gradient red, unifies branding)
+- Foreground scale: 0.43 → 0.61 in `_generate_android_icon.py`
+- All 5 densities regenerated, build verified ✅
+
+**Files modified:**
+- `android/app/src/main/res/values/colors.xml`
+- `_generate_android_icon.py`
+- `android/app/src/main/res/mipmap-*/ic_launcher_foreground.png` (×5)
+
+**Approved by:** Jorge Balderas (visual verification)
+
+---
+
 ### User Directives (Captured)
 - **2026-04-12T17:13:10Z:** Jorge Balderas — App name changed to "Confirmation Saints". Update all references.
 - **2026-04-12T16:29Z:** Jorge Balderas — Project scaffolded with cross-platform separation. Expand saint roster to 50-100+. Add "most popular saints" categories by year + all-time.

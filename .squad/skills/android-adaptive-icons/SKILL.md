@@ -14,10 +14,13 @@ Android adaptive icons (API 26+) apply various mask shapes (circle, squircle, ro
 - Canvas: 108×108dp
 - Safe zone: 66×66dp (center circle)
 - Safe zone percentage: ~61% of canvas **linearly**, BUT...
-- **Critical:** For SQUARE content in a CIRCULAR mask, you must account for the DIAGONAL
-- **Correct scale: 43%** (not 60%!)
+- **Critical:** The correct scale depends on your **content shape**
 
-### Why 43% scale? (The diagonal trap)
+### Pick Scale Based on Content Shape, Not Worst Case
+
+**Rule:** Always measure your ACTUAL icon content shape before choosing a scale.
+
+#### For SQUARE Content (fills corners)
 ⚠️ **Common mistake:** Using 60% scale because 66dp ÷ 108dp ≈ 61%. This ignores geometry!
 
 For a **square** icon to fit within a **circular** safe zone:
@@ -38,6 +41,41 @@ For a **square** icon to fit within a **circular** safe zone:
 - Clearance: 66dp - 65.7dp = **0.3dp inside safe zone** ✅
 - Result: no cropping on any launcher shape
 
+#### For CIRCULAR Content (transparent corners)
+✅ **Optimal:** If your icon's visible content is effectively circular (e.g., logo inside a disc, transparent corners), you can safely scale up to **~61%**.
+
+**Why 61% is safe for circular content:**
+- Content fits within a circle of diameter D < source canvas diameter
+- At 61% scale, content fills ~59-60dp of the 66dp safe circle
+- Safe margin: ~6-7dp clearance
+- Result: **optimal visibility** without clipping
+
+**How to detect circular content:**
+```python
+from PIL import Image
+
+img = Image.open("source-icon.png").convert("RGBA")
+pixels = img.load()
+
+# Sample corners for transparency (adjust threshold for your design)
+corners = [(0, 0), (w-1, 0), (0, h-1), (w-1, h-1)]
+transparent_corners = sum(1 for x, y in corners if pixels[x, y][3] < 10)
+
+if transparent_corners >= 3:
+    print("✅ Circular content: safe to use ~61% scale")
+else:
+    print("⚠️ Square content: must use 43% scale")
+```
+
+**Content shape examples:**
+- **Circular (61% scale):** Logo inside a circle/disc with transparent corners (Confirmation Saints: dove + flame)
+- **Square (43% scale):** Logo fills entire canvas edge-to-edge, content in corners
+
+**Scale recommendations:**
+- **Circular content:** 61% (optimal visibility)
+- **Square content:** 43% (necessary for diagonal clearance)
+- **Uncertain:** Use 43% (conservative, always safe)
+
 ## Implementation Pattern
 
 ### 1. Adaptive Launcher Icon Structure
@@ -51,10 +89,16 @@ For a **square** icon to fit within a **circular** safe zone:
 
 ### 2. Foreground Generation (Python + Pillow)
 ```python
+# IMPORTANT: Choose scale based on actual content shape analysis
+# - Circular content (transparent corners): 0.61 scale
+# - Square content (fills corners): 0.43 scale
+
+FOREGROUND_INNER_RATIO = 0.61  # Or 0.43 — see content shape detection above
+
 def adaptive_foreground(src: Image.Image, px: int) -> Image.Image:
     """Transparent 108dp canvas with the source icon centered at safe-zone scale."""
     canvas = Image.new("RGBA", (px, px), (0, 0, 0, 0))
-    inner = int(round(px * 0.43))  # 43% scale: square diagonal fits 66dp circle
+    inner = int(round(px * FOREGROUND_INNER_RATIO))
     resized = src.resize((inner, inner), Image.LANCZOS)
     offset = ((px - inner) // 2, (px - inner) // 2)
     canvas.paste(resized, offset, resized)
@@ -156,19 +200,22 @@ Must complete successfully with no resource errors.
 
 ## Common Mistakes
 
-### ❌ Mistake 0: Using linear percentage for circular safe zone
+### ❌ Mistake 0: Using worst-case scale for all content shapes
 **THE MOST CRITICAL MISTAKE**
 ```python
-# DON'T DO THIS
-FOREGROUND_INNER_RATIO = 0.60  # Thinks 66dp ÷ 108dp = safe
+# DON'T DO THIS (blindly)
+FOREGROUND_INNER_RATIO = 0.60  # Assumes circular content, but may be square!
+FOREGROUND_INNER_RATIO = 0.43  # Assumes square content, but may be circular!
 ```
-**Problem:** A 60%-scale square has a diagonal of 91.6dp, which exceeds the 66dp circular safe zone by 39%! Visible cropping on round launchers.
+**Problem:** Using 60% for square content causes cropping (diagonal exceeds 66dp safe circle). Using 43% for circular content wastes visible area (logo appears unnecessarily small).
 
-**Math:** For a square to fit in a circle of diameter D:
-- Max square side = D ÷ √2
-- 66dp ÷ √2 ≈ 46.7dp ≈ 43% of 108dp canvas
+**Math:**
+- **Square content:** Max side = 66dp ÷ √2 ≈ 46.7dp ≈ **43% of 108dp canvas**
+- **Circular content:** Max diameter = 66dp ≈ **61% of 108dp canvas**
 
-**Fix:** Use 43% scale to account for the diagonal.
+**Fix:** **Always measure your actual content shape** (see "Pick Scale Based on Content Shape" above), then choose:
+- **61% scale** for circular content (transparent corners)
+- **43% scale** for square content (fills corners)
 
 ### ❌ Mistake 1: Using adaptive foreground for splash
 ```xml

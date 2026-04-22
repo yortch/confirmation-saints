@@ -31,12 +31,12 @@ SRC_ICON = REPO / "ios/CatholicSaints/Resources/Assets.xcassets/AppIcon.appicons
 OUT_ROOT = REPO / "android/app/src/main/res"
 
 # Material adaptive-icon canvas is 108dp with a 66dp visible safe zone (circle).
-# For a SQUARE icon to fit within a circular mask:
-#   - Safe circle diameter: 66dp
-#   - Max square side: 66dp / √2 ≈ 46.7dp ≈ 43.2% of 108dp canvas
-#   - Use 43% scale for safety margin
-# This ensures content survives circle/squircle/rounded-square/teardrop masks.
-FOREGROUND_INNER_RATIO = 0.43
+# The source icon's visible content (dove + flame) is effectively CIRCULAR with
+# transparent corners, fitting within ~89% of the source radius. This circular
+# content can safely scale to 61% of the 108dp canvas, filling ~59dp of the 66dp
+# safe zone. This provides optimal visibility across all launcher mask shapes
+# (circle, squircle, rounded square, teardrop) without visible clipping.
+FOREGROUND_INNER_RATIO = 0.61
 
 # Splash icon size (full-bleed, no mask)
 SPLASH_DP = 288

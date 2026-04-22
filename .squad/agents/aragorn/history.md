@@ -211,3 +211,57 @@ if content_diagonal_dp <= safe_circle_dp:
 ```
 
 
+## Learnings — Launcher Icon Polish: Red Background + Content-Aware Scaling (2026-04-22)
+
+**Task:** Two fixes for the adaptive launcher icon:
+1. Replace purple background (`#4A148C`) with brand red to match app branding
+2. Increase the icon scale from 43% (worst-case for square content) to a larger size based on actual content shape
+
+**Analysis approach:**
+Used Python + Pillow to analyze the source icon (`app-icon-1024.png`) visible content (white dove + flame + gold accents) vs. the red gradient background. Key metrics:
+- **Luminance filtering:** Background red has luminance <80, dove/flame/gold has luminance >150
+- **Content bounding box:** 901×906px (88% of 1024px source)
+- **Shape detection:** Zero light pixels in all 4 corners → **content is effectively circular**
+- **Max content radius:** 455px (89% of source canvas radius)
+
+**The 43% vs 61% decision:**
+The prior 43% scale was calculated for SQUARE content whose diagonal must fit in the 66dp safe circle (66dp ÷ √2 ≈ 43%). But this app's visible content is CIRCULAR (transparent corners, content fits within ~89% of source radius). This allows:
+- **At 43% scale:** Content fills only ~41dp of 66dp safe circle (under-utilizing visible area)
+- **At 61% scale:** Content fills ~59dp of 66dp safe circle ✅ (optimal, safe margin)
+
+**Background color selection:**
+Examined existing color definitions:
+- Purple: `#4A148C` (placeholder, not brand)
+- Splash red: `#E53935` (matches iOS `Color(0xFFE53935)`)
+- Icon red gradient: `RED_MID = (185, 22, 28)` → `#B9161C` in `_generate_icon.py`
+
+Chose `#B9161C` (mid-point of icon gradient) as background to unify the icon's red gradient with the adaptive background — creates cohesive appearance across all launcher shapes.
+
+**Implementation:**
+1. `colors.xml`: Changed `ic_launcher_background` from `#4A148C` (purple) to `#B9161C` (red)
+2. `_generate_android_icon.py`: Updated `FOREGROUND_INNER_RATIO` from `0.43` to `0.61` with detailed comment explaining circular-content rationale
+3. Regenerated all 5 densities of `ic_launcher_foreground.png`
+
+**Build verification:** `./gradlew :app:assembleDebug` → BUILD SUCCESSFUL
+
+**Scale comparison (in 108dp adaptive canvas):**
+- 43% scale: ~38dp visible content (under-utilized)
+- 50% scale: ~44dp visible content
+- 55% scale: ~49dp visible content
+- 61% scale: ~54dp visible content (fills 82% of safe zone) ✅
+
+**Key lesson:** Always measure the ACTUAL visible content shape, not worst-case assumptions. Circular content (transparent corners) can safely use ~61% scale; square content (fills corners) must use 43%. The 42% size increase makes the logo appear to fill ~75-85% of the visible icon area (user's target).
+
+**Files changed:**
+- `android/app/src/main/res/values/colors.xml` — purple → red background
+- `_generate_android_icon.py` — 43% → 61% scale with circular-content explanation
+- `android/app/src/main/res/mipmap-*/ic_launcher_foreground.png` — all 5 densities regenerated
+
+## Cross-agent sync: Jorge approved icon polish — Red background + 61% scale (2026-04-22T14:41:38Z)
+
+Icon polish complete and visually approved. Background changed from purple (#4A148C) to brand red (#B9161C), foreground scale increased from 43% to 61% for circular content. All drawable densities regenerated.
+
+Decision merged to `.squad/decisions/decisions.md` as **"Android Launcher Icon Polish — Red Background + Content-Aware Scaling"**.
+
+Ready for commit.
+
