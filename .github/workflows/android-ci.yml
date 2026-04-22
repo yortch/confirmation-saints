@@ -1,11 +1,5 @@
 name: Android CI
 
-# DISABLED — scaffold only. Aragorn is actively landing Phases 2–7 on
-# squad/android-port; we don't want noisy failures while source and test
-# stubs churn. Flip `if: false` -> `if: true` (or remove the guards) once
-# the scaffold stabilizes and Legolas has filled in enough test bodies
-# for the suite to be meaningful.
-
 on:
   push:
     branches: [main]
@@ -19,7 +13,6 @@ permissions:
 jobs:
   shared-content-parity:
     name: SharedContent parity (Python)
-    if: false  # TODO(legolas): enable once Phases 2–7 stabilize.
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,7 +24,6 @@ jobs:
 
   android-build-and-test:
     name: Android build + unit tests
-    if: false  # TODO(legolas): enable once Phases 2–7 stabilize.
     runs-on: ubuntu-latest
     needs: shared-content-parity
     steps:

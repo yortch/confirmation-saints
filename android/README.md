@@ -86,23 +86,18 @@ android/
         ├── assets/           # build-generated from SharedContent/
         ├── java/com/yortch/confirmationsaints/
         │   ├── MainActivity.kt
-        │   ├── data/         # TODO: repositories, DTOs
-        │   ├── localization/ # TODO: language service
+        │   ├── data/         # SaintRepository, CategoryRepository, model classes, JSON serialization
+        │   ├── localization/ # LocalizationService, AppLanguage, AppStrings
         │   ├── ui/theme/     # Theme.kt, Color.kt, Type.kt
-        │   ├── ui/screens/   # TODO
-        │   ├── ui/components/# TODO
-        │   └── viewmodel/    # TODO
+        │   ├── ui/screens/   # saints, categories, about, settings, onboarding screens
+        │   ├── ui/components/# SaintRow, SaintImage, AppFilterChip
+        │   └── viewmodel/    # RootViewModel, SaintListViewModel, SettingsViewModel
         └── res/              # strings, themes, launcher icon
 ```
 
 ## What's deliberately NOT here yet
 
-- **Compile verification.** Phases 2–7 were authored without a JDK available;
-  expect minor import/API fixups on first `./gradlew :app:assembleDebug`.
 - **Release signing config.** `buildTypes.release` has `TODO: add signingConfig`.
-- **Instrumented tests.** Only JVM unit tests are in place
-  (`SaintParsingTest`, `DiacriticsTest`, `CategoryMatcherTest`). A Compose UI
-  smoke test is a good next add.
 - **Adaptive-icon polish.** `_generate_android_icon.py` scales the iOS 1024×1024
   icon into all five density buckets. Swap in a purpose-built Chi-Rho
   foreground once ready.
