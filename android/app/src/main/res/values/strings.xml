@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Intentionally minimal. Per architecture: in-app UI strings are kept in code
+      (see com.yortch.confirmationsaints.localization), not spread across
+      strings.xml. Only the launcher label lives here so Android can show it
+      before the Compose runtime starts.
+    -->
+    <string name="app_name">Confirmation Saints</string>
+</resources>

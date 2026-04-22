@@ -64,3 +64,25 @@
 - Feast day format is `MM-DD` (no year).
 - Display name "Confirmation Saints" — internal module name is free to follow Android conventions.
 - Suggested bundle id: `com.jorgebalderas.confirmationsaints` (iOS uses `com.jorgebalderas.ConfirmationSaints`).
+
+### Android Architecture Plan (2026-07-22)
+- Produced `docs/android-architecture.md` — prescriptive, 20-section plan for full Android port.
+- **Package:** `com.yortch.confirmationsaints` (user confirmed; differs from iOS `com.jorgebalderas.*`).
+- **Key iOS → Android mappings:**
+  - `@Observable` ViewModel → `ViewModel` + `StateFlow` + `collectAsStateWithLifecycle()`
+  - `@AppStorage` → `DataStore<Preferences>`
+  - SwiftUI `EnvironmentKey` for language → Compose `CompositionLocal`
+  - `AppStrings.localized()` — ported as-is (in-memory Kotlin map, NOT `strings.xml`)
+  - `String+Diacritics.swift` → `Normalizer.NFD` + regex strip
+  - `NavigationStack` per tab → `NavHost` with nested graphs per tab
+  - `TabView` → Material 3 `NavigationBar`
+  - `FlowLayout` → Compose `FlowRow`
+  - `FilterChip` → Material 3 `FilterChip`
+  - Bundle JSON loading → `AssetManager.open()` + `kotlinx.serialization`
+  - `SplashView` (custom) → Android `SplashScreen` compat API
+- **Critical localization decision:** In-app language switch uses `StateFlow<AppLanguage>` + `CompositionLocal`, NOT `strings.xml` system locale. This mirrors iOS's instant-switch behavior.
+- **SharedContent wiring:** Gradle `Sync` task copies `SharedContent/` into build intermediates as an asset source set. Never committed to `android/`. Single source of truth preserved.
+- **Image loading:** Coil 3 with `file:///android_asset/` URI scheme — no custom fetcher needed.
+- **Serialization:** `kotlinx.serialization` chosen over Moshi (compile-time, multiplatform-ready).
+- **DI:** Hilt for v1 (standard Android choice, pairs with Navigation Compose).
+- **8-phase work decomposition** defined with explicit dependency ordering.
