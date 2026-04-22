@@ -46,6 +46,17 @@ object DateFormatting {
         return SimpleDateFormat(pattern, locale).format(cal.time)
     }
 
+    /**
+     * Extracts the birth year from a date string. Handles "YYYY-MM-DD", "YYYY",
+     * and null/malformed inputs. Returns null for invalid formats.
+     * Zero-padded years like "0256-12-26" correctly parse to 256 (not octal).
+     */
+    fun parseBirthYear(birthDate: String?): Int? {
+        if (birthDate == null) return null
+        val yearStr = birthDate.take(4)
+        return yearStr.toIntOrNull()
+    }
+
     private val AppLanguage.locale: Locale
         get() = if (this == AppLanguage.ES) Locale("es") else Locale.ENGLISH
 }

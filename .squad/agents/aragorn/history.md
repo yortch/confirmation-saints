@@ -265,3 +265,56 @@ Decision merged to `.squad/decisions/decisions.md` as **"Android Launcher Icon P
 
 Ready for commit.
 
+## Unit Test Implementation Complete (2026-04-22)
+
+**Task:** Implement TODO stubs in 4 local unit test files (JVM, not instrumentation):
+1. **BirthDateParsingTest.kt** (6 tests)
+2. **SaintRepositoryTest.kt** (5 tests)
+3. **LocalizationServiceTest.kt** (6 tests)
+4. **CategoryMatchingTest.kt** (5 tests)
+
+**Implementation approach:**
+1. Added `parseBirthYear(birthDate: String?): Int?` to `DateFormatting.kt` — extracts year from ISO date strings, handles zero-padded years like "0256" (returns 256), null, and malformed inputs.
+2. Configured Robolectric to access app assets via `testOptions.unitTests.isIncludeAndroidResources = true` in build.gradle.kts — crucial for tests that load JSON from assets.
+3. Used Turbine + kotlinx-coroutines-test for DataStore StateFlow testing.
+4. All CategoryMatcher tests verify cross-language matching on canonical English values (not display* arrays).
+
+**Test dependencies added:**
+- `kotlinx-coroutines-test:1.8.1` — for StateFlow + DataStore testing with StandardTestDispatcher
+
+**Robolectric asset access fix:**
+Initial tests failed with empty saint lists because Robolectric couldn't access app assets. The fix required:
+1. Adding `testOptions.unitTests.isIncludeAndroidResources = true` to `app/build.gradle.kts`
+2. Removing manual `robolectric.properties` file (let Gradle AGP handle resource merging automatically)
+3. This enables Robolectric tests to read from `app/src/main/assets/` at test runtime
+
+**DataStore persistence test pattern:**
+The `LocalizationService` persistence test required careful handling of StateFlow initial values:
+- StateFlow starts with `initialValue = AppLanguage.fromSystemLocale()` before DataStore read completes
+- Test must handle both scenarios: (1) initial emission is system default, then DataStore value arrives, or (2) DataStore value arrives immediately
+- Used conditional assertion: if first emission is system default, advance scheduler and await second emission
+
+**All test assertions:**
+- BirthDateParsing: 6 tests ✅ (zero-padded years, null handling, octal safety)
+- SaintRepository: 5 tests ✅ (EN/ES both load 70 saints, identical ID sets, null canonizationDate, image filename contract)
+- LocalizationService: 6 tests ✅ (device locale default, StateFlow update, DataStore persistence, EN/ES string lookup, missing-key fallback)
+- CategoryMatching: 5 tests ✅ (region match, cross-language ID consistency, display* arrays NOT matched, unknown value returns empty, young saints include Catherine of Siena)
+
+**Verification:** `./gradlew :app:testDebugUnitTest` → **BUILD SUCCESSFUL**, 32 tests completed, 0 failures ✅
+
+**Key API learnings:**
+- `SaintRepository.loadSaints(AppLanguage): List<Saint>` returns empty list on asset read failure (iOS parity)
+- `CategoryMatcher.saintsForCategory(groupId, valueId, saints)` sorts by SaintNameComparator after filtering
+- `AppStrings.localized(key, language)` returns key verbatim for EN (English IS the key), falls back to key for missing ES translations (no throw)
+
+**Files changed:**
+- `android/app/src/main/java/.../util/DateFormatting.kt` — added parseBirthYear function
+- `android/app/src/test/java/.../util/BirthDateParsingTest.kt` — implemented 6 TODOs
+- `android/app/src/test/java/.../data/SaintRepositoryTest.kt` — implemented 5 TODOs, added Robolectric runner
+- `android/app/src/test/java/.../localization/LocalizationServiceTest.kt` — implemented 6 TODOs, Turbine + coroutines-test
+- `android/app/src/test/java/.../data/CategoryMatchingTest.kt` — implemented 5 TODOs
+- `android/app/build.gradle.kts` — added testImplementation(libs.kotlinx.coroutines.test), testOptions.unitTests.isIncludeAndroidResources = true
+- `android/gradle/libs.versions.toml` — added kotlinx-coroutines-test = "1.8.1" version + catalog entry
+
+**No production bugs found** — all tests passed on first green run after Robolectric asset config fix.
+

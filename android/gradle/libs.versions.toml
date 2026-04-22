@@ -19,6 +19,7 @@ hilt-navigation-compose = "1.2.0"
 
 # Libraries
 kotlinx-serialization = "1.7.3"
+kotlinx-coroutines-test = "1.8.1"
 coil = "3.0.4"
 okio = "3.9.1"
 
@@ -56,6 +57,7 @@ androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-com
 
 # kotlinx.serialization
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
 
 # Coil 3 (Compose) — Compose-first image loading, resolves file:///android_asset/ natively
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }

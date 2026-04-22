@@ -1,50 +1,84 @@
 package com.yortch.confirmationsaints.data
 
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Disabled
+import android.content.Context
+import androidx.test.core.app.ApplicationProvider
+import com.yortch.confirmationsaints.data.repository.SaintRepository
+import com.yortch.confirmationsaints.localization.AppLanguage
+import kotlinx.serialization.json.Json
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
 
 /**
- * STUB — bodies to be filled in once Aragorn lands Phases 2–7 and the final
- * SaintRepository method signatures stabilize. See android/app/src/test/README.md.
+ * Tests SaintRepository loading from bundled JSON assets.
  *
  * Contract under test (from docs/android-architecture.md §3.5 and the
  * "SharedContent/ is the Canonical Cross-Platform Data Source" decision):
- *  - Repository loads from `assets/SharedContent/saints/saints-{en,es}.json`.
+ *  - Repository loads from `assets/saints-{en,es}.json`.
  *  - Both languages must expose the same 70 saint ids.
  */
-@Disabled("Stub — awaiting SaintRepository implementation (Aragorn, Phase 2)")
+@RunWith(RobolectricTestRunner::class)
 class SaintRepositoryTest {
+
+    private lateinit var context: Context
+    private lateinit var repository: SaintRepository
+
+    @Before
+    fun setup() {
+        context = ApplicationProvider.getApplicationContext()
+        val json = Json { ignoreUnknownKeys = true }
+        repository = SaintRepository(context, json)
+    }
 
     @Test
     fun should_load_english_saints_list() {
-        // TODO: Instantiate SaintRepository with a test Context whose assets
-        // expose SharedContent/. Assert loadSaints(AppLanguage.EN) returns a
-        // non-empty list whose first-N fields round-trip through kotlinx.serialization
-        // without throwing (ignoreUnknownKeys = true).
+        val saints = repository.loadSaints(AppLanguage.EN)
+        assertTrue("EN saints list should not be empty", saints.isNotEmpty())
+        
+        // Verify basic fields round-trip
+        val first = saints.first()
+        assertNotNull("Saint should have an id", first.id)
+        assertNotNull("Saint should have a name", first.name)
+        assertNotNull("Saint should have a biography", first.biography)
     }
 
     @Test
     fun should_return_exactly_70_saints_for_each_language() {
-        // TODO: Assert loadSaints(EN).size == 70 and loadSaints(ES).size == 70.
-        // 70 is the committed roster size (see .squad/decisions.md).
+        val enSaints = repository.loadSaints(AppLanguage.EN)
+        val esSaints = repository.loadSaints(AppLanguage.ES)
+        assertEquals("EN should have 70 saints", 70, enSaints.size)
+        assertEquals("ES should have 70 saints", 70, esSaints.size)
     }
 
     @Test
     fun should_return_identical_id_set_across_languages() {
-        // TODO: val enIds = loadSaints(EN).map { it.id }.toSet()
-        //       val esIds = loadSaints(ES).map { it.id }.toSet()
-        //       assertEquals(enIds, esIds)  — canonical ids are English per 2026-04-21 decision.
+        val enIds = repository.loadSaints(AppLanguage.EN).map { it.id }.toSet()
+        val esIds = repository.loadSaints(AppLanguage.ES).map { it.id }.toSet()
+        assertEquals("EN and ES should have identical saint ID sets", enIds, esIds)
     }
 
     @Test
     fun should_deserialize_optional_fields_without_throwing_on_null() {
-        // TODO: Verify a saint with canonizationDate = null (e.g. pre-congregation
-        // saints like "patrick", "pius-x") deserializes cleanly.
+        val saints = repository.loadSaints(AppLanguage.EN)
+        // Find a pre-congregation saint that has null canonizationDate
+        val preConSaint = saints.firstOrNull { it.canonizationDate == null }
+        assertNotNull("At least one saint should have null canonizationDate", preConSaint)
     }
 
     @Test
     fun should_expose_image_filename_matching_saint_id() {
-        // TODO: For every saint, assert image?.filename == "${saint.id}.jpg"
-        // (one image per id — cross-platform contract).
+        val saints = repository.loadSaints(AppLanguage.EN)
+        saints.forEach { saint ->
+            val expectedFilename = "${saint.id}.jpg"
+            assertEquals(
+                "Image filename for ${saint.id} should match saint id",
+                expectedFilename,
+                saint.image?.filename
+            )
+        }
     }
 }

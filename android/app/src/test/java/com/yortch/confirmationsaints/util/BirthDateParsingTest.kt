@@ -1,10 +1,11 @@
 package com.yortch.confirmationsaints.util
 
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Disabled
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
+import org.junit.Test
 
 /**
- * STUB — bodies to be filled in once Aragorn lands DateFormatUtils / birth-date parsing.
+ * Tests for birth year extraction from ISO date strings.
  *
  * Contract under test (iOS-committed edge case):
  *  - Birth year extraction must handle 4-digit zero-padded years such as
@@ -13,37 +14,35 @@ import org.junit.jupiter.api.Disabled
  *  - birthDate may be null; parser returns null, not 0.
  *  - Both "YYYY-MM-DD" and "YYYY" shapes are accepted.
  */
-@Disabled("Stub — awaiting DateFormatUtils / birth-date parser (Aragorn, Phase 2)")
 class BirthDateParsingTest {
 
     @Test
     fun should_extract_year_256_from_zero_padded_string_0256() {
-        // TODO: assertEquals(256, parseBirthYear("0256-12-26"))
-        // Regression guard for the iOS "0256" edge case.
+        assertEquals(256, DateFormatting.parseBirthYear("0256-12-26"))
     }
 
     @Test
     fun should_extract_year_from_standard_four_digit_date() {
-        // TODO: assertEquals(1873, parseBirthYear("1873-01-02"))
+        assertEquals(1873, DateFormatting.parseBirthYear("1873-01-02"))
     }
 
     @Test
     fun should_extract_year_when_only_year_provided() {
-        // TODO: assertEquals(1245, parseBirthYear("1245"))
+        assertEquals(1245, DateFormatting.parseBirthYear("1245"))
     }
 
     @Test
     fun should_return_null_for_null_birth_date() {
-        // TODO: assertNull(parseBirthYear(null))
+        assertNull(DateFormatting.parseBirthYear(null))
     }
 
     @Test
     fun should_return_null_for_malformed_birth_date() {
-        // TODO: assertNull(parseBirthYear("unknown")); must not throw.
+        assertNull(DateFormatting.parseBirthYear("unknown"))
     }
 
     @Test
     fun should_not_confuse_leading_zero_year_with_octal() {
-        // TODO: parseBirthYear("0088") == 88, not 0, not 72 (octal).
+        assertEquals(88, DateFormatting.parseBirthYear("0088"))
     }
 }
