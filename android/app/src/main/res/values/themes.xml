@@ -10,12 +10,12 @@
     <!--
       AndroidX SplashScreen (androidx.core:core-splashscreen) — compatible
       Android 6+; Android 12+ uses the system splash API automatically.
-      Background uses the adaptive-icon background color; foreground is
-      the launcher icon foreground.
+      Uses dedicated splash icon (ic_splash) which is full-bleed without
+      adaptive icon padding, so the logo appears complete on the splash screen.
     -->
     <style name="Theme.ConfirmationSaints.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/splash_background</item>
-        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_splash</item>
         <item name="postSplashScreenTheme">@style/Theme.ConfirmationSaints</item>
     </style>
 </resources>

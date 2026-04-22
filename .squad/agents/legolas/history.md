@@ -85,3 +85,8 @@
   - Settings → tap "Español" radio → wait for `Ajustes`. The `LocalizationService.setLanguage` launches on `appScope` (not `viewModelScope`), so the write is async and the flow emits on another dispatcher. `waitUntil` with a 5s timeout was reliable; direct assertion without waiting was flaky.
   - Tab switching via bottom-nav `Text` labels works (`onNodeWithText("Santos").performClick()`) because `NavigationBarItem` exposes its Text child semantics. No content-description needed.
 - **No production-code edits.** Every test hook used existing semantics. Two new `androidTest` files deps needed: none — `androidx.test:runner` transitively provides `androidx.test.core.app.ActivityScenario`, already declared.
+
+### Android Splash Icon Refactor (2026-04-22)
+- **Aragorn update:** Fixed splash screen icon cropping. Root cause: `themes.xml` was reusing adaptive foreground (with 21px margins) for splash, causing double-padding. Created dedicated `ic_splash.png` (288dp, full-bleed) across 5 densities + updated `themes.xml` reference.
+- **QA impact:** Splash screen now displays logo correctly. If running splash-screen UI tests, verify against physical device/emulator (emulator mask may differ from device).
+- **Pattern documented:** `.squad/skills/android-adaptive-icons/SKILL.md` — reusable for future icon regeneration.

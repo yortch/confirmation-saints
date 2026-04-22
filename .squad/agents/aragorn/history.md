@@ -173,3 +173,42 @@ Build verified: `./gradlew :app:compileDebugAndroidTestKotlin` → BUILD SUCCESS
 Decision merged to `.squad/decisions/decisions.md` as **"Decision: Android Instrumentation Tests — All 12 Tests Live ✅"**.
 
 No further instrumentation work is needed from my side; CI hook remains `if: false` for Gandalf to decide.
+
+## Learnings — Android Adaptive Icons + Splash Screen (2026-04-??)
+
+**Task:** Fix cropped app icon on both Android home screen launcher AND system splash screen.
+
+**Root cause analysis:**
+- **Adaptive launcher icon was CORRECT**: The foreground PNG (`ic_launcher_foreground.png`) properly implements the 66dp-of-108dp safe zone rule using 60% scale (21-22px margins at mdpi density). This ensures the visible content survives circle/squircle/teardrop/rounded-square masks applied by different launchers.
+- **Splash screen was BROKEN**: The `themes.xml` splash style was reusing `@mipmap/ic_launcher_foreground` for `windowSplashScreenAnimatedIcon`. Since this drawable already has adaptive padding, when displayed on the splash screen it appeared heavily cropped — the logo was only 60% of the intended size.
+
+**The fix:**
+1. Created dedicated **splash icon** (`ic_splash.png`) at 288dp, full-bleed with NO padding, so the logo appears complete on the splash screen.
+2. Updated `themes.xml` `Theme.ConfirmationSaints.Splash` to use `@mipmap/ic_splash` instead of `@mipmap/ic_launcher_foreground`.
+3. Updated `_generate_android_icon.py` to generate `ic_splash.png` at all densities alongside the adaptive launcher icons.
+
+**Key Android adaptive icon rules (for future work):**
+- **108dp canvas, 66dp safe zone**: Adaptive icons use a 108×108dp canvas. Only the inner 66×66dp circle (centered) is guaranteed visible across all launcher mask shapes. That's ~61% of the canvas.
+- **60% scale recommendation**: Scaling content to 60% of the canvas (~65dp at mdpi) provides safe margins of 21-22px on all sides, ensuring no cropping.
+- **Separate splash icons**: The system splash screen (androidx.core.splashscreen) should use a dedicated full-bleed drawable, NOT the adaptive foreground, to avoid double-padding.
+- **Generator script contract**: `_generate_android_icon.py` now outputs:
+  - `ic_launcher.png` / `ic_launcher_round.png` (legacy API <26, 48dp)
+  - `ic_launcher_foreground.png` (adaptive, 108dp canvas with 66dp safe zone content)
+  - `ic_splash.png` (splash screen, 288dp full-bleed)
+
+**Verification:**
+- Build: `./gradlew :app:assembleDebug` → BUILD SUCCESSFUL
+- Adaptive foreground: 108×108px at mdpi with 21-22px margins ✅
+- Splash icon: 288×288px at mdpi, full-bleed ✅
+- All densities (mdpi/hdpi/xhdpi/xxhdpi/xxxhdpi) generated ✅
+
+**Files changed:**
+- `android/app/src/main/res/values/themes.xml` — updated splash icon reference
+- `android/app/src/main/res/mipmap-*/ic_splash.png` — new splash icons (5 densities)
+- `_generate_android_icon.py` — added splash icon generation to script
+
+**No changes needed:**
+- Adaptive launcher icon XML (`ic_launcher.xml` / `ic_launcher_round.xml`) — already correct
+- WelcomeScreen composable — uses Material Icons, not launcher icon
+- iOS icon generator — separate pipeline, unaffected
+

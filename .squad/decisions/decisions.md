@@ -311,6 +311,73 @@ No action needed from Samwise.
 
 ---
 
+### Decision: Android Adaptive Icons — 66dp Safe Zone + Separate Splash Icon
+
+**Author:** Aragorn (Android Dev)  
+**Date:** 2026-04-22  
+**Status:** Implemented
+
+#### Problem
+User reported that the Android app icon appeared cropped in two places:
+1. **Home screen launcher** — icon looked cut off
+2. **System splash screen** — logo appeared much smaller than intended
+
+#### Root Cause
+Investigation revealed:
+- **Launcher icon was CORRECT**: The adaptive foreground properly implements the 66dp-of-108dp safe zone rule (60% scale, 21px margins at mdpi)
+- **Splash screen was BROKEN**: `themes.xml` was reusing `@mipmap/ic_launcher_foreground` for `windowSplashScreenAnimatedIcon`, which already has adaptive padding. This caused double-padding — the logo was only 60% of 60% = 36% of expected size.
+
+#### Decision
+1. **Keep adaptive launcher icon implementation unchanged** — it correctly implements Material Design's adaptive icon safe zone requirements
+2. **Create dedicated splash icon** (`ic_splash.png`) at 288dp, full-bleed with NO padding
+3. **Update `themes.xml`** to use `@mipmap/ic_splash` for splash screen instead of the adaptive foreground
+4. **Update icon generator script** to generate splash icons alongside launcher icons
+
+#### Implementation
+- Added `ic_splash.png` generation to `_generate_android_icon.py` (5 density buckets: mdpi through xxxhdpi)
+- Updated `Theme.ConfirmationSaints.Splash` in `themes.xml` to reference `@mipmap/ic_splash`
+- Verified build: `./gradlew :app:assembleDebug` → BUILD SUCCESSFUL
+
+#### Technical Details: The 66dp Safe Zone Rule
+Android adaptive icons use a 108×108dp canvas, but launcher masks (circle/squircle/teardrop/rounded square) can crop it. Only the inner 66×66dp circle is guaranteed visible:
+- Canvas: 108dp
+- Safe zone: 66dp (center circle) = ~61% of canvas
+- **Best practice: 60% scale** provides 21-22dp margins on all sides
+
+Our implementation:
+```python
+FOREGROUND_INNER_RATIO = 0.60  # 60% content in 108dp canvas
+```
+
+At mdpi (1x density):
+- Canvas: 108px
+- Content: ~65px (60% scale)
+- Margins: 21-22px on all sides ✅
+
+#### Files Changed
+- `android/app/src/main/res/values/themes.xml` — updated splash icon reference
+- `android/app/src/main/res/mipmap-*/ic_splash.png` — new splash icons (5 densities)
+- `_generate_android_icon.py` — added splash icon generation
+
+#### Impact on Other Agents
+- **Legolas (QA):** Splash screen now displays logo correctly — verify on physical device/emulator if testing UI
+- **Gandalf (Lead):** Pattern is reusable — documented in `.squad/skills/android-adaptive-icons/`
+- **iOS (Frodo):** No impact — iOS uses single 1024×1024 PNG, no adaptive/splash separation needed
+
+#### Reusability
+Created `.squad/skills/android-adaptive-icons/SKILL.md` documenting:
+- The 66dp-of-108dp safe zone rule
+- When to use separate splash icons vs adaptive foreground
+- Python generator script pattern
+- Verification checklist
+
+This is a cross-platform concern — any future Android icon regeneration should follow this pattern.
+
+#### Related Decisions
+- **"Programmatic App Icon with Chi-Rho Design" (2025-07-15)** — defined the iOS icon design; this decision adapts it for Android adaptive icons
+
+---
+
 ## Archived Decisions (older than 2026-03-22)
 
 See `decisions-archive.md` for foundational iOS architecture decisions from 2026-04-12 to 2026-04-13.

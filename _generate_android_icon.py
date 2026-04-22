@@ -6,11 +6,17 @@ Output:
   android/app/src/main/res/mipmap-{m,h,xh,xxh,xxxh}dpi/
     ic_launcher.png           # legacy 1:1 full-bleed (API <26)
     ic_launcher_round.png     # legacy 1:1 full-bleed (API <26)
-    ic_launcher_foreground.png  # adaptive foreground (108dp, ~72dp safe zone)
+    ic_launcher_foreground.png  # adaptive foreground (108dp, 66dp safe zone)
+    ic_splash.png             # splash screen icon (288dp, full-bleed)
 
 The adaptive foreground centers the iOS icon at 60% scale so it stays inside
-the mask crop (circle / squircle). Background is the flat liturgical purple
-defined in res/values/colors.xml.
+the mask crop (circle / squircle) across all launcher shapes. The 66dp safe
+zone of the 108dp canvas ensures no cropping.
+
+The splash icon is full-bleed (no padding) so the logo appears complete on
+the system splash screen (androidx.core.splashscreen).
+
+Background is the flat liturgical purple defined in res/values/colors.xml.
 
 Run once: `python3 _generate_android_icon.py` from the repo root.
 """
@@ -24,10 +30,13 @@ REPO = Path(__file__).resolve().parent
 SRC_ICON = REPO / "ios/CatholicSaints/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png"
 OUT_ROOT = REPO / "android/app/src/main/res"
 
-# Material adaptive-icon canvas is 108dp with a 72dp visible safe zone.
-# That's ~66.7% of the full canvas; inner content should fit ~60% to be safe
+# Material adaptive-icon canvas is 108dp with a 66dp visible safe zone.
+# That's ~61% of the full canvas; inner content should fit ~60% to be safe
 # across circle, squircle, rounded-square, and teardrop masks.
 FOREGROUND_INNER_RATIO = 0.60
+
+# Splash icon size (full-bleed, no mask)
+SPLASH_DP = 288
 
 # dp sizes per density bucket for legacy square icons.
 LEGACY_DP = 48
@@ -75,15 +84,23 @@ def main() -> None:
         out_dir = OUT_ROOT / f"mipmap-{density}"
         out_dir.mkdir(parents=True, exist_ok=True)
 
+        # Legacy icons (API <26)
         legacy_px = legacy_size(LEGACY_DP, scale)
         legacy_icon(src, legacy_px, rounded=False).save(out_dir / "ic_launcher.png")
         legacy_icon(src, legacy_px, rounded=True).save(out_dir / "ic_launcher_round.png")
 
-        # Adaptive foreground: 108dp * density scale.
+        # Adaptive foreground: 108dp * density scale, with 60% safe-zone content
         adaptive_px = legacy_size(108, scale)
         adaptive_foreground(src, adaptive_px).save(out_dir / "ic_launcher_foreground.png")
 
-    print("Generated launcher icons for", ", ".join(DENSITIES))
+        # Splash icon: full-bleed at 288dp (no adaptive padding)
+        splash_px = legacy_size(SPLASH_DP, scale)
+        src.resize((splash_px, splash_px), Image.LANCZOS).save(out_dir / "ic_splash.png")
+
+    print("✅ Generated launcher + splash icons for", ", ".join(DENSITIES))
+    print("   - ic_launcher.png / ic_launcher_round.png (legacy)")
+    print("   - ic_launcher_foreground.png (adaptive, 66dp safe zone)")
+    print("   - ic_splash.png (splash screen, full-bleed)")
 
 
 if __name__ == "__main__":
