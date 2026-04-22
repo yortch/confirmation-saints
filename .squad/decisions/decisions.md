@@ -376,6 +376,91 @@ This is a cross-platform concern — any future Android icon regeneration should
 #### Related Decisions
 - **"Programmatic App Icon with Chi-Rho Design" (2025-07-15)** — defined the iOS icon design; this decision adapts it for Android adaptive icons
 
+#### ⚠️ CORRECTION (2026-04-22)
+**The 60% scale claim in this decision was geometrically incorrect.** The linear calculation (66dp ÷ 108dp ≈ 61%) ignored the diagonal trap: square content rotated in a circular mask must fit within 66dp along its *diagonal*, not just width/height. This resulted in visible cropping on circular launchers. **See the follow-up decision below: "Android Launcher Icon Scale Correction: 60% → 43%"** for the fix and full geometric analysis. The splash screen fix documented above remains valid and unchanged.
+
+---
+
+### Decision: Android Launcher Icon Scale Correction: 60% → 43%
+
+**Author:** Aragorn (Android Dev)  
+**Date:** 2026-04-22  
+**Status:** Implemented  
+
+#### Context
+
+Jorge reported that the Android launcher icon on the home screen was cropped, despite earlier work claiming the 60% scale was correct for the 66dp safe zone. The splash screen icon (separate full-bleed PNG) was rendering correctly.
+
+#### Problem
+
+The original adaptive icon implementation used **60% scale** based on a linear calculation: 66dp safe zone ÷ 108dp canvas ≈ 61%. However, this ignores a critical geometric constraint:
+
+**Android's circular launcher masks require the content's DIAGONAL to fit within the 66dp safe zone circle, not just its width/height.**
+
+#### Root Cause: The Diagonal Trap
+
+For a **square** icon within a **circular** mask:
+- Safe zone: 66dp diameter circle
+- Maximum square side: 66dp ÷ √2 ≈ **46.7dp**
+- As percentage of 108dp canvas: **43.2%**
+
+**At 60% scale (BROKEN):**
+- Content: 64.8dp × 64.8dp
+- Diagonal: 91.6dp (via Pythagorean theorem)
+- **Overshoot: 25.6dp beyond the 66dp safe zone** (39% too large)
+- Result: Visible cropping on circular launchers ❌
+
+**At 43% scale (FIXED):**
+- Content: 46.4dp × 46.4dp
+- Diagonal: 65.7dp
+- **Clearance: 0.3dp inside the 66dp safe zone**
+- Result: No cropping on any launcher shape ✅
+
+#### Solution
+
+1. Updated `_generate_android_icon.py`: changed `FOREGROUND_INNER_RATIO = 0.60` → `0.43`
+2. Added geometric explanation in code comments
+3. Regenerated all 5 density variants of `ic_launcher_foreground.png`
+4. Verified all densities fit within safe zone (0.0-0.9dp clearance)
+5. Build successful: `./gradlew :app:assembleDebug`
+
+#### Measurements (Proof)
+
+**Before (60% scale):**
+```
+mdpi:    Canvas 108×108px, Content 65×65px, Margins 21px (19.4%), Diagonal 91.9dp ❌
+xxxhdpi: Canvas 432×432px, Content 259×259px, Margins 86px (19.9%), Diagonal 366.3dp ❌
+```
+
+**After (43% scale):**
+```
+mdpi:    Canvas 108×108px, Content 46×46px, Margins 31px (28.7%), Diagonal 65.1dp ✅
+xxxhdpi: Canvas 432×432px, Content 186×186px, Margins 123px (28.5%), Diagonal 262.9dp ✅
+```
+
+#### Impact
+
+- **Android dev (Aragorn):** Generator script corrected; skill document updated with diagonal verification technique
+- **iOS (Frodo):** No impact (separate 1024×1024 PNG, no safe zone constraints)
+- **Samwise/Legolas/Gandalf:** No action required
+- **Future Android icons:** Use 43% scale, always verify diagonal fits in circle
+
+#### Design Tradeoff
+
+The 43% scale means the launcher icon appears **smaller** on the home screen than the previous 60% version. However, this is the **correct** implementation per Material Design adaptive icon spec. The alternative (keeping 60%) results in visible cropping, which is unacceptable.
+
+Jorge confirmed via emulator/device testing that the splash screen now looks correct (full-bleed) and requested this launcher icon fix after uninstall/reinstall ruled out launcher cache issues.
+
+#### References
+
+- Material Design: [Adaptive Icons](https://developer.android.com/develop/ui/views/launch/icon_design_adaptive)
+- Safe zone constraint: 66dp circle within 108dp square canvas
+- Pythagorean theorem: diagonal = side × √2
+
+#### Related Decisions
+
+- **"Android Adaptive Icons — 66dp Safe Zone + Separate Splash Icon" (2026-04-22)** — splash screen fix; launcher scale claim in that decision was incorrect (see ⚠️ correction above)
+
 ---
 
 ## Archived Decisions (older than 2026-03-22)

@@ -86,7 +86,8 @@
   - Tab switching via bottom-nav `Text` labels works (`onNodeWithText("Santos").performClick()`) because `NavigationBarItem` exposes its Text child semantics. No content-description needed.
 - **No production-code edits.** Every test hook used existing semantics. Two new `androidTest` files deps needed: none — `androidx.test:runner` transitively provides `androidx.test.core.app.ActivityScenario`, already declared.
 
-### Android Splash Icon Refactor (2026-04-22)
-- **Aragorn update:** Fixed splash screen icon cropping. Root cause: `themes.xml` was reusing adaptive foreground (with 21px margins) for splash, causing double-padding. Created dedicated `ic_splash.png` (288dp, full-bleed) across 5 densities + updated `themes.xml` reference.
-- **QA impact:** Splash screen now displays logo correctly. If running splash-screen UI tests, verify against physical device/emulator (emulator mask may differ from device).
-- **Pattern documented:** `.squad/skills/android-adaptive-icons/SKILL.md` — reusable for future icon regeneration.
+### Android Splash Icon Refactor & Launcher Icon Recut (2026-04-22)
+- **Splash icon fix (Aragorn):** Fixed splash screen icon cropping. Root cause: `themes.xml` was reusing adaptive foreground (with 21px margins) for splash, causing double-padding. Created dedicated `ic_splash.png` (288dp, full-bleed) across 5 densities + updated `themes.xml` reference.
+- **Launcher icon recut (Aragorn):** Prior adaptive icon implementation used 60% scale (claim was WRONG; linear 66/108 ≈ 61% ignored diagonal trap). Correct scale = 43.2% (66dp ÷ (108dp÷√2)). Square content rotated in circular mask must fit diagonally, not just width/height. At 60%, diagonal = 91.6dp (overshoot 25.6dp). At 43%, diagonal = 65.7dp (0.3dp clearance inside safe zone). Updated `FOREGROUND_INNER_RATIO` in `_generate_android_icon.py` (0.60 → 0.43) + regenerated all 5 launcher densities. Full geometric analysis at `.squad/decisions/decisions.md#android-launcher-icon-scale-correction-60-43`.
+- **QA impact:** Both splash and launcher now correct. If running UI tests on icon placement/scale, verify against physical device/emulator post-rebuild.
+- **Patterns documented:** `.squad/skills/android-adaptive-icons/SKILL.md` — reusable for future icon work. Includes "Diagonal Trap" mistake section so future readers don't repeat the 60% error.

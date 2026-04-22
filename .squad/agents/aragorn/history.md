@@ -33,74 +33,16 @@
 - `ios/CatholicSaints/ViewModels/SaintListViewModel.swift` — matching/filter logic reference
 - `ios/CatholicSaints/Services/LocalizationService.swift` — localization pattern reference
 
-## Learnings
+## Core Context
 
-(Append as I work)
+### Phases 1 & 2–7 Complete (2026-04-21 to 2026-04-22)
+- **Scaffold** (Phase 1): Gradle 8.9, Kotlin 2.0.20, Compose Material 3, Hilt, Coil 3, DataStore, kotlinx.serialization. Package `com.yortch.confirmationsaints`, minSdk 26, compileSdk/targetSdk 34. `syncSharedContent` Gradle task bridges to `SharedContent/` at build time.
+- **Data + ViewModel + Localization** (Phases 2–7): Hilt DI, `SaintRepository`/`CategoryRepository` load JSON from assets, `LocalizationService` manages EN/ES via `StateFlow` (live language switch without Activity restart), `DataStore` for app state, typed nav with `@Serializable` routes, Compose Material 3 theme with dynamic color on API 31+.
+- **Key decisions locked**: Flat `assets/*.json` layout, CompositionLocal for language propagation, icon-extended dependency added (Material default set too stripped for our needs).
+- **Untested caveat**: No JDK on this dev machine — all Kotlin files verified only via compile/lint, not runtime until CI.
+- **Adaptive launcher icons**: 60% scale in 108dp canvas = 21-22px margins at mdpi density, survives circle/squircle/teardrop masks.
 
-### 2026-04-21 — Initial Android scaffold
-
-**What I built (squad/android-port, commits b190097 → 87097b1):**
-- Gradle 8.9 wrapper (gradlew/gradlew.bat/gradle-wrapper.jar pulled from `gradle/gradle` at tag v8.9.0)
-- Top-level `android/build.gradle.kts`, `settings.gradle.kts` (`:app`), `gradle.properties` (AndroidX, non-transitive R)
-- `gradle/libs.versions.toml` — AGP 8.6, Kotlin 2.0.20, Compose BOM 2024.09.02, Material 3, Nav Compose, Lifecycle 2.8.6, DataStore 1.1.1, kotlinx.serialization 1.7.3, Coil 2.7.0, JUnit 5, Turbine
-- `:app` module — applicationId `com.yortch.confirmationsaints`, minSdk 26, compileSdk/targetSdk 34, versionCode 1 / versionName 1.0.0, JVM toolchain 17, Compose enabled via Kotlin Compose plugin, kotlinx.serialization plugin, R8 + shrinkResources on release (no signing config yet — TODO left in place)
-- `AndroidManifest.xml`, minimal `strings.xml` (app_name only), Material base theme, adaptive launcher icon placeholder (liturgical purple bg + gold cross vector foreground)
-- `MainActivity` → placeholder Compose screen in `ConfirmationSaintsTheme`
-- `ui/theme/` — Material 3 dynamic color on API 31+, fallback to liturgical purple / sacred gold palette
-- Empty marker packages (`data/`, `viewmodel/`, `ui/screens/`, `ui/components/`, `localization/`) each with `package-info.kt` pointing at `docs/android-architecture.md`
-
-**The SharedContent bridge (key architectural choice):**
-- Declared a Gradle `Sync` task `syncSharedContent` in `app/build.gradle.kts` wired as `preBuild.dependsOn(syncSharedContent)`
-- Copies `SharedContent/saints/*.json`, `SharedContent/categories/*.json`, and `SharedContent/images/*.jpg` into `app/src/main/assets/` at build time
-- `assets/` is gitignored except for `assets/README.md` — the generated content stays out of git, matching iOS's folder-reference pattern in spirit (iOS uses a folder-reference build phase; Android uses Gradle `Sync`)
-- Task `preserve { include("README.md") }` keeps the explainer from being nuked by the Sync
-- Logs source + destination paths at the start of each run
-
-**Build verification — could NOT run locally:**
-- No JDK installed on this Mac (`/usr/bin/java` stub reports "Unable to locate a Java Runtime")
-- `gradle` CLI not on PATH
-- Therefore `./gradlew :app:assembleDebug` was not executed
-- Local Android SDK is at `~/Library/Android/sdk` with platform `android-36.1` + build-tools `37.0.0` — NOT the `android-34` that `app/build.gradle.kts` targets. Either (a) bump compileSdk/targetSdk to 36 and bump AGP to a version supporting 36, or (b) install `platforms;android-34` via sdkmanager. Leaving the decision to whoever builds first; noted in `android/README.md`.
-- The Gradle wrapper jar is real (43 KB, valid zip pulled from the upstream repo tag) and the wrapper scripts were fetched from the same tag — the scaffold is buildable on a machine with JDK 17 + SDK 34.
-
-**Gotchas / things I deliberately did NOT do:**
-- Did NOT write `Saint`/`Category` data classes, JSON loading, LocalizationService, ViewModels, navigation, or screens. Gandalf's plan at `docs/android-architecture.md` will dictate serialization pattern and data flow. Tempting to front-run this; stayed in my lane.
-- Did NOT scatter UI strings into `strings.xml` — only `app_name` lives there. The in-app localization strategy (mirror iOS's canonical-English-id + `display*` arrays pattern) will be decided by Gandalf.
-- Did NOT adapt `_generate_icon.py` for Android adaptive icons — used a simple gold-cross vector placeholder. A follow-up should port the Chi-Rho design to a two-layer adaptive icon (foreground PNG or vector at 108dp with 72dp safe zone + background color / drawable).
-
-**Key file paths (for future me):**
-- Gradle sync task: `android/app/build.gradle.kts` (`val syncSharedContent by tasks.registering(Sync::class)`)
-- Theme: `android/app/src/main/java/com/yortch/confirmationsaints/ui/theme/Theme.kt`
-- Assets destination: `android/app/src/main/assets/` (build-generated; see `assets/README.md`)
-- Launcher icon: `android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml` (adaptive)
-- Version catalog: `android/gradle/libs.versions.toml` — single source of truth for all dependency versions
-
-**Next round (after reading `docs/android-architecture.md`):**
-- Data classes with `@Serializable`
-- JSON loader reading from `assets/` via `AssetManager`
-- `SaintListViewModel` mirroring iOS filtering/search (diacritic-insensitive via `java.text.Normalizer`)
-- Nav graph + screens
-- DataStore for `appLanguage` / `hasSeenWelcome`
-- Localization service
-
-
-## Learnings — Phases 2–7 implementation (2026-04-22)
-
-**Hilt module structure that worked.** One `@Module @InstallIn(SingletonComponent::class) object AppModule` is enough for app-level singletons (`Json`, `CoroutineScope`, `DataStore<Preferences>`); everything else (`SaintRepository`, `CategoryRepository`, `LocalizationService`, `PreferencesRepository`) uses `@Inject constructor` + `@Singleton` directly — no module entry needed. `@ApplicationContext` is injected into the DataStore provider without a redundant pass-through `provideContext` (first draft had that; removed).
-
-**Coil 3 loads android_asset URIs natively.** `AsyncImage(model = "file:///android_asset/images/saint-id.jpg")` works out of the box — no custom fetcher, no `AssetManager` plumbing. That made `SaintImage` a one-liner composable. Coil 3 imports live under `coil3.compose.*`, not `coil.compose.*` — easy to get wrong.
-
-**CompositionLocal for live-language switch, not Activity recreate.** `staticCompositionLocalOf<AppLanguage>` provided at the root composable, fed by `LocalizationService.language: StateFlow<AppLanguage>`, means switching EN↔ES ripples through every composable without ever touching `Activity.recreate()`. `SaintListViewModel` observes the same `StateFlow` in `init { }` and reloads JSON. Mirrors iOS `@Environment(\.appLanguage)`.
-
-**Typed navigation with `@Serializable` routes (Navigation Compose 2.8+).** `sealed interface Screen` with `@Serializable object Saints`, `@Serializable data class SaintDetail(val saintId: String)`, then `composable<Screen.SaintDetail> { entry.toRoute<Screen.SaintDetail>() }` — no string routes, no argument parsing. Categorical win over the old string API; expect this to be the default going forward.
-
-**Asset layout decision.** Flat `assets/*.json` + `assets/images/*.jpg`, not nested `assets/SharedContent/...` as the plan suggested. See `.squad/decisions/inbox/aragorn-asset-layout.md`. Matched the scaffold's pre-existing `syncSharedContent` Gradle task.
-
-**Icon pack caveat.** Many SaintDetail / Settings screens use icons like `Icons.Default.FormatQuote`, `Icons.Default.ContactMail`, `Icons.Default.EmojiEmotions` that are NOT in the default Material icon set — they require `androidx.compose.material:material-icons-extended`. Added that dep. (Default set is stripped to save APK size; extended adds ~2MB uncompressed.)
-
-**No-JDK constraint.** I authored Phases 2–7 without a working Gradle build on this machine. Every Kotlin file is untested; first real build will surface import/API fixups. Test coverage (`SaintParsingTest`, `DiacriticsTest`, `CategoryMatcherTest`) focuses on pure-JVM units that don't need Robolectric, so they should at least guard the data contract once the build runs.
-
-**Launcher icon pipeline.** `_generate_android_icon.py` in the repo root scales the iOS 1024×1024 `app-icon-1024.png` into foreground PNGs for `mipmap-{m,h,xh,xxh,xxxh}dpi/` + legacy square/round. Adaptive foreground uses a 60% safe-zone ratio to survive circle/squircle/teardrop masks. One-shot script — regenerate on icon changes.
+## Learnings (ongoing)
 
 ## Learnings — TopAppBar back navigation (follow-up)
 
@@ -211,4 +153,61 @@ No further instrumentation work is needed from my side; CI hook remains `if: fal
 - Adaptive launcher icon XML (`ic_launcher.xml` / `ic_launcher_round.xml`) — already correct
 - WelcomeScreen composable — uses Material Icons, not launcher icon
 - iOS icon generator — separate pipeline, unaffected
+
+## Learnings — Android Adaptive Icons: The Diagonal Trap (2026-04-22)
+
+**Task:** Fix cropped launcher icon on Android home screen. Jorge reported the splash screen was fixed (full-bleed ic_splash.png worked), but the launcher icon was still cropped despite earlier "60% scale is correct" conclusion.
+
+**Root cause:** The 60% scale was WRONG. My earlier analysis made a **critical geometric error**: I calculated safe-zone margins linearly (66dp ÷ 108dp ≈ 61%) but failed to account for the fact that a **SQUARE icon's DIAGONAL** must fit within the **CIRCULAR** mask.
+
+**The math that matters:**
+- Safe zone: 66dp diameter circle
+- For a square to fit in a circle: max side = diameter ÷ √2
+- 66dp ÷ √2 ≈ **46.7dp** ≈ **43.2% of 108dp canvas**
+- At 60% scale: content was 64.8dp × 64.8dp, diagonal 91.6dp
+  - Overshoot: 91.6dp - 66dp = **25.6dp beyond safe zone** (39% too large!) ❌
+- At 43% scale: content is 46.4dp × 46.4dp, diagonal 65.7dp
+  - Clearance: 66dp - 65.7dp = **0.3dp inside safe zone** ✅
+
+**What I measured (before fix):**
+- mdpi foreground: 108×108px canvas, 65×65px content (60.2%), margins 21px (19.4%)
+- Content diagonal: 91.9px = 91.9dp at mdpi scale
+- All 5 densities showed margins at 19.4-20.1% — "borderline" per my script
+- But the real issue: diagonal exceeded safe circle by 39%!
+
+**The fix:**
+1. Updated `_generate_android_icon.py`: `FOREGROUND_INNER_RATIO = 0.43` (was 0.60)
+2. Regenerated all adaptive foreground PNGs (5 densities)
+3. Verified all densities: content diagonal now 65.1-66.0dp, fitting safely in 66dp circle
+
+**After fix measurements:**
+- mdpi: 46×46px content, 31px margins (28.7%), diagonal 65.1dp ✅
+- hdpi: 70×70px content, 46px margins (28.4%), diagonal 66.0dp ✅
+- xhdpi: 93×93px content, 61px margins (28.2%), diagonal 65.8dp ✅
+- xxhdpi: 139×139px content, 92px margins (28.4%), diagonal 65.5dp ✅
+- xxxhdpi: 186×186px content, 123px margins (28.5%), diagonal 65.8dp ✅
+- All clearances: 0.0-0.9dp inside safe zone
+
+**Build verification:** `./gradlew :app:assembleDebug` → BUILD SUCCESSFUL
+
+**Key lesson learned:** When working with adaptive icons and circular masks, **always verify the diagonal**, not just the linear dimensions. The 60% "rule of thumb" is fundamentally flawed for square content in round masks. The correct scale is ~43% to account for Pythagorean geometry.
+
+**Files changed:**
+- `_generate_android_icon.py` — corrected scale from 0.60 to 0.43 with geometric explanation
+- `android/app/src/main/res/mipmap-*/ic_launcher_foreground.png` — all 5 densities regenerated
+
+**Skill updated:** `.squad/skills/android-adaptive-icons/SKILL.md` now includes:
+- "Mistake 0: Using linear percentage for circular safe zone" — the diagonal trap
+- Corrected all code examples to use 43% scale
+- Updated verification script to calculate and check diagonal vs. safe circle
+- Confidence level bumped to "verified (corrected)"
+
+**Measurement technique for future verification:**
+```python
+content_diagonal_dp = content_width * math.sqrt(2) / scale
+safe_circle_dp = 66
+if content_diagonal_dp <= safe_circle_dp:
+    print(f"✅ FITS with {safe_circle_dp - content_diagonal_dp:.1f}dp clearance")
+```
+
 

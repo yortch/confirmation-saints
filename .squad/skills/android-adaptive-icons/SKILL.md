@@ -1,6 +1,6 @@
 # Android Adaptive Icons + Splash Screen
 
-## Confidence: high
+## Confidence: verified (corrected)
 
 ## Summary
 Implement Android adaptive launcher icons with proper safe-zone padding to survive circle/squircle/teardrop launcher masks, and separate full-bleed splash screen icons to avoid double-padding cropping.
@@ -13,14 +13,30 @@ Android adaptive icons (API 26+) apply various mask shapes (circle, squircle, ro
 
 - Canvas: 108×108dp
 - Safe zone: 66×66dp (center circle)
-- Safe zone percentage: ~61% of canvas
-- **Recommended scale: 60%** to provide safe margins
+- Safe zone percentage: ~61% of canvas **linearly**, BUT...
+- **Critical:** For SQUARE content in a CIRCULAR mask, you must account for the DIAGONAL
+- **Correct scale: 43%** (not 60%!)
 
-### Why 60% scale?
-- At 60% scale, content is ~65dp in a 108dp canvas
-- Margins: (108 - 65) / 2 ≈ 21-22dp on all sides
-- This exceeds the minimum safe zone requirement: (108 - 66) / 2 = 21dp
-- Works across all launcher mask shapes
+### Why 43% scale? (The diagonal trap)
+⚠️ **Common mistake:** Using 60% scale because 66dp ÷ 108dp ≈ 61%. This ignores geometry!
+
+For a **square** icon to fit within a **circular** safe zone:
+- Safe circle diameter: 66dp
+- Max square diagonal: 66dp
+- Max square side: 66dp ÷ √2 ≈ **46.7dp** ≈ **43.2% of canvas**
+- Required margins: ~31dp on each side (28.5% of canvas)
+
+**The 60% mistake:**
+- At 60% scale, content is 64.8dp × 64.8dp
+- Diagonal: 91.6dp (calculated via Pythagorean theorem)
+- Overshoot: 91.6dp - 66dp = **25.6dp beyond safe zone** ❌
+- Result: visible cropping on circular launchers (e.g., Pixel)
+
+**The 43% fix:**
+- At 43% scale, content is 46.4dp × 46.4dp
+- Diagonal: 65.7dp
+- Clearance: 66dp - 65.7dp = **0.3dp inside safe zone** ✅
+- Result: no cropping on any launcher shape
 
 ## Implementation Pattern
 
@@ -38,7 +54,7 @@ Android adaptive icons (API 26+) apply various mask shapes (circle, squircle, ro
 def adaptive_foreground(src: Image.Image, px: int) -> Image.Image:
     """Transparent 108dp canvas with the source icon centered at safe-zone scale."""
     canvas = Image.new("RGBA", (px, px), (0, 0, 0, 0))
-    inner = int(round(px * 0.60))  # 60% scale for safe zone
+    inner = int(round(px * 0.43))  # 43% scale: square diagonal fits 66dp circle
     resized = src.resize((inner, inner), Image.LANCZOS)
     offset = ((px - inner) // 2, (px - inner) // 2)
     canvas.paste(resized, offset, resized)
@@ -101,16 +117,31 @@ for density, scale in DENSITIES.items():
 ### Verify Safe Zone (mdpi example)
 ```python
 from PIL import Image
+import math
 
 fg = Image.open('mipmap-mdpi/ic_launcher_foreground.png')
+width, height = fg.size
 bbox = fg.getbbox()  # Find non-transparent content
+
 if bbox:
     min_x, min_y, max_x, max_y = bbox
-    margins = (min_x, min_y, 107 - (max_x - 1), 107 - (max_y - 1))
+    content_width = max_x - min_x
+    content_height = max_y - min_y
     
-    # All margins should be >= 21px at mdpi
-    assert all(m >= 21 for m in margins), "Content exceeds safe zone!"
-    print(f"✅ Margins: {margins} — Fits 66dp safe zone")
+    # Calculate diagonal (for square content)
+    content_diagonal_px = content_width * math.sqrt(2)
+    content_diagonal_dp = content_diagonal_px  # mdpi scale = 1.0
+    
+    safe_circle_dp = 66
+    
+    if content_diagonal_dp <= safe_circle_dp:
+        clearance = safe_circle_dp - content_diagonal_dp
+        print(f"✅ FITS! Content diagonal {content_diagonal_dp:.1f}dp < {safe_circle_dp}dp")
+        print(f"   Clearance: {clearance:.1f}dp")
+    else:
+        overshoot = content_diagonal_dp - safe_circle_dp
+        print(f"❌ EXCEEDS! Content diagonal {content_diagonal_dp:.1f}dp > {safe_circle_dp}dp")
+        print(f"   Overshoot: {overshoot:.1f}dp — WILL BE CROPPED")
 ```
 
 ### Build Verification
@@ -124,6 +155,20 @@ Must complete successfully with no resource errors.
 2. **Splash screen**: Launch app — logo should appear complete (not cropped) during splash
 
 ## Common Mistakes
+
+### ❌ Mistake 0: Using linear percentage for circular safe zone
+**THE MOST CRITICAL MISTAKE**
+```python
+# DON'T DO THIS
+FOREGROUND_INNER_RATIO = 0.60  # Thinks 66dp ÷ 108dp = safe
+```
+**Problem:** A 60%-scale square has a diagonal of 91.6dp, which exceeds the 66dp circular safe zone by 39%! Visible cropping on round launchers.
+
+**Math:** For a square to fit in a circle of diameter D:
+- Max square side = D ÷ √2
+- 66dp ÷ √2 ≈ 46.7dp ≈ 43% of 108dp canvas
+
+**Fix:** Use 43% scale to account for the diagonal.
 
 ### ❌ Mistake 1: Using adaptive foreground for splash
 ```xml
@@ -141,7 +186,7 @@ canvas.paste(resized, (0, 0))  # No margins!
 ```
 **Problem:** Content gets cropped by circular/squircle launcher masks.
 
-**Fix:** Scale content to 60% and center it.
+**Fix:** Scale content to 43% and center it.
 
 ### ❌ Mistake 3: Inconsistent densities
 **Problem:** Generating only mdpi/xhdpi, missing hdpi/xxhdpi/xxxhdpi.

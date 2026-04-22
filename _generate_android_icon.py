@@ -30,10 +30,13 @@ REPO = Path(__file__).resolve().parent
 SRC_ICON = REPO / "ios/CatholicSaints/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png"
 OUT_ROOT = REPO / "android/app/src/main/res"
 
-# Material adaptive-icon canvas is 108dp with a 66dp visible safe zone.
-# That's ~61% of the full canvas; inner content should fit ~60% to be safe
-# across circle, squircle, rounded-square, and teardrop masks.
-FOREGROUND_INNER_RATIO = 0.60
+# Material adaptive-icon canvas is 108dp with a 66dp visible safe zone (circle).
+# For a SQUARE icon to fit within a circular mask:
+#   - Safe circle diameter: 66dp
+#   - Max square side: 66dp / √2 ≈ 46.7dp ≈ 43.2% of 108dp canvas
+#   - Use 43% scale for safety margin
+# This ensures content survives circle/squircle/rounded-square/teardrop masks.
+FOREGROUND_INNER_RATIO = 0.43
 
 # Splash icon size (full-bleed, no mask)
 SPLASH_DP = 288
