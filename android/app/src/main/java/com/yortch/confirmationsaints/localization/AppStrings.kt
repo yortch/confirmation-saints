@@ -116,6 +116,12 @@ object AppStrings {
         "Contact Us" to "Contáctanos",
         "Support & Legal" to "Soporte y Legal",
         "Open link" to "Abrir enlace",
+        
+        // Content source names & descriptions
+        "Wikipedia" to "Wikipedia",
+        "Wikimedia Commons" to "Wikimedia Commons",
+        "Biographical information" to "Información biográfica",
+        "Public domain images" to "Imágenes de dominio público",
     )
 
     private val translations: Map<String, Map<String, String>> = mapOf(
