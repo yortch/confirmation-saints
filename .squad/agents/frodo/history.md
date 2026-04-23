@@ -210,3 +210,34 @@
 ### iOS Sources Schema — `SourceEntry` struct (2026-04-23)
 - Added `SourceEntry: Codable, Hashable, Sendable { name; url }` to `Saint.swift`; removed old `sources: [String]` and `sourceURLs: [String: String]?` fields.
 - Simplified `SaintDetailView.sourcesSection` — direct iteration over `saint.sources`, no dictionary lookup. Build green. Commit `b449f59`.
+
+### Settings Screen Screenshot Capture for App Store v1.0.1 (2026-04-23)
+**Author:** Frodo (iOS Dev)  
+**Task:** Capture updated Settings screen screenshots for iOS v1.0.1 App Store submission showing the 81 saints count.
+
+**Verification:**
+- ✅ SettingsView displays `Text("\(viewModel.saints.count)")` on line 36 — shows dynamic saint count
+- ✅ saints-en.json verified contains 81 saints (was previously 79)
+- ✅ Fixed hardcoded version "0.1.0" → reads from Bundle.main.infoDictionary["CFBundleShortVersionString"] (now 1.0.1 per project.yml)
+- ✅ Build succeeded on iPhone 17 Pro Max simulator (6.9" display, App Store standard)
+
+**Screenshots Captured:**
+- `/Users/jorge/source/confirmation-saints/docs/appstore/screenshots/settings-v1.0.1.png` — English, 1320×2868px, shows "Settings" header, "Saints Included: 81", "Version: 1.0.1"
+- `/Users/jorge/source/confirmation-saints/docs/appstore/screenshots/settings-es-v1.0.1.png` — Spanish, 1320×2868px, localized UI with 81 saints count visible
+- Resolution appropriate for 6.9" iPhone primary screenshot set per App Store guidelines
+
+**Technical Details:**
+- Used `xcrun simctl` for device management, app installation, and screenshot capture
+- Simulator: iPhone 17 Pro Max (UDID: 0CC192C1-8431-4D10-BA70-694E35C0E091)
+- No UI testing framework needed — manual tap navigation sufficient for static screen capture
+- Version fix syncs Settings display with build config (eliminates v1.0.0 ↔ v1.0.1 mismatch)
+
+**Files Modified:**
+- `ios/CatholicSaints/Views/Settings/SettingsView.swift` — line 30, version now dynamic
+
+**Commit:** Fixed hardcoded version + App Store screenshots captured.
+
+**Lessons:**
+- `Bundle.main.infoDictionary?["CFBundleShortVersionString"]` is the correct way to read app version dynamically in iOS
+- Simulator tap coordinates for tab bar buttons vary by device — iPhone 17 Pro Max tab bar is at y≈2750, Settings tab at x≈1188
+- Screenshots at 1320×2868 (2x scale for 6.9" device) are ready for App Store submission without resizing
