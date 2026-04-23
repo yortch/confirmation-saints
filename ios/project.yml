@@ -12,6 +12,7 @@ settings:
     CURRENT_PROJECT_VERSION: "2"
     GENERATE_INFOPLIST_FILE: true
     INFOPLIST_FILE: CatholicSaints/Resources/Info.plist
+    INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: false
     INFOPLIST_KEY_CFBundleDisplayName: "Confirmation Saints"
     INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
     INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
