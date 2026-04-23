@@ -42,7 +42,7 @@ class SaintParsingTest {
                   "affinities": ["simplicity"],
                   "biography": "The Little Flower.",
                   "image": { "filename": "therese.jpg", "attribution": "PD" },
-                  "sources": ["Catholic Encyclopedia"]
+                  "sources": [{"name": "Catholic Encyclopedia", "url": "https://example.org/therese"}]
                 }
               ]
             }
