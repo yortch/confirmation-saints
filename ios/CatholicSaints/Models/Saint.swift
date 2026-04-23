@@ -24,8 +24,7 @@ struct Saint: Codable, Identifiable, Hashable, Sendable {
     let biography: String
     let whyConfirmationSaint: String?
     let image: SaintImage?
-    let sources: [String]
-    let sourceURLs: [String: String]?
+    let sources: [SourceEntry]
 
     /// Formatted feast day for display (e.g. "October 1")
     var formattedFeastDay: String {
@@ -47,6 +46,11 @@ struct Saint: Codable, Identifiable, Hashable, Sendable {
 struct SaintImage: Codable, Hashable, Sendable {
     let filename: String
     let attribution: String
+}
+
+struct SourceEntry: Codable, Hashable, Sendable {
+    let name: String
+    let url: String
 }
 
 /// Wrapper for decoding the saints JSON file.
