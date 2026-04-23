@@ -86,3 +86,15 @@
 - **Serialization:** `kotlinx.serialization` chosen over Moshi (compile-time, multiplatform-ready).
 - **DI:** Hilt for v1 (standard Android choice, pairs with Navigation Compose).
 - **8-phase work decomposition** defined with explicit dependency ordering.
+
+### Documentation & Marketing Copy — Saint Count References (2026-04-22)
+- Updated all documentation and marketing-facing copy to reflect new saint count: **80+** (previously 70).
+- **Key files updated:**
+  - `README.md`: Feature list + Future Plans section + new "What's New" note
+  - `docs/index.html`: Meta description, hero badge, gallery subtitle, stats section (5 instances)
+  - `docs/appstore/submission-info.md`: Promotional text + App description
+  - `docs/appstore/screen-recording-script.md`: Video caption
+  - `docs/appstore/review-response.md`: App value proposition + suggested user flow
+- **What's New entry:** Added note about 10 new saints (Teresa of Ávila, Ignatius of Loyola, Anthony of Padua, Luke the Evangelist, + 6 others).
+- **Deliberately NOT updated:** Historical test confirmations in `.squad/decisions.md` (Android JVM test section notes 70 saints at time of implementation — that's a historical record, not a current fact). Agent history.md files and session logs also untouched per governance.
+- **Learning:** Marketing copy is distributed across README, docs/index.html, and docs/appstore/ metadata. Always check all three when saint count changes again.
