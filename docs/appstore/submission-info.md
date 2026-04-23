@@ -2,9 +2,9 @@
 
 ## What's New in Version 1.0.1
 
-More saints to help you find your perfect Confirmation patron! We've added 31 new saints to the collection — bringing the roster to 81 Catholic saints with rich biographies, quotes, and feast days. This update includes beloved figures like St. Clare of Assisi, St. Faustina Kowalska, St. Oscar Romero, St. Elizabeth Ann Seton, St. Luke the Evangelist, Charles Lwanga & the Uganda Martyrs, and many more.
+More saints, better search, and smoother links. We've added 11 new saints — bringing the collection from 70 to 81 Catholic saints with rich biographies, quotes, and feast days to help you find the right patron for your Confirmation.
 
-We've also improved the experience: fixed source links for several saints, consolidated regional filters (Latin America and North America are now unified under "Americas"), and added Spanish translations for filter chips, regions, and categories. Everything remains 100% offline and private.
+We've also improved search so it's faster and easier to find a saint by name or interest, and made sure every external source link is fully tappable. Everything remains 100% offline and private.
 
 ---
 
