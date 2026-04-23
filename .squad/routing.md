@@ -7,10 +7,11 @@ How to decide who handles what.
 | Work Type | Route To | Examples |
 |-----------|----------|----------|
 | Architecture & decisions | Gandalf | App structure, data strategy, cross-platform design |
-| SwiftUI & UI | Frodo | Views, navigation, layouts, accessibility |
+| SwiftUI & iOS UI | Frodo | iOS views, navigation, layouts, accessibility |
+| Kotlin & Android UI | Aragorn | Compose screens, navigation, Android resources |
 | Data models & content | Samwise | Saint JSON, localization files, filtering logic |
 | Code review | Gandalf | Review PRs, check quality, approve/reject |
-| Testing | Legolas | XCTest, XCUITest, edge cases, localization QA |
+| Testing | Legolas | XCTest, Android instrumentation/unit tests, edge cases, localization QA |
 | Scope & priorities | Gandalf | What to build next, trade-offs, decisions |
 | Session logging | Scribe | Automatic — never needs routing |
 

@@ -30,5 +30,13 @@
     "created_at": "2026-04-12T15:47:00Z",
     "legacy_named": false,
     "status": "active"
+  },
+  {
+    "persistent_name": "Aragorn",
+    "role": "Android Dev",
+    "universe": "lord-of-the-rings",
+    "created_at": "2026-04-21T17:33:00Z",
+    "legacy_named": false,
+    "status": "active"
   }
 ]

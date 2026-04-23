@@ -16,3 +16,22 @@ xcuserdata/
 
 # macOS
 .DS_Store
+
+# Android / Gradle
+*.iml
+.gradle/
+**/build/
+local.properties
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+*.keystore
+*.jks
+# SharedContent is copied into the app's assets/ by the syncSharedContent Gradle task;
+# the generated assets are build artifacts and should not be committed.
+android/app/src/main/assets/saints-*.json
+android/app/src/main/assets/categories-*.json
+android/app/src/main/assets/confirmation-info-*.json
+android/app/src/main/assets/images/
+android/.kotlin/

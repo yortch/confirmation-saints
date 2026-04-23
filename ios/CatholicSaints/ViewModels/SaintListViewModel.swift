@@ -26,11 +26,14 @@ final class SaintListViewModel {
             result = result.filter { saint in
                 if saint.name.containsIgnoringDiacritics(query) { return true }
                 guard deepSearch else { return false }
-                return saint.patronOf.contains { $0.containsIgnoringDiacritics(query) }
-                    || saint.affinities.contains { $0.containsIgnoringDiacritics(query) }
-                    || saint.tags.contains { $0.containsIgnoringDiacritics(query) }
-                    || (saint.displayAffinities ?? []).contains { $0.containsIgnoringDiacritics(query) }
-                    || (saint.displayTags ?? []).contains { $0.containsIgnoringDiacritics(query) }
+                // Tag fields use token-prefix match so "ter" finds "Teresa"
+                // but not "writers" / "interpreters" / "carpenters".
+                return saint.patronOf.contains { $0.matchesTokenPrefixIgnoringDiacritics(query) }
+                    || saint.affinities.contains { $0.matchesTokenPrefixIgnoringDiacritics(query) }
+                    || saint.tags.contains { $0.matchesTokenPrefixIgnoringDiacritics(query) }
+                    || (saint.displayPatronOf ?? []).contains { $0.matchesTokenPrefixIgnoringDiacritics(query) }
+                    || (saint.displayAffinities ?? []).contains { $0.matchesTokenPrefixIgnoringDiacritics(query) }
+                    || (saint.displayTags ?? []).contains { $0.matchesTokenPrefixIgnoringDiacritics(query) }
                     || (saint.country?.containsIgnoringDiacritics(query) ?? false)
             }
         }

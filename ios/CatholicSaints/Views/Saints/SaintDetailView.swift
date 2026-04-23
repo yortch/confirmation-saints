@@ -227,23 +227,16 @@ struct SaintDetailView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Label(AppStrings.localized("Sources", language: language), systemImage: "doc.text.fill")
                     .font(.title3.bold())
-                ForEach(saint.sources, id: \.self) { source in
-                    if let urlString = saint.sourceURLs?[source],
-                       let url = URL(string: urlString) {
-                        Link(destination: url) {
-                            HStack {
-                                Text(source)
-                                    .font(.subheadline)
-                                Spacer()
-                                Image(systemName: "arrow.up.right.square")
-                                    .font(.caption)
-                            }
-                            .foregroundStyle(.blue)
+                ForEach(saint.sources, id: \.name) { source in
+                    Link(destination: URL(string: source.url)!) {
+                        HStack {
+                            Text(source.name)
+                                .font(.subheadline)
+                            Spacer()
+                            Image(systemName: "arrow.up.right.square")
+                                .font(.caption)
                         }
-                    } else {
-                        Text(source)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                        .foregroundStyle(.blue)
                     }
                 }
             }
