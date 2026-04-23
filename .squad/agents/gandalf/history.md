@@ -98,3 +98,10 @@
 - **What's New entry:** Added note about 10 new saints (Teresa of Ávila, Ignatius of Loyola, Anthony of Padua, Luke the Evangelist, + 6 others).
 - **Deliberately NOT updated:** Historical test confirmations in `.squad/decisions.md` (Android JVM test section notes 70 saints at time of implementation — that's a historical record, not a current fact). Agent history.md files and session logs also untouched per governance.
 - **Learning:** Marketing copy is distributed across README, docs/index.html, and docs/appstore/ metadata. Always check all three when saint count changes again.
+
+### Roster Now 81 — "80+ Copy Truthful" (2026-04-23)
+- **Cross-Agent Sync (Scribe):** Samwise added St. George + St. Mariana de Jesús de Paredes on `squad/add-saints-80-plus`
+- **Status:** Roster expanded 79→81 saints
+- **Resolution:** Marketing docs now match actual count. "80+ saints" copy is truthful at 81 saints.
+- **Decision:** Merging this branch resolves prior discrepancy (79 saints but "80+" in marketing) — no further copy updates needed post-merge.
+

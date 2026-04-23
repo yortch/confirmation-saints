@@ -1,11 +1,20 @@
 # Legolas — History
 
-## Project Context
-- **Project:** confirmation-saints — Catholic Saints iOS App
-- **User:** Jorge Balderas
-- **Stack:** Swift / SwiftUI, iOS (iPhone + iPad)
-- **Description:** App helping Catholic confirmation candidates (primarily teens, also adults) find and choose a patron saint. Features saint search by name, patron day, affinity, country, age, married status. Multilingual (EN/ES). Content sourced from Loyola Press, Focus, Lifeteen, Ascension Press, Hallow with attribution.
-- **Key constraints:** Self-contained, easy content updates, cross-platform ready (Android later), include saint images with attribution.
+## Core Context
+
+### Early Project Setup (2026-04-12)
+- **Foundation:** Gandalf established Swift 6 concurrency (Sendable models, @MainActor services); MVVM with Observable macro
+- **Architecture:** XcodeGen generates .xcodeproj from project.yml (never edit .pbxproj); testable Saint/Category/LocalizedText structs
+- **Welcome Screen:** Frodo created 4-page TabView onboarding (WelcomeView.swift) with first-launch gating via @AppStorage
+- **App Icon:** Samwise generated 1024×1024 PNG (Chi-Rho design, purple gradient, gold accents, dove silhouette); Xcode auto-generates sizes
+- **Test Strategy Established:** Diacritic-insensitive search (String+Diacritics.swift), cross-platform parity checks, Android test scaffolding patterns
+
+### Android QA Architecture (2026-07-22 → 2026-04-23)
+- **Test Frameworks:** JUnit 5 for src/test/ (@Disabled), JUnit 4 for src/androidTest/ (@Ignore); no accidental mixing
+- **Hilt Pattern:** DataStore seeding requires createEmptyComposeRule() + manual ActivityScenario.launch() (not auto-launch); seed in @Before, reset pre-test to avoid pollution
+- **Compose UI Testing:** Use createComposeRule() for self-contained composables (no Hilt tax); drive pagers via UI (tap "Next"), not state; waitUntil with 5s timeout for async DataStore writes
+- **Navigation Testing:** Search-field placeholder is stable landmark for "on Saint List" assertion; onAllNodesWithText().fetchSemanticsNodes().size for multi-location assertions (ambiguous labels)
+- **Test Skills:** Captured in .squad/skills/android-compose-instrumentation/SKILL.md (Patterns A, B-lazy) + .squad/skills/android-adaptive-icons/SKILL.md
 
 ## Learnings
 
@@ -91,3 +100,10 @@
 - **Launcher icon recut (Aragorn):** Prior adaptive icon implementation used 60% scale (claim was WRONG; linear 66/108 ≈ 61% ignored diagonal trap). Correct scale = 43.2% (66dp ÷ (108dp÷√2)). Square content rotated in circular mask must fit diagonally, not just width/height. At 60%, diagonal = 91.6dp (overshoot 25.6dp). At 43%, diagonal = 65.7dp (0.3dp clearance inside safe zone). Updated `FOREGROUND_INNER_RATIO` in `_generate_android_icon.py` (0.60 → 0.43) + regenerated all 5 launcher densities. Full geometric analysis at `.squad/decisions/decisions.md#android-launcher-icon-scale-correction-60-43`.
 - **QA impact:** Both splash and launcher now correct. If running UI tests on icon placement/scale, verify against physical device/emulator post-rebuild.
 - **Patterns documented:** `.squad/skills/android-adaptive-icons/SKILL.md` — reusable for future icon work. Includes "Diagonal Trap" mistake section so future readers don't repeat the 60% error.
+
+### Android Test Count Bumped 79→81 (2026-04-23)
+- **Cross-Agent Sync (Scribe):** Samwise added St. George + St. Mariana on `squad/add-saints-80-plus`; Aragorn updated `SaintRepositoryTest` to reflect 81-saint roster
+- **Test Impact:** `android/app/src/test/java/.../data/SaintRepositoryTest.kt` now expects 81 saints in both EN/ES
+- **Recommendation:** Switch to "minimum count" assertion for future-proofing (current: exact count = 81)
+- **Verification:** All 32 unit tests pass; 0 failures
+

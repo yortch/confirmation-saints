@@ -36,35 +36,6 @@ Reorganize repository to separate iOS (ios/), Android (android/), and shared con
 
 ---
 
-### Programmatic App Icon with Chi-Rho Design (2025-07-15)
-**Author:** Samwise (Data/Backend)  
-**Status:** Implemented
-
-**Design:**
-- Chi-Rho (☧) symbol — oldest Christogram, universally recognized in Catholic tradition
-- Purple gradient background (liturgical color of Confirmation)
-- Gold accents (sacred/regal)
-- Subtle dove silhouette (Holy Spirit)
-- No text (poor readability at small sizes)
-
-**Technical:**
-- Generated via `_generate_icon.py` (Python + Pillow)
-- Single 1024×1024 PNG: Xcode auto-generates all required sizes
-- Output: `ios/CatholicSaints/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png`
-- Contents.json updated with iOS platform reference
-
-**Trade-offs:**
-- Programmatic generation = geometric/flat style only
-- Chi-Rho less immediately recognizable to teens than simple cross, but more distinctive/unique
-- **Placeholder** — Jorge may commission professional icon later
-
-**Impact:**
-- iOS icon now visible in simulator/device
-- Android icon generation pending (different format requirements)
-- Script is regenerable/modifiable if design tweaks needed
-
----
-
 ### Saint Image Sources from Wikimedia Commons (2026-07-17)
 **Author:** Samwise (Data/Backend)  
 **Status:** Implemented
@@ -77,39 +48,6 @@ All 32 saint images sourced from Wikimedia Commons using public domain or Creati
 - UI: No changes needed (SaintImageView.swift already handles image loading)
 
 **Notes:** Some saints (Carlo Acutis, Chiara Luce Badano) have limited public domain imagery; best available options used.
-
----
-
-### Source URL Replacement Strategy (2025-07-15)
-**Author:** Frodo (iOS Dev)  
-**Status:** Implemented
-
-Link audit identified 46 broken source URLs across saints-en.json and saints-es.json. Five primary sources had widespread link rot (Loyola Press, Hallow, Ascension Press, Focus, Lifeteen). Replaced with verified alternatives:
-
-1. **Franciscan Media** — Primary replacement (stable saint-of-the-day archive)
-2. **CNA (Catholic News Agency)** — Secondary source for comprehensive coverage
-3. **EWTN** — Tertiary source to avoid duplicate keys
-4. **Hallow (updated paths)** — Migrated from `/blog/` to `/saints/`
-
-**Impact:**
-- All 32 saints retain ≥2 working source URLs
-- No working URLs changed
-- Both EN/ES files updated identically (matched by URL, not saint name)
-
----
-
-### Diacritic-Insensitive Search Convention (2025-07-17)
-**Author:** Frodo (iOS Dev)  
-**Status:** Implemented
-
-All string matching in search/filter logic uses diacritic-insensitive comparison via shared `String+Diacritics.swift` extension (`containsIgnoringDiacritics` / `equalsIgnoringDiacritics`), not `.lowercased().contains()`.
-
-**Rationale:** Saint names include accented characters (Thérèse, José, María) common in French, Spanish, and other languages. Users typing on English keyboards won't include accents, so search must treat accented and unaccented characters as equivalent.
-
-**Impact:**
-- **Legolas (QA):** Search tests verify accent-insensitive matching
-- **Samwise (Data):** Saint data retains proper accented names
-- **Android:** Use Java/Kotlin `Normalizer` or `Collator` with `SECONDARY` strength
 
 ---
 
@@ -377,5 +315,127 @@ cd android && ./gradlew :app:testDebugUnitTest
 ## No Production Bugs Found
 
 All tests passed on first green run after Robolectric asset config. No defects discovered in SaintRepository, LocalizationService, CategoryMatcher, or DateFormatting APIs.
+
+---
+
+### 81 Saints + Wikipedia-First Attribution Policy (2026-04-23)
+**Author:** Samwise (Data/Backend)  
+**Status:** Implemented ✅
+
+Added St. George and St. Mariana de Jesús de Paredes to reach 81 saints total. Audited attribution for all recent additions (9 saints from commit 8f5727a + Frances Cabrini) — all complete. Established **Wikipedia as the primary trusted source** for new saint research in the adding-saints skill documentation.
+
+**Saints Added:**
+- **St. George** (feast April 23): Early Christian martyr (~280-303 AD), patron of England, soldiers, scouts. Dragon legend symbolizes triumph of good over evil.
+- **St. Mariana de Jesús de Paredes** (feast May 26): "Lily of Quito" — first canonized saint of Ecuador (1950). Mystic, penitent, laywoman (Third Order Franciscan).
+
+**Attribution Audit (All Complete):**
+- 9 saints from batch 8f5727a: John Neumann, Moses the Black, Vladimir of Kiev, Ignatius of Loyola, Imelda Lambertini, Isidore the Farmer, Teresa of Ávila, Anthony of Padua, Josemaría Escrivá
+- Frances Cabrini (earlier batch)
+- **Result:** All ≥2 sources, no gaps. `sourceURLs` + `imageAttribution` complete on every entry.
+
+**Skill Update: Trusted Sources (in order)**
+1. **Wikipedia (EN + ES articles)** — biographical facts, feast date, patronage, canonization date. Use English Wikipedia URL in `sourceURLs` for both language files.
+2. **Wikimedia Commons** — images. Check `extmetadata.LicenseShortName` via API. Prefer PD; CC BY-SA acceptable with attribution.
+3. **Catholic.org / Franciscan Media / vaticannews.va / CNA** — tiebreakers, spiritual context.
+
+**Key Enforcement:** Both `sourceURLs` (dictionary) AND `imageAttribution` (string) are **REQUIRED**; never leave blank.
+
+**Why Wikipedia First?**
+- Consistency: Wikipedia exists for virtually every canonized saint + most Blessed
+- Reliability: Cites primary sources; peer-reviewed via edit history; EN/ES cross-validate
+- Accessibility: Free, multilingual, comprehensive
+- License transparency: Wikimedia Commons has robust metadata via API
+- Already in use: Both new saints used Wikipedia as primary source
+
+**Why Not Wikipedia Only?**
+- Spiritual context missing: Wikipedia is factual but doesn't explain *why* compelling for confirmation candidates
+- Image gaps: Not all saints have PD images on Commons (especially 20th-century); need fallback to CC BY-SA/CC0
+
+**Verification:**
+- ✅ `python3 tests/shared-content-parity.py` → PASSED
+- ✅ iOS build: BUILD SUCCEEDED
+- ✅ Android: BUILD SUCCESSFUL, test count 79→81
+- ✅ Cross-platform parity: EN/ES matching validated
+
+**Marketing Copy Resolution:**
+"80+ saints" copy now truthful at 81 saints. Prior discrepancy (docs vs. roster count) resolved.
+
+**Impact:**
+- **Frodo (iOS):** 2 new saints visible in search/browse — no UI changes needed
+- **Aragorn (Android):** Build passes; test expected 81
+- **Legolas (QA):** Category coverage unchanged; schema compliant
+- **Future batches:** Use Wikipedia-first workflow from updated skill doc
+
+**Files Changed:**
+- `SharedContent/saints/saints-en.json` (2 saints added)
+- `SharedContent/saints/saints-es.json` (2 saints added)
+- `SharedContent/images/george.jpg`, `mariana-de-jesus-de-paredes.jpg`
+- `.squad/skills/adding-saints/SKILL.md` (Wikipedia-first policy)
+
+---
+
+### iOS Settings Content Sources UI (2026-04-23)
+**Author:** Frodo (iOS Dev)  
+**Status:** Implemented ✅
+
+Added 8 tappable SwiftUI `Link` components to Settings → Content Sources section. Sources include Wikipedia (EN/ES), Wikimedia Commons, Catholic.org, Franciscan Media, CNA, EWTN, Hallow.
+
+**Implementation:**
+- Each link has external-link glyph (`Image(systemName: "arrow.up.right")`)
+- 4 new localized strings (EN+ES) added to `Localizable.xcstrings`
+- `LocalizationService.swift` wired for string lookup
+- Tint color matches accent color for visual consistency
+
+**Verification:**
+- ✅ iOS build: BUILD SUCCEEDED
+- ✅ Localizable.xcstrings: No missing EN/ES pairs
+- ✅ No compiler warnings
+
+**Impact:**
+- Users can tap to external sources directly from Settings
+- Mirrors Android implementation (9 sources)
+- Aligns with Wikipedia-first attribution policy
+
+**Files Changed:**
+- `ios/CatholicSaints/Views/SettingsView.swift` (8 Link components)
+- `ios/CatholicSaints/Localization/LocalizationService.swift` (4 strings)
+- `ios/CatholicSaints/Resources/Localizable.xcstrings` (4 new entries)
+
+---
+
+### Android Settings Content Sources UI (2026-04-23)
+**Author:** Aragorn (Android Dev)  
+**Status:** Implemented ✅
+
+Added 9 tappable source rows to Settings → Content Sources. Created `ContentSource` data class and `SourceRow` composable. Uses `LocalUriHandler.current.openUri()` to launch links. All localized via `AppStrings.kt` (EN+ES). OpenInNew icon on each row; `contentDescription` for a11y.
+
+**Implementation:**
+- `ContentSource` data class holds label, URI, icon
+- `SourceRow` composable renders tappable row with OpenInNew icon
+- 9 sources: Wikipedia (EN+ES), Wikimedia Commons, Catholic.org, Franciscan Media, CNA, EWTN, Hallow, +1
+- All labels localized (EN+ES) in AppStrings
+- Live language switching in Settings updates labels
+
+**Test Update:**
+- `SaintRepositoryTest`: Updated test count 79→81 (reflects 81-saint roster)
+- Recommendation: Switch to "minimum count" assertion for future-proofing
+
+**Verification:**
+- ✅ Android build: BUILD SUCCESSFUL
+- ✅ 32 unit tests pass; 0 failures
+- ✅ No compiler warnings
+
+**Impact:**
+- Settings mirrors iOS (source browsing UI)
+- Aligns with Wikipedia-first attribution policy
+- A11y compliant (all icons described)
+- Saint count now future-locked at 81
+
+**Files Changed:**
+- `android/app/src/main/java/.../data/ContentSource.kt` (new)
+- `android/app/src/main/java/.../ui/composables/SourceRow.kt` (new)
+- `android/app/src/main/java/.../ui/SettingsScreen.kt` (9 rows added)
+- `android/app/src/main/java/.../localization/AppStrings.kt` (9 new entries EN+ES)
+- `android/app/src/test/java/.../data/SaintRepositoryTest.kt` (count 79→81)
 
 ---

@@ -1,11 +1,26 @@
 # Frodo — History
 
-## Project Context
-- **Project:** confirmation-saints — Catholic Saints iOS App
-- **User:** Jorge Balderas
-- **Stack:** Swift / SwiftUI, iOS (iPhone + iPad)
-- **Description:** App helping Catholic confirmation candidates (primarily teens, also adults) find and choose a patron saint. Features saint search by name, patron day, affinity, country, age, married status. Multilingual (EN/ES). Content sourced from Loyola Press, Focus, Lifeteen, Ascension Press, Hallow with attribution.
-- **Key constraints:** Self-contained, easy content updates, cross-platform ready (Android later), include saint images with attribution.
+## Core Context
+
+### iOS App Foundation (2026-04-12)
+- **Architecture:** MVVM + SwiftUI with Observable macro (iOS 17+); XcodeGen generates .xcodeproj from project.yml
+- **Swift 6 Concurrency:** All models Sendable, services @MainActor
+- **UI Localization:** .xcstrings String Catalog (EN/ES); in-app language switch via @AppStorage("appLanguage") + custom EnvironmentValues
+- **Navigation:** NavigationStack (not deprecated NavigationView); no duplicate .navigationDestination for same type in hierarchy (causes conflicts)
+- **Data Model:** Per-language JSON files (saints-en/es.json, categories-en/es.json, confirmation-info-en/es.json) in SharedContent/
+- **UI Components:** SaintListViewModel shared across 5 tabs; SaintImageView for consistent image display; FilterChip for dynamic category matching
+- **Theme:** Purple accent (liturgical + teen-friendly), SF Symbols, gradient avatars; FlowLayout for tag chips
+
+### Bugs Fixed (2025-07-15 to 2025-07-18)
+- **CategorySaintsListView navigation conflict:** Removed inner .navigationDestination that conflicted with parent NavigationStack
+- **Language reactivity:** Changed detail views to accept saintId (not captured Saint struct) + viewModel reference; now updates on language switch
+- **46 broken source URLs:** Replaced Loyola Press, Hallow, Ascension Press, Focus, Lifeteen with Franciscan Media, CNA, EWTN (stable patterns)
+- **UI rendering:** Default tab → Explore (index 1); closure-based NavigationLinks instead of value-based (avoids conflicts); AppStrings.localized() for in-app language switching
+
+### Recent Work (2026-04-22 to 2026-04-23)
+- **App Rename:** "Catholic Saints" → "Confirmation Saints" (display name; internal folder unchanged)
+- **Welcome Screen:** 4-page TabView onboarding (TabPageViewStyle, purple/gold theme); @AppStorage("hasSeenWelcome") gating; Settings button to replay
+- **Settings Content Sources:** 8 tappable SwiftUI Link components + external-link glyphs; localized labels (EN/ES)
 
 ## Learnings
 
