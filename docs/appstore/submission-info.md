@@ -23,7 +23,7 @@ Or use Cmd+S in the Simulator app.
 
 ## 2. Promotional Text (170 chars max)
 
-Find your Catholic Confirmation saint! Browse 70+ saints, filter by interest, age, region & more. Bilingual in English & Spanish. 100% offline & private.
+Find your Catholic Confirmation saint! Browse 80+ saints, filter by interest, age, region & more. Bilingual in English & Spanish. 100% offline & private.
 
 ---
 
@@ -31,7 +31,7 @@ Find your Catholic Confirmation saint! Browse 70+ saints, filter by interest, ag
 
 Preparing for Catholic Confirmation? Confirmation Saints helps you find and choose the perfect patron saint for your Confirmation journey.
 
-Browse over 70 Catholic saints with rich biographies, inspirational quotes, feast days, and beautiful images — all sourced from trusted Catholic resources including Loyola Press, FOCUS, Lifeteen, Ascension Press, Hallow, and the Catholic Encyclopedia.
+Browse over 80 Catholic saints with rich biographies, inspirational quotes, feast days, and beautiful images — all sourced from trusted Catholic resources including Loyola Press, FOCUS, Lifeteen, Ascension Press, Hallow, and the Catholic Encyclopedia.
 
 FIND YOUR SAINT
 • Search by name, patron association, or country of origin

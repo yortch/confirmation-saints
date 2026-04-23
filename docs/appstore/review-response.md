@@ -18,7 +18,7 @@ None of the flows Apple listed apply to this app, so none are shown:
 
 **Problem:** Candidates — mostly teenagers, also adults confirmed later in life — have only a few weeks to pick a saint whose life resonates with their own. Printed resources are limited, parish materials vary, and web searches surface inconsistent information. They need a focused, trustworthy, bilingual tool.
 
-**Value:** 70+ curated saints with biographies, feast days, patronages, and quotes; filter by interest, region, era, age, life state, and gender; instant English/Spanish switching; an educational "What is Confirmation?" section; fully offline with no accounts, ads, or tracking — safe for teens on shared or school-managed devices.
+**Value:** 80+ curated saints with biographies, feast days, patronages, and quotes; filter by interest, region, era, age, life state, and gender; instant English/Spanish switching; an educational "What is Confirmation?" section; fully offline with no accounts, ads, or tracking — safe for teens on shared or school-managed devices.
 
 **Audience:** Catholic teenagers preparing for Confirmation (primary), adult candidates, sponsors, catechists, and parents.
 
@@ -26,7 +26,7 @@ None of the flows Apple listed apply to this app, so none are shown:
 
 **No credentials required.** No accounts, no sign-in, no gated content. Everything is available on first launch.
 
-Suggested path: (1) Launch — tap "Get Started" on the one-time welcome. (2) Saints tab — browse or search the 70+ list; tap any saint for the full profile. (3) Explore tab — pick a category (Interests, Regions, Eras, Age, Life State, Gender), then a sub-category. (4) About tab — the Confirmation explainer. (5) Settings tab — switch language between English and Spanish; contains Privacy Policy, Support, and version info.
+Suggested path: (1) Launch — tap "Get Started" on the one-time welcome. (2) Saints tab — browse or search the 80+ list; tap any saint for the full profile. (3) Explore tab — pick a category (Interests, Regions, Eras, Age, Life State, Gender), then a sub-category. (4) About tab — the Confirmation explainer. (5) Settings tab — switch language between English and Spanish; contains Privacy Policy, Support, and version info.
 
 ## 4. External Services
 
