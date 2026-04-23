@@ -91,6 +91,15 @@ SAINT_IMAGES = {
     "clare-of-assisi": "Simone_Martini_047.jpg",
     "luke-evangelist": "St_Luke_the_Evangelist.jpg",
     "gemma-galgani": "Gemma_Galgani.jpg",
+    "john-neumann": "Rt. Rev. John Nepomucene Neumann, half-length portrait, facing left LCCN96508709.jpg",
+    "moses-the-black": "San Moises el Negro.jpg",
+    "vladimir-of-kiev": "Saint Vladimir le Grand.jpg",
+    "ignatius-of-loyola": "Ignatius_Loyola.jpg",
+    "imelda-lambertini": "ImeldaLambertini.jpg",
+    "isidore-the-farmer": "San_Isidro_Labrador.jpg",
+    "teresa-of-avila": "Peter_Paul_Rubens_060.jpg",
+    "anthony-of-padua": "Saint_Anthony_of_Padua.jpg",
+    "josemaria-escriva": "Detail autel Jose Maria Escriva de Balaguer Peterskirche Vienna.jpg",
 }
 
 

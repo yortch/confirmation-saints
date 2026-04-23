@@ -3244,6 +3244,423 @@
         "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gemma-galgani/",
         "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06411b.htm"
       }
+    },
+    {
+      "id": "john-neumann",
+      "name": "St. John Neumann",
+      "feastDay": "01-05",
+      "birthDate": "1811-03-28",
+      "deathDate": "1860-01-05",
+      "canonizationDate": "1977-06-19",
+      "country": "United States",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "sick children",
+        "immigrants",
+        "Catholic education"
+      ],
+      "tags": [
+        "modern",
+        "bishop",
+        "immigrant advocate",
+        "educator",
+        "founder"
+      ],
+      "affinities": [
+        "teaching",
+        "languages",
+        "service",
+        "learning"
+      ],
+      "quote": "Everyone who breathes, high and low, educated and ignorant, young and old, man and woman, has a mission, has a work.",
+      "biography": "John Nepomucene Neumann was born on March 28, 1811, in Prachatitz, Bohemia (now the Czech Republic). Gifted with a strong intellect and a deep love for languages, he eventually mastered at least eight, which became invaluable for his future ministry among immigrants.\n\nUnable to be ordained in his diocese due to a surplus of priests, he traveled alone to the United States in 1836 and was ordained in New York. He ministered to German-speaking immigrants in upstate New York before joining the Redemptorist order in 1840 — becoming the first Redemptorist professed in America.\n\nIn 1852 he was named Bishop of Philadelphia. In eight years as bishop, he built nearly 100 schools and 80 churches, organized the first American diocesan Catholic school system, and pioneered the Forty Hours Eucharistic devotion in the United States. Known for his humility — he walked everywhere and wore patched clothes — he collapsed on a Philadelphia street and died on January 5, 1860, at age 48.\n\nCanonized by Pope Paul VI in 1977, he was the first American bishop and the first male U.S. citizen to be named a saint.",
+      "whyConfirmationSaint": "St. John Neumann was a quiet, bookish kid who stuttered in public and struggled to fit in — yet he became one of the most effective bishops in American history. He walked door to door to reach immigrants, learned the languages of everyone he served, and built a Catholic school system from scratch. If you feel overlooked, introverted, or like you don't have flashy gifts, John Neumann shows that faithful, steady work changes the world more than you think.",
+      "image": {
+        "filename": "john-neumann.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic News Agency"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-neumann/",
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-john-neumann-602"
+      }
+    },
+    {
+      "id": "moses-the-black",
+      "name": "St. Moses the Black",
+      "feastDay": "08-28",
+      "birthDate": "0330-01-01",
+      "deathDate": "0405-08-28",
+      "canonizationDate": null,
+      "country": "Egypt",
+      "region": "Africa",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Africa",
+        "non-violence",
+        "forgiveness"
+      ],
+      "tags": [
+        "African",
+        "convert",
+        "hermit",
+        "martyr",
+        "early-church"
+      ],
+      "affinities": [
+        "prayer",
+        "solitude",
+        "contemplation",
+        "forgiveness"
+      ],
+      "quote": "Sit in your cell and your cell will teach you everything.",
+      "biography": "Moses was born around 330 in Ethiopia and was brought as a slave into a wealthy Egyptian household. Dismissed for theft and suspected murder, he became the leader of a violent band of robbers who terrorized the Nile valley. Tall, strong, and feared throughout the region, he seemed an unlikely candidate for sainthood.\n\nFleeing from authorities one day, Moses took refuge among the Desert Fathers at Scetis in Egypt. Moved by the monks' peace and humility, he stayed. His conversion was not quick — he wrestled fiercely with his old temptations and violent temperament — but under the guidance of St. Isidore and St. Macarius he slowly became a man of radical humility and gentleness.\n\nOrdained a priest and appointed spiritual father to many, Moses became famous for refusing to judge others. When asked to join in condemning a brother, he carried a leaking basket of sand on his back and said, 'My own sins run out behind me and I do not see them, and today I am coming to judge the sins of another.'\n\nWhen Berber raiders attacked the monastery around 405, Moses refused to fight or flee. He told his brothers, 'Whoever lives by the sword will die by the sword,' and welcomed death. He was killed along with several companions, dying as a martyr of non-violence at about 75.",
+      "whyConfirmationSaint": "St. Moses the Black's life is proof that nobody is too far gone for God. He was a slave, a gang leader, a murderer, a man feared for his violence — and he became a gentle, holy monk who refused to fight even when his life was threatened. If you're carrying guilt from your past, or if people have written you off because of who you used to be, Moses is your patron. He also stands as a powerful witness against racism and violence, and as a reminder that true strength is in mercy.",
+      "image": {
+        "filename": "moses-the-black.jpg",
+        "attribution": "CC BY-SA 4.0, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic News Agency"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-moses-the-black/",
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-moses-the-black-675"
+      }
+    },
+    {
+      "id": "vladimir-of-kiev",
+      "name": "St. Vladimir of Kiev",
+      "feastDay": "07-15",
+      "birthDate": "0958-01-01",
+      "deathDate": "1015-07-15",
+      "canonizationDate": null,
+      "country": "Ukraine",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Russia",
+        "Ukraine",
+        "converts",
+        "parents of large families"
+      ],
+      "tags": [
+        "convert",
+        "leader",
+        "medieval",
+        "father"
+      ],
+      "affinities": [
+        "leadership",
+        "justice",
+        "politics",
+        "family"
+      ],
+      "quote": "Rus' is merry to drink; we cannot do without it. But now we have come to know the faith of Christ, and our hearts are turned.",
+      "biography": "Vladimir was born around 958, the son of Sviatoslav, Grand Prince of Kiev. He came to power in 980 after a brutal civil war against his brothers. In his early reign he was a fierce pagan warrior — he expanded his realm by conquest, erected pagan shrines, and kept hundreds of wives and concubines.\n\nAccording to ancient chronicles, Vladimir sent envoys to study the major religions of his neighbors. They returned captivated by the beauty of Byzantine Christian worship in Constantinople, saying, 'We did not know whether we were in heaven or on earth.' Around 988, Vladimir was baptized, married the Byzantine princess Anna, and ordered the mass baptism of the people of Kiev in the Dnieper River — the event that brought Christianity to the lands of Rus'.\n\nAfter his conversion, Vladimir's life changed dramatically. He dismantled the pagan idols he had built, built churches and schools, cared for the poor, abolished the death penalty for a time because he feared sinning against God, and gave away much of his wealth to the needy. He is remembered in the East and West as 'Equal to the Apostles' for bringing an entire people to Christ.\n\nHe died in 1015 and is venerated as the founding father of Christianity in Russia, Ukraine, and Belarus.",
+      "whyConfirmationSaint": "St. Vladimir was a violent prince with a shocking past — conqueror, idolater, polygamist — and yet Jesus transformed him into a man who abolished the death penalty out of reverence for God. He shows that one person's conversion can change the course of history for millions. If you have a past you're not proud of, or if you want to bring your faith into the way you lead, Vladimir is a powerful patron. He's also a saint shared across East and West, a bridge of Christian unity.",
+      "image": {
+        "filename": "vladimir-of-kiev.jpg",
+        "attribution": "CC BY-SA 4.0, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic News Agency",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-vladimir-the-great-435",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-vladimir-the-great/"
+      }
+    },
+    {
+      "id": "ignatius-of-loyola",
+      "name": "St. Ignatius of Loyola",
+      "feastDay": "07-31",
+      "birthDate": "1491-10-23",
+      "deathDate": "1556-07-31",
+      "canonizationDate": "1622-03-12",
+      "country": "Spain",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "soldiers",
+        "retreats",
+        "educators",
+        "Jesuits"
+      ],
+      "tags": [
+        "founder",
+        "soldier",
+        "convert",
+        "writer",
+        "religious"
+      ],
+      "affinities": [
+        "prayer",
+        "leadership",
+        "studying",
+        "writing",
+        "contemplation"
+      ],
+      "quote": "Go forth and set the world on fire.",
+      "biography": "Íñigo López de Loyola was born in 1491 in the Basque country of northern Spain, the youngest of 13 children in a noble family. Ambitious and worldly, he dreamed of glory as a soldier. His military career ended dramatically in 1521 when a cannonball shattered his leg at the Battle of Pamplona.\n\nBedridden for months during his recovery, Ignatius asked for romance novels and tales of chivalry. Instead, he was given a life of Christ and stories of the saints. He began to notice something: daydreams of knightly glory left him empty, while imagining a life of holiness gave him lasting peace. This 'discernment of spirits' became the heart of his spiritual teaching.\n\nAfter his conversion, Ignatius spent a year in prayer and penance at Manresa, where he drafted the Spiritual Exercises — a guide to deep conversion that has shaped retreats for five centuries. He studied theology at the University of Paris, where he gathered a small band of companions, including Francis Xavier and Peter Faber.\n\nIn 1540, Pope Paul III approved their new order: the Society of Jesus. Under Ignatius's leadership as its first Superior General, the Jesuits grew rapidly, founding schools, missions, and universities across the globe. Their motto, Ad maiorem Dei gloriam ('For the greater glory of God'), captured his vision. He died in Rome in 1556 and was canonized in 1622.",
+      "whyConfirmationSaint": "St. Ignatius started out chasing glory, women, and status — and he was great at it. But a battlefield injury forced him to sit still long enough to listen to God, and he traded his sword for the Spiritual Exercises. He invented a whole way of making good decisions ('discernment') that is still used today by people trying to figure out God's call. If you're ambitious, competitive, or a natural leader, Ignatius shows you how to aim that drive at something that actually matters. Jesuit education, global missions, retreats, spiritual direction — all of it flowed from his conversion.",
+      "image": {
+        "filename": "ignatius-of-loyola.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic News Agency"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-ignatius-of-loyola/",
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-ignatius-of-loyola-564"
+      }
+    },
+    {
+      "id": "imelda-lambertini",
+      "name": "Bl. Imelda Lambertini",
+      "feastDay": "05-13",
+      "birthDate": "1322-01-01",
+      "deathDate": "1333-05-12",
+      "canonizationDate": null,
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "young",
+      "patronOf": [
+        "first communicants",
+        "children"
+      ],
+      "tags": [
+        "Blessed",
+        "Dominican",
+        "mystic",
+        "Eucharist",
+        "young",
+        "medieval"
+      ],
+      "affinities": [
+        "prayer",
+        "devotion",
+        "contemplation"
+      ],
+      "quote": "How can anyone receive Jesus into his heart and not die of love?",
+      "biography": "Imelda Lambertini was born in 1322 into a noble family in Bologna, Italy. From her earliest years she showed an unusual love for Jesus in the Eucharist — reportedly building little altars at home and spending long hours in prayer. At nine years old, with her parents' permission, she entered the Dominican convent of Val di Pietra to live among the sisters.\n\nImelda's deepest longing was to receive her First Communion. But in her time, children under about fourteen were not permitted to receive the Eucharist. Again and again she begged the chaplain, asking, 'How can anyone receive Jesus and not die of love?' Each time she was told she was too young.\n\nOn the vigil of the Ascension in 1333, Imelda remained in the chapel after Mass. The sisters saw her kneeling in adoration when a consecrated Host suddenly appeared hovering above her head. The chaplain, recognizing it as an unmistakable sign from God, gave her Communion on the spot. Imelda received the Eucharist with radiant joy — and remained kneeling in ecstasy so long that the sisters came to lift her. She had died, at eleven years old, overcome with love for Jesus.\n\nShe was officially beatified by Pope Leo XII in 1826, and is honored as the patroness of First Communicants.",
+      "whyConfirmationSaint": "Bl. Imelda is 'Blessed' (not yet fully canonized as a saint), but her title fits the Church's special honor of her deep, childlike love. She was eleven years old when she died — younger than most kids getting confirmed — and the center of her life was Jesus in the Eucharist. If you've ever felt like your faith is 'just for kids' or that being young means being small in God's eyes, Imelda shows otherwise. Her whole life says: the Mass is not just a ritual. Jesus is really there, and receiving Him should change everything.",
+      "image": {
+        "filename": "imelda-lambertini.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic News Agency",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/bl-imelda-lambertini-297",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/07675a.htm"
+      }
+    },
+    {
+      "id": "isidore-the-farmer",
+      "name": "St. Isidore the Farmer",
+      "feastDay": "05-15",
+      "birthDate": "1070-01-01",
+      "deathDate": "1130-05-15",
+      "canonizationDate": "1622-03-12",
+      "country": "Spain",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "farmers",
+        "Madrid",
+        "laborers",
+        "rural communities"
+      ],
+      "tags": [
+        "married",
+        "worker",
+        "medieval",
+        "humble",
+        "charitable"
+      ],
+      "affinities": [
+        "nature",
+        "work",
+        "prayer",
+        "service"
+      ],
+      "quote": "He prayed while he plowed, and the angels plowed beside him.",
+      "biography": "Isidore was born around 1070 in Madrid, Spain, to poor but devout parents. As a young man he went to work on the estate of a wealthy landowner named Juan de Vargas, plowing fields and tending crops. He married Maria Torribia (later also venerated as a saint, known in Spain as Santa María de la Cabeza). Their only child died young, and after that the couple together dedicated the rest of their lives to God, prayer, and charity to the poor.\n\nIsidore became famous for two things: his prayer and his generosity. He rose before dawn each day to attend Mass, then prayed throughout his workday. His fellow laborers complained that he arrived late to the fields because of Mass, but witnesses reported seeing angels plowing alongside him — and his portion of the work always got done. He regularly shared his food with the hungry, and stories are told of miraculous multiplications of bread for the poor.\n\nThough he spent his whole life as a simple day laborer, his holiness was so evident that after his death in 1130 miracles quickly multiplied at his tomb. When King Philip III of Spain recovered from a deadly illness after praying through Isidore's intercession, the king pushed for his canonization. Isidore was canonized in 1622 alongside Ignatius of Loyola, Teresa of Ávila, Francis Xavier, and Philip Neri.",
+      "whyConfirmationSaint": "St. Isidore never did anything 'big' by the world's standards — he was a farmhand for his entire life. What made him a saint was that he turned ordinary work, ordinary marriage, and ordinary poverty into something sacred. If you feel like your life is too normal to matter, or you wonder whether God cares about a regular job and a regular family, Isidore says yes. Sanctity isn't about the role; it's about love.",
+      "image": {
+        "filename": "isidore-the-farmer.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic News Agency"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-isidore-the-farmer/",
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-isidore-the-farmer-362"
+      }
+    },
+    {
+      "id": "teresa-of-avila",
+      "name": "St. Teresa of Ávila",
+      "feastDay": "10-15",
+      "birthDate": "1515-03-28",
+      "deathDate": "1582-10-04",
+      "canonizationDate": "1622-03-12",
+      "country": "Spain",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Spain",
+        "headache sufferers",
+        "religious"
+      ],
+      "tags": [
+        "Doctor of the Church",
+        "Carmelite",
+        "mystic",
+        "reformer",
+        "writer",
+        "founder"
+      ],
+      "affinities": [
+        "prayer",
+        "writing",
+        "contemplation",
+        "leadership"
+      ],
+      "quote": "Let nothing disturb you, let nothing frighten you. All things are passing. God alone suffices.",
+      "biography": "Teresa de Cepeda y Ahumada was born on March 28, 1515, in Ávila, Spain, into a large, wealthy family of partly Jewish converso heritage. A lively, imaginative child, she once ran away from home with her brother to seek martyrdom among the Moors. As a teenager she was vain and worldly, but after a serious illness she entered a Carmelite convent at age 20.\n\nTeresa spent nearly 20 years as a comfortable but spiritually mediocre nun. At around 40, she experienced a deep conversion in front of a statue of the wounded Christ and realized she had been holding back from God. From then on her life caught fire. She began receiving profound mystical experiences, including the famous 'transverberation' in which she felt her heart pierced by an angel's flaming arrow.\n\nDespite fragile health and fierce opposition, Teresa launched a reform of the Carmelite order, founding 17 new 'Discalced' (shoeless) convents of stricter poverty and prayer. Working alongside St. John of the Cross, she helped shape one of the great renewals of Catholic spirituality.\n\nTeresa wrote prolifically — her Autobiography, The Way of Perfection, and The Interior Castle are classics of Christian literature. Blunt, funny, and deeply human, her writings describe the soul's journey to union with God. She died in 1582 and was canonized in 1622. In 1970 Pope Paul VI declared her a Doctor of the Church — the first woman ever to receive that title.",
+      "whyConfirmationSaint": "St. Teresa of Ávila was sassy, funny, and completely fearless — and she became the first woman ever named a Doctor of the Church. She reformed a whole religious order, wrote spiritual classics that are still bestsellers, and taught the world how to pray. When she was knocked off her donkey crossing a flooded river, legend says she told God, 'If this is how You treat Your friends, no wonder You have so few of them!' If you want a saint who is real, bold, and deeply in love with Jesus, Teresa is unmatched.",
+      "image": {
+        "filename": "teresa-of-avila.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic News Agency"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-teresa-of-avila/",
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-teresa-of-avila-574"
+      }
+    },
+    {
+      "id": "anthony-of-padua",
+      "name": "St. Anthony of Padua",
+      "feastDay": "06-13",
+      "birthDate": "1195-08-15",
+      "deathDate": "1231-06-13",
+      "canonizationDate": "1232-05-30",
+      "country": "Portugal",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "lost items",
+        "lost people",
+        "Portugal",
+        "the poor"
+      ],
+      "tags": [
+        "Franciscan",
+        "Doctor of the Church",
+        "miracle worker",
+        "intellectual",
+        "medieval"
+      ],
+      "affinities": [
+        "prayer",
+        "studying",
+        "service",
+        "reading"
+      ],
+      "quote": "The life of the body is the soul; the life of the soul is God.",
+      "biography": "Fernando Martins de Bulhões was born in Lisbon, Portugal, in 1195 to a noble family. At 15 he entered the Augustinian order, where he spent nine years in intense study of Scripture and theology. In 1220, the relics of the first Franciscan martyrs — killed while preaching in Morocco — passed through Portugal. Moved to his core, Fernando asked to join the Franciscans and took the name Anthony.\n\nAnthony set off for Morocco to preach, but illness forced him back. Storms blew his ship to Sicily, and he ended up at a Franciscan assembly in Assisi, where he met St. Francis himself. He lived quietly as a humble friar — until one day, when no one else was prepared, he was asked to preach at an ordination. The brilliance of his preaching stunned everyone. From then on his gift for preaching, combined with his deep learning, made him one of the most powerful voices of his time.\n\nAnthony traveled throughout Italy and France preaching to enormous crowds. Countless miracles are attributed to him — healings, conversions, and the famous incident of the fish gathering to listen when humans refused. His preaching was known for melting hardened hearts, and he is remembered as 'Hammer of Heretics.'\n\nWorn out by ceaseless work, he died near Padua at just 36. He was canonized less than a year later — one of the fastest canonizations in Church history — and was declared a Doctor of the Church in 1946. He remains one of the most popular saints in the world, especially invoked when things or people are lost.",
+      "whyConfirmationSaint": "Almost everyone knows St. Anthony as the saint you pray to when you lose your keys — but there's much more. He was a theological genius whose preaching filled town squares across Italy, and a man so on fire for Christ that he burned out at 36. If you're someone who cares about truth, who loves studying, or who wants to help others find their way back to God, Anthony is your patron. The next time you pray to find something lost, remember: he wants to help you find Jesus most of all.",
+      "image": {
+        "filename": "anthony-of-padua.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Franciscan Media",
+        "Catholic News Agency"
+      ],
+      "sourceURLs": {
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-anthony-of-padua/",
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-anthony-of-padua-481"
+      }
+    },
+    {
+      "id": "josemaria-escriva",
+      "name": "St. Josemaría Escrivá",
+      "feastDay": "06-26",
+      "birthDate": "1902-01-09",
+      "deathDate": "1975-06-26",
+      "canonizationDate": "2002-10-06",
+      "country": "Spain",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "ordinary workers",
+        "Opus Dei",
+        "diabetics"
+      ],
+      "tags": [
+        "founder",
+        "modern",
+        "priest",
+        "writer"
+      ],
+      "affinities": [
+        "work",
+        "prayer",
+        "writing",
+        "service"
+      ],
+      "quote": "Do everything for Love. Thus there will be no little things: everything will be big.",
+      "biography": "Josemaría Escrivá was born on January 9, 1902, in Barbastro, Spain. His family suffered severe hardships — three of his younger sisters died in childhood, and his father's business collapsed. Yet his parents' deep faith shaped him profoundly. As a teenager, he saw footprints in the snow left by a barefoot Carmelite and felt God was asking something great of him, though he did not yet know what.\n\nOrdained a priest in 1925, he served in rural parishes before moving to Madrid. On October 2, 1928, during a retreat, he received what he believed was a divine call: to show that every person, in every walk of life, is called to holiness — not by leaving ordinary work behind, but by sanctifying it. From this insight, he founded Opus Dei ('The Work of God'), a lay movement within the Catholic Church.\n\nDuring the Spanish Civil War, Escrivá hid in embassies and even escaped across the Pyrenees on foot to avoid being killed for being a priest. After the war, Opus Dei grew rapidly and spread worldwide, including lay members of every profession and, eventually, priests.\n\nHis best-known book, The Way, offers short spiritual maxims for living faith in daily life. He taught that a mother cooking, a student studying, a worker at a desk, and a taxi driver in traffic can all turn ordinary duties into prayer. He died in Rome in 1975, was canonized by Pope John Paul II in 2002, and Opus Dei today includes more than 90,000 members around the world.",
+      "whyConfirmationSaint": "St. Josemaría's whole message is that you don't have to become a priest, a nun, or a missionary to be a saint. Your school, your job, your chores, your friendships — all of it can be made holy if you do it with love. If you've ever thought, 'I'm just a normal teenager, how am I supposed to be a saint?', Josemaría is exactly your saint. He said the path to heaven runs right through your homework, your kitchen, your workplace. Holiness is not somewhere else; it's where you already are.",
+      "image": {
+        "filename": "josemaria-escriva.jpg",
+        "attribution": "CC0, via Wikimedia Commons"
+      },
+      "sources": [
+        "Catholic News Agency",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-josemaria-escriva-485",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-josemaria-escriva/"
+      }
     }
   ]
 }
