@@ -115,3 +115,13 @@
 
 ### ⚠️ Follow-up: SettingsView Version Label Hardcoding (2026-04-21)
 **Cross-agent Note from Gandalf (Lead)** — During documentation audit for Android port, noted that `SettingsView.swift` hardcodes `Text("0.1.0")` for version display while `ios/project.yml` has `MARKETING_VERSION: 1.0.0` (shipped to App Store as v1.0.0). Should read version from `Bundle.main.infoDictionary["CFBundleShortVersionString"]` to stay in sync with build config. Out of scope for current documentation audit, but worth a quick PR fix.
+
+### Cross-Agent Update: Roster Expanded to 79 Saints (2026-04-23)
+**From:** Samwise (Data) + Gandalf (Docs) completion  
+**Status:** ✅ Merged into decisions.md
+- Roster expanded from 70 → 79 saints (9 new saints added on branch `squad/add-saints-80-plus`)
+- iOS build verified ✅; new saints appear automatically in search/browse — no UI changes needed
+- Android build verified ✅; test count updated 70 → 79
+- Documentation updated to "80+ saints" across README, docs/index.html, and appstore copy
+- **Open question:** Jorge must decide if 79 matches the "80+ saints" target or if one more saint should be added
+- Decisions merged: "9 Saints Added — Batch 4" and "Documentation Updated to 80+ Saint Count"

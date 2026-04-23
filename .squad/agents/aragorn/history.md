@@ -371,3 +371,14 @@ The `LocalizationService` persistence test required careful handling of StateFlo
 
 **No production bugs found** — all tests passed on first green run after Robolectric asset config fix.
 
+## Cross-Agent Update: Roster Expanded to 79 Saints (2026-04-23)
+**From:** Samwise (Data) + Gandalf (Docs) completion  
+**Status:** ✅ Merged into decisions.md
+- Roster expanded from 70 → 79 saints (9 new saints added on branch `squad/add-saints-80-plus`)
+- Android test count updated 70 → 79
+- Build verified ✅; all 32 unit tests + 12 instrumentation tests green
+- Documentation updated to "80+ saints" across README, docs/index.html, and appstore copy
+- **Open question:** Jorge must decide if 79 matches the "80+ saints" target or if one more saint should be added
+- Decisions merged: "9 Saints Added — Batch 4" and "Documentation Updated to 80+ Saint Count"
+
+

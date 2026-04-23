@@ -218,6 +218,64 @@ Jorge requested two fixes for the adaptive launcher icon:
 - **2026-04-13T01:12:10Z:** Jorge Balderas — Skip priority 3 (diversity gaps). Target ~75 saints total (not 90-100). Focus priorities 1, 2, 4.
 - **2026-04-13T01:28:48Z:** Jorge Balderas — Skip priority 4. Focus ONLY priorities 1 & 2 (Pius X, Patrick, Catherine of Siena, Martin de Porres, key saints).
 
+### 9 Saints Added — Batch 4 (10-Saint Sprint Outcome) (2026-04-23)
+**Author:** Samwise (Data/Backend)  
+**Status:** Implemented (count 79, open question on 80-target parity)
+
+Added 9 new saints to both `saints-en.json` and `saints-es.json`, bringing roster from 70 → **79** saints per language. St. Luke the Evangelist (item #2 on Jorge's list) was already in the roster from a prior batch and was not re-added.
+
+**Saints Added:**
+1. St. John Neumann (19th-c. US Bishop, first US male saint)
+2. St. Moses the Black (4th-c. Desert Father, martyr of non-violence)
+3. St. Vladimir of Kiev (Bringer of Christianity to Kievan Rus')
+4. St. Ignatius of Loyola (Founder of Jesuits, Spiritual Exercises)
+5. Bl. Imelda Lambertini (Dominican child mystic, patron of first communicants)
+6. St. Isidore the Farmer (Patron of farmers, married lay saint)
+7. St. Teresa of Ávila (First female Doctor of the Church)
+8. St. Anthony of Padua (Doctor of the Church, Franciscan)
+9. St. Josemaría Escrivá (Founder of Opus Dei, 20th-century)
+
+**Data Decisions:**
+- "Doctor of the Church" tag now covers 4 saints: Augustine, Catherine of Siena, Teresa of Ávila, Anthony of Padua
+- Blessed tier expanded to 5: Carlo Acutis, Chiara Luce Badano, Pier Giorgio Frassati, Michael McGivney, Imelda Lambertini
+- Image licensing corrected for 3 saints: CC BY-SA 4.0 (Moses, Vladimir), CC0 (Josemaría)
+
+**Verification:**
+- iOS: ✅ BUILD SUCCEEDED
+- Android: ✅ BUILD SUCCESSFUL (test count updated 70→79)
+- Cross-platform parity: ✅ EN/ES matching validated
+
+**Open Question:**
+Target was 80 saints. Current count is 79. Jorge must decide: (1) accept 79, (2) add one more saint, or (3) update copy to "75+". See decisions/inbox files for full context.
+
+**Impact:**
+- Frodo (iOS): No UI changes; new saints appear automatically
+- Aragorn (Android): `SaintRepositoryTest` updated; recommend switching to "minimum count" assertion for future-proofing
+- Legolas (QA): Category coverage unchanged; verify "Doctor of the Church" tag if testing
+
+---
+
+### Documentation Updated to 80+ Saint Count (2026-04-23)
+**Author:** Gandalf (Lead)  
+**Status:** Implemented
+
+Updated user-facing documentation to reflect "80+ saints" across 8 locations per Samwise's 10-saint expansion on `squad/add-saints-80-plus`:
+
+**Changes:**
+- README.md: Added "What's New" section, updated 2 count references (70→80+)
+- docs/index.html: 6 instances updated (meta, hero badge, mock-ups, stats)
+- docs/appstore/submission-info.md: 2 instances (promotional + description)
+- docs/appstore/screen-recording-script.md: 1 instance (video caption)
+- docs/appstore/review-response.md: 2 instances (value prop, user flow)
+
+**Pattern for Future:**
+Marketing copy is distributed across 5 files; all must be updated in lockstep when saint count changes.
+
+**Deliberately Immutable:**
+Historical records in `.squad/decisions.md`, agent history.md files, and logs remain unchanged (snapshots in time).
+
+---
+
 ## Governance
 
 - All meaningful changes require team consensus
