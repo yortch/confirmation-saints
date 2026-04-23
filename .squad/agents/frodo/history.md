@@ -206,3 +206,7 @@
 - `SharedContent/saints/saints-es.json` (27 saints' `sources` arrays)
 - `ios/CatholicSaints/Views/Settings/SettingsView.swift` (section reorder)
 - `ios/CatholicSaints/Resources/Localizable.xcstrings` (harmless Xcode auto-reordering of keys)
+
+### iOS Sources Schema — `SourceEntry` struct (2026-04-23)
+- Added `SourceEntry: Codable, Hashable, Sendable { name; url }` to `Saint.swift`; removed old `sources: [String]` and `sourceURLs: [String: String]?` fields.
+- Simplified `SaintDetailView.sourcesSection` — direct iteration over `saint.sources`, no dictionary lookup. Build green. Commit `b449f59`.

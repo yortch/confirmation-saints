@@ -113,3 +113,7 @@
 - **Test TODO:** Write integrity test that asserts `saint.sources == Array(saint.sourceURLs.keys)` for all saints. Non-negotiable for preventing regression.
 - **Note:** Gandalf flagged schema simplification as future work (single `[String: String]` map would prevent this class of bug entirely).
 
+
+### Sources Integrity Test — JVM JUnit4 (2026-04-23)
+- Added `android/app/src/test/java/.../data/SourcesIntegrityTest.kt`. Parses `saints-{en,es}.json` directly (decoupled from model), three assertions: EN well-formed, ES well-formed, EN/ES parity (matching IDs, same URL set per saint).
+- `./gradlew testDebugUnitTest` → 3/3 green. Commit `87a8e27`. Closes the test-TODO flagged in prior entry.

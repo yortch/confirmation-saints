@@ -400,3 +400,8 @@ Investigated Android side independently. `SaintDetailScreen.SourcesSection` (lin
 **Tappable-source contract is data-driven, not UI-driven.** When a saint's source link doesn't render tappably, check the data first: `sources[i]` must appear as a key in `sourceURLs` (case-sensitive exact match). The Android renderer is correct; there's no conditional bug to hunt. A repo-wide audit for this mismatch is a one-liner (Python: `[x for x in s['sources'] if x not in (s.get('sourceURLs') or {})]`) and should be part of a data-quality lint going forward.
 
 **Android assets are build-generated, SharedContent is canonical.** Don't trust the contents of `android/app/src/main/assets/saints-*.json` when diagnosing — they're stale until the next Gradle build runs `syncSharedContent`. Always diff against `SharedContent/saints/*` for truth. The assets/ README says this but it's easy to forget when grepping.
+
+### Android Sources Schema — `SourceEntry` data class (2026-04-23)
+- Added `@Serializable data class SourceEntry(name, url)`; replaced `sources: List<String>` + `sourceURLs: Map<String,String>?` on `Saint` with `sources: List<SourceEntry>`.
+- Simplified `SourcesSection` in `SaintDetailScreen` to iterate entries directly; updated `SaintParsingTest` fixture to new shape.
+- `./gradlew testDebugUnitTest assembleDebug` → green. Commit `a923fab`.

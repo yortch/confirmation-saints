@@ -73,3 +73,7 @@
 - **Fix (Frodo + Scribe):** Synced all 27 saints' `sources` to equal `Array(sourceURLs.keys)` in both `saints-en.json` and `saints-es.json` (commits 7fb793c, 14d07a9).
 - **Rule established:** When adding/editing saints, keep `sources` and `sourceURLs` keys in lockstep. When rewriting URLs, rewrite source names in both places.
 - **Cross-agent implications:** Gandalf flagged schema collapse possibility (future: single `[String: String]` map). Legolas flagged test need (`assert sources == Array(sourceURLs.keys)`). Documented in decisions.md.
+
+### Sources Schema Migration — Collapsed Array (2026-04-23)
+- Migrated `SharedContent/saints/saints-en.json` and `saints-es.json` to Gandalf's collapsed schema (one ordered array of `{name, url}`). 81 saints × 2 files = 162 records, 338 source entries rewritten. Commit `a99666d`.
+- Fail-fast validation (orphan URL, missing URL, empty string) passed on first run — no manual fixups required.

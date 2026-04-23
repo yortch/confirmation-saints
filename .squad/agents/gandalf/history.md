@@ -110,3 +110,8 @@
 - **Future consideration:** Collapse two fields into single `[String: String]` map (`sourceName: sourceURL` pairs) in next schema migration. This makes the above class of bug impossible by eliminating the parallel-array maintenance burden.
 - **Current state:** Bug fixed in data; decision documented. Not urgent — can roll into next major release cycle.
 
+
+### Sources Schema Refactor — Collapsed `{name, url}` Array (2026-04-23)
+- **Decision doc:** `.squad/decisions/inbox/gandalf-sources-schema.md` (promoted to `.squad/decisions.md`). Commit `34d6470`.
+- Designed collapsed schema: one ordered array of `{name, url}` entries replacing parallel `sources: []` + `sourceURLs: {}` fields. Eliminates the mismatch bug class by construction.
+- Decomposed work across Samwise (data migration with fail-fast validation), Frodo (iOS `SourceEntry` + view), Aragorn (Android `SourceEntry` + view), Legolas (JVM integrity test).
