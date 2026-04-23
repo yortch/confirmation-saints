@@ -1,5 +1,13 @@
 # App Store Connect Submission — Confirmation Saints
 
+## What's New in Version 1.0.1
+
+More saints to help you find your perfect Confirmation patron! We've added 31 new saints to the collection — bringing the roster to 81 Catholic saints with rich biographies, quotes, and feast days. This update includes beloved figures like St. Clare of Assisi, St. Faustina Kowalska, St. Oscar Romero, St. Elizabeth Ann Seton, St. Luke the Evangelist, Charles Lwanga & the Uganda Martyrs, and many more.
+
+We've also improved the experience: fixed source links for several saints, consolidated regional filters (Latin America and North America are now unified under "Americas"), and added Spanish translations for filter chips, regions, and categories. Everything remains 100% offline and private.
+
+---
+
 ## 1. Screenshots (1284 × 2778px recommended for iPhone)
 
 You'll need to capture these from the simulator. Here are the recommended screens:
@@ -23,7 +31,7 @@ Or use Cmd+S in the Simulator app.
 
 ## 2. Promotional Text (170 chars max)
 
-Find your Catholic Confirmation saint! Browse 80+ saints, filter by interest, age, region & more. Bilingual in English & Spanish. 100% offline & private.
+Find your Catholic Confirmation saint! Browse 81 saints, filter by interest, age, region & more. Bilingual in English & Spanish. 100% offline & private.
 
 ---
 
@@ -31,7 +39,7 @@ Find your Catholic Confirmation saint! Browse 80+ saints, filter by interest, ag
 
 Preparing for Catholic Confirmation? Confirmation Saints helps you find and choose the perfect patron saint for your Confirmation journey.
 
-Browse over 80 Catholic saints with rich biographies, inspirational quotes, feast days, and beautiful images — all sourced from trusted Catholic resources including Loyola Press, FOCUS, Lifeteen, Ascension Press, Hallow, and the Catholic Encyclopedia.
+Browse 81 Catholic saints with rich biographies, inspirational quotes, feast days, and beautiful images — all sourced from trusted Catholic resources including Loyola Press, FOCUS, Lifeteen, Ascension Press, Hallow, and the Catholic Encyclopedia.
 
 FIND YOUR SAINT
 • Search by name, patron association, or country of origin
@@ -130,7 +138,7 @@ https://yortch.github.io/confirmation-saints/privacy-policy.html
 
 ### Version
 ```
-1.0.0
+1.0.1
 ```
 
 ### Bundle ID
