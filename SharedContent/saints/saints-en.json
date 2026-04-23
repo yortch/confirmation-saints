@@ -41,13 +41,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-therese-of-lisieux/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/14515a.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-therese-of-lisieux/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/14515a.htm"
+        }
+      ]
     },
     {
       "id": "dominic-savio",
@@ -84,13 +86,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-dominic-savio/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-dominic-savio-702"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-dominic-savio/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-dominic-savio-702"
+        }
+      ]
     },
     {
       "id": "carlo-acutis",
@@ -130,15 +134,19 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "Hallow",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/bl-carlo-acutis-919",
-        "Hallow": "https://hallow.com/saints/carlo-acutis/",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-carlo-acutis/"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/bl-carlo-acutis-919"
+        },
+        {
+          "name": "Hallow",
+          "url": "https://hallow.com/saints/carlo-acutis/"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-carlo-acutis/"
+        }
+      ]
     },
     {
       "id": "joan-of-arc",
@@ -178,13 +186,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-joan-of-arc/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08409c.htm"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-joan-of-arc/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08409c.htm"
+        }
+      ]
     },
     {
       "id": "maria-goretti",
@@ -222,13 +232,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-maria-goretti/",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-maria-goretti/"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-maria-goretti/"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-maria-goretti/"
+        }
+      ]
     },
     {
       "id": "chiara-luce-badano",
@@ -267,13 +279,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/bl-chiara-luce-badano-920",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/chiara-luce-badano-702"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/bl-chiara-luce-badano-920"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/chiara-luce-badano-702"
+        }
+      ]
     },
     {
       "id": "jose-sanchez-del-rio",
@@ -311,13 +325,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-jose-sanchez-del-rio-706",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/jose-sanchez-del-rio-706"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-jose-sanchez-del-rio-706"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/jose-sanchez-del-rio-706"
+        }
+      ]
     },
     {
       "id": "sebastian",
@@ -356,13 +372,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-sebastian/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13668a.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-sebastian/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/13668a.htm"
+        }
+      ]
     },
     {
       "id": "cecilia",
@@ -401,13 +419,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-cecilia/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/03471b.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-cecilia/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/03471b.htm"
+        }
+      ]
     },
     {
       "id": "francis-of-assisi",
@@ -448,15 +468,19 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency",
-        "Hallow"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-francis-of-assisi/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-francis-of-assisi-417",
-        "Hallow": "https://hallow.com/saints/francis-of-assisi/"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-francis-of-assisi/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-francis-of-assisi-417"
+        },
+        {
+          "name": "Hallow",
+          "url": "https://hallow.com/saints/francis-of-assisi/"
+        }
+      ]
     },
     {
       "id": "thomas-aquinas",
@@ -497,13 +521,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-thomas-aquinas/",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-thomas-aquinas/"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-thomas-aquinas/"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-thomas-aquinas/"
+        }
+      ]
     },
     {
       "id": "thomas-more",
@@ -545,13 +571,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-thomas-more/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/14689c.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-thomas-more/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/14689c.htm"
+        }
+      ]
     },
     {
       "id": "gianna-beretta-molla",
@@ -596,13 +624,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gianna-beretta-molla/",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-gianna-beretta-molla/"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gianna-beretta-molla/"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-gianna-beretta-molla/"
+        }
+      ]
     },
     {
       "id": "louis-martin",
@@ -641,13 +671,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/sts-louis-and-zelie-martin-702",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/louis-and-zelie-martin-702"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/sts-louis-and-zelie-martin-702"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/louis-and-zelie-martin-702"
+        }
+      ]
     },
     {
       "id": "zelie-martin",
@@ -688,13 +720,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/sts-louis-and-zelie-martin-702",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/louis-and-zelie-martin-702"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/sts-louis-and-zelie-martin-702"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/louis-and-zelie-martin-702"
+        }
+      ]
     },
     {
       "id": "mother-teresa",
@@ -732,15 +766,19 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-teresa-of-calcutta/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-teresa-of-calcutta-702",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/teresa-of-calcutta-702"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-teresa-of-calcutta/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-teresa-of-calcutta-702"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/teresa-of-calcutta-702"
+        }
+      ]
     },
     {
       "id": "john-paul-ii",
@@ -783,15 +821,19 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency",
-        "Hallow"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-paul-ii/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-john-paul-ii-702",
-        "Hallow": "https://hallow.com/saints/john-paul-ii/"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-paul-ii/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-john-paul-ii-702"
+        },
+        {
+          "name": "Hallow",
+          "url": "https://hallow.com/saints/john-paul-ii/"
+        }
+      ]
     },
     {
       "id": "pier-giorgio-frassati",
@@ -833,15 +875,19 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "EWTN",
-        "Hallow"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/bl-pier-giorgio-frassati-584",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/pier-giorgio-frassati-584",
-        "Hallow": "https://hallow.com/saints/pier-giorgio-frassati/"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/bl-pier-giorgio-frassati-584"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/pier-giorgio-frassati-584"
+        },
+        {
+          "name": "Hallow",
+          "url": "https://hallow.com/saints/pier-giorgio-frassati/"
+        }
+      ]
     },
     {
       "id": "kateri-tekakwitha",
@@ -882,13 +928,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-kateri-tekakwitha/",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-kateri-tekakwitha/"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-kateri-tekakwitha/"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-kateri-tekakwitha/"
+        }
+      ]
     },
     {
       "id": "augustine-of-hippo",
@@ -928,13 +976,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-augustine/",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-augustine-of-hippo/"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-augustine/"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-augustine-of-hippo/"
+        }
+      ]
     },
     {
       "id": "josephine-bakhita",
@@ -974,13 +1024,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-josephine-bakhita/",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-josephine-bakhita/"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-josephine-bakhita/"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-josephine-bakhita/"
+        }
+      ]
     },
     {
       "id": "juan-diego",
@@ -1016,15 +1068,19 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency",
-        "Hallow"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-juan-diego/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-juan-diego-702",
-        "Hallow": "https://hallow.com/saints/juan-diego/"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-juan-diego/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-juan-diego-702"
+        },
+        {
+          "name": "Hallow",
+          "url": "https://hallow.com/saints/juan-diego/"
+        }
+      ]
     },
     {
       "id": "pedro-calungsod",
@@ -1064,13 +1120,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-pedro-calungsod-707",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11604a.htm"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-pedro-calungsod-707"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/11604a.htm"
+        }
+      ]
     },
     {
       "id": "rose-of-lima",
@@ -1111,13 +1169,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-rose-of-lima/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13189b.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-rose-of-lima/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/13189b.htm"
+        }
+      ]
     },
     {
       "id": "maximilian-kolbe",
@@ -1160,15 +1220,19 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-maximilian-mary-kolbe/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-maximilian-kolbe-702",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/maximilian-kolbe-702"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-maximilian-mary-kolbe/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-maximilian-kolbe-702"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/maximilian-kolbe-702"
+        }
+      ]
     },
     {
       "id": "monica",
@@ -1210,13 +1274,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Loyola Press"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10482a.htm",
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-monica/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/10482a.htm"
+        },
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-monica/"
+        }
+      ]
     },
     {
       "id": "charbel-makhlouf",
@@ -1257,13 +1323,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09546b.htm",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-charbel-makhlouf-440"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/09546b.htm"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-charbel-makhlouf-440"
+        }
+      ]
     },
     {
       "id": "michael-archangel",
@@ -1306,13 +1374,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-michael-gabriel-and-raphael/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10275b.htm"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saints-michael-gabriel-and-raphael/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/10275b.htm"
+        }
+      ]
     },
     {
       "id": "gabriel-archangel",
@@ -1352,13 +1422,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-michael-gabriel-and-raphael/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06330a.htm"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saints-michael-gabriel-and-raphael/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/06330a.htm"
+        }
+      ]
     },
     {
       "id": "our-lady-guadalupe",
@@ -1398,13 +1470,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/our-lady-of-guadalupe/",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/our-lady-of-guadalupe/"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/our-lady-of-guadalupe/"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/our-lady-of-guadalupe/"
+        }
+      ]
     },
     {
       "id": "our-lady-fatima",
@@ -1443,13 +1517,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06023b.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/our-lady-of-fatima/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/06023b.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/our-lady-of-fatima/"
+        }
+      ]
     },
     {
       "id": "frances-cabrini",
@@ -1488,13 +1564,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-frances-xavier-cabrini/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-frances-xavier-cabrini-702"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-frances-xavier-cabrini/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-frances-xavier-cabrini-702"
+        }
+      ]
     },
     {
       "id": "joseph",
@@ -1536,13 +1614,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08504a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-joseph/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08504a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-joseph/"
+        }
+      ]
     },
     {
       "id": "joachim",
@@ -1580,13 +1660,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08406a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-joachim-and-anne/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08406a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saints-joachim-and-anne/"
+        }
+      ]
     },
     {
       "id": "anne",
@@ -1627,13 +1709,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/01538a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-joachim-and-anne/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/01538a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saints-joachim-and-anne/"
+        }
+      ]
     },
     {
       "id": "john-bosco",
@@ -1675,13 +1759,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08677a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-bosco/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08677a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-bosco/"
+        }
+      ]
     },
     {
       "id": "marcellin-champagnat",
@@ -1719,13 +1805,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "EWTN",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "EWTN": "https://www.ewtn.com/catholicism/saints/marcellin-champagnat-777",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-marcellin-champagnat-597"
-      }
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/marcellin-champagnat-777"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-marcellin-champagnat-597"
+        }
+      ]
     },
     {
       "id": "peter-apostle",
@@ -1766,13 +1854,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11744a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-peter-and-paul/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/11744a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saints-peter-and-paul/"
+        }
+      ]
     },
     {
       "id": "paul-apostle",
@@ -1813,13 +1903,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11567b.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-peter-and-paul/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/11567b.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saints-peter-and-paul/"
+        }
+      ]
     },
     {
       "id": "andrew-apostle",
@@ -1860,13 +1952,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/01471a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-andrew/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/01471a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-andrew/"
+        }
+      ]
     },
     {
       "id": "james-greater",
@@ -1906,13 +2000,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08279b.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-james-apostle/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08279b.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-james-apostle/"
+        }
+      ]
     },
     {
       "id": "john-apostle",
@@ -1952,13 +2048,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08492a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-apostle-and-evangelist/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08492a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-apostle-and-evangelist/"
+        }
+      ]
     },
     {
       "id": "philip-apostle",
@@ -1995,13 +2093,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/12006a.htm",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/philip-and-james-apostles-649"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/12006a.htm"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/philip-and-james-apostles-649"
+        }
+      ]
     },
     {
       "id": "bartholomew-apostle",
@@ -2039,13 +2139,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/02313c.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-bartholomew/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/02313c.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-bartholomew/"
+        }
+      ]
     },
     {
       "id": "matthew-apostle",
@@ -2086,13 +2188,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10056a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthew/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/10056a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthew/"
+        }
+      ]
     },
     {
       "id": "thomas-apostle",
@@ -2132,13 +2236,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/14658b.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-thomas-the-apostle/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/14658b.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-thomas-the-apostle/"
+        }
+      ]
     },
     {
       "id": "james-less",
@@ -2177,13 +2283,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08280a.htm",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/philip-and-james-apostles-649"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08280a.htm"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/philip-and-james-apostles-649"
+        }
+      ]
     },
     {
       "id": "jude-thaddeus",
@@ -2222,13 +2330,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08542b.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saints-simon-and-jude/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08542b.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saints-simon-and-jude/"
+        }
+      ]
     },
     {
       "id": "simon-zealot",
@@ -2266,13 +2376,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "EWTN"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13796b.htm",
-        "EWTN": "https://www.ewtn.com/catholicism/saints/simon-and-jude-apostles-651"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/13796b.htm"
+        },
+        {
+          "name": "EWTN",
+          "url": "https://www.ewtn.com/catholicism/saints/simon-and-jude-apostles-651"
+        }
+      ]
     },
     {
       "id": "matthias-apostle",
@@ -2311,13 +2423,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/10066a.htm",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthias/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/10066a.htm"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-matthias/"
+        }
+      ]
     },
     {
       "id": "pius-x",
@@ -2355,13 +2469,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-pius-x/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/12137a.htm"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-pius-x/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/12137a.htm"
+        }
+      ]
     },
     {
       "id": "patrick",
@@ -2400,13 +2516,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-patrick/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/11554a.htm"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-patrick/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/11554a.htm"
+        }
+      ]
     },
     {
       "id": "catherine-of-siena",
@@ -2446,13 +2564,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-catherine-of-siena/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/03447a.htm"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-catherine-of-siena/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/03447a.htm"
+        }
+      ]
     },
     {
       "id": "martin-de-porres",
@@ -2492,13 +2612,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-martin-de-porres/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09728a.htm"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-martin-de-porres/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/09728a.htm"
+        }
+      ]
     },
     {
       "id": "blaise",
@@ -2538,13 +2660,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-blaise/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/02592a.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-blaise/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/02592a.htm"
+        }
+      ]
     },
     {
       "id": "vitus",
@@ -2584,13 +2708,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Catholic Online"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/15490a.htm",
-        "Catholic Online": "https://www.catholic.org/saints/saint.php?saint_id=131"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/15490a.htm"
+        },
+        {
+          "name": "Catholic Online",
+          "url": "https://www.catholic.org/saints/saint.php?saint_id=131"
+        }
+      ]
     },
     {
       "id": "genesius-of-rome",
@@ -2631,13 +2757,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Loyola Press"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06411a.htm",
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-genesius/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/06411a.htm"
+        },
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-genesius/"
+        }
+      ]
     },
     {
       "id": "michael-mcgivney",
@@ -2676,13 +2804,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Knights of Columbus",
-        "Vatican News"
-      ],
-      "sourceURLs": {
-        "Knights of Columbus": "https://www.kofc.org/en/who-we-are/our-founder.html",
-        "Vatican News": "https://www.vaticannews.va/en/saints/bl--michael-mcgivney.html"
-      }
+        {
+          "name": "Knights of Columbus",
+          "url": "https://www.kofc.org/en/who-we-are/our-founder.html"
+        },
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/bl--michael-mcgivney.html"
+        }
+      ]
     },
     {
       "id": "teresa-of-the-andes",
@@ -2723,13 +2853,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Vatican News",
-        "Loyola Press"
-      ],
-      "sourceURLs": {
-        "Vatican News": "https://www.vaticannews.va/en/saints/st-teresa-of-jesus-of-the-andes.html",
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-teresa-of-the-andes/"
-      }
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/st-teresa-of-jesus-of-the-andes.html"
+        },
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-teresa-of-the-andes/"
+        }
+      ]
     },
     {
       "id": "joseph-mukasa-balikuddembe",
@@ -2769,13 +2901,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Vatican News",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Vatican News": "https://www.vaticannews.va/en/saints/st-charles-lwanga-and-companions--martyrs.html",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/15## .htm"
-      }
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/st-charles-lwanga-and-companions--martyrs.html"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/15## .htm"
+        }
+      ]
     },
     {
       "id": "elizabeth-ann-seton",
@@ -2817,13 +2951,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-elizabeth-ann-seton/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/13737a.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-elizabeth-ann-seton/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/13737a.htm"
+        }
+      ]
     },
     {
       "id": "oscar-romero",
@@ -2864,13 +3000,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Vatican News",
-        "Loyola Press"
-      ],
-      "sourceURLs": {
-        "Vatican News": "https://www.vaticannews.va/en/saints/st-oscar-arnulfo-romero-y-galdamez.html",
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-oscar-romero/"
-      }
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/st-oscar-arnulfo-romero-y-galdamez.html"
+        },
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-oscar-romero/"
+        }
+      ]
     },
     {
       "id": "faustina-kowalska",
@@ -2909,13 +3047,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Vatican News",
-        "Loyola Press"
-      ],
-      "sourceURLs": {
-        "Vatican News": "https://www.vaticannews.va/en/saints/st-maria-faustina--helena--kowalska.html",
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-faustina-kowalska/"
-      }
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/st-maria-faustina--helena--kowalska.html"
+        },
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-faustina-kowalska/"
+        }
+      ]
     },
     {
       "id": "mary-magdalene",
@@ -2957,13 +3097,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-mary-magdalene/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09761a.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-mary-magdalene/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/09761a.htm"
+        }
+      ]
     },
     {
       "id": "boniface",
@@ -3004,13 +3146,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Loyola Press"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/02656a.htm",
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-boniface/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/02656a.htm"
+        },
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-boniface/"
+        }
+      ]
     },
     {
       "id": "catherine-of-alexandria",
@@ -3053,13 +3197,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic Encyclopedia",
-        "Loyola Press"
-      ],
-      "sourceURLs": {
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/03445a.htm",
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-catherine-of-alexandria/"
-      }
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/03445a.htm"
+        },
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-catherine-of-alexandria/"
+        }
+      ]
     },
     {
       "id": "john-the-baptist",
@@ -3100,13 +3246,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-john-the-baptist/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/08486b.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-john-the-baptist/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/08486b.htm"
+        }
+      ]
     },
     {
       "id": "clare-of-assisi",
@@ -3145,13 +3293,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-clare-of-assisi/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/04004a.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-clare-of-assisi/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/04004a.htm"
+        }
+      ]
     },
     {
       "id": "luke-evangelist",
@@ -3193,13 +3343,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-luke/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/09420a.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-luke/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/09420a.htm"
+        }
+      ]
     },
     {
       "id": "gemma-galgani",
@@ -3237,13 +3389,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Loyola Press",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Loyola Press": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gemma-galgani/",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06411b.htm"
-      }
+        {
+          "name": "Loyola Press",
+          "url": "https://www.loyolapress.com/catholic-resources/saints/saints-stories-for-all-ages/saint-gemma-galgani/"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/06411b.htm"
+        }
+      ]
     },
     {
       "id": "john-neumann",
@@ -3283,13 +3437,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-neumann/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-john-neumann-602"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-john-neumann/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-john-neumann-602"
+        }
+      ]
     },
     {
       "id": "moses-the-black",
@@ -3329,13 +3485,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-moses-the-black/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-moses-the-black-675"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-moses-the-black/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-moses-the-black-675"
+        }
+      ]
     },
     {
       "id": "vladimir-of-kiev",
@@ -3375,13 +3533,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-vladimir-the-great-435",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-vladimir-the-great/"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-vladimir-the-great-435"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-vladimir-the-great/"
+        }
+      ]
     },
     {
       "id": "ignatius-of-loyola",
@@ -3423,13 +3583,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-ignatius-of-loyola/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-ignatius-of-loyola-564"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-ignatius-of-loyola/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-ignatius-of-loyola-564"
+        }
+      ]
     },
     {
       "id": "imelda-lambertini",
@@ -3468,13 +3630,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/bl-imelda-lambertini-297",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/07675a.htm"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/bl-imelda-lambertini-297"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/07675a.htm"
+        }
+      ]
     },
     {
       "id": "isidore-the-farmer",
@@ -3515,13 +3679,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-isidore-the-farmer/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-isidore-the-farmer-362"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-isidore-the-farmer/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-isidore-the-farmer-362"
+        }
+      ]
     },
     {
       "id": "teresa-of-avila",
@@ -3562,13 +3728,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-teresa-of-avila/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-teresa-of-avila-574"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-teresa-of-avila/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-teresa-of-avila-574"
+        }
+      ]
     },
     {
       "id": "anthony-of-padua",
@@ -3609,13 +3777,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Franciscan Media",
-        "Catholic News Agency"
-      ],
-      "sourceURLs": {
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-anthony-of-padua/",
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-anthony-of-padua-481"
-      }
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-anthony-of-padua/"
+        },
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-anthony-of-padua-481"
+        }
+      ]
     },
     {
       "id": "josemaria-escriva",
@@ -3654,13 +3824,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Catholic News Agency",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-josemaria-escriva-485",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-josemaria-escriva/"
-      }
+        {
+          "name": "Catholic News Agency",
+          "url": "https://www.catholicnewsagency.com/saint/st-josemaria-escriva-485"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-josemaria-escriva/"
+        }
+      ]
     },
     {
       "id": "george",
@@ -3702,13 +3874,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Wikipedia",
-        "Catholic Encyclopedia"
-      ],
-      "sourceURLs": {
-        "Wikipedia": "https://en.wikipedia.org/wiki/Saint_George",
-        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06453a.htm"
-      }
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Saint_George"
+        },
+        {
+          "name": "Catholic Encyclopedia",
+          "url": "https://www.newadvent.org/cathen/06453a.htm"
+        }
+      ]
     },
     {
       "id": "mariana-de-jesus-de-paredes",
@@ -3748,13 +3922,15 @@
         "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
-        "Wikipedia",
-        "Franciscan Media"
-      ],
-      "sourceURLs": {
-        "Wikipedia": "https://en.wikipedia.org/wiki/Mariana_de_Jes%C3%BAs_de_Paredes",
-        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-mariana-of-jesus-de-paredes/"
-      }
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mariana_de_Jes%C3%BAs_de_Paredes"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-mariana-of-jesus-de-paredes/"
+        }
+      ]
     }
   ]
 }
