@@ -57,3 +57,12 @@
   - Franciscan Media `/saint-of-the-day/...` (feast-day slug)
   - CNA `catholicnewsagency.com/saint/<slug>-<numeric-id>` (numeric id required; slug alone 404s)
   - newadvent.org `/cathen/NNNNNa.htm` (Catholic Encyclopedia, stable)
+
+### Add-2-Saints to 81 (2026-04-23) — St. George + St. Mariana de Jesús
+- **Request:** Add 2 specific saints to bring roster to 81 (St. George for his feast day April 23, St. Mariana de Jesús de Paredes as first canonized saint of Ecuador).
+- **Delivered:** Both saints added to EN/ES JSON files with complete schema (canonical English fields, Spanish display arrays, sourceURLs with Wikipedia primary, imageAttribution PD via Wikimedia Commons).
+- **Attribution backfill audit:** All 9 saints from commit 8f5727a already had complete sourceURLs + imageAttribution. Frances Cabrini also complete. No gaps found — all recent additions properly attributed.
+- **Skill update:** Modified `.squad/skills/adding-saints/SKILL.md` to establish **Wikipedia (EN + ES) as the FIRST trusted source** for biographical facts, feast dates, patronage, and canonization info. Wikimedia Commons second for images. Catholic.org/Franciscan Media third for tiebreakers. Emphasized that `sourceURLs` AND `imageAttribution` are REQUIRED fields for every saint.
+- **Images:** Downloaded both from Wikimedia Commons (PD licensed). St. George: Paolo Uccello painting. St. Mariana: colonial portrait.
+- **Verification:** Parity test ✅, Android build + tests ✅, iOS build ✅. Final count: 81 EN, 81 ES saints.
+- **Key learning:** The Android test (`SaintRepositoryTest.kt`) was already updated to expect 81 saints in a prior commit on this branch, anticipating this addition. Always check HEAD state before assuming test updates are needed.
