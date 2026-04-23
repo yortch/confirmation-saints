@@ -3326,7 +3326,7 @@
       "whyConfirmationSaint": "St. Moses the Black's life is proof that nobody is too far gone for God. He was a slave, a gang leader, a murderer, a man feared for his violence — and he became a gentle, holy monk who refused to fight even when his life was threatened. If you're carrying guilt from your past, or if people have written you off because of who you used to be, Moses is your patron. He also stands as a powerful witness against racism and violence, and as a reminder that true strength is in mercy.",
       "image": {
         "filename": "moses-the-black.jpg",
-        "attribution": "CC BY-SA 4.0, via Wikimedia Commons"
+        "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
         "Franciscan Media",
@@ -3372,7 +3372,7 @@
       "whyConfirmationSaint": "St. Vladimir was a violent prince with a shocking past — conqueror, idolater, polygamist — and yet Jesus transformed him into a man who abolished the death penalty out of reverence for God. He shows that one person's conversion can change the course of history for millions. If you have a past you're not proud of, or if you want to bring your faith into the way you lead, Vladimir is a powerful patron. He's also a saint shared across East and West, a bridge of Christian unity.",
       "image": {
         "filename": "vladimir-of-kiev.jpg",
-        "attribution": "CC BY-SA 4.0, via Wikimedia Commons"
+        "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
         "Catholic News Agency",
@@ -3651,7 +3651,7 @@
       "whyConfirmationSaint": "St. Josemaría's whole message is that you don't have to become a priest, a nun, or a missionary to be a saint. Your school, your job, your chores, your friendships — all of it can be made holy if you do it with love. If you've ever thought, 'I'm just a normal teenager, how am I supposed to be a saint?', Josemaría is exactly your saint. He said the path to heaven runs right through your homework, your kitchen, your workplace. Holiness is not somewhere else; it's where you already are.",
       "image": {
         "filename": "josemaria-escriva.jpg",
-        "attribution": "CC0, via Wikimedia Commons"
+        "attribution": "Public domain, via Wikimedia Commons"
       },
       "sources": [
         "Catholic News Agency",
@@ -3660,6 +3660,100 @@
       "sourceURLs": {
         "Catholic News Agency": "https://www.catholicnewsagency.com/saint/st-josemaria-escriva-485",
         "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-josemaria-escriva/"
+      }
+    },
+    {
+      "id": "george",
+      "name": "St. George",
+      "feastDay": "04-23",
+      "birthDate": "0280-01-01",
+      "deathDate": "0303-04-23",
+      "canonizationDate": null,
+      "country": "Cappadocia (modern Turkey)",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "England",
+        "soldiers",
+        "scouts",
+        "knights",
+        "Portugal",
+        "Georgia"
+      ],
+      "tags": [
+        "martyr",
+        "soldier",
+        "early-church",
+        "warrior"
+      ],
+      "affinities": [
+        "courage",
+        "military",
+        "leadership",
+        "adventure"
+      ],
+      "quote": "For he who follows Christ is a winner even in the most terrible defeat.",
+      "biography": "St. George was born around 280 AD in Cappadocia, in what is now modern Turkey, to a Christian family. He followed in his father's footsteps and became a soldier in the Roman army, eventually rising to the rank of tribune in the guard of Emperor Diocletian.\n\nWhen Diocletian launched the Great Persecution against Christians around 303 AD, George refused to renounce his faith. He is said to have publicly protested the persecution and even gave away his wealth to the poor before confronting the emperor. Diocletian tried everything to make George recant — imprisonment, torture, promises of wealth and power — but George stood firm.\n\nGeorge was martyred on April 23, 303, likely by beheading. His courage inspired countless others, and his veneration spread rapidly throughout the Christian world. The famous legend of George slaying a dragon to save a princess appeared in medieval times and became a powerful symbol of good triumphing over evil, though the historical George never encountered an actual dragon.\n\nSt. George became the patron saint of England during the Crusades and remains one of the most universally venerated saints in Christianity, honored by Catholics, Orthodox, and even some Muslim communities.",
+      "whyConfirmationSaint": "St. George is the ultimate saint for courage and standing up for what's right. He was a soldier who could have stayed silent and kept his comfortable position, but he chose to speak out against injustice even though it cost him everything. The dragon-slaying legend is cool, but the real story is even better — a man who faced down an emperor to defend his faith. Choose George if you want the courage to stand up for your beliefs no matter what.",
+      "image": {
+        "filename": "george.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Wikipedia",
+        "Catholic Encyclopedia"
+      ],
+      "sourceURLs": {
+        "Wikipedia": "https://en.wikipedia.org/wiki/Saint_George",
+        "Catholic Encyclopedia": "https://www.newadvent.org/cathen/06453a.htm"
+      }
+    },
+    {
+      "id": "mariana-de-jesus-de-paredes",
+      "name": "St. Mariana de Jesús de Paredes",
+      "feastDay": "05-26",
+      "birthDate": "1618-10-31",
+      "deathDate": "1645-05-26",
+      "canonizationDate": "1950-07-09",
+      "country": "Ecuador",
+      "region": "Americas",
+      "gender": "female",
+      "lifeState": "lay",
+      "ageCategory": "young",
+      "patronOf": [
+        "Ecuador",
+        "Americas",
+        "loss of parents"
+      ],
+      "tags": [
+        "mystic",
+        "penitent",
+        "Third Order",
+        "Latin American",
+        "virgin"
+      ],
+      "affinities": [
+        "prayer",
+        "service",
+        "compassion",
+        "humility"
+      ],
+      "quote": "I am not worthy of the least of God's mercies.",
+      "biography": "Mariana de Jesús de Paredes y Flores was born on October 31, 1618, in Quito, Ecuador, to a noble Spanish family. Both her parents died before she turned seven, and she was raised by her older sister and brother-in-law. From childhood, Mariana felt called to a life of prayer and penance.\n\nAt age 10, she asked to enter a convent but was told she was too young. She tried again with the Jesuits and the Franciscans, but was rejected both times — apparently God had a different plan. Instead, Mariana transformed a room in her family's home into a cell where she lived as a hermit, joining the Third Order of St. Francis. She slept only a few hours a night on a bed of thorns, fasted severely, and spent hours in prayer and penance.\n\nMariana dedicated herself to caring for the sick, especially during plague outbreaks and earthquakes. In 1645, when a devastating earthquake struck Quito followed by an epidemic, Mariana publicly offered her life to God as a sacrifice for her city. She fell ill shortly after and died on May 26, 1645, at age 26. Legend says that when she died, a lily bloomed from the blood she had shed, earning her the title 'Lily of Quito.'\n\nShe was canonized by Pope Pius XII in 1950 and is honored as the first canonized saint of Ecuador. She is deeply beloved throughout the Spanish-speaking world and especially in Latin America.",
+      "whyConfirmationSaint": "St. Mariana de Jesús is a powerful intercessor for anyone who has lost their parents or feels called to a deeper prayer life. She shows that you don't need to join a religious order to live a radical life of faith — she turned her bedroom into a prayer chapel and served her city with extraordinary love. Choose Mariana if you want a saint who understands sacrifice, or if you want to connect with the rich Catholic heritage of Latin America.",
+      "image": {
+        "filename": "mariana-de-jesus-de-paredes.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        "Wikipedia",
+        "Franciscan Media"
+      ],
+      "sourceURLs": {
+        "Wikipedia": "https://en.wikipedia.org/wiki/Mariana_de_Jes%C3%BAs_de_Paredes",
+        "Franciscan Media": "https://www.franciscanmedia.org/saint-of-the-day/saint-mariana-of-jesus-de-paredes/"
       }
     }
   ]

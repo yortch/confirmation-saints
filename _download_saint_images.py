@@ -100,6 +100,8 @@ SAINT_IMAGES = {
     "teresa-of-avila": "Peter_Paul_Rubens_060.jpg",
     "anthony-of-padua": "Saint_Anthony_of_Padua.jpg",
     "josemaria-escriva": "Detail autel Jose Maria Escriva de Balaguer Peterskirche Vienna.jpg",
+    "george": "Saint George and the Dragon by Paolo Uccello (Paris) 01.jpg",
+    "mariana-de-jesus-de-paredes": "Retrato de Mariana de Jesús.jpg",
 }
 
 

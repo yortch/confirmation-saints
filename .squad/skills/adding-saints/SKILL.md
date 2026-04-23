@@ -4,6 +4,18 @@
 
 Jorge asks to add N saints to the Confirmation Saints app, or to expand the roster with a themed batch (e.g. "add more Doctors", "add more modern saints"). Applies to any edit that changes the saint count.
 
+## Trusted Sources (in order)
+
+Use these sources to gather information for new saints, in priority order:
+
+1. **Wikipedia (EN + ES articles)** — biographical facts, feast date, patronage, canonization date, birth/death dates. Use the English Wikipedia URL in `sourceURLs` for both language files. Wikipedia is the first stop for any new saint.
+
+2. **Wikimedia Commons** — images (check license carefully; prefer Public Domain; CC BY-SA acceptable with proper attribution). Use the Wikimedia API to check `extmetadata.LicenseShortName` before committing.
+
+3. **Catholic.org / Franciscan Media / vaticannews.va / Catholic News Agency** — tiebreakers and additional context for biography and spiritual significance.
+
+**REQUIRED:** Both `sourceURLs` (dictionary of source name → URL) AND `imageAttribution` (string) fields are REQUIRED for every saint. Never leave blank. If a modern saint lacks a PD portrait, use a statue/altar image with honest CC0/CC BY-SA 4.0 attribution.
+
 ## Pattern
 
 Every addition is **9 linked changes**, not 2. Missing any one breaks a build, a test, or a CI parity check.
