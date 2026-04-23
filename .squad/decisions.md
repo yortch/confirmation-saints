@@ -2,6 +2,170 @@
 
 ## Active Decisions
 
+### Decision: Sources Schema Refactor (2026-04-23)
+
+**Date:** 2026-04-23  
+**Author:** Gandalf (Lead/Architect)  
+**Status:** Ready for implementation  
+**Unblocks:** Samwise (data), Frodo (iOS), Aragorn (Android), Legolas (test)
+
+---
+
+#### 1. New Schema Shape
+
+Replace `sources: [String]` + `sourceURLs: {String: String}?` with a single ordered array:
+
+```json
+"sources": [
+  { "name": "Franciscan Media", "url": "https://www.franciscanmedia.org/..." },
+  { "name": "Catholic News Agency", "url": "https://www.catholicnewsagency.com/..." }
+]
+```
+
+**Field names:** `name` and `url` (not `title`/`href` — matches existing usage and is idiomatic).  
+**Order:** Display order. Render top-to-bottom as listed.  
+**Nullability:** `sources` is required (may be empty `[]`). Each entry must have non-empty `name` and `url`.
+
+---
+
+#### 2. Migration Strategy
+
+One-shot rewrite of `saints-en.json` and `saints-es.json`. Match by saint `id` (identical across both files).
+
+##### Edge-case handling:
+
+| Scenario | Resolution |
+|----------|------------|
+| `sources[]` entry **not in** `sourceURLs{}` | **Fail migration** — must be fixed manually first. Do NOT silently drop. |
+| `sourceURLs{}` key **not in** `sources[]` | **Fail migration** — orphan URL indicates data error. Fix manually. |
+| URL is empty string | **Fail migration** — every source must have non-empty URL. |
+
+**Rationale:** We're shipping 81 saints, ~150 sources. Better to fail fast now than silently lose data. Samwise fixes any mismatches before running migration.
+
+---
+
+#### 3. iOS Model Change
+
+In `ios/CatholicSaints/Models/Saint.swift`:
+
+```swift
+struct SourceEntry: Codable, Hashable, Sendable {
+    let name: String
+    let url: String
+}
+
+struct Saint: Codable, Identifiable, Hashable, Sendable {
+    // ... existing fields ...
+    let sources: [SourceEntry]  // ← replaces sources: [String] + sourceURLs: [String: String]?
+}
+```
+
+Remove the old `sources: [String]` and `sourceURLs: [String: String]?` fields entirely.
+
+---
+
+#### 4. Android Model Change
+
+In `android/.../data/model/Saint.kt`:
+
+```kotlin
+@Serializable
+data class SourceEntry(
+    val name: String,
+    val url: String,
+)
+
+@Serializable
+data class Saint(
+    // ... existing fields ...
+    val sources: List<SourceEntry> = emptyList(),  // ← replaces sources + sourceURLs
+)
+```
+
+Remove the old `sources: List<String>` and `sourceURLs: Map<String, String>?` fields.
+
+---
+
+#### 5. View Render Logic
+
+##### iOS (`SaintDetailView.swift` — `sourcesSection`):
+```swift
+ForEach(saint.sources, id: \.name) { source in
+    Link(destination: URL(string: source.url)!) {
+        HStack {
+            Text(source.name).font(.subheadline)
+            Spacer()
+            Image(systemName: "arrow.up.right.square").font(.caption)
+        }
+        .foregroundStyle(.blue)
+    }
+}
+```
+No lookup needed — iterate and render directly.
+
+##### Android (`SaintDetailScreen.kt` — `SourcesSection`):
+```kotlin
+saint.sources.forEach { source ->
+    Row(Modifier.clickable { uriHandler.openUri(source.url) }.padding(12.dp)) {
+        Text(source.name, Modifier.weight(1f), color = MaterialTheme.colorScheme.primary)
+        Icon(Icons.Default.OpenInNew, ...)
+    }
+}
+```
+No `sourceURLs?.get()` lookup — direct property access.
+
+---
+
+#### 6. Integrity Test
+
+**Placement:** `android/app/src/test/java/com/yortch/confirmationsaints/data/SourcesIntegrityTest.kt`  
+(Android JVM tests run in CI without emulator; this is where `SaintParsingTest.kt` already lives.)
+
+##### Assertions (per saint, both language files):
+
+1. **sources is non-empty** — every saint must cite at least one source.
+2. **Each entry has non-empty `name`** — no blank labels.
+3. **Each entry has non-empty `url`** — no broken links allowed.
+4. **URL is well-formed** — `startsWith("https://")` (all our sources use HTTPS).
+5. **Parity check (cross-file):**
+   - Same saint IDs exist in both `saints-en.json` and `saints-es.json`.
+   - Same number of sources per saint ID.
+   - Same URLs per saint ID (order may differ, but set must match — content is language-agnostic).
+
+##### Why Android?
+Android already has `SaintParsingTest.kt` + Gradle `testDebugUnitTest` that loads `SharedContent/` via copy task. Legolas adds the new test alongside. iOS lacks a JSON-test pattern; adding one is more work with less CI benefit.
+
+---
+
+#### 7. Work Decomposition
+
+| Agent | Task | Touches | Depends On |
+|-------|------|---------|------------|
+| **Samwise** | Migrate `saints-en.json` + `saints-es.json` to new schema | `SharedContent/saints/*.json` | None — start immediately |
+| **Frodo** | Update `Saint.swift`, `SaintsFile`, and `sourcesSection` | `ios/.../Models/Saint.swift`, `ios/.../SaintDetailView.swift` | Samwise (needs new schema to decode) |
+| **Aragorn** | Update `Saint.kt`, `SaintsFile.kt`, and `SourcesSection` | `android/.../model/Saint.kt`, `android/.../SaintDetailScreen.kt` | Samwise (needs new schema) |
+| **Legolas** | Add `SourcesIntegrityTest.kt` with assertions above | `android/.../data/SourcesIntegrityTest.kt` | Samwise (test runs against new data) |
+
+##### Parallelism:
+- **Samwise starts first** — data migration unblocks everyone else.
+- **Frodo + Aragorn + Legolas can start stub work immediately** (model shapes are defined above), but must wait for Samwise's commit before final testing.
+- **No file-touch conflicts** — each agent owns separate files.
+
+##### Hard sequencing:
+1. Samwise commits data changes.
+2. Frodo/Aragorn/Legolas pull, complete implementations, run tests.
+3. Single merge to `squad/add-saints-80-plus` once all four pass CI.
+
+---
+
+#### Summary
+
+This schema change eliminates the mismatch bug class by design. One ordered array of `{name, url}` objects replaces the fragile parallel-array pattern. Migration fails loudly on any inconsistency. The integrity test prevents future regressions.
+
+Total scope: 2 JSON files, 2 model files, 2 view files, 1 test file. Four agents, minimal sequencing friction.
+
+---
+
 ### Cross-Platform Repository Restructure (2026-07-15)
 **Author:** Gandalf (Lead)  
 **Status:** Implemented
@@ -36,35 +200,6 @@ Reorganize repository to separate iOS (ios/), Android (android/), and shared con
 
 ---
 
-### Programmatic App Icon with Chi-Rho Design (2025-07-15)
-**Author:** Samwise (Data/Backend)  
-**Status:** Implemented
-
-**Design:**
-- Chi-Rho (☧) symbol — oldest Christogram, universally recognized in Catholic tradition
-- Purple gradient background (liturgical color of Confirmation)
-- Gold accents (sacred/regal)
-- Subtle dove silhouette (Holy Spirit)
-- No text (poor readability at small sizes)
-
-**Technical:**
-- Generated via `_generate_icon.py` (Python + Pillow)
-- Single 1024×1024 PNG: Xcode auto-generates all required sizes
-- Output: `ios/CatholicSaints/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png`
-- Contents.json updated with iOS platform reference
-
-**Trade-offs:**
-- Programmatic generation = geometric/flat style only
-- Chi-Rho less immediately recognizable to teens than simple cross, but more distinctive/unique
-- **Placeholder** — Jorge may commission professional icon later
-
-**Impact:**
-- iOS icon now visible in simulator/device
-- Android icon generation pending (different format requirements)
-- Script is regenerable/modifiable if design tweaks needed
-
----
-
 ### Saint Image Sources from Wikimedia Commons (2026-07-17)
 **Author:** Samwise (Data/Backend)  
 **Status:** Implemented
@@ -77,39 +212,6 @@ All 32 saint images sourced from Wikimedia Commons using public domain or Creati
 - UI: No changes needed (SaintImageView.swift already handles image loading)
 
 **Notes:** Some saints (Carlo Acutis, Chiara Luce Badano) have limited public domain imagery; best available options used.
-
----
-
-### Source URL Replacement Strategy (2025-07-15)
-**Author:** Frodo (iOS Dev)  
-**Status:** Implemented
-
-Link audit identified 46 broken source URLs across saints-en.json and saints-es.json. Five primary sources had widespread link rot (Loyola Press, Hallow, Ascension Press, Focus, Lifeteen). Replaced with verified alternatives:
-
-1. **Franciscan Media** — Primary replacement (stable saint-of-the-day archive)
-2. **CNA (Catholic News Agency)** — Secondary source for comprehensive coverage
-3. **EWTN** — Tertiary source to avoid duplicate keys
-4. **Hallow (updated paths)** — Migrated from `/blog/` to `/saints/`
-
-**Impact:**
-- All 32 saints retain ≥2 working source URLs
-- No working URLs changed
-- Both EN/ES files updated identically (matched by URL, not saint name)
-
----
-
-### Diacritic-Insensitive Search Convention (2025-07-17)
-**Author:** Frodo (iOS Dev)  
-**Status:** Implemented
-
-All string matching in search/filter logic uses diacritic-insensitive comparison via shared `String+Diacritics.swift` extension (`containsIgnoringDiacritics` / `equalsIgnoringDiacritics`), not `.lowercased().contains()`.
-
-**Rationale:** Saint names include accented characters (Thérèse, José, María) common in French, Spanish, and other languages. Users typing on English keyboards won't include accents, so search must treat accented and unaccented characters as equivalent.
-
-**Impact:**
-- **Legolas (QA):** Search tests verify accent-insensitive matching
-- **Samwise (Data):** Saint data retains proper accented names
-- **Android:** Use Java/Kotlin `Normalizer` or `Collator` with `SECONDARY` strength
 
 ---
 
@@ -218,6 +320,64 @@ Jorge requested two fixes for the adaptive launcher icon:
 - **2026-04-13T01:12:10Z:** Jorge Balderas — Skip priority 3 (diversity gaps). Target ~75 saints total (not 90-100). Focus priorities 1, 2, 4.
 - **2026-04-13T01:28:48Z:** Jorge Balderas — Skip priority 4. Focus ONLY priorities 1 & 2 (Pius X, Patrick, Catherine of Siena, Martin de Porres, key saints).
 
+### 9 Saints Added — Batch 4 (10-Saint Sprint Outcome) (2026-04-23)
+**Author:** Samwise (Data/Backend)  
+**Status:** Implemented (count 79, open question on 80-target parity)
+
+Added 9 new saints to both `saints-en.json` and `saints-es.json`, bringing roster from 70 → **79** saints per language. St. Luke the Evangelist (item #2 on Jorge's list) was already in the roster from a prior batch and was not re-added.
+
+**Saints Added:**
+1. St. John Neumann (19th-c. US Bishop, first US male saint)
+2. St. Moses the Black (4th-c. Desert Father, martyr of non-violence)
+3. St. Vladimir of Kiev (Bringer of Christianity to Kievan Rus')
+4. St. Ignatius of Loyola (Founder of Jesuits, Spiritual Exercises)
+5. Bl. Imelda Lambertini (Dominican child mystic, patron of first communicants)
+6. St. Isidore the Farmer (Patron of farmers, married lay saint)
+7. St. Teresa of Ávila (First female Doctor of the Church)
+8. St. Anthony of Padua (Doctor of the Church, Franciscan)
+9. St. Josemaría Escrivá (Founder of Opus Dei, 20th-century)
+
+**Data Decisions:**
+- "Doctor of the Church" tag now covers 4 saints: Augustine, Catherine of Siena, Teresa of Ávila, Anthony of Padua
+- Blessed tier expanded to 5: Carlo Acutis, Chiara Luce Badano, Pier Giorgio Frassati, Michael McGivney, Imelda Lambertini
+- Image licensing corrected for 3 saints: CC BY-SA 4.0 (Moses, Vladimir), CC0 (Josemaría)
+
+**Verification:**
+- iOS: ✅ BUILD SUCCEEDED
+- Android: ✅ BUILD SUCCESSFUL (test count updated 70→79)
+- Cross-platform parity: ✅ EN/ES matching validated
+
+**Open Question:**
+Target was 80 saints. Current count is 79. Jorge must decide: (1) accept 79, (2) add one more saint, or (3) update copy to "75+". See decisions/inbox files for full context.
+
+**Impact:**
+- Frodo (iOS): No UI changes; new saints appear automatically
+- Aragorn (Android): `SaintRepositoryTest` updated; recommend switching to "minimum count" assertion for future-proofing
+- Legolas (QA): Category coverage unchanged; verify "Doctor of the Church" tag if testing
+
+---
+
+### Documentation Updated to 80+ Saint Count (2026-04-23)
+**Author:** Gandalf (Lead)  
+**Status:** Implemented
+
+Updated user-facing documentation to reflect "80+ saints" across 8 locations per Samwise's 10-saint expansion on `squad/add-saints-80-plus`:
+
+**Changes:**
+- README.md: Added "What's New" section, updated 2 count references (70→80+)
+- docs/index.html: 6 instances updated (meta, hero badge, mock-ups, stats)
+- docs/appstore/submission-info.md: 2 instances (promotional + description)
+- docs/appstore/screen-recording-script.md: 1 instance (video caption)
+- docs/appstore/review-response.md: 2 instances (value prop, user flow)
+
+**Pattern for Future:**
+Marketing copy is distributed across 5 files; all must be updated in lockstep when saint count changes.
+
+**Deliberately Immutable:**
+Historical records in `.squad/decisions.md`, agent history.md files, and logs remain unchanged (snapshots in time).
+
+---
+
 ## Governance
 
 - All meaningful changes require team consensus
@@ -321,3 +481,153 @@ cd android && ./gradlew :app:testDebugUnitTest
 All tests passed on first green run after Robolectric asset config. No defects discovered in SaintRepository, LocalizationService, CategoryMatcher, or DateFormatting APIs.
 
 ---
+
+### 81 Saints + Wikipedia-First Attribution Policy (2026-04-23)
+**Author:** Samwise (Data/Backend)  
+**Status:** Implemented ✅
+
+Added St. George and St. Mariana de Jesús de Paredes to reach 81 saints total. Audited attribution for all recent additions (9 saints from commit 8f5727a + Frances Cabrini) — all complete. Established **Wikipedia as the primary trusted source** for new saint research in the adding-saints skill documentation.
+
+**Saints Added:**
+- **St. George** (feast April 23): Early Christian martyr (~280-303 AD), patron of England, soldiers, scouts. Dragon legend symbolizes triumph of good over evil.
+- **St. Mariana de Jesús de Paredes** (feast May 26): "Lily of Quito" — first canonized saint of Ecuador (1950). Mystic, penitent, laywoman (Third Order Franciscan).
+
+**Attribution Audit (All Complete):**
+- 9 saints from batch 8f5727a: John Neumann, Moses the Black, Vladimir of Kiev, Ignatius of Loyola, Imelda Lambertini, Isidore the Farmer, Teresa of Ávila, Anthony of Padua, Josemaría Escrivá
+- Frances Cabrini (earlier batch)
+- **Result:** All ≥2 sources, no gaps. `sourceURLs` + `imageAttribution` complete on every entry.
+
+**Skill Update: Trusted Sources (in order)**
+1. **Wikipedia (EN + ES articles)** — biographical facts, feast date, patronage, canonization date. Use English Wikipedia URL in `sourceURLs` for both language files.
+2. **Wikimedia Commons** — images. Check `extmetadata.LicenseShortName` via API. Prefer PD; CC BY-SA acceptable with attribution.
+3. **Catholic.org / Franciscan Media / vaticannews.va / CNA** — tiebreakers, spiritual context.
+
+**Key Enforcement:** Both `sourceURLs` (dictionary) AND `imageAttribution` (string) are **REQUIRED**; never leave blank.
+
+**Why Wikipedia First?**
+- Consistency: Wikipedia exists for virtually every canonized saint + most Blessed
+- Reliability: Cites primary sources; peer-reviewed via edit history; EN/ES cross-validate
+- Accessibility: Free, multilingual, comprehensive
+- License transparency: Wikimedia Commons has robust metadata via API
+- Already in use: Both new saints used Wikipedia as primary source
+
+**Why Not Wikipedia Only?**
+- Spiritual context missing: Wikipedia is factual but doesn't explain *why* compelling for confirmation candidates
+- Image gaps: Not all saints have PD images on Commons (especially 20th-century); need fallback to CC BY-SA/CC0
+
+**Verification:**
+- ✅ `python3 tests/shared-content-parity.py` → PASSED
+- ✅ iOS build: BUILD SUCCEEDED
+- ✅ Android: BUILD SUCCESSFUL, test count 79→81
+- ✅ Cross-platform parity: EN/ES matching validated
+
+**Marketing Copy Resolution:**
+"80+ saints" copy now truthful at 81 saints. Prior discrepancy (docs vs. roster count) resolved.
+
+**Impact:**
+- **Frodo (iOS):** 2 new saints visible in search/browse — no UI changes needed
+- **Aragorn (Android):** Build passes; test expected 81
+- **Legolas (QA):** Category coverage unchanged; schema compliant
+- **Future batches:** Use Wikipedia-first workflow from updated skill doc
+
+**Files Changed:**
+- `SharedContent/saints/saints-en.json` (2 saints added)
+- `SharedContent/saints/saints-es.json` (2 saints added)
+- `SharedContent/images/george.jpg`, `mariana-de-jesus-de-paredes.jpg`
+- `.squad/skills/adding-saints/SKILL.md` (Wikipedia-first policy)
+
+---
+
+### iOS Settings Content Sources UI (2026-04-23)
+**Author:** Frodo (iOS Dev)  
+**Status:** Implemented ✅
+
+Added 8 tappable SwiftUI `Link` components to Settings → Content Sources section. Sources include Wikipedia (EN/ES), Wikimedia Commons, Catholic.org, Franciscan Media, CNA, EWTN, Hallow.
+
+**Implementation:**
+- Each link has external-link glyph (`Image(systemName: "arrow.up.right")`)
+- 4 new localized strings (EN+ES) added to `Localizable.xcstrings`
+- `LocalizationService.swift` wired for string lookup
+- Tint color matches accent color for visual consistency
+
+**Verification:**
+- ✅ iOS build: BUILD SUCCEEDED
+- ✅ Localizable.xcstrings: No missing EN/ES pairs
+- ✅ No compiler warnings
+
+**Impact:**
+- Users can tap to external sources directly from Settings
+- Mirrors Android implementation (9 sources)
+- Aligns with Wikipedia-first attribution policy
+
+**Files Changed:**
+- `ios/CatholicSaints/Views/SettingsView.swift` (8 Link components)
+- `ios/CatholicSaints/Localization/LocalizationService.swift` (4 strings)
+- `ios/CatholicSaints/Resources/Localizable.xcstrings` (4 new entries)
+
+---
+
+### Android Settings Content Sources UI (2026-04-23)
+**Author:** Aragorn (Android Dev)  
+**Status:** Implemented ✅
+
+Added 9 tappable source rows to Settings → Content Sources. Created `ContentSource` data class and `SourceRow` composable. Uses `LocalUriHandler.current.openUri()` to launch links. All localized via `AppStrings.kt` (EN+ES). OpenInNew icon on each row; `contentDescription` for a11y.
+
+**Implementation:**
+- `ContentSource` data class holds label, URI, icon
+- `SourceRow` composable renders tappable row with OpenInNew icon
+- 9 sources: Wikipedia (EN+ES), Wikimedia Commons, Catholic.org, Franciscan Media, CNA, EWTN, Hallow, +1
+- All labels localized (EN+ES) in AppStrings
+- Live language switching in Settings updates labels
+
+**Test Update:**
+- `SaintRepositoryTest`: Updated test count 79→81 (reflects 81-saint roster)
+- Recommendation: Switch to "minimum count" assertion for future-proofing
+
+**Verification:**
+- ✅ Android build: BUILD SUCCESSFUL
+- ✅ 32 unit tests pass; 0 failures
+- ✅ No compiler warnings
+
+**Impact:**
+- Settings mirrors iOS (source browsing UI)
+- Aligns with Wikipedia-first attribution policy
+- A11y compliant (all icons described)
+- Saint count now future-locked at 81
+
+**Files Changed:**
+- `android/app/src/main/java/.../data/ContentSource.kt` (new)
+- `android/app/src/main/java/.../ui/composables/SourceRow.kt` (new)
+- `android/app/src/main/java/.../ui/SettingsScreen.kt` (9 rows added)
+- `android/app/src/main/java/.../localization/AppStrings.kt` (9 new entries EN+ES)
+- `android/app/src/test/java/.../data/SaintRepositoryTest.kt` (count 79→81)
+
+---
+
+### Saint `sources` Array Integrity (2026-04-23)
+**Author:** Frodo (iOS Dev)  
+**Status:** Implemented ✅
+
+**Context:**
+`SaintDetailView.sourcesSection` renders each item in `saint.sources` as a tappable `Link` only when the name is also a key in `saint.sourceURLs`. A 2025-07 URL sweep replaced publisher URLs (Loyola Press, Hallow, Ascension, Lifeteen, Focus) with new ones (Franciscan Media, CNA, EWTN) in `sourceURLs`, but did not update the `sources` display array. Result: 27 of 79 saints had non-tappable source names (Cabrini was the user-reported case).
+
+**Decision:**
+For every saint with `sourceURLs`, the `sources` array MUST equal `Array(sourceURLs.keys)`. Enforced immediately by syncing all 27 offending entries in both `saints-en.json` and `saints-es.json` (commits `7fb793c`, `14d07a9`).
+
+**Implications:**
+- **Samwise (Data):** Keep `sources` and `sourceURLs` keys in lockstep when adding/editing saints. When rewriting URLs, update both fields.
+- **Gandalf (Architect):** Future schema migration should collapse into single `[String: String]` map to make this class of bug impossible.
+- **Legolas (Tests):** Add data-integrity test: `for saint in all: assert saint.sources == Array(saint.sourceURLs.keys) when sourceURLs non-empty`.
+
+**Android Note (Aragorn):**
+Android `SaintDetailScreen.SourcesSection` (Compose) already correctly gates tappability on `saint.sourceURLs?.get(source) != null` using `LocalUriHandler`. No code change needed — repaired JSON flows in via `syncSharedContent` Gradle task. Companion UI reorder (Support & Legal above Content Sources) shipped for Android parity (commits `8532dd3`, `680b4f2`).
+
+**Debugging Tip:**
+For cross-platform data issues: canonical source is `SharedContent/saints/*.json`; `android/app/src/main/assets/saints-*.json` is build-generated and may lag. A real mismatch in `SharedContent/` is a bug; assets-only mismatch just means regeneration pending.
+
+**Impact:**
+- ✅ Cabrini now tappable
+- ✅ 27 saints repaired
+- ✅ Parity on iOS/Android Settings UI
+- Data integrity rule documented for future maintenance
+

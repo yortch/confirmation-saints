@@ -324,33 +324,25 @@ private fun SourcesSection(saint: Saint) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         LabelHeader(Icons.Default.Book, AppStrings.localized("Sources", language))
         saint.sources.forEach { source ->
-            val url = saint.sourceURLs?.get(source)
             val rowModifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(8.dp))
-                .then(
-                    if (url != null) {
-                        Modifier
-                            .background(MaterialTheme.colorScheme.surfaceVariant)
-                            .clickable { uriHandler.openUri(url) }
-                    } else Modifier,
-                )
+                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .clickable { uriHandler.openUri(source.url) }
                 .padding(12.dp)
             Row(rowModifier, verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    source,
+                    source.name,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = if (url != null) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.weight(1f),
                 )
-                if (url != null) {
-                    Icon(
-                        Icons.Default.OpenInNew,
-                        contentDescription = AppStrings.localized("Open link", language),
-                        modifier = Modifier.size(16.dp),
-                        tint = MaterialTheme.colorScheme.primary,
-                    )
-                }
+                Icon(
+                    Icons.Default.OpenInNew,
+                    contentDescription = AppStrings.localized("Open link", language),
+                    modifier = Modifier.size(16.dp),
+                    tint = MaterialTheme.colorScheme.primary,
+                )
             }
         }
     }

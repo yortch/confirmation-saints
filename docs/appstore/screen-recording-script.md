@@ -95,7 +95,7 @@ Apple's reviewer may not know the app. Add brief text overlays in a video editor
 |------|---------|
 | 0:00 | "Launching Confirmation Saints" |
 | 0:05 | "Welcome screen (first launch only)" |
-| 0:12 | "Core feature: browse 70+ curated Catholic saints" |
+| 0:12 | "Core feature: browse 80+ curated Catholic saints" |
 | 0:25 | "Tap any saint for full bio, patronages, and sources" |
 | 0:40 | "Explore: filter saints by interest, region, era, and more" |
 | 0:55 | "Fully bilingual — English and Spanish" |

@@ -1,11 +1,26 @@
 # Frodo — History
 
-## Project Context
-- **Project:** confirmation-saints — Catholic Saints iOS App
-- **User:** Jorge Balderas
-- **Stack:** Swift / SwiftUI, iOS (iPhone + iPad)
-- **Description:** App helping Catholic confirmation candidates (primarily teens, also adults) find and choose a patron saint. Features saint search by name, patron day, affinity, country, age, married status. Multilingual (EN/ES). Content sourced from Loyola Press, Focus, Lifeteen, Ascension Press, Hallow with attribution.
-- **Key constraints:** Self-contained, easy content updates, cross-platform ready (Android later), include saint images with attribution.
+## Core Context
+
+### iOS App Foundation (2026-04-12)
+- **Architecture:** MVVM + SwiftUI with Observable macro (iOS 17+); XcodeGen generates .xcodeproj from project.yml
+- **Swift 6 Concurrency:** All models Sendable, services @MainActor
+- **UI Localization:** .xcstrings String Catalog (EN/ES); in-app language switch via @AppStorage("appLanguage") + custom EnvironmentValues
+- **Navigation:** NavigationStack (not deprecated NavigationView); no duplicate .navigationDestination for same type in hierarchy (causes conflicts)
+- **Data Model:** Per-language JSON files (saints-en/es.json, categories-en/es.json, confirmation-info-en/es.json) in SharedContent/
+- **UI Components:** SaintListViewModel shared across 5 tabs; SaintImageView for consistent image display; FilterChip for dynamic category matching
+- **Theme:** Purple accent (liturgical + teen-friendly), SF Symbols, gradient avatars; FlowLayout for tag chips
+
+### Bugs Fixed (2025-07-15 to 2025-07-18)
+- **CategorySaintsListView navigation conflict:** Removed inner .navigationDestination that conflicted with parent NavigationStack
+- **Language reactivity:** Changed detail views to accept saintId (not captured Saint struct) + viewModel reference; now updates on language switch
+- **46 broken source URLs:** Replaced Loyola Press, Hallow, Ascension Press, Focus, Lifeteen with Franciscan Media, CNA, EWTN (stable patterns)
+- **UI rendering:** Default tab → Explore (index 1); closure-based NavigationLinks instead of value-based (avoids conflicts); AppStrings.localized() for in-app language switching
+
+### Recent Work (2026-04-22 to 2026-04-23)
+- **App Rename:** "Catholic Saints" → "Confirmation Saints" (display name; internal folder unchanged)
+- **Welcome Screen:** 4-page TabView onboarding (TabPageViewStyle, purple/gold theme); @AppStorage("hasSeenWelcome") gating; Settings button to replay
+- **Settings Content Sources:** 8 tappable SwiftUI Link components + external-link glyphs; localized labels (EN/ES)
 
 ## Learnings
 
@@ -115,3 +130,83 @@
 
 ### ⚠️ Follow-up: SettingsView Version Label Hardcoding (2026-04-21)
 **Cross-agent Note from Gandalf (Lead)** — During documentation audit for Android port, noted that `SettingsView.swift` hardcodes `Text("0.1.0")` for version display while `ios/project.yml` has `MARKETING_VERSION: 1.0.0` (shipped to App Store as v1.0.0). Should read version from `Bundle.main.infoDictionary["CFBundleShortVersionString"]` to stay in sync with build config. Out of scope for current documentation audit, but worth a quick PR fix.
+
+### Cross-Agent Update: Roster Expanded to 79 Saints (2026-04-23)
+**From:** Samwise (Data) + Gandalf (Docs) completion  
+**Status:** ✅ Merged into decisions.md
+- Roster expanded from 70 → 79 saints (9 new saints added on branch `squad/add-saints-80-plus`)
+- iOS build verified ✅; new saints appear automatically in search/browse — no UI changes needed
+- Android build verified ✅; test count updated 70 → 79
+- Documentation updated to "80+ saints" across README, docs/index.html, and appstore copy
+- **Open question:** Jorge must decide if 79 matches the "80+ saints" target or if one more saint should be added
+- Decisions merged: "9 Saints Added — Batch 4" and "Documentation Updated to 80+ Saint Count"
+
+### iOS Settings Content Sources as Tappable Links (2026-04-23)
+**Author:** Frodo (iOS Dev)  
+**Status:** ✅ Implemented on branch `squad/add-saints-80-plus`
+
+**Task:** Convert Content Sources section from static text to tappable external links, add Wikipedia and Wikimedia Commons as sources.
+
+**Implementation:**
+- Created `ContentSource` struct with name, url, and description properties
+- Replaced static `ForEach` over strings with `Link` views that open in Safari
+- Added external-link icon (`arrow.up.right.square`) on right side for discoverability
+- Added 2 new sources:
+  - **Wikipedia** → https://en.wikipedia.org/ (descriptor: "Biographical information")
+  - **Wikimedia Commons** → https://commons.wikimedia.org/ (descriptor: "Public domain images")
+- Updated existing 6 sources (Loyola Press, Focus, Lifeteen, Ascension Press, Hallow, Catholic Encyclopedia) with descriptors and URLs
+- Added accessibility labels: "Open [Source Name] in browser" for each link
+
+**Localization:**
+- Added 4 new strings to both `Localizable.xcstrings` and `LocalizationService.swift`:
+  - "Biographical information" / "Información biográfica"
+  - "Public domain images" / "Imágenes de dominio público"
+  - "Open" / "Abrir"
+  - "in browser" / "en el navegador"
+- All source descriptors localized dynamically via `AppStrings.localized(_:language:)`
+
+**Technical Pattern:**
+- Used SwiftUI's native `Link(destination:)` component (opens in Safari by default)
+- Each link shows: Source name (subheadline), descriptor (caption, secondary color), external icon
+- Preserved existing List/Section structure and purple accent theme
+- Build verified: BUILD SUCCEEDED on iPhone 17 simulator
+
+**Lessons:**
+- `Link` views in SwiftUI automatically handle external browser navigation — no need for custom URL opening logic
+- Accessibility labels should include action context ("Open ... in browser") not just the link target
+- Descriptor text pattern (e.g., "Biographical information") scales well for both content sources and image sources
+
+**Files Modified:**
+- `ios/CatholicSaints/Views/Settings/SettingsView.swift`
+- `ios/CatholicSaints/Services/LocalizationService.swift`
+- `ios/CatholicSaints/Resources/Localizable.xcstrings`
+
+**Commit:** `a335c65` — "iOS Settings: add Wikipedia/Wikimedia as tappable sources"
+
+
+### Saint Source Links Fix + Settings Reorder (2026-04-23)
+**Author:** Frodo (iOS Dev)
+**Status:** ✅ Implemented on branch `squad/add-saints-80-plus`, commit `7fb793c`
+
+**Fix 1 — Non-tappable source links on saint detail (Cabrini and 26 others):**
+- Jorge reported St. Frances Cabrini's detail view had non-tappable source links while other saints (St. George, Teresa of Ávila) were tappable.
+- **Root cause:** In 27 saints across both `saints-en.json` and `saints-es.json`, the `sources` array (names displayed) and `sourceURLs` dictionary (name→URL) had divergent keys. This dated back to the 2025-07 broken-URL sweep (see earlier entry) which replaced Loyola/Hallow/Ascension/Lifeteen/Focus URLs with Franciscan Media/CNA/EWTN in `sourceURLs` but never updated the `sources` display array.
+- `SaintDetailView.sourcesSection` iterates `saint.sources` and looks up `saint.sourceURLs?[source]` — mismatched keys always returned nil, so the view fell through to plain `Text` (non-tappable).
+- **Fix (data-level):** Synced each saint's `sources` array to be `Array(sourceURLs.keys)` — 27 saints × 2 languages updated. Now every listed source resolves to a working Link. No Swift code changes needed.
+- **Lesson:** When `sources` is a display array whose values are keys in `sourceURLs`, the two must be kept in lockstep. Future URL sweeps should rewrite `sources` too, or the schema should collapse to a single map (suggest to Gandalf/Samwise).
+
+**Fix 2 — Settings section reorder:**
+- After the Wikipedia/Wikimedia additions, Content Sources grew tall enough to push Support & Legal off-screen on smaller devices.
+- Swapped section order in `SettingsView.swift`: Support & Legal now appears before Content Sources. Content Sources remains the last section in the List.
+
+**Build verified:** `xcodebuild … -destination 'platform=iOS Simulator,name=iPhone 17' build` → BUILD SUCCEEDED.
+
+**Files modified:**
+- `SharedContent/saints/saints-en.json` (27 saints' `sources` arrays)
+- `SharedContent/saints/saints-es.json` (27 saints' `sources` arrays)
+- `ios/CatholicSaints/Views/Settings/SettingsView.swift` (section reorder)
+- `ios/CatholicSaints/Resources/Localizable.xcstrings` (harmless Xcode auto-reordering of keys)
+
+### iOS Sources Schema — `SourceEntry` struct (2026-04-23)
+- Added `SourceEntry: Codable, Hashable, Sendable { name; url }` to `Saint.swift`; removed old `sources: [String]` and `sourceURLs: [String: String]?` fields.
+- Simplified `SaintDetailView.sourcesSection` — direct iteration over `saint.sources`, no dictionary lookup. Build green. Commit `b449f59`.

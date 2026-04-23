@@ -38,8 +38,7 @@ data class Saint(
     val biography: String,
     val whyConfirmationSaint: String? = null,
     val image: SaintImage? = null,
-    val sources: List<String> = emptyList(),
-    val sourceURLs: Map<String, String>? = null,
+    val sources: List<SourceEntry> = emptyList(),
 ) {
     val isYoung: Boolean get() = ageCategory == "young"
 }
@@ -48,4 +47,10 @@ data class Saint(
 data class SaintImage(
     val filename: String,
     val attribution: String,
+)
+
+@Serializable
+data class SourceEntry(
+    val name: String,
+    val url: String,
 )

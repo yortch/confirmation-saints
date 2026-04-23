@@ -86,3 +86,32 @@
 - **Serialization:** `kotlinx.serialization` chosen over Moshi (compile-time, multiplatform-ready).
 - **DI:** Hilt for v1 (standard Android choice, pairs with Navigation Compose).
 - **8-phase work decomposition** defined with explicit dependency ordering.
+
+### Documentation & Marketing Copy — Saint Count References (2026-04-22)
+- Updated all documentation and marketing-facing copy to reflect new saint count: **80+** (previously 70).
+- **Key files updated:**
+  - `README.md`: Feature list + Future Plans section + new "What's New" note
+  - `docs/index.html`: Meta description, hero badge, gallery subtitle, stats section (5 instances)
+  - `docs/appstore/submission-info.md`: Promotional text + App description
+  - `docs/appstore/screen-recording-script.md`: Video caption
+  - `docs/appstore/review-response.md`: App value proposition + suggested user flow
+- **What's New entry:** Added note about 10 new saints (Teresa of Ávila, Ignatius of Loyola, Anthony of Padua, Luke the Evangelist, + 6 others).
+- **Deliberately NOT updated:** Historical test confirmations in `.squad/decisions.md` (Android JVM test section notes 70 saints at time of implementation — that's a historical record, not a current fact). Agent history.md files and session logs also untouched per governance.
+- **Learning:** Marketing copy is distributed across README, docs/index.html, and docs/appstore/ metadata. Always check all three when saint count changes again.
+
+### Roster Now 81 — "80+ Copy Truthful" (2026-04-23)
+- **Cross-Agent Sync (Scribe):** Samwise added St. George + St. Mariana de Jesús de Paredes on `squad/add-saints-80-plus`
+- **Status:** Roster expanded 79→81 saints
+- **Resolution:** Marketing docs now match actual count. "80+ saints" copy is truthful at 81 saints.
+- **Decision:** Merging this branch resolves prior discrepancy (79 saints but "80+" in marketing) — no further copy updates needed post-merge.
+
+### Schema Simplification Flagged: `sources` ↔ `sourceURLs` (2026-04-23)
+- **Bug class discovered (Frodo + Data Team):** 27 saints had `sources` array names mismatched with `sourceURLs` keys. Data sync repaired it, but structure itself is fragile.
+- **Future consideration:** Collapse two fields into single `[String: String]` map (`sourceName: sourceURL` pairs) in next schema migration. This makes the above class of bug impossible by eliminating the parallel-array maintenance burden.
+- **Current state:** Bug fixed in data; decision documented. Not urgent — can roll into next major release cycle.
+
+
+### Sources Schema Refactor — Collapsed `{name, url}` Array (2026-04-23)
+- **Decision doc:** `.squad/decisions/inbox/gandalf-sources-schema.md` (promoted to `.squad/decisions.md`). Commit `34d6470`.
+- Designed collapsed schema: one ordered array of `{name, url}` entries replacing parallel `sources: []` + `sourceURLs: {}` fields. Eliminates the mismatch bug class by construction.
+- Decomposed work across Samwise (data migration with fail-fast validation), Frodo (iOS `SourceEntry` + view), Aragorn (Android `SourceEntry` + view), Legolas (JVM integrity test).

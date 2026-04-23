@@ -16,7 +16,6 @@ import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.ContactMail
-import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.EmojiEmotions
 import androidx.compose.material.icons.filled.HelpOutline
 import androidx.compose.material.icons.filled.Info
@@ -130,34 +129,6 @@ fun SettingsScreen(
         }
 
         item {
-            Section(icon = Icons.Default.Book, title = AppStrings.localized("Content Sources", language)) {
-                val sources = listOf(
-                    "Loyola Press", "Focus", "Lifeteen", "Ascension Press",
-                    "Hallow", "Catholic Encyclopedia", "Franciscan Media",
-                )
-                sources.forEach { source ->
-                    Row(
-                        Modifier.fillMaxWidth().padding(vertical = 6.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Icon(Icons.Default.Description, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(Modifier.size(8.dp))
-                        Text(source, style = MaterialTheme.typography.bodyMedium)
-                    }
-                }
-                Text(
-                    AppStrings.localized(
-                        "Saint information is sourced from trusted Catholic resources. Each saint entry includes specific attribution.",
-                        language,
-                    ),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(top = 8.dp),
-                )
-            }
-        }
-
-        item {
             Section(icon = Icons.Default.Shield, title = AppStrings.localized("Support & Legal", language)) {
                 LinkRow(
                     icon = Icons.Default.Shield,
@@ -173,6 +144,39 @@ fun SettingsScreen(
                     icon = Icons.Default.ContactMail,
                     label = AppStrings.localized("Contact Us", language),
                     onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/support.html") },
+                )
+            }
+        }
+
+        item {
+            Section(icon = Icons.Default.Book, title = AppStrings.localized("Content Sources", language)) {
+                val sources = listOf(
+                    ContentSource("Loyola Press", "https://www.loyolapress.com/", "Biographical information"),
+                    ContentSource("Focus", "https://www.focus.org/", "Biographical information"),
+                    ContentSource("Lifeteen", "https://lifeteen.com/", "Biographical information"),
+                    ContentSource("Ascension Press", "https://ascensionpress.com/", "Biographical information"),
+                    ContentSource("Hallow", "https://hallow.com/", "Biographical information"),
+                    ContentSource("Catholic Encyclopedia", "https://www.newadvent.org/cathen/", "Biographical information"),
+                    ContentSource("Franciscan Media", "https://www.franciscanmedia.org/", "Biographical information"),
+                    ContentSource("Wikipedia", "https://en.wikipedia.org/", "Biographical information"),
+                    ContentSource("Wikimedia Commons", "https://commons.wikimedia.org/", "Public domain images"),
+                )
+                sources.forEach { source ->
+                    SourceRow(
+                        name = source.name,
+                        description = AppStrings.localized(source.description, language),
+                        url = source.url,
+                        onClick = { uri.openUri(source.url) },
+                    )
+                }
+                Text(
+                    AppStrings.localized(
+                        "Saint information is sourced from trusted Catholic resources. Each saint entry includes specific attribution.",
+                        language,
+                    ),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 8.dp),
                 )
             }
         }
@@ -248,3 +252,35 @@ private fun LinkRow(icon: ImageVector, label: String, onClick: () -> Unit) {
         Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
     }
 }
+
+@Composable
+private fun SourceRow(name: String, description: String, url: String, onClick: () -> Unit) {
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(name, style = MaterialTheme.typography.bodyMedium)
+            Text(
+                description,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        Icon(
+            Icons.Default.OpenInNew,
+            contentDescription = "Open $name in browser",
+            modifier = Modifier.size(16.dp),
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
+private data class ContentSource(
+    val name: String,
+    val url: String,
+    val description: String,
+)

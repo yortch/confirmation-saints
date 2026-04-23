@@ -4,6 +4,16 @@
     "— %@" : {
 
     },
+    "%@ %@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ %3$@"
+          }
+        }
+      }
+    },
     "%@, %@%@%@" : {
       "localizations" : {
         "en" : {
@@ -65,6 +75,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Información de la App"
+          }
+        }
+      }
+    },
+    "Biographical information" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Información biográfica"
           }
         }
       }
@@ -326,6 +347,17 @@
         }
       }
     },
+    "in browser" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "en el navegador"
+          }
+        }
+      }
+    },
     "Interests & Tags" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -447,6 +479,17 @@
         }
       }
     },
+    "Open" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir"
+          }
+        }
+      }
+    },
     "Patron Of" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -454,6 +497,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Patrón de"
+          }
+        }
+      }
+    },
+    "Public domain images" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imágenes de dominio público"
           }
         }
       }
