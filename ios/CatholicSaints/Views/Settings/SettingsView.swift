@@ -59,6 +59,21 @@ struct SettingsView: View {
                     Text(AppStrings.localized("Replay the welcome screen to revisit how the app works.", language: language))
                 }
 
+                // Support & Legal
+                Section {
+                    Link(destination: URL(string: "https://yortch.github.io/confirmation-saints/privacy-policy.html")!) {
+                        Label(AppStrings.localized("Privacy Policy", language: language), systemImage: "hand.raised.fill")
+                    }
+                    Link(destination: URL(string: "https://yortch.github.io/confirmation-saints/support.html")!) {
+                        Label(AppStrings.localized("Support", language: language), systemImage: "questionmark.circle.fill")
+                    }
+                    Link(destination: URL(string: "https://yortch.github.io/confirmation-saints/support.html")!) {
+                        Label(AppStrings.localized("Contact Us", language: language), systemImage: "envelope.fill")
+                    }
+                } header: {
+                    Label(AppStrings.localized("Support & Legal", language: language), systemImage: "shield.fill")
+                }
+
                 // Content Sources
                 Section {
                     ForEach(contentSourceLinks, id: \.name) { source in
@@ -84,21 +99,6 @@ struct SettingsView: View {
                     Label(AppStrings.localized("Content Sources", language: language), systemImage: "book.fill")
                 } footer: {
                     Text(AppStrings.localized("Saint information is sourced from trusted Catholic resources. Each saint entry includes specific attribution.", language: language))
-                }
-
-                // Support & Legal
-                Section {
-                    Link(destination: URL(string: "https://yortch.github.io/confirmation-saints/privacy-policy.html")!) {
-                        Label(AppStrings.localized("Privacy Policy", language: language), systemImage: "hand.raised.fill")
-                    }
-                    Link(destination: URL(string: "https://yortch.github.io/confirmation-saints/support.html")!) {
-                        Label(AppStrings.localized("Support", language: language), systemImage: "questionmark.circle.fill")
-                    }
-                    Link(destination: URL(string: "https://yortch.github.io/confirmation-saints/support.html")!) {
-                        Label(AppStrings.localized("Contact Us", language: language), systemImage: "envelope.fill")
-                    }
-                } header: {
-                    Label(AppStrings.localized("Support & Legal", language: language), systemImage: "shield.fill")
                 }
             }
             .navigationTitle(AppStrings.localized("Settings", language: language))

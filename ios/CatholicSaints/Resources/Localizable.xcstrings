@@ -4,6 +4,16 @@
     "— %@" : {
 
     },
+    "%@ %@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ %3$@"
+          }
+        }
+      }
+    },
     "%@, %@%@%@" : {
       "localizations" : {
         "en" : {
@@ -69,17 +79,6 @@
         }
       }
     },
-    "Biography" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Biografía"
-          }
-        }
-      }
-    },
     "Biographical information" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -87,6 +86,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Información biográfica"
+          }
+        }
+      }
+    },
+    "Biography" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biografía"
           }
         }
       }
@@ -458,17 +468,6 @@
         }
       }
     },
-    "Open" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrir"
-          }
-        }
-      }
-    },
     "Onboarding" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -476,6 +475,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bienvenida"
+          }
+        }
+      }
+    },
+    "Open" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir"
           }
         }
       }
