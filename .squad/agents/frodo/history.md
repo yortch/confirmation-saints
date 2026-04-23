@@ -125,3 +125,46 @@
 - Documentation updated to "80+ saints" across README, docs/index.html, and appstore copy
 - **Open question:** Jorge must decide if 79 matches the "80+ saints" target or if one more saint should be added
 - Decisions merged: "9 Saints Added — Batch 4" and "Documentation Updated to 80+ Saint Count"
+
+### iOS Settings Content Sources as Tappable Links (2026-04-23)
+**Author:** Frodo (iOS Dev)  
+**Status:** ✅ Implemented on branch `squad/add-saints-80-plus`
+
+**Task:** Convert Content Sources section from static text to tappable external links, add Wikipedia and Wikimedia Commons as sources.
+
+**Implementation:**
+- Created `ContentSource` struct with name, url, and description properties
+- Replaced static `ForEach` over strings with `Link` views that open in Safari
+- Added external-link icon (`arrow.up.right.square`) on right side for discoverability
+- Added 2 new sources:
+  - **Wikipedia** → https://en.wikipedia.org/ (descriptor: "Biographical information")
+  - **Wikimedia Commons** → https://commons.wikimedia.org/ (descriptor: "Public domain images")
+- Updated existing 6 sources (Loyola Press, Focus, Lifeteen, Ascension Press, Hallow, Catholic Encyclopedia) with descriptors and URLs
+- Added accessibility labels: "Open [Source Name] in browser" for each link
+
+**Localization:**
+- Added 4 new strings to both `Localizable.xcstrings` and `LocalizationService.swift`:
+  - "Biographical information" / "Información biográfica"
+  - "Public domain images" / "Imágenes de dominio público"
+  - "Open" / "Abrir"
+  - "in browser" / "en el navegador"
+- All source descriptors localized dynamically via `AppStrings.localized(_:language:)`
+
+**Technical Pattern:**
+- Used SwiftUI's native `Link(destination:)` component (opens in Safari by default)
+- Each link shows: Source name (subheadline), descriptor (caption, secondary color), external icon
+- Preserved existing List/Section structure and purple accent theme
+- Build verified: BUILD SUCCEEDED on iPhone 17 simulator
+
+**Lessons:**
+- `Link` views in SwiftUI automatically handle external browser navigation — no need for custom URL opening logic
+- Accessibility labels should include action context ("Open ... in browser") not just the link target
+- Descriptor text pattern (e.g., "Biographical information") scales well for both content sources and image sources
+
+**Files Modified:**
+- `ios/CatholicSaints/Views/Settings/SettingsView.swift`
+- `ios/CatholicSaints/Services/LocalizationService.swift`
+- `ios/CatholicSaints/Resources/Localizable.xcstrings`
+
+**Commit:** `a335c65` — "iOS Settings: add Wikipedia/Wikimedia as tappable sources"
+
