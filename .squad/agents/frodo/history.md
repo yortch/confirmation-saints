@@ -183,3 +183,26 @@
 
 **Commit:** `a335c65` — "iOS Settings: add Wikipedia/Wikimedia as tappable sources"
 
+
+### Saint Source Links Fix + Settings Reorder (2026-04-23)
+**Author:** Frodo (iOS Dev)
+**Status:** ✅ Implemented on branch `squad/add-saints-80-plus`, commit `7fb793c`
+
+**Fix 1 — Non-tappable source links on saint detail (Cabrini and 26 others):**
+- Jorge reported St. Frances Cabrini's detail view had non-tappable source links while other saints (St. George, Teresa of Ávila) were tappable.
+- **Root cause:** In 27 saints across both `saints-en.json` and `saints-es.json`, the `sources` array (names displayed) and `sourceURLs` dictionary (name→URL) had divergent keys. This dated back to the 2025-07 broken-URL sweep (see earlier entry) which replaced Loyola/Hallow/Ascension/Lifeteen/Focus URLs with Franciscan Media/CNA/EWTN in `sourceURLs` but never updated the `sources` display array.
+- `SaintDetailView.sourcesSection` iterates `saint.sources` and looks up `saint.sourceURLs?[source]` — mismatched keys always returned nil, so the view fell through to plain `Text` (non-tappable).
+- **Fix (data-level):** Synced each saint's `sources` array to be `Array(sourceURLs.keys)` — 27 saints × 2 languages updated. Now every listed source resolves to a working Link. No Swift code changes needed.
+- **Lesson:** When `sources` is a display array whose values are keys in `sourceURLs`, the two must be kept in lockstep. Future URL sweeps should rewrite `sources` too, or the schema should collapse to a single map (suggest to Gandalf/Samwise).
+
+**Fix 2 — Settings section reorder:**
+- After the Wikipedia/Wikimedia additions, Content Sources grew tall enough to push Support & Legal off-screen on smaller devices.
+- Swapped section order in `SettingsView.swift`: Support & Legal now appears before Content Sources. Content Sources remains the last section in the List.
+
+**Build verified:** `xcodebuild … -destination 'platform=iOS Simulator,name=iPhone 17' build` → BUILD SUCCEEDED.
+
+**Files modified:**
+- `SharedContent/saints/saints-en.json` (27 saints' `sources` arrays)
+- `SharedContent/saints/saints-es.json` (27 saints' `sources` arrays)
+- `ios/CatholicSaints/Views/Settings/SettingsView.swift` (section reorder)
+- `ios/CatholicSaints/Resources/Localizable.xcstrings` (harmless Xcode auto-reordering of keys)
