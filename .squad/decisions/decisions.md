@@ -463,6 +463,50 @@ Jorge confirmed via emulator/device testing that the splash screen now looks cor
 
 ---
 
+### Decision: v1.0.1 App Store Submission Copy Conventions
+
+**Date:** 2026-04-23  
+**Decider:** Gandalf  
+**Status:** Active
+
+#### Context
+
+Preparing `docs/appstore/submission-info.md` for v1.0.1 release. App grew from 50 saints at v1.0.0 launch to **81 saints** in v1.0.1. Need to decide how to communicate the update in release notes, promotional text, and description.
+
+#### Decision
+
+1. **Release notes use user-facing language only.** Lead with value: "31 new saints" and "81 Catholic saints" total. No internal details (schema refactors, integrity tests, export compliance declarations, git branches).
+
+2. **Promotional text uses concrete counts when viable.** Changed "80+ saints" → "81 saints" (153 chars, under 170 limit). Rationale: specific number conveys precision and abundance without misleading. Easy to update if roster grows further.
+
+3. **Description uses concrete counts for main value prop.** Changed "over 80 Catholic saints" → "81 Catholic saints" (1893 chars total, under 4000 limit). Same rationale as promotional text.
+
+4. **Character count verification is mandatory.** Always report promotional text (170 max), description (4000 max), and release notes (4000 max) lengths to confirm App Store Connect submission will succeed.
+
+#### Consequences
+
+### Positive
+- Release notes are scannable and user-focused — candidates care about more choice, not implementation churn.
+- Concrete "81 saints" number communicates completeness and scale without overpromising.
+- Character counts verified before submission = no surprises in App Store Connect.
+
+### Negative
+- "81 saints" becomes stale when roster grows. Acceptable tradeoff — promotional text is easy to update in next release.
+
+#### Alternatives Considered
+
+- **"80+ saints"** — less precise, but future-proof. Rejected: at 81 saints, precision is a marketing strength.
+- **"More saints added"** without count — vague. Rejected: users want to know how many.
+- **List all 31 new saints by name in release notes** — too long, reduces scannability. Rejected: mentioned a few highlights (Clare, Faustina, Romero) and "many more" is sufficient.
+
+#### References
+
+- `docs/appstore/submission-info.md` (updated)
+- `ios/project.yml` (MARKETING_VERSION=1.0.1, CURRENT_PROJECT_VERSION=2)
+- Git log v1.0.0..HEAD (31 saints added in commits leading to 1.0.1)
+
+---
+
 ## Archived Decisions (older than 2026-03-22)
 
 See `decisions-archive.md` for foundational iOS architecture decisions from 2026-04-12 to 2026-04-13.

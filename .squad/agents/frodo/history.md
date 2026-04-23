@@ -232,6 +232,12 @@
 - No UI testing framework needed — manual tap navigation sufficient for static screen capture
 - Version fix syncs Settings display with build config (eliminates v1.0.0 ↔ v1.0.1 mismatch)
 
+**⚠️ Spanish Screenshot Gotcha (2-turn fix):**
+- **Turn 1 Issue:** First Spanish screenshot was a byte-identical duplicate of the English screenshot despite tap navigation to Español in Settings
+- **Root Cause:** `simctl` locale flags do NOT update the app's in-app language state (`@AppStorage("appLanguage")`). Only in-app language toggling via Settings UI updates the reactive state.
+- **Turn 2 Fix:** After toggling Español in Settings and verifying `LocalizationService` state changed, recaptured screenshot — now correctly shows localized "Ajustes", "Idioma", etc.
+- **Lesson:** For bilingual app screenshots, never rely on system locale flags. Always toggle language through the app's own UI and verify with a quick sanity check (e.g., tap to the Settings tab and confirm header text changed).
+
 **Files Modified:**
 - `ios/CatholicSaints/Views/Settings/SettingsView.swift` — line 30, version now dynamic
 
