@@ -61,9 +61,24 @@ struct SettingsView: View {
 
                 // Content Sources
                 Section {
-                    ForEach(contentSources, id: \.self) { source in
-                        Label(source, systemImage: "doc.text.fill")
-                            .font(.subheadline)
+                    ForEach(contentSourceLinks, id: \.name) { source in
+                        Link(destination: source.url) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(source.name)
+                                        .font(.subheadline)
+                                        .foregroundStyle(.primary)
+                                    Text(AppStrings.localized(source.description, language: language))
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                                Spacer()
+                                Image(systemName: "arrow.up.right.square")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .accessibilityLabel("\(AppStrings.localized("Open", language: language)) \(source.name) \(AppStrings.localized("in browser", language: language))")
                     }
                 } header: {
                     Label(AppStrings.localized("Content Sources", language: language), systemImage: "book.fill")
@@ -90,9 +105,24 @@ struct SettingsView: View {
         }
     }
 
-    private var contentSources: [String] {
-        ["Loyola Press", "Focus", "Lifeteen", "Ascension Press", "Hallow", "Catholic Encyclopedia"]
+    private var contentSourceLinks: [ContentSource] {
+        [
+            ContentSource(name: "Loyola Press", url: URL(string: "https://www.loyolapress.com/")!, description: "Biographical information"),
+            ContentSource(name: "Focus", url: URL(string: "https://www.focus.org/")!, description: "Biographical information"),
+            ContentSource(name: "Lifeteen", url: URL(string: "https://lifeteen.com/")!, description: "Biographical information"),
+            ContentSource(name: "Ascension Press", url: URL(string: "https://ascensionpress.com/")!, description: "Biographical information"),
+            ContentSource(name: "Hallow", url: URL(string: "https://hallow.com/")!, description: "Biographical information"),
+            ContentSource(name: "Catholic Encyclopedia", url: URL(string: "https://www.newadvent.org/cathen/")!, description: "Biographical information"),
+            ContentSource(name: "Wikipedia", url: URL(string: "https://en.wikipedia.org/")!, description: "Biographical information"),
+            ContentSource(name: "Wikimedia Commons", url: URL(string: "https://commons.wikimedia.org/")!, description: "Public domain images")
+        ]
     }
+}
+
+struct ContentSource {
+    let name: String
+    let url: URL
+    let description: String
 }
 
 #Preview {

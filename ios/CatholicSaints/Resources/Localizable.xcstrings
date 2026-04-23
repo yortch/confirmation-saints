@@ -80,6 +80,17 @@
         }
       }
     },
+    "Biographical information" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Información biográfica"
+          }
+        }
+      }
+    },
     "Born" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -326,6 +337,17 @@
         }
       }
     },
+    "in browser" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "en el navegador"
+          }
+        }
+      }
+    },
     "Interests & Tags" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -436,6 +458,17 @@
         }
       }
     },
+    "Open" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir"
+          }
+        }
+      }
+    },
     "Onboarding" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -454,6 +487,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Patrón de"
+          }
+        }
+      }
+    },
+    "Public domain images" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imágenes de dominio público"
           }
         }
       }

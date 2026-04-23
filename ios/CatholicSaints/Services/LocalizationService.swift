@@ -84,6 +84,11 @@ struct AppStrings {
             "Support": "Soporte",
             "Contact Us": "Contáctanos",
             "Support & Legal": "Soporte y Legal",
+            // Content Sources
+            "Biographical information": "Información biográfica",
+            "Public domain images": "Imágenes de dominio público",
+            "Open": "Abrir",
+            "in browser": "en el navegador",
         ]
     ]
 
