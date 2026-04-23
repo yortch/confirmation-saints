@@ -107,3 +107,9 @@
 - **Recommendation:** Switch to "minimum count" assertion for future-proofing (current: exact count = 81)
 - **Verification:** All 32 unit tests pass; 0 failures
 
+### Data Integrity: sources ↔ sourceURLs Lockstep Requires Test Coverage (2026-04-23)
+- **Issue discovered (Frodo):** 27 saints had `sources` array names that didn't match `sourceURLs` keys (old publisher names vs URLs rewritten in 2025-07).
+- **Decision:** `sources` must always equal `Array(sourceURLs.keys)` when `sourceURLs` is non-empty. Enforced by data sync (Frodo + commits 7fb793c, 14d07a9).
+- **Test TODO:** Write integrity test that asserts `saint.sources == Array(saint.sourceURLs.keys)` for all saints. Non-negotiable for preventing regression.
+- **Note:** Gandalf flagged schema simplification as future work (single `[String: String]` map would prevent this class of bug entirely).
+

@@ -66,3 +66,10 @@
 - **Images:** Downloaded both from Wikimedia Commons (PD licensed). St. George: Paolo Uccello painting. St. Mariana: colonial portrait.
 - **Verification:** Parity test ✅, Android build + tests ✅, iOS build ✅. Final count: 81 EN, 81 ES saints.
 - **Key learning:** The Android test (`SaintRepositoryTest.kt`) was already updated to expect 81 saints in a prior commit on this branch, anticipating this addition. Always check HEAD state before assuming test updates are needed.
+
+### Data Integrity: sources ↔ sourceURLs Lockstep (2026-04-23)
+- **Issue:** 27 saints had `sources` array names mismatched with `sourceURLs` keys. Root cause: 2025-07 URL rewrite (Loyola Press → Franciscan Media / CNA / EWTN) didn't update `sources` display names.
+- **Result:** iOS SaintDetailView fell back to non-tappable text for those entries; Cabrini was the user-reported case.
+- **Fix (Frodo + Scribe):** Synced all 27 saints' `sources` to equal `Array(sourceURLs.keys)` in both `saints-en.json` and `saints-es.json` (commits 7fb793c, 14d07a9).
+- **Rule established:** When adding/editing saints, keep `sources` and `sourceURLs` keys in lockstep. When rewriting URLs, rewrite source names in both places.
+- **Cross-agent implications:** Gandalf flagged schema collapse possibility (future: single `[String: String]` map). Legolas flagged test need (`assert sources == Array(sourceURLs.keys)`). Documented in decisions.md.

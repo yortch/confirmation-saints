@@ -105,3 +105,8 @@
 - **Resolution:** Marketing docs now match actual count. "80+ saints" copy is truthful at 81 saints.
 - **Decision:** Merging this branch resolves prior discrepancy (79 saints but "80+" in marketing) — no further copy updates needed post-merge.
 
+### Schema Simplification Flagged: `sources` ↔ `sourceURLs` (2026-04-23)
+- **Bug class discovered (Frodo + Data Team):** 27 saints had `sources` array names mismatched with `sourceURLs` keys. Data sync repaired it, but structure itself is fragile.
+- **Future consideration:** Collapse two fields into single `[String: String]` map (`sourceName: sourceURL` pairs) in next schema migration. This makes the above class of bug impossible by eliminating the parallel-array maintenance burden.
+- **Current state:** Bug fixed in data; decision documented. Not urgent — can roll into next major release cycle.
+

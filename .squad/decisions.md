@@ -439,3 +439,31 @@ Added 9 tappable source rows to Settings → Content Sources. Created `ContentSo
 - `android/app/src/test/java/.../data/SaintRepositoryTest.kt` (count 79→81)
 
 ---
+
+### Saint `sources` Array Integrity (2026-04-23)
+**Author:** Frodo (iOS Dev)  
+**Status:** Implemented ✅
+
+**Context:**
+`SaintDetailView.sourcesSection` renders each item in `saint.sources` as a tappable `Link` only when the name is also a key in `saint.sourceURLs`. A 2025-07 URL sweep replaced publisher URLs (Loyola Press, Hallow, Ascension, Lifeteen, Focus) with new ones (Franciscan Media, CNA, EWTN) in `sourceURLs`, but did not update the `sources` display array. Result: 27 of 79 saints had non-tappable source names (Cabrini was the user-reported case).
+
+**Decision:**
+For every saint with `sourceURLs`, the `sources` array MUST equal `Array(sourceURLs.keys)`. Enforced immediately by syncing all 27 offending entries in both `saints-en.json` and `saints-es.json` (commits `7fb793c`, `14d07a9`).
+
+**Implications:**
+- **Samwise (Data):** Keep `sources` and `sourceURLs` keys in lockstep when adding/editing saints. When rewriting URLs, update both fields.
+- **Gandalf (Architect):** Future schema migration should collapse into single `[String: String]` map to make this class of bug impossible.
+- **Legolas (Tests):** Add data-integrity test: `for saint in all: assert saint.sources == Array(saint.sourceURLs.keys) when sourceURLs non-empty`.
+
+**Android Note (Aragorn):**
+Android `SaintDetailScreen.SourcesSection` (Compose) already correctly gates tappability on `saint.sourceURLs?.get(source) != null` using `LocalUriHandler`. No code change needed — repaired JSON flows in via `syncSharedContent` Gradle task. Companion UI reorder (Support & Legal above Content Sources) shipped for Android parity (commits `8532dd3`, `680b4f2`).
+
+**Debugging Tip:**
+For cross-platform data issues: canonical source is `SharedContent/saints/*.json`; `android/app/src/main/assets/saints-*.json` is build-generated and may lag. A real mismatch in `SharedContent/` is a bug; assets-only mismatch just means regeneration pending.
+
+**Impact:**
+- ✅ Cabrini now tappable
+- ✅ 27 saints repaired
+- ✅ Parity on iOS/Android Settings UI
+- Data integrity rule documented for future maintenance
+
