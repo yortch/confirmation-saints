@@ -129,6 +129,26 @@ fun SettingsScreen(
         }
 
         item {
+            Section(icon = Icons.Default.Shield, title = AppStrings.localized("Support & Legal", language)) {
+                LinkRow(
+                    icon = Icons.Default.Shield,
+                    label = AppStrings.localized("Privacy Policy", language),
+                    onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/privacy-policy.html") },
+                )
+                LinkRow(
+                    icon = Icons.Default.HelpOutline,
+                    label = AppStrings.localized("Support", language),
+                    onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/support.html") },
+                )
+                LinkRow(
+                    icon = Icons.Default.ContactMail,
+                    label = AppStrings.localized("Contact Us", language),
+                    onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/support.html") },
+                )
+            }
+        }
+
+        item {
             Section(icon = Icons.Default.Book, title = AppStrings.localized("Content Sources", language)) {
                 val sources = listOf(
                     ContentSource("Loyola Press", "https://www.loyolapress.com/", "Biographical information"),
@@ -157,26 +177,6 @@ fun SettingsScreen(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 8.dp),
-                )
-            }
-        }
-
-        item {
-            Section(icon = Icons.Default.Shield, title = AppStrings.localized("Support & Legal", language)) {
-                LinkRow(
-                    icon = Icons.Default.Shield,
-                    label = AppStrings.localized("Privacy Policy", language),
-                    onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/privacy-policy.html") },
-                )
-                LinkRow(
-                    icon = Icons.Default.HelpOutline,
-                    label = AppStrings.localized("Support", language),
-                    onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/support.html") },
-                )
-                LinkRow(
-                    icon = Icons.Default.ContactMail,
-                    label = AppStrings.localized("Contact Us", language),
-                    onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/support.html") },
                 )
             }
         }
