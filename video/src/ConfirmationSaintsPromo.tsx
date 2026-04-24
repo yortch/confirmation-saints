@@ -1,58 +1,59 @@
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, Series, staticFile } from "remotion";
+import { loadFont as loadCormorant } from "@remotion/google-fonts/CormorantGaramond";
+import { loadFont as loadInter } from "@remotion/google-fonts/Inter";
+import { HookScene } from "./scenes/HookScene";
+import { MosaicScene } from "./scenes/MosaicScene";
+import { SaintCardScene } from "./scenes/SaintCardScene";
+import { AppTourScene } from "./scenes/AppTourScene";
+import { EndCard } from "./scenes/EndCard";
+import { useEffect, useState } from "react";
 
-const BRAND_RED = "#B9161C";
-const BRAND_RED_DEEP = "#6B0D10";
+loadCormorant();
+loadInter();
 
+// Timeline (30s @ 30fps = 900 frames):
+//   0–120   Hook + Promise      (4s)
+//   120–420 Mosaic              (10s)
+//   420–540 Saint Card (Carlo)  (4s)
+//   540–810 App Tour            (9s)
+//   810–900 End Card            (3s)
 export const ConfirmationSaintsPromo: React.FC = () => {
-  const frame = useCurrentFrame();
-  const titleOpacity = interpolate(frame, [0, 20, 870, 900], [0, 1, 1, 0], {
-    extrapolateRight: "clamp",
-    extrapolateLeft: "clamp",
-  });
-  const subtitleOpacity = interpolate(frame, [20, 50], [0, 1], {
-    extrapolateRight: "clamp",
-    extrapolateLeft: "clamp",
-  });
+  const [hasAudio, setHasAudio] = useState(false);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(staticFile("audio/track.mp3"), { method: "HEAD" })
+      .then((r) => {
+        if (!cancelled) setHasAudio(r.ok);
+      })
+      .catch(() => {
+        /* no-op */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
-    <AbsoluteFill
-      style={{
-        background: `radial-gradient(circle at 50% 40%, ${BRAND_RED} 0%, ${BRAND_RED_DEEP} 100%)`,
-        justifyContent: "center",
-        alignItems: "center",
-        fontFamily: "Georgia, 'Times New Roman', serif",
-        color: "white",
-        textAlign: "center",
-      }}
-    >
-      <div style={{ opacity: titleOpacity }}>
-        <div
-          style={{
-            fontSize: 110,
-            fontWeight: 600,
-            letterSpacing: -1,
-            lineHeight: 1.05,
-            textShadow: "0 4px 30px rgba(0,0,0,0.35)",
-          }}
-        >
-          Confirmation
-          <br />
-          Saints
-        </div>
-        <div
-          style={{
-            marginTop: 28,
-            fontSize: 34,
-            fontWeight: 300,
-            letterSpacing: 4,
-            textTransform: "uppercase",
-            opacity: subtitleOpacity,
-            fontFamily: "'Helvetica Neue', Arial, sans-serif",
-          }}
-        >
-          Placeholder — treatment pending approval
-        </div>
-      </div>
+    <AbsoluteFill style={{ backgroundColor: "#3A0608" }}>
+      <Series>
+        <Series.Sequence durationInFrames={120}>
+          <HookScene />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={300}>
+          <MosaicScene />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={120}>
+          <SaintCardScene />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={270}>
+          <AppTourScene />
+        </Series.Sequence>
+        <Series.Sequence durationInFrames={90}>
+          <EndCard />
+        </Series.Sequence>
+      </Series>
+
+      {hasAudio ? <Audio src={staticFile("audio/track.mp3")} volume={0.85} /> : null}
     </AbsoluteFill>
   );
 };
