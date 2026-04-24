@@ -17,6 +17,7 @@
 | Samwise | Data/Backend | .squad/agents/samwise/charter.md | 🔧 Active |
 | Legolas | Tester | .squad/agents/legolas/charter.md | 🧪 Active |
 | Aragorn | Android Dev | .squad/agents/aragorn/charter.md | 🤖 Active |
+| Galadriel | Video/Motion | .squad/agents/galadriel/charter.md | 🎬 Active |
 | Scribe | Session Logger | .squad/agents/scribe/charter.md | 📋 Active |
 | Ralph | Work Monitor | — | 🔄 Monitor |
 

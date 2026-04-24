@@ -631,3 +631,134 @@ For cross-platform data issues: canonical source is `SharedContent/saints/*.json
 - ✅ Parity on iOS/Android Settings UI
 - Data integrity rule documented for future maintenance
 
+---
+
+### Decision: Promotional Video Production Pipeline (2026-04-24)
+
+**Date:** 2026-04-24  
+**Author:** Galadriel (Video/Motion specialist)  
+**Status:** In design (awaiting 4 creative decisions from Jorge)  
+**Unblocks:** Content team (Apple App Store previews, social marketing assets)
+
+---
+
+#### 1. Video Scaffold & Delivery Strategy
+
+**Framework:** Remotion 4.0.451 (React + TypeScript, Node.js runtime)  
+**Project location:** `video/` directory at repo root (isolated from iOS/Android codebases)
+
+**Composition contract:**
+
+| ID | Aspect Ratio | FPS | Duration | Target |
+|----|---|---|---|---|
+| ConfirmationSaintsPromo | 1080×1080 (square) | 30 | 30s (900 frames) | LinkedIn square, portable to Instagram/X |
+
+Future variants (15s cutdown, 9:16 vertical for Reels/Shorts/TikTok) will be separate compositions in the same Remotion project, not separate projects.
+
+**Render pipeline:**
+- Dev: `cd video && npm start` → Remotion Studio (interactive preview)
+- Production: `cd video && npm run render` → `video/out/ConfirmationSaintsPromo.mp4` (H.264, yuv420p)
+- Verified: Full 30s placeholder renders in ~30s, output ~1.6 MB
+
+**Delivery:** Approved renders copied from `video/out/` → `docs/video/` for App Store, social channels, and marketing site distribution.
+
+---
+
+#### 2. Creative Direction (Three Treatments Proposed)
+
+**Recommended: Treatment A — "Find Your Saint"**
+
+One-line concept: A mosaic of saint portraits flows upward, then resolves onto one featured saint who "chooses you"—demonstrating the app's core promise of personal discovery.
+
+**Why Treatment A:**
+- Leads with audience emotion ("Preparing for Confirmation?") not product
+- Mosaic shot is visually distinctive on feed (high engagement potential)
+- Still includes real app UI (screenshots segment) so viewers understand the product
+- Works muted (LinkedIn autoplay default)
+
+**Shot-by-shot (30s, 900 frames @ 30fps):**
+
+| Time | Frames | Shot |
+|------|--------|------|
+| 0.0–2.5s | 0–75 | Black → red (#B9161C) radial burst. Title: "Preparing for Confirmation?" (serif display, white, center) |
+| 2.5–4.0s | 75–120 | Subtitle dissolves in: "81 saints. One is yours." |
+| 4.0–14.0s | 120–420 | Saint mosaic: ~20 portraits from `SharedContent/images/` flow upward in 3 parallel columns (varying speeds). Overlay: rotating tags ("martyr," "young," "mystic," "teacher," "missionary," "sports," "music") |
+| 14.0–18.0s | 420–540 | Mosaic slows, collapses into single highlighted card (featured saint detail: portrait, name, feast day, one patronage line) |
+| 18.0–23.0s | 540–690 | Card transitions into phone frame showing `docs/android/phone-screenshot-2-saint-detail.png`. Captions: "Bios. Quotes. Feast days. Offline." |
+| 23.0–27.0s | 690–810 | Triptych: 3 more phone screenshots (saints list, explore/filters, about) — crossfade, ~1.3s each. Caption: "English + Español." |
+| 27.0–30.0s | 810–900 | App icon zooms on red background. Wordmark: "Confirmation Saints" + small line: "Free on App Store & Google Play." |
+
+**Alternative Treatments (B & C also analyzed and available; see orchestration log):**
+- **Treatment B:** "One Quote at a Time" — three saint quotes over portraits, devotional tone
+- **Treatment C:** "Swipe to Discover" — simulated user journey through app UI, product-demo focus
+
+---
+
+#### 3. Asset Sourcing & Attribution
+
+**Images:** ~20 saint JPGs from `SharedContent/images/` — Wikimedia Commons public domain or CC licensed. Wikimedia attribution preserved in end-card fine print or supplementary credits block per final treatment.
+
+**Screenshots:** 4 Android phone screenshots from `docs/android/` (team-authored, free to use).
+
+**Audio:** Currently undefined. LinkedIn autoplays muted; audio optional. If included, must be royalty-free. Jorge to confirm decision.
+
+**Fonts:** Serif display (Cormorant Garamond or equivalent) for headings + clean sans (Inter) for UI copy, both via `@remotion/google-fonts`.
+
+---
+
+#### 4. Open Questions for Creative Approval
+
+Treatment A awaits Jorge's input on 4 decisions before full implementation:
+
+1. **Featured saint** in card-resolve moment (sec 14–18): Carlo Acutis recommended (recent teen, high relevance), or Thérèse of Lisieux, or your choice?
+2. **Wordmark style:** Plain text "Confirmation Saints" or Play Store icon lockup?
+3. **Audio track:** Royalty-free ambient pad (for users who unmute), or silent?
+4. **Store badges:** Official App Store / Google Play SVGs at end, or omit?
+
+---
+
+#### 5. Technical Stack Decisions
+
+- **Version pinning:** All `@remotion/*` packages same version (mixed versions break bundler). Use `npm run upgrade` (wraps `remotion upgrade`), never individual `npm update`.
+- **Composition types:** Every composition explicitly declares `width`, `height`, `fps`, `durationInFrames`.
+- **Rendering strategy:** H.264 codec, yuv420p pixel format for max platform compatibility.
+- **CI/CD:** No automated render workflow yet. Manual renders via dev machine. Revisit once approved treatment ships regularly.
+
+---
+
+#### 6. File Manifest
+
+**Source files:**
+- `video/README.md` — setup + render instructions
+- `video/package.json` — Remotion 4.0.451, React 19, TypeScript 5.8
+- `video/src/ConfirmationSaintsPromo.tsx` — main composition (placeholder, awaiting decisions)
+- `.squad/agents/galadriel/charter.md` — role + boundaries
+- `.squad/agents/galadriel/history.md` — learnings + context
+- `.squad/skills/remotion-scaffolding/remotion-scaffolding.md` — reusable scaffold guide for future video projects
+
+**Gitignore entries added to root `.gitignore`:**
+- `video/node_modules/`
+- `video/out/` (render outputs)
+- `video/.cache/`
+- `video/.remotion/`
+- `video/.npm-cache/`
+
+---
+
+#### 7. Boundaries Reaffirmed
+
+Galadriel does NOT:
+- Modify iOS (Swift) or Android (Kotlin) app code — defers to Frodo/Aragorn
+- Alter saint data, localization JSON, or SharedContent — defers to Samwise
+- Define product architecture — defers to Gandalf
+
+Galadriel MAY:
+- Read any app source for visual reference (screenshots, colors, copy)
+- Use saint images from `SharedContent/images/` with proper attribution preserved
+
+---
+
+#### Summary
+
+Video production pipeline ready for creative implementation once 4 Jorge decisions are confirmed. Remotion scaffold validated (smoke render success). Three treatment options delivered; Treatment A recommended. Work begins post-approval.
+

@@ -122,3 +122,12 @@
 - **Promotional text:** 153 chars (under 170 limit) — changed "80+ saints" to "81 saints" to match concrete roster count at time of release. Keeps marketing precise without making promise brittle (easy to update for 1.0.2 if roster grows again).
 - **Description:** 1893 chars (under 4000 limit) — changed "over 80 Catholic saints" to "81 Catholic saints" for precision. All other sections (screenshots, keywords, URLs, category, pricing, privacy) unchanged.
 - **Learning:** App Store copy should always lead with user value (more saints = more choice), not technical churn. Internal improvements like schema refactors, integrity tests, and export compliance declarations are implementation details — keep release notes user-centric.
+
+### Team Roster Expanded — Galadriel Joins (2026-04-24)
+- **New member:** Galadriel (Video/Motion specialist, first assignment)
+- **Branch:** `video` (new, dedicated to promotional video production)
+- **Stack:** Remotion 4.0.451, React + TypeScript, Node.js
+- **First deliverable:** Remotion scaffold + three treatment concepts for 30s square promo video (1080×1080 @ 30fps). Treatment A ("Find Your Saint" — mosaic → saint card → app UI → CTA) recommended. Smoke render verified success.
+- **Status:** Awaiting 4 creative decisions from Jorge (featured saint, wordmark, audio, store badges) before full implementation.
+- **Decision doc:** `.squad/decisions/inbox/galadriel-video-setup.md` and `.squad/decisions/inbox/galadriel-video-treatments.md` (promoted to decisions.md post-merge).
+- **Boundary:** Video work is read-only against app/data; does not modify Swift, Kotlin, or SharedContent.

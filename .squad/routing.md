@@ -9,6 +9,7 @@ How to decide who handles what.
 | Architecture & decisions | Gandalf | App structure, data strategy, cross-platform design |
 | SwiftUI & iOS UI | Frodo | iOS views, navigation, layouts, accessibility |
 | Kotlin & Android UI | Aragorn | Compose screens, navigation, Android resources |
+| Promotional video / Remotion | Galadriel | Marketing videos, App Store preview, social clips (React/TS) |
 | Data models & content | Samwise | Saint JSON, localization files, filtering logic |
 | Code review | Gandalf | Review PRs, check quality, approve/reject |
 | Testing | Legolas | XCTest, Android instrumentation/unit tests, edge cases, localization QA |
