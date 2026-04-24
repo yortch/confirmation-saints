@@ -28,6 +28,7 @@ captures/
 .cxx/
 *.keystore
 *.jks
+keystore.properties
 # SharedContent is copied into the app's assets/ by the syncSharedContent Gradle task;
 # the generated assets are build artifacts and should not be committed.
 android/app/src/main/assets/saints-*.json
