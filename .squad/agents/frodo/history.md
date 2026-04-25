@@ -110,3 +110,7 @@
 
 ### Modern Day Saints iOS Filter (2026-04-25)
 - Added iOS quick-filter support for `era == "modern-day"`, defined as saints/blesseds with `birthDate` year >= 1900; keep this deterministic birth-year logic in SwiftUI filters for parity with category browsing.
+
+### iOS Simulator Launch Diagnosis (2026-04-25)
+- `objc[...] UIAccessibilityLoaderWebShared is implemented in both ... WebKit.axbundle ...` on iOS 26.4 simulator is a harmless simulator/runtime accessibility-bundle warning, not an app crash. Verified `xcodebuild -project CatholicSaints.xcodeproj -scheme CatholicSaints -destination 'platform=iOS Simulator,name=iPhone 17' build` succeeds and `simctl launch` starts `com.jorgebalderas.ConfirmationSaints`; no crash reports were generated.
+- **Cross-team validation:** Legolas independently reproduced on iPhone 17 + iPad A16 simulators, both builds succeeded, both apps launched without crash. Diagnosis APPROVED. Modern Day Saints work cleared to proceed.

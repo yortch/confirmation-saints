@@ -1267,3 +1267,32 @@ Platform release content can diverge even when both apps share content and versi
 ### Status
 
 ✅ Implemented & Validated
+
+---
+
+# iOS Launch Diagnosis — UIAccessibilityLoaderWebShared warning
+
+**Date:** 2026-04-25  
+**Author:** Frodo (iOS)  
+**Status:** Diagnosis / no app-code change
+
+## Finding
+
+The simulator console line:
+
+`objc[...]: Class UIAccessibilityLoaderWebShared is implemented in both ... WebKit.axbundle ...`
+
+is an iOS 26.4 CoreSimulator/runtime accessibility-bundle warning, not an app build or launch failure. The iOS app does not reference WebKit/WKWebView, the build succeeds for `platform=iOS Simulator,name=iPhone 17`, and `xcrun simctl launch` starts `com.jorgebalderas.ConfirmationSaints`. Recent termination logs were force-quit/debug-launch/install-coordination exits from relaunching/installing, not app crashes; no recent crash reports were found.
+
+## Safe Workarounds
+
+If the simulator still appears stuck or noisy:
+
+1. Quit Simulator and relaunch the same device.
+2. Erase the affected simulator device, then rebuild/reinstall.
+3. Try another iOS simulator runtime/destination.
+4. Disable Accessibility Inspector or other accessibility debugging tools if enabled.
+
+## Impact
+
+No code change recommended. Do not revert the current Modern Day Saints work for this warning.

@@ -177,3 +177,9 @@
 - Re-reviewed the combined pending tree for the Android dark-mode/submission-note batch plus the Modern Day Saints batch; batches remained logically isolated.
 - Verified EN/ES `modern-day` era category parity, 13 matching birthDate>=1900 saints, iOS/Android quick-chip toggle/clear logic, and Spanish localization coverage.
 - Focused validations passed: shared-content parity, Android `CategoryMatcherTest`, and iOS builds for iPhone 17 + iPad (A16) simulators.
+
+### iOS Simulator Accessibility Warning Revalidation (2026-04-25)
+- **Cross-team:** Frodo diagnosed `UIAccessibilityLoaderWebShared` warning on iPhone 17 simulator as harmless iOS 26.4 accessibility-bundle runtime noise, not app crash.
+- **Independent revalidation:** Built app on iPhone 17 + iPad Air (A16) simulators; both builds succeeded, both apps launched without crash, no crash reports in either device log.
+- **Diagnosis approved:** Warning is environment-only (WebKit accessibility bundle load order), not related to Modern Day Saints filter work or any app code.
+- **Status:** Cleared to proceed with iOS Modern Day Saints changes.
