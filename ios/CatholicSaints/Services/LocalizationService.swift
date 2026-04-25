@@ -36,6 +36,7 @@ struct AppStrings {
             "Learn about the Sacrament of Confirmation and why choosing a patron saint is such a meaningful part of your faith journey.": "Aprende sobre el Sacramento de la Confirmación y por qué elegir un santo patrón es una parte tan significativa de tu camino de fe.",
             "Let's Go!": "¡Vamos!",
             "Male Saints": "Santos Varones",
+            "Modern Day Saints": "Santos de Hoy",
             "Name, interest, country...": "Nombre, interés, país...",
             "Next": "Siguiente",
             "No Saints Found": "No se encontraron santos",

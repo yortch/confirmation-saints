@@ -60,6 +60,7 @@ object AppStrings {
         // Filter chips / categories
         "Young Saints" to "Santos Jóvenes",
         "Young Saint" to "Santo Joven",
+        "Modern Day Saints" to "Santos de Hoy",
         "Female Saints" to "Santas",
         "Male Saints" to "Santos Varones",
         "By Name" to "Por Nombre",

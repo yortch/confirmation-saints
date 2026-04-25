@@ -58,6 +58,14 @@ struct SaintListView: View {
                 }
 
                 FilterChip(
+                    title: AppStrings.localized("Modern Day Saints", language: language),
+                    systemImage: "clock.fill",
+                    isActive: viewModel.selectedEra == "modern-day"
+                ) {
+                    viewModel.selectedEra = viewModel.selectedEra == "modern-day" ? nil : "modern-day"
+                }
+
+                FilterChip(
                     title: AppStrings.localized("Female Saints", language: language),
                     systemImage: "person.fill",
                     isActive: viewModel.selectedGender == "female"

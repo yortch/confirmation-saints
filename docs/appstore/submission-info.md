@@ -1,6 +1,8 @@
-# App Store Connect Submission — Confirmation Saints
+# App Store Connect Submission — Confirmation Saints (iOS)
 
-## What's New in Version 1.0.2
+These notes are for the iOS/App Store release only. Android/Google Play notes are tracked separately in `docs/android/submission-info.md` because platform-specific fixes may differ.
+
+## What's New in iOS Version 1.0.2
 
 More saints, better search, and smoother links. We've expanded our collection to over 100 Catholic saints with rich biographies, quotes, and feast days to help you find the right patron for your Confirmation.
 

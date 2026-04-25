@@ -421,6 +421,17 @@
         }
       }
     },
+    "Modern Day Saints" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Santos de Hoy"
+          }
+        }
+      }
+    },
     "Name, interest, country..." : {
       "extractionState" : "stale",
       "localizations" : {

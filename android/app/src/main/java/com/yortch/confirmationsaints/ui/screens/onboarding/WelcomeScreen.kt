@@ -39,7 +39,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -174,6 +173,7 @@ private fun WelcomePage(icon: ImageVector?, title: String, subtitle: String) {
             title,
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onBackground,
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(16.dp))
@@ -214,6 +214,7 @@ private fun DiscoverPage() {
             AppStrings.localized("Explore Saints Your Way", language),
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onBackground,
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(24.dp))
@@ -229,7 +230,11 @@ private fun DiscoverPage() {
                     modifier = Modifier.size(24.dp),
                 )
                 Spacer(Modifier.width(16.dp))
-                Text(text, style = MaterialTheme.typography.bodyLarge)
+                Text(
+                    text,
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onBackground,
+                )
             }
         }
     }
@@ -256,6 +261,7 @@ private fun GetStartedPage(onComplete: () -> Unit) {
             AppStrings.localized("Ready to Find Your Saint?", language),
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onBackground,
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(16.dp))
@@ -281,7 +287,7 @@ private fun GetStartedPage(onComplete: () -> Unit) {
                 AppStrings.localized("Let's Go!", language),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = Color.White,
+                color = MaterialTheme.colorScheme.onError,
             )
         }
     }

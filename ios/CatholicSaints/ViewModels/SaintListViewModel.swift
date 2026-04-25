@@ -14,6 +14,7 @@ final class SaintListViewModel {
     var selectedAgeCategory: String?
     var selectedGender: String?
     var selectedAffinity: String?
+    var selectedEra: String?
 
     private let dataService = SaintDataService.shared
 
@@ -58,6 +59,10 @@ final class SaintListViewModel {
             result = result.filter {
                 $0.affinities.contains { $0.containsIgnoringDiacritics(affinity) }
             }
+        }
+
+        if let era = selectedEra {
+            result = result.filter { matchesEra(saint: $0, era: era) }
         }
 
         return result.sorted { sortableName($0.name).localizedCaseInsensitiveCompare(sortableName($1.name)) == .orderedAscending }
@@ -109,6 +114,7 @@ final class SaintListViewModel {
         case "early-modern": return year >= 1500 && year < 1800
         case "modern": return year >= 1800 && year < 1950
         case "contemporary": return year >= 1950
+        case "modern-day": return year >= 1900
         default: return false
         }
     }
@@ -120,11 +126,12 @@ final class SaintListViewModel {
         selectedAgeCategory = nil
         selectedGender = nil
         selectedAffinity = nil
+        selectedEra = nil
     }
 
     var hasActiveFilters: Bool {
         selectedRegion != nil || selectedLifeState != nil || selectedAgeCategory != nil
-        || selectedGender != nil || selectedAffinity != nil
+        || selectedGender != nil || selectedAffinity != nil || selectedEra != nil
     }
 
     func loadData(language: String) {

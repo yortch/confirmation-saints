@@ -23,6 +23,7 @@ import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
@@ -147,6 +148,16 @@ private fun FilterChipsRow(
             onClick = {
                 viewModel.setAgeCategory(
                     if (state.filters.selectedAgeCategory == "young") null else "young",
+                )
+            },
+        )
+        AppFilterChip(
+            label = AppStrings.localized("Modern Day Saints", language),
+            icon = Icons.Default.Schedule,
+            selected = state.filters.selectedEra == "modern-day",
+            onClick = {
+                viewModel.setEra(
+                    if (state.filters.selectedEra == "modern-day") null else "modern-day",
                 )
             },
         )
