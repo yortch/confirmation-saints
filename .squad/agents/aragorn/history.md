@@ -405,3 +405,25 @@ Investigated Android side independently. `SaintDetailScreen.SourcesSection` (lin
 - Added `@Serializable data class SourceEntry(name, url)`; replaced `sources: List<String>` + `sourceURLs: Map<String,String>?` on `Saint` with `sources: List<SourceEntry>`.
 - Simplified `SourcesSection` in `SaintDetailScreen` to iterate entries directly; updated `SaintParsingTest` fixture to new shape.
 - `./gradlew testDebugUnitTest assembleDebug` → green. Commit `a923fab`.
+
+### Robolectric SDK 35 Support — Version Upgrade Required (2026-04-25)
+
+**Issue:** After Android SDK upgrade to compileSdk/targetSdk 35 (commit on develop), CategoryMatchingTest and SaintRepositoryTest started failing in CI with:
+```
+initializationError FAILED
+  java.lang.IllegalArgumentException at RobolectricTestRunner.java:216
+    Caused by: java.lang.IllegalArgumentException at DefaultSdkPicker.java:119
+```
+
+**Root cause:** Robolectric 4.13 does not support Android SDK 35. The SDK picker couldn't find a compatible SDK JAR for API 35 and threw `IllegalArgumentException` during test initialization.
+
+**Fix:** Upgraded Robolectric from 4.13 to 4.16.1 in `android/gradle/libs.versions.toml`. Robolectric 4.14+ added SDK 35 support; 4.16.1 is the latest stable as of early 2026.
+
+**Verification:** All 35 unit tests pass locally after upgrade (`./gradlew testDebugUnitTest` → BUILD SUCCESSFUL).
+
+**Key learning:** When upgrading Android compileSdk/targetSdk, check Robolectric release notes for SDK support. Robolectric lags ~1-2 versions behind new Android SDK releases. The error signature is distinctive: `DefaultSdkPicker` + `IllegalArgumentException` = unsupported SDK version.
+
+**Files changed:**
+- `android/gradle/libs.versions.toml` — robolectric = "4.13" → "4.16.1"
+
+**Commit:** `003aa49` on develop branch.

@@ -117,3 +117,15 @@
 ### Sources Integrity Test — JVM JUnit4 (2026-04-23)
 - Added `android/app/src/test/java/.../data/SourcesIntegrityTest.kt`. Parses `saints-{en,es}.json` directly (decoupled from model), three assertions: EN well-formed, ES well-formed, EN/ES parity (matching IDs, same URL set per saint).
 - `./gradlew testDebugUnitTest` → 3/3 green. Commit `87a8e27`. Closes the test-TODO flagged in prior entry.
+
+### Android Test Initialization Failure — Robolectric SDK 35 Support (2026-04-25)
+- **Trigger:** PR #5 (develop → main for v1.0.1) failing CI with `CategoryMatchingTest > initializationError FAILED` + `SaintRepositoryTest > initializationError FAILED`. Both throwing `java.lang.IllegalArgumentException at DefaultSdkPicker.java:119`.
+- **Root Cause:** Android app upgraded to SDK 35 (`compileSdk = 35`, `targetSdk = 35` per commit `12d845da`), but Robolectric remained at 4.13 which only supports up to SDK 34.
+- **Fix Applied (Aragorn):** Upgraded `robolectric = "4.13"` → `"4.16.1"` in `android/gradle/libs.versions.toml`. Robolectric 4.16.1 supports SDK 35 and SDK 36.
+- **Validation:** Local run of `./gradlew :app:testDebugUnitTest` → **BUILD SUCCESSFUL in 18s**, 27 tests completed, 0 failed. All CategoryMatchingTest (5 tests) and SaintRepositoryTest (5 tests) now pass.
+- **CI Impact:** Tests should now pass on PR #5. Android CI workflow validates against SDK 35 without initialization errors.
+- **Validation Command:** `cd android && ./gradlew :app:testDebugUnitTest` (full unit test suite) or `./gradlew :app:testDebugUnitTest --tests "com.yortch.confirmationsaints.data.CategoryMatchingTest" --tests "com.yortch.confirmationsaints.data.SaintRepositoryTest"` (targeted).
+- **Learnings:**
+  - **Robolectric SDK Support Lag:** When upgrading Android `targetSdk`, always check Robolectric version compatibility. Robolectric typically lags 1-2 SDK versions behind latest Android releases.
+  - **Error Pattern:** `DefaultSdkPicker.java:119 IllegalArgumentException` = Robolectric doesn't support the requested SDK. Fix: upgrade Robolectric or add `@Config(sdk = <lower_sdk>)` to tests.
+  - **Test Patterns:** Robolectric tests (`@RunWith(RobolectricTestRunner::class)`) require SDK images. Always validate after SDK upgrades.
