@@ -27,7 +27,7 @@ struct SettingsView: View {
                     HStack {
                         Text(AppStrings.localized("Version", language: language))
                         Spacer()
-                        Text("0.1.0")
+                        Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")
                             .foregroundStyle(.secondary)
                     }
                     HStack {

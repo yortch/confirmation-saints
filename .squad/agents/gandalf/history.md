@@ -115,3 +115,10 @@
 - **Decision doc:** `.squad/decisions/inbox/gandalf-sources-schema.md` (promoted to `.squad/decisions.md`). Commit `34d6470`.
 - Designed collapsed schema: one ordered array of `{name, url}` entries replacing parallel `sources: []` + `sourceURLs: {}` fields. Eliminates the mismatch bug class by construction.
 - Decomposed work across Samwise (data migration with fail-fast validation), Frodo (iOS `SourceEntry` + view), Aragorn (Android `SourceEntry` + view), Legolas (JVM integrity test).
+
+### App Store v1.0.1 Submission Copy (2026-04-23)
+- Prepared `docs/appstore/submission-info.md` for v1.0.1 release to App Store Connect.
+- **Release notes:** 704 chars (well under 4000 limit) — user-facing tone emphasizing 31 new saints (70→81 total), improved source links, Americas region consolidation, Spanish translation fixes. No internal details (schema, tests, export compliance) exposed.
+- **Promotional text:** 153 chars (under 170 limit) — changed "80+ saints" to "81 saints" to match concrete roster count at time of release. Keeps marketing precise without making promise brittle (easy to update for 1.0.2 if roster grows again).
+- **Description:** 1893 chars (under 4000 limit) — changed "over 80 Catholic saints" to "81 Catholic saints" for precision. All other sections (screenshots, keywords, URLs, category, pricing, privacy) unchanged.
+- **Learning:** App Store copy should always lead with user value (more saints = more choice), not technical churn. Internal improvements like schema refactors, integrity tests, and export compliance declarations are implementation details — keep release notes user-centric.

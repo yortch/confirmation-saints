@@ -631,3 +631,210 @@ For cross-platform data issues: canonical source is `SharedContent/saints/*.json
 - ✅ Parity on iOS/Android Settings UI
 - Data integrity rule documented for future maintenance
 
+
+---
+
+# Decision: Robolectric Version Upgrade for Android SDK 35 Compatibility
+
+**Date:** 2026-04-25  
+**Author:** Aragorn (Android Dev)  
+**Status:** Implemented  
+**Commit:** `003aa49`
+
+## Context
+
+After upgrading Android build configuration to `compileSdk = 35` and `targetSdk = 35` on the develop branch, two Robolectric-based unit tests (CategoryMatchingTest and SaintRepositoryTest) started failing in CI with:
+
+```
+CategoryMatchingTest > initializationError FAILED
+    java.lang.IllegalArgumentException at RobolectricTestRunner.java:216
+        Caused by: java.lang.IllegalArgumentException at DefaultSdkPicker.java:119
+```
+
+## Root Cause
+
+Robolectric 4.13 does not support Android SDK 35. When the test runner attempted to initialize, the `DefaultSdkPicker` couldn't find a compatible SDK JAR for API level 35 and threw `IllegalArgumentException`.
+
+## Decision
+
+Upgrade Robolectric from version 4.13 to 4.16.1 in `android/gradle/libs.versions.toml`.
+
+**Rationale:**
+- Robolectric 4.14+ added Android SDK 35 (API level 35) support
+- Version 4.16.1 is the latest stable release as of early 2026
+- Minimal change approach: only the version number needs updating
+- No code changes required; existing tests work unchanged
+
+## Impact
+
+- **Positive:** All 35 unit tests now pass with SDK 35
+- **Build compatibility:** Gradle 8.9, Kotlin 2.0.20, AGP 8.6.0 all compatible with Robolectric 4.16.1
+- **No breaking changes:** Test API remains stable between 4.13 and 4.16.1
+
+## Verification
+
+Ran `./gradlew clean testDebugUnitTest` locally → BUILD SUCCESSFUL, 35 tests completed, 0 failures.
+
+## Files Changed
+
+- `android/gradle/libs.versions.toml`:
+  ```diff
+  -robolectric = "4.13"
+  +robolectric = "4.16.1"
+  ```
+
+## Guidance for Future SDK Upgrades
+
+When upgrading `compileSdk` or `targetSdk`:
+1. Check [Robolectric release notes](https://github.com/robolectric/robolectric/releases) for SDK support
+2. Robolectric typically lags 1-2 versions behind new Android SDK releases
+3. Error signature: `DefaultSdkPicker` + `IllegalArgumentException` indicates unsupported SDK version
+4. Upgrade Robolectric to a version that explicitly lists the target SDK in its release notes
+
+## Cross-Platform Relevance
+
+iOS doesn't use Robolectric, but this pattern applies to any testing framework with SDK version dependencies. When upgrading platform SDK versions, audit test dependencies for compatibility.
+
+---
+
+# Decision: Robolectric SDK 35 Upgrade Validation
+
+**Date:** 2026-04-25  
+**Author:** Legolas (Tester)  
+**Status:** Validated — ACCEPT FIX  
+**PR:** #5 (develop → main)
+
+## Context
+
+PR #5 Android CI failing with 2 test initialization errors:
+- `CategoryMatchingTest > initializationError FAILED`
+- `SaintRepositoryTest > initializationError FAILED`
+- Both: `java.lang.IllegalArgumentException at DefaultSdkPicker.java:119`
+
+Root cause: Android app upgraded to SDK 35 (commit `12d845da`), but Robolectric 4.13 only supports up to SDK 34.
+
+## Fix Applied
+
+**Author:** Aragorn  
+**File:** `android/gradle/libs.versions.toml`  
+**Change:** `robolectric = "4.13"` → `robolectric = "4.16.1"`
+
+Robolectric 4.16.1 supports SDK 35 and SDK 36.
+
+## Validation
+
+**Command:**
+```bash
+cd android && ./gradlew :app:testDebugUnitTest
+```
+
+**Result:**
+- ✅ BUILD SUCCESSFUL in 18s
+- ✅ 27 tests completed, 0 failed
+- ✅ CategoryMatchingTest (5 tests): all pass
+- ✅ SaintRepositoryTest (5 tests): all pass
+
+## Decision
+
+**ACCEPT** — Robolectric 4.16.1 upgrade resolves SDK 35 initialization errors. PR #5 Android tests should now pass on CI.
+
+## Validation Commands (Reference)
+
+**Full unit test suite:**
+```bash
+cd android && ./gradlew :app:testDebugUnitTest
+```
+
+**Targeted tests (CategoryMatchingTest + SaintRepositoryTest):**
+```bash
+cd android && ./gradlew :app:testDebugUnitTest \
+  --tests "com.yortch.confirmationsaints.data.CategoryMatchingTest" \
+  --tests "com.yortch.confirmationsaints.data.SaintRepositoryTest"
+```
+
+## Future Pattern
+
+When upgrading Android `compileSdk` or `targetSdk`:
+1. Check [Robolectric releases](https://github.com/robolectric/robolectric/releases) for SDK support
+2. Upgrade Robolectric version if needed (typically lags 1-2 SDK versions)
+3. Run `./gradlew :app:testDebugUnitTest` locally before pushing
+4. If `DefaultSdkPicker` error occurs: upgrade Robolectric or add `@Config(sdk = <lower_sdk>)` to tests
+
+---
+
+# Galadriel — Promo Video Final Build (Treatment A)
+
+**Date:** 2026-04-24
+**Branch:** `video`
+**Status:** ✅ Rendered. Awaiting Jorge's review of the MP4 + optional audio drop-in.
+
+## What shipped
+
+- **Composition:** `ConfirmationSaintsPromo` (1080×1080, 30fps, 30s).
+- **Output:** `video/out/ConfirmationSaintsPromo.mp4` — 24 MB, H.264/yuv420p.
+- **Render time:** 25s on Jorge's Mac (well under the 5-minute budget).
+- **Scenes (5, modular under `video/src/scenes/`):**
+  1. `HookScene` — 0–4s — "Preparing for Confirmation?" → "81 saints. One is yours."
+  2. `MosaicScene` — 4–14s — 3-column parallax mosaic of 22 saints + rotating tag chips
+  3. `SaintCardScene` — 14–18s — Bl. Carlo Acutis hero card (portrait, years, feast day, patronage, quote verbatim from `saints-en.json`)
+  4. `AppTourScene` — 18–27s — saint-detail phone frame with feature captions, then triptych of list/explore/about + "English + Español."
+  5. `EndCard` — 27–30s — app icon + "Confirmation Saints" + "Free · Offline · Bilingual" + App Store & Google Play badges
+
+## Creative locks honored
+
+1. ✅ **Featured saint:** Bl. Carlo Acutis. All details (quote, feast day 10-12, patronage of internet/programmers/youth, dates 1991–2006) pulled verbatim from `SharedContent/saints/saints-en.json`.
+2. ✅ **End card lockup:** icon **stacked above** wordmark (vertical stack reads better in square format; side-by-side crowded the badges).
+3. ⚠️ **Audio:** no track bundled. Composition auto-detects `public/audio/track.mp3`; renders silent if missing. Three recommended royalty-free sources listed in `video/README.md` for Jorge to download and drop in. No code change needed to add audio.
+4. ✅ **Store badges:** OFFICIAL badges fetched from Apple (`tools.applemediaservices.com`) and Google (`play.google.com/intl/en_us/badges/`). Rendered at natural aspect ratio (no distortion), 72px tall.
+
+## Saint count — 81, not 50
+
+Jorge flagged a potential mismatch ("app has 50 saints, marketing says 81"). **Verified:** the JSON at `SharedContent/saints/saints-en.json` currently contains **81 saint entries**. `docs/appstore/submission-info.md` also says 81. The "50 saints" number appears to be stale (history.md from Galadriel's older context mentions 50). Video uses **"81 saints. One is yours."** — consistent with live marketing.
+
+Recommendation: update `.squad/agents/galadriel/history.md` "Core Context" to say 81. Done.
+
+## Asset sources (all attribution preserved)
+
+- 22 saint portraits → `SharedContent/images/*.jpg` (all "Public domain, via Wikimedia Commons")
+- 4 phone screenshots → `docs/android/phone-screenshot-{1,2,3,4}-*.png`
+- App icon → `ios/.../AppIcon.appiconset/app-icon-1024.png`
+- Badges → official Apple + Google endpoints
+
+All copied to `video/public/` — Remotion's static asset root.
+
+## Render pipeline proven
+
+- `npx tsc --noEmit` clean.
+- `npm run render` = `remotion render ConfirmationSaintsPromo out/ConfirmationSaintsPromo.mp4 --codec=h264`.
+- Full 900-frame render: 25s. Output: 24 MB. Good for LinkedIn (<200 MB limit) and IG/X (<300 MB).
+
+## Known follow-ups
+
+1. **Audio:** Jorge to drop `public/audio/track.mp3` per the README recommendations, then re-render.
+2. **Cutdowns:** not built yet. When needed, add new `<Composition>` entries in `src/Root.tsx`:
+   - 9:16 vertical (1080×1920) for Reels/Shorts/TikTok — 15s cutdown.
+   - 16:9 landscape (1920×1080) for YouTube pre-roll — 30s variant.
+   The scene components are all `AbsoluteFill`-based and will re-flow; a few font-size/padding tweaks per aspect ratio expected.
+3. **App Store deep link** not in-video (Jorge said iOS ID 6762463641 isn't needed on-screen). If we add a URL at any point, use the short `apps.apple.com/app/confirmation-saints/id6762463641` link.
+4. **Android Play review:** badge is in the end card ahead of Play launch per Jorge's direction.
+
+## Files added (this session)
+
+```
+video/src/theme.ts
+video/src/data.ts
+video/src/ConfirmationSaintsPromo.tsx   (full implementation, replaces stub)
+video/src/scenes/HookScene.tsx
+video/src/scenes/MosaicScene.tsx
+video/src/scenes/SaintCardScene.tsx
+video/src/scenes/AppTourScene.tsx
+video/src/scenes/EndCard.tsx
+video/public/saints/*.jpg              (22 files)
+video/public/screenshots/*.png         (4 files)
+video/public/icons/app-icon-{512,1024}.png
+video/public/badges/app-store-badge.svg
+video/public/badges/google-play-badge.png
+video/README.md                        (fully rewritten with scene breakdown)
+```
+
+Final MP4 at `video/out/ConfirmationSaintsPromo.mp4` — open it in QuickTime and review. Ready to promote to `docs/video/` once approved.
