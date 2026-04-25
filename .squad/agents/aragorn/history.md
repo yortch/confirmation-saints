@@ -105,3 +105,14 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 **Key learning:** When upgrading Android compileSdk/targetSdk, check Robolectric release notes. Robolectric lags ~1-2 versions behind new Android SDK releases. Error signature: `DefaultSdkPicker` + `IllegalArgumentException` = unsupported SDK version.
 
 **Commit:** `003aa49` on develop branch.
+
+### Android Release Version Bump — 1.0.2 (2026-04-25)
+
+- Confirmed Android release versioning convention: `versionCode` increments by 1 for each patch release (`1.0.1` used code 2; `1.0.2` uses code 3).
+- Updated `android/app/build.gradle.kts` and the Android app metadata table in `docs/android-architecture.md`.
+
+### v1.0.2 Release Orchestration Completed (2026-04-25)
+- **Session:** v1.0.2 Over 100 Saints batch orchestration
+- **Outcome:** Android 1.0.2 (versionCode 3) bumped and validated; 103-saint content parity confirmed
+- **Cross-team:** Samwise (22-saint content) ✅, Frodo (iOS 1.0.2) ✅, Legolas (batch sign-off) ✅
+- **Release status:** GO for Google Play submission

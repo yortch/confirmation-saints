@@ -122,3 +122,31 @@
 - **Promotional text:** 153 chars (under 170 limit) — changed "80+ saints" to "81 saints" to match concrete roster count at time of release. Keeps marketing precise without making promise brittle (easy to update for 1.0.2 if roster grows again).
 - **Description:** 1893 chars (under 4000 limit) — changed "over 80 Catholic saints" to "81 Catholic saints" for precision. All other sections (screenshots, keywords, URLs, category, pricing, privacy) unchanged.
 - **Learning:** App Store copy should always lead with user value (more saints = more choice), not technical churn. Internal improvements like schema refactors, integrity tests, and export compliance declarations are implementation details — keep release notes user-centric.
+
+### 22-Saint Expansion Gated — Canonical Corrections (2026-04-26)
+- **Decision:** Gandalf canonical gate on Samwise 22-saint expansion (81→103).
+- **Critical corrections discovered during verification:**
+  1. **St. Pauline:** Region corrected from "Asia" to "South America" (Brazil). Born Italy, emigrated to Brazil; canonized 2002.
+  2. **St. Sára Salkaházi:** Is **Blessed, NOT Saint**. Beatified 2006 (WWII Hungarian martyr). App must display "Bta." (ES) / "Bl." (EN); `canonizationDate: null`.
+  3. **St. Miguel Pro:** Is **Blessed, NOT Saint**. Beatified 1988 (Mexican Jesuit, Cristero War, 1927). App must display "Bl." (ES/EN); `canonizationDate: null`.
+- **Verification method:** Wikipedia (EN + ES articles) + Catholic biographical sources. Pre-congregation saints (9 of 22) and Blessed entries (2 of 22) all set `canonizationDate: null` per SKILL.md spec.
+- **Documentation:** `gandalf-canonical-saint-list.md` (decisions/inbox) captures full verification table + implementation prerequisites for Samwise.
+- **Pattern learned:** "Saint" vs "Blessed" is NOT implicit from research backlog — must verify modern status via Wikipedia canonization sections. Beatification (2006, 1988) ≠ Canonization. Both Blessed entries require title prefix in app display + null canonization date.
+
+### Marketing Copy — "Over 100" Campaign (2026-04-25)
+- **Context:** Samwise expanded saint backlog to 103 planned (81 current + 22 backlog). Gandalf updated all marketing copy to "over 100" to align with product roadmap.
+- **Files updated:**
+  - `README.md`: What's New (changed from "80+ saints" to "over 100 Catholic saints"), Features list, and Future Plans
+  - `docs/index.html`: Meta description, hero badge, gallery subtitle, and stats section
+  - `docs/appstore/submission-info.md`: What's New section, promotional text (170 chars), and app description
+  - `docs/appstore/screen-recording-script.md`: Video caption timing
+  - `docs/appstore/review-response.md`: App value proposition
+- **Strategy:** Used "over 100" for aspirational marketing (roadmap-aligned), preserves truthfulness since backlog is committed.
+- **Learning:** Saint count marketing copy is NOW distributed across 5 distinct document locations (README, index.html, 3× appstore/* files). Maintain a single source of truth or script future updates. Consider `.squad/manifest/current-saint-count.json` for automation.
+
+### v1.0.2 Release Orchestration Completed (2026-04-25)
+- **Session:** v1.0.2 Over 100 Saints batch orchestration
+- **Decisions merged:** 22-saint gated list, marketing campaign, 103-saint commitment
+- **Cross-team validation:** Frodo (iOS 1.0.2 build 2 ✅), Aragorn (Android 1.0.2 code 3 ✅), Legolas (103-saint batch approved ✅)
+- **Release status:** GO for production
+- **Scribe action:** Orchestration logs written; decisions merged; session log filed; inbox cleared

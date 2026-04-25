@@ -103,3 +103,17 @@
 - **Documented:** Created samwise-expanded-saint-backlog.md decision; full 22-saint prioritized backlog (original 19 + Agatha + Agnes + Lucy) ready for future data-entry sprint
 - **Key learning:** Scope flexibility — user wanted to exceed the 100-saint target with high-value classic saints rather than stick to arbitrary ceiling. Good signal for future backlog management: build flexible prioritized lists rather than hard targets.
 - **Orchestration:** Scribe merged decisions into decisions.md (2026-04-25T14:49:15Z); archived pre-2026-03-26 entries; cross-agent sync completed.
+
+### 22-Saint SharedContent Expansion (2026-04-25) — 81 → 103
+- Added all 22 Gandalf-approved saints to `SharedContent/saints/saints-en.json` and `saints-es.json`, with matching canonical EN fields and localized Spanish display fields.
+- Set both `lastUpdated` values to `2026-04-25`; final roster count is 103 saints per language.
+- Respected Blessed corrections for Sára Salkaházi and Miguel Pro (`Bl.`/`Bta.`, `canonizationDate: null`, `Blessed` tag) and Pauline's South America/Brazil attribution.
+- Downloaded 22 Wikimedia Commons images to `SharedContent/images/{id}.jpg`; updated `_download_saint_images.py` mappings and attribution handling for CC/free-use images.
+- Validation run: duplicate check ✅, JSON parse/count parity ✅, `python3 tests/shared-content-parity.py` ✅, source URL HEAD/GET check ✅.
+- Implementation note: normalized a few overly-specific canonical helper values to the existing app taxonomy where needed (`lifeState` uses `religious`/`single`/`martyr`; child visionaries use `ageCategory: young`). Aquilina was set to `Middle East` because her verified origin is Byblos, Lebanon.
+
+### v1.0.2 Release Orchestration Completed (2026-04-25)
+- **Session:** v1.0.2 Over 100 Saints batch orchestration
+- **Result:** 22-saint implementation approved & validated by Legolas (QA)
+- **Cross-team:** Frodo (iOS) and Aragorn (Android) both bumped to 1.0.2 with 103-saint content parity confirmed
+- **Release status:** GO for production iOS/Android store submission

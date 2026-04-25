@@ -151,3 +151,15 @@
 - Flagged Asia/Africa representation as critical gap
 - Deliverable: legolas-saint-backlog-validation.md → merged to decisions.md
 - Status: Backlog approved, ready for implementation phase
+
+### 103-Saint Expansion Validation (2026-04-25)
+- Updated Android `SaintRepositoryTest` and `android/app/src/test/README.md` roster-count references to 103 after Samwise's 22-saint expansion.
+- Validation gate passed: shared-content parity, Android `:app:testDebugUnitTest`, Android `:app:assembleDebug`, and iOS simulator build for iPhone 17.
+- Release metadata checked: iOS `MARKETING_VERSION` is 1.0.2; Android `versionName` is 1.0.2 with `versionCode` 3. Batch approved.
+
+### v1.0.2 Release Orchestration Completed (2026-04-25)
+- **Session:** v1.0.2 Over 100 Saints batch orchestration
+- **Outcome:** 103-saint batch APPROVED for release; all validation gates passed
+- **Validation summary:** EN/ES parity ✅, Android test count updated ✅, iOS/Android builds OK ✅, cross-platform metadata consistent ✅
+- **Cross-team:** Gandalf (canonical gate) ✅, Samwise (content) ✅, Frodo (iOS) ✅, Aragorn (Android) ✅
+- **Release status:** GO for production iOS/Android store submission

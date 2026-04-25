@@ -99,3 +99,11 @@
 - Build succeeded on iPhone 17 Pro Max simulator
 - Screenshots captured for App Store submission v1.0.1
 
+### iOS Version Bump Convention (2026-04-25)
+- Confirmed iOS marketing version is set in `ios/project.yml` via `MARKETING_VERSION`; run `cd ios && xcodegen generate` so `CatholicSaints.xcodeproj/project.pbxproj` mirrors it. `CURRENT_PROJECT_VERSION` remains the separate build number.
+
+### v1.0.2 Release Orchestration Completed (2026-04-25)
+- **Session:** v1.0.2 Over 100 Saints batch orchestration
+- **Outcome:** iOS 1.0.2 (build 2) bumped and validated; 103-saint content parity confirmed
+- **Cross-team:** Samwise (22-saint content) ✅, Aragorn (Android 1.0.2) ✅, Legolas (batch sign-off) ✅
+- **Release status:** GO for App Store submission
