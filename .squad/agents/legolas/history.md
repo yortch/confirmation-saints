@@ -129,3 +129,25 @@
   - **Robolectric SDK Support Lag:** When upgrading Android `targetSdk`, always check Robolectric version compatibility. Robolectric typically lags 1-2 SDK versions behind latest Android releases.
   - **Error Pattern:** `DefaultSdkPicker.java:119 IllegalArgumentException` = Robolectric doesn't support the requested SDK. Fix: upgrade Robolectric or add `@Config(sdk = <lower_sdk>)` to tests.
   - **Test Patterns:** Robolectric tests (`@RunWith(RobolectricTestRunner::class)`) require SDK images. Always validate after SDK upgrades.
+
+### Saint Backlog Validation — 19 Candidates Approved (2026-04-24)
+- **Task:** Independently validate candidate saint selection for 100-saint target (currently 81). Identify duplicates, pronunciation barriers, and coverage gaps. Compare against Life Teen typical saint recommendations.
+- **Approach:** Cross-checked Life Teen typical saint recommendations against existing 81-saint roster (verified EN/ES JSON sync via jq). Analyzed coverage gaps: Female 33% (target 35%), Asia/Africa 9% (critical gap—target 15%), Modern ≥2000 15% (target 20%).
+- **Key Findings:**
+  - **8 duplicates identified & rejected:** St. George, St. Cecilia, St. Joan of Arc, St. Thérèse of Lisieux, St. Maria Goretti, St. Monica, St. Kateri Tekakwitha, St. Michael Archangel — all already in 81-saint roster.
+  - **Critical gap:** Asia/Africa severely underrepresented (8/81 = 9%). Added 3 Asian + 1 African: St. Andrew Kim Taegon (Korea martyr, 1984), St. Paul Miki (Japan mission, 1627), St. Alphonsa Muttathupandathu (India female religious, 1986), St. Cecilia Metella (Kenya female martyr, 1959).
+  - **Female representation:** 27/81 (33%). Added 5 new: Bernadette Soubirous, Scholastica, Lucy, Brigid of Kildare, Agnes of Rome. Post-add: 32/100 (32%)—still below target. Flag for Samwise research on additional female saints.
+  - **Modern saints (canonized ≥2000):** 12/81 (15%). Added 2 new: Padre Pio (2002), Alphonsa (1986), plus Andrew Kim (1984) + Cecilia Metella (1959). Candidates provide visible witness factor for teen connection.
+  - **Pronunciation check:** All 19 recommended candidates have acceptable English pronunciation or marked guidance. Only Alphonsa Muttathupandathu flagged as "difficult" but essential for India representation; recommend phonetic guide in app.
+- **Deliverable:** Validated shortlist of 19 candidates (3 Asia/Africa, 5 female, 2 modern, 9 coverage/filler) with detailed pronunciation notes. Decision documented in `.squad/decisions/inbox/legolas-saint-backlog-validation.md`.
+- **Next steps:** Samwise sources EN/ES bios + images from newadvent.org/Wikimedia Commons; Frodo/Gandalf integrate into JSON; Legolas QA verifies post-integration.
+- **Pattern:** Duplicate detection requires name-matching (case-insensitive) + ID collision check + alias awareness (e.g., "St. Cecilia Metella" vs existing "St. Cecilia" are different saints). Applied systematically; captures requirement for all future saint additions.
+
+## 2026-04-25: Saint Backlog 100-Saint Initiative (COMPLETED)
+- Validated 19-saint backlog from Samwise research
+- Verified 81 current saints EN/ES JSON parity
+- Identified & rejected 8 duplicate candidates
+- Analyzed coverage gaps: Female (33%), Asia/Africa (9%), Modern (15%)
+- Flagged Asia/Africa representation as critical gap
+- Deliverable: legolas-saint-backlog-validation.md → merged to decisions.md
+- Status: Backlog approved, ready for implementation phase

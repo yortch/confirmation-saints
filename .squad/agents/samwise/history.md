@@ -77,3 +77,20 @@
 ### Sources Schema Migration — Collapsed Array (2026-04-23)
 - Migrated `SharedContent/saints/saints-en.json` and `saints-es.json` to Gandalf's collapsed schema (one ordered array of `{name, url}`). 81 saints × 2 files = 162 records, 338 source entries rewritten. Commit `a99666d`.
 - Fail-fast validation (orphan URL, missing URL, empty string) passed on first run — no manual fixups required.
+
+### Saint Backlog to 100: Gap Analysis & Prioritization (2026-04-25)
+- **Request:** Grow from 81 → 100 saints; use Life Teen confirmation list as source; prioritize Asia/Africa → Female → Modern saints; skip pronunciation-difficult candidates.
+- **Source:** Life Teen article (132 candidates), already-included saints (65), candidates not yet in app (66).
+- **Exclusions:** 7 saints filtered for pronunciation difficulty (Korean, Malayalam, Ukrainian, Polish, Old English, Greek). Examples: Benedicta Hyon Kyongnyon, Volodymyr Pryjma, John Chrysostom.
+- **Final Backlog:** 19 saints selected (difficulty <4, pronunciation-friendly) + 8 backups. Frontloaded with Asia/Africa region saints (Charles Lwanga, Cyril of Alexandria, Perpetua, Gregory of Narek, etc.), then female saints (Pauline, Margaret, Hildegard, Katharine Drexel), then modern saints (Mary MacKillop, Padre Pio, Miguel Pro, Jacinta Marto).
+- **Key Finding:** Female African martyr saints (Perpetua, Aquilina, Apollonia) fit multiple priority categories; Asia has strong Doctor/theologian representation (Basil, Ephrem, Gregory of Narek, Cyril of Jerusalem). Modern African male martyr (Charles Lwanga, 1964 canonization) is highest-impact modern addition.
+- **Documented:** Formal backlog table (19 priority + 8 backup) written to `.squad/decisions/inbox/samwise-saint-backlog-100.md` with patronages, feast-day markers, region, and data-entry notes (match fields English, display fields Spanish, Wikimedia Commons image sourcing).
+
+## 2026-04-25: Saint Backlog 100-Saint Initiative (COMPLETED)
+- Researched Life Teen Confirmation saints list (132 candidates)
+- Compared against current 81-saint app inventory
+- Applied pronunciation filter (excluded 7 difficult names)
+- Drafted prioritized 19-saint backlog with coverage analysis
+- Generated 8 backup candidates
+- Deliverable: samwise-saint-backlog-100.md → merged to decisions.md
+- Status: Ready for Legolas validation & Samwise research phase
