@@ -942,3 +942,124 @@ Candidates with names difficult for US English/Spanish speakers were excluded:
 
 ### Key Finding
 Asia/Africa severely underrepresented (9% → need 15%); female saints at target but should reach 35%. Recommend prioritizing additional non-European saints in remaining slots.
+---
+
+## Coordinator Directive — 2026-04-25T10:46:40.268-04:00
+
+**By:** Jorge Balderas (via Copilot)  
+**Type:** User Directive  
+**Subject:** Saint Backlog Expansion
+
+**Directive:** "Add St. Agatha of Sicily, St. Agnes, and St. Lucy to the Life Teen saint expansion backlog even if the final list goes over 100 saints."
+
+**Rationale:** User-requested scope change to expand beyond original 100-saint target to include three additional early Christian virgin martyr saints with strong confirmation patronage significance.
+
+---
+
+## Expanded Saint Backlog Decision — Samwise (2026-04-25)
+
+**Prepared by:** Samwise  
+**Date:** 2026-04-25  
+**Status:** Approved by user (Jorge Balderas)  
+**Scope Change:** User directive — expand beyond 100-saint target to include three additional saints.
+
+### Decision Summary
+
+**User Request:** "Looks good, let's also add agatha, agnes and lucy to the list even if it goes over 100."
+
+**Action Taken:**
+- Verified all three saints (St. Agatha of Sicily, St. Agnes, St. Lucy) are **not currently in the app** (checked `SharedContent/saints/saints-en.json` and `saints-es.json`)
+- Appended the three saints to the existing 19-saint prioritized backlog
+- Updated target: **81 → 103 saints** (19 original + 3 new = 22 total additions)
+
+### Current State (Pre-Expansion)
+
+| Metric | Value |
+|--------|-------|
+| Current app saints | 81 |
+| Planned additions | 19 (Life Teen research backlog) |
+| **Original target** | **100** |
+| Saint count if original 19 added | 100 |
+
+### Three Newly Added Saints
+
+All three are **Early Christian Virgins & Martyrs**, classic confirmation patronesses:
+
+| # | Saint Name | Region | Feast Day | Significance | Notes |
+|---|---|---|---|---|---|
+| 20 | **St. Agatha of Sicily** | Europe • Female | 2/5 | Virgin martyr, patroness of nurses & sicily; St. Brigid's companion; breast cancer survivor identity | Classical early martyr; strong female confirmation choice |
+| 21 | **St. Agnes** | Europe • Female | 1/21 | Virgin martyr, patroness of chastity, young girls, engaged couples; symbol of innocence & purity | Universal veneration; iconic in confirmation liturgies |
+| 22 | **St. Lucy** | Europe • Female | 12/13 | Virgin martyr (Syracuse, Sicily), patroness of the blind & eyesight; light/illumination symbolism | Feast day near Christmas; powerful light/hope message for teens |
+
+### Verification Results
+
+**Absence Check (EN saints file):**
+- ✓ `agatha` — NOT found in current 81 saints ✓ Safe to add
+- ✓ `agnes` — NOT found in current 81 saints ✓ Safe to add
+- ✓ `lucy` — NOT found in current 81 saints ✓ Safe to add
+
+**Total duplicate rejection:** 0 (all three are new to the roster)
+
+### Updated Expansion Backlog
+
+#### Full 22-Saint Prioritized List (19 Original + 3 New)
+
+| Rank | Saint Name | Region/Category | Patronage & Significance | Pronunciation |
+|------|---|---|---|---|
+| 1 | St. Pauline of the Suffering Heart of Jesus | Asia • Female • Modern | Korean missionary nun; suffering, hospital work | PAW-leen |
+| 2 | St. Charles Lwanga | Africa • Male • Modern | Ugandan martyr; first African canonized saint | CHWANG-gah |
+| 3 | St. Perpetua | Africa • Female | Mother; early Christian martyr (d. 203) | per-PEH-too-ah |
+| 4 | St. Cyril of Alexandria | Africa • Male | Doctor of the Church; theological authority | SIR-ul |
+| 5 | St. Margaret of Antioch | Asia • Female | Virgin martyr; patron of pregnancy & nursing | MAR-garet |
+| 6 | St. Basil the Great | Asia • Male | Doctor of the Church; founder, mystic | BAY-zul |
+| 7 | St. Ephrem the Syrian | Asia • Male | Doctor of the Church; hymn writer, theologian | EF-rum |
+| 8 | St. Gregory of Narek | Asia • Male | Armenian mystical theologian & poet | NAHR-ek |
+| 9 | St. Cyril of Jerusalem | Asia • Male | Doctor of the Church; catechist | SIR-ul |
+| 10 | St. Aquilina | Africa • Female | Virgin martyr; domestic servant identity | ah-kwih-LEE-nah |
+| 11 | St. Mary MacKillop | Oceania • Female • Modern | First Australian canonized saint (2010); social justice | mah-KIL-up |
+| 12 | St. Jacinta Marto | Europe • Female • Modern | Visionary of Fatima; spiritual childhood | hah-SEEN-tah |
+| 13 | St. Sára Salkaházi | Europe • Female • Modern | Hungarian social worker martyr (WWII era) | SAH-rah SAHL-kah-hah-zee |
+| 14 | St. Apollonia | Africa • Female | Virgin martyr; patron of dentists & dental pain | a-puh-LOH-nee-ah |
+| 15 | St. Hildegard of Bingen | Europe • Female | Doctor of Church; mystic, musician, naturalist | HIL-de-gard |
+| 16 | St. Katharine Drexel | North America • Female • Modern | Founded Xavier Univ; racial justice pioneer | KATH-a-reen |
+| 17 | St. Francisco Marto | Europe • Male • Modern | Fatima visionary; childhood & innocence | fran-SEES-ko |
+| 18 | St. Padre Pio | Europe • Male • Modern | Stigmatist; popular devotion, healing charism | PAH-dreh PEE-oh |
+| 19 | St. Miguel Pro | North America • Male • Modern | Mexican martyr (1927); journalist, social action | mee-GEL |
+| **20** | **St. Agatha of Sicily** | **Europe • Female** | **Virgin martyr; patroness of nurses, faith under persecution** | **ah-GAH-thah** |
+| **21** | **St. Agnes** | **Europe • Female** | **Virgin martyr; patroness of chastity & purity** | **AHG-nes** |
+| **22** | **St. Lucy** | **Europe • Female** | **Virgin martyr; patroness of eyesight & light** | **LOO-see** |
+
+### Updated Scope
+
+| Metric | Original | Expanded | Change |
+|--------|----------|----------|--------|
+| Current app saints | 81 | 81 | — |
+| Proposed additions | 19 | 22 | +3 |
+| **New target count** | **100** | **103** | **+3 over 100** |
+| Additional female saints | +8 (from 19) | +11 (from 22) | +3 |
+
+### Why These Three Saints?
+
+**Strategic fit for confirmation curriculum:**
+1. **St. Agatha** — Perseverance through suffering; patron of nurses (healthcare vocations)
+2. **St. Agnes** — Purity & integrity; iconic youth saint in Catholic tradition
+3. **St. Lucy** — Light in darkness; symbolic power resonates with advent/Christmas season and spiritual sight
+
+All three are **Early Christian Virgins & Martyrs**, a demographic category well-represented in classic Catholic devotion but underrepresented in the current 81-saint app. Each has distinct patronage and feast-day significance for teen confirmation preparation.
+
+### Data Entry Requirements
+
+**No JSON additions yet** — this decision captures backlog priorities only.
+
+When Samwise implements data entry (future sprint):
+1. Research each saint via Wikipedia (EN + ES), Wikimedia Commons for images
+2. Follow schema conventions: English matching fields, Spanish display arrays
+3. Source all facts to `sourceURLs` (Wikipedia primary, Franciscan Media secondary)
+4. Image attribution: Public domain via Wikimedia Commons (or CC BY-SA 4.0 / CC0 where needed)
+5. Run parity test post-entry to ensure EN/ES sync
+
+### Unblocked By
+
+Nothing — this is planning/backlog only. Full implementation deferred to future sprint (Samwise: data entry, Frodo: UI, Legolas: test updates).
+
+**Related Decision:** SAINT BACKLOG 100-SAINT INITIATIVE (2026-04-25) — Original 19-saint foundation.

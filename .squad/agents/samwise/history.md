@@ -94,3 +94,12 @@
 - Generated 8 backup candidates
 - Deliverable: samwise-saint-backlog-100.md → merged to decisions.md
 - Status: Ready for Legolas validation & Samwise research phase
+
+### Scope Expansion: 19 → 22 Saints (2026-04-25)
+- **User request (Jorge):** "Let's also add agatha, agnes and lucy to the list even if it goes over 100"
+- **Action:** Verified all three saints (Agatha, Agnes, Lucy) are absent from current 81-saint roster
+- **Decision:** Appended three classical Early Christian Virgin Martyrs to backlog, extending scope from **81 → 100 to 81 → 103**
+- **Strategic fit:** Agatha (suffering/nursing), Agnes (purity/youth), Lucy (light/eyesight) add classic patronesses missing from current roster; all confirm-appropriate
+- **Documented:** Created samwise-expanded-saint-backlog.md decision; full 22-saint prioritized backlog (original 19 + Agatha + Agnes + Lucy) ready for future data-entry sprint
+- **Key learning:** Scope flexibility — user wanted to exceed the 100-saint target with high-value classic saints rather than stick to arbitrary ceiling. Good signal for future backlog management: build flexible prioritized lists rather than hard targets.
+- **Orchestration:** Scribe merged decisions into decisions.md (2026-04-25T14:49:15Z); archived pre-2026-03-26 entries; cross-agent sync completed.
