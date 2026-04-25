@@ -638,6 +638,42 @@ iOS (Frodo) and Android (Aragorn) can now implement filtering logic knowing the 
 
 ---
 
+### Decision: Deterministic Android Localization StateFlow Tests
+
+**Author:** Aragorn (Android Dev)
+**Date:** 2026-04-25
+**Status:** Approved
+
+#### Context
+
+`LocalizationService.language` is a `StateFlow` seeded with `AppLanguage.fromSystemLocale()` and then backed by DataStore. A recreated service may not emit a second item if the persisted language equals the system-locale fallback because `StateFlow` suppresses duplicate values. This caused `LocalizationServiceTest::should_persist_language_choice_to_datastore` to timeout with `TurbineTimeoutCancellationException` under non-default JVM locales.
+
+#### Decision
+
+Android tests verifying language switching or persistence should:
+1. Choose a target language opposite the current/system fallback
+2. Assert the final `StateFlow.value` after advancing the `StandardTestDispatcher`
+3. Pass the test coroutine scope into `PreferenceDataStoreFactory.create(scope = testScope)` to ensure deterministic persistence scheduling
+
+#### Rationale
+
+This keeps behavior strong: the test proves a user-selected language overrides the device locale and survives service recreation. It avoids brittle Turbine expectations that depend on a non-guaranteed second emission.
+
+#### Validation
+
+- Reproduced the locale-dependent failure under `-Duser.language=es --rerun-tasks`
+- Fixed `LocalizationServiceTest` without production-code changes
+- Focused localization tests and full Android JVM unit tests pass under both Spanish and default locales
+- Committed `e7ca6c3 Fix localization persistence unit test` to `develop`
+- PR #6 CI reran with all checks green (Android build + unit tests, SharedContent parity, GitGuardian Security)
+
+#### References
+
+- `.squad/orchestration-log/2026-04-25T17-26-51Z-aragorn.md` (fix execution log)
+- `.squad/orchestration-log/2026-04-25T17-26-51Z-legolas.md` (QA approval log)
+
+---
+
 ## Archived Decisions (older than 2026-03-22)
 
 See `decisions-archive.md` for foundational iOS architecture decisions from 2026-04-12 to 2026-04-13.
