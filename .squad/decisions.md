@@ -1230,3 +1230,40 @@ Non-PD images explicitly attributed:
 
 **Special Case:** Fátima siblings (Francisco & Jacinta) share same double-portrait source; saved as separate per-saint files (`francisco-marto.jpg`, `jacinta-marto.jpg`)
 
+
+---
+
+## Decision: Keep Android and iOS submission notes separate (2026-04-25)
+
+**Date:** 2026-04-25  
+**Author:** Aragorn (Android)  
+**Status:** Approved  
+**Related:** Android dark-mode welcome screen fix (v1.0.2), Platform-specific release notes
+
+### Context
+
+Jorge requested that app submission notes stay current and avoid implying Android-only fixes apply to iOS. The v1.0.2 Android release includes the over-100-saints context plus an Android-only dark-mode welcome-screen readability fix.
+
+### Decision
+
+Keep iOS/App Store submission notes in `docs/appstore/submission-info.md` and Android/Google Play submission notes in `docs/android/submission-info.md`.
+
+### Rationale
+
+Platform release content can diverge even when both apps share content and version numbers. Separate notes reduce accidental cross-platform claims and make store-specific updates easier for Frodo and Aragorn to maintain independently.
+
+### Implementation
+
+- **docs/appstore/submission-info.md:** iOS-specific App Store submission context
+- **docs/android/submission-info.md:** Android-specific Google Play submission context (v1.0.2, 103+ saints, dark-mode welcome fix)
+- **Skill:** New `.squad/skills/platform-specific-release-notes/SKILL.md` documents platform-separation workflow
+
+### Cross-Team Impact
+
+- **Frodo (iOS):** Owns App Store submission notes; no Android dark-mode changes
+- **Aragorn (Android):** Owns Google Play submission notes; dark-mode fix in WelcomeScreen.kt
+- **Legolas (QA):** Validated Material theme colors and documentation separation; tests passed
+
+### Status
+
+✅ Implemented & Validated

@@ -163,3 +163,8 @@
 - **Validation summary:** EN/ES parity ✅, Android test count updated ✅, iOS/Android builds OK ✅, cross-platform metadata consistent ✅
 - **Cross-team:** Gandalf (canonical gate) ✅, Samwise (content) ✅, Frodo (iOS) ✅, Aragorn (Android) ✅
 - **Release status:** GO for production iOS/Android store submission
+
+### Android Welcome Dark-Mode + Platform Notes Review (2026-04-25)
+- Approved Aragorn's fix: onboarding text now uses Material theme colors (`onBackground`, `onSurfaceVariant`, `onError`) against `colorScheme.background`, avoiding black/default inherited text in dark mode.
+- Android release docs now live under `docs/android/submission-info.md`; per Gandalf's marketing decision, customer-facing copy can say "over 100 saints" while validation tracks the exact 103 EN/ES roster.
+- Focused validation: `cd android && ./gradlew :app:testDebugUnitTest :app:assembleDebug --no-daemon --console=plain` passed.

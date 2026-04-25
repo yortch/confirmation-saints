@@ -116,3 +116,9 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 - **Outcome:** Android 1.0.2 (versionCode 3) bumped and validated; 103-saint content parity confirmed
 - **Cross-team:** Samwise (22-saint content) ✅, Frodo (iOS 1.0.2) ✅, Legolas (batch sign-off) ✅
 - **Release status:** GO for Google Play submission
+
+## Learnings
+
+### 2026-04-25 — Android onboarding dark-mode readability + platform submission docs
+- `WelcomeScreen.kt` uses `MaterialTheme.colorScheme.background` directly, so top-level onboarding text must set Material text colors (`onBackground` for primary/body text, `onSurfaceVariant` for secondary copy) instead of relying on the default ambient content color.
+- Keep Android/Google Play release copy in `docs/android/submission-info.md` and iOS/App Store release copy in `docs/appstore/submission-info.md`; patch fixes can diverge by platform, such as Android-only dark-mode welcome-screen readability.
