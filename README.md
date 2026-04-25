@@ -8,7 +8,7 @@ A SwiftUI iOS app (iPhone + iPad) that helps Catholic Confirmation candidates �
 
 **🎉 Status:** iOS app **v1.0.0 is live on the App Store** — [apps.apple.com/app/confirmation-saints](https://apps.apple.com/app/confirmation-saints/id6762463641). Android port is next; see [Android Port Guide](#-android-port-guide) below.
 
-**✨ What's New:** Added 10 new saints including St. Teresa of Ávila (Doctor of the Church), St. Ignatius of Loyola, St. Anthony of Padua, St. Luke the Evangelist, and 6 others — app now ships with **80+ saints**.
+**✨ What's New:** Expanding our collection with additional curated saints — the app now features **over 100 Catholic saints** with rich biographies, quotes, feast days, and more to help you find the perfect patron for your Confirmation.
 
 ## 🎯 Target Audience
 
@@ -25,7 +25,7 @@ A SwiftUI iOS app (iPhone + iPad) that helps Catholic Confirmation candidates �
 - **Filter Chips** — Quick filters for region, life state, age category, gender, affinity
 - **Saint Detail** — Image + attribution, quote, "Why a Confirmation Saint?", biography, feast day, birth/death/canonization dates, patronage, tags, affinities, and source links
 - **Bilingual** — Full English and Spanish (UI strings + saint content). Language auto-detects from the system locale and is switchable from Settings.
-- **80+ saints** curated, with public-domain imagery from Wikimedia Commons
+- **Over 100 saints** curated, with public-domain imagery from Wikimedia Commons
 - **Offline-first** — All content bundled; no network required
 
 ## 🏗️ Architecture
@@ -249,7 +249,7 @@ See `android/README.md` for the current port status.
 - **Saint of the Day** — daily featured saint from `feastDay`
 - **Quiz / Match** — "Which saint is most like you?"
 - **Dark mode polish** and full **accessibility** (VoiceOver, Dynamic Type)
-- **Expanding the roster** beyond 80
+- **Expanding the roster** beyond 100
 
 ## 📄 License
 
