@@ -122,3 +122,8 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 ### 2026-04-25 — Android onboarding dark-mode readability + platform submission docs
 - `WelcomeScreen.kt` uses `MaterialTheme.colorScheme.background` directly, so top-level onboarding text must set Material text colors (`onBackground` for primary/body text, `onSurfaceVariant` for secondary copy) instead of relying on the default ambient content color.
 - Keep Android/Google Play release copy in `docs/android/submission-info.md` and iOS/App Store release copy in `docs/appstore/submission-info.md`; patch fixes can diverge by platform, such as Android-only dark-mode welcome-screen readability.
+
+### 2026-04-25 — Modern Day Saints Android filter
+- Implemented Android `modern-day` era support as a derived filter from `birthDate` year >= 1900; no SharedContent schema or JSON edits were needed in the Android lane.
+- Quick filter chips can use `SaintFilters.selectedEra` plus `CategoryMatcher.matchesEra(...)` to keep list filtering aligned with category browse matching.
+- Verification: `./gradlew :app:testDebugUnitTest :app:compileDebugKotlin` passed; SharedContent currently has 13 EN/ES saints born in or after 1900.

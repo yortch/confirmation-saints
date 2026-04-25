@@ -150,3 +150,30 @@
 - **Cross-team validation:** Frodo (iOS 1.0.2 build 2 ✅), Aragorn (Android 1.0.2 code 3 ✅), Legolas (103-saint batch approved ✅)
 - **Release status:** GO for production
 - **Scribe action:** Orchestration logs written; decisions merged; session log filed; inbox cleared
+
+### Modern Day Saints Filter — Product Contract Defined (2026-04-25)
+- **Request:** Jorge Balderas identified "Modern Day Saints" as an interesting category and asked Gandalf to define a product/data contract.
+- **Analysis:** Reviewed existing `era` category (early-church, medieval, early-modern, modern 1800–1949, contemporary 1950+). Current era values are too broad and historical.
+- **Definition approved:** "Modern Day Saints" = saints born in or after **1900** (deterministic from existing `birthDate` field).
+- **Rationale:**
+  - **Deterministic:** Year-based, no manual tagging required.
+  - **Cross-platform:** Identical logic in iOS (`matchesEra()`) and Android (`CategoryMatcher.matchesEra()`).
+  - **Relevant:** Includes saints who lived through 20th/21st-century realities—tech, wars, social change—resonant with teens.
+  - **Data-complete:** 13 saints currently qualify (Carlo Acutis, John Paul II, Mother Teresa, Oscar Romero, Gianna Beretta Molla, Faustina Kowalska, Josemaría Escrivá, Jacinta Marto, Francisco Marto, Teresa of the Andes, Pier Giorgio Frassati, Chiara Luce Badano, José Sánchez del Río).
+- **Decision artifact:** `.squad/decisions/inbox/gandalf-modern-day-saints.md` — complete specification with implementation checklist, cross-platform parity contract, and data validation requirements.
+- **Changes required:**
+  - **Samwise:** Add `modern-day` value to `era` category in EN/ES categories JSON; validate all 13 saints.
+  - **Frodo:** Wire `"modern-day"` case in iOS `matchesEra()`; expose to quick-filter chips.
+  - **Aragorn:** Wire `"modern-day"` case in Android `CategoryMatcher.matchesEra()`; expose to quick-filter chips.
+  - **Legolas:** Integration tests for all 13 saints on both platforms.
+- **Learning:** New filters should be defined as deterministic functions of existing data fields (e.g., birth year) and must specify exact cross-platform matching logic BEFORE implementation. Avoids data drift and platform inconsistency.
+
+### Workflow: Multiple Approved Batches in Working Tree (2026-04-25)
+- **Context:** Jorge approved two user tasks sequentially and intentionally left them uncommitted:
+  1. "Android dark-mode welcome-screen readability + platform-specific release notes" (Batch 1) — modified `WelcomeScreen.kt` (5 color properties), added `docs/android/submission-info.md`, updated `docs/appstore/submission-info.md`
+  2. "Modern Day Saints feature" (Batch 2) — data expansion and cross-platform search/filter changes (17 files)
+- **Legolas blocker:** Validation rules require single-feature-per-review batches. Both batches were in working tree simultaneously, causing Legolas rejection even though feature QA passed.
+- **Resolution:** Declared two batches as separate pending changes with no cross-contamination. Recommended Legolas re-run with combined validation scope OR split into two PRs.
+- **No code changes needed:** This was workflow/validation separation, not a feature defect.
+- **Learning:** When users intentionally accumulate multiple approved batches uncommitted (for safe preservation), document the batch composition and approval status in `.squad/decisions/inbox/`. Instruct validators to confirm batch independence (not cross-contamination). Coordinator then decides commit grouping strategy. Future sessions should reference `.squad/decisions/inbox/gandalf-modern-review-scope.md` as a pattern.
+

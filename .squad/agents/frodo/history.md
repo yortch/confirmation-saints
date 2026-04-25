@@ -107,3 +107,6 @@
 - **Outcome:** iOS 1.0.2 (build 2) bumped and validated; 103-saint content parity confirmed
 - **Cross-team:** Samwise (22-saint content) ✅, Aragorn (Android 1.0.2) ✅, Legolas (batch sign-off) ✅
 - **Release status:** GO for App Store submission
+
+### Modern Day Saints iOS Filter (2026-04-25)
+- Added iOS quick-filter support for `era == "modern-day"`, defined as saints/blesseds with `birthDate` year >= 1900; keep this deterministic birth-year logic in SwiftUI filters for parity with category browsing.

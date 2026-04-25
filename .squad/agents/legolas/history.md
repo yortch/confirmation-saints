@@ -168,3 +168,12 @@
 - Approved Aragorn's fix: onboarding text now uses Material theme colors (`onBackground`, `onSurfaceVariant`, `onError`) against `colorScheme.background`, avoiding black/default inherited text in dark mode.
 - Android release docs now live under `docs/android/submission-info.md`; per Gandalf's marketing decision, customer-facing copy can say "over 100 saints" while validation tracks the exact 103 EN/ES roster.
 - Focused validation: `cd android && ./gradlew :app:testDebugUnitTest :app:assembleDebug --no-daemon --console=plain` passed.
+### Modern Day Saints QA Review (2026-04-25)
+- Validated the accepted `modern-day` contract: EN/ES category ids match, qualifying saint id sets are 13/13 by `birthDate` year >= 1900, and iOS/Android filtering uses the same >=1900 rule.
+- Focused gates passed: `python3 tests/shared-content-parity.py`, `cd android && ./gradlew :app:testDebugUnitTest --no-daemon --console=plain`, and iPhone/iPad simulator `xcodebuild` builds.
+- QA hygiene learning: when reviewing a feature in a shared worktree, distinguish feature-scoped tracked changes from unrelated tracked changes; untracked release/video artifacts may be pre-existing, but unrelated tracked edits must be called out separately.
+
+### Modern Day Saints Revalidation (2026-04-25)
+- Re-reviewed the combined pending tree for the Android dark-mode/submission-note batch plus the Modern Day Saints batch; batches remained logically isolated.
+- Verified EN/ES `modern-day` era category parity, 13 matching birthDate>=1900 saints, iOS/Android quick-chip toggle/clear logic, and Spanish localization coverage.
+- Focused validations passed: shared-content parity, Android `CategoryMatcherTest`, and iOS builds for iPhone 17 + iPad (A16) simulators.

@@ -117,3 +117,8 @@
 - **Result:** 22-saint implementation approved & validated by Legolas (QA)
 - **Cross-team:** Frodo (iOS) and Aragorn (Android) both bumped to 1.0.2 with 103-saint content parity confirmed
 - **Release status:** GO for production iOS/Android store submission
+
+### Modern Day Saints Era Filter Data (2026-04-25)
+- Added `modern-day` as a new value in the existing `era` category group in EN/ES category JSON; no category schema change was needed because values remain `id` + `label`.
+- Definition is deterministic from existing saint data: any saint/blessed with a 4-digit `birthDate` year >= 1900 qualifies. Current roster validates to 13 EN/ES-parity ids: carlo-acutis, chiara-luce-badano, jose-sanchez-del-rio, gianna-beretta-molla, mother-teresa, john-paul-ii, pier-giorgio-frassati, teresa-of-the-andes, oscar-romero, faustina-kowalska, josemaria-escriva, jacinta-marto, francisco-marto.
+- Validation found EN/ES saint id parity, matching `birthDate` values, no malformed non-null birth dates, and only the expected null birth dates for archangels/Marian apparitions.
