@@ -183,3 +183,7 @@
 - **Independent revalidation:** Built app on iPhone 17 + iPad Air (A16) simulators; both builds succeeded, both apps launched without crash, no crash reports in either device log.
 - **Diagnosis approved:** Warning is environment-only (WebKit accessibility bundle load order), not related to Modern Day Saints filter work or any app code.
 - **Status:** Cleared to proceed with iOS Modern Day Saints changes.
+
+### Localization DataStore Test Determinism Review (2026-04-25)
+- Approved the localization persistence test fix: choose the opposite of the current/default locale, drive DataStore with the test dispatcher-owned scope, and assert `StateFlow.value` after `advanceUntilIdle()` instead of waiting for a non-guaranteed duplicate emission.
+- Validation passed: focused `LocalizationServiceTest` under default and Spanish JVM locales, plus full Android `:app:testDebugUnitTest` suite. Avoid running the same Gradle test task concurrently because test-result outputs can collide.

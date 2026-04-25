@@ -127,3 +127,8 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 - Implemented Android `modern-day` era support as a derived filter from `birthDate` year >= 1900; no SharedContent schema or JSON edits were needed in the Android lane.
 - Quick filter chips can use `SaintFilters.selectedEra` plus `CategoryMatcher.matchesEra(...)` to keep list filtering aligned with category browse matching.
 - Verification: `./gradlew :app:testDebugUnitTest :app:compileDebugKotlin` passed; SharedContent currently has 13 EN/ES saints born in or after 1900.
+
+### 2026-04-25 — LocalizationService DataStore test determinism
+- `LocalizationService.language` is a `StateFlow`, so tests must not wait for a second emission when the persisted value equals the system-locale fallback; `StateFlow` suppresses duplicate values.
+- For language-switch and persistence tests, choose a target language opposite the current/system fallback so the assertion proves persisted override behavior on both EN and ES CI hosts.
+- Use the test coroutine scope for `PreferenceDataStoreFactory.create(scope = testScope)` so DataStore reads/writes are driven by `StandardTestDispatcher` instead of racing the default IO scope.
