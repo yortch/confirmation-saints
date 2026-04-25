@@ -22,11 +22,12 @@ data class SaintFilters(
     val selectedAgeCategory: String? = null,
     val selectedGender: String? = null,
     val selectedAffinity: String? = null,
+    val selectedEra: String? = null,
 ) {
     val hasActiveFilters: Boolean
         get() = selectedRegion != null || selectedLifeState != null ||
             selectedAgeCategory != null || selectedGender != null ||
-            selectedAffinity != null
+            selectedAffinity != null || selectedEra != null
 }
 
 object SaintFilterEngine {
@@ -68,6 +69,9 @@ object SaintFilterEngine {
             result = result.filter { s ->
                 s.affinities.any { it.containsIgnoringDiacritics(affinity) }
             }
+        }
+        filters.selectedEra?.let { era ->
+            result = result.filter { CategoryMatcher.matchesEra(it, era) }
         }
 
         return result.sortedWith(SaintNameComparator)

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "language": "es",
-  "lastUpdated": "2025-07-15",
+  "lastUpdated": "2026-04-25",
   "categories": [
     {
       "id": "patronage",
@@ -240,6 +240,10 @@
         {
           "id": "contemporary",
           "label": "Contemporáneo (siglos XX–XXI)"
+        },
+        {
+          "id": "modern-day",
+          "label": "Santos de Hoy (nacidos en 1900+)"
         }
       ]
     },
