@@ -1355,3 +1355,57 @@ If the simulator still appears stuck or noisy:
 ## Impact
 
 No code change recommended. Do not revert the current Modern Day Saints work for this warning.
+
+---
+
+# Legolas QA Decision: Expanded Wikipedia-Sourced Biographies
+
+**Date:** 2026-04-29  
+**Reviewer:** Legolas  
+**Artifact:** `SharedContent/saints/saints-en.json`, `SharedContent/saints/saints-es.json`  
+**Verdict:** APPROVED after Spanish copy fixes  
+**Revision owner:** N/A — Frodo's focused revision resolved the prior blockers.
+
+## What Passed
+
+- The 22 intended Wikipedia-sourced saints were the only changed saint records.
+- Saint count stayed 103 EN / 103 ES; no records were added or removed.
+- Per-saint schema keys stayed unchanged.
+- Canonical matching fields stayed unchanged: `patronOf`, `affinities`, `tags`, `region`, `lifeState`, `ageCategory`, `gender`.
+- Source entries stayed preserved and matched prior values.
+- Expanded biography length is substantially improved: the changed EN entries now sit around 757–869 characters, and the changed ES entries around 792–914 characters, much closer to the established roster than the prior ~250–500 character drafts.
+- Tone and substance are broadly teen-friendly, reverent, and factual.
+- Frodo's two Spanish copy fixes read naturally and retain the intended meaning:
+  - `jacinta-marto`: `Santa Jacinta Marto formó parte de los tres pastorcitos...`
+  - `agnes`: `vale la pena defender la dignidad, los límites y la fe...`
+
+## Validation Run
+
+- JSON parse/count/unique-id check for `saints-en.json` and `saints-es.json` — pass.
+- `python3 tests/shared-content-parity.py` — pass.
+- Custom changed-record comparison against HEAD — pass:
+  - 22 changed saint records per language.
+  - Only `biography` changed within those records.
+  - Per-record schema keys unchanged.
+  - Current canonical fields and source URL sets match EN/ES.
+- Focused Spanish copy regression check — pass:
+  - Prior phrase `una de los tres pastorcitos` absent.
+  - Prior phrase `valen la pena defenderse` absent.
+- Focused Android data-loading tests — pass:
+  - `com.yortch.confirmationsaints.data.SaintRepositoryTest`
+  - `com.yortch.confirmationsaints.data.SourcesIntegrityTest`
+  - `com.yortch.confirmationsaints.data.model.SaintParsingTest`
+
+## Resolved Copy Fixes
+
+1. `SharedContent/saints/saints-es.json` — `jacinta-marto` biography:
+   - Prior phrase: `Santa Jacinta Marto fue una de los tres pastorcitos...`
+   - Accepted fix: `Santa Jacinta Marto formó parte de los tres pastorcitos...`
+
+2. `SharedContent/saints/saints-es.json` — `agnes` biography:
+   - Prior phrase: `la dignidad, los límites y la fe valen la pena defenderse...`
+   - Accepted fix: `vale la pena defender la dignidad, los límites y la fe...`
+
+## Notes
+
+No data/schema concern remains. This approval covers the revised biography/content artifact; no full UI smoke was rerun because the revision is copy-only within shared JSON.

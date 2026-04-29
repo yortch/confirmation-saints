@@ -122,3 +122,6 @@
 - Added `modern-day` as a new value in the existing `era` category group in EN/ES category JSON; no category schema change was needed because values remain `id` + `label`.
 - Definition is deterministic from existing saint data: any saint/blessed with a 4-digit `birthDate` year >= 1900 qualifies. Current roster validates to 13 EN/ES-parity ids: carlo-acutis, chiara-luce-badano, jose-sanchez-del-rio, gianna-beretta-molla, mother-teresa, john-paul-ii, pier-giorgio-frassati, teresa-of-the-andes, oscar-romero, faustina-kowalska, josemaria-escriva, jacinta-marto, francisco-marto.
 - Validation found EN/ES saint id parity, matching `birthDate` values, no malformed non-null birth dates, and only the expected null birth dates for archangels/Marian apparitions.
+
+### Wikipedia-Only Biography Depth Audit (2026-04-29)
+- The 22-saint 103-roster expansion left most Wikipedia-only biographies at ~250–500 characters while the existing roster median was ~1,000 characters. Parity checks catch schema drift, not content depth; future Wikipedia-first saint batches should audit biography length/substance before handoff and target roughly 750–900 characters per localized biography unless the saint's historical record is genuinely sparse.

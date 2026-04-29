@@ -193,3 +193,14 @@
 - App-size guardrail: no binary/image diffs, no tracked image-like asset additions, 103 SharedContent image files remain 8.5M, and EN/ES saint JSON has 103 unique image references with 0 missing files.
 - Localization/a11y guardrail: verify visible affordance, semantic click label/role, close/done action, and EN→ES translations together; iOS string catalog/AppStrings and Android `AppStrings.kt` both covered the new image affordance strings.
 - Focused gates passed: iOS simulator build (`xcodebuild ... generic/platform=iOS Simulator`), Android `:app:testDebugUnitTest`, `:app:compileDebugAndroidTestKotlin`, and `:app:compileDebugKotlin`. No XCTest target exists under `ios/`, so iOS validation is build/static review unless a test target is later added.
+
+### Expanded Wikipedia Biography QA (2026-04-29)
+- Reviewed Samwise's expansion of the 22 Wikipedia-sourced saint biographies. EN/ES record counts, ids, schemas, canonical matching fields, images, and source entries remained unchanged; only `lastUpdated` and biography text changed.
+- Biography depth improved from roughly 250–500 characters to roughly 750–900 characters per changed entry, closer to the existing roster median (~1.1–1.2k) while keeping a teen-friendly/reverent tone.
+- QA rejected the batch for two Spanish copy issues in changed biographies: Jacinta Marto's "una de los tres pastorcitos" phrasing and Agnes's "valen la pena defenderse" construction. Future content-depth QA should include a focused Spanish grammar pass even when parity/data tests pass.
+- Validation passed: shared-content parity, schema/id/canonical/source invariant check, and focused Android data-loading tests (`SaintRepositoryTest`, `SourcesIntegrityTest`, `SaintParsingTest`).
+
+### Expanded Wikipedia Biography Re-review (2026-04-29)
+- Approved Frodo's Spanish copy fixes for Jacinta Marto (`formó parte de los tres pastorcitos`) and Agnes (`vale la pena defender la dignidad, los límites y la fe`); both prior blocking phrases are gone.
+- Revalidation passed: JSON parse/count/unique IDs, changed-record schema/biography-only diff check, EN/ES canonical/source URL parity, `python3 tests/shared-content-parity.py`, and focused Android data-loading tests (`SaintRepositoryTest`, `SourcesIntegrityTest`, `SaintParsingTest`).
+- Caveat: no full UI smoke was rerun because the revision is copy-only shared JSON.
