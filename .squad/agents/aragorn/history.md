@@ -138,3 +138,7 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 - SharedContent image parity check: EN and ES both reference 103/103 saint image filenames, with 0 missing files in `SharedContent/images`.
 - Android detail image remains circular at 128dp; tapping it opens a larger dialog preview using the same `file:///android_asset/images/{filename}` asset, with no new raster assets, duplicate files, or remote downloads.
 - Verification: `cd android && ./gradlew :app:compileDebugKotlin --quiet` passed.
+
+### 2026-04-29 — Pending Android release notes during closed testing
+- Updated `docs/android/submission-info.md` for future Google Play notes while Android remains in Google's required closed testing phase; notes are explicitly marked pending/not production.
+- No Android `versionName`/`versionCode` bump for docs-only release-note prep; keep Android notes separate from iOS/App Store 1.0.3 copy.

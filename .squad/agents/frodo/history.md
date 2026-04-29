@@ -122,3 +122,7 @@
 
 ### SwiftUI Duplicate Chip IDs (2026-04-29)
 - For saint detail chip rows, repeated display strings can be legitimate across affinity/tag data (e.g., "prayer"). Use collection indices as local `ForEach` IDs for repeated string chips so SwiftUI keeps each rendered chip distinct without mutating saint content.
+
+### iOS 1.0.3 Release Prep (2026-04-29)
+- iOS version source of truth is `ios/project.yml`; for App Store release prep update both `MARKETING_VERSION` and monotonically-increasing `CURRENT_PROJECT_VERSION`, then regenerate with `cd ios && xcodegen generate`. For v1.0.3 this is marketing version 1.0.3, build 3.
+- Keep App Store release notes in `docs/appstore/submission-info.md` iOS-specific; Android/Google Play notes and version metadata can diverge during closed testing.

@@ -209,3 +209,7 @@
 - Approved Frodo's iOS `SaintDetailView` fix for duplicate SwiftUI chip IDs: patron/tag `ForEach` loops now key by local indices, so legitimate repeated strings such as `prayer` render as separate chips without mutating saint data.
 - Tappable image behavior remains unchanged: `SaintImageView.loadImage(for:)` still gates the detail image button and the sheet still opens the same bundled image when available.
 - Focused validation passed: `git diff --check`, `cd ios && xcodebuild -project CatholicSaints.xcodeproj -scheme CatholicSaints -destination 'platform=iOS Simulator,name=iPhone 17' CODE_SIGNING_ALLOWED=NO build -quiet`, and simulator install/launch of `com.jorgebalderas.ConfirmationSaints`. The known `UIAccessibilityLoaderWebShared` WebKit/WebCore duplicate-class simulator warning remains ignorable under normal launch/use.
+
+### iOS 1.0.3 Release Prep QA (2026-04-29)
+- Release-prep-only changes are approvable when `ios/project.yml` and the XcodeGen project both report `MARKETING_VERSION` 1.0.3 / build 3, Android stays at `versionName` 1.0.2 / `versionCode` 3 during closed testing, and store notes clearly separate iOS App Store release copy from pending Android Google Play notes.
+- Validation pattern: run XcodeGen and confirm the `.pbxproj` diff is unchanged, `git diff --check`, then focused iOS simulator build on iPhone 17. No broad Android build is needed for documentation-only Android release notes with unchanged Gradle metadata.
