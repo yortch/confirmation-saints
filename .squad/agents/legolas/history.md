@@ -204,3 +204,8 @@
 - Approved Frodo's Spanish copy fixes for Jacinta Marto (`formó parte de los tres pastorcitos`) and Agnes (`vale la pena defender la dignidad, los límites y la fe`); both prior blocking phrases are gone.
 - Revalidation passed: JSON parse/count/unique IDs, changed-record schema/biography-only diff check, EN/ES canonical/source URL parity, `python3 tests/shared-content-parity.py`, and focused Android data-loading tests (`SaintRepositoryTest`, `SourcesIntegrityTest`, `SaintParsingTest`).
 - Caveat: no full UI smoke was rerun because the revision is copy-only shared JSON.
+
+### SwiftUI Duplicate Chip IDs QA (2026-04-29)
+- Approved Frodo's iOS `SaintDetailView` fix for duplicate SwiftUI chip IDs: patron/tag `ForEach` loops now key by local indices, so legitimate repeated strings such as `prayer` render as separate chips without mutating saint data.
+- Tappable image behavior remains unchanged: `SaintImageView.loadImage(for:)` still gates the detail image button and the sheet still opens the same bundled image when available.
+- Focused validation passed: `git diff --check`, `cd ios && xcodebuild -project CatholicSaints.xcodeproj -scheme CatholicSaints -destination 'platform=iOS Simulator,name=iPhone 17' CODE_SIGNING_ALLOWED=NO build -quiet`, and simulator install/launch of `com.jorgebalderas.ConfirmationSaints`. The known `UIAccessibilityLoaderWebShared` WebKit/WebCore duplicate-class simulator warning remains ignorable under normal launch/use.

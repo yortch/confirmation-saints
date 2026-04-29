@@ -4,9 +4,9 @@
 
 ### Decision: Sources Schema Refactor (2026-04-23)
 
-**Date:** 2026-04-23  
-**Author:** Gandalf (Lead/Architect)  
-**Status:** Ready for implementation  
+**Date:** 2026-04-23
+**Author:** Gandalf (Lead/Architect)
+**Status:** Ready for implementation
 **Unblocks:** Samwise (data), Frodo (iOS), Aragorn (Android), Legolas (test)
 
 ---
@@ -22,8 +22,8 @@ Replace `sources: [String]` + `sourceURLs: {String: String}?` with a single orde
 ]
 ```
 
-**Field names:** `name` and `url` (not `title`/`href` — matches existing usage and is idiomatic).  
-**Order:** Display order. Render top-to-bottom as listed.  
+**Field names:** `name` and `url` (not `title`/`href` — matches existing usage and is idiomatic).
+**Order:** Display order. Render top-to-bottom as listed.
 **Nullability:** `sources` is required (may be empty `[]`). Each entry must have non-empty `name` and `url`.
 
 ---
@@ -118,7 +118,7 @@ No `sourceURLs?.get()` lookup — direct property access.
 
 #### 6. Integrity Test
 
-**Placement:** `android/app/src/test/java/com/yortch/confirmationsaints/data/SourcesIntegrityTest.kt`  
+**Placement:** `android/app/src/test/java/com/yortch/confirmationsaints/data/SourcesIntegrityTest.kt`
 (Android JVM tests run in CI without emulator; this is where `SaintParsingTest.kt` already lives.)
 
 ##### Assertions (per saint, both language files):
@@ -167,7 +167,7 @@ Total scope: 2 JSON files, 2 model files, 2 view files, 1 test file. Four agents
 ---
 
 ### Cross-Platform Repository Restructure (2026-07-15)
-**Author:** Gandalf (Lead)  
+**Author:** Gandalf (Lead)
 **Status:** Implemented
 
 Reorganize repository to separate iOS (ios/), Android (android/), and shared content (SharedContent/ at root). All iOS-specific code and build files moved under ios/. SaintDataService bundle paths unchanged (folder reference works across structure). SharedContent/ supersedes old SharedContent/Data/.
@@ -177,7 +177,7 @@ Reorganize repository to separate iOS (ios/), Android (android/), and shared con
 ---
 
 ### App Rename + Welcome Onboarding (2026-04-12)
-**Author:** Frodo (iOS Dev)  
+**Author:** Frodo (iOS Dev)
 **Status:** Implemented
 
 **App Rename:**
@@ -201,7 +201,7 @@ Reorganize repository to separate iOS (ios/), Android (android/), and shared con
 ---
 
 ### Saint Image Sources from Wikimedia Commons (2026-07-17)
-**Author:** Samwise (Data/Backend)  
+**Author:** Samwise (Data/Backend)
 **Status:** Implemented
 
 All 32 saint images sourced from Wikimedia Commons using public domain or Creative Commons licensed artwork. Downloaded at 400px width thumbnails (~2.8MB total) for bundle efficiency. Images stored cross-platform in `SharedContent/images/`. Reproducible script (`_download_saint_images.py`) enables future updates. Attribution standardized to "Public domain, via Wikimedia Commons" across all saints.
@@ -216,7 +216,7 @@ All 32 saint images sourced from Wikimedia Commons using public domain or Creati
 ---
 
 ### SharedContent/ is the Canonical Cross-Platform Data Source (2026-04-21)
-**Author:** Gandalf (Lead)  
+**Author:** Gandalf (Lead)
 **Status:** Decided
 
 iOS v1.0.0 is live on the App Store. Android port is starting. To maintain sync across platforms, `SharedContent/` at the repo root is the **single source of truth** for all content-layer data and imagery:
@@ -243,7 +243,7 @@ Neither platform forks or duplicates this directory. iOS consumes it via a folde
 ---
 
 ### HiltTestRunner Wiring for Android Instrumentation Tests (2026-04-21)
-**Author:** Aragorn (Android Dev)  
+**Author:** Aragorn (Android Dev)
 **Status:** Implemented
 
 Added HiltTestRunner infrastructure to enable @HiltAndroidTest support for 10 blocked UI tests in `android/app/src/androidTest/`.
@@ -267,7 +267,7 @@ Added HiltTestRunner infrastructure to enable @HiltAndroidTest support for 10 bl
 ---
 
 ### Four Priority Saints Added — Batch 3 (2026-04-13)
-**Author:** Samwise (Data/Backend)  
+**Author:** Samwise (Data/Backend)
 **Status:** Implemented
 
 Added 4 saints to both `saints-en.json` and `saints-es.json`, bringing total from 50 → 54:
@@ -291,7 +291,7 @@ Added 4 saints to both `saints-en.json` and `saints-es.json`, bringing total fro
 ---
 
 ### Android Launcher Icon Polish — Red Background + Content-Aware Scaling (2026-04-22)
-**Author:** Aragorn (Android Dev)  
+**Author:** Aragorn (Android Dev)
 **Status:** Implemented ✅
 
 Jorge requested two fixes for the adaptive launcher icon:
@@ -321,7 +321,7 @@ Jorge requested two fixes for the adaptive launcher icon:
 - **2026-04-13T01:28:48Z:** Jorge Balderas — Skip priority 4. Focus ONLY priorities 1 & 2 (Pius X, Patrick, Catherine of Siena, Martin de Porres, key saints).
 
 ### 9 Saints Added — Batch 4 (10-Saint Sprint Outcome) (2026-04-23)
-**Author:** Samwise (Data/Backend)  
+**Author:** Samwise (Data/Backend)
 **Status:** Implemented (count 79, open question on 80-target parity)
 
 Added 9 new saints to both `saints-en.json` and `saints-es.json`, bringing roster from 70 → **79** saints per language. St. Luke the Evangelist (item #2 on Jorge's list) was already in the roster from a prior batch and was not re-added.
@@ -358,7 +358,7 @@ Target was 80 saints. Current count is 79. Jorge must decide: (1) accept 79, (2)
 ---
 
 ### Documentation Updated to 80+ Saint Count (2026-04-23)
-**Author:** Gandalf (Lead)  
+**Author:** Gandalf (Lead)
 **Status:** Implemented
 
 Updated user-facing documentation to reflect "80+ saints" across 8 locations per Samwise's 10-saint expansion on `squad/add-saints-80-plus`:
@@ -409,8 +409,8 @@ The Android saint detail header keeps the existing circular portrait. When a sai
 
 ### Legolas QA Decision: Tappable Saint Detail Images
 
-**Date:** 2026-04-29  
-**Status:** APPROVE  
+**Date:** 2026-04-29
+**Status:** APPROVE
 **Scope:** iOS and Android saint-detail portrait enlargement affordance
 
 #### Decision
@@ -444,7 +444,7 @@ There is no iOS XCTest target currently present under `ios/`; iOS coverage for t
 - Keep history focused on work, decisions focused on direction
 
 ### Android JVM Unit Tests — Implementation Complete (2026-04-22)
-**Author:** Aragorn (Android Dev)  
+**Author:** Aragorn (Android Dev)
 **Status:** ✅ Complete
 
 Implemented 22 unit test TODOs across 4 test files for core Android functionality: birth date parsing, saint data loading, localization service, and category matching. All tests pass.
@@ -481,12 +481,12 @@ Implemented 22 unit test TODOs across 4 test files for core Android functionalit
 ## Technical Decisions
 
 ### Robolectric Asset Access
-**Problem:** Tests loading saints from assets returned empty lists.  
-**Solution:** Added `testOptions.unitTests.isIncludeAndroidResources = true` to build.gradle.kts. This enables Robolectric to access merged app assets at test runtime.  
+**Problem:** Tests loading saints from assets returned empty lists.
+**Solution:** Added `testOptions.unitTests.isIncludeAndroidResources = true` to build.gradle.kts. This enables Robolectric to access merged app assets at test runtime.
 **Why not robolectric.properties?** Let Android Gradle Plugin handle resource merging automatically — simpler and more maintainable.
 
 ### DataStore StateFlow Testing
-**Challenge:** StateFlow starts with `initialValue` before DataStore read completes.  
+**Challenge:** StateFlow starts with `initialValue` before DataStore read completes.
 **Pattern:** Tests must handle both scenarios:
 1. Initial emission = system default → advance scheduler → DataStore value arrives
 2. DataStore value arrives immediately (cached/fast read)
@@ -494,8 +494,8 @@ Implemented 22 unit test TODOs across 4 test files for core Android functionalit
 Used conditional assertion: if first emission is system default, wait for second emission.
 
 ### Test Dependencies
-**Added:** `kotlinx-coroutines-test:1.8.1` for Turbine + StandardTestDispatcher support.  
-**Existing:** Turbine, Robolectric, JUnit4, androidx.test.ext.junit already present.  
+**Added:** `kotlinx-coroutines-test:1.8.1` for Turbine + StandardTestDispatcher support.
+**Existing:** Turbine, Robolectric, JUnit4, androidx.test.ext.junit already present.
 **Why coroutines-test?** Needed `runTest` + `StandardTestDispatcher` for deterministic StateFlow/DataStore testing.
 
 ## Key Contracts Validated
@@ -542,7 +542,7 @@ All tests passed on first green run after Robolectric asset config. No defects d
 ---
 
 ### 81 Saints + Wikipedia-First Attribution Policy (2026-04-23)
-**Author:** Samwise (Data/Backend)  
+**Author:** Samwise (Data/Backend)
 **Status:** Implemented ✅
 
 Added St. George and St. Mariana de Jesús de Paredes to reach 81 saints total. Audited attribution for all recent additions (9 saints from commit 8f5727a + Frances Cabrini) — all complete. Established **Wikipedia as the primary trusted source** for new saint research in the adding-saints skill documentation.
@@ -598,7 +598,7 @@ Added St. George and St. Mariana de Jesús de Paredes to reach 81 saints total. 
 ---
 
 ### iOS Settings Content Sources UI (2026-04-23)
-**Author:** Frodo (iOS Dev)  
+**Author:** Frodo (iOS Dev)
 **Status:** Implemented ✅
 
 Added 8 tappable SwiftUI `Link` components to Settings → Content Sources section. Sources include Wikipedia (EN/ES), Wikimedia Commons, Catholic.org, Franciscan Media, CNA, EWTN, Hallow.
@@ -627,7 +627,7 @@ Added 8 tappable SwiftUI `Link` components to Settings → Content Sources secti
 ---
 
 ### Android Settings Content Sources UI (2026-04-23)
-**Author:** Aragorn (Android Dev)  
+**Author:** Aragorn (Android Dev)
 **Status:** Implemented ✅
 
 Added 9 tappable source rows to Settings → Content Sources. Created `ContentSource` data class and `SourceRow` composable. Uses `LocalUriHandler.current.openUri()` to launch links. All localized via `AppStrings.kt` (EN+ES). OpenInNew icon on each row; `contentDescription` for a11y.
@@ -664,7 +664,7 @@ Added 9 tappable source rows to Settings → Content Sources. Created `ContentSo
 ---
 
 ### Saint `sources` Array Integrity (2026-04-23)
-**Author:** Frodo (iOS Dev)  
+**Author:** Frodo (iOS Dev)
 **Status:** Implemented ✅
 
 **Context:**
@@ -695,9 +695,9 @@ For cross-platform data issues: canonical source is `SharedContent/saints/*.json
 
 # Decision: Robolectric Version Upgrade for Android SDK 35 Compatibility
 
-**Date:** 2026-04-25  
-**Author:** Aragorn (Android Dev)  
-**Status:** Implemented  
+**Date:** 2026-04-25
+**Author:** Aragorn (Android Dev)
+**Status:** Implemented
 **Commit:** `003aa49`
 
 ## Context
@@ -758,9 +758,9 @@ iOS doesn't use Robolectric, but this pattern applies to any testing framework w
 
 # Decision: Robolectric SDK 35 Upgrade Validation
 
-**Date:** 2026-04-25  
-**Author:** Legolas (Tester)  
-**Status:** Validated — ACCEPT FIX  
+**Date:** 2026-04-25
+**Author:** Legolas (Tester)
+**Status:** Validated — ACCEPT FIX
 **PR:** #5 (develop → main)
 
 ## Context
@@ -774,8 +774,8 @@ Root cause: Android app upgraded to SDK 35 (commit `12d845da`), but Robolectric 
 
 ## Fix Applied
 
-**Author:** Aragorn  
-**File:** `android/gradle/libs.versions.toml`  
+**Author:** Aragorn
+**File:** `android/gradle/libs.versions.toml`
 **Change:** `robolectric = "4.13"` → `robolectric = "4.16.1"`
 
 Robolectric 4.16.1 supports SDK 35 and SDK 36.
@@ -902,9 +902,9 @@ Final MP4 at `video/out/ConfirmationSaintsPromo.mp4` — open it in QuickTime an
 
 ## SAINT BACKLOG 100-SAINT INITIATIVE — Samwise Research (2026-04-25)
 
-**Prepared by:** Samwise  
-**Date:** 2026-04-25  
-**Source:** Life Teen Confirmation Saints List + App Gap Analysis  
+**Prepared by:** Samwise
+**Date:** 2026-04-25
+**Source:** Life Teen Confirmation Saints List + App Gap Analysis
 **Goal:** Identify 19 new saints to bring app from 81 → 100
 
 ### Current State
@@ -913,8 +913,8 @@ Final MP4 at `video/out/ConfirmationSaintsPromo.mp4` — open it in QuickTime an
 - **Gap:** 19 additional saints needed
 
 ### Source Comparison
-**Life Teen List Total Candidates:** 132 unique saints  
-**Already in App:** 65 saints  
+**Life Teen List Total Candidates:** 132 unique saints
+**Already in App:** 65 saints
 **Available to Add:** 66 candidates identified
 
 ### Pronunciation Filter Applied
@@ -966,8 +966,8 @@ Candidates with names difficult for US English/Spanish speakers were excluded:
 
 ## SAINT BACKLOG VALIDATION — Legolas (2026-04-24)
 
-**Decision Made By:** Legolas (Tester/QA)  
-**Date:** 2026-04-24  
+**Decision Made By:** Legolas (Tester/QA)
+**Date:** 2026-04-24
 **Status:** Approved — 19 Saints Ready for Development
 
 ### Current State
@@ -994,9 +994,9 @@ Candidates with names difficult for US English/Spanish speakers were excluded:
 - ❌ St. Michael the Archangel (already in app)
 
 ### Acceptance Criteria Verified
-✅ No Duplicates — All 81 existing saints cross-checked  
-✅ Pronunciation Accessibility — All candidates have acceptable English pronunciation  
-✅ Coverage Priority Met — Asia/Africa & Female priorities included  
+✅ No Duplicates — All 81 existing saints cross-checked
+✅ Pronunciation Accessibility — All candidates have acceptable English pronunciation
+✅ Coverage Priority Met — Asia/Africa & Female priorities included
 ✅ Canonization Data — All dates verified
 
 ### Key Finding
@@ -1005,8 +1005,8 @@ Asia/Africa severely underrepresented (9% → need 15%); female saints at target
 
 ## Coordinator Directive — 2026-04-25T10:46:40.268-04:00
 
-**By:** Jorge Balderas (via Copilot)  
-**Type:** User Directive  
+**By:** Jorge Balderas (via Copilot)
+**Type:** User Directive
 **Subject:** Saint Backlog Expansion
 
 **Directive:** "Add St. Agatha of Sicily, St. Agnes, and St. Lucy to the Life Teen saint expansion backlog even if the final list goes over 100 saints."
@@ -1017,9 +1017,9 @@ Asia/Africa severely underrepresented (9% → need 15%); female saints at target
 
 ## Expanded Saint Backlog Decision — Samwise (2026-04-25)
 
-**Prepared by:** Samwise  
-**Date:** 2026-04-25  
-**Status:** Approved by user (Jorge Balderas)  
+**Prepared by:** Samwise
+**Date:** 2026-04-25
+**Status:** Approved by user (Jorge Balderas)
 **Scope Change:** User directive — expand beyond 100-saint target to include three additional saints.
 
 ### Decision Summary
@@ -1127,10 +1127,10 @@ Nothing — this is planning/backlog only. Full implementation deferred to futur
 
 ## Decision: Gated 22-Saint Expansion (2026-04-26)
 
-**Date:** 2026-04-26  
-**Author:** Gandalf (Lead/Architect)  
-**Status:** Approved for Implementation  
-**For Implementation By:** Samwise (Data/Backend)  
+**Date:** 2026-04-26
+**Author:** Gandalf (Lead/Architect)
+**Status:** Approved for Implementation
+**For Implementation By:** Samwise (Data/Backend)
 
 ### Summary
 
@@ -1196,11 +1196,11 @@ All saints verified via Wikipedia (EN/ES) + Catholic biographical sources. Deplo
 
 ### Verification Completed
 
-✅ Duplicate check (no conflicts with 81 current saints)  
-✅ Canonization status verification  
-✅ Feast days verified via Wikipedia (EN/ES)  
-✅ Patronages verified and consistent  
-✅ Regional balance: 11 female saints (50% of expansion)  
+✅ Duplicate check (no conflicts with 81 current saints)
+✅ Canonization status verification
+✅ Feast days verified via Wikipedia (EN/ES)
+✅ Patronages verified and consistent
+✅ Regional balance: 11 female saints (50% of expansion)
 
 ### Prerequisites Before Implementation
 
@@ -1217,9 +1217,9 @@ All saints verified via Wikipedia (EN/ES) + Catholic biographical sources. Deplo
 
 ## Decision: "Over 100 Saints" Marketing Campaign (2026-04-25)
 
-**Date:** 2026-04-25  
-**Author:** Gandalf (Lead/Architect)  
-**Status:** Approved & Implemented  
+**Date:** 2026-04-25
+**Author:** Gandalf (Lead/Architect)
+**Status:** Approved & Implemented
 
 ### Strategy
 
@@ -1250,10 +1250,10 @@ Update ALL marketing-facing copy to advertise **"over 100 saints"** effective im
 
 ## Decision: 22-Saint Content Implementation (2026-04-25)
 
-**Date:** 2026-04-25  
-**Author:** Samwise (Data/Backend)  
-**Status:** Implemented & Validated  
-**Related:** Gated 22-Saint Expansion Decision  
+**Date:** 2026-04-25
+**Author:** Samwise (Data/Backend)
+**Status:** Implemented & Validated
+**Related:** Gated 22-Saint Expansion Decision
 
 ### Implementation Summary
 
@@ -1294,9 +1294,9 @@ Non-PD images explicitly attributed:
 
 ## Decision: Keep Android and iOS submission notes separate (2026-04-25)
 
-**Date:** 2026-04-25  
-**Author:** Aragorn (Android)  
-**Status:** Approved  
+**Date:** 2026-04-25
+**Author:** Aragorn (Android)
+**Status:** Approved
 **Related:** Android dark-mode welcome screen fix (v1.0.2), Platform-specific release notes
 
 ### Context
@@ -1331,8 +1331,8 @@ Platform release content can diverge even when both apps share content and versi
 
 # iOS Launch Diagnosis — UIAccessibilityLoaderWebShared warning
 
-**Date:** 2026-04-25  
-**Author:** Frodo (iOS)  
+**Date:** 2026-04-25
+**Author:** Frodo (iOS)
 **Status:** Diagnosis / no app-code change
 
 ## Finding
@@ -1360,10 +1360,10 @@ No code change recommended. Do not revert the current Modern Day Saints work for
 
 # Legolas QA Decision: Expanded Wikipedia-Sourced Biographies
 
-**Date:** 2026-04-29  
-**Reviewer:** Legolas  
-**Artifact:** `SharedContent/saints/saints-en.json`, `SharedContent/saints/saints-es.json`  
-**Verdict:** APPROVED after Spanish copy fixes  
+**Date:** 2026-04-29
+**Reviewer:** Legolas
+**Artifact:** `SharedContent/saints/saints-en.json`, `SharedContent/saints/saints-es.json`
+**Verdict:** APPROVED after Spanish copy fixes
 **Revision owner:** N/A — Frodo's focused revision resolved the prior blockers.
 
 ## What Passed
@@ -1409,3 +1409,25 @@ No code change recommended. Do not revert the current Modern Day Saints work for
 ## Notes
 
 No data/schema concern remains. This approval covers the revised biography/content artifact; no full UI smoke was rerun because the revision is copy-only within shared JSON.
+
+---
+
+# Legolas QA — SwiftUI duplicate chip IDs
+
+**Date:** 2026-04-29
+**Verdict:** APPROVED
+
+## Decision
+
+Frodo's `SaintDetailView` change is acceptable. Patron and tag chips now use local collection indices as SwiftUI `ForEach` IDs, preserving duplicate visible chip strings while eliminating duplicate `id: \.self` collisions.
+
+## Validation
+
+- Static review of `SaintDetailView.swift` and `SaintImageView.swift` confirmed no change to tappable detail image behavior.
+- `git diff --check` passed.
+- `cd ios && xcodebuild -project CatholicSaints.xcodeproj -scheme CatholicSaints -destination 'platform=iOS Simulator,name=iPhone 17' CODE_SIGNING_ALLOWED=NO build -quiet` passed.
+- Installed and launched `com.jorgebalderas.ConfirmationSaints` on the iPhone 17 simulator.
+
+## Caveat
+
+The iOS 26.4 simulator `UIAccessibilityLoaderWebShared` duplicate-class log originates from WebKit/WebCore accessibility bundles and can be ignored when the app builds, launches, and behaves normally.

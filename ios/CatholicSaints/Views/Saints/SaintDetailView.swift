@@ -216,8 +216,8 @@ struct SaintDetailView: View {
                 Label(AppStrings.localized("Patron Of", language: language), systemImage: "shield.fill")
                     .font(.title3.bold())
                 FlowLayout(spacing: 8) {
-                    ForEach(displayValues, id: \.self) { patron in
-                        Text(patron.capitalized)
+                    ForEach(displayValues.indices, id: \.self) { index in
+                        Text(displayValues[index].capitalized)
                             .font(.subheadline)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
@@ -233,13 +233,14 @@ struct SaintDetailView: View {
 
     @ViewBuilder
     private func tagsSection(_ saint: Saint) -> some View {
+        let chipValues = (saint.displayAffinities ?? saint.affinities) + (saint.displayTags ?? saint.tags)
         if !saint.affinities.isEmpty || !saint.tags.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
                 Label(AppStrings.localized("Interests & Tags", language: language), systemImage: "tag.fill")
                     .font(.title3.bold())
                 FlowLayout(spacing: 8) {
-                    ForEach((saint.displayAffinities ?? saint.affinities) + (saint.displayTags ?? saint.tags), id: \.self) { tag in
-                        Text(tag.capitalized)
+                    ForEach(chipValues.indices, id: \.self) { index in
+                        Text(chipValues[index].capitalized)
                             .font(.caption)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 5)

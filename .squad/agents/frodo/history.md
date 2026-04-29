@@ -119,3 +119,6 @@
 - Confirmed iOS bundles `SharedContent/` as a folder resource via `ios/project.yml`; `SaintImageView` loads saint portraits from `SharedContent/images` with asset-catalog fallback.
 - Confirmed Android bundles the same images through `syncSharedContent`, which copies `SharedContent/images/*.jpg` into `android/app/src/main/assets/images/` before `preBuild`.
 - Added iOS detail-screen tap affordance only when the local bundled image resolves; the existing circular portrait remains unchanged and opens the same raster image larger in a localized sheet.
+
+### SwiftUI Duplicate Chip IDs (2026-04-29)
+- For saint detail chip rows, repeated display strings can be legitimate across affinity/tag data (e.g., "prayer"). Use collection indices as local `ForEach` IDs for repeated string chips so SwiftUI keeps each rendered chip distinct without mutating saint content.
