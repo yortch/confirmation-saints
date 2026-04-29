@@ -4,6 +4,7 @@ struct SaintDetailView: View {
     let saintId: String
     var viewModel: SaintListViewModel
     @Environment(\.appLanguage) private var language
+    @State private var isShowingImagePreview = false
 
     /// Reactively looks up the saint from the viewModel's current (language-appropriate) data.
     private var saint: Saint? {
@@ -35,6 +36,11 @@ struct SaintDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.large)
+        .sheet(isPresented: $isShowingImagePreview) {
+            if let saint, let image = SaintImageView.loadImage(for: saint) {
+                SaintImagePreview(saint: saint, image: image, language: language)
+            }
+        }
     }
 
     // MARK: - Header
@@ -42,7 +48,33 @@ struct SaintDetailView: View {
     @ViewBuilder
     private func headerSection(_ saint: Saint) -> some View {
         VStack(spacing: 12) {
-            SaintImageView(saint: saint, size: 120)
+            if SaintImageView.loadImage(for: saint) != nil {
+                Button {
+                    isShowingImagePreview = true
+                } label: {
+                    VStack(spacing: 6) {
+                        ZStack(alignment: .bottomTrailing) {
+                            SaintImageView(saint: saint, size: 120)
+                            Image(systemName: "magnifyingglass.circle.fill")
+                                .font(.title2)
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white, .blue)
+                                .background(.blue, in: Circle())
+                                .accessibilityHidden(true)
+                        }
+
+                        Label(AppStrings.localized("View larger image", language: language), systemImage: "arrow.up.left.and.arrow.down.right")
+                            .font(.caption.bold())
+                            .foregroundStyle(.blue)
+                    }
+                }
+                .buttonStyle(.plain)
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(String(format: AppStrings.localized("View larger image of %@", language: language), saint.name))
+                .accessibilityHint(AppStrings.localized("Opens a larger view of this saint image.", language: language))
+            } else {
+                SaintImageView(saint: saint, size: 120)
+            }
 
             if let attribution = saint.image?.attribution {
                 Text(attribution)
@@ -241,6 +273,43 @@ struct SaintDetailView: View {
                 }
             }
         }
+    }
+}
+
+private struct SaintImagePreview: View {
+    let saint: Saint
+    let image: UIImage
+    let language: String
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 16) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .accessibilityLabel(saint.name)
+
+                if let attribution = saint.image?.attribution {
+                    Text(attribution)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                }
+            }
+            .padding()
+            .navigationTitle(saint.name)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(AppStrings.localized("Done", language: language)) {
+                        dismiss()
+                    }
+                }
+            }
+        }
+        .presentationDetents([.large])
     }
 }
 

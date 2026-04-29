@@ -378,6 +378,65 @@ Historical records in `.squad/decisions.md`, agent history.md files, and logs re
 
 ---
 
+### Frodo Decision: Tappable Saint Detail Images
+
+- Use existing bundled saint portraits only; do not crop, replace, duplicate, or download images.
+- iOS detail images become tappable only when `SaintImageView` can resolve the local bundled image from the asset catalog or `SharedContent/images`.
+- Preserve the circular detail portrait; present the same existing raster image larger in a sheet with localized, accessible affordances.
+- Android already receives the same image files through `syncSharedContent` into bundled assets, so cross-platform work should follow the same no-new-assets rule.
+
+---
+
+### Android tappable saint detail images use bundled SharedContent assets
+
+- Date: 2026-04-29
+- Owner: Aragorn (Android)
+- Requested by: Jorge Balderas
+
+#### Decision / finding
+
+Use the already bundled `SharedContent/images/{saint-id}.jpg` files for larger saint image viewing instead of cropping, replacing, duplicating, or downloading images.
+
+#### Rationale
+
+Android already copies `SharedContent/images/*.jpg` into `android/app/src/main/assets/images/` through the `syncSharedContent` Gradle task, and iOS includes `../SharedContent` in the app Resources. A parity check confirmed both EN and ES saint JSON files reference 103/103 local image filenames with 0 missing files in `SharedContent/images`.
+
+#### Android implementation note
+
+The Android saint detail header keeps the existing circular portrait. When a saint has a local image filename, the portrait now has a localized tap affordance and opens a dialog that displays the same bundled asset larger via `file:///android_asset/images/{filename}`. No new image assets, remote downloads, or duplicate files are introduced.
+
+---
+
+### Legolas QA Decision: Tappable Saint Detail Images
+
+**Date:** 2026-04-29  
+**Status:** APPROVE  
+**Scope:** iOS and Android saint-detail portrait enlargement affordance
+
+#### Decision
+
+Approve the pending iOS and Android changes. Both implementations reuse existing bundled saint images and do not introduce new image files, duplicate assets, or remote downloads.
+
+#### Validation
+
+- No binary/image diffs and no tracked image-like asset additions.
+- `SharedContent/images/` remains 103 files / 8.5M.
+- `saints-en.json` and `saints-es.json` each reference 103 unique image filenames; 0 missing local files.
+- iOS opens the larger view from `SaintImageView.loadImage(for:)`, which already resolves bundled `SharedContent/images`.
+- Android opens the larger view from `file:///android_asset/images/$filename`, matching the existing `SaintImage` local-asset path.
+- English/Spanish affordance strings and accessibility labels/hints are present on both platforms.
+
+#### Gates Run
+
+- iOS simulator build: `xcodebuild ... -destination 'generic/platform=iOS Simulator' build` — passed.
+- Android: `:app:testDebugUnitTest`, `:app:compileDebugAndroidTestKotlin`, `:app:compileDebugKotlin` — passed.
+
+#### QA Note
+
+There is no iOS XCTest target currently present under `ios/`; iOS coverage for this review is static inspection plus simulator build until a test target is added.
+
+---
+
 ## Governance
 
 - All meaningful changes require team consensus
@@ -655,7 +714,7 @@ CategoryMatchingTest > initializationError FAILED
 
 Robolectric 4.13 does not support Android SDK 35. When the test runner attempted to initialize, the `DefaultSdkPicker` couldn't find a compatible SDK JAR for API level 35 and threw `IllegalArgumentException`.
 
-## Decision
+#### Decision
 
 Upgrade Robolectric from version 4.13 to 4.16.1 in `android/gradle/libs.versions.toml`.
 
@@ -721,7 +780,7 @@ Root cause: Android app upgraded to SDK 35 (commit `12d845da`), but Robolectric 
 
 Robolectric 4.16.1 supports SDK 35 and SDK 36.
 
-## Validation
+#### Validation
 
 **Command:**
 ```bash
@@ -734,7 +793,7 @@ cd android && ./gradlew :app:testDebugUnitTest
 - ✅ CategoryMatchingTest (5 tests): all pass
 - ✅ SaintRepositoryTest (5 tests): all pass
 
-## Decision
+#### Decision
 
 **ACCEPT** — Robolectric 4.16.1 upgrade resolves SDK 35 initialization errors. PR #5 Android tests should now pass on CI.
 

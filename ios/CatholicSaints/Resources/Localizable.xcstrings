@@ -266,6 +266,17 @@
         }
       }
     },
+    "Done" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo"
+          }
+        }
+      }
+    },
     "Double tap to filter" : {
 
     },
@@ -498,6 +509,17 @@
         }
       }
     },
+    "Opens a larger view of this saint image." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre una vista más grande de esta imagen del santo."
+          }
+        }
+      }
+    },
     "Patron Of" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -714,6 +736,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Versión"
+          }
+        }
+      }
+    },
+    "View larger image" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver imagen más grande"
+          }
+        }
+      }
+    },
+    "View larger image of %@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver imagen más grande de %@"
           }
         }
       }

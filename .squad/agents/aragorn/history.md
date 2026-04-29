@@ -132,3 +132,9 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 - `LocalizationService.language` is a `StateFlow`, so tests must not wait for a second emission when the persisted value equals the system-locale fallback; `StateFlow` suppresses duplicate values.
 - For language-switch and persistence tests, choose a target language opposite the current/system fallback so the assertion proves persisted override behavior on both EN and ES CI hosts.
 - Use the test coroutine scope for `PreferenceDataStoreFactory.create(scope = testScope)` so DataStore reads/writes are driven by `StandardTestDispatcher` instead of racing the default IO scope.
+
+### 2026-04-29 — Tappable saint detail images (Android)
+- Confirmed Android bundles saint images from `SharedContent/images/*.jpg` via `syncSharedContent` into `assets/images/`; iOS project includes `../SharedContent` in Resources and `SaintImageView` loads `SharedContent/images` from the app bundle.
+- SharedContent image parity check: EN and ES both reference 103/103 saint image filenames, with 0 missing files in `SharedContent/images`.
+- Android detail image remains circular at 128dp; tapping it opens a larger dialog preview using the same `file:///android_asset/images/{filename}` asset, with no new raster assets, duplicate files, or remote downloads.
+- Verification: `cd android && ./gradlew :app:compileDebugKotlin --quiet` passed.

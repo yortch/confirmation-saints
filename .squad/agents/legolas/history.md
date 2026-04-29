@@ -187,3 +187,9 @@
 ### Localization DataStore Test Determinism Review (2026-04-25)
 - Approved the localization persistence test fix: choose the opposite of the current/default locale, drive DataStore with the test dispatcher-owned scope, and assert `StateFlow.value` after `advanceUntilIdle()` instead of waiting for a non-guaranteed duplicate emission.
 - Validation passed: focused `LocalizationServiceTest` under default and Spanish JVM locales, plus full Android `:app:testDebugUnitTest` suite. Avoid running the same Gradle test task concurrently because test-result outputs can collide.
+
+### Tappable Saint Detail Images QA (2026-04-29)
+- Approved iOS + Android saint-detail image enlargement: both platforms keep the existing circular portrait and open the same bundled local image in a larger view (`SaintImageView.loadImage` on iOS; `file:///android_asset/images/$filename` on Android).
+- App-size guardrail: no binary/image diffs, no tracked image-like asset additions, 103 SharedContent image files remain 8.5M, and EN/ES saint JSON has 103 unique image references with 0 missing files.
+- Localization/a11y guardrail: verify visible affordance, semantic click label/role, close/done action, and EN→ES translations together; iOS string catalog/AppStrings and Android `AppStrings.kt` both covered the new image affordance strings.
+- Focused gates passed: iOS simulator build (`xcodebuild ... generic/platform=iOS Simulator`), Android `:app:testDebugUnitTest`, `:app:compileDebugAndroidTestKotlin`, and `:app:compileDebugKotlin`. No XCTest target exists under `ios/`, so iOS validation is build/static review unless a test target is later added.
