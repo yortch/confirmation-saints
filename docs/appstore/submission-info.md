@@ -2,11 +2,13 @@
 
 These notes are for the iOS/App Store release only. Android/Google Play notes are tracked separately in `docs/android/submission-info.md` because platform-specific fixes may differ.
 
-## What's New in iOS Version 1.0.2
+## What's New in iOS Version 1.0.3
 
-More saints, better search, and smoother links. We've expanded our collection to over 100 Catholic saints with rich biographies, quotes, and feast days to help you find the right patron for your Confirmation.
+Saint portraits on detail pages are now tappable: when a bundled image is available, you can open it larger while staying fully offline.
 
-We've also improved search so it's faster and easier to find a saint by name or interest, and made sure every external source link is fully tappable. Everything remains 100% offline and private.
+Recently added Wikipedia-sourced saint biographies have been expanded in English and Spanish, giving Confirmation candidates richer stories and context.
+
+This update also improves saint detail reliability when saints have repeated chips or tags.
 
 ---
 
@@ -140,7 +142,12 @@ https://yortch.github.io/confirmation-saints/privacy-policy.html
 
 ### Version
 ```
-1.0.2
+1.0.3
+```
+
+### Build
+```
+3
 ```
 
 ### Bundle ID

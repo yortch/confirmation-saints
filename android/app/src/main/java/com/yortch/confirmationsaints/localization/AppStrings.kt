@@ -42,6 +42,10 @@ object AppStrings {
         "Region" to "Región",
         "Sources" to "Fuentes",
         "Why Choose This Saint?" to "¿Por qué elegir este santo?",
+        "Saint image" to "Imagen del santo",
+        "Tap image to enlarge" to "Toca la imagen para ampliarla",
+        "View larger image" to "Ver imagen más grande",
+        "Close image" to "Cerrar imagen",
 
         // Search / list
         "Search" to "Buscar",

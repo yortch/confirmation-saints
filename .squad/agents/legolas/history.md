@@ -187,3 +187,29 @@
 ### Localization DataStore Test Determinism Review (2026-04-25)
 - Approved the localization persistence test fix: choose the opposite of the current/default locale, drive DataStore with the test dispatcher-owned scope, and assert `StateFlow.value` after `advanceUntilIdle()` instead of waiting for a non-guaranteed duplicate emission.
 - Validation passed: focused `LocalizationServiceTest` under default and Spanish JVM locales, plus full Android `:app:testDebugUnitTest` suite. Avoid running the same Gradle test task concurrently because test-result outputs can collide.
+
+### Tappable Saint Detail Images QA (2026-04-29)
+- Approved iOS + Android saint-detail image enlargement: both platforms keep the existing circular portrait and open the same bundled local image in a larger view (`SaintImageView.loadImage` on iOS; `file:///android_asset/images/$filename` on Android).
+- App-size guardrail: no binary/image diffs, no tracked image-like asset additions, 103 SharedContent image files remain 8.5M, and EN/ES saint JSON has 103 unique image references with 0 missing files.
+- Localization/a11y guardrail: verify visible affordance, semantic click label/role, close/done action, and EN→ES translations together; iOS string catalog/AppStrings and Android `AppStrings.kt` both covered the new image affordance strings.
+- Focused gates passed: iOS simulator build (`xcodebuild ... generic/platform=iOS Simulator`), Android `:app:testDebugUnitTest`, `:app:compileDebugAndroidTestKotlin`, and `:app:compileDebugKotlin`. No XCTest target exists under `ios/`, so iOS validation is build/static review unless a test target is later added.
+
+### Expanded Wikipedia Biography QA (2026-04-29)
+- Reviewed Samwise's expansion of the 22 Wikipedia-sourced saint biographies. EN/ES record counts, ids, schemas, canonical matching fields, images, and source entries remained unchanged; only `lastUpdated` and biography text changed.
+- Biography depth improved from roughly 250–500 characters to roughly 750–900 characters per changed entry, closer to the existing roster median (~1.1–1.2k) while keeping a teen-friendly/reverent tone.
+- QA rejected the batch for two Spanish copy issues in changed biographies: Jacinta Marto's "una de los tres pastorcitos" phrasing and Agnes's "valen la pena defenderse" construction. Future content-depth QA should include a focused Spanish grammar pass even when parity/data tests pass.
+- Validation passed: shared-content parity, schema/id/canonical/source invariant check, and focused Android data-loading tests (`SaintRepositoryTest`, `SourcesIntegrityTest`, `SaintParsingTest`).
+
+### Expanded Wikipedia Biography Re-review (2026-04-29)
+- Approved Frodo's Spanish copy fixes for Jacinta Marto (`formó parte de los tres pastorcitos`) and Agnes (`vale la pena defender la dignidad, los límites y la fe`); both prior blocking phrases are gone.
+- Revalidation passed: JSON parse/count/unique IDs, changed-record schema/biography-only diff check, EN/ES canonical/source URL parity, `python3 tests/shared-content-parity.py`, and focused Android data-loading tests (`SaintRepositoryTest`, `SourcesIntegrityTest`, `SaintParsingTest`).
+- Caveat: no full UI smoke was rerun because the revision is copy-only shared JSON.
+
+### SwiftUI Duplicate Chip IDs QA (2026-04-29)
+- Approved Frodo's iOS `SaintDetailView` fix for duplicate SwiftUI chip IDs: patron/tag `ForEach` loops now key by local indices, so legitimate repeated strings such as `prayer` render as separate chips without mutating saint data.
+- Tappable image behavior remains unchanged: `SaintImageView.loadImage(for:)` still gates the detail image button and the sheet still opens the same bundled image when available.
+- Focused validation passed: `git diff --check`, `cd ios && xcodebuild -project CatholicSaints.xcodeproj -scheme CatholicSaints -destination 'platform=iOS Simulator,name=iPhone 17' CODE_SIGNING_ALLOWED=NO build -quiet`, and simulator install/launch of `com.jorgebalderas.ConfirmationSaints`. The known `UIAccessibilityLoaderWebShared` WebKit/WebCore duplicate-class simulator warning remains ignorable under normal launch/use.
+
+### iOS 1.0.3 Release Prep QA (2026-04-29)
+- Release-prep-only changes are approvable when `ios/project.yml` and the XcodeGen project both report `MARKETING_VERSION` 1.0.3 / build 3, Android stays at `versionName` 1.0.2 / `versionCode` 3 during closed testing, and store notes clearly separate iOS App Store release copy from pending Android Google Play notes.
+- Validation pattern: run XcodeGen and confirm the `.pbxproj` diff is unchanged, `git diff --check`, then focused iOS simulator build on iPhone 17. No broad Android build is needed for documentation-only Android release notes with unchanged Gradle metadata.

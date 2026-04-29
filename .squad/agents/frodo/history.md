@@ -114,3 +114,15 @@
 ### iOS Simulator Launch Diagnosis (2026-04-25)
 - `objc[...] UIAccessibilityLoaderWebShared is implemented in both ... WebKit.axbundle ...` on iOS 26.4 simulator is a harmless simulator/runtime accessibility-bundle warning, not an app crash. Verified `xcodebuild -project CatholicSaints.xcodeproj -scheme CatholicSaints -destination 'platform=iOS Simulator,name=iPhone 17' build` succeeds and `simctl launch` starts `com.jorgebalderas.ConfirmationSaints`; no crash reports were generated.
 - **Cross-team validation:** Legolas independently reproduced on iPhone 17 + iPad A16 simulators, both builds succeeded, both apps launched without crash. Diagnosis APPROVED. Modern Day Saints work cleared to proceed.
+
+### Tappable Saint Images on iOS Detail Screen (2026-04-29)
+- Confirmed iOS bundles `SharedContent/` as a folder resource via `ios/project.yml`; `SaintImageView` loads saint portraits from `SharedContent/images` with asset-catalog fallback.
+- Confirmed Android bundles the same images through `syncSharedContent`, which copies `SharedContent/images/*.jpg` into `android/app/src/main/assets/images/` before `preBuild`.
+- Added iOS detail-screen tap affordance only when the local bundled image resolves; the existing circular portrait remains unchanged and opens the same raster image larger in a localized sheet.
+
+### SwiftUI Duplicate Chip IDs (2026-04-29)
+- For saint detail chip rows, repeated display strings can be legitimate across affinity/tag data (e.g., "prayer"). Use collection indices as local `ForEach` IDs for repeated string chips so SwiftUI keeps each rendered chip distinct without mutating saint content.
+
+### iOS 1.0.3 Release Prep (2026-04-29)
+- iOS version source of truth is `ios/project.yml`; for App Store release prep update both `MARKETING_VERSION` and monotonically-increasing `CURRENT_PROJECT_VERSION`, then regenerate with `cd ios && xcodegen generate`. For v1.0.3 this is marketing version 1.0.3, build 3.
+- Keep App Store release notes in `docs/appstore/submission-info.md` iOS-specific; Android/Google Play notes and version metadata can diverge during closed testing.
