@@ -26,18 +26,32 @@ struct Saint: Codable, Identifiable, Hashable, Sendable {
     let image: SaintImage?
     let sources: [SourceEntry]
 
-    /// Formatted feast day for display (e.g. "October 1")
+    /// Formatted feast day for display (e.g. "October 1" or "1 de octubre")
     var formattedFeastDay: String {
+        formattedFeastDay(language: "en")
+    }
+
+    func formattedFeastDay(language: String) -> String {
         let parts = feastDay.split(separator: "-")
         guard parts.count == 2,
               let month = Int(parts[0]),
               let day = Int(parts[1]) else { return feastDay }
-        let months = [
-            1: "January", 2: "February", 3: "March", 4: "April",
-            5: "May", 6: "June", 7: "July", 8: "August",
-            9: "September", 10: "October", 11: "November", 12: "December"
-        ]
-        return "\(months[month] ?? "") \(day)"
+
+        if language == "es" {
+            let months = [
+                1: "enero", 2: "febrero", 3: "marzo", 4: "abril",
+                5: "mayo", 6: "junio", 7: "julio", 8: "agosto",
+                9: "septiembre", 10: "octubre", 11: "noviembre", 12: "diciembre"
+            ]
+            return "\(day) de \(months[month] ?? "")"
+        } else {
+            let months = [
+                1: "January", 2: "February", 3: "March", 4: "April",
+                5: "May", 6: "June", 7: "July", 8: "August",
+                9: "September", 10: "October", 11: "November", 12: "December"
+            ]
+            return "\(months[month] ?? "") \(day)"
+        }
     }
 
     var isYoung: Bool { ageCategory == "young" }

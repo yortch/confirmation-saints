@@ -2,8 +2,11 @@ import SwiftUI
 
 struct SaintRowView: View {
     let saint: Saint
+    @Environment(\.appLanguage) private var language
 
     var body: some View {
+        let feastDay = saint.formattedFeastDay(language: language)
+
         HStack(spacing: 12) {
             SaintImageView(saint: saint, size: 50)
                 .accessibilityHidden(true)
@@ -15,7 +18,7 @@ struct SaintRowView: View {
                     Image(systemName: "calendar")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
-                    Text(saint.formattedFeastDay)
+                    Text(feastDay)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
@@ -42,6 +45,6 @@ struct SaintRowView: View {
         }
         .padding(.vertical, 4)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(saint.name), \(saint.formattedFeastDay)\(saint.country.map { ", \($0)" } ?? "")\(saint.isYoung ? ", Young Saint" : "")")
+        .accessibilityLabel("\(saint.name), \(feastDay)\(saint.country.map { ", \($0)" } ?? "")\(saint.isYoung ? ", \(AppStrings.localized("Young Saint", language: language))" : "")")
     }
 }

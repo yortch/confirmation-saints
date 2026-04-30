@@ -82,7 +82,7 @@ struct SaintDetailView: View {
                     .foregroundStyle(.tertiary)
             }
 
-            Text(saint.formattedFeastDay)
+            Text(saint.formattedFeastDay(language: language))
                 .font(.title3)
                 .foregroundStyle(.secondary)
 
