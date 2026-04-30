@@ -2,13 +2,13 @@
 
 Estas notas son solo para el lanzamiento de iOS/App Store. Las notas de Android/Google Play se gestionan por separado en `docs/android/submission-info.md` porque las correcciones específicas de cada plataforma pueden ser diferentes.
 
-## Novedades en iOS versión 1.0.3
+## Novedades en iOS versión 1.0.4
 
-Los retratos de santos en las páginas de detalle ahora se pueden tocar: cuando hay una imagen incluida en la app, puedes abrirla en tamaño más grande sin dejar de estar completamente sin conexión.
+Esta versión agrega tres nuevos perfiles de santos para que los candidatos a la Confirmación exploren: santa Margarita María Alacoque, san Benito de Nursia y san Pedro de San José de Betancur.
 
-Las biografías de santos agregadas recientemente a partir de Wikipedia se ampliaron en inglés y español, para ofrecer a los candidatos a la Confirmación historias y contexto más enriquecedores.
+También se actualizó la información de los santos para reflejar el estado de canonización de san Carlo Acutis y san Pier Giorgio Frassati.
 
-Esta actualización también mejora la confiabilidad de los detalles de los santos cuando algunos tienen chips o etiquetas repetidos.
+El texto de introducción se limpió al quitar la mención de una función de días de fiesta que aún no está implementada, para que la bienvenida coincida con lo que la app ofrece actualmente.
 
 ---
 
@@ -142,12 +142,12 @@ https://yortch.github.io/confirmation-saints/privacy-policy.html
 
 ### Versión
 ```
-1.0.3
+1.0.4
 ```
 
 ### Build
 ```
-3
+4
 ```
 
 ### Bundle ID

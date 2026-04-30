@@ -2,13 +2,13 @@
 
 These notes are for the iOS/App Store release only. Android/Google Play notes are tracked separately in `docs/android/submission-info.md` because platform-specific fixes may differ.
 
-## What's New in iOS Version 1.0.3
+## What's New in iOS Version 1.0.4
 
-Saint portraits on detail pages are now tappable: when a bundled image is available, you can open it larger while staying fully offline.
+This release adds three new saint profiles for Confirmation candidates to explore: St. Margaret Mary Alacoque, St. Benedict of Nursia, and St. Peter of Saint Joseph de Betancur.
 
-Recently added Wikipedia-sourced saint biographies have been expanded in English and Spanish, giving Confirmation candidates richer stories and context.
+Saint information has also been refreshed to reflect the canonization status of St. Carlo Acutis and St. Pier Giorgio Frassati.
 
-This update also improves saint detail reliability when saints have repeated chips or tags.
+Onboarding copy has been cleaned up by removing an unimplemented Feast Day feature claim, keeping the welcome experience aligned with what the app currently offers.
 
 ---
 
@@ -142,12 +142,12 @@ https://yortch.github.io/confirmation-saints/privacy-policy.html
 
 ### Version
 ```
-1.0.3
+1.0.4
 ```
 
 ### Build
 ```
-3
+4
 ```
 
 ### Bundle ID

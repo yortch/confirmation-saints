@@ -131,17 +131,6 @@
         }
       }
     },
-    "By Feast Day" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Por Día de Fiesta"
-          }
-        }
-      }
-    },
     "By Interest" : {
       "extractionState" : "stale",
       "localizations" : {

@@ -108,6 +108,7 @@ SAINT_IMAGES = {
     "perpetua": "Perpetua,_Felicitas,_Revocatus,_Saturninus_and_Secundulus_(Menologion_of_Basil_II).jpg",
     "cyril-alexandria": "Chora-Kirche_2013-03-21zh_(cropped).jpg",
     "margaret-antioch": "Margaret_the_Virgin.jpg",
+    "margaret-mary-alacoque": "Marguerite-Marie Alacoque.jpg",
     "basil-great": "Basil_of_Caesarea.jpg",
     "ephrem-syrian": "Ephrem_the_Syrian_(mosaic_in_Nea_Moni).jpg",
     "gregory-narek": "Grigor_Narekatsi_1.jpg",
@@ -125,6 +126,8 @@ SAINT_IMAGES = {
     "agatha-sicily": "Sant'agata,_VII-inizio_VIII_secolo_ca.,_forse_da_s.m._antiqua_(roma,_coll._priv.).jpg",
     "agnes": "2872-saint-agnes-domenichino.jpg",
     "lucy": "Niccolò_di_Segna_-_Saint_Lucy_-_Walters_37756.jpg",
+    "benedict-of-nursia": "Benedict_of_Nursia.jpg",
+    "peter-of-saint-joseph-betancur": "Sanhermanopedro.JPG",
 }
 
 DEFAULT_IMAGE_ATTRIBUTIONS = {

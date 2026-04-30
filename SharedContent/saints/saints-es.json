@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "language": "es",
-  "lastUpdated": "2026-04-29",
+  "lastUpdated": "2026-04-30",
   "saints": [
     {
       "id": "therese-of-lisieux",
@@ -131,11 +131,11 @@
     },
     {
       "id": "carlo-acutis",
-      "name": "Beato Carlo Acutis",
+      "name": "San Carlo Acutis",
       "feastDay": "10-12",
       "birthDate": "1991-05-03",
       "deathDate": "2006-10-12",
-      "canonizationDate": null,
+      "canonizationDate": "2025-09-07",
       "country": "Italia",
       "region": "Europe",
       "gender": "male",
@@ -154,14 +154,12 @@
       "tags": [
         "young",
         "modern",
-        "tech-savvy",
-        "Blessed"
+        "tech-savvy"
       ],
       "displayTags": [
         "joven",
         "moderno",
-        "tecnológico",
-        "beato"
+        "tecnológico"
       ],
       "affinities": [
         "technology",
@@ -178,7 +176,7 @@
         "animales"
       ],
       "quote": "La Eucaristía es mi autopista al cielo.",
-      "biography": "Carlo Acutis nació el 3 de mayo de 1991 en Londres, de padres italianos, y creció en Milán. Desde muy pequeño mostró un profundo amor por la Eucaristía y comenzó a asistir a Misa diaria a los siete años. También era un genio de la tecnología — aprendió programación por su cuenta siendo niño.\n\nCarlo usó sus habilidades tecnológicas para su fe, creando un sitio web que catalogaba milagros eucarísticos de todo el mundo. A pesar de ser un adolescente normal que amaba el PlayStation, el fútbol y sus mascotas, tenía una vida de oración extraordinaria y ayudaba regularmente a personas sin hogar.\n\nEn octubre de 2006, a Carlo le diagnosticaron una forma agresiva de leucemia. Ofreció su sufrimiento por el Papa y la Iglesia. Murió el 12 de octubre de 2006, con solo 15 años. Fue beatificado en 2020 y su cuerpo fue encontrado notablemente preservado.",
+      "biography": "Carlo Acutis nació el 3 de mayo de 1991 en Londres, de padres italianos, y creció en Milán. Desde muy pequeño mostró un profundo amor por la Eucaristía y comenzó a asistir a Misa diaria a los siete años. También era un genio de la tecnología — aprendió programación por su cuenta siendo niño.\n\nCarlo usó sus habilidades tecnológicas para su fe, creando un sitio web que catalogaba milagros eucarísticos de todo el mundo. A pesar de ser un adolescente normal que amaba el PlayStation, el fútbol y sus mascotas, tenía una vida de oración extraordinaria y ayudaba regularmente a personas sin hogar.\n\nEn octubre de 2006, a Carlo le diagnosticaron una forma agresiva de leucemia. Ofreció su sufrimiento por el Papa y la Iglesia. Murió el 12 de octubre de 2006, con solo 15 años. Fue beatificado en 2020 y canonizado por el Papa León XIV el 7 de septiembre de 2025, junto con Pier Giorgio Frassati, convirtiéndose en el primer santo milenial.",
       "whyConfirmationSaint": "Carlo Acutis es el santo patrono de la generación digital. Le encantaban los videojuegos, las computadoras y el fútbol — como a muchos jóvenes hoy — pero amaba a Jesús por encima de todo. Demuestra que puedes ser un adolescente normal Y un santo. Usó la tecnología no solo para divertirse sino para difundir la fe. Si te gusta la tecnología, los videojuegos o las redes sociales, Carlo prueba que puedes usar esos dones para Dios.",
       "image": {
         "filename": "carlo-acutis.jpg",
@@ -188,6 +186,14 @@
         {
           "name": "Catholic News Agency",
           "url": "https://www.catholicnewsagency.com/saint/bl-carlo-acutis-919"
+        },
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/pope/news/2025-06/carlo-acutis-and-pier-giorgio-frassati-to-be-canonized-together.html"
+        },
+        {
+          "name": "Vatican",
+          "url": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250907-omelia-frassati-acutis.html"
         },
         {
           "name": "Hallow",
@@ -1143,11 +1149,11 @@
     },
     {
       "id": "pier-giorgio-frassati",
-      "name": "Beato Pier Giorgio Frassati",
+      "name": "San Pier Giorgio Frassati",
       "feastDay": "07-04",
       "birthDate": "1901-04-06",
       "deathDate": "1925-07-04",
-      "canonizationDate": null,
+      "canonizationDate": "2025-09-07",
       "country": "Italia",
       "region": "Europe",
       "gender": "male",
@@ -1167,15 +1173,13 @@
         "young",
         "modern",
         "athletic",
-        "charitable",
-        "Blessed"
+        "charitable"
       ],
       "displayTags": [
         "joven",
         "moderno",
         "atlético",
-        "caritativo",
-        "beato"
+        "caritativo"
       ],
       "affinities": [
         "hiking",
@@ -1194,7 +1198,7 @@
         "amistad"
       ],
       "quote": "¡Hacia la cumbre! Verso l'alto!",
-      "biography": "Pier Giorgio Frassati nació el 6 de abril de 1901 en Turín, Italia, en una familia adinerada y prominente — su padre era dueño del periódico La Stampa y sirvió como embajador italiano en Alemania. A pesar de su origen privilegiado, Pier Giorgio se sentía atraído por los pobres y marginados.\n\nEra un ávido montañista, esquiador y amante del aire libre, famoso por su alegría contagiosa y su amor por la aventura. Se unió a la Sociedad de San Vicente de Paúl y secretamente regalaba su dinero, el pasaje de autobús e incluso su ropa a los pobres. También era políticamente activo, oponiéndose tanto al Fascismo como al Comunismo, y una vez fue golpeado por la policía fascista en una manifestación.\n\nEn junio de 1925, Pier Giorgio contrajo polio, probablemente de las personas enfermas que visitaba regularmente. Murió el 4 de julio de 1925, a los 24 años. Su familia se sorprendió cuando miles de personas pobres que nunca habían conocido aparecieron en su funeral. Fue beatificado por Juan Pablo II en 1990, quien lo llamó 'el hombre de las ocho Bienaventuranzas'.",
+      "biography": "Pier Giorgio Frassati nació el 6 de abril de 1901 en Turín, Italia, en una familia adinerada y prominente — su padre era dueño del periódico La Stampa y sirvió como embajador italiano en Alemania. A pesar de su origen privilegiado, Pier Giorgio se sentía atraído por los pobres y marginados.\n\nEra un ávido montañista, esquiador y amante del aire libre, famoso por su alegría contagiosa y su amor por la aventura. Se unió a la Sociedad de San Vicente de Paúl y secretamente regalaba su dinero, el pasaje de autobús e incluso su ropa a los pobres. También era políticamente activo, oponiéndose tanto al Fascismo como al Comunismo, y una vez fue golpeado por la policía fascista en una manifestación.\n\nEn junio de 1925, Pier Giorgio contrajo polio, probablemente de las personas enfermas que visitaba regularmente. Murió el 4 de julio de 1925, a los 24 años. Su familia se sorprendió cuando miles de personas pobres que nunca habían conocido aparecieron en su funeral. Fue beatificado por Juan Pablo II en 1990, quien lo llamó 'el hombre de las ocho Bienaventuranzas', y fue canonizado por el Papa León XIV el 7 de septiembre de 2025, junto con Carlo Acutis.",
       "whyConfirmationSaint": "Pier Giorgio Frassati es el santo para aventureros, atletas y cualquiera que ame la vida. Escalaba montañas, hacía bromas a sus amigos y se divertía enormemente — mientras secretamente daba todo lo que tenía a los pobres. Su lema era '¡Verso l'alto!' — '¡Hacia la cumbre!' Demuestra que ser santo no significa ser aburrido. Significa vivir la vida plenamente y amar a los demás radicalmente.",
       "image": {
         "filename": "pier-giorgio-frassati.jpg",
@@ -1204,6 +1208,14 @@
         {
           "name": "Catholic News Agency",
           "url": "https://www.catholicnewsagency.com/saint/bl-pier-giorgio-frassati-584"
+        },
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/pope/news/2025-06/carlo-acutis-and-pier-giorgio-frassati-to-be-canonized-together.html"
+        },
+        {
+          "name": "Vatican",
+          "url": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250907-omelia-frassati-acutis.html"
         },
         {
           "name": "EWTN",
@@ -3799,7 +3811,7 @@
       "feastDay": "08-13",
       "birthDate": "1852-08-12",
       "deathDate": "1890-08-14",
-      "canonizationDate": "2020-10-31",
+      "canonizationDate": null,
       "country": "Estados Unidos",
       "region": "Americas",
       "gender": "male",
@@ -6720,6 +6732,228 @@
         {
           "name": "Wikipedia",
           "url": "https://en.wikipedia.org/wiki/Saint_Lucy"
+        }
+      ]
+    },
+    {
+      "id": "margaret-mary-alacoque",
+      "name": "Santa Margarita María Alacoque",
+      "feastDay": "10-16",
+      "birthDate": "1647-07-22",
+      "deathDate": "1690-10-17",
+      "canonizationDate": "1920-05-13",
+      "country": "Francia",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Sacred Heart devotion",
+        "those suffering with polio",
+        "loss of parents"
+      ],
+      "displayPatronOf": [
+        "devoción al Sagrado Corazón",
+        "personas que sufren polio",
+        "pérdida de padres"
+      ],
+      "tags": [
+        "mystic",
+        "religious sister",
+        "visionary",
+        "Sacred Heart",
+        "French"
+      ],
+      "displayTags": [
+        "mística",
+        "hermana religiosa",
+        "visionaria",
+        "Sagrado Corazón",
+        "francesa"
+      ],
+      "affinities": [
+        "prayer",
+        "Eucharistic adoration",
+        "Sacred Heart devotion",
+        "perseverance",
+        "compassion"
+      ],
+      "displayAffinities": [
+        "oración",
+        "adoración eucarística",
+        "devoción al Sagrado Corazón",
+        "perseverancia",
+        "compasión"
+      ],
+      "quote": "No necesito nada más que a Dios y perderme en el corazón de Jesús.",
+      "biography": "Margarita María Alacoque nació el 22 de julio de 1647 en Borgoña, Francia. Su niñez estuvo marcada por la muerte de su padre, dificultades familiares y una enfermedad grave que la dejó débil durante años. Esas experiencias formaron en ella una fe silenciosa y firme, con una confianza especial en Jesús y María.\n\nA los 24 años, Margarita María ingresó en el monasterio de la Visitación en Paray-le-Monial. Deseaba una vida religiosa escondida, pero desde la década de 1670 contó haber recibido visiones en las que Cristo le reveló su Sagrado Corazón como signo de su amor ardiente por la humanidad. El mensaje que transmitió animaba a la Comunión frecuente, la oración ante la Eucaristía, la devoción de los primeros viernes y una fiesta en honor del Sagrado Corazón.\n\nMargarita María enfrentó incomprensión y críticas, incluso dentro de su propia comunidad. Con el apoyo de San Claudio de la Colombière, permaneció obediente, humilde y fiel a la misión que se le había confiado. Murió el 17 de octubre de 1690 y fue canonizada por el Papa Benedicto XV en 1920. Su testimonio ayudó a extender la devoción al Sagrado Corazón por toda la Iglesia.",
+      "whyConfirmationSaint": "Santa Margarita María es una santa de Confirmación para quien se siente atraído por la oración, la Eucaristía y el amor de Jesús. Es especialmente significativa para quienes han conocido la enfermedad, la pérdida familiar o la experiencia de no ser comprendidos. Su vida muestra que un corazón silencioso y fiel puede ayudar a toda la Iglesia a recordar cuánto nos ama Dios.",
+      "image": {
+        "filename": "margaret-mary-alacoque.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/10/16/st---margaret-mary-alacoque--apostle-of-the-sacred-heart.html"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-margaret-mary-alacoque"
+        }
+      ]
+    },
+    {
+      "id": "benedict-of-nursia",
+      "name": "San Benito de Nursia",
+      "feastDay": "07-11",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": "Italia",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Europe",
+        "monastic life",
+        "monks",
+        "students",
+        "against poison",
+        "against temptation"
+      ],
+      "displayPatronOf": [
+        "Europa",
+        "vida monástica",
+        "monjes",
+        "estudiantes",
+        "contra el veneno",
+        "contra la tentación"
+      ],
+      "tags": [
+        "monk",
+        "abbot",
+        "founder",
+        "Rule of St. Benedict",
+        "Italian"
+      ],
+      "displayTags": [
+        "monje",
+        "abad",
+        "fundador",
+        "Regla de San Benito",
+        "italiano"
+      ],
+      "affinities": [
+        "prayer",
+        "work",
+        "community",
+        "discipline",
+        "learning"
+      ],
+      "displayAffinities": [
+        "oración",
+        "trabajo",
+        "comunidad",
+        "disciplina",
+        "aprendizaje"
+      ],
+      "quote": "No antepongan absolutamente nada a Cristo.",
+      "biography": "Benito nació alrededor del año 480 en Nursia, Italia, en una época en que el mundo romano estaba cambiando y era inestable. De joven fue a Roma para estudiar, pero se desanimó por la corrupción y las distracciones que encontró allí. Deseando pertenecer totalmente a Dios, se retiró a una vida de oración y soledad cerca de Subiaco.\n\nCon el tiempo, otros hombres acudieron a él en busca de guía, y Benito se convirtió en padre espiritual de comunidades de monjes. Más tarde fundó el monasterio de Monte Cassino, donde escribió la Regla de San Benito. La Regla ofrecía un camino equilibrado de vida cristiana basado en la oración, el trabajo, la Escritura, la obediencia, la hospitalidad y la comunidad. Su sabiduría formó monasterios por toda Europa y le ganó a Benito el título de padre del monacato occidental.\n\nLa vida de Benito no fue una huida del mundo, sino un testimonio de cómo los hábitos diarios pueden hacerse santos. Enseñó que el trabajo ordinario, las comidas compartidas, la escucha, el silencio y el cuidado de los huéspedes podían convertirse en maneras de buscar a Cristo. Su fiesta se celebra el 11 de julio, y se le honra como uno de los santos patronos de Europa.",
+      "whyConfirmationSaint": "San Benito es un gran santo de Confirmación para quien desea estructura, paz y propósito en la vida diaria. Es especialmente significativo para estudiantes, personas atraídas por la oración y cualquiera que quiera que la fe forme su trabajo, sus amistades y sus hábitos. Benito muestra que la santidad crece mediante pequeños actos de fidelidad vividos en comunidad.",
+      "image": {
+        "filename": "benedict-of-nursia.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/07/11/st--benedict--abbot--patron-of-europe.html"
+        },
+        {
+          "name": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Benedict-of-Nursia"
+        }
+      ]
+    },
+    {
+      "id": "peter-of-saint-joseph-betancur",
+      "name": "San Pedro de San José de Betancur",
+      "feastDay": "04-24",
+      "birthDate": "1626-03-21",
+      "deathDate": "1667-04-25",
+      "canonizationDate": "2002-07-30",
+      "country": "España",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Guatemala",
+        "Central America",
+        "homeless people",
+        "the sick",
+        "foundlings",
+        "charity",
+        "mercy"
+      ],
+      "displayPatronOf": [
+        "Guatemala",
+        "Centroamérica",
+        "personas sin hogar",
+        "enfermos",
+        "niños abandonados",
+        "caridad",
+        "misericordia"
+      ],
+      "tags": [
+        "Franciscan",
+        "Third Order",
+        "founder",
+        "missionary",
+        "Latin American",
+        "Spanish"
+      ],
+      "displayTags": [
+        "franciscano",
+        "Tercera Orden",
+        "fundador",
+        "misionero",
+        "latinoamericano",
+        "español"
+      ],
+      "affinities": [
+        "charity",
+        "mercy",
+        "service",
+        "compassion",
+        "prayer",
+        "hospitality"
+      ],
+      "displayAffinities": [
+        "caridad",
+        "misericordia",
+        "servicio",
+        "compasión",
+        "oración",
+        "hospitalidad"
+      ],
+      "quote": null,
+      "biography": "Pedro de San José de Betancur nació el 21 de marzo de 1626 en Tenerife, en las Islas Canarias, España. De joven dejó su hogar y viajó a Guatemala, deseando servir a Dios en una tierra nueva. Intentó estudiar para el sacerdocio, pero la mala salud y las dificultades académicas hicieron imposible ese camino. En lugar de rendirse, escuchó una vocación diferente.\n\nConocido como Hermano Pedro, se hizo terciario franciscano y se dedicó a las personas que más fácilmente eran olvidadas. En Antigua Guatemala enseñó a niños, visitó presos, cuidó enfermos, recibió viajeros y pidió alimento y medicinas para quienes no tenían a nadie que los ayudara. Abrió un pequeño hospital y refugio que servía a personas sin hogar, enfermos y niños abandonados. Sus obras de misericordia crecieron hasta convertirse en la comunidad betlemita, una familia de servicio marcada por la pobreza, la oración y la compasión.\n\nEl Hermano Pedro murió el 25 de abril de 1667, consumido por la caridad. El Papa Juan Pablo II lo canonizó en la Ciudad de Guatemala el 30 de julio de 2002. Es especialmente querido en Guatemala, Centroamérica y las Islas Canarias como un santo que hizo la misericordia práctica y cercana a los pobres.",
+      "whyConfirmationSaint": "San Pedro de San José de Betancur es un poderoso santo de Confirmación para quien se siente llamado a la misericordia, el servicio y la caridad práctica. Muestra que los obstáculos no terminan una vocación: cuando una puerta se cerró, encontró a Cristo entre las personas sin hogar, los enfermos y los abandonados. Elígelo si quieres un patrono que convierta la compasión en acción.",
+      "image": {
+        "filename": "peter-of-saint-joseph-betancur.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican",
+          "url": "https://www.vatican.va/content/john-paul-ii/es/homilies/2002/documents/hf_jp-ii_hom_20020730_canonization-guatemala.html"
+        },
+        {
+          "name": "Order of Friars Minor",
+          "url": "https://ofm.org/en/saint-brother-pedro.html"
         }
       ]
     }
