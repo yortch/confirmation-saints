@@ -126,3 +126,18 @@
 ### iOS 1.0.3 Release Prep (2026-04-29)
 - iOS version source of truth is `ios/project.yml`; for App Store release prep update both `MARKETING_VERSION` and monotonically-increasing `CURRENT_PROJECT_VERSION`, then regenerate with `cd ios && xcodegen generate`. For v1.0.3 this is marketing version 1.0.3, build 3.
 - Keep App Store release notes in `docs/appstore/submission-info.md` iOS-specific; Android/Google Play notes and version metadata can diverge during closed testing.
+
+- Promoted newly captured App Store screenshots 09/10 into submission slots 03/05 after confirming 1284 x 2778 dimensions; no resize was needed.
+
+## Learnings
+
+### Spanish App Store Screenshots (2026-04-29)
+- Captured Spanish App Store screenshots by setting simulator app defaults directly: `appLanguage=es` and `hasSeenWelcome=true`, then launching the real app and using `xcrun simctl io <device> screenshot` with absolute output paths.
+- Output set completed under `docs/appstore/es/`: `03-saints-list.png`, `04-explore.png`, `05-saint-detail.png`, `06-settings.png`, and `07-ipad-about.png`; existing `01-welcome.png` and `02-about.png` were verified and left intact.
+- iPhone captures used the existing iPhone 14 Plus simulator at 1284×2778; iPad capture used iPad Pro 13-inch (M5) at 2064×2752 to match `docs/appstore/07-ipad-about.png`.
+- `simctl io screenshot` succeeded without macOS screenshot-permission blockage; relative output paths failed in this environment, so use absolute paths for reliable capture.
+
+### Android Closed Testing Marketing Page (2026-04-30)
+- Updated `docs/index.html` hero with a "Download test version for Android" CTA that anchors to `#platform-android` and activates the Android platform tab via safe hash handling.
+- Android tab now states the app is in Google Play closed testing and instructs testers to first join `testers-community@googlegroups.com` at `https://groups.google.com/g/testers-community`.
+- After joining the tester group, Android users are directed to download from `https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints`.
