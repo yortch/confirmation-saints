@@ -674,6 +674,51 @@ This keeps behavior strong: the test proves a user-selected language overrides t
 
 ---
 
+### Decision: Frodo iOS 1.0.3 Release Prep
+
+**Author:** Frodo (iOS Dev)
+**Status:** Approved
+
+#### Context
+
+The v1.0.1 release bumped both `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` together. The v1.0.2 release changed only marketing version, leaving build version reused. For v1.0.3, use build 3 for a fresh, monotonically increasing iOS build number.
+
+#### Decision
+
+Bump both `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` in `ios/project.yml`, then regenerate the Xcode project with XcodeGen.
+
+#### Scope
+
+This applies to iOS/App Store metadata only. Do not change Android `versionName` or `versionCode` while Android remains in closed testing unless an Android release is explicitly scheduled.
+
+---
+
+### Decision: Frodo — Spanish App Store Screenshots
+
+**Author:** Frodo (iOS Dev)
+**Date:** 2026-04-29
+**Status:** Implemented
+
+#### Context
+
+Spanish App Store screenshots should use the real iOS app with `appLanguage=es` in app defaults, not simulator locale alone. Feast days were still visible in English month names on Spanish saint list/detail screenshots.
+
+#### Decision / Finding
+
+Spanish App Store screenshots use the real iOS app with `appLanguage=es`. While preparing the screenshots, Frodo localized saint feast-day display for Spanish UI by routing row/detail feast dates through the active app language.
+
+#### Rationale
+
+The app's in-app language switch is backed by `@AppStorage("appLanguage")`, so setting only the simulator locale can leave UI/content in English. This ensures full Spanish UI in screenshots.
+
+#### Impact
+
+- Screenshot outputs live in `docs/appstore/es/`.
+- iOS UI now displays feast days as Spanish strings such as `28 de agosto` when `appLanguage == "es"`.
+- English formatting remains unchanged through the existing `formattedFeastDay` property.
+
+---
+
 ## Archived Decisions (older than 2026-03-22)
 
 See `decisions-archive.md` for foundational iOS architecture decisions from 2026-04-12 to 2026-04-13.

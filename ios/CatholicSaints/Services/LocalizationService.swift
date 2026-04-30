@@ -12,7 +12,6 @@ struct AppStrings {
             "Born": "Nacimiento",
             "Browse, search, and discover the saint who will walk with you on your Confirmation journey.": "Explora, busca y descubre al santo que caminará contigo en tu jornada de Confirmación.",
             "By Country": "Por País",
-            "By Feast Day": "Por Día de Fiesta",
             "By Interest": "Por Interés",
             "By Life Stage": "Por Etapa de Vida",
             "By Name": "Por Nombre",

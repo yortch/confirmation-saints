@@ -70,7 +70,6 @@ object AppStrings {
         "By Name" to "Por Nombre",
         "By Interest" to "Por Interés",
         "By Country" to "Por País",
-        "By Feast Day" to "Por Día de Fiesta",
         "By Life Stage" to "Por Etapa de Vida",
 
         // Life state display values (lowercase keys, match saint data)

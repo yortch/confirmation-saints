@@ -27,7 +27,6 @@ import androidx.compose.material.icons.filled.PanTool
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.TextFields
-import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -193,7 +192,6 @@ private fun DiscoverPage() {
         Icons.Default.TextFields to AppStrings.localized("By Name", language),
         Icons.Default.Favorite to AppStrings.localized("By Interest", language),
         Icons.Default.Public to AppStrings.localized("By Country", language),
-        Icons.Default.DateRange to AppStrings.localized("By Feast Day", language),
         Icons.Default.Person to AppStrings.localized("By Life Stage", language),
     )
     Column(
