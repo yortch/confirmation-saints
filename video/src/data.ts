@@ -45,12 +45,13 @@ export const ROTATING_TAGS = [
   "peacemaker",
 ];
 
-// Hero saint — data copied verbatim from SharedContent/saints/saints-en.json.
+// Hero saint — display data synced with SharedContent/saints/saints-en.json.
 export const HERO = {
-  name: "Bl. Carlo Acutis",
+  name: "St. Carlo Acutis",
   file: "carlo-acutis.jpg",
   feastDay: "October 12",
   years: "1991 – 2006",
+  canonizationDate: "2025-09-07",
   patronOf: "Patron of the internet, programmers, and youth",
   quote: "The Eucharist is my highway to heaven.",
   attribution: "Public domain, via Wikimedia Commons",

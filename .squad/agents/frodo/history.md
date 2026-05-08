@@ -141,3 +141,8 @@
 - Updated `docs/index.html` hero with a "Download test version for Android" CTA that anchors to `#platform-android` and activates the Android platform tab via safe hash handling.
 - Android tab now states the app is in Google Play closed testing and instructs testers to first join `testers-community@googlegroups.com` at `https://groups.google.com/g/testers-community`.
 - After joining the tester group, Android users are directed to download from `https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints`.
+
+### Carlo Screenshot Refresh for Promo Video (2026-05-08)
+- `docs/appstore/05-saint-detail.png` is already a current iOS/App Store Carlo detail screenshot at 1284×2778 showing `St. Carlo Acutis`; no replacement needed.
+- `docs/android/phone-screenshot-2-saint-detail.png` and `video/public/screenshots/phone-screenshot-2-saint-detail.png` are matching 1080×2424 Android-style assets used by the Remotion promo video; keep them in sync when refreshing the Carlo detail shot.
+- macOS Vision OCR via Swift can verify visible screenshot text locally without adding project dependencies; it correctly flagged stale `Bl.`/`BI.` Carlo text and confirmed replacement `St. Carlo Acutis` text.

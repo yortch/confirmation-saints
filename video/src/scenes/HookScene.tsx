@@ -93,7 +93,7 @@ export const HookScene: React.FC = () => {
           }}
         >
           <div style={{ fontSize: 130, fontWeight: 600, lineHeight: 1, letterSpacing: -2 }}>
-            81 saints.
+            100+ saints.
           </div>
           <div
             style={{

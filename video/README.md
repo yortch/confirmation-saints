@@ -24,9 +24,9 @@ npm run render    # Renders MP4 → out/ConfirmationSaintsPromo.mp4
 
 | # | Scene | Frames | Time | What happens |
 |---|-------|--------|------|--------------|
-| 1 | `HookScene` | 0–120 | 0–4.0s | Red radial burst. Hook: "Preparing for Confirmation?" → Promise: "81 saints. One is yours." |
+| 1 | `HookScene` | 0–120 | 0–4.0s | Red radial burst. Hook: "Preparing for Confirmation?" → Promise: "100+ saints. One is yours." |
 | 2 | `MosaicScene` | 120–420 | 4.0–14.0s | 3-column parallax mosaic of 22 saint portraits with rotating tag chips ("martyr", "young", "mystic"…) |
-| 3 | `SaintCardScene` | 420–540 | 14.0–18.0s | Hero card resolves: Bl. Carlo Acutis — portrait, years, feast day, patronage, quote |
+| 3 | `SaintCardScene` | 420–540 | 14.0–18.0s | Hero card resolves: St. Carlo Acutis — portrait, years, feast day, patronage, quote |
 | 4 | `AppTourScene` | 540–810 | 18.0–27.0s | Phone frame showing saint-detail screenshot + captions ("Bios. Quotes. Feast days. Offline."), then triptych of list/explore/about screens + "English + Español." |
 | 5 | `EndCard` | 810–900 | 27.0–30.0s | App icon + wordmark "Confirmation Saints" + "Free · Offline · Bilingual" + App Store & Google Play badges |
 
