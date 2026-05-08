@@ -86,6 +86,7 @@ class SaintListViewModel @Inject constructor(
     fun setAgeCategory(age: String?) = updateFilters { it.copy(selectedAgeCategory = age) }
     fun setGender(gender: String?) = updateFilters { it.copy(selectedGender = gender) }
     fun setAffinity(affinity: String?) = updateFilters { it.copy(selectedAffinity = affinity) }
+    fun setEra(era: String?) = updateFilters { it.copy(selectedEra = era) }
 
     fun clearFilters() {
         _state.update { it.copy(filters = SaintFilters()) }

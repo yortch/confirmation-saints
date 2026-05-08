@@ -28,7 +28,7 @@ junit4 = "4.13.2"
 turbine = "1.1.0"
 androidx-test-ext = "1.2.1"
 androidx-test-runner = "1.6.2"
-robolectric = "4.13"
+robolectric = "4.16.1"
 
 [libraries]
 # Compose (managed by BOM)

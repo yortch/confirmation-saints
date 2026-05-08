@@ -1,0 +1,71 @@
+================================================================================
+SAMWISE BACKLOG ANALYSIS: 81 SAINTS → 100 SAINTS
+================================================================================
+
+CURRENT STATE:
+• App saints: 81 (English + Spanish JSON files)
+• Target: 100
+• Gap: 19 new saints needed
+
+SOURCE ANALYSIS:
+• Life Teen article: 132 candidates listed
+• Already in app: 65 saints
+• Available for addition: 66 candidates
+
+EXCLUSIONS (Pronunciation Difficulty):
+Filtered out 7 saints with names difficult for US English/Spanish speakers:
+1. St. Benedicta Hyon Kyongnyon (Korean)
+2. St. Alphonsa Muttathupadathu (Malayalam)
+3. St. Volodymyr Pryjma (Ukrainian)
+4. St. Zygmunt Gorazdowski (Polish)
+5. St. Ceolwulf of Northumbria (Old English)
+6. St. John Chrysostom (Greek "kri-SOS-tum")
+7. St. Gregory of Nazianzus (Greek "naz-ee-AN-zus")
+
+FINAL 19 SAINTS (Prioritized Order):
+═════════════════════════════════════════════════════════════════════
+
+Tier 1: Asia/Africa Saints
+─────────────────────────
+1. St. Pauline of the Suffering Heart of Jesus (Asia, F, Modern) — Korean missionary
+2. St. Charles Lwanga (Africa, M, Modern) — Uganda's first canonized saint
+3. St. Perpetua (Africa, F) — Early Christian martyr, mother
+4. St. Cyril of Alexandria (Africa, M) — Doctor of the Church
+5. St. Margaret of Antioch (Asia, F) — Pregnancy/nursing patron
+6. St. Basil the Great (Asia, M) — Doctor of the Church, founder
+7. St. Ephrem the Syrian (Asia, M) — Doctor, hymn writer
+8. St. Gregory of Narek (Asia, M) — Armenian mystic theologian
+9. St. Cyril of Jerusalem (Asia, M) — Doctor, catechist
+10. St. Aquilina (Africa, F) — Virgin martyr
+
+Tier 2: Female Saints (Non-Asia/Africa)
+────────────────────────────────────────
+11. St. Mary MacKillop (Oceania, Modern) — First Australian canonized saint (2010)
+12. St. Jacinta Marto (Europe, Modern) — Fatima visionary
+13. St. Sára Salkaházi (Europe, Modern) — Hungarian social worker martyr (WWII)
+14. St. Apollonia (Africa, F) — Dental pain patron
+15. St. Hildegard of Bingen (Europe, F) — Doctor, mystic musician
+16. St. Katharine Drexel (North America, Modern) — Racial justice founder (1955)
+
+Tier 3: Modern Saints
+─────────────────────
+17. St. Francisco Marto (Europe, Modern) — Fatima visionary
+18. St. Padre Pio (Europe, Modern) — Stigmatist, popular devotion
+19. St. Miguel Pro (North America, Modern) — Mexican martyr (1927)
+
+BACKUP CANDIDATES (If Any Above Rejected):
+B1. St. Athanasius (Africa, M) — Doctor, theological authority
+B2. St. Lucy (Europe, F) — Eyesight patron
+B3. St. Agatha of Sicily (Europe, F) — Nurse & breast cancer patron
+B4. St. Agnes (Europe, F) — Youth & purity patron
+B5. St. Philomena (Europe, F) — Infants & impossible cases patron
+B6. St. Zepherin Namuncura (South America, M, Modern) — Argentine indigenous
+B7. St. Albert the Great (Europe, M) — Doctor, scientist patron
+B8. St. Dymphna (Europe, F) — Mental health & epilepsy patron
+
+FINAL VERIFICATION:
+81 current + 19 proposed = 100 ✓
+
+DOCUMENTATION:
+Full backlog with patronages, feast days, pronunciation, and data-entry notes
+written to: .squad/decisions/inbox/samwise-saint-backlog-100.md

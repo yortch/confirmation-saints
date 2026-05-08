@@ -36,6 +36,12 @@ class CategoryMatcherTest {
         assertFalse(CategoryMatcher.matchesEra(saint("a", birthDate = "1949-12-31"), "contemporary"))
     }
 
+    @Test fun `era modern-day covers 1900 and later`() {
+        assertFalse(CategoryMatcher.matchesEra(saint("a", birthDate = "1899-12-31"), "modern-day"))
+        assertTrue(CategoryMatcher.matchesEra(saint("a", birthDate = "1900-01-01"), "modern-day"))
+        assertTrue(CategoryMatcher.matchesEra(saint("a", birthDate = "1991-03-12"), "modern-day"))
+    }
+
     @Test fun `era returns false when birthDate is missing`() {
         assertFalse(CategoryMatcher.matchesEra(saint("a", birthDate = null), "medieval"))
     }
@@ -58,5 +64,19 @@ class CategoryMatcherTest {
         )
         val result = CategoryMatcher.saintsForCategory("era", "modern", saints).map { it.id }
         assertEquals(listOf("modern"), result)
+    }
+
+    @Test fun `SaintFilterEngine filters modern-day era and marks it active`() {
+        val saints = listOf(
+            saint("pre", birthDate = "1899-12-31"),
+            saint("boundary", birthDate = "1900-01-01"),
+            saint("recent", birthDate = "1991-03-12"),
+        )
+        val filters = SaintFilters(selectedEra = "modern-day")
+
+        val result = SaintFilterEngine.apply(saints, filters).map { it.id }.toSet()
+
+        assertTrue(filters.hasActiveFilters)
+        assertEquals(setOf("boundary", "recent"), result)
     }
 }

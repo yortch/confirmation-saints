@@ -507,6 +507,218 @@ Preparing `docs/appstore/submission-info.md` for v1.0.1 release. App grew from 5
 
 ---
 
+### Decision: Introduce "Modern Day Saints" Category/Filter
+
+**Date:** 2026-04-25  
+**Author:** Gandalf (Lead/Architect)  
+**Status:** Approved & Implemented
+
+#### Problem Statement
+
+Users want a quick, user-facing filter to discover saints from the modern era—particularly those from the 20th and 21st centuries who faced challenges and contexts relevant to today's teens. The existing "modern" (1800–1949) and "contemporary" (1950+) era categories are machine-driven and not presented as quick-filter chips; they are also too broad and historical in naming.
+
+#### Decision
+
+**Define "Modern Day Saints" as saints born in or after 1900.**
+
+- **Deterministic criterion:** Derived from existing `birthDate` field
+- **Cross-platform:** Identical logic on iOS and Android
+- **13 qualifying saints:** Carlo Acutis, Chiara Luce Badano, José Sánchez del Río, Gianna Beretta Molla, Teresa of Calcutta, John Paul II, Pier Giorgio Frassati, Teresa of the Andes, Óscar Romero, Faustina Kowalska, Josemaría Escrivá, Jacinta Marto, Francisco Marto
+- **No schema changes:** Uses existing `birthDate` field; added new `modern-day` value to `era` category group
+
+#### Implementation
+
+- **Data:** Added `modern-day` value to `era` category in EN/ES category JSON files (Samwise)
+- **iOS:** Added `modern-day` case to `matchesEra()` in `SaintListViewModel.swift`; wired to quick-filter chips (Frodo)
+- **Android:** Added `modern-day` case to `matchesEra()` in `CategoryMatcher.kt`; wired to quick-filter chips (Aragorn)
+- **Validation:** EN/ES parity confirmed; all 13 saints match; iOS/Android filtering verified (Legolas)
+
+#### Consequences
+
+- Modern Day Saints filter integrates seamlessly into existing category flow
+- Cross-platform parity maintained; no platform-specific branching
+- EN/ES labels: "Modern Day Saints (Born 1900+)" (EN), "Santos de Hoy (Nacidos en 1900+)" (ES)
+- No migration or compatibility concerns
+
+#### References
+
+- `.squad/decisions/inbox/gandalf-modern-day-saints.md` (contract)
+- `.squad/orchestration-log/2026-04-25T16-39-46Z-*.md` (implementation logs)
+
+---
+
+### Decision: Modern Day Saints Review Scope Separation
+
+**Date:** 2026-04-25  
+**Author:** Gandalf (Lead/Architect)  
+**Status:** Clarification — Scope documented, no blocking issues
+
+#### Context
+
+Two independent, user-approved batches remain in the working tree:
+
+1. **Batch 1 (Prior, Approved):** Android dark-mode WelcomeScreen fixes + platform-specific submission notes
+   - Files: `android/app/src/.../WelcomeScreen.kt`, `docs/appstore/submission-info.md`, `docs/android/submission-info.md`
+   - Status: Approved; no functional defects reported
+
+2. **Batch 2 (Current, Modern Day Saints):** Feature expansion across shared data + iOS/Android platforms
+   - Files: 17+ modified (categories, filtering logic, localization, tests)
+   - Status: User-approved QA; Legolas passed feature behavior
+
+#### Analysis
+
+- **Zero semantic overlap:** Changes touch entirely separate code concerns
+- **No file contamination:** No file modified by both batches
+- **Both approved:** Each batch passed independent validation
+- **No blocker issues:** Modern Day Saints feature behavior is sound
+
+#### Decision
+
+**Treat both batches as distinct, valid pending changes.** No file edits needed. Both batches can coexist in working tree safely and be committed independently.
+
+#### Rationale for Future Sessions
+
+When multiple user-approved tasks remain uncommitted:
+1. Document batch composition in decisions inbox with dates and approval status
+2. Track each batch's validation independently
+3. At review time, validate batch independence (not co-contamination)
+4. Coordinator decides commit grouping: single batch, multiple batches, or separate PRs
+
+#### References
+
+- `.squad/decisions/inbox/gandalf-modern-review-scope.md` (detailed analysis)
+- Orchestration logs: Gandalf isolation, Legolas revalidation
+
+---
+
+### Update: Modern Day Saints Data Category
+
+**Date:** 2026-04-25  
+**Author:** Samwise (Data/Backend)  
+**Status:** Implemented
+
+#### Changes
+
+- **Category Updates:**
+  - Added `modern-day` value to `era` category in `SharedContent/categories/categories-en.json`
+  - Added matching `modern-day` value in `SharedContent/categories/categories-es.json`
+  - Labels: "Modern Day Saints (Born 1900+)" (EN), "Santos de Hoy (Nacidos en 1900+)" (ES)
+
+- **Saint Set Validation (13 saints, all born 1900+):**
+  - EN/ES parity confirmed: matching IDs and identical `birthDate` values
+  - Current roster: 103 EN saints, 103 ES saints
+  - No malformed birthDate values; null values limited to expected cases (archangels, Marian apparitions)
+
+#### Details
+
+| ID | EN Name | ES Name | Birth Date |
+|----|---------|---------|------------|
+| carlo-acutis | Bl. Carlo Acutis | Beato Carlo Acutis | 1991-05-03 |
+| chiara-luce-badano | Bl. Chiara Luce Badano | Beata Chiara Luce Badano | 1971-10-29 |
+| jose-sanchez-del-rio | St. José Sánchez del Río | San José Sánchez del Río | 1913-03-28 |
+| gianna-beretta-molla | St. Gianna Beretta Molla | Santa Gianna Beretta Molla | 1922-10-04 |
+| mother-teresa | St. Teresa of Calcutta | Santa Teresa de Calcuta | 1910-08-26 |
+| john-paul-ii | St. John Paul II | San Juan Pablo II | 1920-05-18 |
+| pier-giorgio-frassati | Bl. Pier Giorgio Frassati | Beato Pier Giorgio Frassati | 1901-04-06 |
+| teresa-of-the-andes | St. Teresa of the Andes | Santa Teresa de los Andes | 1900-07-13 |
+| oscar-romero | St. Óscar Romero | San Óscar Romero | 1917-08-15 |
+| faustina-kowalska | St. Faustina Kowalska | Santa Faustina Kowalska | 1905-08-25 |
+| josemaria-escriva | St. Josemaría Escrivá | San Josemaría Escrivá | 1902-01-09 |
+| jacinta-marto | St. Jacinta Marto | Santa Jacinta Marto | 1910-03-11 |
+| francisco-marto | St. Francisco Marto | San Francisco Marto | 1908-06-11 |
+
+#### Platform Readiness
+
+iOS (Frodo) and Android (Aragorn) can now implement filtering logic knowing the exact saint set and EN/ES parity is guaranteed.
+
+#### References
+
+- `.squad/decisions/inbox/samwise-modern-day-saints-data.md` (data validation details)
+- `.squad/orchestration-log/2026-04-25T16-39-46Z-samwise.md` (implementation log)
+
+---
+
+### Decision: Deterministic Android Localization StateFlow Tests
+
+**Author:** Aragorn (Android Dev)
+**Date:** 2026-04-25
+**Status:** Approved
+
+#### Context
+
+`LocalizationService.language` is a `StateFlow` seeded with `AppLanguage.fromSystemLocale()` and then backed by DataStore. A recreated service may not emit a second item if the persisted language equals the system-locale fallback because `StateFlow` suppresses duplicate values. This caused `LocalizationServiceTest::should_persist_language_choice_to_datastore` to timeout with `TurbineTimeoutCancellationException` under non-default JVM locales.
+
+#### Decision
+
+Android tests verifying language switching or persistence should:
+1. Choose a target language opposite the current/system fallback
+2. Assert the final `StateFlow.value` after advancing the `StandardTestDispatcher`
+3. Pass the test coroutine scope into `PreferenceDataStoreFactory.create(scope = testScope)` to ensure deterministic persistence scheduling
+
+#### Rationale
+
+This keeps behavior strong: the test proves a user-selected language overrides the device locale and survives service recreation. It avoids brittle Turbine expectations that depend on a non-guaranteed second emission.
+
+#### Validation
+
+- Reproduced the locale-dependent failure under `-Duser.language=es --rerun-tasks`
+- Fixed `LocalizationServiceTest` without production-code changes
+- Focused localization tests and full Android JVM unit tests pass under both Spanish and default locales
+- Committed `e7ca6c3 Fix localization persistence unit test` to `develop`
+- PR #6 CI reran with all checks green (Android build + unit tests, SharedContent parity, GitGuardian Security)
+
+#### References
+
+- `.squad/orchestration-log/2026-04-25T17-26-51Z-aragorn.md` (fix execution log)
+- `.squad/orchestration-log/2026-04-25T17-26-51Z-legolas.md` (QA approval log)
+
+---
+
+### Decision: Frodo iOS 1.0.3 Release Prep
+
+**Author:** Frodo (iOS Dev)
+**Status:** Approved
+
+#### Context
+
+The v1.0.1 release bumped both `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` together. The v1.0.2 release changed only marketing version, leaving build version reused. For v1.0.3, use build 3 for a fresh, monotonically increasing iOS build number.
+
+#### Decision
+
+Bump both `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` in `ios/project.yml`, then regenerate the Xcode project with XcodeGen.
+
+#### Scope
+
+This applies to iOS/App Store metadata only. Do not change Android `versionName` or `versionCode` while Android remains in closed testing unless an Android release is explicitly scheduled.
+
+---
+
+### Decision: Frodo — Spanish App Store Screenshots
+
+**Author:** Frodo (iOS Dev)
+**Date:** 2026-04-29
+**Status:** Implemented
+
+#### Context
+
+Spanish App Store screenshots should use the real iOS app with `appLanguage=es` in app defaults, not simulator locale alone. Feast days were still visible in English month names on Spanish saint list/detail screenshots.
+
+#### Decision / Finding
+
+Spanish App Store screenshots use the real iOS app with `appLanguage=es`. While preparing the screenshots, Frodo localized saint feast-day display for Spanish UI by routing row/detail feast dates through the active app language.
+
+#### Rationale
+
+The app's in-app language switch is backed by `@AppStorage("appLanguage")`, so setting only the simulator locale can leave UI/content in English. This ensures full Spanish UI in screenshots.
+
+#### Impact
+
+- Screenshot outputs live in `docs/appstore/es/`.
+- iOS UI now displays feast days as Spanish strings such as `28 de agosto` when `appLanguage == "es"`.
+- English formatting remains unchanged through the existing `formattedFeastDay` property.
+
+---
+
 ## Archived Decisions (older than 2026-03-22)
 
 See `decisions-archive.md` for foundational iOS architecture decisions from 2026-04-12 to 2026-04-13.

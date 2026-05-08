@@ -8,6 +8,7 @@ Uses Wikimedia Commons thumb URLs for reasonable file sizes (~400px wide).
 import json
 import os
 import ssl
+import subprocess
 import time
 import urllib.request
 import urllib.parse
@@ -102,6 +103,59 @@ SAINT_IMAGES = {
     "josemaria-escriva": "Detail autel Jose Maria Escriva de Balaguer Peterskirche Vienna.jpg",
     "george": "Saint George and the Dragon by Paolo Uccello (Paris) 01.jpg",
     "mariana-de-jesus-de-paredes": "Retrato de Mariana de Jesús.jpg",
+    "pauline-of-the-suffering-heart": "Santa_Paolina.jpg",
+    "charles-lwanga": "Karoli_Lwanga_and_his_followers.jpg",
+    "perpetua": "Perpetua,_Felicitas,_Revocatus,_Saturninus_and_Secundulus_(Menologion_of_Basil_II).jpg",
+    "cyril-alexandria": "Chora-Kirche_2013-03-21zh_(cropped).jpg",
+    "margaret-antioch": "Margaret_the_Virgin.jpg",
+    "margaret-mary-alacoque": "Marguerite-Marie Alacoque.jpg",
+    "basil-great": "Basil_of_Caesarea.jpg",
+    "ephrem-syrian": "Ephrem_the_Syrian_(mosaic_in_Nea_Moni).jpg",
+    "gregory-narek": "Grigor_Narekatsi_1.jpg",
+    "cyril-jerusalem": "Saint_Cyril_of_Jerusalem.jpg",
+    "aquilina": "Aquilina_old_icon.gif",
+    "mary-mackillop": "Mary_MacKillop.jpg",
+    "jacinta-marto": "Saints_Francisco_and_Jacinta_Marto_double_portrait_(2).jpg",
+    "sara-salkahazi": "Sara_Salkahazi.jpg",
+    "apollonia": "Francisco_de_Zurbarán_035.jpg",
+    "hildegard-bingen": "Hildegard_von_Bingen.jpg",
+    "katharine-drexel": "BensalemPA_DrexelShrineEntrance.jpg",
+    "francisco-marto": "Saints_Francisco_and_Jacinta_Marto_double_portrait_(2).jpg",
+    "padre-pio": "Padre_Pio_portraitFXD.jpg",
+    "miguel-pro": "Miguel_Agustin_Pro_(1891-1927).jpg",
+    "agatha-sicily": "Sant'agata,_VII-inizio_VIII_secolo_ca.,_forse_da_s.m._antiqua_(roma,_coll._priv.).jpg",
+    "agnes": "2872-saint-agnes-domenichino.jpg",
+    "lucy": "Niccolò_di_Segna_-_Saint_Lucy_-_Walters_37756.jpg",
+    "benedict-of-nursia": "Benedict_of_Nursia.jpg",
+    "peter-of-saint-joseph-betancur": "Sanhermanopedro.JPG",
+}
+
+DEFAULT_IMAGE_ATTRIBUTIONS = {
+    "en": "Public domain, via Wikimedia Commons",
+    "es": "Dominio público, vía Wikimedia Commons",
+}
+
+IMAGE_ATTRIBUTIONS = {
+    "pauline-of-the-suffering-heart": {
+        "en": "CC BY-SA 2.5, Llorenzi, via Wikimedia Commons",
+        "es": "CC BY-SA 2.5, Llorenzi, vía Wikimedia Commons",
+    },
+    "charles-lwanga": {
+        "en": "Copyrighted free use, Albert Wider, via Wikimedia Commons",
+        "es": "Uso libre con copyright, Albert Wider, vía Wikimedia Commons",
+    },
+    "cyril-alexandria": {
+        "en": "CC BY-SA 4.0, Rabe!, via Wikimedia Commons",
+        "es": "CC BY-SA 4.0, Rabe!, vía Wikimedia Commons",
+    },
+    "katharine-drexel": {
+        "en": "CC BY-SA 4.0, Magicpiano, via Wikimedia Commons",
+        "es": "CC BY-SA 4.0, Magicpiano, vía Wikimedia Commons",
+    },
+    "agatha-sicily": {
+        "en": "CC BY 3.0, Sailko, via Wikimedia Commons",
+        "es": "CC BY 3.0, Sailko, vía Wikimedia Commons",
+    },
 }
 
 
@@ -142,9 +196,47 @@ def download_image(url, dest_path):
             f.write(resp.read())
 
 
+def resize_image(dest_path, width=TARGET_WIDTH):
+    """Constrain downloaded thumbnails to the target width when sips is available."""
+    try:
+        result = subprocess.run(
+            ["sips", "-g", "pixelWidth", dest_path],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        current_width = None
+        for line in result.stdout.splitlines():
+            if "pixelWidth:" in line:
+                current_width = int(line.split(":", 1)[1].strip())
+                break
+        if current_width and current_width > width:
+            subprocess.run(
+                ["sips", "--resampleWidth", str(width), dest_path],
+                check=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+        subprocess.run(
+            ["sips", "-s", "format", "jpeg", dest_path, "--out", dest_path],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError, ValueError):
+        print(f"  WARN could not normalize {os.path.basename(dest_path)}; keeping downloaded thumbnail")
+
+
+def image_attribution(saint_id, language):
+    """Return the language-specific attribution string for a saint image."""
+    return IMAGE_ATTRIBUTIONS.get(saint_id, {}).get(
+        language, DEFAULT_IMAGE_ATTRIBUTIONS.get(language, DEFAULT_IMAGE_ATTRIBUTIONS["en"])
+    )
+
+
 def update_json_files(successful_saints):
     """Update image fields in both EN and ES JSON files."""
-    for json_path in [SAINTS_EN, SAINTS_ES]:
+    for json_path, language in [(SAINTS_EN, "en"), (SAINTS_ES, "es")]:
         with open(json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
@@ -152,7 +244,7 @@ def update_json_files(successful_saints):
             if saint["id"] in successful_saints:
                 saint["image"] = {
                     "filename": f"{saint['id']}.jpg",
-                    "attribution": "Public domain, via Wikimedia Commons"
+                    "attribution": image_attribution(saint["id"], language)
                 }
 
         with open(json_path, "w", encoding="utf-8") as f:
@@ -174,7 +266,6 @@ def main():
         # Skip if already downloaded
         if os.path.exists(dest) and os.path.getsize(dest) > 1000:
             print(f"  SKIP {saint_id} (already exists)")
-            successful.add(saint_id)
             continue
 
         print(f"  Fetching URL for {saint_id} ({commons_filename})...")
@@ -187,6 +278,7 @@ def main():
 
             print(f"  Downloading {saint_id}...")
             download_image(url, dest)
+            resize_image(dest)
 
             size = os.path.getsize(dest)
             if size < 1000:

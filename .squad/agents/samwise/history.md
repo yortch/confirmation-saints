@@ -77,3 +77,51 @@
 ### Sources Schema Migration — Collapsed Array (2026-04-23)
 - Migrated `SharedContent/saints/saints-en.json` and `saints-es.json` to Gandalf's collapsed schema (one ordered array of `{name, url}`). 81 saints × 2 files = 162 records, 338 source entries rewritten. Commit `a99666d`.
 - Fail-fast validation (orphan URL, missing URL, empty string) passed on first run — no manual fixups required.
+
+### Saint Backlog to 100: Gap Analysis & Prioritization (2026-04-25)
+- **Request:** Grow from 81 → 100 saints; use Life Teen confirmation list as source; prioritize Asia/Africa → Female → Modern saints; skip pronunciation-difficult candidates.
+- **Source:** Life Teen article (132 candidates), already-included saints (65), candidates not yet in app (66).
+- **Exclusions:** 7 saints filtered for pronunciation difficulty (Korean, Malayalam, Ukrainian, Polish, Old English, Greek). Examples: Benedicta Hyon Kyongnyon, Volodymyr Pryjma, John Chrysostom.
+- **Final Backlog:** 19 saints selected (difficulty <4, pronunciation-friendly) + 8 backups. Frontloaded with Asia/Africa region saints (Charles Lwanga, Cyril of Alexandria, Perpetua, Gregory of Narek, etc.), then female saints (Pauline, Margaret, Hildegard, Katharine Drexel), then modern saints (Mary MacKillop, Padre Pio, Miguel Pro, Jacinta Marto).
+- **Key Finding:** Female African martyr saints (Perpetua, Aquilina, Apollonia) fit multiple priority categories; Asia has strong Doctor/theologian representation (Basil, Ephrem, Gregory of Narek, Cyril of Jerusalem). Modern African male martyr (Charles Lwanga, 1964 canonization) is highest-impact modern addition.
+- **Documented:** Formal backlog table (19 priority + 8 backup) written to `.squad/decisions/inbox/samwise-saint-backlog-100.md` with patronages, feast-day markers, region, and data-entry notes (match fields English, display fields Spanish, Wikimedia Commons image sourcing).
+
+## 2026-04-25: Saint Backlog 100-Saint Initiative (COMPLETED)
+- Researched Life Teen Confirmation saints list (132 candidates)
+- Compared against current 81-saint app inventory
+- Applied pronunciation filter (excluded 7 difficult names)
+- Drafted prioritized 19-saint backlog with coverage analysis
+- Generated 8 backup candidates
+- Deliverable: samwise-saint-backlog-100.md → merged to decisions.md
+- Status: Ready for Legolas validation & Samwise research phase
+
+### Scope Expansion: 19 → 22 Saints (2026-04-25)
+- **User request (Jorge):** "Let's also add agatha, agnes and lucy to the list even if it goes over 100"
+- **Action:** Verified all three saints (Agatha, Agnes, Lucy) are absent from current 81-saint roster
+- **Decision:** Appended three classical Early Christian Virgin Martyrs to backlog, extending scope from **81 → 100 to 81 → 103**
+- **Strategic fit:** Agatha (suffering/nursing), Agnes (purity/youth), Lucy (light/eyesight) add classic patronesses missing from current roster; all confirm-appropriate
+- **Documented:** Created samwise-expanded-saint-backlog.md decision; full 22-saint prioritized backlog (original 19 + Agatha + Agnes + Lucy) ready for future data-entry sprint
+- **Key learning:** Scope flexibility — user wanted to exceed the 100-saint target with high-value classic saints rather than stick to arbitrary ceiling. Good signal for future backlog management: build flexible prioritized lists rather than hard targets.
+- **Orchestration:** Scribe merged decisions into decisions.md (2026-04-25T14:49:15Z); archived pre-2026-03-26 entries; cross-agent sync completed.
+
+### 22-Saint SharedContent Expansion (2026-04-25) — 81 → 103
+- Added all 22 Gandalf-approved saints to `SharedContent/saints/saints-en.json` and `saints-es.json`, with matching canonical EN fields and localized Spanish display fields.
+- Set both `lastUpdated` values to `2026-04-25`; final roster count is 103 saints per language.
+- Respected Blessed corrections for Sára Salkaházi and Miguel Pro (`Bl.`/`Bta.`, `canonizationDate: null`, `Blessed` tag) and Pauline's South America/Brazil attribution.
+- Downloaded 22 Wikimedia Commons images to `SharedContent/images/{id}.jpg`; updated `_download_saint_images.py` mappings and attribution handling for CC/free-use images.
+- Validation run: duplicate check ✅, JSON parse/count parity ✅, `python3 tests/shared-content-parity.py` ✅, source URL HEAD/GET check ✅.
+- Implementation note: normalized a few overly-specific canonical helper values to the existing app taxonomy where needed (`lifeState` uses `religious`/`single`/`martyr`; child visionaries use `ageCategory: young`). Aquilina was set to `Middle East` because her verified origin is Byblos, Lebanon.
+
+### v1.0.2 Release Orchestration Completed (2026-04-25)
+- **Session:** v1.0.2 Over 100 Saints batch orchestration
+- **Result:** 22-saint implementation approved & validated by Legolas (QA)
+- **Cross-team:** Frodo (iOS) and Aragorn (Android) both bumped to 1.0.2 with 103-saint content parity confirmed
+- **Release status:** GO for production iOS/Android store submission
+
+### Modern Day Saints Era Filter Data (2026-04-25)
+- Added `modern-day` as a new value in the existing `era` category group in EN/ES category JSON; no category schema change was needed because values remain `id` + `label`.
+- Definition is deterministic from existing saint data: any saint/blessed with a 4-digit `birthDate` year >= 1900 qualifies. Current roster validates to 13 EN/ES-parity ids: carlo-acutis, chiara-luce-badano, jose-sanchez-del-rio, gianna-beretta-molla, mother-teresa, john-paul-ii, pier-giorgio-frassati, teresa-of-the-andes, oscar-romero, faustina-kowalska, josemaria-escriva, jacinta-marto, francisco-marto.
+- Validation found EN/ES saint id parity, matching `birthDate` values, no malformed non-null birth dates, and only the expected null birth dates for archangels/Marian apparitions.
+
+### Wikipedia-Only Biography Depth Audit (2026-04-29)
+- The 22-saint 103-roster expansion left most Wikipedia-only biographies at ~250–500 characters while the existing roster median was ~1,000 characters. Parity checks catch schema drift, not content depth; future Wikipedia-first saint batches should audit biography length/substance before handoff and target roughly 750–900 characters per localized biography unless the saint's historical record is genuinely sparse.

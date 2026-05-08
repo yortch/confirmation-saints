@@ -50,6 +50,7 @@ object CategoryMatcher {
             "early-modern" -> year in 1500..1799
             "modern" -> year in 1800..1949
             "contemporary" -> year >= 1950
+            "modern-day" -> year >= 1900
             else -> false
         }
     }

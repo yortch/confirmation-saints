@@ -175,7 +175,6 @@ struct WelcomeView: View {
                 discoverRow(icon: "character.textbox", text: AppStrings.localized("By Name", language: language))
                 discoverRow(icon: "heart.fill", text: AppStrings.localized("By Interest", language: language))
                 discoverRow(icon: "globe.americas.fill", text: AppStrings.localized("By Country", language: language))
-                discoverRow(icon: "calendar", text: AppStrings.localized("By Feast Day", language: language))
                 discoverRow(icon: "person.fill", text: AppStrings.localized("By Life Stage", language: language))
             }
             .padding(.horizontal, 40)

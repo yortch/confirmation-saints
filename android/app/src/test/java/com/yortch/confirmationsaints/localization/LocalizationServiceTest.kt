@@ -36,6 +36,7 @@ class LocalizationServiceTest {
 
     private val testDispatcher = StandardTestDispatcher()
     private lateinit var testDataStore: DataStore<Preferences>
+    private lateinit var testPrefsFile: File
     private lateinit var testScope: CoroutineScope
     private lateinit var preferencesRepo: PreferencesRepository
     private lateinit var service: LocalizationService
@@ -43,15 +44,16 @@ class LocalizationServiceTest {
     @Before
     fun setup() {
         Dispatchers.setMain(testDispatcher)
-        
-        // Create an in-memory DataStore for testing
-        val tmpFile = File.createTempFile("test_prefs", ".preferences_pb")
-        tmpFile.deleteOnExit()
-        testDataStore = PreferenceDataStoreFactory.create {
-            tmpFile
-        }
-        
+
         testScope = CoroutineScope(testDispatcher + Job())
+        val testDir = File("build/test-datastore").apply { mkdirs() }
+        testPrefsFile = File(testDir, "localization-${System.nanoTime()}.preferences_pb")
+        testDataStore = PreferenceDataStoreFactory.create(
+            scope = testScope,
+        ) {
+            testPrefsFile
+        }
+
         preferencesRepo = PreferencesRepository(testDataStore)
         service = LocalizationService(preferencesRepo, testScope)
     }
@@ -59,6 +61,9 @@ class LocalizationServiceTest {
     @After
     fun tearDown() {
         testScope.cancel()
+        if (::testPrefsFile.isInitialized) {
+            testPrefsFile.delete()
+        }
         Dispatchers.resetMain()
     }
 
@@ -76,40 +81,24 @@ class LocalizationServiceTest {
     fun should_update_stateflow_when_language_is_switched() = runTest(testDispatcher) {
         service.language.test {
             val initial = awaitItem() // consume initial value
-            service.setLanguage(AppLanguage.ES)
+            val target = if (initial == AppLanguage.ES) AppLanguage.EN else AppLanguage.ES
+            service.setLanguage(target)
             testDispatcher.scheduler.advanceUntilIdle() // process the coroutine
             val updated = awaitItem()
-            assertEquals("Language should update to ES", AppLanguage.ES, updated)
+            assertEquals("Language should update to selected language", target, updated)
         }
     }
 
     @Test
     fun should_persist_language_choice_to_datastore() = runTest(testDispatcher) {
-        // Set language to ES
-        service.setLanguage(AppLanguage.ES)
+        val target = if (AppLanguage.fromSystemLocale() == AppLanguage.ES) AppLanguage.EN else AppLanguage.ES
+        service.setLanguage(target)
         testDispatcher.scheduler.advanceUntilIdle()
-        
-        // Wait a bit for DataStore to persist
-        kotlinx.coroutines.delay(100)
-        testDispatcher.scheduler.advanceUntilIdle()
-        
-        // Create a new service instance from the same DataStore
+
         val newService = LocalizationService(preferencesRepo, testScope)
-        
-        // Wait for the DataStore value to load (skip the initial system locale value)
-        newService.language.test {
-            // The first emission might be the default, second should be from DataStore
-            val first = awaitItem()
-            if (first == AppLanguage.fromSystemLocale()) {
-                // If first is system default, wait for DataStore load
-                testDispatcher.scheduler.advanceUntilIdle()
-                val persisted = awaitItem()
-                assertEquals("Language should persist to ES", AppLanguage.ES, persisted)
-            } else {
-                // If we got ES right away, that's also valid
-                assertEquals("Language should persist to ES", AppLanguage.ES, first)
-            }
-        }
+        testDispatcher.scheduler.advanceUntilIdle()
+
+        assertEquals("Persisted language should override device locale", target, newService.language.value)
     }
 
     @Test

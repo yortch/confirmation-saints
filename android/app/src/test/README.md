@@ -10,7 +10,7 @@ cd android && ./gradlew :app:testDebugUnitTest
 
 | File | Under test | Phase | Status |
 |------|-----------|-------|--------|
-| `data/SaintRepositoryTest.kt` | JSON loading, 79-saint roster, EN/ES id parity | 2 | stub |
+| `data/SaintRepositoryTest.kt` | JSON loading, 103-saint roster, EN/ES id parity | 2 | stub |
 | `data/CategoryMatchingTest.kt` | Category matching uses English-canonical values regardless of active language | 3 | stub |
 | `localization/LocalizationServiceTest.kt` | StateFlow updates, DataStore persistence, AppStrings lookup + fallback | 4 | stub |
 | `util/BirthDateParsingTest.kt` | 4-digit year extraction incl. 0256 edge case | 2 | stub |
@@ -24,7 +24,7 @@ and the final method signatures stabilize. Each stub is annotated
 flip that off as each target API is wired up.
 
 The stubs intentionally reference contracts from `.squad/decisions.md`
-(cross-language matching, 79-saint roster, canonical English ids,
+(cross-language matching, 103-saint roster, canonical English ids,
 in-app language switch) rather than speculative APIs. When filling in
 bodies, update the stub to match Aragorn's actual signatures — but do
 not weaken the assertions.

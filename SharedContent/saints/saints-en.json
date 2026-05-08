@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "language": "en",
-  "lastUpdated": "2025-07-18",
+  "lastUpdated": "2026-04-30",
   "saints": [
     {
       "id": "therese-of-lisieux",
@@ -98,11 +98,11 @@
     },
     {
       "id": "carlo-acutis",
-      "name": "Bl. Carlo Acutis",
+      "name": "St. Carlo Acutis",
       "feastDay": "10-12",
       "birthDate": "1991-05-03",
       "deathDate": "2006-10-12",
-      "canonizationDate": null,
+      "canonizationDate": "2025-09-07",
       "country": "Italy",
       "region": "Europe",
       "gender": "male",
@@ -116,8 +116,7 @@
       "tags": [
         "young",
         "modern",
-        "tech-savvy",
-        "Blessed"
+        "tech-savvy"
       ],
       "affinities": [
         "technology",
@@ -127,7 +126,7 @@
         "animals"
       ],
       "quote": "The Eucharist is my highway to heaven.",
-      "biography": "Carlo Acutis was born on May 3, 1991, in London to Italian parents and grew up in Milan. From a very young age, he showed a deep love for the Eucharist and began attending daily Mass at age seven. He was also a tech whiz — he taught himself computer programming as a child.\n\nCarlo used his technology skills for his faith, creating a website that cataloged Eucharistic miracles from around the world. Despite being a normal teenager who loved PlayStation, soccer, and his pets, he had an extraordinary prayer life and regularly helped the homeless and less fortunate.\n\nIn October 2006, Carlo was diagnosed with an aggressive form of leukemia. He offered his suffering for the Pope and the Church. He died on October 12, 2006, at just 15 years old. He was beatified in 2020 and his body was found to be remarkably preserved.",
+      "biography": "Carlo Acutis was born on May 3, 1991, in London to Italian parents and grew up in Milan. From a very young age, he showed a deep love for the Eucharist and began attending daily Mass at age seven. He was also a tech whiz — he taught himself computer programming as a child.\n\nCarlo used his technology skills for his faith, creating a website that cataloged Eucharistic miracles from around the world. Despite being a normal teenager who loved PlayStation, soccer, and his pets, he had an extraordinary prayer life and regularly helped the homeless and less fortunate.\n\nIn October 2006, Carlo was diagnosed with an aggressive form of leukemia. He offered his suffering for the Pope and the Church. He died on October 12, 2006, at just 15 years old. He was beatified in 2020 and canonized by Pope Leo XIV on September 7, 2025, alongside Pier Giorgio Frassati, becoming the first millennial saint.",
       "whyConfirmationSaint": "Carlo Acutis is the patron for the digital generation. He loved video games, computers, and soccer — just like many teens today — but he also loved Jesus above everything. He shows that you can be a normal teenager AND a saint. He used technology not just for fun but to spread the faith. If you're into tech, gaming, or social media, Carlo proves you can use those gifts for God.",
       "image": {
         "filename": "carlo-acutis.jpg",
@@ -137,6 +136,14 @@
         {
           "name": "Catholic News Agency",
           "url": "https://www.catholicnewsagency.com/saint/bl-carlo-acutis-919"
+        },
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/pope/news/2025-06/carlo-acutis-and-pier-giorgio-frassati-to-be-canonized-together.html"
+        },
+        {
+          "name": "Vatican",
+          "url": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250907-omelia-frassati-acutis.html"
         },
         {
           "name": "Hallow",
@@ -837,11 +844,11 @@
     },
     {
       "id": "pier-giorgio-frassati",
-      "name": "Bl. Pier Giorgio Frassati",
+      "name": "St. Pier Giorgio Frassati",
       "feastDay": "07-04",
       "birthDate": "1901-04-06",
       "deathDate": "1925-07-04",
-      "canonizationDate": null,
+      "canonizationDate": "2025-09-07",
       "country": "Italy",
       "region": "Europe",
       "gender": "male",
@@ -856,8 +863,7 @@
         "young",
         "modern",
         "athletic",
-        "charitable",
-        "Blessed"
+        "charitable"
       ],
       "affinities": [
         "hiking",
@@ -868,7 +874,7 @@
         "friendship"
       ],
       "quote": "To the heights! Verso l'alto!",
-      "biography": "Pier Giorgio Frassati was born on April 6, 1901, in Turin, Italy, to a wealthy and prominent family — his father owned the newspaper La Stampa and served as Italian ambassador to Germany. Despite his privileged background, Pier Giorgio was drawn to the poor and marginalized.\n\nHe was an avid mountain climber, skier, and outdoorsman, famous for his infectious joy and love of adventure. He joined the St. Vincent de Paul Society and secretly gave away his money, bus fare, and even his clothes to the poor. He was also politically active, opposing both Fascism and Communism, and was once beaten by Fascist police at a demonstration.\n\nIn June 1925, Pier Giorgio contracted polio, likely from the sick people he regularly visited. He died on July 4, 1925, at age 24. His family was stunned when thousands of poor people they had never met showed up at his funeral. He was beatified by John Paul II in 1990, who called him 'the man of the eight Beatitudes.'",
+      "biography": "Pier Giorgio Frassati was born on April 6, 1901, in Turin, Italy, to a wealthy and prominent family — his father owned the newspaper La Stampa and served as Italian ambassador to Germany. Despite his privileged background, Pier Giorgio was drawn to the poor and marginalized.\n\nHe was an avid mountain climber, skier, and outdoorsman, famous for his infectious joy and love of adventure. He joined the St. Vincent de Paul Society and secretly gave away his money, bus fare, and even his clothes to the poor. He was also politically active, opposing both Fascism and Communism, and was once beaten by Fascist police at a demonstration.\n\nIn June 1925, Pier Giorgio contracted polio, likely from the sick people he regularly visited. He died on July 4, 1925, at age 24. His family was stunned when thousands of poor people they had never met showed up at his funeral. He was beatified by John Paul II in 1990, who called him 'the man of the eight Beatitudes,' and was canonized by Pope Leo XIV on September 7, 2025, alongside Carlo Acutis.",
       "whyConfirmationSaint": "Pier Giorgio Frassati is the saint for adventurers, athletes, and anyone who loves life. He hiked mountains, pulled pranks on his friends, and had the time of his life — while secretly giving everything he had to the poor. His motto was 'Verso l'alto!' — 'To the heights!' He shows that being a saint doesn't mean being boring. It means living life fully and loving others radically.",
       "image": {
         "filename": "pier-giorgio-frassati.jpg",
@@ -878,6 +884,14 @@
         {
           "name": "Catholic News Agency",
           "url": "https://www.catholicnewsagency.com/saint/bl-pier-giorgio-frassati-584"
+        },
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/pope/news/2025-06/carlo-acutis-and-pier-giorgio-frassati-to-be-canonized-together.html"
+        },
+        {
+          "name": "Vatican",
+          "url": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250907-omelia-frassati-acutis.html"
         },
         {
           "name": "EWTN",
@@ -2773,7 +2787,7 @@
       "feastDay": "08-13",
       "birthDate": "1852-08-12",
       "deathDate": "1890-08-14",
-      "canonizationDate": "2020-10-31",
+      "canonizationDate": null,
       "country": "United States",
       "region": "Americas",
       "gender": "male",
@@ -3929,6 +3943,1108 @@
         {
           "name": "Franciscan Media",
           "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-mariana-of-jesus-de-paredes/"
+        }
+      ]
+    },
+    {
+      "id": "pauline-of-the-suffering-heart",
+      "name": "St. Pauline of the Suffering Heart of Jesus",
+      "feastDay": "07-03",
+      "birthDate": "1865-12-16",
+      "deathDate": "1942-07-09",
+      "canonizationDate": "2002-05-19",
+      "country": "Brazil",
+      "region": "South America",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "hospital workers",
+        "the sick",
+        "suffering"
+      ],
+      "tags": [
+        "modern",
+        "founder",
+        "religious sister",
+        "South American"
+      ],
+      "affinities": [
+        "service",
+        "healing",
+        "compassion",
+        "prayer"
+      ],
+      "quote": "Seek first the kingdom of God.",
+      "biography": "St. Pauline was born Amabile Lucia Visintainer in northern Italy and moved with her family to Brazil as a child. Growing up among immigrant families who had very little, she learned early that faith had to become practical love. As a young woman, she began caring for the sick, elderly, and abandoned in her community, often with only a few helpers and very few resources.\n\nThat service became the beginning of the Little Sisters of the Immaculate Conception, the first religious community founded in Brazil. Pauline helped the sisters serve orphans, the poor, and people who were sick, especially those who felt forgotten. Later, when she was removed from leadership in her own community, she accepted the humiliation with peace and kept serving quietly. Her life shows holiness through steady compassion, humility, and trust when plans change.",
+      "whyConfirmationSaint": "St. Pauline is a strong confirmation saint for anyone drawn to practical compassion. She shows that holiness can begin with seeing the sick and forgotten nearby, then building a life of service around them.",
+      "image": {
+        "filename": "pauline-of-the-suffering-heart.jpg",
+        "attribution": "CC BY-SA 2.5, Llorenzi, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pauline_of_the_Agonizing_Heart_of_Jesus"
+        }
+      ]
+    },
+    {
+      "id": "charles-lwanga",
+      "name": "St. Charles Lwanga",
+      "feastDay": "06-03",
+      "birthDate": "1860-01-01",
+      "deathDate": "1886-06-03",
+      "canonizationDate": "1964-10-18",
+      "country": "Uganda",
+      "region": "Africa",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "young",
+      "patronOf": [
+        "Uganda",
+        "African youth",
+        "young people"
+      ],
+      "tags": [
+        "African",
+        "martyr",
+        "young",
+        "leader"
+      ],
+      "affinities": [
+        "courage",
+        "leadership",
+        "faith",
+        "service"
+      ],
+      "quote": "Be faithful unto death, and I will give you the crown of life.",
+      "biography": "St. Charles Lwanga served in the royal court of Buganda, in what is now Uganda, during a time when Christianity was spreading but also facing violent opposition. As a young leader among the king's pages, Charles protected younger boys from abuse and encouraged them to stay faithful to Christ. When persecution intensified under King Mwanga II, Charles was baptized and became a source of courage for the other Christian converts.\n\nIn 1886, Charles and many companions were condemned because they refused to abandon their faith or violate their conscience. He was burned to death at Namugongo, praying with courage until the end. Charles is remembered as one of the Uganda Martyrs and a powerful example for young people: leadership is not about being loud or powerful, but about protecting others, choosing what is right, and staying faithful when pressure is intense.",
+      "whyConfirmationSaint": "St. Charles Lwanga is a powerful confirmation saint for courage under pressure. He defended the vulnerable, led his friends in faith, and chose Christ even when loyalty cost him everything.",
+      "image": {
+        "filename": "charles-lwanga.jpg",
+        "attribution": "Copyrighted free use, Albert Wider, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Charles_Lwanga"
+        }
+      ]
+    },
+    {
+      "id": "perpetua",
+      "name": "St. Perpetua",
+      "feastDay": "03-07",
+      "birthDate": "0182-01-01",
+      "deathDate": "0203-03-07",
+      "canonizationDate": null,
+      "country": "Roman Africa",
+      "region": "Africa",
+      "gender": "female",
+      "lifeState": "martyr",
+      "ageCategory": "young",
+      "patronOf": [
+        "mothers",
+        "martyrs",
+        "young mothers"
+      ],
+      "tags": [
+        "early-church",
+        "martyr",
+        "mother",
+        "writer"
+      ],
+      "affinities": [
+        "writing",
+        "courage",
+        "family",
+        "faith"
+      ],
+      "quote": "Stand fast in the faith, and love one another.",
+      "biography": "St. Perpetua was a young noblewoman in Roman North Africa, a wife and new mother, when she was arrested for preparing to become Christian. Her father begged her to deny her faith and save her life, but Perpetua chose Christ even when it meant separation from her baby and her family. She was imprisoned with other believers, including St. Felicity, and her own prison account became one of the earliest Christian writings by a woman.\n\nPerpetua's story is not about seeking suffering; it is about refusing to let fear decide who she belonged to. In the amphitheater at Carthage, she and her companions faced martyrdom with prayer and dignity. Her witness has strengthened Christians for centuries because it shows a faith strong enough to love family deeply, face fear honestly, and still choose Jesus above every earthly security.",
+      "whyConfirmationSaint": "St. Perpetua is a companion for anyone whose faith creates pressure at home or in public. She teaches that confirmation strengthens you to stand firm while still loving deeply.",
+      "image": {
+        "filename": "perpetua.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Perpetua_and_Felicity"
+        }
+      ]
+    },
+    {
+      "id": "cyril-alexandria",
+      "name": "St. Cyril of Alexandria",
+      "feastDay": "06-27",
+      "birthDate": "0376-01-01",
+      "deathDate": "0444-06-27",
+      "canonizationDate": null,
+      "country": "Egypt",
+      "region": "Africa",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "theologians",
+        "bishops",
+        "teachers"
+      ],
+      "tags": [
+        "Doctor of the Church",
+        "bishop",
+        "theologian",
+        "early-church"
+      ],
+      "affinities": [
+        "philosophy",
+        "debate",
+        "teaching",
+        "reading"
+      ],
+      "quote": "As two pieces of wax fused together make one, so whoever receives Communion is united with Christ.",
+      "biography": "St. Cyril of Alexandria became patriarch of one of the most important Christian cities in the early Church. He lived during a time of intense debates about who Jesus is, and he worked to defend the truth that Jesus is fully God and fully human. At the Council of Ephesus in 431, Cyril strongly supported calling Mary Theotokos, or 'God-bearer,' because that title protected the Church's belief in the unity of Christ.\n\nCyril could be forceful and controversial, but his lasting gift is his defense of the mystery at the heart of Christianity: in Jesus, God truly came near to save us. He wrote commentaries, letters, and theological works that helped later generations speak more clearly about Christ. For students, teachers, and anyone wrestling with big questions, Cyril shows that doctrine is not just ideas—it protects the truth of God's love.",
+      "whyConfirmationSaint": "St. Cyril is a fitting confirmation saint for students, debaters, and anyone who wants faith to be intellectually serious. He shows that loving Jesus includes seeking truth with courage.",
+      "image": {
+        "filename": "cyril-alexandria.jpg",
+        "attribution": "CC BY-SA 4.0, Rabe!, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cyril_of_Alexandria"
+        }
+      ]
+    },
+    {
+      "id": "margaret-antioch",
+      "name": "St. Margaret of Antioch",
+      "feastDay": "07-20",
+      "birthDate": "0289-01-01",
+      "deathDate": "0304-07-20",
+      "canonizationDate": null,
+      "country": "Antioch",
+      "region": "Asia",
+      "gender": "female",
+      "lifeState": "martyr",
+      "ageCategory": "young",
+      "patronOf": [
+        "women in labor",
+        "pregnancy",
+        "nursing"
+      ],
+      "tags": [
+        "early-church",
+        "martyr",
+        "virgin",
+        "brave"
+      ],
+      "affinities": [
+        "courage",
+        "faith",
+        "perseverance",
+        "prayer"
+      ],
+      "quote": "Be faithful unto death, and I will give you the crown of life.",
+      "biography": "St. Margaret of Antioch is one of the beloved early Christian martyrs whose story has been handed down through tradition. She is remembered as a young woman who refused to give up her Christian faith, even when powerful people tried to force her into a marriage and into pagan worship. Like many saints from the age of persecution, some details of her life are wrapped in legend, but the heart of her witness is clear: she belonged to Christ before anyone else.\n\nMargaret's courage made her a popular patron for women in pregnancy and childbirth, especially in the Middle Ages, because people saw in her a saint who stayed brave under intense pressure. Her story invites teens to think about integrity: what values are worth holding onto when others try to define you? Margaret points to a faith that is strong, pure, and steady even when the world is unfair.",
+      "whyConfirmationSaint": "St. Margaret is a confirmation saint for courage when faith feels costly. Her story points to perseverance, purity of heart, and hope for those who are vulnerable.",
+      "image": {
+        "filename": "margaret-antioch.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Margaret_the_Virgin"
+        }
+      ]
+    },
+    {
+      "id": "basil-great",
+      "name": "St. Basil the Great",
+      "feastDay": "01-02",
+      "birthDate": "0330-01-01",
+      "deathDate": "0379-01-01",
+      "canonizationDate": null,
+      "country": "Cappadocia",
+      "region": "Asia",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "hospital administrators",
+        "monastic life",
+        "the poor"
+      ],
+      "tags": [
+        "Doctor of the Church",
+        "bishop",
+        "monk",
+        "charity"
+      ],
+      "affinities": [
+        "philosophy",
+        "service",
+        "learning",
+        "community"
+      ],
+      "quote": "The bread you keep belongs to the hungry.",
+      "biography": "St. Basil the Great was born into a deeply Christian family in Cappadocia and received an excellent education. After searching for the best way to serve God, he embraced monastic life and helped shape Christian community life in the East. Later, as bishop of Caesarea, Basil defended the faith during debates about the Trinity and encouraged Christians to remain faithful when political pressure made truth costly.\n\nBasil was also a practical servant of the poor. He organized a large charitable complex sometimes called the Basiliad, where travelers, the hungry, the sick, and people with leprosy could receive care. His holiness joined deep theology with real mercy. Basil reminds Confirmation candidates that loving God with the mind should lead to loving neighbors with action, especially people who are poor, sick, or pushed aside.",
+      "whyConfirmationSaint": "St. Basil is a strong confirmation saint for people who want both deep ideas and real service. He shows that true doctrine should become bread, shelter, and care for others.",
+      "image": {
+        "filename": "basil-great.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Basil_of_Caesarea"
+        }
+      ]
+    },
+    {
+      "id": "ephrem-syrian",
+      "name": "St. Ephrem the Syrian",
+      "feastDay": "06-09",
+      "birthDate": "0306-01-01",
+      "deathDate": "0373-06-09",
+      "canonizationDate": null,
+      "country": "Syria",
+      "region": "Asia",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "poets",
+        "hymn writers",
+        "theologians"
+      ],
+      "tags": [
+        "Doctor of the Church",
+        "deacon",
+        "poet",
+        "writer"
+      ],
+      "affinities": [
+        "poetry",
+        "music",
+        "writing",
+        "prayer"
+      ],
+      "quote": "Lord and Master of my life, take from me the spirit of idleness.",
+      "biography": "St. Ephrem the Syrian was a deacon, teacher, poet, and one of the great voices of Syriac Christianity. He served the Church in Nisibis and later Edessa, using hymns and poetry to teach the faith in a way ordinary people could remember and pray. Instead of writing only for scholars, Ephrem filled the Church's imagination with songs about Scripture, the Incarnation, Mary, repentance, and God's mercy.\n\nKnown as the 'Harp of the Spirit,' Ephrem showed that beauty can defend truth. His hymns helped believers recognize false teaching and love the mysteries of faith more deeply. He also lived humbly, serving the poor and suffering around him. Ephrem is a strong patron for writers, musicians, and anyone who wants creativity to become prayer rather than performance.",
+      "whyConfirmationSaint": "St. Ephrem is an excellent confirmation saint for musicians, writers, and creative people. He teaches that art can become prayer and help others love the truth.",
+      "image": {
+        "filename": "ephrem-syrian.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ephrem_the_Syrian"
+        }
+      ]
+    },
+    {
+      "id": "gregory-narek",
+      "name": "St. Gregory of Narek",
+      "feastDay": "02-27",
+      "birthDate": "0951-01-01",
+      "deathDate": "1003-01-01",
+      "canonizationDate": null,
+      "country": "Armenia",
+      "region": "Asia",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Armenia",
+        "poets",
+        "theologians"
+      ],
+      "tags": [
+        "Doctor of the Church",
+        "monk",
+        "mystic",
+        "writer"
+      ],
+      "affinities": [
+        "poetry",
+        "contemplation",
+        "writing",
+        "prayer"
+      ],
+      "quote": "From the depths of my heart, a word with God.",
+      "biography": "St. Gregory of Narek was an Armenian monk, priest, poet, and mystic who spent most of his life in prayer and study at the monastery of Narek. He lived in a Christian culture marked by beauty, hardship, and deep devotion. Gregory's most famous work, often called the Book of Lamentations or the Narek, is a long prayer of repentance, hope, and trust in God's mercy.\n\nGregory did not pretend that the spiritual life is always easy. His prayers speak honestly about sin, weakness, fear, and longing, but they always turn back toward the healing love of God. In 2015 he was named a Doctor of the Church, showing that his voice belongs to the whole Catholic family. Gregory is a guide for anyone who feels imperfect but still wants to pray with honesty and hope.",
+      "whyConfirmationSaint": "St. Gregory is a confirmation saint for people who pray through words, poetry, or honest struggle. He shows that bringing your whole heart to God can become holiness.",
+      "image": {
+        "filename": "gregory-narek.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Gregory_of_Narek"
+        }
+      ]
+    },
+    {
+      "id": "cyril-jerusalem",
+      "name": "St. Cyril of Jerusalem",
+      "feastDay": "03-18",
+      "birthDate": "0313-01-01",
+      "deathDate": "0386-03-18",
+      "canonizationDate": null,
+      "country": "Jerusalem",
+      "region": "Asia",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "catechists",
+        "teachers",
+        "theologians"
+      ],
+      "tags": [
+        "Doctor of the Church",
+        "bishop",
+        "catechist",
+        "early-church"
+      ],
+      "affinities": [
+        "teaching",
+        "learning",
+        "speaking out",
+        "faith"
+      ],
+      "quote": "The Spirit comes with the tenderness of a true friend.",
+      "biography": "St. Cyril of Jerusalem served as bishop in the city where Jesus died and rose. He is best known for his catechetical lectures, teachings given to people preparing for baptism and to newly baptized Christians. In clear and pastoral language, Cyril explained the Creed, the sacraments, prayer, and Christian life, helping believers understand not only what the Church teaches but why it matters.\n\nCyril's ministry was not easy. He faced conflict, exile, and pressure during the Arian controversies, when many disputed the Church's teaching about Christ. Still, he kept teaching the faith patiently. His life is a reminder that catechesis is an act of love: explaining the faith well helps people meet Jesus more deeply. Cyril is a fitting patron for teachers, catechists, and anyone preparing to receive the sacraments.",
+      "whyConfirmationSaint": "St. Cyril of Jerusalem is a natural confirmation saint for anyone who loves learning the faith. He shows that good teaching can lead people into a lifelong friendship with God.",
+      "image": {
+        "filename": "cyril-jerusalem.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Cyril_of_Jerusalem"
+        }
+      ]
+    },
+    {
+      "id": "aquilina",
+      "name": "St. Aquilina",
+      "feastDay": "06-13",
+      "birthDate": "0281-01-01",
+      "deathDate": "0293-06-13",
+      "canonizationDate": null,
+      "country": "Lebanon",
+      "region": "Middle East",
+      "gender": "female",
+      "lifeState": "martyr",
+      "ageCategory": "young",
+      "patronOf": [
+        "youth",
+        "young people",
+        "persecuted Christians"
+      ],
+      "tags": [
+        "early-church",
+        "martyr",
+        "young",
+        "brave"
+      ],
+      "affinities": [
+        "courage",
+        "faith",
+        "perseverance",
+        "prayer"
+      ],
+      "quote": "Be faithful unto death, and I will give you the crown of life.",
+      "biography": "St. Aquilina was a young Christian from Byblos in present-day Lebanon, remembered by tradition as a teenager who suffered during the persecution of Christians under the Roman Empire. Even at a young age, she was known for encouraging others to follow Christ. When officials pressured her to renounce her faith and offer sacrifice to pagan gods, Aquilina refused.\n\nHer story is simple but powerful: she did not wait until adulthood to take her faith seriously. Aquilina endured threats and suffering with courage beyond her years, and she became a witness that young people can belong completely to God. For teens, her life speaks directly to moments when faith feels unpopular or misunderstood. She shows that holiness is not measured by age, status, or how much attention you receive, but by fidelity to Christ.",
+      "whyConfirmationSaint": "St. Aquilina is a confirmation saint for young people who need courage to be visibly Christian. She reminds you that age does not limit faithfulness.",
+      "image": {
+        "filename": "aquilina.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Aquilina"
+        }
+      ]
+    },
+    {
+      "id": "mary-mackillop",
+      "name": "St. Mary MacKillop",
+      "feastDay": "08-08",
+      "birthDate": "1842-01-15",
+      "deathDate": "1909-08-08",
+      "canonizationDate": "2010-10-17",
+      "country": "Australia",
+      "region": "Oceania",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Australia",
+        "educators",
+        "social justice"
+      ],
+      "tags": [
+        "modern",
+        "founder",
+        "educator",
+        "religious sister"
+      ],
+      "affinities": [
+        "teaching",
+        "justice",
+        "service",
+        "community"
+      ],
+      "quote": "Never see a need without doing something about it.",
+      "biography": "St. Mary MacKillop was born in Australia to a family that knew both faith and financial struggle. Seeing how many poor and rural children had little access to education, she worked with Fr. Julian Tenison Woods to found the Sisters of St. Joseph of the Sacred Heart. The sisters opened schools and served families who were often overlooked because they lived far from wealth and power.\n\nMary faced misunderstanding, conflict, and even a temporary excommunication, but she stayed faithful to the Church and refused to become bitter. Her trust in God helped her keep building schools, forming sisters, and serving the poor across Australia and beyond. As Australia's first canonized saint, Mary shows that education can be a work of justice and holiness. Her life encourages young people to meet problems with courage, forgiveness, and practical love.",
+      "whyConfirmationSaint": "St. Mary MacKillop is ideal for someone who notices needs others ignore. She shows that confirmation should make your faith active, especially for children and people on the margins.",
+      "image": {
+        "filename": "mary-mackillop.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mary_MacKillop"
+        }
+      ]
+    },
+    {
+      "id": "jacinta-marto",
+      "name": "St. Jacinta Marto",
+      "feastDay": "02-20",
+      "birthDate": "1910-03-11",
+      "deathDate": "1920-02-20",
+      "canonizationDate": "2017-05-13",
+      "country": "Portugal",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "single",
+      "ageCategory": "young",
+      "patronOf": [
+        "Fatima",
+        "sick children",
+        "young people"
+      ],
+      "tags": [
+        "young",
+        "visionary",
+        "prayer",
+        "Marian"
+      ],
+      "affinities": [
+        "prayer",
+        "family",
+        "simplicity",
+        "faith"
+      ],
+      "quote": "Tell everybody that God gives graces through the Immaculate Heart of Mary.",
+      "biography": "St. Jacinta Marto was one of the three shepherd children who reported seeing the Blessed Virgin Mary at Fátima in 1917. She was only a child, but the message of prayer, repentance, and love for sinners touched her deeply. After the apparitions, Jacinta became serious about offering small sacrifices and praying for people who were far from God.\n\nJacinta later became very ill during the influenza pandemic and died at only nine years old. In her sickness, she tried to unite her suffering with Jesus and pray for others rather than focus only on herself. Her holiness was not complicated: she listened, prayed, and loved with a generous heart. Jacinta reminds young people that children can respond to grace in a real way, and that even hidden sacrifices can become powerful acts of love.",
+      "whyConfirmationSaint": "St. Jacinta is a confirmation saint for young people who want a tender heart and strong prayer life. She shows that children can love God with heroic generosity.",
+      "image": {
+        "filename": "jacinta-marto.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Francisco_and_Jacinta_Marto"
+        }
+      ]
+    },
+    {
+      "id": "sara-salkahazi",
+      "name": "Bl. Sára Salkaházi",
+      "feastDay": "12-27",
+      "birthDate": "1899-05-11",
+      "deathDate": "1944-12-27",
+      "canonizationDate": null,
+      "country": "Hungary",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Hungary",
+        "social workers",
+        "persecuted people"
+      ],
+      "tags": [
+        "Blessed",
+        "martyr",
+        "social justice",
+        "religious sister"
+      ],
+      "affinities": [
+        "justice",
+        "service",
+        "courage",
+        "community"
+      ],
+      "quote": "Here I am; send me.",
+      "biography": "Bl. Sára Salkaházi was born in Hungary and worked as a journalist before entering the Sisters of Social Service. She had a lively personality and a deep concern for workers, women, and people pushed to the margins. During World War II, as Jewish people faced deadly persecution, Sára and her community helped hide and protect those in danger.\n\nIn 1944, members of the Arrow Cross discovered her work. Sára was arrested and executed on the banks of the Danube River, giving her life because she chose solidarity with people being hunted. She was beatified as a martyr for charity and justice. Her witness challenges Christians not to stay comfortable when others are threatened. Sára shows that faith becomes real when courage protects human dignity, even at great personal cost.",
+      "whyConfirmationSaint": "Bl. Sára is a confirmation companion for anyone who wants faith to defend human dignity. She shows that Christian service sometimes means taking real risks for the threatened.",
+      "image": {
+        "filename": "sara-salkahazi.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/S%C3%A1ra_Salkah%C3%A1zi"
+        }
+      ]
+    },
+    {
+      "id": "apollonia",
+      "name": "St. Apollonia",
+      "feastDay": "02-09",
+      "birthDate": "0200-01-01",
+      "deathDate": "0249-02-09",
+      "canonizationDate": null,
+      "country": "Egypt",
+      "region": "Africa",
+      "gender": "female",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "dentists",
+        "dental patients",
+        "toothache"
+      ],
+      "tags": [
+        "early-church",
+        "martyr",
+        "virgin",
+        "healer"
+      ],
+      "affinities": [
+        "healing",
+        "courage",
+        "medicine",
+        "faith"
+      ],
+      "quote": "Be faithful unto death, and I will give you the crown of life.",
+      "biography": "St. Apollonia was a Christian woman in Alexandria during a violent outbreak of persecution in the third century. Tradition remembers her as a virgin martyr who was seized by a mob because of her faith. Her persecutors struck her and broke or damaged her teeth, then threatened her with death unless she denied Christ. Apollonia remained faithful even in terrible pain.\n\nBecause of the suffering connected with her teeth, Christians have long asked her prayers for dentists, dental patients, and people with tooth pain. But Apollonia's witness is bigger than one kind of suffering. She shows that the body matters, pain is real, and God is close to those who endure it. For anyone afraid of sickness, medical treatment, or humiliation, Apollonia is a gentle but strong companion in courage.",
+      "whyConfirmationSaint": "St. Apollonia is a confirmation saint for those who suffer pain or fear medical care. Her courage turns suffering into intercession and hope.",
+      "image": {
+        "filename": "apollonia.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Saint_Apollonia"
+        }
+      ]
+    },
+    {
+      "id": "hildegard-bingen",
+      "name": "St. Hildegard of Bingen",
+      "feastDay": "09-17",
+      "birthDate": "1098-09-16",
+      "deathDate": "1179-09-17",
+      "canonizationDate": null,
+      "country": "Germany",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "musicians",
+        "writers",
+        "scientists"
+      ],
+      "tags": [
+        "Doctor of the Church",
+        "mystic",
+        "musician",
+        "writer"
+      ],
+      "affinities": [
+        "music",
+        "science",
+        "writing",
+        "nature"
+      ],
+      "quote": "I am the fiery life of divine essence.",
+      "biography": "St. Hildegard of Bingen was a Benedictine abbess, visionary, composer, writer, and healer whose gifts touched many parts of life. From childhood she experienced visions, and later she recorded them in works such as Scivias. She wrote music, reflected on Scripture, studied nature and medicine as her world understood them, and advised popes, bishops, and rulers with surprising boldness.\n\nHildegard did not separate faith from creativity or learning. For her, creation was filled with signs of God's wisdom, and the human person was called to harmony with God. She founded and led religious communities, preached reform, and left music still sung today. Named a Doctor of the Church, Hildegard is a powerful patron for artists, scientists, musicians, writers, and anyone with many gifts who wants to use them for God.",
+      "whyConfirmationSaint": "St. Hildegard is a confirmation saint for creative, curious people. She shows that science, music, leadership, and prayer can all become paths to praising God.",
+      "image": {
+        "filename": "hildegard-bingen.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hildegard_of_Bingen"
+        }
+      ]
+    },
+    {
+      "id": "katharine-drexel",
+      "name": "St. Katharine Drexel",
+      "feastDay": "03-03",
+      "birthDate": "1858-11-26",
+      "deathDate": "1955-03-03",
+      "canonizationDate": "2000-10-01",
+      "country": "United States",
+      "region": "North America",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "racial justice",
+        "education",
+        "Native Americans"
+      ],
+      "tags": [
+        "modern",
+        "founder",
+        "educator",
+        "social justice"
+      ],
+      "affinities": [
+        "justice",
+        "teaching",
+        "service",
+        "leadership"
+      ],
+      "quote": "If we wish to serve God and love our neighbor well, we must manifest our joy.",
+      "biography": "St. Katharine Drexel was born into a wealthy Philadelphia family, but she learned that money was meant to serve love. After seeing the needs of Black and Native American communities, she asked Pope Leo XIII to send missionaries. He challenged her to become one herself. Katharine entered religious life and founded the Sisters of the Blessed Sacrament to serve communities suffering from racism and neglect.\n\nKatharine used her inheritance to build schools, missions, and opportunities for people denied fair treatment, including support for what became Xavier University of Louisiana. Her work was not popular with everyone, but she kept choosing justice rooted in the Eucharist. Katharine shows that privilege becomes holy only when it is given away in service. She is a strong saint for anyone who wants faith to confront racism with courage and love.",
+      "whyConfirmationSaint": "St. Katharine is a confirmation saint for anyone who wants privilege, education, or resources to become service. She teaches that love of God must confront injustice.",
+      "image": {
+        "filename": "katharine-drexel.jpg",
+        "attribution": "CC BY-SA 4.0, Magicpiano, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Katharine_Drexel"
+        }
+      ]
+    },
+    {
+      "id": "francisco-marto",
+      "name": "St. Francisco Marto",
+      "feastDay": "02-20",
+      "birthDate": "1908-06-11",
+      "deathDate": "1919-04-04",
+      "canonizationDate": "2017-05-13",
+      "country": "Portugal",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "single",
+      "ageCategory": "young",
+      "patronOf": [
+        "Fatima",
+        "young people",
+        "sick children"
+      ],
+      "tags": [
+        "young",
+        "visionary",
+        "prayer",
+        "Marian"
+      ],
+      "affinities": [
+        "prayer",
+        "silence",
+        "family",
+        "faith"
+      ],
+      "quote": "I loved seeing the Angel, but I loved still more seeing Our Lady.",
+      "biography": "St. Francisco Marto was one of the three children of Fátima who reported seeing the Blessed Virgin Mary in 1917. Quieter and more reflective than his sister Jacinta and cousin Lúcia, Francisco was especially moved by the idea of consoling Jesus through prayer. After the apparitions, he often chose silence, the Rosary, and time before the Blessed Sacrament.\n\nFrancisco became ill during the influenza pandemic and died at only ten years old. His path to holiness was hidden and simple: he prayed, trusted Mary, and offered his suffering with love. He was canonized with Jacinta as one of the youngest non-martyr saints in the Church. Francisco is a beautiful example for young people who are quiet, thoughtful, or not always in the spotlight. His life says that deep prayer can be a powerful mission.",
+      "whyConfirmationSaint": "St. Francisco is a confirmation saint for quiet people and hidden prayer. He proves that you do not need to be loud to love God deeply.",
+      "image": {
+        "filename": "francisco-marto.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Francisco_and_Jacinta_Marto"
+        }
+      ]
+    },
+    {
+      "id": "padre-pio",
+      "name": "St. Padre Pio",
+      "feastDay": "09-23",
+      "birthDate": "1887-05-25",
+      "deathDate": "1968-09-23",
+      "canonizationDate": "2002-06-16",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "healing",
+        "suffering",
+        "confessors"
+      ],
+      "tags": [
+        "modern",
+        "priest",
+        "Franciscan",
+        "stigmatist"
+      ],
+      "affinities": [
+        "prayer",
+        "healing",
+        "compassion",
+        "perseverance"
+      ],
+      "quote": "Pray, hope, and do not worry.",
+      "biography": "St. Padre Pio was an Italian Capuchin priest known for prayer, confession, and bearing the stigmata, the wounds of Christ. People came from around the world seeking his counsel because he took sin, mercy, and conversion seriously. He spent long hours hearing confessions and urging people to pray, especially through the Mass and the Rosary.\n\nPadre Pio also faced misunderstanding, restrictions, and investigation during his life. He responded with obedience and continued serving where he could. His concern for suffering people led to the founding of the Casa Sollievo della Sofferenza, a hospital meant to unite medical care with Christian compassion. Padre Pio's life can seem extraordinary, but his message is direct: stay close to Jesus, confess honestly, pray faithfully, and let suffering become love instead of bitterness.",
+      "whyConfirmationSaint": "St. Padre Pio is a confirmation saint for anyone carrying anxiety, pain, or a need for mercy. He points to prayer, confession, and hope in Christ.",
+      "image": {
+        "filename": "padre-pio.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Padre_Pio"
+        }
+      ]
+    },
+    {
+      "id": "miguel-pro",
+      "name": "Bl. Miguel Pro",
+      "feastDay": "11-23",
+      "birthDate": "1891-01-13",
+      "deathDate": "1927-11-23",
+      "canonizationDate": null,
+      "country": "Mexico",
+      "region": "North America",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Mexico",
+        "persecuted Christians",
+        "social action"
+      ],
+      "tags": [
+        "Blessed",
+        "martyr",
+        "priest",
+        "social justice"
+      ],
+      "affinities": [
+        "courage",
+        "justice",
+        "humor",
+        "faith"
+      ],
+      "quote": "¡Viva Cristo Rey!",
+      "biography": "Bl. Miguel Pro was a Mexican Jesuit priest who served during a time when the government severely restricted the Catholic Church. Because public ministry was dangerous, he celebrated Mass, heard confessions, and brought the sacraments to people in secret, sometimes using disguises and quick wit to avoid arrest. His humor did not make him careless; it helped him stay brave and bring hope to others.\n\nIn 1927, Miguel was falsely accused in a political attack and executed without a fair trial. Before the firing squad, he forgave his enemies, stretched out his arms like a cross, and cried, 'Viva Cristo Rey!'—'Long live Christ the King!' Miguel's witness shows that joy and courage can live together. He is a powerful patron for anyone facing pressure to hide their faith or stop serving others.",
+      "whyConfirmationSaint": "Bl. Miguel Pro is a confirmation patron for joyful courage. He shows that faith can stay creative, generous, and brave even when public witness is dangerous.",
+      "image": {
+        "filename": "miguel-pro.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Miguel_Pro"
+        }
+      ]
+    },
+    {
+      "id": "agatha-sicily",
+      "name": "St. Agatha of Sicily",
+      "feastDay": "02-05",
+      "birthDate": "0231-01-01",
+      "deathDate": "0251-02-05",
+      "canonizationDate": null,
+      "country": "Sicily",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "martyr",
+      "ageCategory": "young",
+      "patronOf": [
+        "nurses",
+        "breast cancer patients",
+        "Sicily"
+      ],
+      "tags": [
+        "early-church",
+        "martyr",
+        "virgin",
+        "brave"
+      ],
+      "affinities": [
+        "courage",
+        "healing",
+        "perseverance",
+        "faith"
+      ],
+      "quote": "Be faithful unto death, and I will give you the crown of life.",
+      "biography": "St. Agatha of Sicily was a young Christian woman from Catania during the Roman persecutions. Tradition says she had consecrated herself to Christ and refused the advances of a powerful official. Because she would not betray her faith or her dignity, she was arrested, humiliated, and tortured. Agatha remained faithful through suffering and died as a martyr.\n\nHer courage made her one of the most honored women of the early Church; she is even named in the Roman Canon of the Mass. Christians have long asked her prayers for nurses, people with breast cancer, and the island of Sicily. Agatha's story speaks strongly today because she refused to let power, pressure, or violence define her worth. She reminds young people that the body is sacred, conscience matters, and Christ gives strength to endure injustice.",
+      "whyConfirmationSaint": "St. Agatha is a confirmation saint for courage, bodily dignity, and endurance. She stands with those who suffer and teaches that no violence can take away belonging to Christ.",
+      "image": {
+        "filename": "agatha-sicily.jpg",
+        "attribution": "CC BY 3.0, Sailko, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Agatha_of_Sicily"
+        }
+      ]
+    },
+    {
+      "id": "agnes",
+      "name": "St. Agnes",
+      "feastDay": "01-21",
+      "birthDate": "0291-01-01",
+      "deathDate": "0304-01-21",
+      "canonizationDate": null,
+      "country": "Rome",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "martyr",
+      "ageCategory": "young",
+      "patronOf": [
+        "chastity",
+        "girls",
+        "engaged couples"
+      ],
+      "tags": [
+        "early-church",
+        "martyr",
+        "virgin",
+        "young"
+      ],
+      "affinities": [
+        "courage",
+        "faith",
+        "simplicity",
+        "prayer"
+      ],
+      "quote": "Be faithful unto death, and I will give you the crown of life.",
+      "biography": "St. Agnes was a young Christian girl in Rome, traditionally remembered as being about twelve or thirteen when she was martyred. Many wanted to control her future through status, marriage, or fear, but Agnes had already given her heart to Christ. When pressured to abandon her faith, she refused with a courage far beyond her age.\n\nAgnes became one of the most beloved martyrs of the early Church and is named in the Roman Canon of the Mass. Her symbol is often a lamb, a reminder of innocence, gentleness, and belonging to Christ the Lamb of God. Agnes is not a saint because she was fragile; she is a saint because her purity was strong. She helps young people see that dignity, boundaries, and faith are worth defending, even when others do not understand.",
+      "whyConfirmationSaint": "St. Agnes is a confirmation saint for young people who want courage and purity of heart. She shows that holiness is not measured by age but by love that refuses to compromise.",
+      "image": {
+        "filename": "agnes.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Agnes_of_Rome"
+        }
+      ]
+    },
+    {
+      "id": "lucy",
+      "name": "St. Lucy",
+      "feastDay": "12-13",
+      "birthDate": "0283-01-01",
+      "deathDate": "0304-12-13",
+      "canonizationDate": null,
+      "country": "Sicily",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "martyr",
+      "ageCategory": "young",
+      "patronOf": [
+        "blind people",
+        "eyesight",
+        "sore eyes"
+      ],
+      "tags": [
+        "early-church",
+        "martyr",
+        "virgin",
+        "light"
+      ],
+      "affinities": [
+        "courage",
+        "faith",
+        "healing",
+        "simplicity"
+      ],
+      "quote": "The light shines in the darkness, and the darkness has not overcome it.",
+      "biography": "St. Lucy was a young Christian from Syracuse in Sicily during the Roman persecutions. Her name is connected with light, and her life became a witness to the light of Christ in a dark time. Tradition says she gave her wealth to the poor and refused a marriage that would have pulled her away from her commitment to God. When she was denounced as a Christian, she remained faithful.\n\nLucy was martyred for her faith and became one of the most beloved virgin martyrs of the early Church, also named in the Roman Canon. Because later tradition connected her story with her eyes, she is honored as patron of people with eye problems and those who are blind. Lucy's witness is clear and memorable: let Christ's light guide your choices, especially when fear, pressure, or comfort try to dim it.",
+      "whyConfirmationSaint": "St. Lucy is a confirmation saint for anyone seeking light in confusion, illness, or fear. She reminds you that Christ’s light is stronger than darkness.",
+      "image": {
+        "filename": "lucy.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Saint_Lucy"
+        }
+      ]
+    },
+    {
+      "id": "margaret-mary-alacoque",
+      "name": "St. Margaret Mary Alacoque",
+      "feastDay": "10-16",
+      "birthDate": "1647-07-22",
+      "deathDate": "1690-10-17",
+      "canonizationDate": "1920-05-13",
+      "country": "France",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Sacred Heart devotion",
+        "those suffering with polio",
+        "loss of parents"
+      ],
+      "tags": [
+        "mystic",
+        "religious sister",
+        "visionary",
+        "Sacred Heart",
+        "French"
+      ],
+      "affinities": [
+        "prayer",
+        "Eucharistic adoration",
+        "Sacred Heart devotion",
+        "perseverance",
+        "compassion"
+      ],
+      "quote": "I need nothing but God, and to lose myself in the heart of Jesus.",
+      "biography": "Margaret Mary Alacoque was born on July 22, 1647, in Burgundy, France. Her childhood included the death of her father, family hardship, and a serious illness that left her weak for years. These experiences helped form a quiet, determined faith and a special trust in Jesus and Mary.\n\nAt age 24, Margaret Mary entered the Visitation monastery at Paray-le-Monial. She wanted a hidden religious life, but beginning in the 1670s she reported visions in which Christ revealed his Sacred Heart as a sign of his burning love for humanity. The message she carried encouraged frequent Communion, prayer before the Eucharist, the First Friday devotion, and a feast honoring the Sacred Heart.\n\nMargaret Mary faced misunderstanding and criticism, even from some within her community. With the support of St. Claude de la Colombière, she remained obedient, humble, and faithful to the mission entrusted to her. She died on October 17, 1690, and was canonized by Pope Benedict XV in 1920. Her witness helped spread devotion to the Sacred Heart throughout the Church.",
+      "whyConfirmationSaint": "St. Margaret Mary is a confirmation saint for anyone drawn to prayer, the Eucharist, and the love of Jesus. She is especially meaningful for those who have known illness, family loss, or the feeling of being misunderstood. Her life shows that a quiet, faithful heart can help the whole Church remember how deeply God loves us.",
+      "image": {
+        "filename": "margaret-mary-alacoque.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/10/16/st---margaret-mary-alacoque--apostle-of-the-sacred-heart.html"
+        },
+        {
+          "name": "Franciscan Media",
+          "url": "https://www.franciscanmedia.org/saint-of-the-day/saint-margaret-mary-alacoque"
+        }
+      ]
+    },
+    {
+      "id": "benedict-of-nursia",
+      "name": "St. Benedict of Nursia",
+      "feastDay": "07-11",
+      "birthDate": null,
+      "deathDate": null,
+      "canonizationDate": null,
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Europe",
+        "monastic life",
+        "monks",
+        "students",
+        "against poison",
+        "against temptation"
+      ],
+      "tags": [
+        "monk",
+        "abbot",
+        "founder",
+        "Rule of St. Benedict",
+        "Italian"
+      ],
+      "affinities": [
+        "prayer",
+        "work",
+        "community",
+        "discipline",
+        "learning"
+      ],
+      "quote": "Prefer nothing whatever to Christ.",
+      "biography": "Benedict was born around 480 in Nursia, Italy, during a time when the Roman world was changing and unstable. As a young man, he went to Rome for studies but became discouraged by the corruption and distractions he found there. Wanting to belong fully to God, he withdrew to a life of prayer and solitude near Subiaco.\n\nOver time, other men came to him for guidance, and Benedict became a spiritual father to communities of monks. He later founded the monastery at Monte Cassino, where he wrote the Rule of St. Benedict. The Rule offered a balanced way of Christian life built on prayer, work, Scripture, obedience, hospitality, and community. Its wisdom shaped monasteries across Europe and earned Benedict the title father of Western monasticism.\n\nBenedict's life was not an escape from the world but a witness to how daily habits can become holy. He taught that ordinary work, shared meals, listening, silence, and care for guests could all become ways to seek Christ. His feast is celebrated on July 11, and he is honored as one of the patron saints of Europe.",
+      "whyConfirmationSaint": "St. Benedict is a strong confirmation saint for anyone who wants structure, peace, and purpose in daily life. He is especially meaningful for students, people drawn to prayer, and anyone who wants faith to shape work, friendships, and habits. Benedict shows that holiness grows through small acts of fidelity practiced together in community.",
+      "image": {
+        "filename": "benedict-of-nursia.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/saints/07/11/st--benedict--abbot--patron-of-europe.html"
+        },
+        {
+          "name": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/biography/Saint-Benedict-of-Nursia"
+        }
+      ]
+    },
+    {
+      "id": "peter-of-saint-joseph-betancur",
+      "name": "St. Peter of Saint Joseph de Betancur",
+      "feastDay": "04-24",
+      "birthDate": "1626-03-21",
+      "deathDate": "1667-04-25",
+      "canonizationDate": "2002-07-30",
+      "country": "Spain",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Guatemala",
+        "Central America",
+        "homeless people",
+        "the sick",
+        "foundlings",
+        "charity",
+        "mercy"
+      ],
+      "tags": [
+        "Franciscan",
+        "Third Order",
+        "founder",
+        "missionary",
+        "Latin American",
+        "Spanish"
+      ],
+      "affinities": [
+        "charity",
+        "mercy",
+        "service",
+        "compassion",
+        "prayer",
+        "hospitality"
+      ],
+      "quote": null,
+      "biography": "Peter of Saint Joseph de Betancur was born on March 21, 1626, in Tenerife in the Canary Islands, Spain. As a young man he left home for Guatemala, hoping to serve God in a new land. He tried to study for the priesthood, but poor health and academic struggles made that path impossible. Instead of giving up, he listened for a different vocation.\n\nKnown in Spanish as Hermano Pedro, he became a Franciscan tertiary and dedicated himself to the people most easily forgotten. In Antigua Guatemala he taught children, visited prisoners, cared for the sick, welcomed travelers, and begged for food and medicine for people who had no one else to help them. He opened a small hospital and shelter that served the homeless, the sick, and abandoned children. His works of mercy grew into the Bethlehemite community, a family of service shaped by poverty, prayer, and compassion.\n\nHermano Pedro died on April 25, 1667, worn out by charity. Pope John Paul II canonized him in Guatemala City on July 30, 2002. He is especially loved in Guatemala, Central America, and the Canary Islands as a saint who made mercy practical and close to the poor.",
+      "whyConfirmationSaint": "St. Peter of Saint Joseph de Betancur is a powerful confirmation saint for anyone drawn to mercy, service, and practical charity. He shows that setbacks do not end a vocation: when one door closed, he found Christ among the homeless, sick, and abandoned. Choose him if you want a patron who turns compassion into action.",
+      "image": {
+        "filename": "peter-of-saint-joseph-betancur.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican",
+          "url": "https://www.vatican.va/content/john-paul-ii/es/homilies/2002/documents/hf_jp-ii_hom_20020730_canonization-guatemala.html"
+        },
+        {
+          "name": "Order of Friars Minor",
+          "url": "https://ofm.org/en/saint-brother-pedro.html"
         }
       ]
     }

@@ -23,8 +23,9 @@ import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -94,7 +95,7 @@ fun SaintListScreen(
             )
         }
 
-        Divider()
+        HorizontalDivider()
 
         when {
             state.isLoading -> EmptyMessage(
@@ -119,7 +120,7 @@ fun SaintListScreen(
                             .fillMaxWidth()
                             .clickable { onSaintClick(saint.id) },
                     )
-                    Divider()
+                    HorizontalDivider()
                 }
             }
         }
@@ -147,6 +148,16 @@ private fun FilterChipsRow(
             onClick = {
                 viewModel.setAgeCategory(
                     if (state.filters.selectedAgeCategory == "young") null else "young",
+                )
+            },
+        )
+        AppFilterChip(
+            label = AppStrings.localized("Modern Day Saints", language),
+            icon = Icons.Default.Schedule,
+            selected = state.filters.selectedEra == "modern-day",
+            onClick = {
+                viewModel.setEra(
+                    if (state.filters.selectedEra == "modern-day") null else "modern-day",
                 )
             },
         )

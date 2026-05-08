@@ -7,8 +7,7 @@ struct SaintImageView: View {
     let size: CGFloat
 
     var body: some View {
-        if let imageFilename = saint.image?.filename,
-           let uiImage = loadAssetImage(named: imageFilename) ?? loadBundleImage(named: imageFilename) {
+        if let uiImage = Self.loadImage(for: saint) {
             Image(uiImage: uiImage)
                 .resizable()
                 .scaledToFill()
@@ -27,8 +26,13 @@ struct SaintImageView: View {
         }
     }
 
+    static func loadImage(for saint: Saint) -> UIImage? {
+        guard let filename = saint.image?.filename else { return nil }
+        return loadAssetImage(named: filename) ?? loadBundleImage(named: filename)
+    }
+
     /// Try loading from asset catalog (filename without extension).
-    private func loadAssetImage(named filename: String) -> UIImage? {
+    private static func loadAssetImage(named filename: String) -> UIImage? {
         let name = filename
             .replacingOccurrences(of: ".jpg", with: "")
             .replacingOccurrences(of: ".png", with: "")
@@ -36,7 +40,7 @@ struct SaintImageView: View {
     }
 
     /// Try loading from SharedContent/images/ in the bundle.
-    private func loadBundleImage(named filename: String) -> UIImage? {
+    private static func loadBundleImage(named filename: String) -> UIImage? {
         if let url = Bundle.main.url(forResource: filename, withExtension: nil, subdirectory: "SharedContent/images") {
             return UIImage(contentsOfFile: url.path)
         }

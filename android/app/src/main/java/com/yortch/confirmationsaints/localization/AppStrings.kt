@@ -42,6 +42,10 @@ object AppStrings {
         "Region" to "Región",
         "Sources" to "Fuentes",
         "Why Choose This Saint?" to "¿Por qué elegir este santo?",
+        "Saint image" to "Imagen del santo",
+        "Tap image to enlarge" to "Toca la imagen para ampliarla",
+        "View larger image" to "Ver imagen más grande",
+        "Close image" to "Cerrar imagen",
 
         // Search / list
         "Search" to "Buscar",
@@ -60,12 +64,12 @@ object AppStrings {
         // Filter chips / categories
         "Young Saints" to "Santos Jóvenes",
         "Young Saint" to "Santo Joven",
+        "Modern Day Saints" to "Santos de Hoy",
         "Female Saints" to "Santas",
         "Male Saints" to "Santos Varones",
         "By Name" to "Por Nombre",
         "By Interest" to "Por Interés",
         "By Country" to "Por País",
-        "By Feast Day" to "Por Día de Fiesta",
         "By Life Stage" to "Por Etapa de Vida",
 
         // Life state display values (lowercase keys, match saint data)

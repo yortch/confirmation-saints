@@ -105,7 +105,7 @@ class LocalizationServiceTest {
 ```toml
 # gradle/libs.versions.toml
 [versions]
-robolectric = "4.13"
+robolectric = "4.16.1"  # Supports SDK 35, SDK 36 (upgrade from 4.13 when targeting SDK 35+)
 kotlinx-coroutines-test = "1.8.1"
 turbine = "1.1.0"
 
@@ -138,12 +138,22 @@ Robolectric 4.13+ with AGP 8.x auto-detects manifest location. Manual `robolectr
 
 **Fix:** Remove `robolectric.properties` and rely on AGP's automatic configuration.
 
-### ❌ Mistake 3: Not advancing test dispatcher after async work
+### ❌ Mistake 3: Robolectric version doesn't support target SDK
+Tests fail with `IllegalArgumentException at DefaultSdkPicker.java:119` when `targetSdk` is higher than Robolectric supports.
+
+**Fix:** Check [Robolectric releases](https://github.com/robolectric/robolectric/releases) for SDK support:
+- Robolectric 4.13: supports up to SDK 34
+- Robolectric 4.16.1: supports SDK 35 and SDK 36
+- When upgrading Android `compileSdk` or `targetSdk`, upgrade Robolectric accordingly
+
+**Alternative:** Add `@Config(sdk = 34)` to test classes to use a lower SDK version (temporary workaround).
+
+### ❌ Mistake 4: Not advancing test dispatcher after async work
 StateFlow/DataStore updates happen asynchronously. Tests that don't advance the dispatcher see stale values.
 
 **Fix:** Call `testDispatcher.scheduler.advanceUntilIdle()` after triggering async updates.
 
-### ❌ Mistake 4: Ignoring StateFlow initialValue emission
+### ❌ Mistake 5: Ignoring StateFlow initialValue emission
 StateFlow emits `initialValue` immediately, before DataStore read completes. Tests expecting DataStore-persisted value as first emission fail.
 
 **Fix:** Either (1) consume initial emission then await DataStore value, or (2) conditionally check if first emission is default and await second.

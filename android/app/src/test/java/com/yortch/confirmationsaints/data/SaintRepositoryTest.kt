@@ -19,7 +19,7 @@ import org.robolectric.RobolectricTestRunner
  * Contract under test (from docs/android-architecture.md §3.5 and the
  * "SharedContent/ is the Canonical Cross-Platform Data Source" decision):
  *  - Repository loads from `assets/saints-{en,es}.json`.
- *  - Both languages must expose the same 81 saint ids.
+ *  - Both languages must expose the same 106 saint ids.
  */
 @RunWith(RobolectricTestRunner::class)
 class SaintRepositoryTest {
@@ -47,11 +47,11 @@ class SaintRepositoryTest {
     }
 
     @Test
-    fun should_return_exactly_81_saints_for_each_language() {
+    fun should_return_exactly_106_saints_for_each_language() {
         val enSaints = repository.loadSaints(AppLanguage.EN)
         val esSaints = repository.loadSaints(AppLanguage.ES)
-        assertEquals("EN should have 81 saints", 81, enSaints.size)
-        assertEquals("ES should have 81 saints", 81, esSaints.size)
+        assertEquals("EN should have 106 saints", 106, enSaints.size)
+        assertEquals("ES should have 106 saints", 106, esSaints.size)
     }
 
     @Test

@@ -13,6 +13,11 @@ video/.npm-cache/
 # Squad: SubSquad activation file (local to this machine)
 .squad-workstream
 
+# Node.js
+node_modules/
+video/node_modules/
+video/.npm_cache
+
 # Xcode
 build/
 DerivedData/

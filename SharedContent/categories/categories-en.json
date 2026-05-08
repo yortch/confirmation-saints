@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "language": "en",
-  "lastUpdated": "2025-07-15",
+  "lastUpdated": "2026-04-25",
   "categories": [
     {
       "id": "patronage",
@@ -240,6 +240,10 @@
         {
           "id": "contemporary",
           "label": "Contemporary (20th–21st century)"
+        },
+        {
+          "id": "modern-day",
+          "label": "Modern Day Saints (Born 1900+)"
         }
       ]
     },

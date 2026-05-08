@@ -131,17 +131,6 @@
         }
       }
     },
-    "By Feast Day" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Por Día de Fiesta"
-          }
-        }
-      }
-    },
     "By Interest" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -262,6 +251,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fallecimiento"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo"
           }
         }
       }
@@ -421,6 +421,17 @@
         }
       }
     },
+    "Modern Day Saints" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Santos de Hoy"
+          }
+        }
+      }
+    },
     "Name, interest, country..." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -483,6 +494,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir"
+          }
+        }
+      }
+    },
+    "Opens a larger view of this saint image." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre una vista más grande de esta imagen del santo."
           }
         }
       }
@@ -703,6 +725,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Versión"
+          }
+        }
+      }
+    },
+    "View larger image" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver imagen más grande"
+          }
+        }
+      }
+    },
+    "View larger image of %@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver imagen más grande de %@"
           }
         }
       }

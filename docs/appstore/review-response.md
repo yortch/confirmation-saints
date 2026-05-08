@@ -18,7 +18,7 @@ None of the flows Apple listed apply to this app, so none are shown:
 
 **Problem:** Candidates — mostly teenagers, also adults confirmed later in life — have only a few weeks to pick a saint whose life resonates with their own. Printed resources are limited, parish materials vary, and web searches surface inconsistent information. They need a focused, trustworthy, bilingual tool.
 
-**Value:** 80+ curated saints with biographies, feast days, patronages, and quotes; filter by interest, region, era, age, life state, and gender; instant English/Spanish switching; an educational "What is Confirmation?" section; fully offline with no accounts, ads, or tracking — safe for teens on shared or school-managed devices.
+**Value:** Over 100 curated saints with biographies, feast days, patronages, and quotes; filter by interest, region, era, age, life state, and gender; instant English/Spanish switching; an educational "What is Confirmation?" section; fully offline with no accounts, ads, or tracking — safe for teens on shared or school-managed devices.
 
 **Audience:** Catholic teenagers preparing for Confirmation (primary), adult candidates, sponsors, catechists, and parents.
 

@@ -606,8 +606,8 @@ Priority test cases:
 | Compile SDK | 35 |
 | Kotlin | 2.1.0 |
 | Compose BOM | 2025.01.01 (or latest stable) |
-| Version name | 1.0.0 |
-| Version code | 1 |
+| Version name | 1.0.2 |
+| Version code | 3 |
 
 ---
 
