@@ -25,7 +25,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -95,7 +95,7 @@ fun SaintListScreen(
             )
         }
 
-        Divider()
+        HorizontalDivider()
 
         when {
             state.isLoading -> EmptyMessage(
@@ -120,7 +120,7 @@ fun SaintListScreen(
                             .fillMaxWidth()
                             .clickable { onSaintClick(saint.id) },
                     )
-                    Divider()
+                    HorizontalDivider()
                 }
             }
         }
