@@ -43,3 +43,23 @@
 - **Carlo Acutis data:** his `id` is `carlo-acutis`, feast day `10-12`, quote "The Eucharist is my highway to heaven." Pulled verbatim into `video/src/data.ts` — if JSON updates, `data.ts` should be resynced (there's no build-time pipe).
 - **Deliverables checked in:** `video/out/ConfirmationSaintsPromo.mp4` (24 MB, gitignored per policy). Ready to promote to `docs/video/` once Jorge approves.
 
+### 2026-05-08 — Blog draft: App launch chronicle & Squad+Copilot CLI retrospective
+- **Request:** Jorge asked for a first-person blog entry for https://yortch.blogspot.com documenting his experience shipping iOS and Android apps using GitHub Copilot CLI and Squad agents.
+- **Verified timeline from git history:**
+  - Project init: **2026-04-12** (Squad setup)
+  - iOS 1.0.0 submitted: **2026-04-17** (~5 days after init)
+  - iOS 1.0.0 approved & live: **2026-04-21** (initial rejection due to no TestFlight; resubmitted, approved ~1 day later)
+  - iOS 1.0.1 released: **2026-04-23** (1st minor update)
+  - iOS 1.0.2: **2026-04-25**, iOS 1.0.3/1.0.4: **2026-04-29** (4 minor updates total)
+  - Android Play Store submission assets prepared: **2026-04-24**
+  - Android submitted to production: ~**2026-05-08** (after 2-week closed testing requirement)
+  - **Total dev-to-iOS-live: ~9 days** (2026-04-12 to 2026-04-21)
+  - **iOS to Android submission: ~26 days** (2026-04-21 to 2026-05-08, includes 2-week testing window)
+- **Key learnings Jorge shared:**
+  - iOS: $99/year developer fee; initial rejection (no TestFlight); resubmission approved within ~1 day; 4 minor updates.
+  - Android: $30 one-time Play Store fee; required 2-week closed testing with 12 testers; Jorge recruited via LinkedIn/TestersCommunity.com ($15); waiting on Play Store approval (est. up to 7 days).
+  - Hardware investment: owned existing MacBook + iOS device; purchased Samsung Galaxy A07 (~$100) as Android test device + future backup.
+  - GitHub Copilot CLI + Squad agents significantly accelerated cross-platform development (no details on specific agents used, but project context suggests Gandalf, Frodo, Aragorn, Samwise all contributed).
+- **Blog deliverable:** Draft created with first-person narrative, chronology, cost/timeline comparison (iOS vs Android), and reflections on the Copilot CLI + Squad workflow. Stored inline below for Jorge's review/publication.
+- **Boundary respected:** Did NOT modify app code, data, or iOS/Android sources. Drafted blog based purely on git history and Jorge's input, preserving his voice and factual claims.
+
