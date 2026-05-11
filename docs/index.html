@@ -127,6 +127,7 @@
         .store-badge-link {
             display: inline-block;
             line-height: 0;
+            cursor: pointer;
             transition: transform 0.2s;
         }
         .store-badge-link:hover { transform: translateY(-2px); }
@@ -562,13 +563,13 @@
     </div>
     <div class="store-badges">
         <div class="store-badge-item">
-            <a href="https://apps.apple.com/app/confirmation-saints/id6762463641" class="store-badge-link" id="download-link" aria-label="Download on the App Store">
+            <a href="https://apps.apple.com/app/confirmation-saints/id6762463641" class="store-badge-link" id="download-link" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
                 <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" class="store-badge">
             </a>
             <p class="download-note">Free · Requires iOS 17.0 or later</p>
         </div>
         <div class="store-badge-item">
-            <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints" class="store-badge-link" aria-label="Get it on Google Play">
+            <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints" class="store-badge-link" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
                 <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="store-badge google-play">
             </a>
             <p class="download-note">Free · Requires Android 8.0 or later</p>
@@ -867,11 +868,21 @@
                 <p>Material 3 design with dynamic light and dark themes that follow your system appearance.</p>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 32px;">
-            <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints" class="store-badge-link" aria-label="Get it on Google Play">
+    </div>
+
+    <div class="store-badges" style="margin-top: 48px;">
+        <div class="store-badge-item">
+            <a href="https://apps.apple.com/app/confirmation-saints/id6762463641" class="store-badge-link" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" class="store-badge">
+            </a>
+            <p class="download-note">Free · Requires iOS 17.0 or later</p>
+        </div>
+        <div class="store-badge-item">
+            <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints" class="store-badge-link" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
                 <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="store-badge google-play">
             </a>
-        </p>
+            <p class="download-note">Free · Requires Android 8.0 or later</p>
+        </div>
     </div>
 </section>
 
