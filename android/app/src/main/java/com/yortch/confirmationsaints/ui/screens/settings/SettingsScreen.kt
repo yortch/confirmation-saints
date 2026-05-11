@@ -14,16 +14,16 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.HelpOutline
+import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.ContactMail
 import androidx.compose.material.icons.filled.EmojiEmotions
-import androidx.compose.material.icons.filled.HelpOutline
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Language
-import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Shield
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
@@ -136,7 +136,7 @@ fun SettingsScreen(
                     onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/privacy-policy.html") },
                 )
                 LinkRow(
-                    icon = Icons.Default.HelpOutline,
+                    icon = Icons.AutoMirrored.Filled.HelpOutline,
                     label = AppStrings.localized("Support", language),
                     onClick = { uri.openUri("https://yortch.github.io/confirmation-saints/support.html") },
                 )
@@ -191,7 +191,7 @@ private fun Section(icon: ImageVector, title: String, content: @Composable () ->
             Spacer(Modifier.size(8.dp))
             Text(title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
         }
-        Divider()
+        HorizontalDivider()
         content()
     }
 }
@@ -249,7 +249,7 @@ private fun LinkRow(icon: ImageVector, label: String, onClick: () -> Unit) {
         Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
         Spacer(Modifier.size(8.dp))
         Text(label, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
-        Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
+        Icon(Icons.AutoMirrored.Filled.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
     }
 }
 
@@ -271,7 +271,7 @@ private fun SourceRow(name: String, description: String, url: String, onClick: (
             )
         }
         Icon(
-            Icons.Default.OpenInNew,
+            Icons.AutoMirrored.Filled.OpenInNew,
             contentDescription = "Open $name in browser",
             modifier = Modifier.size(16.dp),
             tint = MaterialTheme.colorScheme.onSurfaceVariant,

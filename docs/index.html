@@ -110,28 +110,36 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
         .badge .emoji { font-size: 1.1rem; }
-        .download-btn {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 16px 32px;
-            background: var(--dark);
-            color: var(--white);
-            border-radius: 14px;
-            text-decoration: none;
-            font-size: 1.05rem; font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: var(--shadow);
+        .store-badges {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 8px;
         }
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+        .store-badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
-        .download-btn svg { width: 24px; height: 24px; fill: currentColor; }
-        .android-test-btn {
-            margin-top: 16px;
-            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+        .store-badge-link {
+            display: inline-block;
+            line-height: 0;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
+        .store-badge-link:hover { transform: translateY(-2px); }
+        .store-badge {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+        /* Google Play badge ships with ~20% transparent padding; bump height to match Apple visually */
+        .store-badge.google-play { height: 84px; margin: -12px 0; }
         .download-note {
-            margin-top: 12px;
+            margin-top: 0;
             font-size: 0.85rem; color: var(--gray);
         }
 
@@ -552,17 +560,22 @@
         <span class="badge"><span class="emoji">🌎</span> Bilingual EN/ES</span>
         <span class="badge"><span class="emoji">🔒</span> 100% Offline</span>
         <span class="badge"><span class="emoji">✨</span> No Ads</span>
+        <span class="badge"><span class="emoji">💯</span> 100% Free</span>
     </div>
-    <a href="https://apps.apple.com/app/confirmation-saints/id6762463641" class="download-btn" id="download-link">
-        <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        Download on the App Store
-    </a>
-    <p class="download-note">Free · Requires iOS 17.0 or later</p>
-    <br>
-    <a href="#platform-android" class="download-btn android-test-btn">
-        <svg viewBox="0 0 24 24"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24C14.86 8.32 13.47 8 12 8s-2.86.32-4.47.91L5.65 5.67c-.19-.29-.55-.38-.84-.22-.3.16-.42.54-.26.85L6.4 9.48C3.3 11.25 1.28 14.44 1 18h22c-.28-3.56-2.3-6.75-5.4-8.52zM7 15.25c-.69 0-1.25-.56-1.25-1.25S6.31 12.75 7 12.75s1.25.56 1.25 1.25S7.69 15.25 7 15.25zm10 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z"/></svg>
-        Download test version for Android
-    </a>
+    <div class="store-badges">
+        <div class="store-badge-item">
+            <a href="https://apps.apple.com/app/confirmation-saints/id6762463641" class="store-badge-link" id="download-link" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" class="store-badge">
+            </a>
+            <p class="download-note">Requires iOS 17.0 or later</p>
+        </div>
+        <div class="store-badge-item">
+            <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints" class="store-badge-link" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+                <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="store-badge google-play">
+            </a>
+            <p class="download-note">Requires Android 8.0 or later</p>
+        </div>
+    </div>
 </section>
 
 <!-- Features -->
@@ -834,14 +847,40 @@
     </div>
 
     <div class="platform-content" id="platform-android">
-        <div class="coming-soon-banner">
-            <span class="coming-soon-badge">Closed Testing</span>
-            <h3>Android Version Now in Google Play Closed Testing</h3>
-            <p>The native Android version of Confirmation Saints is available to invited testers through Google Play closed testing.</p>
-            <ol class="testing-steps">
-                <li>First, <a href="https://groups.google.com/g/testers-community">join the testers-community@googlegroups.com Google Group</a> with the same Google account you use for Google Play.</li>
-                <li>After joining the group, <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints">download Confirmation Saints from Google Play</a>.</li>
-            </ol>
+        <div class="features-grid" style="max-width: 800px; margin: 0 auto;">
+            <div class="feature-card">
+                <div class="feature-icon green">📱</div>
+                <h3>Phone & Tablet</h3>
+                <p>Native Jetpack Compose app that scales beautifully across Android phones and tablets, portrait or landscape.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon blue">⚡</div>
+                <h3>Android 8.0+</h3>
+                <p>Built with Kotlin and the latest Jetpack Compose for smooth performance on modern Android devices.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon red">♿</div>
+                <h3>Accessible</h3>
+                <p>TalkBack support, scalable text, and high-contrast Material 3 design for an inclusive experience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon purple">🎨</div>
+                <h3>Material You</h3>
+                <p>Material 3 design with dynamic light and dark themes that follow your system appearance.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="store-badges" style="margin-top: 48px;">
+        <div class="store-badge-item">
+            <a href="https://apps.apple.com/app/confirmation-saints/id6762463641" class="store-badge-link" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" class="store-badge">
+            </a>
+        </div>
+        <div class="store-badge-item">
+            <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints" class="store-badge-link" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+                <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="store-badge google-play">
+            </a>
         </div>
     </div>
 </section>

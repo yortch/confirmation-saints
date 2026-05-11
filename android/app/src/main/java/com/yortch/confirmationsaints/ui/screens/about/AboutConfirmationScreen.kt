@@ -14,7 +14,7 @@ import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.PersonPin
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -58,7 +58,7 @@ fun AboutConfirmationScreen(viewModel: SaintListViewModel = hiltViewModel()) {
     ) {
         items(state.confirmationSections, key = { it.id }) { section ->
             SectionView(section)
-            Divider()
+            HorizontalDivider()
         }
     }
 }
