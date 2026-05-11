@@ -2,11 +2,11 @@
 
 These notes are Android-specific. Keep App Store/iOS submission copy in `docs/appstore/submission-info.md` so platform-only fixes do not accidentally appear in the wrong store listing.
 
-## Android v1.0.3 Update Notes
+## Android v1.0.2 Update Notes
 
-This release ships the v1.0.3 production rollout on Google Play. Version metadata: `versionName` 1.0.3 / `versionCode` 4.
+This release ships the v1.0.2 production rollout on Google Play. Version metadata: `versionName` 1.0.2 / `versionCode` 3.
 
-## What's New in v1.0.3
+## What's New in v1.0.2
 
 We've expanded Confirmation Saints to over 100 Catholic saints with rich biographies, inspirational quotes, feast days, and source citations to help you choose a patron for Confirmation.
 
@@ -42,8 +42,8 @@ The Android app is built with native Kotlin and Jetpack Compose, supports Englis
 
 | Field | Value |
 |---|---|
-| Version name | `1.0.3` |
-| Version code | `4` |
+| Version name | `1.0.2` |
+| Version code | `3` |
 | Package | `com.yortch.confirmationsaints` |
 | Min SDK | API 26 |
 | Target SDK | API 35 |
