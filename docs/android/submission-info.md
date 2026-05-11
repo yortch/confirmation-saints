@@ -16,6 +16,7 @@ This pending Android update also makes saint detail images easier to view: tap a
 
 ```
 Pending future Android update — not yet released to production while Android completes Google Play's required closed testing phase.
+• Library expanded to over 100 Catholic saints, all available offline in English and Spanish.
 • Tap saint detail images to view a larger offline preview using bundled artwork.
 • Expanded English and Spanish biographies for recently added saints.
 ```
