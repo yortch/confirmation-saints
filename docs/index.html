@@ -130,6 +130,15 @@
             margin-top: 16px;
             background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
         }
+        .google-play-badge-link {
+            display: inline-block;
+            margin-top: 16px;
+            line-height: 0;
+        }
+        .google-play-badge {
+            height: 64px;
+            width: auto;
+        }
         .download-note {
             margin-top: 12px;
             font-size: 0.85rem; color: var(--gray);
@@ -559,10 +568,10 @@
     </a>
     <p class="download-note">Free · Requires iOS 17.0 or later</p>
     <br>
-    <a href="#platform-android" class="download-btn android-test-btn">
-        <svg viewBox="0 0 24 24"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24C14.86 8.32 13.47 8 12 8s-2.86.32-4.47.91L5.65 5.67c-.19-.29-.55-.38-.84-.22-.3.16-.42.54-.26.85L6.4 9.48C3.3 11.25 1.28 14.44 1 18h22c-.28-3.56-2.3-6.75-5.4-8.52zM7 15.25c-.69 0-1.25-.56-1.25-1.25S6.31 12.75 7 12.75s1.25.56 1.25 1.25S7.69 15.25 7 15.25zm10 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z"/></svg>
-        Download test version for Android
+    <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints" class="google-play-badge-link" aria-label="Get it on Google Play">
+        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="google-play-badge">
     </a>
+    <p class="download-note">Free · Requires Android 8.0 or later</p>
 </section>
 
 <!-- Features -->
@@ -835,13 +844,14 @@
 
     <div class="platform-content" id="platform-android">
         <div class="coming-soon-banner">
-            <span class="coming-soon-badge">Closed Testing</span>
-            <h3>Android Version Now in Google Play Closed Testing</h3>
-            <p>The native Android version of Confirmation Saints is available to invited testers through Google Play closed testing.</p>
-            <ol class="testing-steps">
-                <li>First, <a href="https://groups.google.com/g/testers-community">join the testers-community@googlegroups.com Google Group</a> with the same Google account you use for Google Play.</li>
-                <li>After joining the group, <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints">download Confirmation Saints from Google Play</a>.</li>
-            </ol>
+            <span class="coming-soon-badge" style="background: #34a853;">Now Available</span>
+            <h3>Confirmation Saints is live on Google Play</h3>
+            <p>The native Android version of Confirmation Saints is now available worldwide on the Google Play Store. Free, no ads, fully offline.</p>
+            <p style="margin-top: 24px;">
+                <a href="https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints" aria-label="Get it on Google Play">
+                    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style="height: 80px;">
+                </a>
+            </p>
         </div>
     </div>
 </section>
