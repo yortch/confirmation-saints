@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "language": "en",
-  "lastUpdated": "2026-04-30",
+  "lastUpdated": "2026-08-30",
   "saints": [
     {
       "id": "therese-of-lisieux",
@@ -5045,6 +5045,569 @@
         {
           "name": "Order of Friars Minor",
           "url": "https://ofm.org/en/saint-brother-pedro.html"
+        }
+      ]
+    },
+    {
+      "id": "jose-gregorio-hernandez",
+      "name": "St. José Gregorio Hernández",
+      "feastDay": "10-26",
+      "birthDate": "1864-10-26",
+      "deathDate": "1919-06-29",
+      "canonizationDate": "2025-10-19",
+      "country": "Venezuela",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "single",
+      "ageCategory": "adult",
+      "patronOf": [
+        "doctors",
+        "medical students",
+        "the poor",
+        "Venezuela"
+      ],
+      "tags": [
+        "modern",
+        "physician",
+        "layperson",
+        "Venezuelan"
+      ],
+      "affinities": [
+        "science",
+        "medicine",
+        "compassion",
+        "service"
+      ],
+      "quote": "To serve the poor is to serve Jesus Christ.",
+      "biography": "José Gregorio Hernández Cisneros was born on October 26, 1864, in Isnotú, a small town in the Venezuelan Andes, the eldest of six children. Devout from childhood, he considered the priesthood, but poor health and a growing conviction that he could serve God by healing the sick led him toward medicine instead.\n\nHe studied at the Central University of Venezuela in Caracas, graduating with highest honors in 1888, and later trained in Paris alongside some of the era's leading physicians. Back home, he became a pioneering professor of bacteriology, physiology, and experimental medicine, introducing the microscope and modern laboratory science to Venezuelan medical education. Yet he became best known not for his scholarship but for his tireless charity: he treated the poor for free, often leaving money under a patient's pillow so the family would not know it was his gift, and he walked for hours to reach the sick who could not afford care.\n\nHernández remained unmarried and twice attempted religious life, but poor health and his own doctors' advice sent him back to medicine, which he came to see as his true vocation. On June 29, 1919, he was struck by a car while crossing a Caracas street on his way to deliver medicine to an elderly patient, and he died from his injuries. Devotion to 'the Doctor of the Poor' spread quickly across Venezuela and beyond. He was declared Venerable in 1986 and beatified in 2021, and on October 19, 2025, Pope Leo XIV canonized him as Venezuela's first saint.",
+      "whyConfirmationSaint": "St. José Gregorio Hernández shows that everyday work — going to school, choosing a career, treating people with kindness — can be the very shape of holiness. He didn't need a pulpit to preach the Gospel; his stethoscope and his generosity were enough.\n\nFor anyone drawn to medicine, science, or any profession that serves others, he's a natural patron. He's also a powerful example for teens who feel torn between different callings: sometimes God's answer to 'What should I do with my life?' is simply 'Do it with love.'",
+      "image": {
+        "filename": "jose-gregorio-hernandez.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/José_Gregorio_Hernández"
+        }
+      ]
+    },
+    {
+      "id": "maria-troncatti",
+      "name": "St. Maria Troncatti",
+      "feastDay": "08-25",
+      "birthDate": "1883-02-16",
+      "deathDate": "1969-08-25",
+      "canonizationDate": "2025-10-19",
+      "country": "Italy",
+      "region": "Americas",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "nurses",
+        "missionaries",
+        "Ecuador",
+        "indigenous peoples"
+      ],
+      "tags": [
+        "modern",
+        "missionary",
+        "nurse",
+        "Salesian"
+      ],
+      "affinities": [
+        "nursing",
+        "adventure",
+        "service",
+        "nature"
+      ],
+      "quote": "A glance at the Crucifix gives me the strength and the courage to work.",
+      "biography": "Maria Troncatti was born on February 16, 1883, in Corteno Golgi, a farming village in the mountains of Brescia, Italy. Inspired as a girl by stories of missionary life, she entered the Daughters of Mary Help of Christians — the Salesian Sisters founded in the spirit of St. John Bosco — professing her vows in 1908. During the First World War she trained as a Red Cross nurse, tending wounded soldiers at the front, a skill that would define the rest of her life.\n\nIn 1922 she was sent to the Ecuadorian Amazon to work among the Shuar people, and she remained there for over forty years as a nurse, makeshift surgeon, dentist, teacher, and catechist all at once. Her medical skill — she once saved the life of a local chief's daughter — earned her the trust of the community, who affectionately called her 'Madrecita,' Little Mother. She built clinics, schools, and chapels, defended the dignity of Shuar women, and helped translate the Gospel into a way of life that respected local culture instead of replacing it.\n\nOn August 25, 1969, Sister Maria died in a plane crash near Sucúa, Ecuador, while flying to help a sick patient. Word spread through the jungle in grief: 'Our Mother is dead.' She was beatified in 2012 and canonized by Pope Leo XIV on October 19, 2025.",
+      "whyConfirmationSaint": "St. Maria Troncatti spent forty years doing whatever her community needed — stitching wounds, pulling teeth, teaching children, building chapels — without ever losing her joy or her closeness to God. She shows that a single life of quiet, practical service can change an entire people's future.\n\nShe's a wonderful patron for anyone drawn to nursing, medicine, or mission work, and for teens who wonder whether ordinary skills — patience, steady hands, a willingness to learn a new language or culture — can really matter to God. In her life, they clearly did.",
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Salesian Sisters (FMA) — cgfmanet.org",
+          "url": "https://www.cgfmanet.org/en/infosphere/sister-maria-troncatti-is-a-saint/"
+        }
+      ]
+    },
+    {
+      "id": "vincenza-maria-poloni",
+      "name": "St. Vincenza Maria Poloni",
+      "feastDay": "11-11",
+      "birthDate": "1802-01-26",
+      "deathDate": "1855-11-11",
+      "canonizationDate": "2025-10-19",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "the sick",
+        "orphans",
+        "the poor",
+        "nurses"
+      ],
+      "tags": [
+        "founder",
+        "religious sister",
+        "Italian"
+      ],
+      "affinities": [
+        "compassion",
+        "service",
+        "healing",
+        "prayer"
+      ],
+      "quote": "The poor are our masters.",
+      "biography": "Born Luigia Poloni on January 26, 1802, in Verona, Italy, she was the youngest of twelve children in a devout merchant family. When her father died, she helped run the family's grocery and pharmacy while caring for her siblings, all the while volunteering at the Pio Ricovero, a home for the chronically ill, where she nursed patients no one else wanted to touch.\n\nGuided by the priest Charles Steeb, Luigia and a small group of companions began living a shared life of prayer and service at the Pio Ricovero in 1840. On September 10, 1848, she and twelve companions professed vows, and she took the name Vincenza Maria. This small community grew into the Sisters of Mercy of Verona, dedicated to nursing the sick, sheltering orphans, and caring for anyone society had abandoned, guided by her simple rule: the poor are our masters, and we exist to serve them.\n\nAs the congregation's first superior, she sent sisters to found new communities across Italy even as she endured a painful, lingering illness herself. She died on November 11, 1855, and her Sisters of Mercy went on to spread across Europe, Africa, and South America. She was beatified in 2008 and canonized by Pope Leo XIV on October 19, 2025.",
+      "whyConfirmationSaint": "St. Vincenza Maria Poloni built an entire way of life around one simple idea: that the people others overlook — the sick, the poor, the orphaned — deserve to be treated like masters, not burdens. She didn't wait for permission or perfect circumstances; she just started, with the people already in front of her.\n\nShe's a great patron for anyone who volunteers, works in healthcare, or wants to start something new to help others, and a reminder that small, faithful beginnings can grow far beyond what we imagine.",
+      "image": {
+        "filename": "vincenza-maria-poloni.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Vatican biography (Beatification, 2008)",
+          "url": "https://www.vatican.va/news_services/liturgy/saints/2008/ns_lit_doc_20080921_poloni_it.html"
+        }
+      ]
+    },
+    {
+      "id": "bartolo-longo",
+      "name": "St. Bartolo Longo",
+      "feastDay": "10-05",
+      "birthDate": "1841-02-10",
+      "deathDate": "1926-10-05",
+      "canonizationDate": "2025-10-19",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "the Rosary",
+        "Pompeii",
+        "children of prisoners",
+        "converts"
+      ],
+      "tags": [
+        "founder",
+        "layperson",
+        "Italian",
+        "convert"
+      ],
+      "affinities": [
+        "prayer",
+        "conversion",
+        "service",
+        "leadership"
+      ],
+      "quote": "If you seek salvation, spread the Rosary. Those who propagate the Rosary are saved.",
+      "biography": "Bartolo Longo was born on February 10, 1841, in Latiano, in southern Italy, to a devout family. After his father's death, he studied law in Naples, where he drifted from the Church and, for a time, was drawn into occult spiritism, even taking part in mock 'ordinations' as a spiritist priest. The experience left him anxious and spiritually empty.\n\nThrough the friendship of a Dominican priest, Fr. Alberto Radente, Bartolo returned to the Catholic faith and became a Lay Dominican. Sent to the neglected countryside around Pompeii to manage properties, he was struck by the region's poverty and superstition and resolved to teach the people the Rosary. He restored a damaged painting of Our Lady of the Rosary for a small local church, and devotion around it grew so quickly that he built a great sanctuary there, funded entirely by small donations from ordinary people. He married Countess Marianna Farnararo, and together, without children of their own, they founded orphanages, workshops, and schools for the children of prisoners — young people that 19th-century society had written off entirely.\n\nLongo spent the rest of his life directing these charitable works from Pompeii, always attributing everything to Mary's intercession rather than his own effort. He died on October 5, 1926. He was beatified in 1980 and canonized by Pope Leo XIV on October 19, 2025.",
+      "whyConfirmationSaint": "St. Bartolo Longo's story is proof that no past — not even real spiritual darkness — puts a person beyond the reach of grace. He turned his life completely around and spent the rest of it building something beautiful out of what had once been ruins, both his own and Pompeii's.\n\nHe's a strong patron for anyone who has wandered from faith and wonders if they can come back, and for teens who love the Rosary or want their faith to lead to real, hands-on care for people society overlooks, like the children of the incarcerated.",
+      "image": {
+        "filename": "bartolo-longo.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bartolo_Longo"
+        }
+      ]
+    },
+    {
+      "id": "ignatius-maloyan",
+      "name": "St. Ignatius Maloyan",
+      "feastDay": "06-11",
+      "birthDate": "1869-04-08",
+      "deathDate": "1915-06-11",
+      "canonizationDate": "2025-10-19",
+      "country": "Ottoman Empire (modern Turkey)",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Armenian Catholics",
+        "Mardin",
+        "persecuted Christians",
+        "clergy"
+      ],
+      "tags": [
+        "martyr",
+        "bishop",
+        "Armenian",
+        "modern"
+      ],
+      "affinities": [
+        "courage",
+        "faith",
+        "leadership",
+        "prayer"
+      ],
+      "quote": "If Jesus Christ, my Lord and my God, was crucified for me, why should I not be ready to die for Him?",
+      "biography": "Shoukrallah Maloyan was born on April 8, 1869, in Mardin, in the Ottoman Empire, to an Armenian Catholic family. At fourteen he left for the Armenian Catholic monastery of Bzommar in Lebanon to study for the priesthood, and he was ordained in 1896, taking the name Ignatius. He served for over a decade as a parish priest in Alexandria and Cairo, admired for his gentleness and discipline of prayer, before being called back to his troubled home diocese.\n\nIn 1911 he was ordained Archbishop of Mardin, where he worked to renew the spiritual and educational life of his Armenian Catholic flock. His tenure coincided with the outbreak of the First World War and the beginning of the Armenian Genocide. In June 1915, Ottoman authorities arrested Archbishop Maloyan along with hundreds of Armenian Catholics on false charges of hiding weapons. He was tortured and repeatedly offered his freedom if he would renounce Christ and convert to Islam.\n\nHe refused every time. On June 11, 1915, he was led outside Mardin with a group of his faithful and shot, becoming one of the many martyr-bishops of the Armenian Genocide. He was beatified in 2001 by Pope John Paul II and canonized by Pope Leo XIV on October 19, 2025.",
+      "whyConfirmationSaint": "St. Ignatius Maloyan led his people not from safety but from right beside them, and when he was finally given a choice between his faith and his life, he didn't hesitate. His witness during the Armenian Genocide gives a face and a name to an immense tragedy, and a reason to hope in the middle of it.\n\nHe's a powerful patron for anyone from a persecuted Christian community, for those discerning ordained ministry, and for teens who want the courage to stay faithful even when faith costs something real.",
+      "image": {
+        "filename": "ignatius-maloyan.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican biography (Beatification, 2001)",
+          "url": "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20011007_beat-maloyan_en.html"
+        },
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        }
+      ]
+    },
+    {
+      "id": "peter-to-rot",
+      "name": "St. Peter To Rot",
+      "feastDay": "07-07",
+      "birthDate": "1912-03-05",
+      "deathDate": "1945-07-07",
+      "canonizationDate": "2025-10-19",
+      "country": "Papua New Guinea",
+      "region": "Oceania",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "married couples",
+        "catechists",
+        "Papua New Guinea",
+        "Christian marriage"
+      ],
+      "tags": [
+        "martyr",
+        "catechist",
+        "layperson",
+        "modern"
+      ],
+      "affinities": [
+        "courage",
+        "family",
+        "faith",
+        "community-service"
+      ],
+      "quote": "It is not right for a man to have more than one wife; marriage is a sacred bond that no one can break.",
+      "biography": "Peter To Rot was born on March 5, 1912, in the village of Rakunai, on the island of New Britain, to one of the first Christian families in the region. He trained as a catechist and, by his early twenties, was serving as the parish catechist, teaching the faith, leading prayer, and baptizing converts in a Church still young in Papua New Guinea. In 1936 he married Paula Ia Varpit, and they had three children together.\n\nDuring World War II, Japanese forces occupied New Britain and eventually imprisoned or expelled the foreign missionaries. Peter To Rot stepped forward to lead his local Catholic community, secretly continuing to baptize, teach, and bring the sacraments to his people at great personal risk. In 1944, occupying authorities began promoting polygamy to win favor with some local leaders. Peter To Rot spoke out publicly against it, insisting that Christian marriage was a lifelong bond between one man and one woman that no ruler could set aside.\n\nFor this he was arrested in 1945 and executed by lethal injection at a Japanese camp on July 7 of that year, becoming the first martyr of Papua New Guinea. He was beatified by Pope John Paul II in 1995 and canonized by Pope Leo XIV on October 19, 2025.",
+      "whyConfirmationSaint": "St. Peter To Rot wasn't a priest or a bishop — he was a husband, a father, and a lay catechist who simply kept doing his job when it became dangerous to do so. He shows that leading a parish, defending marriage, and standing up for the truth are things ordinary lay Catholics can be called to do, sometimes at great cost.\n\nHe's a strong patron for engaged and married couples, for catechists and youth leaders, and for teens who want a model of quiet, steady courage instead of dramatic heroics.",
+      "sources": [
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/church/news/2025-10/a-saint-to-be-for-a-nation-peter-to-rot-s-witness-shapes-papua.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Peter_To_Rot"
+        }
+      ]
+    },
+    {
+      "id": "maria-del-carmen-rendiles",
+      "name": "St. María del Carmen Rendiles Martínez",
+      "feastDay": "05-09",
+      "birthDate": "1903-08-11",
+      "deathDate": "1977-05-09",
+      "canonizationDate": "2025-10-19",
+      "country": "Venezuela",
+      "region": "Americas",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "persons with disabilities",
+        "the poor",
+        "Venezuela",
+        "catechists"
+      ],
+      "tags": [
+        "founder",
+        "religious sister",
+        "Venezuelan",
+        "modern"
+      ],
+      "affinities": [
+        "compassion",
+        "service",
+        "perseverance",
+        "prayer"
+      ],
+      "quote": "God does not ask for what we do not have; He asks only for what we can give with love.",
+      "biography": "Carmen Elena Rendiles Martínez was born on August 11, 1903, in Caracas, Venezuela, the third of seven children — and she was born without her left arm. Rather than being sheltered because of her disability, she grew up with a strong, joyful faith and a clear sense that it would not hold her back from anything God asked of her.\n\nIn 1927 she entered the Servants of the Blessed Sacrament and completed her novitiate in France, taking the religious name María del Carmen. Returning to Venezuela, she felt called to found a new kind of community suited to the needs of her homeland, and in 1965 she established the Servants of Jesus, a congregation devoted to catechesis, education, and parish work among the poor, with special attention to Eucharistic devotion. As its first Superior General, she guided the young congregation with humility, never treating her missing arm as an obstacle but as simply part of the life God had given her to offer.\n\nShe died in Caracas on May 9, 1977. Devotion to 'Madre Carmen' grew steadily among Venezuelans, especially those living with disabilities or illness. She was beatified in 2018 and canonized by Pope Leo XIV on October 19, 2025, becoming Venezuela's first canonized woman saint.",
+      "whyConfirmationSaint": "St. María del Carmen Rendiles never let something she was missing define what she could give. She founded a religious community, led it for decades, and shaped countless lives — proof that limitations other people notice first don't get the final word on a person's calling.\n\nShe's an especially meaningful patron for anyone living with a disability or chronic illness, and for teens who sometimes feel like they're 'less than' because of something about their body or circumstances. She shows that God works powerfully through exactly the person you already are.",
+      "image": {
+        "filename": "maria-del-carmen-rendiles.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Carmen_Elena_Rendiles_Martínez"
+        }
+      ]
+    },
+    {
+      "id": "john-of-nepomuk",
+      "name": "St. John of Nepomuk",
+      "feastDay": "05-16",
+      "birthDate": "1345-01-01",
+      "deathDate": "1393-03-20",
+      "canonizationDate": "1729-03-19",
+      "country": "Bohemia (modern Czech Republic)",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "the seal of confession",
+        "bridges",
+        "floods and drowning",
+        "the falsely accused"
+      ],
+      "tags": [
+        "martyr",
+        "priest",
+        "Bohemian"
+      ],
+      "affinities": [
+        "integrity",
+        "prayer",
+        "courage",
+        "trust"
+      ],
+      "quote": "I would rather be thrown into the river than betray what has been confided to me in confession.",
+      "biography": "John of Nepomuk was born around 1345 in Pomuk, in the Kingdom of Bohemia. He studied law and theology, was ordained a priest, and rose to become vicar general of the Archdiocese of Prague under Archbishop John of Jenštejn — a position of real influence at a court often tangled in political intrigue.\n\nAccording to long-standing tradition, King Wenceslaus IV, suspicious of his own wife, demanded that Father John reveal what the queen had confessed to him. John refused, holding fast to the absolute confidentiality of the confessional even though the king had the power to destroy him. The king had him arrested, tortured, and, on the night of March 20, 1393, thrown from the Charles Bridge into the Vltava River in Prague, where he drowned. He was also caught up in the broader political conflict between the king and the archbishop over church appointments, but it is his defense of the seal of confession that has defined his memory for over six centuries.\n\nHis body was recovered and buried in Prague's cathedral, where devotion to him grew steadily. He was canonized in 1729, and statues of him still stand on bridges throughout Central Europe as a reminder of his witness.",
+      "whyConfirmationSaint": "St. John of Nepomuk kept a secret that wasn't his to give away, even when a king demanded it and his life was on the line. In a world full of pressure to share everything, he's a striking example of the kind of trustworthiness that makes real friendship and real faith possible.\n\nHe's a natural patron for anyone who's ever been asked to betray a confidence, for those preparing for the Sacrament of Reconciliation, and for teens who want to be the kind of person others can actually trust with the truth.",
+      "image": {
+        "filename": "john-of-nepomuk.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican State — Saint of the Day",
+          "url": "https://www.vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1654-22-march-saint-john-nepomucene-martyr.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/John_of_Nepomuk"
+        }
+      ]
+    },
+    {
+      "id": "philip-neri",
+      "name": "St. Philip Neri",
+      "feastDay": "05-26",
+      "birthDate": "1515-07-21",
+      "deathDate": "1595-05-26",
+      "canonizationDate": "1622-03-12",
+      "country": "Italy",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Rome",
+        "the Oratory",
+        "joy",
+        "humor"
+      ],
+      "tags": [
+        "priest",
+        "founder",
+        "Italian",
+        "Renaissance"
+      ],
+      "affinities": [
+        "joy",
+        "humor",
+        "prayer",
+        "friendship"
+      ],
+      "quote": "Cheerfulness strengthens the heart and makes us persevere in a good life; wherefore the servant of God ought always to be in good spirits.",
+      "biography": "Philip Neri was born on July 21, 1515, in Florence, Italy, to a notary's family. As a young man he moved to Rome, where instead of pursuing the business career his family hoped for, he spent years living simply, studying philosophy and theology on his own, and spending long nights in prayer in the catacombs and churches of the city. He became known around Rome for walking the streets talking with ordinary people, especially the young, students, and the poor, always with warmth and humor.\n\nOrdained a priest in 1551, he began gathering laypeople and clergy for informal prayer, conversation, music, and charitable works in a room above the church of San Girolamo — gatherings so popular they eventually grew into the Congregation of the Oratory, a community of priests living together without formal vows, dedicated to preaching, the sacraments, and pastoral care rooted in joy rather than austerity. His approach was so distinctive — genuinely happy, quick to laugh, sometimes playfully eccentric, yet deeply serious about prayer and confession — that Romans began calling him the 'Apostle of Rome' and the 'Saint of Joy.'\n\nHe died in Rome on the night of May 25–26, 1595, immediately after hearing confessions and celebrating Mass. He was canonized in 1622.",
+      "whyConfirmationSaint": "St. Philip Neri proved that holiness doesn't have to look gloomy — he was famous for jokes, playful pranks, and a genuine, contagious joy, all while spending hours in prayer and hearing confessions late into the night. He shows that faith and fun aren't opposites.\n\nHe's a great patron for teens who worry that being serious about their faith means giving up their personality or sense of humor, and for anyone who wants their friend group to actually help them grow closer to God.",
+      "image": {
+        "filename": "philip-neri.jpg",
+        "attribution": "CC0, Metropolitan Museum of Art, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican State — Saint of the Day",
+          "url": "https://www.vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1963-may-26-saint-philip-neri.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Philip_Neri"
+        }
+      ]
+    },
+    {
+      "id": "paschal-baylon",
+      "name": "St. Paschal Baylon",
+      "feastDay": "05-17",
+      "birthDate": "1540-05-16",
+      "deathDate": "1592-05-17",
+      "canonizationDate": "1690-10-16",
+      "country": "Spain",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Eucharistic congresses and devotion",
+        "shepherds",
+        "cooks"
+      ],
+      "tags": [
+        "religious brother",
+        "Franciscan",
+        "Spanish"
+      ],
+      "affinities": [
+        "devotion",
+        "humility",
+        "prayer",
+        "simplicity"
+      ],
+      "quote": "Blessed be the hour in which the Blessed Sacrament was instituted; may it be praised and adored forever.",
+      "biography": "Paschal Baylon was born on May 16, 1540, in Torrehermosa, in the Kingdom of Aragon, to a poor farming family. As a boy he worked as a shepherd, and it was in the fields, alone with the flocks, that he taught himself to pray and developed a deep love for the Eucharist, reportedly kneeling toward the nearest church whenever the bells rang for the Consecration at Mass.\n\nAt twenty-four he joined the Franciscan Alcantarines, a strict reform branch of the order, as a lay brother rather than seeking ordination, choosing instead a life of manual work, begging for alms, and simple obedience. He served as a porter and cook in various friaries throughout Spain, remaining known for his humility, his care for the poor who came to the door, and above all for the long hours he spent in adoration before the Blessed Sacrament, sometimes overnight.\n\nHe died on May 17, 1592, in Villarreal, on the feast of Corpus Christi that year, fittingly for a man whose whole life had circled around love for the Eucharist. He was canonized in 1690 and later declared patron of Eucharistic congresses and associations.",
+      "whyConfirmationSaint": "St. Paschal Baylon never became a priest, never wrote a famous book, and spent most of his life doing ordinary kitchen and door-keeping work — yet his quiet devotion to the Eucharist made him one of the Church's great models of Eucharistic love. He shows that you don't need a title to become holy.\n\nHe's a fitting patron for teens preparing to receive the Eucharist more fully, for anyone drawn to Eucharistic adoration, and for those who feel called to serve quietly rather than from the spotlight.",
+      "image": {
+        "filename": "paschal-baylon.jpg",
+        "attribution": "Public domain, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican State — Saint of the Day",
+          "url": "https://www.vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1892-may-17-saint-paschal-baylon-franciscan-layman.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Paschal_Baylon"
+        }
+      ]
+    },
+    {
+      "id": "norbert-of-xanten",
+      "name": "St. Norbert of Xanten",
+      "feastDay": "06-06",
+      "birthDate": "1080-01-01",
+      "deathDate": "1134-06-06",
+      "canonizationDate": "1582-07-28",
+      "country": "Germany (Holy Roman Empire)",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "peace",
+        "expectant mothers",
+        "Magdeburg"
+      ],
+      "tags": [
+        "bishop",
+        "founder",
+        "German",
+        "medieval"
+      ],
+      "affinities": [
+        "conversion",
+        "peace",
+        "prayer",
+        "reconciliation"
+      ],
+      "quote": "Whoever wants to reform the world must begin by reforming himself.",
+      "biography": "Norbert was born around 1080 in Xanten, in the Holy Roman Empire, to a noble family, and for years he lived the comfortable, worldly life expected of a well-connected young cleric, holding church income without taking his religious duties very seriously. According to tradition, everything changed around 1115 when he was thrown from his horse during a violent storm and narrowly escaped death, an experience that led him to a profound conversion.\n\nHe gave away his possessions, was ordained a priest, and spent several years as an itinerant preacher, calling people back to repentance and reform at a time when parts of the clergy had grown lax. In 1120, at Prémontré in France, he founded a new religious order, the Premonstratensians (also called Norbertines), combining a monastic life of prayer with active pastoral ministry and preaching — a balance that was innovative for the time and spread quickly across Europe.\n\nIn 1126 he was named Archbishop of Magdeburg, where he worked to reform corrupt clergy, defended the poor, and worked to reconcile political and religious factions in a divided empire. He died on June 6, 1134, and was canonized in 1582.",
+      "whyConfirmationSaint": "St. Norbert went from living for himself to giving everything away and starting a whole new way of religious life, all because he let one dramatic wake-up call actually change him. He's proof that conversion is possible at any point, no matter how comfortable or distracted a life has become.\n\nHe's a strong patron for anyone in the middle of their own conversion story, for those who work toward peace and reconciliation between divided people, and for teens who want a fresh start that actually sticks.",
+      "image": {
+        "filename": "norbert-of-xanten.jpg",
+        "attribution": "CC BY 4.0, Carolus, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican State — Saint of the Day",
+          "url": "https://vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/2019-june-6-saint-norbert-of-xanten-bishop-and-founder-of-the-canons-regular-of-the-norbertines.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Norbert_of_Xanten"
+        }
+      ]
+    },
+    {
+      "id": "stanley-rother",
+      "name": "Bl. Stanley Rother",
+      "feastDay": "07-28",
+      "birthDate": "1935-03-27",
+      "deathDate": "1981-07-28",
+      "canonizationDate": null,
+      "country": "United States",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "missionaries",
+        "Guatemala",
+        "Oklahoma"
+      ],
+      "tags": [
+        "martyr",
+        "priest",
+        "missionary",
+        "blessed",
+        "modern"
+      ],
+      "affinities": [
+        "courage",
+        "service",
+        "faith",
+        "perseverance"
+      ],
+      "quote": "The shepherd cannot run at the first sign of danger.",
+      "biography": "Stanley Francis Rother was born on March 27, 1935, on a farm near Okarche, Oklahoma, the oldest of four children in a devout Catholic family. He struggled academically in seminary, especially with Latin, and was actually dismissed from one seminary — yet with the support of his diocese he persevered and was ordained a priest for the Diocese of Oklahoma City in 1963.\n\nIn 1968 he volunteered for missionary work at the diocese's mission in Santiago Atitlán, Guatemala, among the Tz'utujil Maya people. He learned Spanish and then Tz'utujil, an unwritten language at the time, and helped translate the New Testament into it — the same 'poor student' who had once struggled with Latin became fluent in a language few outsiders ever learned. He built up the parish, a hospital, a school, and a farming co-op, and became known simply as 'Padre Aplas,' the Tz'utujil form of his name.\n\nAs Guatemala's civil war intensified in the late 1970s, catechists and parishioners of his mission began disappearing or being killed by government forces who viewed the Church's work among the poor with suspicion. Father Rother's name appeared on a death list, and he briefly returned to Oklahoma for safety in early 1981, but he could not stay away from his people, insisting that a shepherd does not abandon his flock in danger. He returned to Guatemala, and on July 28, 1981, three armed men broke into the rectory and killed him. He was the first US-born priest to be recognized as a martyr and was beatified by the Catholic Church in 2017.",
+      "whyConfirmationSaint": "Blessed Stanley Rother wasn't the star student or the obvious pick for the priesthood — he was nearly dismissed from seminary — but he became fluent in an unwritten language and gave his life for people half a world away from home. He shows that God can use the person who struggles at first, not just the naturally gifted one.\n\nHe's a powerful example for anyone who's ever felt like they weren't 'cut out' for something important, for those discerning missionary or ministry work, and for teens who want a model of staying when staying is hard.",
+      "image": {
+        "filename": "stanley-rother.jpg",
+        "attribution": "CC BY-SA 4.0, Julitomenchu, via Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Archdiocese of Oklahoma City — Rother Cause",
+          "url": "https://archokc.org/rothercause"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Stanley_Rother"
         }
       ]
     }

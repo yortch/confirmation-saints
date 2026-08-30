@@ -128,6 +128,16 @@ SAINT_IMAGES = {
     "lucy": "Niccolò_di_Segna_-_Saint_Lucy_-_Walters_37756.jpg",
     "benedict-of-nursia": "Benedict_of_Nursia.jpg",
     "peter-of-saint-joseph-betancur": "Sanhermanopedro.JPG",
+    "jose-gregorio-hernandez": "José_Gregorio_Hernández.jpg",
+    "vincenza-maria-poloni": "Vincenza_Maria_Poloni_1.jpg",
+    "bartolo-longo": "Bartolo-Longo.jpg",
+    "ignatius-maloyan": "Blessed_Choukrallah_Maloyan.jpg",
+    "maria-del-carmen-rendiles": "Joven Maria Carmen Rendiles.jpg",
+    "john-of-nepomuk": "Johannes_von_Nepomuk_Hinterglasbild.jpg",
+    "philip-neri": "Saint_Philip_Neri_(1515–1595)_MET_DP-944-001.jpg",
+    "paschal-baylon": "LienzoS_Pascual.jpg",
+    "norbert-of-xanten": "SSACRAM_62.JPG",
+    "stanley-rother": "Beato_Stanley_Rother.jpg",
 }
 
 DEFAULT_IMAGE_ATTRIBUTIONS = {
@@ -155,6 +165,18 @@ IMAGE_ATTRIBUTIONS = {
     "agatha-sicily": {
         "en": "CC BY 3.0, Sailko, via Wikimedia Commons",
         "es": "CC BY 3.0, Sailko, vía Wikimedia Commons",
+    },
+    "philip-neri": {
+        "en": "CC0, Metropolitan Museum of Art, via Wikimedia Commons",
+        "es": "CC0, Museo Metropolitano de Arte, vía Wikimedia Commons",
+    },
+    "norbert-of-xanten": {
+        "en": "CC BY 4.0, Carolus, via Wikimedia Commons",
+        "es": "CC BY 4.0, Carolus, vía Wikimedia Commons",
+    },
+    "stanley-rother": {
+        "en": "CC BY-SA 4.0, Julitomenchu, via Wikimedia Commons",
+        "es": "CC BY-SA 4.0, Julitomenchu, vía Wikimedia Commons",
     },
 }
 
