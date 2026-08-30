@@ -17,7 +17,10 @@ Enforced invariants:
      (Display localization lives in optional display* arrays and other
      freely-translated fields — those are NOT checked here.)
   4. Every saint has a corresponding image file at
-     SharedContent/images/<id>.jpg.
+     SharedContent/images/<id>.jpg, except ids listed in
+     KNOWN_MISSING_IMAGE_IDS (documented gaps where no free/CC-licensed
+     portrait could be found), which must have no `image` field in
+     either language file.
   5. categories-en.json vs categories-es.json: same group ids, same value
      ids inside each group.
 
@@ -39,6 +42,14 @@ from typing import Any
 
 CANONICAL_LIST_FIELDS = ("patronOf", "affinities", "tags")
 CANONICAL_SCALAR_FIELDS = ("region", "lifeState", "ageCategory", "gender")
+
+# Documented image gaps: no free/CC-licensed portrait could be verified on
+# Wikimedia Commons for these saints as of this writing (both canonized
+# Oct. 19, 2025). They are intentionally recorded without an `image` field
+# rather than using a non-free/fair-use image. Mirrors the equivalent
+# allowlist in android/.../SaintRepositoryTest.kt
+# (should_expose_image_filename_matching_saint_id) — keep both in sync.
+KNOWN_MISSING_IMAGE_IDS = frozenset({"maria-troncatti", "peter-to-rot"})
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -105,7 +116,24 @@ def check_saints(shared: Path, errors: list[str]) -> None:
                     f"(EN={en_v!r}, ES={es_v!r})"
                 )
 
-        # 4. Image file must exist for every saint (one image per id).
+        # 4. Image file must exist for every saint (one image per id),
+        # except the documented gaps in KNOWN_MISSING_IMAGE_IDS.
+        has_en_image = "image" in en_s
+        has_es_image = "image" in es_s
+        if sid in KNOWN_MISSING_IMAGE_IDS:
+            if has_en_image or has_es_image:
+                errors.append(
+                    f"[{sid}] is listed in KNOWN_MISSING_IMAGE_IDS but now has "
+                    f"an 'image' field (EN={has_en_image}, ES={has_es_image}); "
+                    "remove it from the allowlist instead of leaving both."
+                )
+            continue
+        if not has_en_image or not has_es_image:
+            errors.append(
+                f"[{sid}] missing 'image' field (EN={has_en_image}, ES={has_es_image}) "
+                "and is not in KNOWN_MISSING_IMAGE_IDS"
+            )
+            continue
         image = en_s.get("image") or {}
         filename = image.get("filename") or f"{sid}.jpg"
         img_path = images_dir / filename

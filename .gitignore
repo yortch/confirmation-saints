@@ -41,3 +41,4 @@ android/app/src/main/assets/categories-*.json
 android/app/src/main/assets/confirmation-info-*.json
 android/app/src/main/assets/images/
 android/.kotlin/
+.squad/.cache/

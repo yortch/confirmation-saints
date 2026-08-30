@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "language": "es",
-  "lastUpdated": "2026-04-30",
+  "lastUpdated": "2026-08-30",
   "saints": [
     {
       "id": "therese-of-lisieux",
@@ -6954,6 +6954,780 @@
         {
           "name": "Order of Friars Minor",
           "url": "https://ofm.org/en/saint-brother-pedro.html"
+        }
+      ]
+    },
+    {
+      "id": "jose-gregorio-hernandez",
+      "name": "San José Gregorio Hernández",
+      "feastDay": "10-26",
+      "birthDate": "1864-10-26",
+      "deathDate": "1919-06-29",
+      "canonizationDate": "2025-10-19",
+      "country": "Venezuela",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "single",
+      "ageCategory": "adult",
+      "patronOf": [
+        "doctors",
+        "medical students",
+        "the poor",
+        "Venezuela"
+      ],
+      "displayPatronOf": [
+        "médicos",
+        "estudiantes de medicina",
+        "los pobres",
+        "Venezuela"
+      ],
+      "tags": [
+        "modern",
+        "physician",
+        "layperson",
+        "Venezuelan"
+      ],
+      "displayTags": [
+        "moderno",
+        "médico",
+        "laico",
+        "venezolano"
+      ],
+      "affinities": [
+        "science",
+        "medicine",
+        "compassion",
+        "service"
+      ],
+      "displayAffinities": [
+        "ciencia",
+        "medicina",
+        "compasión",
+        "servicio"
+      ],
+      "quote": "Servir a los pobres es servir a Jesucristo.",
+      "biography": "José Gregorio Hernández Cisneros nació el 26 de octubre de 1864 en Isnotú, un pequeño pueblo de los Andes venezolanos, el mayor de seis hermanos. Devoto desde la infancia, consideró en un principio el sacerdocio, pero su delicada salud y la creciente convicción de que podía servir a Dios sanando a los enfermos lo llevaron hacia la medicina.\n\nEstudió en la Universidad Central de Venezuela en Caracas, donde se graduó con las más altas calificaciones en 1888, y más tarde se formó en París junto a algunos de los médicos más destacados de su época. De vuelta en su país, se convirtió en un profesor pionero de bacteriología, fisiología y medicina experimental, introduciendo el microscopio y la ciencia de laboratorio moderna en la enseñanza médica venezolana. Sin embargo, llegó a ser conocido no tanto por su erudición como por su incansable caridad: atendía gratis a los pobres, a menudo dejaba dinero bajo la almohada de un paciente para que su familia no supiera que era un regalo suyo, y caminaba horas para llegar hasta los enfermos que no podían pagar atención médica.\n\nHernández permaneció soltero e intentó dos veces la vida religiosa, pero su delicada salud y el consejo de sus propios médicos lo devolvieron a la medicina, que llegó a considerar su verdadera vocación. El 29 de junio de 1919 fue atropellado por un automóvil mientras cruzaba una calle de Caracas, camino a llevar medicinas a una anciana enferma, y murió a causa de sus heridas. La devoción al 'Médico de los Pobres' se extendió rápidamente por Venezuela y más allá. Fue declarado Venerable en 1986 y beatificado en 2021, y el 19 de octubre de 2025 el Papa León XIV lo canonizó como el primer santo de Venezuela.",
+      "whyConfirmationSaint": "San José Gregorio Hernández muestra que el trabajo de cada día —ir a la escuela, elegir una carrera, tratar a las personas con bondad— puede ser la forma misma de la santidad. No necesitó un púlpito para predicar el Evangelio; su estetoscopio y su generosidad fueron suficientes.\n\nPara quien se sienta atraído por la medicina, la ciencia o cualquier profesión de servicio, es un patrono natural. También es un ejemplo poderoso para los jóvenes que sienten que deben elegir entre distintas vocaciones: a veces la respuesta de Dios a '¿qué debo hacer con mi vida?' es simplemente 'hazlo con amor.'",
+      "image": {
+        "filename": "jose-gregorio-hernandez.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/José_Gregorio_Hernández"
+        }
+      ]
+    },
+    {
+      "id": "maria-troncatti",
+      "name": "Santa María Troncatti",
+      "feastDay": "08-25",
+      "birthDate": "1883-02-16",
+      "deathDate": "1969-08-25",
+      "canonizationDate": "2025-10-19",
+      "country": "Italia",
+      "region": "Americas",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "nurses",
+        "missionaries",
+        "Ecuador",
+        "indigenous peoples"
+      ],
+      "displayPatronOf": [
+        "enfermeras",
+        "misioneros",
+        "Ecuador",
+        "pueblos indígenas"
+      ],
+      "tags": [
+        "modern",
+        "missionary",
+        "nurse",
+        "Salesian"
+      ],
+      "displayTags": [
+        "moderna",
+        "misionera",
+        "enfermera",
+        "salesiana"
+      ],
+      "affinities": [
+        "nursing",
+        "adventure",
+        "service",
+        "nature"
+      ],
+      "displayAffinities": [
+        "enfermería",
+        "aventura",
+        "servicio",
+        "naturaleza"
+      ],
+      "quote": "Una mirada al Crucifijo me da la fuerza y el valor para trabajar.",
+      "biography": "María Troncatti nació el 16 de febrero de 1883 en Corteno Golgi, un pueblo agrícola en las montañas de Brescia, Italia. Inspirada desde niña por relatos de vida misionera, entró en las Hijas de María Auxiliadora —las Hermanas Salesianas fundadas en el espíritu de san Juan Bosco— y profesó sus votos en 1908. Durante la Primera Guerra Mundial se formó como enfermera de la Cruz Roja, atendiendo a soldados heridos en el frente, una habilidad que marcaría el resto de su vida.\n\nEn 1922 fue enviada a la Amazonía ecuatoriana para trabajar entre el pueblo shuar, y permaneció allí más de cuarenta años como enfermera, cirujana improvisada, dentista, maestra y catequista, todo a la vez. Su habilidad médica —en una ocasión salvó la vida de la hija de un cacique local— le ganó la confianza de la comunidad, que la llamaba cariñosamente 'Madrecita'. Construyó dispensarios, escuelas y capillas, defendió la dignidad de las mujeres shuar y ayudó a traducir el Evangelio en un modo de vida que respetaba la cultura local en lugar de reemplazarla.\n\nEl 25 de agosto de 1969, la hermana María murió en un accidente de avión cerca de Sucúa, Ecuador, mientras volaba para atender a un enfermo. La noticia se extendió por la selva entre el dolor: 'Nuestra Madre ha muerto.' Fue beatificada en 2012 y canonizada por el Papa León XIV el 19 de octubre de 2025.",
+      "whyConfirmationSaint": "Santa María Troncatti pasó cuarenta años haciendo lo que su comunidad necesitaba —suturando heridas, sacando muelas, enseñando a los niños, construyendo capillas— sin perder nunca su alegría ni su cercanía a Dios. Muestra que una sola vida de servicio callado y práctico puede cambiar el futuro de todo un pueblo.\n\nEs una patrona maravillosa para quienes se sienten atraídos por la enfermería, la medicina o el trabajo misionero, y para los jóvenes que se preguntan si habilidades ordinarias —la paciencia, el pulso firme, la disposición a aprender un idioma o una cultura nueva— realmente le importan a Dios. En su vida, claramente sí importaron.",
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Salesian Sisters (FMA) — cgfmanet.org",
+          "url": "https://www.cgfmanet.org/en/infosphere/sister-maria-troncatti-is-a-saint/"
+        }
+      ]
+    },
+    {
+      "id": "vincenza-maria-poloni",
+      "name": "Santa Vicenta María Poloni",
+      "feastDay": "11-11",
+      "birthDate": "1802-01-26",
+      "deathDate": "1855-11-11",
+      "canonizationDate": "2025-10-19",
+      "country": "Italia",
+      "region": "Europe",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "the sick",
+        "orphans",
+        "the poor",
+        "nurses"
+      ],
+      "displayPatronOf": [
+        "los enfermos",
+        "los huérfanos",
+        "los pobres",
+        "enfermeras"
+      ],
+      "tags": [
+        "founder",
+        "religious sister",
+        "Italian"
+      ],
+      "displayTags": [
+        "fundadora",
+        "religiosa",
+        "italiana"
+      ],
+      "affinities": [
+        "compassion",
+        "service",
+        "healing",
+        "prayer"
+      ],
+      "displayAffinities": [
+        "compasión",
+        "servicio",
+        "sanación",
+        "oración"
+      ],
+      "quote": "Los pobres son nuestros amos.",
+      "biography": "Nació como Luigia Poloni el 26 de enero de 1802 en Verona, Italia, la menor de doce hermanos en una familia devota de comerciantes. Cuando murió su padre, ayudó a llevar la tienda de comestibles y la farmacia familiar mientras cuidaba a sus hermanos, y al mismo tiempo se ofrecía como voluntaria en el Pio Ricovero, un hogar para enfermos crónicos, donde atendía a pacientes que nadie más quería tocar.\n\nGuiada por el sacerdote Carlos Steeb, Luigia y un pequeño grupo de compañeras comenzaron a llevar una vida compartida de oración y servicio en el Pio Ricovero en 1840. El 10 de septiembre de 1848, ella y doce compañeras profesaron votos, y tomó el nombre de Vicenta María. Esta pequeña comunidad se convirtió en las Hermanas de la Misericordia de Verona, dedicadas a atender a los enfermos, acoger a los huérfanos y cuidar a quien la sociedad había abandonado, guiadas por su sencilla regla: los pobres son nuestros amos, y existimos para servirles.\n\nComo primera superiora de la congregación, envió hermanas a fundar nuevas comunidades por toda Italia incluso mientras ella misma sufría una dolorosa enfermedad prolongada. Murió el 11 de noviembre de 1855, y sus Hermanas de la Misericordia se extendieron después por Europa, África y Sudamérica. Fue beatificada en 2008 y canonizada por el Papa León XIV el 19 de octubre de 2025.",
+      "whyConfirmationSaint": "Santa Vicenta María Poloni construyó toda una forma de vida alrededor de una idea sencilla: que las personas que otros pasan por alto —los enfermos, los pobres, los huérfanos— merecen ser tratadas como amos, no como cargas. No esperó permiso ni circunstancias perfectas; simplemente comenzó, con las personas que ya tenía delante.\n\nEs una gran patrona para quienes hacen voluntariado, trabajan en el cuidado de la salud o quieren empezar algo nuevo para ayudar a otros, y un recordatorio de que los comienzos pequeños y fieles pueden crecer mucho más de lo que imaginamos.",
+      "image": {
+        "filename": "vincenza-maria-poloni.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Vatican biography (Beatification, 2008)",
+          "url": "https://www.vatican.va/news_services/liturgy/saints/2008/ns_lit_doc_20080921_poloni_it.html"
+        }
+      ]
+    },
+    {
+      "id": "bartolo-longo",
+      "name": "San Bartolo Longo",
+      "feastDay": "10-05",
+      "birthDate": "1841-02-10",
+      "deathDate": "1926-10-05",
+      "canonizationDate": "2025-10-19",
+      "country": "Italia",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "the Rosary",
+        "Pompeii",
+        "children of prisoners",
+        "converts"
+      ],
+      "displayPatronOf": [
+        "el Rosario",
+        "Pompeya",
+        "hijos de presos",
+        "conversos"
+      ],
+      "tags": [
+        "founder",
+        "layperson",
+        "Italian",
+        "convert"
+      ],
+      "displayTags": [
+        "fundador",
+        "laico",
+        "italiano",
+        "converso"
+      ],
+      "affinities": [
+        "prayer",
+        "conversion",
+        "service",
+        "leadership"
+      ],
+      "displayAffinities": [
+        "oración",
+        "conversión",
+        "servicio",
+        "liderazgo"
+      ],
+      "quote": "Quien difunde el Rosario se salva. Estas son las promesas de María.",
+      "biography": "Bartolo Longo nació el 10 de febrero de 1841 en Latiano, en el sur de Italia, en una familia devota. Tras la muerte de su padre, estudió derecho en Nápoles, donde se alejó de la Iglesia y, por un tiempo, se dejó atraer por el espiritismo ocultista, llegando incluso a participar en falsas 'ordenaciones' como sacerdote espiritista. La experiencia lo dejó ansioso y espiritualmente vacío.\n\nGracias a la amistad de un sacerdote dominico, el P. Alberto Radente, Bartolo regresó a la fe católica y se hizo dominico laico. Enviado al campo abandonado alrededor de Pompeya para administrar unas propiedades, quedó impresionado por la pobreza y la superstición de la región y decidió enseñar el Rosario a la gente. Restauró un cuadro deteriorado de Nuestra Señora del Rosario para una pequeña iglesia local, y la devoción en torno a él creció tan rápido que construyó allí un gran santuario, financiado enteramente con pequeñas donaciones de gente sencilla. Se casó con la condesa Marianna Farnararo, y juntos, sin hijos propios, fundaron orfanatos, talleres y escuelas para los hijos de los presos —jóvenes a quienes la sociedad del siglo XIX había dado completamente por perdidos.\n\nLongo pasó el resto de su vida dirigiendo estas obras de caridad desde Pompeya, atribuyendo siempre todo a la intercesión de María y no a su propio esfuerzo. Murió el 5 de octubre de 1926. Fue beatificado en 1980 y canonizado por el Papa León XIV el 19 de octubre de 2025.",
+      "whyConfirmationSaint": "La historia de san Bartolo Longo demuestra que ningún pasado —ni siquiera una verdadera oscuridad espiritual— pone a una persona fuera del alcance de la gracia. Cambió por completo su vida y dedicó el resto de ella a construir algo hermoso sobre lo que antes eran ruinas, tanto las suyas propias como las de Pompeya.\n\nEs un patrono firme para quien se ha alejado de la fe y se pregunta si puede volver, y para los jóvenes que aman el Rosario o quieren que su fe se traduzca en un cuidado real y concreto por quienes la sociedad ignora, como los hijos de las personas encarceladas.",
+      "image": {
+        "filename": "bartolo-longo.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bartolo_Longo"
+        }
+      ]
+    },
+    {
+      "id": "ignatius-maloyan",
+      "name": "San Ignacio Shoukrallah Maloyan",
+      "feastDay": "06-11",
+      "birthDate": "1869-04-08",
+      "deathDate": "1915-06-11",
+      "canonizationDate": "2025-10-19",
+      "country": "Imperio otomano (actual Turquía)",
+      "region": "Middle East",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Armenian Catholics",
+        "Mardin",
+        "persecuted Christians",
+        "clergy"
+      ],
+      "displayPatronOf": [
+        "los católicos armenios",
+        "Mardín",
+        "los cristianos perseguidos",
+        "el clero"
+      ],
+      "tags": [
+        "martyr",
+        "bishop",
+        "Armenian",
+        "modern"
+      ],
+      "displayTags": [
+        "mártir",
+        "obispo",
+        "armenio",
+        "moderno"
+      ],
+      "affinities": [
+        "courage",
+        "faith",
+        "leadership",
+        "prayer"
+      ],
+      "displayAffinities": [
+        "valentía",
+        "fe",
+        "liderazgo",
+        "oración"
+      ],
+      "quote": "Si Jesucristo, mi Señor y mi Dios, fue crucificado por mí, ¿por qué no habría de estar dispuesto a morir por Él?",
+      "biography": "Shoukrallah Maloyan nació el 8 de abril de 1869 en Mardín, en el Imperio otomano, en una familia católica armenia. A los catorce años partió hacia el monasterio católico armenio de Bzommar, en el Líbano, para estudiar el sacerdocio, y fue ordenado en 1896, tomando el nombre de Ignacio. Sirvió durante más de una década como párroco en Alejandría y El Cairo, admirado por su mansedumbre y disciplina de oración, antes de ser llamado de vuelta a su turbulenta diócesis natal.\n\nEn 1911 fue ordenado arzobispo de Mardín, donde trabajó para renovar la vida espiritual y educativa de su rebaño católico armenio. Su ministerio coincidió con el estallido de la Primera Guerra Mundial y el comienzo del genocidio armenio. En junio de 1915, las autoridades otomanas arrestaron al arzobispo Maloyan junto con cientos de católicos armenios bajo la falsa acusación de esconder armas. Fue torturado y se le ofreció repetidamente la libertad si renunciaba a Cristo y se convertía al islam.\n\nSe negó siempre. El 11 de junio de 1915 fue llevado a las afueras de Mardín junto con un grupo de sus fieles y fusilado, convirtiéndose en uno de los muchos obispos mártires del genocidio armenio. Fue beatificado en 2001 por el Papa Juan Pablo II y canonizado por el Papa León XIV el 19 de octubre de 2025.",
+      "whyConfirmationSaint": "San Ignacio Maloyan guio a su pueblo no desde la seguridad, sino junto a él, y cuando finalmente tuvo que elegir entre su fe y su vida, no dudó. Su testimonio durante el genocidio armenio le da un rostro y un nombre a una tragedia inmensa, y una razón para esperar en medio de ella.\n\nEs un patrono poderoso para cualquiera que provenga de una comunidad cristiana perseguida, para quienes discierten el ministerio ordenado, y para los jóvenes que desean el valor de permanecer fieles incluso cuando la fe cuesta algo real.",
+      "image": {
+        "filename": "ignatius-maloyan.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican biography (Beatification, 2001)",
+          "url": "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20011007_beat-maloyan_en.html"
+        },
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        }
+      ]
+    },
+    {
+      "id": "peter-to-rot",
+      "name": "San Pedro To Rot",
+      "feastDay": "07-07",
+      "birthDate": "1912-03-05",
+      "deathDate": "1945-07-07",
+      "canonizationDate": "2025-10-19",
+      "country": "Papúa Nueva Guinea",
+      "region": "Oceania",
+      "gender": "male",
+      "lifeState": "married",
+      "ageCategory": "adult",
+      "patronOf": [
+        "married couples",
+        "catechists",
+        "Papua New Guinea",
+        "Christian marriage"
+      ],
+      "displayPatronOf": [
+        "las parejas casadas",
+        "los catequistas",
+        "Papúa Nueva Guinea",
+        "el matrimonio cristiano"
+      ],
+      "tags": [
+        "martyr",
+        "catechist",
+        "layperson",
+        "modern"
+      ],
+      "displayTags": [
+        "mártir",
+        "catequista",
+        "laico",
+        "moderno"
+      ],
+      "affinities": [
+        "courage",
+        "family",
+        "faith",
+        "community-service"
+      ],
+      "displayAffinities": [
+        "valentía",
+        "familia",
+        "fe",
+        "servicio comunitario"
+      ],
+      "quote": "No está bien que un hombre tenga más de una esposa; el matrimonio es un vínculo sagrado que nadie puede romper.",
+      "biography": "Pedro To Rot nació el 5 de marzo de 1912 en la aldea de Rakunai, en la isla de Nueva Bretaña, en una de las primeras familias cristianas de la región. Se formó como catequista y, antes de cumplir veinticinco años, ya servía como catequista de la parroquia, enseñando la fe, guiando la oración y bautizando a los conversos en una Iglesia todavía joven en Papúa Nueva Guinea. En 1936 se casó con Paula Ia Varpit, con quien tuvo tres hijos.\n\nDurante la Segunda Guerra Mundial, las fuerzas japonesas ocuparon Nueva Bretaña y finalmente encarcelaron o expulsaron a los misioneros extranjeros. Pedro To Rot se puso al frente de su comunidad católica local, continuando en secreto a bautizar, enseñar y llevar los sacramentos a su pueblo con gran riesgo personal. En 1944, las autoridades de ocupación comenzaron a promover la poligamia para ganarse el favor de algunos líderes locales. Pedro To Rot se opuso públicamente, insistiendo en que el matrimonio cristiano era un vínculo de por vida entre un hombre y una mujer que ningún gobernante podía anular.\n\nPor ello fue arrestado en 1945 y ejecutado mediante una inyección letal en un campo japonés el 7 de julio de ese año, convirtiéndose en el primer mártir de Papúa Nueva Guinea. Fue beatificado por el Papa Juan Pablo II en 1995 y canonizado por el Papa León XIV el 19 de octubre de 2025.",
+      "whyConfirmationSaint": "San Pedro To Rot no era sacerdote ni obispo: era esposo, padre y catequista laico que simplemente siguió haciendo su trabajo cuando hacerlo se volvió peligroso. Muestra que guiar una parroquia, defender el matrimonio y sostener la verdad son cosas a las que los laicos católicos comunes pueden ser llamados, a veces a un gran costo.\n\nEs un patrono firme para las parejas comprometidas y casadas, para catequistas y líderes juveniles, y para los jóvenes que buscan un modelo de valentía silenciosa y constante en lugar de heroísmo dramático.",
+      "sources": [
+        {
+          "name": "Vatican News",
+          "url": "https://www.vaticannews.va/en/church/news/2025-10/a-saint-to-be-for-a-nation-peter-to-rot-s-witness-shapes-papua.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Peter_To_Rot"
+        }
+      ]
+    },
+    {
+      "id": "maria-del-carmen-rendiles",
+      "name": "Santa María del Carmen Rendiles Martínez",
+      "feastDay": "05-09",
+      "birthDate": "1903-08-11",
+      "deathDate": "1977-05-09",
+      "canonizationDate": "2025-10-19",
+      "country": "Venezuela",
+      "region": "Americas",
+      "gender": "female",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "persons with disabilities",
+        "the poor",
+        "Venezuela",
+        "catechists"
+      ],
+      "displayPatronOf": [
+        "las personas con discapacidad",
+        "los pobres",
+        "Venezuela",
+        "los catequistas"
+      ],
+      "tags": [
+        "founder",
+        "religious sister",
+        "Venezuelan",
+        "modern"
+      ],
+      "displayTags": [
+        "fundadora",
+        "religiosa",
+        "venezolana",
+        "moderna"
+      ],
+      "affinities": [
+        "compassion",
+        "service",
+        "perseverance",
+        "prayer"
+      ],
+      "displayAffinities": [
+        "compasión",
+        "servicio",
+        "perseverancia",
+        "oración"
+      ],
+      "quote": "Dios no pide lo que no tenemos; solo pide lo que podemos dar con amor.",
+      "biography": "Carmen Elena Rendiles Martínez nació el 11 de agosto de 1903 en Caracas, Venezuela, la tercera de siete hermanos, y nació sin su brazo izquierdo. En lugar de ser sobreprotegida a causa de su discapacidad, creció con una fe fuerte y alegre y con la clara convicción de que nada la detendría de hacer lo que Dios le pidiera.\n\nEn 1927 ingresó en las Siervas del Santísimo Sacramento y completó su noviciado en Francia, tomando el nombre religioso de María del Carmen. De vuelta en Venezuela, sintió el llamado a fundar un nuevo tipo de comunidad adaptada a las necesidades de su tierra, y en 1965 estableció las Siervas de Jesús, una congregación dedicada a la catequesis, la educación y el trabajo parroquial entre los pobres, con especial atención a la devoción eucarística. Como primera Superiora General, guio a la joven congregación con humildad, sin tratar nunca la falta de su brazo como un obstáculo, sino simplemente como parte de la vida que Dios le había dado para ofrecer.\n\nMurió en Caracas el 9 de mayo de 1977. La devoción a 'Madre Carmen' creció constantemente entre los venezolanos, especialmente entre quienes viven con discapacidad o enfermedad. Fue beatificada en 2018 y canonizada por el Papa León XIV el 19 de octubre de 2025, convirtiéndose en la primera mujer santa canonizada de Venezuela.",
+      "whyConfirmationSaint": "Santa María del Carmen Rendiles nunca dejó que algo que le faltaba definiera lo que podía dar. Fundó una comunidad religiosa, la dirigió durante décadas y marcó incontables vidas: una prueba de que las limitaciones que otros notan primero no tienen la última palabra sobre la vocación de una persona.\n\nEs una patrona especialmente significativa para cualquiera que viva con una discapacidad o una enfermedad crónica, y para los jóvenes que a veces se sienten 'menos' por algo relacionado con su cuerpo o sus circunstancias. Ella muestra que Dios obra poderosamente a través de la persona que ya eres.",
+      "image": {
+        "filename": "maria-del-carmen-rendiles.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican Press Bulletin (Canonization, Oct. 19, 2025)",
+          "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/10/19/251019a.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Carmen_Elena_Rendiles_Martínez"
+        }
+      ]
+    },
+    {
+      "id": "john-of-nepomuk",
+      "name": "San Juan Nepomuceno",
+      "feastDay": "05-16",
+      "birthDate": "1345-01-01",
+      "deathDate": "1393-03-20",
+      "canonizationDate": "1729-03-19",
+      "country": "Bohemia (actual República Checa)",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "the seal of confession",
+        "bridges",
+        "floods and drowning",
+        "the falsely accused"
+      ],
+      "displayPatronOf": [
+        "el secreto de confesión",
+        "los puentes",
+        "las inundaciones y ahogamientos",
+        "los falsamente acusados"
+      ],
+      "tags": [
+        "martyr",
+        "priest",
+        "Bohemian"
+      ],
+      "displayTags": [
+        "mártir",
+        "sacerdote",
+        "bohemio"
+      ],
+      "affinities": [
+        "integrity",
+        "prayer",
+        "courage",
+        "trust"
+      ],
+      "displayAffinities": [
+        "integridad",
+        "oración",
+        "valentía",
+        "confianza"
+      ],
+      "quote": "Prefiero ser arrojado al río antes que traicionar lo que se me ha confiado en confesión.",
+      "biography": "Juan Nepomuceno nació hacia 1345 en Pomuk, en el Reino de Bohemia. Estudió derecho y teología, fue ordenado sacerdote y llegó a ser vicario general de la Archidiócesis de Praga bajo el arzobispo Juan de Jenštejn, un cargo de verdadera influencia en una corte a menudo enredada en intrigas políticas.\n\nSegún una antigua tradición, el rey Wenceslao IV, receloso de su propia esposa, exigió al padre Juan que revelara lo que la reina le había confesado. Juan se negó, manteniéndose fiel al secreto absoluto de la confesión aun cuando el rey tenía el poder de destruirlo. El rey ordenó arrestarlo, torturarlo y, en la noche del 20 de marzo de 1393, arrojarlo desde el Puente de Carlos al río Moldava en Praga, donde murió ahogado. También se vio envuelto en el conflicto político más amplio entre el rey y el arzobispo por los nombramientos eclesiásticos, pero es su defensa del secreto de confesión lo que ha definido su memoria durante más de seis siglos.\n\nSu cuerpo fue recuperado y sepultado en la catedral de Praga, donde la devoción hacia él creció constantemente. Fue canonizado en 1729, y todavía hoy hay estatuas suyas en puentes de toda Europa Central como recuerdo de su testimonio.",
+      "whyConfirmationSaint": "San Juan Nepomuceno guardó un secreto que no era suyo para revelar, incluso cuando un rey lo exigió y su vida estaba en juego. En un mundo lleno de presión para compartirlo todo, es un ejemplo impactante del tipo de confiabilidad que hace posible la amistad y la fe verdaderas.\n\nEs un patrono natural para cualquiera a quien alguna vez le hayan pedido traicionar una confidencia, para quienes se preparan para el sacramento de la Reconciliación, y para los jóvenes que quieren ser el tipo de persona en quien otros realmente pueden confiar la verdad.",
+      "image": {
+        "filename": "john-of-nepomuk.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican State — Saint of the Day",
+          "url": "https://www.vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1654-22-march-saint-john-nepomucene-martyr.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/John_of_Nepomuk"
+        }
+      ]
+    },
+    {
+      "id": "philip-neri",
+      "name": "San Felipe Neri",
+      "feastDay": "05-26",
+      "birthDate": "1515-07-21",
+      "deathDate": "1595-05-26",
+      "canonizationDate": "1622-03-12",
+      "country": "Italia",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Rome",
+        "the Oratory",
+        "joy",
+        "humor"
+      ],
+      "displayPatronOf": [
+        "Roma",
+        "el Oratorio",
+        "la alegría",
+        "el buen humor"
+      ],
+      "tags": [
+        "priest",
+        "founder",
+        "Italian",
+        "Renaissance"
+      ],
+      "displayTags": [
+        "sacerdote",
+        "fundador",
+        "italiano",
+        "renacentista"
+      ],
+      "affinities": [
+        "joy",
+        "humor",
+        "prayer",
+        "friendship"
+      ],
+      "displayAffinities": [
+        "alegría",
+        "humor",
+        "oración",
+        "amistad"
+      ],
+      "quote": "La alegría fortalece el corazón y nos hace perseverar en una vida buena; por eso el servidor de Dios debe estar siempre de buen ánimo.",
+      "biography": "Felipe Neri nació el 21 de julio de 1515 en Florencia, Italia, en una familia de notarios. De joven se trasladó a Roma, donde, en lugar de seguir la carrera de negocios que su familia esperaba, pasó años viviendo con sencillez, estudiando filosofía y teología por su cuenta, y dedicando largas noches a la oración en las catacumbas e iglesias de la ciudad. Se hizo conocido en Roma por recorrer las calles conversando con la gente común, especialmente jóvenes, estudiantes y pobres, siempre con calidez y buen humor.\n\nOrdenado sacerdote en 1551, comenzó a reunir a laicos y clérigos para la oración informal, la conversación, la música y las obras de caridad en una habitación sobre la iglesia de San Girolamo, reuniones tan populares que con el tiempo dieron origen a la Congregación del Oratorio, una comunidad de sacerdotes que viven juntos sin votos formales, dedicada a la predicación, los sacramentos y el cuidado pastoral arraigado en la alegría más que en la austeridad. Su estilo era tan distintivo —genuinamente feliz, pronto a reír, a veces juguetonamente excéntrico, pero profundamente serio respecto a la oración y la confesión— que los romanos comenzaron a llamarlo el 'Apóstol de Roma' y el 'Santo de la alegría'.\n\nMurió en Roma en la noche del 25 al 26 de mayo de 1595, inmediatamente después de confesar y celebrar la Misa. Fue canonizado en 1622.",
+      "whyConfirmationSaint": "San Felipe Neri demostró que la santidad no tiene que ser sombría: era famoso por sus bromas, sus travesuras juguetonas y una alegría genuina y contagiosa, todo mientras pasaba horas en oración y confesando hasta bien entrada la noche. Muestra que la fe y la diversión no son opuestas.\n\nEs un gran patrono para los jóvenes que temen que tomarse en serio su fe signifique renunciar a su personalidad o sentido del humor, y para quien quiera que su grupo de amigos realmente lo ayude a acercarse más a Dios.",
+      "image": {
+        "filename": "philip-neri.jpg",
+        "attribution": "CC0, Museo Metropolitano de Arte, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican State — Saint of the Day",
+          "url": "https://www.vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1963-may-26-saint-philip-neri.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Philip_Neri"
+        }
+      ]
+    },
+    {
+      "id": "paschal-baylon",
+      "name": "San Pascual Baylón",
+      "feastDay": "05-17",
+      "birthDate": "1540-05-16",
+      "deathDate": "1592-05-17",
+      "canonizationDate": "1690-10-16",
+      "country": "España",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "Eucharistic congresses and devotion",
+        "shepherds",
+        "cooks"
+      ],
+      "displayPatronOf": [
+        "los congresos y la devoción eucarística",
+        "los pastores",
+        "los cocineros"
+      ],
+      "tags": [
+        "religious brother",
+        "Franciscan",
+        "Spanish"
+      ],
+      "displayTags": [
+        "hermano religioso",
+        "franciscano",
+        "español"
+      ],
+      "affinities": [
+        "devotion",
+        "humility",
+        "prayer",
+        "simplicity"
+      ],
+      "displayAffinities": [
+        "devoción",
+        "humildad",
+        "oración",
+        "sencillez"
+      ],
+      "quote": "Bendita sea la hora en que se instituyó el Santísimo Sacramento; sea alabado y adorado para siempre.",
+      "biography": "Pascual Baylón nació el 16 de mayo de 1540 en Torrehermosa, en el Reino de Aragón, en una familia campesina pobre. De niño trabajó como pastor, y fue en el campo, a solas con el rebaño, donde se enseñó a orar y desarrolló un profundo amor por la Eucaristía, arrodillándose, según se cuenta, hacia la iglesia más cercana cada vez que las campanas tocaban a la Consagración de la Misa.\n\nA los veinticuatro años ingresó en los franciscanos alcantarinos, una rama reformada y estricta de la orden, como hermano lego en lugar de buscar la ordenación, eligiendo en cambio una vida de trabajo manual, mendicidad y obediencia sencilla. Sirvió como portero y cocinero en varios conventos de toda España, siendo conocido por su humildad, su cuidado de los pobres que llegaban a la puerta y, sobre todo, por las largas horas que pasaba en adoración ante el Santísimo Sacramento, a veces durante toda la noche.\n\nMurió el 17 de mayo de 1592 en Villarreal, precisamente el día de la fiesta del Corpus Christi de ese año, de manera muy apropiada para un hombre cuya vida entera había girado en torno al amor a la Eucaristía. Fue canonizado en 1690 y más tarde declarado patrono de los congresos y asociaciones eucarísticas.",
+      "whyConfirmationSaint": "San Pascual Baylón nunca fue sacerdote, nunca escribió un libro famoso, y pasó la mayor parte de su vida haciendo tareas ordinarias de cocina y portería; sin embargo, su silenciosa devoción a la Eucaristía lo convirtió en uno de los grandes modelos de amor eucarístico de la Iglesia. Demuestra que no hace falta un título para llegar a ser santo.\n\nEs un patrono apropiado para los jóvenes que se preparan para recibir la Eucaristía más plenamente, para cualquiera atraído por la adoración eucarística, y para quienes se sienten llamados a servir en silencio en lugar de buscar protagonismo.",
+      "image": {
+        "filename": "paschal-baylon.jpg",
+        "attribution": "Dominio público, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican State — Saint of the Day",
+          "url": "https://www.vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1892-may-17-saint-paschal-baylon-franciscan-layman.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Paschal_Baylon"
+        }
+      ]
+    },
+    {
+      "id": "norbert-of-xanten",
+      "name": "San Norberto de Xanten",
+      "feastDay": "06-06",
+      "birthDate": "1080-01-01",
+      "deathDate": "1134-06-06",
+      "canonizationDate": "1582-07-28",
+      "country": "Alemania (Sacro Imperio Romano)",
+      "region": "Europe",
+      "gender": "male",
+      "lifeState": "religious",
+      "ageCategory": "adult",
+      "patronOf": [
+        "peace",
+        "expectant mothers",
+        "Magdeburg"
+      ],
+      "displayPatronOf": [
+        "la paz",
+        "las mujeres embarazadas",
+        "Magdeburgo"
+      ],
+      "tags": [
+        "bishop",
+        "founder",
+        "German",
+        "medieval"
+      ],
+      "displayTags": [
+        "obispo",
+        "fundador",
+        "alemán",
+        "medieval"
+      ],
+      "affinities": [
+        "conversion",
+        "peace",
+        "prayer",
+        "reconciliation"
+      ],
+      "displayAffinities": [
+        "conversión",
+        "paz",
+        "oración",
+        "reconciliación"
+      ],
+      "quote": "Quien quiera reformar el mundo debe comenzar por reformarse a sí mismo.",
+      "biography": "Norberto nació hacia el año 1080 en Xanten, en el Sacro Imperio Romano, en una familia noble, y durante años llevó la vida cómoda y mundana que se esperaba de un joven clérigo bien relacionado, recibiendo rentas eclesiásticas sin tomarse muy en serio sus deberes religiosos. Según la tradición, todo cambió hacia 1115, cuando fue derribado de su caballo durante una violenta tormenta y escapó de la muerte por muy poco, una experiencia que lo llevó a una profunda conversión.\n\nRepartió sus bienes, fue ordenado sacerdote y pasó varios años como predicador itinerante, llamando a la gente a la penitencia y la reforma en una época en que parte del clero se había relajado. En 1120, en Prémontré, Francia, fundó una nueva orden religiosa, los premonstratenses (también llamados norbertinos), que combinaba una vida monástica de oración con un ministerio pastoral activo y la predicación, un equilibrio innovador para la época que se extendió rápidamente por Europa.\n\nEn 1126 fue nombrado arzobispo de Magdeburgo, donde trabajó para reformar al clero corrupto, defendió a los pobres y trabajó por reconciliar a las facciones políticas y religiosas en un imperio dividido. Murió el 6 de junio de 1134 y fue canonizado en 1582.",
+      "whyConfirmationSaint": "San Norberto pasó de vivir para sí mismo a repartirlo todo y comenzar una forma completamente nueva de vida religiosa, todo porque dejó que un dramático llamado de atención realmente lo transformara. Es la prueba de que la conversión es posible en cualquier momento, sin importar cuán cómoda o distraída se haya vuelto una vida.\n\nEs un patrono firme para quien esté en medio de su propia historia de conversión, para quienes trabajan por la paz y la reconciliación entre personas divididas, y para los jóvenes que quieren un nuevo comienzo que realmente perdure.",
+      "image": {
+        "filename": "norbert-of-xanten.jpg",
+        "attribution": "CC BY 4.0, Carolus, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Vatican State — Saint of the Day",
+          "url": "https://vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/2019-june-6-saint-norbert-of-xanten-bishop-and-founder-of-the-canons-regular-of-the-norbertines.html"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Norbert_of_Xanten"
+        }
+      ]
+    },
+    {
+      "id": "stanley-rother",
+      "name": "Beato Stanley Rother",
+      "feastDay": "07-28",
+      "birthDate": "1935-03-27",
+      "deathDate": "1981-07-28",
+      "canonizationDate": null,
+      "country": "Estados Unidos",
+      "region": "Americas",
+      "gender": "male",
+      "lifeState": "martyr",
+      "ageCategory": "adult",
+      "patronOf": [
+        "missionaries",
+        "Guatemala",
+        "Oklahoma"
+      ],
+      "displayPatronOf": [
+        "los misioneros",
+        "Guatemala",
+        "Oklahoma"
+      ],
+      "tags": [
+        "martyr",
+        "priest",
+        "missionary",
+        "blessed",
+        "modern"
+      ],
+      "displayTags": [
+        "mártir",
+        "sacerdote",
+        "misionero",
+        "beato",
+        "moderno"
+      ],
+      "affinities": [
+        "courage",
+        "service",
+        "faith",
+        "perseverance"
+      ],
+      "displayAffinities": [
+        "valentía",
+        "servicio",
+        "fe",
+        "perseverancia"
+      ],
+      "quote": "El pastor no puede huir ante el primer signo de peligro.",
+      "biography": "Stanley Francis Rother nació el 27 de marzo de 1935 en una granja cerca de Okarche, Oklahoma, el mayor de cuatro hermanos en una familia católica devota. Tuvo dificultades académicas en el seminario, especialmente con el latín, e incluso fue despedido de un seminario; sin embargo, con el apoyo de su diócesis, perseveró y fue ordenado sacerdote para la Diócesis de la Ciudad de Oklahoma en 1963.\n\nEn 1968 se ofreció como voluntario para el trabajo misionero en la misión diocesana de Santiago Atitlán, Guatemala, entre el pueblo maya tz'utujil. Aprendió español y luego tz'utujil, una lengua que en ese entonces no tenía escritura, y ayudó a traducir el Nuevo Testamento a ese idioma: el mismo 'alumno débil' que alguna vez había luchado con el latín llegó a dominar una lengua que pocos forasteros habían aprendido jamás. Levantó la parroquia, un hospital, una escuela y una cooperativa agrícola, y se hizo conocido simplemente como 'Padre Aplas', la forma tz'utujil de su nombre.\n\nCuando la guerra civil de Guatemala se intensificó a finales de la década de 1970, catequistas y feligreses de su misión comenzaron a desaparecer o a ser asesinados por fuerzas gubernamentales que veían con sospecha el trabajo de la Iglesia entre los pobres. El nombre del padre Rother apareció en una lista de muerte, y regresó brevemente a Oklahoma por seguridad a principios de 1981, pero no pudo mantenerse alejado de su gente, insistiendo en que un pastor no abandona a su rebaño en peligro. Regresó a Guatemala, y el 28 de julio de 1981, tres hombres armados irrumpieron en la casa parroquial y lo mataron. Fue el primer sacerdote nacido en Estados Unidos en ser reconocido como mártir, y fue beatificado por la Iglesia católica en 2017.",
+      "whyConfirmationSaint": "El beato Stanley Rother no era el alumno estrella ni el candidato obvio para el sacerdocio —estuvo a punto de ser despedido del seminario— pero llegó a dominar una lengua sin escritura y entregó su vida por gente al otro lado del mundo. Muestra que Dios puede usar a quien al principio tiene dificultades, no solo al naturalmente talentoso.\n\nEs un ejemplo poderoso para quien alguna vez haya sentido que no estaba 'hecho' para algo importante, para quienes discierten el trabajo misionero o ministerial, y para los jóvenes que quieren un modelo de permanecer cuando permanecer es difícil.",
+      "image": {
+        "filename": "stanley-rother.jpg",
+        "attribution": "CC BY-SA 4.0, Julitomenchu, vía Wikimedia Commons"
+      },
+      "sources": [
+        {
+          "name": "Archdiocese of Oklahoma City — Rother Cause",
+          "url": "https://archokc.org/rothercause"
+        },
+        {
+          "name": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Stanley_Rother"
         }
       ]
     }

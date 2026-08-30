@@ -24,14 +24,14 @@ val hasReleaseSigning = keystoreProps.getProperty("storeFile") != null &&
 
 android {
     namespace = "com.yortch.confirmationsaints"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.yortch.confirmationsaints"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 3
-        versionName = "1.0.2"
+        targetSdk = 36
+        versionCode = 5
+        versionName = "1.1.0"
 
         vectorDrawables { useSupportLibrary = true }
 
@@ -146,6 +146,17 @@ dependencies {
     androidTestImplementation(libs.hilt.android.testing)
     kspAndroidTest(libs.hilt.compiler)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+}
+
+// Robolectric's Android 16 (API 36 / "Baklava") sandbox requires a Java 21+ test
+// JVM even though the app itself compiles/targets Java 17 (compileOptions above).
+// Only the unit-test worker JVM is bumped; app bytecode output is unaffected.
+tasks.withType<Test>().configureEach {
+    javaLauncher.set(
+        javaToolchains.launcherFor {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
+    )
 }
 
 // -----------------------------------------------------------------------------

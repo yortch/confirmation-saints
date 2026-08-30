@@ -2,7 +2,15 @@
 
 Estas notas son solo para el lanzamiento de iOS/App Store. Las notas de Android/Google Play se gestionan por separado en `docs/android/submission-info.md` porque las correcciones específicas de cada plataforma pueden ser diferentes.
 
-## Novedades en iOS versión 1.0.4
+## Novedades en iOS versión 1.1.0
+
+Esta versión agrega 12 nuevos perfiles bilingües de santos y beatos para que los candidatos a la Confirmación exploren, cada uno con biografía completa en inglés y español y patronazgo. Diez de los doce incluyen una imagen con licencia; dos perfiles canonizados recientemente se publican intencionalmente sin imagen porque no se pudo verificar un retrato con licencia libre/CC.
+
+También hicimos mejoras de calidad y de plataforma internamente para que la app siga funcionando sin problemas en las versiones más recientes de iOS.
+
+---
+
+## Novedades en iOS versión 1.0.4 (versión anterior)
 
 Esta versión agrega tres nuevos perfiles de santos para que los candidatos a la Confirmación exploren: santa Margarita María Alacoque, san Benito de Nursia y san Pedro de San José de Betancur.
 
@@ -142,12 +150,12 @@ https://yortch.github.io/confirmation-saints/privacy-policy.html
 
 ### Versión
 ```
-1.0.4
+1.1.0
 ```
 
 ### Build
 ```
-4
+14
 ```
 
 ### Bundle ID

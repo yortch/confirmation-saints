@@ -19,7 +19,7 @@ import org.robolectric.RobolectricTestRunner
  * Contract under test (from docs/android-architecture.md §3.5 and the
  * "SharedContent/ is the Canonical Cross-Platform Data Source" decision):
  *  - Repository loads from `assets/saints-{en,es}.json`.
- *  - Both languages must expose the same 106 saint ids.
+ *  - Both languages must expose the same 118 saint ids.
  */
 @RunWith(RobolectricTestRunner::class)
 class SaintRepositoryTest {
@@ -47,11 +47,11 @@ class SaintRepositoryTest {
     }
 
     @Test
-    fun should_return_exactly_106_saints_for_each_language() {
+    fun should_return_exactly_118_saints_for_each_language() {
         val enSaints = repository.loadSaints(AppLanguage.EN)
         val esSaints = repository.loadSaints(AppLanguage.ES)
-        assertEquals("EN should have 106 saints", 106, enSaints.size)
-        assertEquals("ES should have 106 saints", 106, esSaints.size)
+        assertEquals("EN should have 118 saints", 118, enSaints.size)
+        assertEquals("ES should have 118 saints", 118, esSaints.size)
     }
 
     @Test
@@ -72,13 +72,26 @@ class SaintRepositoryTest {
     @Test
     fun should_expose_image_filename_matching_saint_id() {
         val saints = repository.loadSaints(AppLanguage.EN)
+        // Documented gap: no free/CC-licensed portrait could be verified on
+        // Wikimedia Commons for these two saints as of this writing (both
+        // canonized Oct. 19, 2025). They are intentionally added without an
+        // `image` field rather than using a non-free/fair-use image.
+        val knownMissingImageIds = setOf("maria-troncatti", "peter-to-rot")
         saints.forEach { saint ->
-            val expectedFilename = "${saint.id}.jpg"
-            assertEquals(
-                "Image filename for ${saint.id} should match saint id",
-                expectedFilename,
-                saint.image?.filename
-            )
+            if (saint.id in knownMissingImageIds) {
+                assertEquals(
+                    "Saint ${saint.id} is a documented image gap and should have no image entry",
+                    null,
+                    saint.image
+                )
+            } else {
+                val expectedFilename = "${saint.id}.jpg"
+                assertEquals(
+                    "Image filename for ${saint.id} should match saint id",
+                    expectedFilename,
+                    saint.image?.filename
+                )
+            }
         }
     }
 }
