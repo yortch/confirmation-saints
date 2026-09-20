@@ -107,6 +107,12 @@ object AppStrings {
         "Let's Go!" to "¡Vamos!",
 
         // Settings
+        "Rate & Review" to "Calificar y Reseñar",
+        "Rate Confirmation Saints" to "Calificar Confirmation Saints",
+        "Enjoying the app? A quick rating helps other families find it." to
+            "¿Disfrutando la app? Una calificación rápida ayuda a otras familias a encontrarla.",
+        "Rate Confirmation Saints in Google Play" to
+            "Calificar Confirmation Saints en Google Play",
         "Show Welcome Screen" to "Mostrar Pantalla de Bienvenida",
         "Replay the welcome screen to revisit how the app works." to
             "Reproduce la pantalla de bienvenida para revisar cómo funciona la app.",

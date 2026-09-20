@@ -143,7 +143,15 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 - Updated `docs/android/submission-info.md` for future Google Play notes while Android remains in Google's required closed testing phase; notes are explicitly marked pending/not production.
 - No Android `versionName`/`versionCode` bump for docs-only release-note prep; keep Android notes separate from iOS/App Store 1.0.3 copy.
 
+### 2026-09-20 — Debug rebuild verified on emulator
+- `./gradlew clean assembleDebug` rebuilt cleanly, preserving uncommitted changes; APK installed and launched on Pixel 10 API 36 emulator (process 2938), Saints screen confirmed via screenshot/UI hierarchy.
+
 ### 2026-04-30 — Compose Material deprecation cleanup
 - For Material 3, replace deprecated `Divider()` with `HorizontalDivider()` and update the import to `androidx.compose.material3.HorizontalDivider`.
 - For direction-sensitive Material icons such as external links/help, use `Icons.AutoMirrored.Filled.*` with `androidx.compose.material.icons.automirrored.filled.*` imports to avoid RTL-related deprecations.
 - Verification: `cd android && ./gradlew :app:assembleDebug --warning-mode all --no-daemon` passed without the targeted deprecation warnings.
+
+### Android 1.1.1 (versionCode 6) Release Prep (2026-09-20)
+- Bumped `versionName` to 1.1.1 and `versionCode` to 6 in `android/app/build.gradle.kts`.
+- 46/46 unit tests pass; instrumentation tests compile; built and verified a signed upload-key AAB at `android/app/build/outputs/bundle/release/app-release.aab`.
+- Gandalf approved v1.1.1 release readiness. Play Console upload of the verified AAB remains a manual, credentialed step outside this batch.

@@ -1,5 +1,11 @@
 package com.yortch.confirmationsaints.ui.screens.settings
 
+import android.app.Activity
+import android.content.ActivityNotFoundException
+import android.content.Context
+import android.content.ContextWrapper
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,6 +29,7 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Shield
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -33,12 +40,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.google.android.play.core.review.ReviewManagerFactory
 import com.yortch.confirmationsaints.BuildConfig
 import com.yortch.confirmationsaints.localization.AppLanguage
 import com.yortch.confirmationsaints.localization.AppStrings
@@ -64,6 +76,7 @@ fun SettingsScreen(
     val language = LocalAppLanguage.current
     val listState by listViewModel.state.collectAsStateWithLifecycle()
     val uri = LocalUriHandler.current
+    val context = LocalContext.current
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -105,6 +118,29 @@ fun SettingsScreen(
                 InfoRow(
                     label = AppStrings.localized("Languages", language),
                     value = AppStrings.localized("English, Spanish", language),
+                )
+            }
+        }
+
+        item {
+            // Placed between App Info and Onboarding per Gandalf's Rate & Review
+            // Settings contract — must be visible without scrolling.
+            Section(icon = Icons.Default.Star, title = AppStrings.localized("Rate & Review", language)) {
+                ActionRow(
+                    icon = Icons.Default.Star,
+                    label = AppStrings.localized("Rate Confirmation Saints", language),
+                    contentDescription = AppStrings.localized(
+                        "Rate Confirmation Saints in Google Play", language,
+                    ),
+                    onClick = { launchRateReviewFlow(context, settingsViewModel) },
+                )
+                Text(
+                    AppStrings.localized(
+                        "Enjoying the app? A quick rating helps other families find it.", language,
+                    ),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 4.dp),
                 )
             }
         }
@@ -223,11 +259,30 @@ private fun InfoRow(label: String, value: String) {
 }
 
 @Composable
-private fun ActionRow(icon: ImageVector, label: String, onClick: () -> Unit) {
+private fun ActionRow(
+    icon: ImageVector,
+    label: String,
+    contentDescription: String? = null,
+    onClick: () -> Unit,
+) {
     Row(
         Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
+            .clickable(role = Role.Button, onClick = onClick)
+            .then(
+                // When a destination-announcing accessibility label is supplied
+                // (e.g. "...in Google Play"), replace the merged icon/text
+                // semantics entirely so screen readers announce exactly that
+                // label instead of just the visible row text.
+                if (contentDescription != null) {
+                    Modifier.clearAndSetSemantics {
+                        this.contentDescription = contentDescription
+                        this.role = Role.Button
+                    }
+                } else {
+                    Modifier
+                },
+            )
             .padding(vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -235,6 +290,61 @@ private fun ActionRow(icon: ImageVector, label: String, onClick: () -> Unit) {
         Spacer(Modifier.size(8.dp))
         Text(label, style = MaterialTheme.typography.bodyLarge)
     }
+}
+
+/**
+ * Kicks off the Rate & Review flow: Play In-App Review primary path, with a
+ * mandatory market:// -> https store-listing fallback per Gandalf's contract.
+ *
+ * Debug builds skip the ReviewManager call entirely (see
+ * [SettingsViewModel.shouldAttemptInAppReview]) since it silently no-ops
+ * without a Play-signed install channel and gives no reliable signal.
+ */
+private fun launchRateReviewFlow(context: Context, settingsViewModel: SettingsViewModel) {
+    if (!settingsViewModel.shouldAttemptInAppReview()) {
+        openPlayStoreFallback(context, settingsViewModel)
+        return
+    }
+    try {
+        val reviewManager = ReviewManagerFactory.create(context)
+        val request = reviewManager.requestReviewFlow()
+        request.addOnCompleteListener { task ->
+            val activity = context.findActivity()
+            if (task.isSuccessful && activity != null) {
+                reviewManager.launchReviewFlow(activity, task.result)
+            } else {
+                openPlayStoreFallback(context, settingsViewModel)
+            }
+        }
+    } catch (e: Exception) {
+        openPlayStoreFallback(context, settingsViewModel)
+    }
+}
+
+/** Try the Play Store app deep link first, then the https listing as last resort. */
+private fun openPlayStoreFallback(context: Context, settingsViewModel: SettingsViewModel) {
+    try {
+        context.startActivity(
+            Intent(Intent.ACTION_VIEW, Uri.parse(settingsViewModel.playStoreMarketUri())),
+        )
+    } catch (e: ActivityNotFoundException) {
+        try {
+            context.startActivity(
+                Intent(Intent.ACTION_VIEW, Uri.parse(settingsViewModel.playStoreHttpsUri())),
+            )
+        } catch (e2: ActivityNotFoundException) {
+            // No app can handle either URI (e.g. no browser). Nothing further to do.
+        }
+    }
+}
+
+private fun Context.findActivity(): Activity? {
+    var current = this
+    while (current is ContextWrapper) {
+        if (current is Activity) return current
+        current = current.baseContext
+    }
+    return null
 }
 
 @Composable

@@ -2,11 +2,29 @@
 
 These notes are for the iOS/App Store release only. Android/Google Play notes are tracked separately in `docs/android/submission-info.md` because platform-specific fixes may differ.
 
-## What's New in iOS Version 1.1.0
+## What's New in iOS Version 1.1.1
 
-This release adds 12 new bilingual saint and blessed profiles for Confirmation candidates to explore, each with a full English and Spanish biography and patronage. Ten of the twelve include a licensed portrait image; two recently canonized profiles intentionally ship without one because no free/CC-licensed portrait could be verified.
+- Added a **Rate & Review** action in Settings (between "App Info" and "Onboarding") that opens the App Store review page directly, so you can rate the app without leaving Settings.
+- Corrected St. María Troncatti's profile: her portrait attribution now correctly credits the official FMA (Salesian Sisters) canonization logo and its authorized use, fixing a labeling issue from the prior release.
+- General stability and content-quality improvements, including strengthened automated checks that keep English and Spanish saint data in sync.
 
-We've also made quality and platform improvements under the hood to keep the app running smoothly on the latest iOS releases.
+### App Store Connect Release Notes (English)
+
+```
+• Added a Rate & Review option in Settings so you can quickly leave a review.
+• Fixed an attribution/labeling issue on St. María Troncatti's profile image.
+• General stability and content-quality improvements.
+```
+
+---
+
+## History: iOS Version 1.1.0 (prepared, never submitted to the App Store)
+
+Version 1.1.0 (build 14) was fully prepared in a prior cycle — adding 12 new bilingual saint and blessed profiles, each with a full English and Spanish biography and patronage, plus quality and platform improvements for the latest iOS releases. Ten of the twelve new profiles included a licensed portrait image; two recently canonized profiles intentionally shipped without one because no free/CC-licensed portrait could be verified.
+
+This version was **never uploaded/submitted to App Store Connect** — no release tag or submission record exists for it, and it was superseded by 1.1.1 before submission. Preserved here for historical accuracy; do not present it as a released version.
+
+At the time, St. María Troncatti's Spanish `image.attribution` was accidentally left as an exact, untranslated copy of the English text — this is the labeling issue fixed in 1.1.1 above.
 
 ---
 
@@ -150,12 +168,12 @@ https://yortch.github.io/confirmation-saints/privacy-policy.html
 
 ### Version
 ```
-1.1.0
+1.1.1
 ```
 
 ### Build
 ```
-14
+15
 ```
 
 ### Bundle ID

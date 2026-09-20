@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "09f80124-3218-48ec-add4-5e4a0ac7d484",
+    "class": "POLICY",
+    "loadGuidance": "ALWAYS",
+    "title": "Require bilingual attribution parity",
+    "path": ".squad/memory/policy-inbox/jorge-balderas-via-squad-coordinator-require-bilingual-attribution-parity-09f80124.md",
+    "status": "active",
+    "createdAt": "2026-09-20T16:19:35.262Z",
+    "updatedAt": "2026-09-20T16:19:35.262Z"
+  },
+  {
+    "id": "d3f62297-3adf-4ca7-bb96-a84166866ce2",
+    "class": "POLICY",
+    "loadGuidance": "ALWAYS",
+    "title": "Use main merge to trigger Xcode Cloud release build",
+    "path": ".squad/memory/policy-inbox/jorge-balderas-via-squad-coordinator-use-main-merge-to-trigger-xcode-cloud-release-build-d3f62297.md",
+    "status": "active",
+    "createdAt": "2026-09-20T16:45:54.860Z",
+    "updatedAt": "2026-09-20T16:45:54.860Z"
+  }
+]

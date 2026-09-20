@@ -2,11 +2,29 @@
 
 Estas notas son solo para el lanzamiento de iOS/App Store. Las notas de Android/Google Play se gestionan por separado en `docs/android/submission-info.md` porque las correcciones específicas de cada plataforma pueden ser diferentes.
 
-## Novedades en iOS versión 1.1.0
+## Novedades en iOS versión 1.1.1
 
-Esta versión agrega 12 nuevos perfiles bilingües de santos y beatos para que los candidatos a la Confirmación exploren, cada uno con biografía completa en inglés y español y patronazgo. Diez de los doce incluyen una imagen con licencia; dos perfiles canonizados recientemente se publican intencionalmente sin imagen porque no se pudo verificar un retrato con licencia libre/CC.
+- Se agregó una acción de **Calificar y Reseñar** en Configuración (entre "Información de la app" y "Introducción") que abre directamente la página de reseñas de la App Store, para que puedas calificar la app sin salir de Configuración.
+- Se corrigió el perfil de santa María Troncatti: la atribución de su retrato ahora acredita correctamente el logotipo oficial de canonización de las FMA (Hijas de María Auxiliadora) y su uso autorizado, corrigiendo un error de etiquetado de la versión anterior.
+- Mejoras generales de estabilidad y calidad de contenido, incluidas comprobaciones automatizadas reforzadas que mantienen sincronizados los datos de santos en inglés y español.
 
-También hicimos mejoras de calidad y de plataforma internamente para que la app siga funcionando sin problemas en las versiones más recientes de iOS.
+### Notas de la versión para App Store Connect (español)
+
+```
+• Se agregó la opción Calificar y Reseñar en Configuración para dejar una reseña rápidamente.
+• Se corrigió un problema de atribución/etiquetado en la imagen del perfil de santa María Troncatti.
+• Mejoras generales de estabilidad y calidad de contenido.
+```
+
+---
+
+## Historial: iOS versión 1.1.0 (preparada, nunca enviada a la App Store)
+
+La versión 1.1.0 (build 14) se preparó por completo en un ciclo anterior: agregaba 12 nuevos perfiles bilingües de santos y beatos, cada uno con biografía completa en inglés y español y patronazgo, además de mejoras de calidad y plataforma para las versiones más recientes de iOS. Diez de los doce perfiles nuevos incluían una imagen con licencia; dos perfiles canonizados recientemente se publicaron intencionalmente sin imagen porque no se pudo verificar un retrato con licencia libre/CC.
+
+Esta versión **nunca se subió ni se envió a App Store Connect** — no existe una etiqueta de lanzamiento ni un registro de envío para ella, y fue reemplazada por la 1.1.1 antes de ser enviada. Se conserva aquí por precisión histórica; no debe presentarse como una versión publicada.
+
+En ese momento, el campo `image.attribution` en español de santa María Troncatti se dejó accidentalmente como una copia exacta y sin traducir del texto en inglés; ese es el problema de etiquetado corregido en la versión 1.1.1 mencionada arriba.
 
 ---
 
@@ -150,12 +168,12 @@ https://yortch.github.io/confirmation-saints/privacy-policy.html
 
 ### Versión
 ```
-1.1.0
+1.1.1
 ```
 
 ### Build
 ```
-14
+15
 ```
 
 ### Bundle ID

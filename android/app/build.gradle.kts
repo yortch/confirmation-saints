@@ -30,8 +30,8 @@ android {
         applicationId = "com.yortch.confirmationsaints"
         minSdk = 26
         targetSdk = 36
-        versionCode = 5
-        versionName = "1.1.0"
+        versionCode = 6
+        versionName = "1.1.1"
 
         vectorDrawables { useSupportLibrary = true }
 
@@ -126,6 +126,10 @@ dependencies {
     // Image loading (Coil 3 — resolves file:///android_asset/ natively)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+
+    // Play In-App Review (Rate & Review settings action; falls back to market://
+    // / https Play Store listing when unavailable, e.g. debug/emulator builds)
+    implementation(libs.play.review.ktx)
 
     // Dependency injection
     implementation(libs.hilt.android)
