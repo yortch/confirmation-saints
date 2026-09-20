@@ -23,6 +23,14 @@ Enforced invariants:
      either language file.
   5. categories-en.json vs categories-es.json: same group ids, same value
      ids inside each group.
+  6. Every saint's `image.attribution` string must actually be translated
+     between EN/ES, unless it is a documented language-agnostic license/
+     boilerplate phrase (see ALLOWED_IDENTICAL_ATTRIBUTIONS below) — proper
+     names, source titles, license names, and URLs are expected to stay
+     identical, but full descriptive attribution sentences are not. This
+     guards against a repeat of the St. Maria Troncatti incident, where the
+     Spanish `image.attribution` shipped as an exact, untranslated copy of
+     the English text (see .squad/decisions.md, 2026-09-20).
 
 Exits non-zero and prints a clear diff on any failure.
 Exits 0 on success.
@@ -54,6 +62,39 @@ CANONICAL_SCALAR_FIELDS = ("region", "lifeState", "ageCategory", "gender")
 # canonization logo (used unaltered per FMA's usage authorization), with an
 # explicit `image.filename` of "maria-troncatti.jpg" — no longer a gap.
 KNOWN_MISSING_IMAGE_IDS = frozenset({"peter-to-rot"})
+
+# `image.attribution` is free-form, user-visible prose and — per the
+# 2026-09-20 "Require bilingual attribution parity" policy — must be
+# translated in both EN and ES. It is legitimate for the EN and ES strings
+# to be byte-identical only when the text is a short, standardized,
+# language-agnostic license/boilerplate phrase (the kind that is
+# conventionally left untranslated even in fully localized products, much
+# like a license SPDX identifier or a proper name). Anything else that is
+# identical across locales is presumed to be an untranslated copy-paste and
+# must fail this check.
+#
+# Add a new phrase here only when it is genuinely language-agnostic
+# boilerplate (e.g. another standard public-domain/CC license credit line),
+# not as a way to silence a real translation gap.
+ALLOWED_IDENTICAL_ATTRIBUTIONS = frozenset(
+    {
+        "Public domain, via Wikimedia Commons",
+    }
+)
+
+# Explicit regression guard: St. Maria Troncatti's Spanish `image.attribution`
+# was shipped as an exact, untranslated copy of the English sentence below.
+# This is redundant with the general ALLOWED_IDENTICAL_ATTRIBUTIONS check
+# above (that check alone would already catch this), but is kept as a named,
+# self-documenting sentinel for the specific incident that prompted this
+# guardrail.
+KNOWN_UNTRANSLATED_ATTRIBUTION_INCIDENTS = {
+    "maria-troncatti": (
+        "Official FMA (Salesian Sisters) canonization logo, face "
+        "reproduction by Eng. Carlos David Pacurucu Regalado; used "
+        "unaltered per FMA authorization, via cgfmanet.org"
+    ),
+}
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -143,6 +184,33 @@ def check_saints(shared: Path, errors: list[str]) -> None:
         img_path = images_dir / filename
         if not img_path.exists():
             errors.append(f"[{sid}] missing image file: {img_path}")
+
+        # 6. image.attribution must be translated between EN/ES, unless it
+        # is a documented language-agnostic license/boilerplate phrase.
+        en_attribution = image.get("attribution")
+        es_attribution = (es_s.get("image") or {}).get("attribution")
+        if (
+            en_attribution
+            and es_attribution
+            and en_attribution == es_attribution
+            and en_attribution not in ALLOWED_IDENTICAL_ATTRIBUTIONS
+        ):
+            errors.append(
+                f"[{sid}] image.attribution appears untranslated: EN and ES "
+                f"are byte-identical ({en_attribution!r}) and this phrase is "
+                "not in ALLOWED_IDENTICAL_ATTRIBUTIONS. Either translate the "
+                "ES attribution or, if this is genuinely language-agnostic "
+                "license boilerplate, add it to ALLOWED_IDENTICAL_ATTRIBUTIONS."
+            )
+
+        known_bad = KNOWN_UNTRANSLATED_ATTRIBUTION_INCIDENTS.get(sid)
+        if known_bad is not None and es_attribution == known_bad:
+            errors.append(
+                f"[{sid}] regression: image.attribution (ES) is byte-identical "
+                f"to the known untranslated English text from the original "
+                f"St. Maria Troncatti incident ({known_bad!r}). It must be "
+                "translated into Spanish."
+            )
 
 
 def check_categories(shared: Path, errors: list[str]) -> None:

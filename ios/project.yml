@@ -8,8 +8,8 @@ options:
 settings:
   base:
     SWIFT_VERSION: "6.0"
-    MARKETING_VERSION: "1.1.0"
-    CURRENT_PROJECT_VERSION: "14"
+    MARKETING_VERSION: "1.1.1"
+    CURRENT_PROJECT_VERSION: "15"
     GENERATE_INFOPLIST_FILE: true
     INFOPLIST_FILE: CatholicSaints/Resources/Info.plist
     INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: false
