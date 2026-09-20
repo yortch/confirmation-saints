@@ -48,4 +48,25 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jorgebalderas.ConfirmationSaints
         PRODUCT_NAME: "Confirmation Saints"
+        PRODUCT_MODULE_NAME: CatholicSaints
         DEVELOPMENT_ASSET_PATHS: "\"CatholicSaints/Resources/Preview Content\""
+    scheme:
+      testTargets:
+        - CatholicSaintsTests
+
+  CatholicSaintsTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: CatholicSaintsTests
+    dependencies:
+      - target: CatholicSaints
+        embed: false
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: true
+        INFOPLIST_FILE: ""
+        PRODUCT_BUNDLE_IDENTIFIER: com.jorgebalderas.ConfirmationSaints.Tests
+        PRODUCT_NAME: "CatholicSaintsTests"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Confirmation Saints.app/Confirmation Saints"

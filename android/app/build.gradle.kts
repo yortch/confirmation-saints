@@ -127,6 +127,10 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
 
+    // Play In-App Review (Rate & Review settings action; falls back to market://
+    // / https Play Store listing when unavailable, e.g. debug/emulator builds)
+    implementation(libs.play.review.ktx)
+
     // Dependency injection
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)

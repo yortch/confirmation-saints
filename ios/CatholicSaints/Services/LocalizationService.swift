@@ -93,6 +93,11 @@ struct AppStrings {
             "Public domain images": "Imágenes de dominio público",
             "Open": "Abrir",
             "in browser": "en el navegador",
+            // Rate & Review
+            "Rate & Review": "Calificar y Reseñar",
+            "Rate Confirmation Saints": "Calificar Confirmation Saints",
+            "Enjoying the app? A quick rating helps other families find it.": "¿Disfrutando la app? Una calificación rápida ayuda a otras familias a encontrarla.",
+            "Rate Confirmation Saints in the App Store": "Calificar Confirmation Saints en la App Store",
         ]
     ]
 

@@ -11,16 +11,19 @@
 		0B20FD4952118945459963EE /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04073373FE802FDEF4F421 /* DateFormatting.swift */; };
 		1C7569DC6A4E8A788201CAD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E34B3B2B01D51EE384ADB47 /* Assets.xcassets */; };
 		2D44E71A9D0627D2F9518348 /* CatholicSaintsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C717D5A1AD4A511CBB642 /* CatholicSaintsApp.swift */; };
+		2EBF4F859EC8BD398A9B7A60 /* AppStoreReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA27911B60D2D9EDC9256E9 /* AppStoreReview.swift */; };
 		3E491F7519158286C8E0916D /* LocalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B99D481CDCBAAEF2F6FFDB /* LocalizationService.swift */; };
 		43A34D5759F0A4E886B43C24 /* CategoryBrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F460943826BB854617B5E7 /* CategoryBrowseView.swift */; };
 		4781AB6BE3EFF2115F81675B /* String+Diacritics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527737B0DA95D44D64DC7C0 /* String+Diacritics.swift */; };
 		4BC6F4D8B59D757D49C0BB5D /* Saint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8786091802F72BA2DA3B1 /* Saint.swift */; };
 		504AAADBE1BC7B296BBB7A2C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2AC66C3B3FDC6F17685422 /* Category.swift */; };
 		52ABB051BF7DBC70491310C2 /* SaintImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0AC5EC99B857DA2B1C579 /* SaintImageView.swift */; };
+		622D34BD6D287DBECDEFA1FB /* AppStoreReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208447145A5D46F3B139544D /* AppStoreReviewTests.swift */; };
 		64C3487E8B3E8EAA2CDFB34E /* SharedContent in Resources */ = {isa = PBXBuildFile; fileRef = 16A1A8F4DFE542E75C1AC9CF /* SharedContent */; };
 		64E9F8E2D98FD3088A83A0D0 /* SaintListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD551ABCE820B6F50CF128 /* SaintListView.swift */; };
 		7C408C5CA855F805838E489E /* FilterChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D69E312BA07C5AA35FDC0EC /* FilterChip.swift */; };
 		86F702FB839AFBA3FF3E5953 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26203F29FDC228AE96247C0 /* SettingsView.swift */; };
+		8820C0B58F222189906F1A77 /* SettingsRateReviewContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDDC575A7C46CCDB0DDCB0 /* SettingsRateReviewContractTests.swift */; };
 		8CA2D811B92ACC37936F694A /* AboutConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F87D877510DBE165CE3137B /* AboutConfirmationView.swift */; };
 		A1074935F32F73D70F542C94 /* SaintRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B380AA53877824D89864F0C6 /* SaintRowView.swift */; };
 		A8759E9236849EC73ABB86B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D2564D15C3A8EA7CFB95A /* ContentView.swift */; };
@@ -32,12 +35,25 @@
 		FAB4251226D74D156120E1DB /* SaintDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EC0C2524D955A969A7A78 /* SaintDetailView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D94BA0200513DF24D2570595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E376CD5B8AF7A2662BD5D065 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31BF1BF4D3DEBE32A2A9508C;
+			remoteInfo = CatholicSaints;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		16A1A8F4DFE542E75C1AC9CF /* SharedContent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedContent; path = ../SharedContent; sourceTree = SOURCE_ROOT; };
 		19B4E7840FFCADCF80FA404B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		208447145A5D46F3B139544D /* AppStoreReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewTests.swift; sourceTree = "<group>"; };
 		2EF0AC5EC99B857DA2B1C579 /* SaintImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintImageView.swift; sourceTree = "<group>"; };
+		37C608F9AD7213097AC2C327 /* CatholicSaintsTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CatholicSaintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C04073373FE802FDEF4F421 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
 		4527737B0DA95D44D64DC7C0 /* String+Diacritics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Diacritics.swift"; sourceTree = "<group>"; };
+		4AA27911B60D2D9EDC9256E9 /* AppStoreReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReview.swift; sourceTree = "<group>"; };
 		4D69E312BA07C5AA35FDC0EC /* FilterChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChip.swift; sourceTree = "<group>"; };
 		4E34B3B2B01D51EE384ADB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B550247717C067DCFBA00A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -55,6 +71,7 @@
 		B380AA53877824D89864F0C6 /* SaintRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintRowView.swift; sourceTree = "<group>"; };
 		C1646325B9DC1662D54C68C0 /* SaintDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintDataService.swift; sourceTree = "<group>"; };
 		C840893050E59D790C244909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CBBDDC575A7C46CCDB0DDCB0 /* SettingsRateReviewContractTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRateReviewContractTests.swift; sourceTree = "<group>"; };
 		DD85954F1A379AC6AF7DD5C3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		E7D8786091802F72BA2DA3B1 /* Saint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint.swift; sourceTree = "<group>"; };
 		F312955498C3F60042C430B0 /* SaintListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintListViewModel.swift; sourceTree = "<group>"; };
@@ -79,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				6BD77F99DAAE5D116CE311F1 /* CatholicSaints.app */,
+				37C608F9AD7213097AC2C327 /* CatholicSaintsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +107,15 @@
 				4D69E312BA07C5AA35FDC0EC /* FilterChip.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		4BEBC37AE255BFDEADDB91C5 /* CatholicSaintsTests */ = {
+			isa = PBXGroup;
+			children = (
+				208447145A5D46F3B139544D /* AppStoreReviewTests.swift */,
+				CBBDDC575A7C46CCDB0DDCB0 /* SettingsRateReviewContractTests.swift */,
+			);
+			path = CatholicSaintsTests;
 			sourceTree = "<group>";
 		};
 		56094F2BC7B5C8E93B321AC5 /* App */ = {
@@ -134,6 +161,7 @@
 			children = (
 				16A1A8F4DFE542E75C1AC9CF /* SharedContent */,
 				24B504DC7B67CFDB66B1C64E /* CatholicSaints */,
+				4BEBC37AE255BFDEADDB91C5 /* CatholicSaintsTests */,
 				3371D7E612BE94280A85E18A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,6 +169,7 @@
 		A04B711F61A3F20842793E1A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4AA27911B60D2D9EDC9256E9 /* AppStoreReview.swift */,
 				A2B99D481CDCBAAEF2F6FFDB /* LocalizationService.swift */,
 				C1646325B9DC1662D54C68C0 /* SaintDataService.swift */,
 			);
@@ -233,6 +262,24 @@
 			productReference = 6BD77F99DAAE5D116CE311F1 /* CatholicSaints.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6E1F656E5E87A5EAD3DF3914 /* CatholicSaintsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A07EC17D9884C3C79E3F4A58 /* Build configuration list for PBXNativeTarget "CatholicSaintsTests" */;
+			buildPhases = (
+				5B9759D3538A38359C268A10 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A02778188CF1893DFD9B96E8 /* PBXTargetDependency */,
+			);
+			name = CatholicSaintsTests;
+			packageProductDependencies = (
+			);
+			productName = CatholicSaintsTests;
+			productReference = 37C608F9AD7213097AC2C327 /* CatholicSaintsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -243,6 +290,10 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					31BF1BF4D3DEBE32A2A9508C = {
+						DevelopmentTeam = G98XX4494X;
+						ProvisioningStyle = Automatic;
+					};
+					6E1F656E5E87A5EAD3DF3914 = {
 						DevelopmentTeam = G98XX4494X;
 						ProvisioningStyle = Automatic;
 					};
@@ -264,6 +315,7 @@
 			projectRoot = "";
 			targets = (
 				31BF1BF4D3DEBE32A2A9508C /* CatholicSaints */,
+				6E1F656E5E87A5EAD3DF3914 /* CatholicSaintsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,11 +335,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B9759D3538A38359C268A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				622D34BD6D287DBECDEFA1FB /* AppStoreReviewTests.swift in Sources */,
+				8820C0B58F222189906F1A77 /* SettingsRateReviewContractTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5E15A362B3093E139B4A4B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8CA2D811B92ACC37936F694A /* AboutConfirmationView.swift in Sources */,
+				2EBF4F859EC8BD398A9B7A60 /* AppStoreReview.swift in Sources */,
 				504AAADBE1BC7B296BBB7A2C /* Category.swift in Sources */,
 				43A34D5759F0A4E886B43C24 /* CategoryBrowseView.swift in Sources */,
 				2D44E71A9D0627D2F9518348 /* CatholicSaintsApp.swift in Sources */,
@@ -311,7 +373,34 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A02778188CF1893DFD9B96E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31BF1BF4D3DEBE32A2A9508C /* CatholicSaints */;
+			targetProxy = D94BA0200513DF24D2570595 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		3DFECA78BC12ECDDC613A7D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgebalderas.ConfirmationSaints.Tests;
+				PRODUCT_NAME = CatholicSaintsTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Confirmation Saints.app/Confirmation Saints";
+			};
+			name = Release;
+		};
 		547129E79020101366AA3F37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -324,6 +413,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgebalderas.ConfirmationSaints;
+				PRODUCT_MODULE_NAME = CatholicSaints;
 				PRODUCT_NAME = "Confirmation Saints";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,11 +591,31 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgebalderas.ConfirmationSaints;
+				PRODUCT_MODULE_NAME = CatholicSaints;
 				PRODUCT_NAME = "Confirmation Saints";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		EA7B6F1A478530953037A79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgebalderas.ConfirmationSaints.Tests;
+				PRODUCT_NAME = CatholicSaintsTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Confirmation Saints.app/Confirmation Saints";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -515,6 +625,15 @@
 			buildConfigurations = (
 				547129E79020101366AA3F37 /* Debug */,
 				D5DEA64C72ACB3A017714FD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A07EC17D9884C3C79E3F4A58 /* Build configuration list for PBXNativeTarget "CatholicSaintsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA7B6F1A478530953037A79A /* Debug */,
+				3DFECA78BC12ECDDC613A7D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

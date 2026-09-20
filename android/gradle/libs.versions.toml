@@ -22,6 +22,7 @@ kotlinx-serialization = "1.7.3"
 kotlinx-coroutines-test = "1.8.1"
 coil = "3.0.4"
 okio = "3.9.1"
+play-review = "2.0.2"
 
 # Testing
 junit4 = "4.13.2"
@@ -62,6 +63,9 @@ kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-t
 # Coil 3 (Compose) — Compose-first image loading, resolves file:///android_asset/ natively
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+
+# Play In-App Review (Rate & Review settings action)
+play-review-ktx = { module = "com.google.android.play:review-ktx", version.ref = "play-review" }
 
 # Testing
 junit4 = { module = "junit:junit", version.ref = "junit4" }
