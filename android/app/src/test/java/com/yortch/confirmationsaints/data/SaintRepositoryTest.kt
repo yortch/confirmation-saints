@@ -73,10 +73,12 @@ class SaintRepositoryTest {
     fun should_expose_image_filename_matching_saint_id() {
         val saints = repository.loadSaints(AppLanguage.EN)
         // Documented gap: no free/CC-licensed portrait could be verified on
-        // Wikimedia Commons for these two saints as of this writing (both
-        // canonized Oct. 19, 2025). They are intentionally added without an
+        // Wikimedia Commons for this saint as of this writing (canonized
+        // Oct. 19, 2025). It is intentionally added without an
         // `image` field rather than using a non-free/fair-use image.
-        val knownMissingImageIds = setOf("maria-troncatti", "peter-to-rot")
+        // (maria-troncatti now ships with the official FMA canonization
+        // logo, used unaltered per FMA's authorization — no longer a gap.)
+        val knownMissingImageIds = setOf("peter-to-rot")
         saints.forEach { saint ->
             if (saint.id in knownMissingImageIds) {
                 assertEquals(

@@ -8,7 +8,7 @@ This release prepares the v1.1.0 rollout on Google Play. Version metadata: `vers
 
 ## What's New in v1.1.0
 
-Confirmation Saints now includes 12 new bilingual saint/blessed profiles — including St. Stanley Rother, St. Philip Neri, St. John of Nepomuk, St. Norbert of Xanten, St. Paschal Baylon, St. Ignatius Maloyan, St. José Gregorio Hernández, St. Vincenza Maria Poloni, Bl. María del Carmen Rendiles, Bl. Bartolo Longo, St. María Troncatti, and Bl. Peter To Rot — bringing the library to 118 saints, all available offline in English and Spanish. Ten new licensed portrait images were added (two profiles, both recently canonized, intentionally ship without an image because no free/CC-licensed portrait could be verified — see `tests/shared-content-parity.py`).
+Confirmation Saints now includes 12 new bilingual saint/blessed profiles — including St. Stanley Rother, St. Philip Neri, St. John of Nepomuk, St. Norbert of Xanten, St. Paschal Baylon, St. Ignatius Maloyan, St. José Gregorio Hernández, St. Vincenza Maria Poloni, Bl. María del Carmen Rendiles, Bl. Bartolo Longo, St. María Troncatti, and Bl. Peter To Rot — bringing the library to 118 saints, all available offline in English and Spanish. Eleven new licensed portrait/logo images were added. St. María Troncatti's profile uses the official FMA (Salesian Sisters) canonization logo, used unaltered under FMA's usage authorization. One profile (Bl. Peter To Rot, recently canonized) intentionally ships without an image because no free/CC-licensed portrait could be verified — see `tests/shared-content-parity.py`.
 
 This release also migrates the app to target Android 16 (API level 36) for continued Google Play compliance, with no user-facing behavior change.
 

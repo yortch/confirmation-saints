@@ -49,7 +49,11 @@ CANONICAL_SCALAR_FIELDS = ("region", "lifeState", "ageCategory", "gender")
 # rather than using a non-free/fair-use image. Mirrors the equivalent
 # allowlist in android/.../SaintRepositoryTest.kt
 # (should_expose_image_filename_matching_saint_id) — keep both in sync.
-KNOWN_MISSING_IMAGE_IDS = frozenset({"maria-troncatti", "peter-to-rot"})
+#
+# maria-troncatti now ships with the official FMA (Salesian Sisters)
+# canonization logo (used unaltered per FMA's usage authorization), with an
+# explicit `image.filename` of "maria-troncatti.jpg" — no longer a gap.
+KNOWN_MISSING_IMAGE_IDS = frozenset({"peter-to-rot"})
 
 
 def load_json(path: Path) -> dict[str, Any]:
