@@ -21,3 +21,9 @@
 - Reviewed Samwise's `maria-troncatti` Spanish `image.attribution` fix in `saints-es.json` and Legolas's new bilingual attribution parity + Troncatti sentinel tests in `tests/shared-content-parity.py`.
 - Captured governed policy: every user-visible image attribution/source string must be localized in EN and ES; attribution changes must update parity tests.
 - **APPROVED.** `python3 tests/shared-content-parity.py` passes; targeted Android content tests pass. No product commit requested/created.
+
+### Approved: v1.1.1 Release Readiness (2026-09-20)
+- Reviewed Frodo's iOS 1.1.1/build 15 prep (11/11 XCTest pass, docs updated) and Aragorn's Android 1.1.1/versionCode 6 prep (46/46 unit tests pass, signed upload-key AAB verified), plus the Troncatti attribution fix/parity regression.
+- **APPROVED** local release readiness for v1.1.1 on both platforms.
+- Captured governed directive: repo uses Xcode Cloud for iOS releases — after approval, commit/push working branch, merge to `main`, push `main` to trigger the Cloud build; no local iOS archive required (policy `d3f62297`).
+- Remaining execution (product commit/push/merge, Android Play Console upload) is outside Gandalf's/Scribe's scope.

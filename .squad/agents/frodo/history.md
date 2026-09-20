@@ -141,3 +141,9 @@
 - Updated `docs/index.html` hero with a "Download test version for Android" CTA that anchors to `#platform-android` and activates the Android platform tab via safe hash handling.
 - Android tab now states the app is in Google Play closed testing and instructs testers to first join `testers-community@googlegroups.com` at `https://groups.google.com/g/testers-community`.
 - After joining the tester group, Android users are directed to download from `https://play.google.com/store/apps/details?id=com.yortch.confirmationsaints`.
+
+### iOS 1.1.1 (build 15) Release Prep (2026-09-20)
+- Bumped `MARKETING_VERSION` 1.1.0 → 1.1.1 and `CURRENT_PROJECT_VERSION` 14 → 15 in `ios/project.yml`; regenerated `project.pbxproj` via `xcodegen generate` (diff limited to version fields).
+- Updated `docs/appstore/submission-info.md` / `-es.md` with 1.1.1 metadata and What's New copy (Rate & Review action, Troncatti attribution fix, stability improvements); re-labeled 1.1.0 history as "prepared, never submitted" (no release tag/submission record found).
+- 11/11 XCTest pass (`AppStoreReviewTests` 5/5, `SettingsRateReviewContractTests` 6/6) on iPhone 17 simulator.
+- Gandalf approved v1.1.1 release readiness. Governed directive: Xcode Cloud triggers the iOS build on merge to `main`; local archive not required.

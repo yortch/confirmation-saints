@@ -150,3 +150,8 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 - For Material 3, replace deprecated `Divider()` with `HorizontalDivider()` and update the import to `androidx.compose.material3.HorizontalDivider`.
 - For direction-sensitive Material icons such as external links/help, use `Icons.AutoMirrored.Filled.*` with `androidx.compose.material.icons.automirrored.filled.*` imports to avoid RTL-related deprecations.
 - Verification: `cd android && ./gradlew :app:assembleDebug --warning-mode all --no-daemon` passed without the targeted deprecation warnings.
+
+### Android 1.1.1 (versionCode 6) Release Prep (2026-09-20)
+- Bumped `versionName` to 1.1.1 and `versionCode` to 6 in `android/app/build.gradle.kts`.
+- 46/46 unit tests pass; instrumentation tests compile; built and verified a signed upload-key AAB at `android/app/build/outputs/bundle/release/app-release.aab`.
+- Gandalf approved v1.1.1 release readiness. Play Console upload of the verified AAB remains a manual, credentialed step outside this batch.

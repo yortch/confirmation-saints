@@ -187,3 +187,49 @@ No iOS XCTest target exists in `ios/project.yml` (documented gap since 2026-07-2
 ## Validation
 - `cd android && ./gradlew :app:testDebugUnitTest :app:compileDebugAndroidTestKotlin :app:compileDebugKotlin` — all pass/compile clean.
 - `cd ios && xcodegen generate && xcodebuild -project CatholicSaints.xcodeproj -scheme CatholicSaints -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build -quiet` — passes.
+
+---
+
+### 2026-09-20: iOS 1.1.1 (build 15) Release Prep
+**By:** Frodo (iOS Dev)
+**Requestor:** Jorge Balderas
+
+## Summary
+Bumped iOS `MARKETING_VERSION` 1.1.0 → 1.1.1 and `CURRENT_PROJECT_VERSION` 14 → 15 in `ios/project.yml`, regenerated `CatholicSaints.xcodeproj/project.pbxproj` via `xcodegen generate` (no hand edits — diff limited to version fields), and updated `docs/appstore/submission-info.md` / `-es.md` with 1.1.1 version/build metadata and concise What's New copy covering: the Rate & Review Settings action, the St. María Troncatti portrait/attribution correction, and general stability/content-quality improvements.
+
+## 1.1.0 Historical Correction
+Inspected repo history before labeling 1.1.0: unlike 1.0.1/1.0.3/1.0.4 (each has a `vX.Y.Z` git tag), **1.1.0 has no release tag and no decision/history record of App Store Connect submission**. Concluded 1.1.0 was fully prepared (commit `9325808`) but never uploaded/submitted, and was superseded by 1.1.1 before shipping. Re-labeled its submission-info section as "History: iOS Version 1.1.0 (prepared, never submitted to the App Store)" rather than "(previous release)" to avoid falsely implying it went live — mirrors the equivalent correction already present in `docs/android/submission-info.md` for the same version.
+
+## No Upload/Submission Claimed
+This session did **not** upload/submit anything to App Store Connect. `docs/appstore/submission-info.md` / `-es.md` describe version 1.1.1 as prepared, not shipped.
+
+## Validation
+- `cd ios && xcodegen generate` — regenerated project.pbxproj; `git diff --stat -- ios/` shows only the two expected version-number lines changed.
+- `xcodebuild -project CatholicSaints.xcodeproj -scheme CatholicSaints -destination 'platform=iOS Simulator,name=iPhone 17' test` — **TEST SUCCEEDED**; 11/11 XCTest cases passed (`AppStoreReviewTests` 5/5, `SettingsRateReviewContractTests` 6/6). Used the already-booted iPhone 17 simulator (not a hardcoded/nonexistent device).
+
+## Files Changed (this task)
+- `ios/project.yml`
+- `ios/CatholicSaints.xcodeproj/project.pbxproj` (xcodegen-regenerated only)
+- `docs/appstore/submission-info.md`
+- `docs/appstore/submission-info-es.md`
+
+## Remaining Credentialed Step
+Actual App Store Connect submission still requires Jorge's Apple Developer credentials and has not been performed. Xcode Cloud (triggered by merge to `main`) is the release build pipeline; a local iOS archive is not required.
+
+---
+
+### 2026-09-20: v1.1.1 Release Readiness — Approved
+**By:** Gandalf (Lead)
+**Requestor:** Jorge Balderas
+
+## Summary
+Reviewed and approved local release readiness for v1.1.1 across both platforms:
+- **iOS:** version 1.1.1, build 15; project regenerated via xcodegen; 11/11 XCTest pass; App Store EN/ES submission docs updated (Frodo).
+- **Android:** versionName 1.1.1, versionCode 6; 46/46 unit tests pass; instrumentation tests compile; signed upload-key AAB verified at `android/app/build/outputs/bundle/release/app-release.aab` (Aragorn).
+- **Shared content:** St. María Troncatti Spanish attribution fixed; bilingual parity regression passes.
+
+## Governed Directive Captured
+Repository uses Xcode Cloud for iOS releases. After approval: commit and push the working branch, merge to `main`, and push `main` to trigger the Xcode Cloud build. A local iOS archive is not required for release prep. (See policy `d3f62297` — "Use main merge to trigger Xcode Cloud release build".)
+
+## Status
+Approved. Remaining execution: product commit, push `develop`, merge/push `main` (outside Scribe's scope). Android Play Console upload remains a manual, credentialed step.
