@@ -143,6 +143,9 @@ Root cause was data: 27 saints had `sources` arrays that didn't match `sourceURL
 - Updated `docs/android/submission-info.md` for future Google Play notes while Android remains in Google's required closed testing phase; notes are explicitly marked pending/not production.
 - No Android `versionName`/`versionCode` bump for docs-only release-note prep; keep Android notes separate from iOS/App Store 1.0.3 copy.
 
+### 2026-09-20 — Debug rebuild verified on emulator
+- `./gradlew clean assembleDebug` rebuilt cleanly, preserving uncommitted changes; APK installed and launched on Pixel 10 API 36 emulator (process 2938), Saints screen confirmed via screenshot/UI hierarchy.
+
 ### 2026-04-30 — Compose Material deprecation cleanup
 - For Material 3, replace deprecated `Divider()` with `HorizontalDivider()` and update the import to `androidx.compose.material3.HorizontalDivider`.
 - For direction-sensitive Material icons such as external links/help, use `Icons.AutoMirrored.Filled.*` with `androidx.compose.material.icons.automirrored.filled.*` imports to avoid RTL-related deprecations.

@@ -78,3 +78,7 @@
 - **Tester instructions:** Ordered list: (1) join Google Group `testers-community@googlegroups.com`, (2) download from Play Store. Both links present and correct.
 - **CSS/JS:** Minimal additions (`.android-test-btn`, `.testing-steps`, hash helpers). No breakage to existing iOS tab or responsive layout.
 - **Verdict:** APPROVED — all 8 validation criteria pass.
+
+### Bilingual Attribution Parity Coverage + Troncatti Sentinel (2026-09-20)
+- Added reusable bilingual attribution parity regression coverage to `tests/shared-content-parity.py`, plus an explicit `maria-troncatti` incident sentinel test to prevent recurrence of the untranslated-Spanish-attribution bug.
+- Validated alongside Samwise's `maria-troncatti` ES attribution fix; `python3 tests/shared-content-parity.py` passes.
